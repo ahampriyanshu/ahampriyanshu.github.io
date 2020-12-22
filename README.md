@@ -22,18 +22,11 @@
 
  <p align="center">
 <a href="https://github.com/ahampriyanshu">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahampriyanshu&langs_count=10&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahampriyanshu&langs_count=10&hide=php&layout=compact" />
 </a>
 </p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/ahampriyanshu"><img src="https://media.giphy.com/media/db32HzmDbjp8xWEcO0/giphy.gif" width="40"></a>
-<a href="mailto:tiwarimay2002@gmail.com"><img src="https://media.giphy.com/media/KyHsvh3wJFLUXwlxuR/giphy.gif" width="40"></a>
- <a href="https://reddit.com/user/ahampriyanshu" ><img src="https://media.giphy.com/media/lrPG9TKacWvojf1UNi/giphy.gif" width="40"></a>
-<a href="https://www.instagram.com/ahampriyanshu/"><img src="https://media.giphy.com/media/QWpK88H1g9PtmtQly1/giphy.gif" width="35"></a>
-<a href="https://www.twitter.com/ahampriyanshu/"><img src="https://media.giphy.com/media/H508mck9ufO9q6z76O/giphy.gif" width="35"></a>
- <a  href="https://wa.me/919917956610?text=Hi%20Priyanshu"><img src="https://media.giphy.com/media/jU9PVpqUvR0aNc3nvX/giphy.gif" width="40"></a>
-<img src="https://media.giphy.com/media/ZGI3wLEZSDwi2Lx0lC/giphy.gif" width="35"> 
-<a  href="https://t.me/ahampriyanshu"><img src="https://media.giphy.com/media/ZcdZ7ldgeIhfesqA6E/giphy.gif" width="35"></a>
- <a  href="https://github.com/ahampriyanshu"><img src="https://media3.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.webp" width="35"></a>
+<a href="https://www.linkedin.com/in/ahampriyanshu"><img src="https://media.giphy.com/media/db32HzmDbjp8xWEcO0/giphy.gif" width="40"></a> <a href="mailto:tiwarimay2002@gmail.com"><img src="https://media.giphy.com/media/KyHsvh3wJFLUXwlxuR/giphy.gif" width="40"></a><a href="https://reddit.com/user/ahampriyanshu" ><img src="https://media.giphy.com/media/lrPG9TKacWvojf1UNi/giphy.gif" width="40"></a><a href="https://www.instagram.com/ahampriyanshu/"><img src="https://media.giphy.com/media/QWpK88H1g9PtmtQly1/giphy.gif" width="35"></a>
+<a href="https://www.twitter.com/ahampriyanshu/"><img src="https://media.giphy.com/media/H508mck9ufO9q6z76O/giphy.gif" width="35"></a><a  href="https://wa.me/919917956610?text=Hi%20Priyanshu"><img src="https://media.giphy.com/media/jU9PVpqUvR0aNc3nvX/giphy.gif" width="40"></a><img src="https://media.giphy.com/media/ZGI3wLEZSDwi2Lx0lC/giphy.gif" width="35"> <a  href="https://t.me/ahampriyanshu"><img src="https://media.giphy.com/media/ZcdZ7ldgeIhfesqA6E/giphy.gif" width="35"></a><a  href="https://github.com/ahampriyanshu"><img src="https://media3.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.webp" width="35"></a>
 </p>
