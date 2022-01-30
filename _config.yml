@@ -1,0 +1,120 @@
+theme: jekyll-theme-chirpy
+baseurl: '/cp'
+url: 'https://ahampriyanshu.com'
+lang: en
+timezone: Asia/Kolkata
+
+title: Priyanshu Tiwari 
+tagline: My experiments with competitive programming
+
+description: >-
+  Experimenting with various 
+  competitive programming 
+  resources on various platforms
+
+github:
+  username: ahampriyanshu
+
+social:
+  name: 'Priyanshu Tiwari'
+  email: ahampriyanshu@gmail.com     
+  links:
+    - https://twitter.com/ahampriyanshu
+    - https://www.linkedin.com/in/ahampriyanshu
+    - https://github.com/ahampriyanshu
+    - https://www.instagram.com/ahampriyanshu
+
+google_analytics:
+  id: 'G-R63GLN03CG'                 # fill in your Google Analytics ID
+  # Google Analytics pageviews report settings
+  pv:
+    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
+    cache_path:       # the local PV cache data, friendly to visitors from GFW region
+
+avatar: assets/img/logo.png
+toc: true
+
+comments:
+  active: utterances
+
+  disqus:
+    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  # utterances settings › https://utteranc.es/
+  utterances:
+    repo: ahampriyanshu/cp
+    issue_term: title
+
+paginate: 12
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  -
+    scope:
+      path: ''          # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /posts/:title/
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: ''
+      type: tabs             # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+  - gulpfile.js
+  - node_modules
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

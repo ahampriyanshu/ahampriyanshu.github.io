@@ -1,3 +1,9 @@
+---
+title: About
+icon: fas fa-info-circle
+order: 4
+---
+
 # My Experiments With Competitive Programming
 
 ## Why
