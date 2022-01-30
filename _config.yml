@@ -31,7 +31,7 @@ google_analytics:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
-avatar: assets/img/logo.png
+avatar:
 toc: true
 
 comments:
