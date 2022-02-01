@@ -11,7 +11,7 @@ tags: [striver, tuf, ds, algo, takeUforward]
 
 ### Problem 1: Nth Root Of M
 
-* You are given two positive integers N and M. You have to find the Nth root of M i.e. M^(1/N).
+> You are given two positive integers N and M. You have to find the Nth root of M i.e. M^(1/N).
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/1062679)
 * [GFG](https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1/#)
 
@@ -107,19 +107,19 @@ double findNthRootOfM(int n, long long m) {
 
 ### Problem 1: Reverse Words in a String
 
-* You are given a string of length N. You need to reverse the string word by word. There can be multiple spaces between two words and there can be leading or trailing spaces but in the output reversed string you need to put a single space between two words, and your reversed string should not contain leading or trailing spaces.
+> You are given a string of length N. You need to reverse the string word by word. There can be multiple spaces between two words and there can be leading or trailing spaces but in the output reversed string you need to put a single space between two words, and your reversed string should not contain leading or trailing spaces.
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/696444)
 * [Leetcode](https://leetcode.com/problems/reverse-words-in-a-string/)
 
 #### Worst/Better
 
-* Use in built methods and containers like stack, vector and reverse().
+* Use in built methods and containers like stack, vector.
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(n)**
 
 #### Optimal 
 
-* Reverse the whole string. Reverse word by word.
+* Reverse the whole string and then reverse word by word.
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(1)**
 
