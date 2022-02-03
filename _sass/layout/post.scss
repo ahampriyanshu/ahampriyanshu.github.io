@@ -296,6 +296,18 @@ nav[data-toggle=toc] {
         @include btn-sharing-color(rgb(39, 159, 217));
       }
 
+      &.fa-whatsapp {
+        @include btn-sharing-color(rgb(37, 211, 102));
+      }
+
+      &.fa-reddit {
+        @include btn-sharing-color(rgb(255, 69, 0));
+      }
+
+      &.fa-linkedin {
+        @include btn-sharing-color(rgb( 0, 119, 181));
+      }
+
       &.fa-weibo {
         @include btn-sharing-color(rgb(229, 20, 43));
       }

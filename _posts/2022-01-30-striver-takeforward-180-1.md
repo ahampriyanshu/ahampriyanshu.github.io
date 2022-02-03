@@ -333,11 +333,7 @@ public:
 
 * [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
-#### Worst
-
-* Use two loop and compare the sum of evey subarray.
-* Time Complexity : **O(n^2)**
-* Space Complexity : **O(n)**
+#### Brute
 
 ```cpp
 class Solution
@@ -359,10 +355,6 @@ public:
 
 #### Optimal
 
-* Use [Kadane Algorithm](https://cp-algorithms.com/others/maximum_average_segment.html)
-* Time Complexity : **O(n)**
-* Space Complexity : **O(1)**
-
 ```cpp
 class Solution {
 public:
@@ -382,17 +374,11 @@ public:
 
 ### Problem 1
 
-* [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+* [Leetcode](https://leetcode.com/problems/set-matrix-zeroes/)
 
-#### Worst
+#### Brute
 
 * This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
-
-#### Better
-
-* We will first iterate over the matrix and store the indices of all the zero element, then iterate over it once again to set the required rows & cols to zero.
-* Time Complexity : **O(m*n)**
-* Space Complexity : **O(m+n)**
 
 ```cpp
 class Solution {
@@ -441,10 +427,6 @@ public:
 
 #### Optimal 
 
-* This is same as above we will now use the first row an col to mark store the indices and one extra boolean for the zeroth col.
-* Time Complexity : **O(m*n)** 
-* Space Complexity : **O(1)**
-
 ```cpp
 class Solution {
 public:
@@ -474,10 +456,9 @@ public:
 
 * [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-#### Worst
+#### Brute
 
 * This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
-
 
 #### Optimal 
 
@@ -501,16 +482,9 @@ public:
 ```
 ## Day 5 | Linked List
 
-### Problem 1
+### Reverse a LinkedList
 
-* [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
-
-#### Worst / Better / Optimal
-
-
-* Just use two temp variables, one to store the prev node and another store the current node.
-* Time Complexity : **O(n)**
-* Space Complexity : **O(1)**
+* [Leetcode](https://leetcode.com/problems/reverse-linked-list/)
 
 ```cpp
 class Solution {
@@ -533,14 +507,7 @@ public:
 
 ### Problem 1
 
-* [N meeting in one room](https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1)
-
-#### Worst / Better / Optimal
-
-
-* Make a new pair and then sort it on the basis of *end-time* and then compare in another for/while loop.
-* Time Complexity : **O(nlogn)**
-* Space Complexity : **O(n)**
+* [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1)
 
 ```cpp
 class Solution
@@ -566,6 +533,72 @@ class Solution
             }
         return ans;
        
+    }
+};
+```
+
+## Day 9 | Recursion
+
+### Subset Sums
+
+Given a list arr of N integers, print sums of all subsets in it.
+
+Note: Return all the element is increasing order.
+
+* [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
+
+#### Brute
+
+```cpp
+class Solution
+{
+public:
+
+    void solve(int index, int sum, int N, vector<int> &arr, vector<int> &ans)
+    {
+        if(index == N){
+            ans.push_back(sum);
+            return;
+        }
+        
+        solve(index+1, sum + arr[index], N, arr, ans);
+        solve(index+1, sum, N, arr, ans);
+    }
+
+    vector<int> subsetSums(vector<int> arr, int N)
+    {
+        vector<int> ans;
+        solve(0, 0, N, arr, ans);
+        sort(ans.begin(), ans.end());
+        return ans;
+    }
+};
+```
+
+#### Optimal
+
+```cpp
+class Solution
+{
+public:
+
+    void solve(int index, int sum, int N, vector<int> &arr, vector<int> &ans)
+    {
+        if(index == N){
+            ans.push_back(sum);
+            return;
+        }
+        
+        solve(index+1, sum + arr[index], N, arr, ans);
+        solve(index+1, sum, N, arr, ans);
+    }
+
+    vector<int> subsetSums(vector<int> arr, int N)
+    {
+        vector<int> ans;
+        solve(0, 0, N, arr, ans);
+        sort(ans.begin(), ans.end());
+        return ans;
     }
 };
 ```
