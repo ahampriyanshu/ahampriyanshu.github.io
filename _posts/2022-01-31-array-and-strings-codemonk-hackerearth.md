@@ -4,10 +4,13 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, Hackerearth]
+summary: "An array is a sequential collection of variables of same data type. It stores data elements in a continuous memory location. A string is a sequence of characters."
 tags: [arrays, strings, codemonk, sheet, hackerearth]
 ---
 
 ## Monk and Rotation
+
+Monk loves to preform different operations on arrays, and so being the principal of Hackerearth School, he assigned a task to his new student Mishki. Mishki will be provided with an integer array A of size N and an integer K , where she needs to rotate the array in the right direction by K steps and then print the resultant array. As she is new to the school, please help her to complete the task.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -50,6 +53,8 @@ int main()
 ```
 
 ## Monk and Inversions
+
+Monk's best friend Micro, who happen to be an awesome programmer, got him an integer matrix M of size NxN for his birthday. Monk is taking coding classes from Micro. They have just completed array inversions and Monk was successful in writing a program to count the number of inversions in an array. Now, Micro has asked Monk to find out the number of inversion in the matrix M.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -102,6 +107,9 @@ int main()
 ```
 
 ## Minimum AND xor OR
+
+Given an array A of N integers. Find out the minimum value of the following expression for all valid i,j.
+(Ai and Aj) xor (Ai or Aj), where i != j.
 
 ```cpp
 #include <bits/stdc++.h>

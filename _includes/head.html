@@ -24,6 +24,7 @@
   {% endif %}
 
   {% seo title=false %}
+  {% seo description=false %}
 
   <title>
   {%- unless page.layout == "home" -%}
@@ -31,7 +32,7 @@
   {%- endunless -%}
     {{ site.title }}
   </title>
-
+  <meta name="description" content="{{ page.summary | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% include favicons.html %}
 
   <!-- Google Fonts -->

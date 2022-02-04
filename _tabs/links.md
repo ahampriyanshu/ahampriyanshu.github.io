@@ -6,5 +6,5 @@ order: 6
 
 Redirecting...
 <script>
-    window.location.replace('http://links.ahampriyanshu.com');
+    window.location.replace('https://links.ahampriyanshu.com');
 </script>

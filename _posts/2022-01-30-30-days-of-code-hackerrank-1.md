@@ -7,7 +7,6 @@ categories: [Sheets, Hackerrank]
 tags: [hackerrank, '30 days of code', 'c++', 'cpp', 'c', 'js', 'java', 'python']
 ---
 
-
 ## Day 00 : Hello World
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-hello-world/problem)
