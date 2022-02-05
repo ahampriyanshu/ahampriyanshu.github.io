@@ -3,7 +3,7 @@ title: "Sorting | Codemonk | Hackerearth"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-categories: [Sheets, Hackerearth]
+categories: [Sheets, CodeMonk]
 summary: "Sorting is a process of arranging items in ascending or descending order. This process can be implemented via many different algorithms. You will be learning about various types sorting algorithms."
 tags: [sorting,  codemonk, sheet, hackerearth]
 ---

@@ -329,7 +329,31 @@ public:
 };
 ```
 
-### Problem 5
+### 5. Maximum Subarray
+
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+A subarray is a contiguous part of an array.
+
+* [Practice](https://leetcode.com/problems/maximum-subarray)
+
+```cpp
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum =0, mx = INT_MIN;
+        for (int i=0; i< nums.size(); i++){
+            sum += nums[i];
+            mx = max(sum ,mx);
+            if (sum < 0)
+                sum = 0;
+        }
+        return mx;
+    }
+};
+```
+
+### 6. Stocks Sell or Buy
 
 * [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 

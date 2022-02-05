@@ -3,6 +3,7 @@ title: "20 - 29 | 30 Days of Code | Hackerrank"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
+summary: "Solutions to HackerRank 30 Days Of Code from Day 20 to 29 in C, C++, JS, Java, Python and Swift."
 categories: [Sheets, Hackerrank]
 tags: [hackerrank, '30 days of code', 'c++', 'cpp', 'c', 'js', 'java', 'python']
 ---

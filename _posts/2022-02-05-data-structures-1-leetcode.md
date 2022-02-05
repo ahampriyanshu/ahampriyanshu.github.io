@@ -1,15 +1,20 @@
 ---
-title: "Data Structure I | Leetcode"
+title: "Data Structure I | Study Plan | Leetcode"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
+summary: "C++ Solutions to Data Structure I of 2 Weeks Study Plan, Leetcode"
 categories: [Sheets, Leetcode]
-tags: [leetcode, data, structure, ds, array, tree, trie, string, stacks, queue, linked list]
+tags: [leetcode, data, structure, back-to-study-plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
 ## Day 1 | Array
 
 ### 217. Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+* [Practice](https://leetcode.com/problems/contains-duplicate)
 
 ```cpp
 class Solution {
@@ -22,11 +27,24 @@ public:
 
 ### 53. Maximum Subarray
 
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+A subarray is a contiguous part of an array.
+
+* [Practice](https://leetcode.com/problems/maximum-subarray)
+
 ```cpp
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
-        return nums.size() > set<int>(nums.begin(), nums.end()).size();   
+    int maxSubArray(vector<int>& nums) {
+        int sum =0, mx = INT_MIN;
+        for (int i=0; i< nums.size(); i++){
+            sum += nums[i];
+            mx = max(sum ,mx);
+            if (sum < 0)
+                sum = 0;
+        }
+        return mx;
     }
 };
 ```
