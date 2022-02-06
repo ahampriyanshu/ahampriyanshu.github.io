@@ -4,9 +4,10 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, CodeMonk]
-summary: "An array is a sequential collection of variables of same data type. It stores data elements in a continuous memory location. A string is a sequence of characters."
 tags: [arrays, strings, codemonk, sheet, hackerearth]
 ---
+
+An array is a sequential collection of variables of same data type. It stores data elements in a continuous memory location. A string is a sequence of characters.
 
 ## Monk and Rotation
 

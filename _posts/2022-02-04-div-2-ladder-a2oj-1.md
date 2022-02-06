@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, A2oj]
-tags: [a2oj, ladder, codeforces]
+tags: [a2oj, ladder, codeforces, id5, problems, one, ten]
 ---
 
 ## 1 Queue at the School
@@ -14,14 +14,6 @@ During the break the schoolchildren, boys and girls, formed a queue of n people 
 Let's describe the process more precisely. Let's say that the positions in the queue are sequentially numbered by integers from 1 to n, at that the person in the position number 1 is served first. Then, if at time x a boy stands on the i-th position and a girl stands on the (i + 1)-th position, then at time x + 1 the i-th position will have a girl and the (i + 1)-th position will have a boy. The time is given in seconds.
 
 You've got the initial position of the children, at the initial moment of time. Determine the way the queue is going to look after t seconds.
-
-Input
-The first line contains two integers n and t (1 ≤ n, t ≤ 50), which represent the number of children in the queue and the time after which the queue will transform into the arrangement you need to find.
-
-The next line contains string s, which represents the schoolchildren's initial arrangement. If the i-th position in the queue contains a boy, then the i-th character of string s equals "B", otherwise the i-th character equals "G".
-
-Output
-Print string a, which describes the arrangement after t seconds. If the i-th position has a boy after the needed time, then the i-th character a must equal "B", otherwise it must equal "G".
 
 * [266B](http://codeforces.com/problemset/problem/266/B)
 
@@ -66,12 +58,6 @@ int main()
 Xenia lives in a city that has n houses built along the main ringroad. The ringroad houses are numbered 1 through n in the clockwise order. The ringroad traffic is one way and also is clockwise.
 
 Xenia has recently moved into the ringroad house number 1. As a result, she's got m things to do. In order to complete the i-th task, she needs to be in the house number ai and complete all tasks with numbers less than i. Initially, Xenia is in the house number 1, find the minimum time she needs to complete all her tasks if moving from a house to a neighboring one along the ringroad takes one unit of time.
-
-Input
-The first line contains two integers n and m (2 ≤ n ≤ 105, 1 ≤ m ≤ 105). The second line contains m integers a1, a2, ..., am (1 ≤ ai ≤ n). Note that Xenia can have multiple consecutive tasks in one house.
-
-Output
-Print a single integer — the time Xenia needs to complete all tasks.
 
 Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin, cout streams or the %I64d specifier.
 
@@ -121,14 +107,6 @@ The game has (m + 1) players and n types of soldiers in total. Players «Cal
 
 Fedor is the (m + 1)-th player of the game. He assume that two players can become friends if their armies differ in at most k types of soldiers (in other words, binary representations of the corresponding numbers differ in at most k bits). Help Fedor and count how many players can become his friends.
 
-Input
-The first line contains three integers n, m, k (1 ≤ k ≤ n ≤ 20; 1 ≤ m ≤ 1000).
-
-The i-th of the next (m + 1) lines contains a single integer xi (1 ≤ xi ≤ 2n - 1), that describes the i-th player's army. We remind you that Fedor is the (m + 1)-th player.
-
-Output
-Print a single integer — the number of Fedor's potential friends.
-
 * [467B](https://codeforces.com/problemset/problem/467/B)
 
 ```cpp
@@ -173,12 +151,6 @@ int main()
 n participants of the competition were split into m teams in some manner so that each team has at least one participant. After the competition each pair of participants from the same team became friends.
 
 Your task is to write a program that will find the minimum and the maximum number of pairs of friends that could have formed by the end of the competition.
-
-Input
-The only line of input contains two integers n and m, separated by a single space (1 ≤ m ≤ n ≤ 109) — the number of participants and the number of teams respectively.
-
-Output
-The only line of the output should contain two integers kmin and kmax — the minimum possible number of pairs of friends and the maximum possible number of pairs of friends respectively.
 
 * [478B](https://codeforces.com/problemset/problem/467/B)
 

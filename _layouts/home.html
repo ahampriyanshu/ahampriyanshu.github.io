@@ -54,12 +54,7 @@ layout: page
       <p>
         {% include no-linenos.html content=post.content %}
 
-        {% if post.summary %}
-        {{ post.summary | markdownify | strip_html | truncate: 200 | escape }}
-        {% else %}
         {{ content | markdownify | strip_html | truncate: 200 | escape }}
-        {% endif %}
-
       
 
       </p>

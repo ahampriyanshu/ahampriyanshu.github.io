@@ -7,6 +7,8 @@ categories: [Contests, Codechef]
 tags: [live, contest, codechef, starters, cookoff, lunchtime]
 ---
 
+All of my accepted solutions on Codechef(February 2022).
+
 ## CodeChef Starters 24
 
 ### Badminton Serves 

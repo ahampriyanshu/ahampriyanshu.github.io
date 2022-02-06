@@ -3,10 +3,11 @@ title: "Algorithm I | Study Plan | Leetcode"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-summary: "C++ Solutions to Algorithm I of 2 weeks study plan, Leetcode"
 categories: [Sheets, Leetcode]
 tags: [leetcode, algorithms, back-to-study-plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
+
+C++ Solutions to Algorithm I of 2 weeks study plan, Leetcode.
 
 ## Day 1 | Binary Search
 

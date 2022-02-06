@@ -3,10 +3,11 @@ title: "Div 1 | Ladders | a2oj"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-summary: "Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python & Swift."
 categories: [Sheets, A2oj]
 tags: [a2oj, ladder, codeforces]
 ---
+
+Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python & Swift.
 
 ## 1 Young Physicist
 
