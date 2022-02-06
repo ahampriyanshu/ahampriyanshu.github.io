@@ -1,5 +1,5 @@
 ---
-title: "February | 2022 | Codechef"
+title: "Codechef | February | 2022"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/

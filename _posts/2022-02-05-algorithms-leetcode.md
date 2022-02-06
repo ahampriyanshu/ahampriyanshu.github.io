@@ -38,3 +38,57 @@ public:
     }
 };
 ```
+
+### 278. First Bad Version
+
+You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+
+You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+
+* [Practice](https://leetcode.com/problems/first-bad-version/)
+
+```cpp
+class Solution {
+public:
+    int firstBadVersion(int n) {
+        int l = 1, h = n, mid;
+        while (l < h) {
+            mid = l + (h - l) / 2;
+            if (isBadVersion(mid)) h = mid;
+            else l = mid+1;
+        }
+        return l;
+    }
+};
+```
+
+## Day 2 | Two Pointers
+
+### 189. Rotate Array
+
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+#### Brute
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        vector<int> ans;
+        int len(nums.size());
+        if(len == 1 || k == 0) return;
+        if(k>len) k = k%len;
+        int start = len-k;
+        
+        for(int i = start; i<len; i++)
+            ans.push_back(nums[i]);
+        
+        for(int i = 0; i<start; i++)
+            ans.push_back(nums[i]);
+        
+        nums = ans;
+    }
+};
+```
