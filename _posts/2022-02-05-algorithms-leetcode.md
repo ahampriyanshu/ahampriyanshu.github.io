@@ -26,7 +26,7 @@ public:
         int len(nums.size());
         int l(0), r(len-1);
         while(l<=r){
-            int mid = (r+l)/2;
+            int mid = l + (r - l)/2;
             if(nums[mid] == target)
                 return mid;
             if(nums[mid] > target)
@@ -66,6 +66,24 @@ public:
 
 ## Day 2 | Two Pointers
 
+### 977. Squares of a Sorted Array
+
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+```cpp
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& A) {
+        int l = 0, r = A.size() - 1;
+        vector<int> ans(r+1);
+        for (int k = A.size() - 1; k >= 0; k--)
+            if (abs(A[r]) > abs(A[l])) ans[k] = A[r] * A[r--];
+            else ans[k] = A[l] * A[l++];
+        return ans;
+    }
+};
+```
+
 ### 189. Rotate Array
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
@@ -89,6 +107,20 @@ public:
             ans.push_back(nums[i]);
         
         nums = ans;
+    }
+};
+```
+
+#### Optimal
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        k %=nums.size();
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin()+k);
+        reverse(nums.begin()+k, nums.end());
     }
 };
 ```

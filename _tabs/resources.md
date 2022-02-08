@@ -16,7 +16,7 @@ Some resources for competitive programming, algorithms and data structures.
 
 ### Sorting
 
-* [Powerful Ultimate Binary Search Template](https://leetcode.com/problems/first-bad-version/discuss/769685/Python-Clear-explanation-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems.)
+* [Come on, forget the binary search pattern/template! Try to understand it!](https://leetcode.com/problems/search-insert-position/discuss/249092/Come-on-forget-the-binary-search-patterntemplate!-Try-understand-it!)
 
 ## Maths in CP
 
