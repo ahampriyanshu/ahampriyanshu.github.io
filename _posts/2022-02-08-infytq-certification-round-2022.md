@@ -146,3 +146,106 @@ class Main
     }
 }
 ```
+
+
+## Morning Shift : 8 Feb
+
+### Problem 1
+
+
+```java
+import java.util.*;
+import java.io.*;
+
+public class myCode {
+
+    static final int SIZE = 26;
+
+
+    public static void main(String[] args) throws java.lang.Exception {
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String vow = "", con = "";
+        int n = str.length();
+        int[] hash = new int[SIZE];
+        for (int i = 0; i < n; i++)
+            hash[str.charAt(i) - 'a']++;
+
+        for (int i = 0; i < SIZE; i++) {
+            int freq = hash[i];
+            char ch = (char)(i + 97);
+
+            if (freq > 0) {
+                String temp = "";
+
+                while (freq > 0) {
+                    temp += ch;
+                    freq--;
+                }
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vow += temp;
+                } else {
+                    con += temp;
+                }
+
+            }
+
+        }
+
+        int vowLen = vow.length();
+        int conLen = con.length();
+
+        if (vowLen > 0) {
+            System.out.print(vow);
+            System.out.print(str.indexOf(vow.charAt(0)));
+        } else {
+            System.out.print("NA-1");
+        }
+
+        if (conLen > 0) {
+            System.out.print(con);
+            System.out.print(str.lastIndexOf(con.charAt(conLen - 1)));
+        } else {
+            System.out.print("NA-1");
+        }
+
+    }
+}
+```
+
+### Problem 2
+
+```java
+import java.util.*;
+import java.io.*;
+
+class myCode {
+
+
+    public static void main(String[] args) throws java.lang.Exception {
+
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        int num = sc.nextInt();
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int a = 0;
+        int b = 0;
+        while (len1 >= num && len2 >= num) {
+            String temp1 = s1.substring(a,a + num );
+            System.out.print(temp1);
+            a += num;
+            len1 -= num;
+            String temp2 = s2.substring(b,b + num );
+            System.out.print(temp2);
+            b += num;
+            len2 -= num;
+        }
+
+        if (len1 == 0 && len2 == 0) return;
+        else  System.out.print(s1.substring(a) + s2.substring(b));
+    }
+}
+```
