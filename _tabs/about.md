@@ -23,6 +23,16 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 | Dec |  |  |  |
 | Jan |  |  |  |
 
+|  |  Profile | Language(s) used
+|:--|:--|:--
+| Codeforces | [ahampriyanshu]() | C++
+| Codechef | [ahampriyanshu]() | C++
+| Leetcode | [ahampriyanshu]() | C++
+| Atcoder | [ahampriyanshu]() | C++
+| GFG | [ahampriyanshu]() | C++, Java
+| Hackerrank | [ahampriyanshu]() | C++, Java, Node, C, Python, Go
+| Hackerearth | [ahampriyanshu]() | Java
+
 ## Attribution
 
 * [GitHub Pages](https://pages.github.com/)
