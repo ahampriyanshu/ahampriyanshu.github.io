@@ -23,15 +23,17 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 | Dec |  |  |  |
 | Jan |  |  |  |
 
-|  |  Profile | Language(s) used
+## Profile(s)
+
+| Platform |  Profile | Language(s) used
 |:--|:--|:--
-| Codeforces | [ahampriyanshu]() | C++
-| Codechef | [ahampriyanshu]() | C++
-| Leetcode | [ahampriyanshu]() | C++
-| Atcoder | [ahampriyanshu]() | C++
-| GFG | [ahampriyanshu]() | C++, Java
-| Hackerrank | [ahampriyanshu]() | C++, Java, Node, C, Python, Go
-| Hackerearth | [ahampriyanshu]() | Java
+| Codeforces | [ahampriyanshu](https://codeforces.com/profile/ahampriyanshu) | C++
+| Codechef | [ahampriyanshu](https://www.codechef.com/users/ahampriyanshu) | C++
+| Leetcode | [ahampriyanshu](https://leetcode.com/ahampriyanshu/) | C++
+| Atcoder | [ahampriyanshu](https://atcoder.jp/users/ahampriyanshu) | C++
+| GFG | [ahampriyanshu](https://auth.geeksforgeeks.org/user/ahampriyanshu/profile) | C++, Java
+| Hackerrank | [ahampriyanshu](https://www.hackerrank.com/ahampriyanshu) | C++, Java, Node, C, Python, Go
+| Hackerearth | [ahampriyanshu](https://www.hackerearth.com/@ahampriyanshu) | Java
 
 ## Attribution
 

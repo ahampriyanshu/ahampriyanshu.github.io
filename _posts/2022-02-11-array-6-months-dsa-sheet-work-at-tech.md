@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, DSA]
-tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas ]
+tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho ]
 mermaid: true
 ---
 
@@ -164,7 +164,9 @@ For each test case the input has three lines:
 For each test-case, the output has a line with n+m space separated integers denoting the elements of the array C.
 
 ### Sample Input
-```2
+
+```
+2
 5 2
 1 3 3 4 4
 5 6
@@ -174,12 +176,15 @@ For each test-case, the output has a line with n+m space separated integers deno
 ```
 
 ### Expected Output
-```1 3 3 4 4 5 6
+
+```
+1 3 3 4 4 5 6
 1 3 3 3 3 4 9 11
 ```
 
 ### Constraints
-```1 <= T <= 100
+```
+1 <= T <= 100
 1 <= n, m <= 104
 1 <= Ai, Bi <= 105
 ```
@@ -204,5 +209,63 @@ vector<int> mergeSortedArrays(vector<int> &A, vector<int> B) {
 		C[k++] = B[j++];
 	
 	return C;
+}
+```
+
+## Merge Sorted Subarrays
+
+Consider an array that is divided into two parts and both of the parts are sorted individually. Given the mentioned array and the end index of the first part, merge them to create a sorted array. Update the same array with the merged elements. You can use extra auxiliary space.
+
+> Expected Time Complexity: **O(n)** where n denotes the size of the array.
+
+### Input Format
+First-line contains an integer ‘T’ denoting the number of test cases.
+
+For each test case the input has two lines:
+
+* Two space-separated integers ‘n’ and ‘endIndex’ denoting the length of the array and the end index of the first part respectively.
+* n space-separated integers denoting the elements of the array.
+
+###  Output Format
+For each test case, the output has a line with n space-separated integers denoting the elements of the merged array.
+
+### Sample Input
+2
+10 5
+1 3 5 7 9 11 0 4 6 8
+8 3
+3 3 9 11 1 3 3 4
+
+### Expected Output
+0 1 3 4 5 6 7 8 9 11
+1 3 3 3 3 4 9 11
+
+### Constraints
+
+1 <= T <= 100
+1 <= n <= 10
+0 <= endIndex < n
+-105 <= array element <= 105
+
+* [Practice](https://workat.tech/problem-solving/practice/merge-sorted-subarrays/editorial)
+
+```cpp
+void merge(vector<int> &arr, int endIndex) {
+	int i(0), j(endIndex+1), k(0), n(arr.size());
+	vector<int> C(n);
+	
+	while(i<=endIndex && j<n)
+		if(arr[i] <= arr[j])
+			C[k++] = arr[i++];
+		else
+			C[k++] = arr[j++];
+	
+	while(i<=endIndex)
+		C[k++] = arr[i++];
+	
+	while(j<n)
+		C[k++] = arr[j++];
+	
+	arr = C;
 }
 ```
