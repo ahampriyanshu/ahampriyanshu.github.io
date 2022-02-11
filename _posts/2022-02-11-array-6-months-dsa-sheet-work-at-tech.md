@@ -1,5 +1,5 @@
 ---
-title: "Arrays | 6 Month DSA | work@tech"
+title: "Array | 6 Months DSA Sheet | Work@Tech"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
@@ -84,6 +84,8 @@ int getIdenticalTwinsCount(vector<int> &arr) {
 
 Given an array of integers, find the elements which have an even number of digits.
 
+* [Practice](https://workat.tech/problem-solving/practice/even-number-of-digits)
+
 ```cpp
 vector<int> getEvenDigitNumbers(vector<int> &arr) {
     int len(arr.size());
@@ -125,6 +127,82 @@ vector<int> getEvenDigitNumbers(vector<int> &arr) {
 
 Given an array, sort it using insertion sort.
 
-```cpp
+* [Practice](https://workat.tech/problem-solving/practice/implement-insertion-sort)
 
+```cpp
+void insertionSort(vector<int> &arr) {
+    int i, key, j, n(arr.size());
+    for (i = 1; i < n; i++)
+    {
+        key = arr[i];
+        j = i - 1;
+		
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
+
+## Merge Two Sorted Arrays
+
+Given two sorted arrays **A** and **B**, find the merged sorted array **C** by merging **A** and **B**.
+
+### Input Format
+
+First-line contains an integer ‘T’ denoting the number of test cases.
+
+For each test case the input has three lines:
+* Two space-separated integers ‘n’ and ‘m’ denoting the length of the array A and B respectively.
+* n space-separated integers denoting the elements of the array A.
+* m space-separated integers denoting the elements of the array B.
+
+### Output Format
+For each test-case, the output has a line with n+m space separated integers denoting the elements of the array C.
+
+### Sample Input
+```2
+5 2
+1 3 3 4 4
+5 6
+6 2
+1 3 3 3 3 4
+9 11
+```
+
+### Expected Output
+```1 3 3 4 4 5 6
+1 3 3 3 3 4 9 11
+```
+
+### Constraints
+```1 <= T <= 100
+1 <= n, m <= 104
+1 <= Ai, Bi <= 105
+```
+
+```cpp
+vector<int> mergeSortedArrays(vector<int> &A, vector<int> B) {
+    
+	int i(0), j(0), k(0), n(A.size()), m(B.size());
+	vector<int> C(n+m);
+	
+	while(i<n && j<m){
+		if(A[i] <= B[j])
+			C[k++] = A[i++];
+		else
+			C[k++] = B[j++];
+	}
+	
+	while(i<n)
+		C[k++] = A[i++];
+	
+	while(j<m)
+		C[k++] = B[j++];
+	
+	return C;
+}
 ```
