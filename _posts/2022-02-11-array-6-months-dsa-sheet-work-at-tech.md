@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, DSA]
-tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon ]
+tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon, VMware, Meta, Amazon, D. E. Shaw, Facebook, Goldman Sachs, Google, Ola, PayPal, PayU, Samsung, Teradata, Visa, Yahoo]
 mermaid: true
 ---
 
@@ -51,7 +51,7 @@ For an array of integers nums, an identical twin is defined as pair (i, j) where
 
 * [Practice](https://workat.tech/problem-solving/practice/identical-twins)
 
-### O(1) Space Complexity
+### Constant Space
 
 ```cpp
 int getIdenticalTwinsCount(vector<int> &arr) {
@@ -63,7 +63,7 @@ int getIdenticalTwinsCount(vector<int> &arr) {
 }
 ```
 
-### O(n) Time Complexity
+### Linear Time
 
 ```cpp
 int getIdenticalTwinsCount(vector<int> &arr) {
@@ -203,6 +203,43 @@ void merge(vector<int> &arr, int endIndex) {
 }
 ```
 
+## Square sorted array
+
+Given an array of numbers, return an array that contains the squares of all the numbers in non-decreasing order.
+
+* [Practice](https://workat.tech/problem-solving/practice/square-sorted-array)
+
+```cpp
+vector<int> getSquareSortedArray(vector<int> &arr) {
+	int n(arr.size());
+	for(int i=0; i<n; i++)
+		arr[i] *= arr[i];
+	sort(arr.begin(), arr.end());
+	return arr;
+}
+```
+
+## Max Consecutive Ones
+
+Given an array **A**, find the maximum number of consecutive **1s** in the array.
+
+* [Practice](https://workat.tech/problem-solving/practice/max-consecutive-ones)
+
+```cpp
+int getMaxConsecutiveOnes(vector<int> &A) {
+    int global_max(0), local_max(0);
+	for(auto e:A){
+		if(e == 1)
+			local_max++;
+		else{
+			global_max = max(local_max, global_max);
+			local_max = 0;
+		}
+	}
+	return max(local_max, global_max);
+}
+```
+
 ## Arithmetic Sequence
 
 An Arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 5, 7, 9, 11, 13, 15, . . . is an arithmetic progression with a common difference of 2.
@@ -248,5 +285,47 @@ int largestContiguousSum(vector <int> &arr){
 		if(sum < 0)  sum = 0;
 	}
 	return ans;
+}
+```
+
+## Pascal's Triangle
+
+The triangle below is known as Pascal’s triangle.
+
+![pascal triangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
+
+In this triangle, the value at a position is equal to the sum of values of the 2 elements just above it.
+
+* [Practice](https://workat.tech/problem-solving/practice/pascals-triangle)
+
+```cpp
+vector<int> pascalTriangleRow(int row) {
+	int N = row-1, prev = 1;
+	vector<int> ans = {1};
+    
+    for (int i = 1; i <= N; i++) {
+        prev = (prev * (N - i + 1)) / i;
+		ans.push_back(prev);
+    }
+	return ans;
+}
+```
+
+## Contains Element?
+
+Given a sorted array and a number key, return whether the key is present in the array or not.
+
+* [Practice](https://workat.tech/problem-solving/practice/contains-element)
+
+```cpp
+bool containsElement(vector<int> &arr, int key) {
+    int mid, l(0), r(arr.size());
+	while(l<r){
+		mid = l + (r -l)/2;
+		if(arr[mid] == key) return true;
+		if(arr[mid] < key) l = mid + 1;
+		else r = mid;
+	}
+	return false;
 }
 ```

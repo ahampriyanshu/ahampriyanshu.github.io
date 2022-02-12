@@ -32,6 +32,7 @@ Some resources for competitive programming, algorithms and data structures.
 * [CSES](https://cses.fi/problemset/)
 * [Love Babbar](https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view)
 * [Code Monk](https://www.hackerearth.com/practice/codemonk/)
+* [Work@Tech](https://workat.tech/problem-solving/lists/six-month-dsa-practice-sheet/practice)
 
 ## Platforms
 
