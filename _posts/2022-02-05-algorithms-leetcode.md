@@ -124,3 +124,51 @@ public:
     }
 };
 ```
+
+## Day 3 | Two Pointers
+
+### 283. Move Zeroes
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+**Note :** that you must do this in-place without making a copy of the array.
+
+* [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
+
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int curr=0, end=0, n(nums.size());
+        
+        while(curr < n)
+            if(nums[curr] == 0) curr++;
+            else nums[end++] = nums[curr++];
+        
+        
+        while(end <n)
+            nums[end++] = 0;
+    }
+};
+```
+
+## Day 4 | Two Pointers
+
+### 344. Reverse String
+
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+You must do this by modifying the input array in-place with O(1) extra memory.
+
+* [Practice](https://leetcode.com/problems/reverse-string/)
+
+```cpp
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        int n(s.size());
+        for(int i=0; i<n/2; i++)
+            swap(s[i], s[n-i-1]);
+    }
+};
+```

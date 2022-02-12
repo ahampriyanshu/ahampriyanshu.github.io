@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, DSA]
-tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho ]
+tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon ]
 mermaid: true
 ---
 
@@ -151,44 +151,6 @@ void insertionSort(vector<int> &arr) {
 
 Given two sorted arrays **A** and **B**, find the merged sorted array **C** by merging **A** and **B**.
 
-### Input Format
-
-First-line contains an integer ‘T’ denoting the number of test cases.
-
-For each test case the input has three lines:
-* Two space-separated integers ‘n’ and ‘m’ denoting the length of the array A and B respectively.
-* n space-separated integers denoting the elements of the array A.
-* m space-separated integers denoting the elements of the array B.
-
-### Output Format
-For each test-case, the output has a line with n+m space separated integers denoting the elements of the array C.
-
-### Sample Input
-
-```
-2
-5 2
-1 3 3 4 4
-5 6
-6 2
-1 3 3 3 3 4
-9 11
-```
-
-### Expected Output
-
-```
-1 3 3 4 4 5 6
-1 3 3 3 3 4 9 11
-```
-
-### Constraints
-```
-1 <= T <= 100
-1 <= n, m <= 104
-1 <= Ai, Bi <= 105
-```
-
 ```cpp
 vector<int> mergeSortedArrays(vector<int> &A, vector<int> B) {
     
@@ -218,35 +180,6 @@ Consider an array that is divided into two parts and both of the parts are sorte
 
 > Expected Time Complexity: **O(n)** where n denotes the size of the array.
 
-### Input Format
-First-line contains an integer ‘T’ denoting the number of test cases.
-
-For each test case the input has two lines:
-
-* Two space-separated integers ‘n’ and ‘endIndex’ denoting the length of the array and the end index of the first part respectively.
-* n space-separated integers denoting the elements of the array.
-
-###  Output Format
-For each test case, the output has a line with n space-separated integers denoting the elements of the merged array.
-
-### Sample Input
-2
-10 5
-1 3 5 7 9 11 0 4 6 8
-8 3
-3 3 9 11 1 3 3 4
-
-### Expected Output
-0 1 3 4 5 6 7 8 9 11
-1 3 3 3 3 4 9 11
-
-### Constraints
-
-1 <= T <= 100
-1 <= n <= 10
-0 <= endIndex < n
--105 <= array element <= 105
-
 * [Practice](https://workat.tech/problem-solving/practice/merge-sorted-subarrays/editorial)
 
 ```cpp
@@ -267,5 +200,53 @@ void merge(vector<int> &arr, int endIndex) {
 		C[k++] = arr[j++];
 	
 	arr = C;
+}
+```
+
+## Arithmetic Sequence
+
+An Arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 5, 7, 9, 11, 13, 15, . . . is an arithmetic progression with a common difference of 2.
+
+Given an unsorted array, find if it can be reordered to form an arithmetic sequence.
+
+* [Practice](https://workat.tech/problem-solving/practice/arithmetic-sequence)
+
+```cpp
+bool isArithmeticSequence(vector<int> &arr) {
+    int n(arr.size()), maxi = INT_MIN, mini = INT_MAX;
+	unordered_map<int, int> ump;
+	for(auto e: arr){
+		if(e>maxi) maxi = e;
+		if(e<mini) mini = e;
+		ump[e]++;
+	}
+	
+	int d = (maxi - mini) / (n - 1);
+	
+	while(maxi > mini){
+		if(!ump[maxi])
+			return false;
+		maxi -= d;
+	}
+	
+	return true;
+}
+```
+
+## Largest Contiguous Sum
+
+A subarray is a part of an array including one or more contiguous/adjacent elements.
+
+* [Practice](https://workat.tech/problem-solving/practice/largest-contiguous)
+
+```cpp
+int largestContiguousSum(vector <int> &arr){
+  	int ans(INT_MIN), sum(0);
+	for(auto e: arr){
+		sum += e;
+		ans = max(ans, sum);
+		if(sum < 0)  sum = 0;
+	}
+	return ans;
 }
 ```
