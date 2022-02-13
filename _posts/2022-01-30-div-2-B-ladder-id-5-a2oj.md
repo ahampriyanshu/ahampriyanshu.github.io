@@ -1,13 +1,13 @@
 ---
-title: "Div 1 | Ladders | a2oj"
+title: "Div 1 | Ladder 5 | a2oj"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, A2oj]
-tags: [a2oj, ladder, codeforces]
+tags: [codeforces, a2oj, ladder, id5, div, B]
 ---
 
-Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python & Swift.
+Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++.List of random Codeforces problems, all of them are Div. 2 B problems. The problems are sorted, the most solved problem comes first.
 
 ## 1 Young Physicist
 

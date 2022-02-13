@@ -8,7 +8,7 @@ tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture,
 mermaid: true
 ---
 
-C++ Solutions to six month dsa sheets, Leetcode.
+C++ Solutions to six month DSA Sheets, Work@Tech.
 
 ## Cumulative Sum
 
