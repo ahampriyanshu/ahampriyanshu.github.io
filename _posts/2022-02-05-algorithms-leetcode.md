@@ -172,3 +172,51 @@ public:
     }
 };
 ```
+
+### 557. Reverse Words in a String III
+
+Given a string **s**, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+* [Practice](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
+
+```cpp
+class Solution {
+public:
+    string reverseWords(string s) {
+        int i = 0;
+        for (int j = 0; j < s.size(); ++j) {
+            if (s[j] == ' ') {
+                reverse(s.begin() + i, s.begin() + j);
+                i = j + 1;
+            }
+        }
+        reverse(s.begin() + i, s.end());
+        return s;
+    }
+};
+```
+
+## Day 5 | Two Pointers
+
+### 876. Middle of the Linked List
+
+Given the head of a singly linked list, return the middle node of the linked list.
+
+If there are two middle nodes, return the second middle node.
+
+* [Practice](https://leetcode.com/problems/middle-of-the-linked-list/)
+
+```cpp
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
+};
+```
