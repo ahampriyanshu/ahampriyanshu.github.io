@@ -7,6 +7,8 @@ categories: [Sheets, A2oj]
 tags: [a2oj, ladder, codeforces, id5, problems, one, ten]
 ---
 
+Solutions to some random Codeforces Div. 2 B problems in C++
+
 ## 1 Queue at the School
 
 During the break the schoolchildren, boys and girls, formed a queue of n people in the canteen. Initially the children stood in the order they entered the canteen. However, after a while the boys started feeling awkward for standing in front of the girls in the queue and they started letting the girls move forward each second.
@@ -76,15 +78,12 @@ void solve()
     for (int i = 0; i < m; i++)
     {
         cin >> curr;
-        if (i == 0)
-        {
-            ans += curr - 1;
-        }
-        else
+        if (i)
         {
             if (curr < prev) ans += n - prev + curr;
             else if (curr > prev) ans += curr - prev;
-        }
+        }    
+        else ans += curr - 1;
         prev = curr;
     }
     cout << ans << endl;

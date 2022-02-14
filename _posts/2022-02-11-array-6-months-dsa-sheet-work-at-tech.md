@@ -329,3 +329,25 @@ bool containsElement(vector<int> &arr, int key) {
 	return false;
 }
 ```
+
+## Contains Element?
+
+Given a sorted array and a number key, find the index of the first and last occurrence of the key in the array.
+
+> If the key is not present, return [-1, -1].
+
+
+* [Practice](https://workat.tech/problem-solving/practice/search-range)
+
+```cpp
+bool containsElement(vector<int> &arr, int key) {
+    int mid, l(0), r(arr.size());
+	while(l<r){
+		mid = l + (r -l)/2;
+		if(arr[mid] == key) return true;
+		if(arr[mid] < key) l = mid + 1;
+		else r = mid;
+	}
+	return false;
+}
+```
