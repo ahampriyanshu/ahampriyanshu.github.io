@@ -1,5 +1,5 @@
 ---
-title: "1-10 | Div 2 | Ladders | a2oj"
+title: "B Div 2 | Ladders | a2oj"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
@@ -9,7 +9,9 @@ tags: [a2oj, ladder, codeforces, id5, problems, one, ten]
 
 Solutions to some random Codeforces Div. 2 B problems in C++
 
-## 1 Queue at the School
+## Problem 1-10
+
+### 1 Queue at the School
 
 During the break the schoolchildren, boys and girls, formed a queue of n people in the canteen. Initially the children stood in the order they entered the canteen. However, after a while the boys started feeling awkward for standing in front of the girls in the queue and they started letting the girls move forward each second.
 
@@ -55,7 +57,7 @@ int main()
 }
 ```
 
-## 2 Xenia and Ringroad
+### 2 Xenia and Ringroad
 
 Xenia lives in a city that has n houses built along the main ringroad. The ringroad houses are numbered 1 through n in the clockwise order. The ringroad traffic is one way and also is clockwise.
 
@@ -98,7 +100,7 @@ int main()
 }
 ```
 
-## 3 Fedor and New Game
+### 3 Fedor and New Game
 
 After you had helped George and Alex to move in the dorm, they went to help their friend Fedor play a new computer game «Call of Soldiers 3».
 
@@ -145,7 +147,7 @@ int main()
 }
 ```
 
-## 4 Random Teams
+### 4 Random Teams
 
 n participants of the competition were split into m teams in some manner so that each team has at least one participant. After the competition each pair of participants from the same team became friends.
 
@@ -172,3 +174,49 @@ int main()
     cout << mini <<" "<< maxi << endl;
 }
 ```
+
+### 5 Vanya and Lanterns 
+
+Vanya walks late at night along a straight street of length l, lit by n lanterns. Consider the coordinate system with the beginning of the street corresponding to the point 0, and its end corresponding to the point l. Then the i-th lantern is at the point ai. The lantern lights all points of the street that are at the distance of at most d from it, where d is some positive number, common for all lanterns.
+
+Vanya wonders: what is the minimum light radius d should the lanterns have to light the whole street?
+
+* [492B](https://codeforces.com/problemset/problem/492/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long int ll;
+ 
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    double l,n,ele;
+    vector<double> vec;
+    cin >> n >> l;
+    for(ll i=0; i<n; i++){
+        cin >> ele;
+        vec.push_back(ele);
+    }
+    double f,e,ans,diff=0;
+    f = e = ans = INT_MIN;
+    sort(vec.begin(), vec.end());
+
+    if(vec[0] != 0)
+    f = vec[0];
+    
+    if(vec[n-1] != l)
+    e = l - vec[n-1];
+
+    for(ll i=0; i<n-1; i++)
+        diff = max(diff, vec[i+1] - vec[i]);
+    
+    ans = max({ans, diff/2, e, f});
+    cout.precision(10);
+    cout << fixed << ans << endl;
+}
+``
