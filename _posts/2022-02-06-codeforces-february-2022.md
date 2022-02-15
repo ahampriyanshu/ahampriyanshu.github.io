@@ -118,3 +118,111 @@ int main()
         solve();
 }
 ```
+
+## Round #771 (Div. 2)
+
+### A. Reverse
+
+You are given a permutation p1,p2,…,pn of length n. You have to choose two integers l,r (1≤l≤r≤n) and reverse the subsegment [l,r] of the permutation. The permutation will become p1,p2,…,pl−1,pr,pr−1,…,pl,pr+1,pr+2,…,pn.
+
+Find the lexicographically smallest permutation that can be obtained by performing exactly one reverse operation on the initial permutation.
+
+Note that for two distinct permutations of equal length a and b, a is lexicographically smaller than b if at the first position they differ, a has the smaller element.
+
+A permutation is an array consisting of n distinct integers from 1 to n in arbitrary order. For example, [2,3,1,5,4] is a permutation, but [1,2,2] is not a permutation (2 appears twice in the array) and [1,3,4] is also not a permutation (n=3 but there is 4 in the array).
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long int ll;
+
+void solve()
+{
+    ll n;
+    cin >> n;
+    ll arr[n];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    for (int i = 0; i < n; i++)
+    {
+        if (i + 1 != arr[i])
+        {
+            ll j = i;
+            while (arr[++j] != i + 1)
+                ;
+            reverse(arr + i, arr + j + 1);
+            break;
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        solve();
+}
+```
+
+### B. Odd Swap Sort
+
+You are given an array a1,a2,…,an. You can perform operations on the array. In each operation you can choose an integer i (1 ≤ i < n), and swap elements ai and ai+1 of the array, if ai+ai+1 is odd.
+
+Determine whether it can be sorted in non-decreasing order using this operation any number of times.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long int ll;
+ 
+bool solve()
+{
+    ll n;
+    cin >> n;
+    ll arr[n];
+    for(ll i=0; i<n; i++)
+        cin >> arr[i];
+
+    for (ll i = 0; i < n-1; i++)
+    {
+    bool sortMore = false;
+     for (ll j = 0; j < n-i-1; j++)
+     {
+        if (arr[j] > arr[j+1])
+        {
+            if((arr[j]+arr[j+1])%2 == 0) return false;
+            else {
+                swap(arr[j], arr[j+1]);
+                sortMore = true;
+            } 
+        }
+        
+     }
+     if (!sortMore)
+        return true;
+   }
+
+    return true;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        if(solve()) cout << "YES\n";
+        else cout << "NO\n";
+}
+```
