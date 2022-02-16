@@ -1,5 +1,5 @@
 ---
-title: "A Div 2 | Ladder 4 | a2oj"
+title: "A. Div 2 | Ladder 4 | a2oj"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/

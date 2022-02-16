@@ -1,5 +1,5 @@
 ---
-title: "B Div 2 | Ladders | a2oj"
+title: "B. Div 2 | Ladder 5 | a2oj"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
@@ -219,4 +219,4 @@ int main()
     cout.precision(10);
     cout << fixed << ans << endl;
 }
-``
+```

@@ -66,16 +66,15 @@ You can return the answer in any order.
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> mp;
-        int n = nums.size();
-        for(int i=0; i<n; i++)
-        {
-            int rem = target - nums[i];
-            if(mp.find(rem) != mp.end())
-                return {i, mp[rem]};
-            mp[nums[i]] = i;
+        unordered_map<int, int> ump;
+        int i,rem,n(nums.size());
+        for(i=0; i<n; i++){
+            rem = target - nums[i];
+            if(ump.find(rem) != ump.end())
+                break;
+            ump[nums[i]] = i;
         }
-        return {};
+        return {i, ump[rem]};
     }
 };
 ```

@@ -7,12 +7,9 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, string]
 ---
 
-## Problem 1: Reverse a string
+## Reverse a string
 
 The task is to complete the function reverseList() with head reference as the only argument and should return new head after reversing the list.
-
-**Expected Time Complexity:** O(N).
-**Expected Auxiliary Space:** O(1).
 
 * [GFG](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1/)
 
@@ -38,7 +35,7 @@ class Solution
     
 ```
 
-##  Reverse a Linked List in groups of given size
+## Reverse a Linked List in groups of given size
 
 Given a linked list of size N. The task is to reverse every k nodes (where k is an input to the function) in the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should be considered as a group and must be reversed (See Example 2 for clarification).
 
@@ -95,11 +92,11 @@ class Solution
         return false;
     }
 };
-  ```
+```
 
-  ### Optimal
+### Optimal
 
-  ```cpp
+```cpp
 class Solution
 {
     public:
@@ -116,4 +113,4 @@ class Solution
        return false;
     }
 };
-  ```
+```
