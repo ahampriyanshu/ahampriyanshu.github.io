@@ -307,127 +307,56 @@ public:
 
 ### 21. Merge Two Sorted Lists
 
+You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+
 ```cpp
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode head(INT_MIN), *tail = &head;
         
-        ListNode *head = NULL , *tail = NULL ;
-        
-        if(l1 == NULL)
-            return l2;
-        
-        if(l2 == NULL)
-            return l1;
-        
-        if(l1->val <= l2->val)
-        {
-            head = tail = l1;
-            l1 = l1->next;
-        }
-        else
-        {
-            head = tail = l2;
-            l2 = l2->next;
-        }
-        
-        
-        while(l1 != NULL && l2 != NULL)
-        
-            if(l1->val <= l2->val)
-            {
-                tail->next = l1; 
-                tail = tail->next;
+        while (l1 && l2) {
+            if (l1->val < l2->val) {
+                tail->next = l1;
                 l1 = l1->next;
-            }
-            else 
-            {
+            } else {
                 tail->next = l2;
-                tail = tail->next;
                 l2 = l2->next;
             }
-        
-            if (l1) tail->next = l1;
-            else tail->next = l2;
-        
-        return head;
+            tail = tail->next;
+        }
+
+        tail->next = l1 ? l1 : l2;
+        return head.next;
     }
 };
-
 ```
 
 ### 203. Remove Linked List Elements
+
+Given the head of a linked list and an integer **val**, remove all the nodes of the linked list that has **Node.val == val**, and return the new head.
+
+* [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 
 ```cpp
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-    
-    while(head && head->val == val)
-        head = head->next;
         
-    ListNode* curr = head;
+        while(head && head->val == val)
+            head = head->next;
         
-    while(curr != NULL && curr->next != NULL)
-        if(curr->next->val == val)
-            curr->next = curr->next->next;
-        else
-            curr = curr->next;
-            
-    if(curr && curr->val == val)
-        curr = NULL;
+        ListNode *curr = head;
         
-    return head;
-    }
-};
-```
-
-## Day 8 | Linked List
-
-### 206. Reverse Linked List
-
-Given the head of a singly linked list, reverse the list, and return the reversed list.
-
-* [Practice](https://leetcode.com/problems/reverse-linked-list/)
-
-```cpp
-class Solution {
-public:
-    ListNode* reverseList(ListNode* head) {
-        
-        ListNode *curr = head, *prev = NULL;
-        while(curr){
-            ListNode *next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
-        }
-        return prev;
-        
-    }
-};
-```
-
-### 83. Remove Duplicates from Sorted List
-
-* [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
-
-Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
-
-```cpp
-class Solution {
-public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        if(!head) return head;
-        ListNode *curr = head->next, *prev = head;
-        while(curr){
-            if(curr->val == prev->val)
-                prev->next = curr->next;
+        while(curr)
+            if(curr->next && curr->next->val == val)
+                curr->next = curr->next->next;
             else
-                prev = curr;
-            curr = curr->next;
-                        
-        }
+                curr = curr->next;
         return head;
     }
 };
