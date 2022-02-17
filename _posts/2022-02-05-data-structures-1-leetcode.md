@@ -148,21 +148,75 @@ public:
 };
 ```
 
+## Day 4 | Array
+
+### 118. Pascal's Triangle
+
+Given an integer numRows, return the first numRows of Pascal's triangle.
+
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
+
+![unable to load](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif   )
+
+* [Practice](https://leetcode.com/problems/pascals-triangle/)
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> ans(numRows);
+        for(int i=0;i<numRows;i++)
+        {
+            ans[i].resize(i+1);
+            ans[i][0]=ans[i][i]=1;
+            for(int j=1;j<i;j++)
+                ans[i][j]=ans[i-1][j-1]+ans[i-1][j];
+        }
+        return ans;
+    }
+};
+```
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generate(int numRows) {
+        
+    vector<vector<int>> ans;
+
+    for (int line = 1; line <= numRows; line++)
+    {
+        vector<int> level;
+        int C = 1;
+        for (int i = 1; i <= line; i++)
+        {
+            level.push_back(C);
+            C = C * (line - i) / i;
+        }
+        ans.push_back(level);
+    }
+    return ans;
+    }
+};
+```
+
 ## Day 6 | String   
 
 ### 387. First Unique Character in a String
+
+Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
 
 ```cpp
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> mp;
+        int  n(s.size()), hash[26] = {0};
         
-        for(char ch: s)
-            mp[ch]++;
-      141. Linked List Cycle  
-        for(int i=0; i<s.size(); i++)
-            if(mp[s[i]] == 1)
+        for(int i=0; i<n; i++)
+            hash[s[i] - 'a']++;
+        
+        for(int i=0; i<n; i++)
+            if(hash[s[i] - 'a'] == 1)
                 return i;
         
         return -1;
@@ -170,18 +224,24 @@ public:
 };
 ```
 
-### 
+### 383. Ransom Note
+
+Given two strings ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise.
+
+Each letter in magazine can only be used once in ransomNote.
 
 ```cpp
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-     int arr[26]={0};
-        for(auto & i:magazine)
-            arr[i-'a']++;
-        for(auto & i:ransomNote){
-            if(arr[i-'a'])
-                arr[i-'a']--;
+        int hash[26]={0};
+
+        for(char ch:magazine)
+            hash[ch-'a']++;
+
+        for(char ch:ransomNote){
+            if(hash[ch-'a'])
+                hash[ch-'a']--;
             else
                 return false;
         }
@@ -192,25 +252,28 @@ public:
 
 ### 242. Valid Anagram
 
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
 ```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        int letters[26]={0};
+        int hash[26] = {0};
         
         if(s.length() != t.length())
-            return false;
+            return false;        
         
-        for(int i=0;i<s.length();i++)
-            letters[s[i]-97]++;
+        for(char ch:s)
+            hash[ch-97]++;
         
-        for(int i=0;i<t.length();i++)
-            letters[t[i]-97]--;
-        
-        for(int i=0;i<26;i++)
-            if(letters[i] != 0)
+        for(char ch:t)
+            if(hash[ch-97])
+                hash[ch-97]--;
+            else
                 return false;
-            
+        
         return true;
     }
 };
@@ -219,15 +282,20 @@ public:
 
 ### 141. Linked List Cycle
 
+Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+
+Return true if there is a cycle in the linked list. Otherwise, return false.
+
 ```cpp
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
     
-    ListNode* slow = head;
-    ListNode* fast = head;
+    ListNode *slow = head, *fast = head;
     
-    while(fast!=NULL && fast->next!=NULL){
+    while(fast && fast->next){
         slow=slow->next;
         fast=fast->next->next;
         if(fast==slow) return true;
@@ -314,54 +382,53 @@ public:
 };
 ```
 
-## Day 4 | Array
+## Day 8 | Linked List
 
-### 118. Pascal's Triangle
+### 206. Reverse Linked List
 
-Given an integer numRows, return the first numRows of Pascal's triangle.
+Given the head of a singly linked list, reverse the list, and return the reversed list.
 
-In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
-
-![unable to load](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif   )
-
-* [Practice](https://leetcode.com/problems/pascals-triangle/)
+* [Practice](https://leetcode.com/problems/reverse-linked-list/)
 
 ```cpp
 class Solution {
 public:
-    vector<vector<int>> generate(int numRows) {
-    vector<vector<int>> ans(numRows);
-        for(int i=0;i<numRows;i++)
-        {
-            ans[i].resize(i+1);
-            ans[i][0]=ans[i][i]=1;
-            for(int j=1;j<i;j++)
-                ans[i][j]=ans[i-1][j-1]+ans[i-1][j];
+    ListNode* reverseList(ListNode* head) {
+        
+        ListNode *curr = head, *prev = NULL;
+        while(curr){
+            ListNode *next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
         }
-        return ans;
+        return prev;
+        
     }
 };
 ```
 
+### 83. Remove Duplicates from Sorted List
+
+* [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+
+Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+
 ```cpp
 class Solution {
 public:
-    vector<vector<int>> generate(int numRows) {
-        
-    vector<vector<int>> ans;
-
-    for (int line = 1; line <= numRows; line++)
-    {
-        vector<int> level;
-        int C = 1;
-        for (int i = 1; i <= line; i++)
-        {
-            level.push_back(C);
-            C = C * (line - i) / i;
+    ListNode* deleteDuplicates(ListNode* head) {
+        if(!head) return head;
+        ListNode *curr = head->next, *prev = head;
+        while(curr){
+            if(curr->val == prev->val)
+                prev->next = curr->next;
+            else
+                prev = curr;
+            curr = curr->next;
+                        
         }
-        ans.push_back(level);
-    }
-    return ans;
+        return head;
     }
 };
 ```
