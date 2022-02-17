@@ -432,3 +432,39 @@ public:
     }
 };
 ```
+
+
+## Day 13 | Tree
+
+### 700. Search in a Binary Search Tree
+
+Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+
+* [Practice](https://leetcode.com/problems/search-in-a-binary-search-tree/)
+
+#### Recursion
+
+```cpp
+class Solution {
+public:
+    TreeNode* searchBST(TreeNode* root, int val) {
+        if(!root) return NULL;
+        if(root->val == val) return root;
+        if(root->val > val) return searchBST(root->left, val);
+        return searchBST(root->right, val);
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    TreeNode* searchBST(TreeNode* root, int val) {
+        while(root and root->val != val)
+            root = root->val > val ? root->left : root->right;
+        return root;
+    }
+};
+```
