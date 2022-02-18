@@ -330,12 +330,11 @@ bool containsElement(vector<int> &arr, int key) {
 }
 ```
 
-## Contains Element?
+## Search Range
 
 Given a sorted array and a number key, find the index of the first and last occurrence of the key in the array.
 
-> If the key is not present, return [-1, -1].
-
+If the key is not present, return [-1, -1].
 
 * [Practice](https://workat.tech/problem-solving/practice/search-range)
 
@@ -349,5 +348,43 @@ bool containsElement(vector<int> &arr, int key) {
 		else r = mid;
 	}
 	return false;
+}
+```
+
+## Negative numbers in sorted array
+
+Given a sorted array of integers, find the number of negative numbers.
+
+* [Practice](https://workat.tech/problem-solving/practice/negative-numbers-in-sorted-array)
+
+```cpp
+int getNegativeNumbersCount(vector<int> &arr) {
+    int mid, l(0), r(arr.size());
+	while(l<r){
+		mid = l + (r -l)/2;
+		if(arr[mid] < 0) l = mid + 1;
+		else r = mid;
+	}
+	return l;
+}
+```
+
+## Next Greater Element In Sorted Array
+
+Given a sorted array and a number key, find the smallest array element which is greater than the key.
+
+If the key is greater than or equal to the largest element then return the key itself.
+
+* [Practice](https://workat.tech/problem-solving/practice/next-greater-element-in-sorted-array)
+
+```cpp
+int getNextGreaterElement(vector<int> &arr, int key) {
+    int mid, l(0), r(arr.size());
+	while(l<r){
+		mid = l + (r-l)/2;
+		if(arr[mid] <= key) l = mid + 1;
+		else r = mid;
+	}
+	return l == arr.size() ? key:arr[l];
 }
 ```

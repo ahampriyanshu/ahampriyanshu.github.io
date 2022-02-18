@@ -362,6 +362,56 @@ public:
 };
 ```
 
+## Day 12 | Tree
+
+### 226. Invert Binary Tree 
+
+Given the root of a binary tree, invert the tree, and return its root.
+
+![unable to load](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
+
+* [Practice](https://leetcode.com/problems/invert-binary-tree/)
+
+#### Recursion
+
+```cpp
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if (!root) return NULL;
+        TreeNode* tmp = root -> left;
+        root -> left = invertTree(root -> right);
+        root -> right = invertTree(tmp);
+        return root;
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if (!root) return NULL;
+        queue<TreeNode*> q;
+        q.push(root);
+        
+        while(!q.empty()){
+            
+            TreeNode *tmp = q.front();
+            q.pop();
+            
+            if(tmp->left) q.push(tmp->left);
+            if(tmp->right) q.push(tmp->right);
+            
+            swap(tmp->left, tmp->right);
+        }
+        
+        return root;
+    }
+};
+```
 
 ## Day 13 | Tree
 
