@@ -367,13 +367,7 @@ vector<int> searchRange(vector<int> &arr, int target) {
         return {lb,ub};s
 ```
 
-### Binary(Recursive)
-
-```cpp
-
-```
-
-### Binary(Iterative)
+### Binary Search
 
 ```cpp
 class Solution {
@@ -467,5 +461,102 @@ int getNextGreaterElement(vector<int> &arr, int key) {
 		else r = mid;
 	}
 	return l == arr.size() ? key:arr[l];
+}
+```
+
+## Remove occurences
+
+Given an array and a number k, remove all occurrences of k from the array (in-place). Return the number of elements 'remainingSize' left after removing k. There can be anything beyond the first 'remainingSize' elements. It will be ignored.
+
+* [Practice](https://workat.tech/problem-solving/practice/remove-occurences)
+
+```cpp
+int removeOccurences(vector<int> &A, int k) {
+	int j(0), n(A.size());
+	for (int i = 0; i < n; i++) 
+		if (A[i] != k)
+			A[j++] = A[i];
+	return j;
+}
+```
+
+## Two Sum Sorted
+
+Given a sorted array, check if there exist two numbers whose sum is zero.
+
+* [Practice](https://workat.tech/problem-solving/practice/two-sum-sorted)
+
+### STL
+
+```cpp
+bool hasTwoSumZero(vector<int> &A) {
+	unordered_map<int, int> ump;
+	for(auto e:A){
+		if(ump[-e])
+			return true;
+		ump[e]++;
+	}
+	return false;
+}
+```
+
+### Two sum
+
+```cpp
+bool hasTwoSumZero(vector<int> A) {
+	int n = A.size();
+	int left = 0, right = n - 1;
+	while(left < right)
+
+		if(A[left] + A[right] == 0) 
+			return true;
+		else if(A[left] + A[right] > 0) 
+			right--;
+		else 
+			left++;
+		
+	return false;
+}
+```
+
+## Is Perfect Square
+
+Given a positive integer num, write a function that returns true if num is a perfect square else false.
+
+**Note:** Do not use the in-built methods to calculate square root or power.
+
+* [Practice](https://workat.tech/problem-solving/practice/is-perfect-square)
+
+```cpp
+bool isPerfectSquare(int num) {
+    int ans = 1;
+	
+	while(ans*ans <= num){
+		if(ans*ans == num) return true;
+		ans++;
+	}
+	
+	return false;
+}
+```
+
+### Binary Search
+
+```cpp
+bool isPerfectSquare(int x)
+{ 
+    long long left = 1, right = x;
+   
+    while (left <= right)
+    {
+        long long mid = left +  (right-left) / 2;
+        if (mid * mid == x)
+            return true;
+        if (mid * mid < x)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return false;
 }
 ```
