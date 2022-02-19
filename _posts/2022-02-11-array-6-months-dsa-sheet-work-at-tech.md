@@ -337,18 +337,99 @@ Given a sorted array and a number key, find the index of the first and last occu
 If the key is not present, return [-1, -1].
 
 * [Practice](https://workat.tech/problem-solving/practice/search-range)
+* [GFG](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#)
+
+### Linear
 
 ```cpp
-bool containsElement(vector<int> &arr, int key) {
-    int mid, l(0), r(arr.size());
-	while(l<r){
-		mid = l + (r -l)/2;
-		if(arr[mid] == key) return true;
-		if(arr[mid] < key) l = mid + 1;
-		else r = mid;
-	}
-	return false;
+vector<int> searchRange(vector<int> &arr, int target) {
+	int lower_bound = -1;
+    int upper_bound = -1;
+    for(int i = 0 ; i < arr.size(); i++){
+        if(arr[i] == target){
+            if(lower_bound == -1)
+                lower_bound = i;
+            upper_bound = i;
+        }
+    }
+    return {lower_bound, upper_bound};
 }
+```
+
+### STL
+
+```cpp
+        bool isPresent = binary_search(arr.begin(),arr.end(),x);
+        if(!isPresent) return {-1};
+        
+        int lb = lower_bound(arr.begin(),arr.end(),x)-arr.begin();
+        int ub = upper_bound(arr.begin(),arr.end(),x)-arr.begin()-1;
+        return {lb,ub};s
+```
+
+### Binary(Recursive)
+
+```cpp
+
+```
+
+### Binary(Iterative)
+
+```cpp
+class Solution {
+  public:
+  
+    int firstOccurence(vector<int> &arr, int n, int x)
+    {
+        int start = 0;
+        int end = n-1;
+        int result = -1;
+        while(start <= end)
+        {
+            int mid = start + ((end-start)/2);
+            if(arr[mid] == x)
+            {
+                result = mid;
+                end = mid-1;
+            }    
+            
+            if(x > arr[mid])
+                start = mid+1;
+            else
+                end = mid-1;
+        }
+        
+        return result;
+    }
+    
+    int lastOccurence(vector<int> &arr, int n, int x)
+    {
+        int start = 0;
+        int end = n-1;
+        int result = -1;
+        while(start <= end)
+        {
+            int mid = start + ((end-start)/2);
+            if(arr[mid] == x)
+            {
+                result = mid;
+                start = mid+1;
+            }    
+            
+            if(x >= arr[mid])
+                start = mid+1;
+            else
+                end = mid-1;
+        }
+        
+        return result;
+    }
+    vector<int> firstAndLast(vector<int> &arr, int n, int x) {
+       int first = firstOccurence(arr,n,x);
+       int last = lastOccurence(arr,n,x);
+   	   return {first, last};
+    }
+};
 ```
 
 ## Negative numbers in sorted array
