@@ -8,7 +8,7 @@ tags: [live, contest, infosys, infytq, certification, round, hash, set, array, s
 mermaid: true
 ---
 
-All of the accepted solutions for InfyTQ Certification Round, February 2022.
+All of the submissions for InfyTQ Certification Round, February 2022.
 
 > All the submissions are posted once the examiantion was already over.
 {: .prompt-warning }

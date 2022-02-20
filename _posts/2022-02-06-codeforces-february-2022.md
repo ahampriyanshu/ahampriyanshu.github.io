@@ -7,7 +7,7 @@ categories: [Contests, Codeforces]
 tags: [live, contest, codeforces, div2, div3, educational, global, round]
 ---
 
-All of my accepted solutions on Codeforces(February 2022).
+All of my submissions on Codeforces(February 2022).
 
 ## Round #770 (Div. 2)
 
@@ -224,5 +224,108 @@ int main()
     for (cin >> test; test--;)
         if(solve()) cout << "YES\n";
         else cout << "NO\n";
+}
+```
+
+
+## Round #772 (Div. 2)
+
+### A. Min Or Sum
+
+You are given an array a of size n.
+
+* You can perform the following operation on the array:
+
+* Choose two different integers i,j (1 ≤ i < j ≤ n), replace ai with x and aj with y. In order not to break the array, ai|aj=x|y must be held, where | denotes the bitwise OR operation. Notice that x and y are non-negative integers.
+
+Please output the minimum sum of the array you can get after using the operation above any number of times.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long int ll;
+ 
+void solve()
+{
+    ll n, ele, ans(0);
+    cin >> n;
+    for (ll i = 0; i < n; i++)
+    {
+        cin >> ele;
+        ans |= ele; 
+    }
+    cout << ans << endl;
+ 
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        solve();
+}
+```
+
+### B. Avoid Local Maximums
+
+You are given an array a of size n. Each element in this array is an integer between 1 and 109.
+
+You can perform several operations to this array. During an operation, you can replace an element in the array with any integer between 1 and 109.
+
+Output the minimum number of operations needed such that the resulting array doesn't contain any local maximums, and the resulting array after the operations.
+
+An element ai is a local maximum if it is strictly larger than both of its neighbors (that is, ai>ai−1 and ai>ai+1). Since a1 and an have only one neighbor each, they will never be a local maximum.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long int ll;
+ 
+void solve()
+{
+    ll n, ans(0);
+    cin >> n;
+    ll arr[n];
+    for (ll i = 0; i < n; i++)
+        cin >> arr[i];
+ 
+    if (n == 2)
+    {
+        cout << 0 << endl
+             << arr[0] << " " << arr[1] << endl;
+        return;
+    }
+ 
+    for (ll i = 1; i < n - 1; i++)
+    {
+        if (arr[i] > arr[i + 1] && arr[i] > arr[i - 1])
+        {
+            if (i + 2 < n && arr[i+1] < arr[i+2])
+               arr[i+1] = max(arr[i], arr[i+2]);
+            else
+                arr[i] = max(arr[i - 1], arr[i + 1]);
+            ans++;
+        }
+    }
+ 
+    cout << ans << endl;
+    for (ll i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        solve();
 }
 ```

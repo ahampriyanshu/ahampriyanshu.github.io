@@ -7,7 +7,7 @@ categories: [Contests, Atcoder]
 tags: [live, contest, atcoder, div2, grand]
 ---
 
-All of my accepted solutions on Atcoder(February 2022).
+All of my submissions on Atcoder(February 2022).
 
 ## ABC 239
 
