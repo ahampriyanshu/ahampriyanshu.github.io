@@ -220,3 +220,115 @@ int main()
     cout << fixed << ans << endl;
 }
 ```
+
+### 6 Sort the Array
+
+Being a programmer, you like arrays a lot. For your birthday, your friends have given you an array a consisting of n **distinct** integers.
+
+Unfortunately, the size of a is too small. You want a bigger array! Your friends agree to give you a bigger array, but only if you are able to answer the following question correctly: is it possible to sort the array a (in increasing order) by reversing **exactly one** segment of a? See definitions of segment and reversing in the notes.
+
+* [451B](https://codeforces.com/contest/451/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long int ll;
+
+void solve()
+{
+    ll n;
+    cin >> n;
+    ll arr[n];
+    for (ll i = 0; i < n; i++)
+        cin >> arr[i];
+
+    bool sorted = true;
+    ll l = 0, r = 0;
+
+    for (ll i = 0; i < n - 1; i++)
+        if (arr[i] > arr[i + 1])
+        {
+            l = i;
+            break;
+        }
+
+    for (ll i = n - 1; i >= 1; i--)
+        if (arr[i] < arr[i - 1])
+        {
+            r = i;
+            break;
+        }
+
+    reverse(arr + l, arr + r + 1);
+
+    for (ll i = 0; i < n - 1; i++)
+        if (arr[i] > arr[i + 1])
+        {
+            sorted = false;
+            break;
+        }
+
+    if (sorted)
+        cout << "yes\n" << l + 1 << " " << r + 1 << "\n";
+    else
+        cout << "no\n";
+
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    solve();
+}
+```
+
+### 7 Lecture
+
+You have a new professor of graph theory and he speaks very quickly. You come up with the following plan to keep up with his lecture and make notes.
+
+You know two languages, and the professor is giving the lecture in the first one. The words in both languages consist of lowercase English characters, each language consists of several words. For each language, all words are distinct, i.e. they are spelled differently. Moreover, the words of these languages have a one-to-one correspondence, that is, for each word in each language, there exists exactly one word in the other language having has the same meaning.
+
+You can write down every word the professor says in either the first language or the second language. Of course, during the lecture you write down each word in the language in which the word is shorter. In case of equal lengths of the corresponding words you prefer the word of the first language.
+
+You are given the text of the lecture the professor is going to read. Find out how the lecture will be recorded in your notes.
+
+* [499B](https://codeforces.com/contest/499/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long int ll;
+
+void solve()
+{
+    ll n, m;
+    unordered_map<string, string> ump;
+    string w1, w2, word;
+    cin >> n >> m;
+    ll arr[n];
+    for (ll i = 0; i < m; i++)
+    {
+        cin >> w1 >> w2;
+        word = w2.size() < w1.size() ? w2 : w1;
+        ump[w1] = ump[w2] = word;
+    }
+
+    for (ll i = 0; i < n; i++)
+    {
+        cin >> word;
+        cout << ump[word] << " ";
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    solve();
+}
+```

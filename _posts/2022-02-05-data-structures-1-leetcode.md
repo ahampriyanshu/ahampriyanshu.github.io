@@ -81,6 +81,14 @@ public:
 
 ### 88. Merge Sorted Array
 
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+* [Practice](https://leetcode.com/problems/merge-sorted-array/)
+
 ```cpp
 class Solution {
 public:
@@ -98,6 +106,17 @@ public:
 };
 ```
 
+#### Single loop
+
+```cpp
+class Solution {
+public:
+    void merge(vector<int>& a, int m, vector<int>& b, int n) {
+    while(n) a[m + n] = (m > 0 && a[m - 1] > b[n - 1])? a[--m] : b[--n];
+    }
+};
+```
+
 ## Day 3 | Array
 
 ### 350. Intersection of Two Arrays II
@@ -106,7 +125,7 @@ public:
 class Solution {
 public:
     vector<int> intersect(vector<int>& arr1, vector<int>& arr2) {
-  sort(arr1.begin(),arr1.end());
+    sort(arr1.begin(),arr1.end());
         sort(arr2.begin(),arr2.end());
         
         int n=arr1.size();
@@ -121,8 +140,7 @@ public:
             else if(arr1[i]>arr2[j]) j++;
             else
             {
-                v.push_back(arr1[i]);
-                i++;
+                v.push_back(arr1[i++]);
                 j++;
             }
 
