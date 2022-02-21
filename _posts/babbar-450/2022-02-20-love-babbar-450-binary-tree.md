@@ -1,5 +1,5 @@
 ---
-title: "Tree | 450 DSA | Love Babbar"
+title: "Binary Tree | 450 DSA | Love Babbar"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
