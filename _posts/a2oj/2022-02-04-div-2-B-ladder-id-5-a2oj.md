@@ -332,3 +332,45 @@ int main()
     solve();
 }
 ```
+
+### 8 Tprimes
+
+We know that prime numbers are positive integers that have exactly two distinct positive divisors. Similarly, we'll call a positive integer t Т-prime, if t has exactly three distinct positive divisors.
+
+You are given an array of n positive integers. For each of them determine whether it is Т-prime or not.
+
+* [230B](https://codeforces.com/contest/230/problem/B)
+
+```cpp
+#include <cstdio>
+#include <cstring>
+#include <set>
+#include <iostream>
+using namespace std;
+ 
+set <long long> tprimes;
+ 
+bool isPrime(int n) {
+    for (int i = 2; i * i <= n; ++ i)
+        if (n % i == 0) 
+            return false;
+    return true;
+}
+ 
+int main() {
+    tprimes.insert(4);
+    for (int i = 3; i <= 1000000; i += 2) {
+        if (isPrime(i)) 
+            tprimes.insert((long long)i * i);
+        
+    }
+    int n;
+    scanf("%d", &n);
+    while (n --) {
+        long long x;
+        cin >> x;
+        puts(tprimes.find(x) == tprimes.end()? "NO": "YES");
+    }
+    return 0;
+}
+```
