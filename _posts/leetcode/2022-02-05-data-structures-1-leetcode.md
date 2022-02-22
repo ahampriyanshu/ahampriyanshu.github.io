@@ -121,11 +121,41 @@ public:
 
 ### 350. Intersection of Two Arrays II
 
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+
+* [Practice](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
+
+#### Hashing
+
 ```cpp
 class Solution {
 public:
     vector<int> intersect(vector<int>& arr1, vector<int>& arr2) {
-    sort(arr1.begin(),arr1.end());
+        
+        unordered_map<int, int> ump;
+        vector<int> ans;
+        
+        for(auto e:arr1)
+            ump[e]++;
+        
+        for(auto e:arr2){
+            if(ump[e]){
+                ans.push_back(e);
+                ump[e]--;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+#### Sorting
+
+```cpp
+class Solution {
+public:
+    vector<int> intersect(vector<int>& arr1, vector<int>& arr2) {
+        sort(arr1.begin(),arr1.end());
         sort(arr2.begin(),arr2.end());
         
         int n=arr1.size();
@@ -151,15 +181,39 @@ public:
 
 ### 121. Best Time to Buy and Sell Stock
 
+You are given an array _prices_ where _prices[i]_ is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a **single day** to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the **maximum profit** you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+* [Practice](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
 ```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
         int buy = INT_MAX, profit = 0;
-        for (auto price: prices)
+        for (int price: prices)
         {
         if(price < buy) buy = price;
         if(price - buy > profit) profit = price - buy;
+        }
+        return profit;
+    }
+};
+```
+
+#### Kadane
+
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int curr = 0, profit = 0;
+        for(int i = 1; i < prices.size(); i++) {
+            curr = max(0, curr += prices[i] - prices[i-1]);
+            profit = max(curr, profit);
         }
         return profit;
     }
@@ -194,6 +248,11 @@ public:
     }
 };
 ```
+
+#### Formula based  
+
+> NCr = (NCr - 1 * (N - r + 1)) / r
+{: .prompt-note }
 
 ```cpp
 class Solution {
