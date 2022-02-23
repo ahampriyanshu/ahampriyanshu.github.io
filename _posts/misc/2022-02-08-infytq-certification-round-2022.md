@@ -10,7 +10,7 @@ mermaid: true
 
 All of the submissions for InfyTQ Certification Round, February 2022.
 
-> All the submissions are posted once the examiantion was already over.
+> All the submissions are posted once the examination was already over.
 {: .prompt-warning }
 
 ## Morning Shift : 8 Feb
