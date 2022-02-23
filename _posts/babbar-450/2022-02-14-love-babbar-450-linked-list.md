@@ -114,3 +114,36 @@ class Solution
     }
 };
 ```
+
+## Nth node from end of linked list
+
+Given a linked list consisting of L nodes and given a number N. The task is to find the Nth node from the end of the linked list.
+
+* [GFG](https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1)
+
+> Initialize two pointers to head. Move the right pointer n times and then move move both the pointer untill the right reaches the end. Now the left pointer points to the nth node from the end. 
+{: .prompt-note }
+
+* Time Complexity : **O(n)** 
+* Space Complexity : **O(1)**
+
+```cpp
+int getNthFromLast(Node *head, int n)
+{
+       int size = 0;
+       Node *l = head;
+       Node *r = head;
+       
+       while(n--){
+           if(!r) return -1;
+           r = r->next;
+       }
+       
+       while(r) {
+           r = r->next;
+           l = l->next;
+       }
+       
+       return l->data;
+}
+```

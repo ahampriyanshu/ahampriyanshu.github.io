@@ -40,11 +40,9 @@ The submission should consist of one line consisting of a single number 0≤N fo
 ## Scoring
 A solution scores one point for each client that will come to your pizzeria. A client will come to your pizzeria if all the ingredients they like are on the pizza and none of the ingredients they dislike are on the pizza.
 
-## Sample
+
+## Sample Input
 ```
-Sample Input
-save_alt
-content_copy
 3
 2 cheese peppers
 0
@@ -54,10 +52,8 @@ content_copy
 1 basil
 ```
 
+## Sample Output
 ```
-Sample Output
-save_alt
-content_copy
 4 cheese mushrooms tomatoes peppers
 ```
 
