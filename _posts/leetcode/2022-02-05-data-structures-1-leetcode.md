@@ -291,7 +291,7 @@ Given an integer numRows, return the first numRows of Pascal's triangle.
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
-![unable to load](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
+![loading image](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
 
 * [Practice](https://leetcode.com/problems/pascals-triangle/)
 
@@ -346,6 +346,8 @@ public:
 
 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
 
+* [Practice](https://leetcode.com/problems/first-unique-character-in-a-string/)
+
 ```cpp
 class Solution {
 public:
@@ -369,6 +371,8 @@ public:
 Given two strings ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise.
 
 Each letter in magazine can only be used once in ransomNote.
+
+* [Practice](https://leetcode.com/problems/ransom-note/)
 
 ```cpp
 class Solution {
@@ -395,6 +399,8 @@ public:
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+* [Practice](https://leetcode.com/problems/valid-anagram/submissions/)
 
 ```cpp
 class Solution {
@@ -508,7 +514,7 @@ public:
 
 Given the root of a binary tree, invert the tree, and return its root.
 
-![unable to load](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
+![loading image](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
 
 * [Practice](https://leetcode.com/problems/invert-binary-tree/)
 

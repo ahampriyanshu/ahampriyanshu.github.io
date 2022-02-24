@@ -41,4 +41,4 @@ Some resources for competitive programming, algorithms and data structures.
 * [Code Studio](https://www.codingninjas.com/codestudio/)
 * [Leetcode](https://leetcode.com/)
 * [Atcoder](https://atcoder.jp/)
-* [Geeks For Geeks](https://www.geeksforgeeks.org/)
+* [Geeks For Geeks](https://practice.geeksforgeeks.org/)

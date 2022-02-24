@@ -79,4 +79,113 @@ This means a submission of this output would score 2 points for this case, becau
 
 ## Solution
 
-### A - An example
+### Algorithm
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl '\n'
+#define mp make_pair
+#define pb push_back
+#define input(s) freopen(s, "r", stdin)
+#define output(s) freopen(s, "w", stdout)
+#define forn(i, n) for (int i = 0; i < n; i++)
+
+typedef long long int ll;
+typedef long double ld;
+
+int main(int argc, char *argv[])
+{
+    input(argv[1]);
+    output(argv[2]);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    ll clients, likes, dislikes;
+    unordered_set<string> selected;
+    string ingredients;
+
+    cin >> clients;
+
+    for (ll client = 0; client < clients; client++)
+    {
+
+        vector<string> liked;
+        vector<string> disliked;
+
+        cin >> likes;
+
+        while (likes--)
+        {
+            cin >> ingredients;
+            liked.push_back(ingredients);
+        }
+
+        cin >> dislikes;
+
+        while (dislikes--)
+        {
+            cin >> ingredients;
+            disliked.push_back(ingredients);
+        }
+
+        if( tmp1.size() > 2 * tmp2.size())
+            for(auto e:tmp1)
+                 selected.insert(e);
+    }
+
+    cout << selected.size() << " ";
+
+    for (string dish : selected)
+        cout << dish << " ";
+
+    return 0;
+}
+```
+
+### Bash script
+
+```bash
+g++ sol.cpp 
+./a.out a.txt out_a.txt
+g++ sol.cpp
+./a.out b.txt out_b.txt
+g++ sol.cpp
+./a.out c.txt out_c.txt
+g++ sol.cpp
+./a.out d.txt out_d.txt
+g++ sol.cpp
+./a.out e.txt out_e.txt
+g++ sol.cpp
+./a.out f.txt out_f.txt
+```
+
+### Simulator
+
+```cpp
+void simulator(unordered_set<string> selected)
+{
+    int ans = 0;
+    bool flag;
+    int total_selected size(selected);
+    for (int i = 0; i < total_selected; i++)
+    {
+        flag = true;
+        
+        for (int j = 0; j < like[i].size(), flag; j++)
+            if (selected.find(like[i][j]) == selected.end())
+                flag = false;
+
+        if (flag)
+            for (int j = 0; j < dislike[i].size(), flag; j++)
+                if (selected.find(dislike[i][j]) != selected.end())
+                    flag = false;
+
+        if (flag)
+            ans++;
+    }
+    cout << ans << endl;
+}
+```

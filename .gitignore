@@ -18,3 +18,8 @@ package-lock.json
 
 *.cpp
 *.out
+.py
+.java
+.javac
+code
+files

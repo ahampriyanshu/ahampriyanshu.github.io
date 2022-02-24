@@ -40,3 +40,36 @@ class Solution
     }
 };
 ```
+
+### Reverse Level Order Traversal
+
+Given a binary tree of size N, find its reverse level order traversal. ie- the traversal must begin from the last level.
+
+* [GFG](https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1#)
+
+> Create a queue, insert the root node, pop the queue in a temp variable and push the right and then the left child. Repeat until the queue is empty. Reverse the resultant vector.
+{: .prompt-note }
+
+* Time Complexity : **O(n)** 
+* Space Complexity : **O(n)**
+
+```cpp
+vector<int> reverseLevelOrder(Node *root)
+{
+    queue<Node*> q;
+    vector<int> v;
+    q.push(root);
+    while(!q.empty()){
+        Node *tmp = q.front();
+        v.push_back(tmp->data);
+        if(tmp->right)
+            q.push(tmp->right);
+        if(tmp->left)
+            q.push(tmp->left);
+        
+        q.pop();
+    }
+    reverse(v.begin(), v.end());
+    return v;
+}
+```

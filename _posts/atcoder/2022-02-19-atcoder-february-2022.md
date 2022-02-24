@@ -72,7 +72,7 @@ int main()
 
 On an xy-coordinate plane, is there a lattice point whose distances from two lattice points (x1, y1) and (x2, y2) are both √5.
 
-![unable to load](https://img.atcoder.jp/ghi/2bee701e93a6a0298f73121b85a03f46.jpg)
+![loading image](https://img.atcoder.jp/ghi/2bee701e93a6a0298f73121b85a03f46.jpg)
 
 * [abc239_c](https://codeforces.com/contest/1634/problem/B)
 

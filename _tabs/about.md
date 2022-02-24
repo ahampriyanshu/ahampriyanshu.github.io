@@ -31,9 +31,9 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 | Codechef | [ahampriyanshu](https://www.codechef.com/users/ahampriyanshu) | C++
 | Leetcode | [ahampriyanshu](https://leetcode.com/ahampriyanshu/) | C++
 | Atcoder | [ahampriyanshu](https://atcoder.jp/users/ahampriyanshu) | C++
-| GFG | [ahampriyanshu](https://auth.geeksforgeeks.org/user/ahampriyanshu/profile) | C++, Java
+| GFG | [ahampriyanshu](https://auth.geeksforgeeks.org/user/ahampriyanshu/profile) | C++, Java, Python
 | Hackerrank | [ahampriyanshu](https://www.hackerrank.com/ahampriyanshu) | C++, Java, Node, C, Python, Go
-| Hackerearth | [ahampriyanshu](https://www.hackerearth.com/@ahampriyanshu) | Java
+| Hackerearth | [ahampriyanshu](https://www.hackerearth.com/@ahampriyanshu) | Java, Python
 
 ## Attribution
 
