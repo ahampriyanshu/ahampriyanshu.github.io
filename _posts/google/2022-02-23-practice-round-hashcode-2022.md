@@ -9,7 +9,7 @@ tags: [live, contest, practice, round, google, hashcode, '2022', pizza]
 
 You are opening a small pizzeria. In fact, your pizzeria is so small that you decided to offer only **one type of pizza**. Now you need to decide what ingredients to include (peppers? tomatoes? both?).
 
-![unable to load](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1YZSyNV0Y-_gPyr-2DCkdjytZqr_v1Att7bbxMSvZVYh_qWBQhhLGSENw/pizzeria.gif)
+![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1YZSyNV0Y-_gPyr-2DCkdjytZqr_v1Att7bbxMSvZVYh_qWBQhhLGSENw/pizzeria.gif)
 
 Everyone has their own pizza preferences. Each of your potential clients has some ingredients they like, and maybe some ingredients they dislike. Each client will come to your pizzeria if both conditions are true:
 
@@ -65,11 +65,11 @@ In the Sample Input there are 3 potential clients:
 
 The picture below shows the preferences of 3 potential clients.0
 
-![unable to load](https://codejam.googleapis.com/dashboard/get_file/AQj_6U2Wr7D5Jsb8-SHSrHz03jDHeq_MZ3OA3jOrPt5p-SxPWQyq686RpEqamJEPxu7td2UazZEK7Q/pizza-poll-examples.png)
+![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U2Wr7D5Jsb8-SHSrHz03jDHeq_MZ3OA3jOrPt5p-SxPWQyq686RpEqamJEPxu7td2UazZEK7Q/pizza-poll-examples.png)
 
 In this particular Sample Output, we choose to use 4 ingredients in the pizza: cheese, mushrooms, tomatoes, and peppers.
 
-![unable to load](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1hIGoQsQtyiDWcxGYxVj78Z1bgX7BQGLk8hbT52jElrlhFJ_z578iJOm4zPjOBcSXeTl-6eQ/pizza-sample-output.png)
+![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1hIGoQsQtyiDWcxGYxVj78Z1bgX7BQGLk8hbT52jElrlhFJ_z578iJOm4zPjOBcSXeTl-6eQ/pizza-sample-output.png)
 
 * The first client likes the pizza because it contains both cheese and peppers, which they like.
 * The second client does not like the pizza: it does not contain basil which they like.

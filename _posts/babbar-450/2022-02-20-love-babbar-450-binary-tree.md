@@ -73,3 +73,25 @@ vector<int> reverseLevelOrder(Node *root)
     return v;
 }
 ```
+
+### Height of Binary Tree
+
+Given a binary tree, find its height.
+
+* [GFG](https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1#)
+
+> Calculate the height of the left or the right subtree 
+{: .prompt-note }
+
+* Time Complexity : **O(n)** 
+* Space Complexity : **O(n)**
+
+```cpp
+class Solution{
+    public:
+    int height(struct Node* node){
+        if(!node) return 0;
+        return 1 + max(height(node->left), height(node->right));
+    }
+};
+```
