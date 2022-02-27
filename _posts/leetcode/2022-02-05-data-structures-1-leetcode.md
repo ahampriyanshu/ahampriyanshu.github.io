@@ -514,6 +514,123 @@ public:
 };
 ```
 
+## Day 8 | Linked List
+
+### 206. Reverse Linked List
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+![loading image](https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg)
+
+```cpp
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        
+        ListNode *curr = head, *prev = NULL;
+        
+        while(curr){
+            ListNode *next = curr->next;
+            curr -> next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+};
+```
+
+### 83. Remove Duplicates from Sorted List
+
+Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+
+![loading image](https://assets.leetcode.com/uploads/2021/01/04/list1.jpg)
+
+```cpp
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {        
+        if(!head) return head;
+        
+        ListNode* tmp = head;
+        
+        while(tmp->next) {
+            if(tmp->val == tmp->next->val)
+                tmp->next = tmp->next->next;
+            else
+                tmp = tmp->next;
+        }
+        return head;
+    }
+};
+```
+
+## Day 9 | Stack / Queue
+
+### 20. Valid Parentheses
+
+Given a string s containing just the characters ``'(', ')', '{', '}', '[' and ']'``, determine if the input string is valid.
+
+An input string is valid if:
+
+* Open brackets must be closed by the same type of brackets.
+* Open brackets must be closed in the correct order.
+
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+    stack<char>st;
+    for(char i : s)
+    {
+        if(i == '(')
+            st.push(')');
+        else if(i == '{')
+            st.push('}');
+        else if(i == '[')
+            st.push(']');
+        else if( st.empty() || st.top() != i)
+            return false;
+        else st.pop();      
+    }
+    return st.empty();            
+    }
+};
+```
+
+### 232. Implement Queue using Stacks
+
+Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
+
+Implement the MyQueue class:
+
+* void push(int x) Pushes element x to the back of the queue.
+* int pop() Removes the element from the front of the queue and returns it.
+* int peek() Returns the element at the front of the queue.
+* boolean empty() Returns true if the queue is empty, false otherwise.
+
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+    stack<char>st;
+    for(char ch: s)
+    {
+        if(ch== '(')
+            st.push(')');
+        else if(ch== '{')
+            st.push('}');
+        else if(ch== '[')
+            st.push(']');
+        else if( st.empty() || st.top() != ch)
+            return false;
+        else st.pop();      
+    }
+    return st.empty();            
+    }
+};
+```
+
 ## Day 12 | Tree
 
 ### 226. Invert Binary Tree 
