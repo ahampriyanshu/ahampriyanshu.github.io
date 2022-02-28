@@ -609,27 +609,160 @@ Implement the MyQueue class:
 * int peek() Returns the element at the front of the queue.
 * boolean empty() Returns true if the queue is empty, false otherwise.
 
+
+#### O(1) pop
+
 ```cpp
-class Solution {
+class MyQueue {
 public:
-    bool isValid(string s) {
-    stack<char>st;
-    for(char ch: s)
-    {
-        if(ch== '(')
-            st.push(')');
-        else if(ch== '{')
-            st.push('}');
-        else if(ch== '[')
-            st.push(']');
-        else if( st.empty() || st.top() != ch)
-            return false;
-        else st.pop();      
+    stack<int> que;
+    stack<int> tmp;
+    int e;
+    MyQueue() {
     }
-    return st.empty();            
+    
+    void push(int x) {
+        
+        while(!que.empty()){
+            tmp.push(que.top());
+            que.pop();
+        }
+        
+        tmp.push(x);
+        
+        while(!tmp.empty()){
+            que.push(tmp.top());
+            tmp.pop();
+        }
+    }
+    
+    int pop() {
+        e = que.top();
+        que.pop();
+        return e;
+    }
+    
+    int peek() {
+      return que.top();
+    }
+    
+    bool empty() {
+       return que.empty(); 
     }
 };
 ```
+
+#### O(1) push
+
+```cpp
+class MyQueue {
+public:
+    stack<int> que;
+    stack<int> tmp;
+    int e;
+    int front;
+    MyQueue() {
+    }
+    
+    void push(int x) {
+        que.push(x);
+    }
+    
+    int pop() {
+        
+        while(!que.empty()){
+            tmp.push(que.top()); 
+            que.pop();
+        }
+        
+        front = tmp.top();
+        tmp.pop();
+        
+        while(!tmp.empty()){
+            que.push(tmp.top());
+            tmp.pop();
+        }
+        return front;
+    }
+    
+    int peek() {
+      
+        while(!que.empty()){
+            tmp.push(que.top()); 
+            que.pop();
+        }
+        
+        front = tmp.top();
+        
+        while(!tmp.empty()){
+            que.push(tmp.top());
+            tmp.pop();
+        }
+        return front;
+    }
+    
+    bool empty() {
+       return que.empty(); 
+    }
+};
+```
+
+#### O(1) push, O(1) pop b
+
+```cpp
+class MyQueue {
+public:
+    stack<int> in;
+    stack<int> out;
+    int e;
+    int front;
+    MyQueue() {
+    }
+    
+    void push(int x) {
+        in.push(x);
+    }
+    
+    int pop() {
+        
+        while(!in.empty()){
+            out.push(in.top()); 
+            in.pop();
+        }
+        
+        front = out.top();
+        out.pop();
+        
+        while(!out.empty()){
+            in.push(out.top());
+            out.pop();
+        }
+        return front;
+    }
+    
+    int peek() {
+      
+        while(!in.empty()){
+            out.push(in.top()); 
+            in.pop();
+        }
+        
+        front = out.top();
+        
+        while(!out.empty()){
+            in.push(out.top());
+            out.pop();
+        }
+        return front;
+    }
+    
+    bool empty() {
+       return in.empty(); 
+    }
+};
+```
+
+###
 
 ## Day 12 | Tree
 
