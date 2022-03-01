@@ -11,7 +11,7 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 |  |  Codeforces | Codechef | Leetcode | Atcoder
 |:--|:--|:--|:--|:--
 | Feb | 891 | 1599 | 1419 | 36
-| Mar |  |  |  |
+| Mar | 926 | 1661 | 1419 | 52
 | Apr |  |  |  |
 | May |  |  |  |
 | Jun |  |  |  |
@@ -44,5 +44,5 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 ## Some Links
 
 * [Links](https://links.ahampriyanshu.com/)
-* [My portfolio](https://ahampriyanshu.com/)
-* [My blog](https://ahampriyanshu.com/blog)
+* [Site](https://ahampriyanshu.com/)
+* [Blog](https://ahampriyanshu.com/blog)

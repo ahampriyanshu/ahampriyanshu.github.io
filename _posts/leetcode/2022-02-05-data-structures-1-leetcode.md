@@ -725,35 +725,31 @@ public:
     
     int pop() {
         
-        while(!in.empty()){
-            out.push(in.top()); 
-            in.pop();
+                if(out.empty()) {
+            while(!in.empty()) {
+                out.push(in.top());
+                in.pop();
+                
+            }
+            
         }
         
         front = out.top();
         out.pop();
-        
-        while(!out.empty()){
-            in.push(out.top());
-            out.pop();
-        }
-        return front;
+        return val;
     }
     
     int peek() {
       
-        while(!in.empty()){
-            out.push(in.top()); 
-            in.pop();
+        if(out.empty()) {
+            while(!in.empty()) {
+                out.push(in.top());
+                in.pop();
+            }
+            
         }
         
-        front = out.top();
-        
-        while(!out.empty()){
-            in.push(out.top());
-            out.pop();
-        }
-        return front;
+        return out.top();
     }
     
     bool empty() {
