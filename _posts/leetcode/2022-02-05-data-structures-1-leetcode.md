@@ -796,17 +796,65 @@ public:
         q.push(root);
         
         while(!q.empty()){
-            
             TreeNode *tmp = q.front();
             q.pop();
-            
             if(tmp->left) q.push(tmp->left);
             if(tmp->right) q.push(tmp->right);
-            
             swap(tmp->left, tmp->right);
         }
         
         return root;
+    }
+};
+```
+
+### 112. Path Sum
+
+Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
+
+* [Practice](https://leetcode.com/problems/search-in-a-binary-search-tree/)
+
+#### Recursion
+
+```cpp
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(!root) return false;
+        if (!root->left && !root->right) 
+            return sum == root->val;
+        return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int targetSum) {
+        if(!root) return false;
+        
+        queue<pair<TreeNode*,int>> q;
+        q.push({root, root->val});
+        
+        while(!q.empty())
+        {
+            pair<TreeNode*, int> tmp = q.front();
+            q.pop();
+            
+            TreeNode *cur = tmp.first;
+            int target = tmp.second;
+            
+            if(!cur->left && !cur->right && target == targetSum)
+                return true;
+            
+            if(cur->right) q.push({cur->right, target + cur->right->val});
+            if(cur->left) q.push({cur->left, target + cur->left->val});
+        }
+        
+        return false;
     }
 };
 ```
@@ -845,3 +893,4 @@ public:
     }
 };
 ```
+

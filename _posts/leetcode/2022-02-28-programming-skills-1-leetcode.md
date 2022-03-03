@@ -75,11 +75,67 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 
 * [Practice](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
 
+#### Brute
+
 ```cpp
 class Solution {
 public:
-    int countOdds(int low, int high) {
-        return (high + 1) / 2 - low / 2;
+    int hammingWeight(uint32_t n) {
+        int cnt=0;
+        while(n){
+            if((n&1)>0) ++cnt;
+            n=n>>1;
+        }
+        return cnt;
+    }
+};
+```
+
+#### Optimal
+
+```cpp
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int cnt=0;
+        while(n){
+			++cnt;
+            n=n&(n-1);
+        }
+        return cnt;
+    }
+};
+```
+
+#### STL
+
+```cpp
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        return __builtin_popcount(n);
+    }
+};
+```
+
+### 1281. Subtract the Product and Sum of Digits of an Integer
+
+Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+
+* [Practice](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/submissions/)
+
+```cpp
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int e, sum(0), prod(1);
+        while(n){
+            e = n%10;
+            sum += e;
+            prod *= e;
+            n /= 10;
+        }
+        return prod - sum;
     }
 };
 ```
