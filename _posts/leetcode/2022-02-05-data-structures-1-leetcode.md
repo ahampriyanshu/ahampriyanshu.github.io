@@ -222,7 +222,6 @@ public:
 
 ## Day 4 | Array
 
-
 ### 118. Pascal's Triangle
 
 In MATLAB, there is a handy function called reshape which can reshape an m x n matrix into a new one with a different size r x c keeping its original data.
@@ -336,6 +335,71 @@ public:
         ans.push_back(level);
     }
     return ans;
+    }
+};
+```
+
+## Day 5 | Array
+
+### 36. Valid Sudoku
+
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+1. Each row must contain the digits 1-9 without repetition.
+1. Each column must contain the digits 1-9 without repetition.
+1. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+
+* [Practice](https://leetcode.com/problems/valid-sudoku/)
+
+```cpp
+class Solution {
+public:
+    bool isValidSudoku(vector<vector<char>>& board) {
+    unordered_set<char>rowset[9],colset[9],boxset[9];
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                int boxno = (i/3)*3+(j/3);
+                char val = board[i][j];
+                if(val=='.')
+                    continue;
+                if(rowset[i].count(val) || colset[j].count(val) || boxset[boxno].count(val))
+                    return false;
+                rowset[i].insert(val);
+                colset[j].insert(val);
+                boxset[boxno].insert(val);
+            }
+        }
+        return true;     
+    }
+};
+```
+
+### 74. Search a 2D Matrix
+
+Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+
+1. Integers in each row are sorted from left to right.
+1. The first integer of each row is greater than the last integer of the previous row.
+
+* [Practice](https://leetcode.com/problems/valid-sudoku/)
+
+```cpp
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        for(int i=0; i<n; i++)
+        {
+            if(target >= matrix[i][0] and target <= matrix[i][m-1])
+            { 
+            for(int j=0; j<m; j++)
+                if( matrix[i][j] == target)
+                    return true;
+            return false; 
+            }
+        }
+        return false;
     }
 };
 ```
@@ -758,7 +822,156 @@ public:
 };
 ```
 
-###
+## Day 11 | Tree
+
+### 102. Binary Tree Level Order Traversal
+
+Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+* [Practice](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        
+        if(!root) return {};
+        
+        vector<vector<int>> answer;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int size=q.size();
+            vector<int> v;
+            while(size--)  
+            {
+                TreeNode* temp=q.front();
+                q.pop();
+                v.push_back(temp->val);
+                if(temp->left) q.push(temp->left);
+                if(temp->right) q.push(temp->right);
+            }
+            answer.push_back(v);
+        }
+        return answer;
+    }
+};
+```
+
+### 101. Symmetric Tree
+
+Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+* [Practice](https://leetcode.com/problems/symmetric-tree/)
+
+#### Recursive
+
+```cpp
+class Solution {
+public:
+    bool solve(TreeNode * r1, TreeNode * r2)
+    {    
+        if(r1 == NULL && r2 == NULL)
+            return true; 
+		
+        else if(r1 == NULL || r2 == NULL || r1->val != r2->val)
+            return false; 
+        
+        return solve(r1->left, r2->right) && solve(r1->right, r2->left);
+    }
+    
+    bool isSymmetric(TreeNode* root) 
+    {
+        return solve(root->left, root->right);     
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    
+    bool isSymmetric(TreeNode* root) 
+    {
+    if (!root) return true;
+
+    queue<TreeNode*> q;
+    q.push(root->left);
+    q.push(root->right);
+
+    while (!q.empty()) {
+        TreeNode* l = q.front();
+        q.pop();
+        TreeNode* r = q.front();
+        q.pop();
+
+        if(!l && !r) continue;
+        if(!l || !r) return false;
+
+        if (p->val != q->val)
+            return false;
+
+        q.push(l->left);
+        q.push(r->right);
+        q.push(l->right);
+        q.push(r->left);
+    }
+
+    return true;   
+    }
+};
+```
+
+### 104. Maximum Depth of Binary Tree
+
+Given the root of a binary tree, return its maximum depth.
+
+A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+* [Practice]()
+
+#### Recursive
+
+```cpp
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if (!root) return 0;
+        return 1 + max(maxDepth(root->left), maxDepth(root->right));
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(!root) return 0;
+        int ans = 0;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty()){
+            ++ans;
+            int size = q.size();
+            while(size--){
+                TreeNode* tmp = q.front();
+                q.pop();
+                
+                if(tmp->left)
+                    q.push(tmp->left);
+                if(tmp->right)
+                    q.push(tmp->right);
+            }
+        }
+        return ans;
+    }
+};
+```
 
 ## Day 12 | Tree
 
@@ -894,3 +1107,122 @@ public:
 };
 ```
 
+### 701. Insert into a Binary Search Tree
+
+You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
+
+* [Practice](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
+
+#### Recursive
+
+```cpp
+class Solution {
+public:
+    TreeNode* insertIntoBST(TreeNode* node, int val) {
+       	if (!node) {
+			TreeNode *newNode = new TreeNode(val);
+			return newNode;
+		}
+
+		if (val < node->val) 
+			node->left = insertIntoBST(node->left, val);
+		else 
+			node->right = insertIntoBST(node->right, val);
+		
+		return node; 
+    }
+};
+```
+
+## Day 14 | Tree
+
+### 235. Lowest Common Ancestor of a Binary Search Tree
+
+Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
+
+* [Practice](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+#### Recursive
+
+```cpp
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if ((root -> val > p -> val) && (root -> val > q -> val)) {
+            return lowestCommonAncestor(root -> left, p, q);
+        }
+        if ((root -> val < p -> val) && (root -> val < q -> val)) {
+            return lowestCommonAncestor(root -> right, p, q);
+        }
+        return root;
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        TreeNode* curr = root;
+        while (1) {
+            if (p -> val < curr -> val && q -> val < curr -> val) 
+                curr = curr -> left;
+            else if (p -> val > curr -> val && q -> val > curr -> val) 
+                curr = curr -> right;
+             else 
+                break;
+        }
+        return curr;
+    }
+};
+```
+
+### 653. Two Sum IV - Input is a BST
+
+Given the root of a Binary Search Tree and a target number k, return true if there exist two elements in the BST such that their sum is equal to the given target.
+
+* [Practice](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
+
+#### Recursive
+
+```cpp
+class Solution {
+public:
+    set<int> s;
+    bool findTarget(TreeNode* root, int k) {
+        if(!root) return false;
+        if(s.find(k - root->val) != s.end()) return true;
+        s.insert(root->val);
+        return findTarget(root->left, k ) || findTarget(root->right, k);
+    }
+};
+```
+
+#### Iterative
+
+```cpp
+class Solution {
+public:
+    vector<int> vec;
+    void inorder(TreeNode* root) {
+        if (!root) return;
+        inorder(root->left);
+        vec.push_back(root->val);
+        inorder(root->right);
+    }
+    bool findTarget(TreeNode* root, int k) {
+        inorder(root);
+        int l = 0, r = vec.size()-1;
+        while (l < r) {
+            if (vec[l] + vec[r] == k) return true;
+            else {
+                if (vec[l] + vec[r] < k) l++;
+                else r--;
+            }
+        }
+        return false;
+    }
+};
+```
