@@ -135,3 +135,34 @@ public:
     }
 };
 ```
+
+### 740. Delete and Earn
+
+You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:
+
+* Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.
+
+Return the maximum number of points you can earn by applying the above operation some number of times.
+
+* [Practice](https://leetcode.com/problems/delete-and-earn/)
+
+```cpp
+class Solution {
+public:
+    int deleteAndEarn(vector<int>& nums) {
+    int n = 10001;
+    vector<int> sum(n, 0);
+    vector<int> dp(n, 0);
+    
+    for(auto num: nums)
+        sum[num] += num;
+    
+    dp[0] = 0;
+    dp[1] = sum[1];
+    for(int i=2; i<n; i++)
+        dp[i] = max(dp[i-2] + sum[i], dp[i-1]);
+    
+    return dp[n-1];
+}
+};
+```

@@ -7,7 +7,7 @@ categories: [Contests, Codeforces]
 tags: [live, contest, codeforces, div2, div3, educational, global, round]
 ---
 
-All of my submissions on Codeforces(February 2022).
+All of my accepted submissions on Codeforces(February 2022).
 
 ## Round #770 (Div. 2)
 
