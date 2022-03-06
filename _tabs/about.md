@@ -34,6 +34,7 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 | GFG | [ahampriyanshu](https://auth.geeksforgeeks.org/user/ahampriyanshu/profile) | C++, Java, Python
 | Hackerrank | [ahampriyanshu](https://www.hackerrank.com/ahampriyanshu) | C++, Java, Node, C, Python, Go
 | Hackerearth | [ahampriyanshu](https://www.hackerearth.com/@ahampriyanshu) | Java, Python
+| Project Euler | [ahampriyanshu](https://ahampriyanshu.com/cp/categories/projecteuler/) | Python3
 
 ## Attribution
 
@@ -41,7 +42,7 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 * [Jekyll](https://jekyllrb.com/)
 * [Chirpy Theme](https://github.com/cotes2020/jekyll-theme-chirpy/).
 
-## Some Links
+## Some Links 
 
 * [Links](https://links.ahampriyanshu.com/)
 * [Site](https://ahampriyanshu.com/)

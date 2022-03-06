@@ -139,3 +139,57 @@ public:
     }
 };
 ```
+
+## Day 3 | Conditional Statements
+
+### 976. Largest Perimeter Triangle
+
+Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.
+
+* [Practice](https://leetcode.com/problems/largest-perimeter-triangle/)
+
+```cpp
+class Solution {
+public:
+    int largestPerimeter(vector<int>& nums) {
+        int  len(nums.size());
+        sort(nums.begin(), nums.end(), greater<int>());
+        
+        for(int i=0; i<len-2; i++)
+            if(nums[i] < nums[i+1] + nums[i+2] ) 
+                return nums[i] + nums[i+1] + nums[i+2];
+        
+        return 0;
+    }
+};
+```
+
+### 1779. Find Nearest Point That Has the Same X or Y Coordinate
+
+You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.
+
+Return the index (0-indexed) of the valid point with the smallest Manhattan distance from your current location. If there are multiple, return the valid point with the smallest index. If there are no valid points, return -1.
+
+The Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).
+
+* [Practice](https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/)
+
+```cpp
+class Solution {
+public:
+    int nearestValidPoint(int x, int y, vector<vector<int>>& points) {
+        int ans = -1, a, b, c, dist = INT_MAX;
+        for(int i=0; i<points.size(); i++){
+            a = points[i][0], b = points[i][1];
+            if(a==x || b==y){
+                c = abs(x-a) + abs(y-b);
+                if(c<dist){
+                    dist = c;
+                    ans = i;
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
