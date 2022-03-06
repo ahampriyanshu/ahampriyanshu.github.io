@@ -9,7 +9,7 @@ tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, st
 
 C++ Solutions to March Leetcoding Challenge, 2022.
 
-## Week 1
+## 1 March
 
 ### 338. Counting Bits
 
@@ -81,6 +81,7 @@ public:
     }
 };
 ```
+## 2 March
 
 ### 392. Is Subsequence
 
@@ -102,6 +103,8 @@ public:
     }
 };
 ```
+
+## 3 March
 
 ### 413. Arithmetic Slices
 
@@ -135,6 +138,8 @@ public:
     }
 };
 ```
+
+## 5 March
 
 ### 740. Delete and Earn
 

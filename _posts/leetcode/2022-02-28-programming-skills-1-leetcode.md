@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, Leetcode]
-tags: [leetcode, programming, skills, back-to-study-plan, easy]
+tags: [leetcode, programming, skills, back, to, study, plan, easy]
 ---
 
 C++ Solutions to Programming Skills I, Leetcode.

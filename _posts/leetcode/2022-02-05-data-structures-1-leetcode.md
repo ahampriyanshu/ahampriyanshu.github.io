@@ -4,7 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Sheets, Leetcode]
-tags: [leetcode, data, structure, back-to-study-plan, ds, array, tree, trie, string, stacks, queue, linked list]
+tags: [leetcode, data, structure, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
 C++ Solutions to Data Structure I of 2 Weeks Study Plan, Leetcode.
