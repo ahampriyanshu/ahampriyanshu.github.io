@@ -193,3 +193,211 @@ public:
     }
 };
 ```
+
+
+## Day 4 | Loop
+
+### 1502. Can Make Arithmetic Progression From Sequence
+
+A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
+
+Given an array of numbers arr, return true if the array can be rearranged to form an arithmetic progression. Otherwise, return false.
+
+* [Practice](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/)
+
+```cpp
+class Solution {
+public:
+    bool canMakeArithmeticProgression(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+        
+        int n = arr.size();
+        
+        if(n  == 2) return true;
+        int diff = arr[1] - arr[0];
+        
+        
+        for(int i = 1; i<n-1; i++)
+            if(arr[i+1] - arr[i] != diff)
+                return false;
+        return true;
+    }
+};
+```
+
+#### Linear Time
+
+```cpp
+class Solution {
+public:
+    bool canMakeArithmeticProgression(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+        
+        int n = arr.size();
+        
+        if(n  == 2) return true;
+        int pos, mini = INT_MAX, maxi = INT_MIN;
+        
+        for (int e : arr) {
+            mini = min(mini, e);
+            maxi = max(maxi, e);
+        }
+        
+        if ((maxi - mini) % (n - 1)) return false;
+        int d = (maxi - mini) / (n - 1);
+            
+        int i = 0;
+        while (i < n) {
+            if (arr[i] == mini + i * d) i++;
+            else if ((arr[i] - mini) % d) return false;
+            else {
+                pos = (arr[i] - mini) / d;
+                if (arr[pos] == arr[i]) return false;
+                swap(arr[i], arr[pos]);
+            }
+        }
+        return true;
+        
+    }
+};
+```
+
+### 202. Happy Number
+
+Write an algorithm to determine if a number n is happy.
+
+A **happy number** is a number defined by the following process:
+
+* Starting with any positive integer, replace the number by the sum of the squares of its digits.
+* Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+* Those numbers for which this process ends in 1 are happy.
+
+Return ``true`` if n is a **happy number**, and ``false`` if not.
+
+* [Practice](https://leetcode.com/problems/happy-number/)
+
+```cpp
+class Solution {
+public:
+    bool isHappy(int n) {
+        int num = n,ans = 0;
+        unordered_map<int, int> ump;
+        ump[n]++;
+        while(1){
+            
+            while(num){
+            ans += num % 10 * num % 10;
+            num /= 10;
+            }
+            
+            if(ans == 1) return true;
+            if(ump[ans]) break;
+            ump[ans]++;
+            num = ans;
+            ans = 0;
+            
+        }
+     return false;   
+    }
+};
+```
+
+#### Floyd's Cycle Detection Algorithm
+
+```cpp
+class Solution {
+public:
+    int next(int n)
+    {
+        int sum = 0;
+        
+        while(n)
+        {
+            sum += pow(n % 10,2);
+            n = n / 10;
+        }
+        
+        return sum;
+    }
+
+public:
+    bool isHappy(int n) {
+        int slow = next(n);
+        int fast = next(next(n));
+        
+        while(slow != fast)
+        {
+            slow = next(slow);
+            fast = next(next(fast));
+        }
+        
+        return fast == 1 ;
+    }
+};
+```
+
+#### Brent's Cycle Detection Algorithm
+
+```cpp
+class Solution {
+public:
+    int next(int n)
+    {
+        int sum = 0;
+        
+        while(n)
+        {
+            sum += pow(n % 10,2);
+            n = n / 10;
+        }
+        
+        return sum;
+    }
+
+public:
+    bool isHappy(int n) {
+        int slow = n;
+        int fast = next(n);
+        int cnt = 1;
+        int lim = 2;
+        
+        while(slow != fast)
+        {
+            if(cnt == lim)
+            {
+                cnt = 1;
+                lim = lim*2;
+                slow = fast;
+            }
+            else
+                cnt ++;
+        
+            fast = next(fast);
+        }
+        
+        return fast == 1 ;
+    }
+};
+```
+
+
+### 1790. Check if One String Swap Can Make Strings Equal
+
+You are given two strings s1 and s2 of equal length. A string swap is an operation where you choose two indices in a string (not necessarily different) and swap the characters at these indices.
+
+Return true if it is possible to make both strings equal by performing at most one string swap on exactly one of the strings. Otherwise, return false.
+
+* [Practice](https://leetcode.com/problems/happy-number/)
+
+```cpp
+class Solution {
+public:
+    bool areAlmostEqual(string s1, string s2) {
+	int n = size(s1), cnt = 0, i1, i2;
+	for(int i = 0; i < n; i++)
+		if(s1[i] != s2[i])
+            (cnt++ ? i2 : i1) = i;
+	return cnt == 0 || (cnt == 2 && s1[i1] == s2[i2] && s1[i2] == s2[i1]);
+    }
+};
+```

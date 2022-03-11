@@ -238,3 +238,125 @@ public:
 }
 };
 ```
+
+## 9 March
+
+### 82. Remove Duplicates from Sorted List II
+
+Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+
+![Loading image](https://assets.leetcode.com/uploads/2021/01/04/linkedlist1.jpg)
+* [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+
+```cpp
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode* temp = new ListNode(0,head);
+        ListNode* prev = temp;
+        
+        while(head){
+            if(head->next && head->val==head->next->val){
+                while(head->next && head->val==head->next->val)
+                   head=head->next;
+                prev->next=head->next;
+            }else
+                prev=prev->next;
+            head=head->next;
+        }
+        return temp->next;
+    }
+};
+```
+
+
+## 10 March
+
+### 2. Add Two Numbers
+
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+![Loading image](https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg)
+* [Practice](https://leetcode.com/problems/add-two-numbers/)
+
+```cpp
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+
+        int digit, carry = 0;
+        ListNode *head = new ListNode(0);
+        ListNode *node = head;
+        
+        while (l1 || l2)
+        {
+            digit = carry;
+            
+            if (l1){
+                digit += l1->val;
+                l1 = l1->next;
+            }
+             
+            if (l2){
+                digit += l2->val;
+                l2 = l2->next;
+            }
+             
+            carry = digit / 10;
+            digit = digit % 10;
+            node->next = new ListNode(digit);
+            node = node->next;
+        }
+        
+        if (carry) node->next = new ListNode(carry);
+
+        return head->next;
+        
+    }
+};
+```
+
+## 11 March
+
+### 61. Rotate List
+
+Given the head of a linked list, rotate the list to the right by k places.
+
+![Loading image](https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg)
+
+* [Practice](https://leetcode.com/problems/rotate-list/)
+
+```cpp
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        
+        if(!head) return head;
+        
+        vector<int> vec;
+        ListNode *curr= head;
+        while(head){
+            vec.push_back(head->val);
+            head = head->next;
+        }
+        
+        int n = vec.size();
+        k %= n;
+        reverse(vec.begin(), vec.end());
+        reverse(vec.begin(), vec.begin()+k);
+        reverse(vec.begin()+k, vec.end());
+        
+        ListNode * ans = new ListNode(vec[0]);
+        ListNode * new_head = ans;
+        
+        for(int i=1; i<n; i++){
+            ans -> next = new ListNode(vec[i]);
+            ans = ans -> next;
+        }
+        
+        return new_head;
+    }
+};
+```
