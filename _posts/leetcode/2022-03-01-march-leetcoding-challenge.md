@@ -360,3 +360,102 @@ public:
     }
 };
 ```
+
+### Constant Space
+
+```cpp
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        if (head == NULL || head->next == NULL || k == 0) return head;
+        int len = 1;
+        ListNode *tail = head;
+        
+        while (tail->next)
+            tail = tail->next, len++;
+        
+        tail->next = head;
+        k %= len;
+        for (int i = 0; i < len - k; i++)
+            tail = tail->next;
+            
+        head = tail->next;
+        tail->next = NULL;
+        return head;
+    }
+};
+```
+
+
+## 11 March
+
+### 61. Rotate List
+
+A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
+
+Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.
+
+For example, if there are two nodes X and Y in the original list, where X.random --> Y, then for the corresponding two nodes x and y in the copied list, x.random --> y.
+
+Return the head of the copied linked list.
+
+The linked list is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+
+val: an integer representing Node.val
+random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
+Your code will only be given the head of the original linked list.
+
+![Loading image](https://assets.leetcode.com/uploads/2019/12/18/e1.png)
+
+* [Practice](https://leetcode.com/problems/copy-list-with-random-pointer/)
+
+```cpp
+class Solution {
+public:
+    Node* copyRandomList(Node* head) {
+        
+        unordered_map<Node*, Node*> mp;
+        Node * ptr = head;
+        
+        while (ptr) {
+            mp[ptr] =new Node(ptr->val);
+            ptr = ptr->next;
+        }
+        
+        ptr = head;
+        
+        while (ptr) {
+            mp[ptr]->next = mp[ptr->next];
+            mp[ptr]->random = mp[ptr->random];
+            ptr = ptr->next;
+        }
+        
+        return mp[head];
+    }
+};
+```
+
+### Constant Space
+
+```cpp
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        if (head == NULL || head->next == NULL || k == 0) return head;
+        int len = 1;
+        ListNode *tail = head;
+        
+        while (tail->next)
+            tail = tail->next, len++;
+        
+        tail->next = head;
+        k %= len;
+        for (int i = 0; i < len - k; i++)
+            tail = tail->next;
+            
+        head = tail->next;
+        tail->next = NULL;
+        return head;
+    }
+};
+```
