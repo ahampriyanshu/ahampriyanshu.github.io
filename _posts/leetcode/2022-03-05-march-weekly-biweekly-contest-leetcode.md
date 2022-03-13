@@ -91,3 +91,39 @@ public:
     }
 };
 ```
+
+
+## Weekly Contest 284
+
+### 2200. Find All K-Distant Indices in an Array
+
+You are given a 0-indexed integer array nums and two integers key and k. A k-distant index is an index i of nums for which there exists at least one index j such that |i - j| <= k and nums[j] == key.
+
+Return a list of all k-distant indices sorted in increasing order.
+
+* [Practice](https://leetcode.com/contest/weekly-contest-284/problems/find-all-k-distant-indices-in-an-array/)
+
+```cpp
+class Solution {
+public:
+    vector<int> findKDistantIndices(vector<int>& nums, int key, int k) {
+        int n = nums.size();
+        vector<int> keys;
+        vector<int> ans;
+        for(int i=0; i<n; i++)
+            if(nums[i] == key)
+                keys.push_back(i);
+        
+        
+        int m = keys.size();
+        for(int i=0; i<n; i++)
+            for(int j:keys)
+                if(abs(i-j) <= k){
+                    ans.push_back(i);
+                    break;
+                }
+        
+        return ans;
+    }
+};
+```

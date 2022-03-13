@@ -459,3 +459,38 @@ public:
     }
 };
 ```
+
+## 12 March
+
+### 20. Valid Parentheses
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+1. Open brackets must be closed by the same type of brackets.
+1. Open brackets must be closed in the correct order.
+
+* [Practice](https://leetcode.com/problems/valid-parentheses/)
+
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+    stack<char>st;
+    for(char i : s)
+    {
+        if(i == '(')
+            st.push(')');
+        else if(i == '{')
+            st.push('}');
+        else if(i == '[')
+            st.push(']');
+        else if( st.empty() || st.top() != i)
+            return false;
+        else st.pop();      
+    }
+    return st.empty();            
+    }
+};
+```
