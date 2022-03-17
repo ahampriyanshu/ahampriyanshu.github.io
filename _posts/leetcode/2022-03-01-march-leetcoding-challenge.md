@@ -494,3 +494,297 @@ public:
     }
 };
 ```
+
+## 13 March
+
+### 20. Valid Parentheses
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+1. Open brackets must be closed by the same type of brackets.
+1. Open brackets must be closed in the correct order.
+
+* [Practice](https://leetcode.com/problems/valid-parentheses/)
+
+```cpp
+class Solution {
+public:
+    string simplifyPath(string path) {
+        stack <string> st;
+        int n = path.size();
+        for(int i=0; i<n; i++)
+        {
+            if(path[i] == '/')
+                continue;
+
+            string str;
+
+            while(i<n && path[i] != '/')
+                str += path[i++];
+
+            if(str == ".")
+                continue;
+            else if(str == "..")
+            {
+                if(!st.empty())
+                    st.pop();
+            }
+            else
+                st.push(str);
+        }
+
+        string ans;
+        while(!st.empty())
+        {
+            ans = "/" + st.top() + ans;
+            st.pop();
+        }
+
+        return st.empty() ? "/" : ans;
+    }
+};
+```
+
+## Without creating a new string
+
+```cpp
+class Solution {
+public:
+    string minRemoveToMakeValid(string s) {
+        stack<int> box;
+        int n = s.length();
+        
+        for(int i=0; i<n; i++) {
+            if(s[i] == ')'){
+                if(!box.empty() && s[box.top()] == '(')
+                    box.pop();
+                else{
+                    s.erase(i,1);
+                    i--;
+                }
+            }
+            else if(s[i] == '(')
+                box.push(i);
+            
+        }
+        
+        while(!box.empty()) {
+            s.erase(box.top(),1);
+            box.pop();
+        }
+        
+        return s;
+    }
+};
+```
+
+## 14 March
+
+### 71. Simplify Path
+
+Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
+
+In a Unix-style file system, a period '.' refers to the current directory, a double period '..' refers to the directory up a level, and any multiple consecutive slashes (i.e. '//') are treated as a single slash '/'. For this problem, any other format of periods such as '...' are treated as file/directory names.
+
+The canonical path should have the following format:
+
+The path starts with a single slash '/'.
+Any two directories are separated by a single slash '/'.
+The path does not end with a trailing '/'.
+The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
+Return the simplified canonical path.
+
+* [Practice](https://leetcode.com/problems/valid-parentheses/)
+
+```cpp
+class Solution {
+public:
+    string simplifyPath(string path) {
+        stack <string> st;
+        int n = path.size();
+        for(int i=0; i<n; i++)
+        {
+            if(path[i] == '/')
+                continue;
+
+            string str;
+
+            while(i<n && path[i] != '/')
+                str += path[i++];
+
+            if(str == ".")
+                continue;
+            else if(str == "..")
+            {
+                if(!st.empty())
+                    st.pop();
+            }
+            else
+                st.push(str);
+        }
+
+        string ans;
+
+        for (auto e : st)
+            ans += "/" + e;
+
+        return st.empty() ? "/" : ans;
+    }
+};
+```
+
+## 15 March
+
+### 1249. Minimum Remove to Make Valid Parentheses
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+1. Open brackets must be closed by the same type of brackets.
+1. Open brackets must be closed in the correct order.
+
+* [Practice](https://leetcode.com/problems/valid-parentheses/)
+
+```cpp
+class Solution {
+public:
+    string simplifyPath(string path) {
+        stack <string> st;
+        int n = path.size();
+        for(int i=0; i<n; i++)
+        {
+            if(path[i] == '/')
+                continue;
+
+            string str;
+
+            while(i<n && path[i] != '/')
+                str += path[i++];
+
+            if(str == ".")
+                continue;
+            else if(str == "..")
+            {
+                if(!st.empty())
+                    st.pop();
+            }
+            else
+                st.push(str);
+        }
+
+        string ans;
+        while(!st.empty())
+        {
+            ans = "/" + st.top() + ans;
+            st.pop();
+        }
+
+        return st.empty() ? "/" : ans;
+    }
+};
+```
+
+## Without creating a new string
+
+```cpp
+class Solution {
+public:
+    string minRemoveToMakeValid(string s) {
+        stack<int> box;
+        int n = s.length();
+        
+        for(int i=0; i<n; i++) {
+            if(s[i] == ')'){
+                if(!box.empty() && s[box.top()] == '(')
+                    box.pop();
+                else{
+                    s.erase(i,1);
+                    i--;
+                }
+            }
+            else if(s[i] == '(')
+                box.push(i);
+            
+        }
+        
+        while(!box.empty()) {
+            s.erase(box.top(),1);
+            box.pop();
+        }
+        
+        return s;
+    }
+};
+```
+
+
+## 16 March
+
+### 20. Valid Parentheses
+
+Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
+
+* [Practice](https://leetcode.com/problems/validate-stack-sequences/)
+
+```cpp
+class Solution {
+public:
+    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
+        stack<int> st;
+        int start=0, siz = popped.size()-1;
+        if(!siz) return true;
+        for(int e:pushed){
+            st.push(e);
+           while(!st.empty() && st.top() == popped[start]){
+               st.pop();
+               start++;
+              if(start==siz)
+                  return true;
+               }
+            }
+     return false;          
+   }
+};
+```
+
+
+## 17 March
+
+### 856. Score of Parentheses
+
+Given a balanced parentheses string s, return the score of the string.
+
+The score of a balanced parentheses string is based on the following rule:
+
+* "()" has score 1.
+* AB has score A + B, where A and B are balanced parentheses strings.
+* (A) has score 2 * A, where A is a balanced parentheses string.
+
+* [Practice](https://leetcode.com/problems/score-of-parentheses/)
+
+```cpp
+class Solution {
+public:
+    int scoreOfParentheses(string s) {
+        int ans(0), cnt(0);
+        char prev = '(';
+        
+        for (const char &ch: s) {
+            if (ch == '(')
+                cnt++;
+            else {
+                cnt--;
+                if (prev == '(')
+                    ans += pow(2, cnt);
+            }
+            
+            prev = ch;
+        }
+        
+        return ans;
+    }
+};
+```
