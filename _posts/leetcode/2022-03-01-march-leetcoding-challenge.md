@@ -590,10 +590,10 @@ In a Unix-style file system, a period '.' refers to the current directory, a dou
 
 The canonical path should have the following format:
 
-The path starts with a single slash '/'.
-Any two directories are separated by a single slash '/'.
-The path does not end with a trailing '/'.
-The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
+* The path starts with a single slash '/'.
+* Any two directories are separated by a single slash '/'.
+* The path does not end with a trailing '/'.
+* The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
 Return the simplified canonical path.
 
 * [Practice](https://leetcode.com/problems/valid-parentheses/)
@@ -764,6 +764,36 @@ The score of a balanced parentheses string is based on the following rule:
 * (A) has score 2 * A, where A is a balanced parentheses string.
 
 * [Practice](https://leetcode.com/problems/score-of-parentheses/)
+
+```cpp
+class Solution {
+public:
+    int scoreOfParentheses(string s) {
+        
+        stack<int> st;
+        int idx = 0;
+        
+        for(auto i : s)
+        {
+            if(i == '(')
+            {
+                st.push(idx);
+                idx = 0;
+            }
+            else
+            {
+                idx = st.top() + max(idx*2 ,1);
+                st.pop();
+            }
+                
+        }
+        return ind;
+        
+    }
+};
+```
+
+#### Constant Space
 
 ```cpp
 class Solution {
