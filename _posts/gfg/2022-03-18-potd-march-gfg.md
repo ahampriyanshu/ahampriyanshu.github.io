@@ -1,13 +1,13 @@
 ---
-title: "March Leetcoding | 2022 | Leetcode"
+title: "Problem Of The Day | March 2022 | Geeks For Geeks"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-categories: [Sheets, Leetcode]
-tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
+categories: [Contests, GFG]
+tags: [geeks, for, gfg, potd, day, challenge, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-C++ Solutions to March Leetcoding Challenge, 2022.
+C++ Solutions to Problem Of The Day, GFG, March 2022.
 
 ## 18 March
 

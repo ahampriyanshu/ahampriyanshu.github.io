@@ -3,7 +3,7 @@ title: "March Leetcoding | 2022 | Leetcode"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-categories: [Sheets, Leetcode]
+categories: [Contests, Leetcode]
 tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
@@ -814,6 +814,53 @@ public:
             prev = ch;
         }
         
+        return ans;
+    }
+};
+```
+
+
+
+## 17 March
+
+### 856. Score of Parentheses
+
+Given a balanced parentheses string s, return the score of the string.
+
+The score of a balanced parentheses string is based on the following rule:
+
+* "()" has score 1.
+* AB has score A + B, where A and B are balanced parentheses strings.
+* (A) has score 2 * A, where A is a balanced parentheses string.
+
+* [Practice](https://leetcode.com/problems/score-of-parentheses/)
+
+```cpp
+class Solution {
+public:
+    string removeDuplicateLetters(string s) {
+        
+        int n = s.length();
+        string ans="";
+        vector<int> count(26,0);
+        vector<int> visited(26,0);
+        
+        for(int i=0;i<n;i++)
+            count[s[i]-'a']++;
+        
+        for(int i=0;i<n;i++){
+            count[s[i]-'a']--;
+
+            if(visited[s[i]-'a']) continue;
+
+            while(ans.length()>0 && ans.back()>s[i] && count[ans.back()-'a']>0)
+            {
+                visited[ans.back()-'a']=0;
+                ans.pop_back();
+            }
+            ans+=s[i];
+             visited[s[i]-'a']=1;
+        }
         return ans;
     }
 };
