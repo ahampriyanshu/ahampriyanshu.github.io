@@ -400,3 +400,31 @@ public:
     }
 };
 ```
+
+
+## Day 6 | Array
+
+### 283. Move Zeroes
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+**Note :** that you must do this in-place without making a copy of the array.
+
+* [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
+
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int curr=0, end=0, n(nums.size());
+        
+        while(curr < n)
+            if(nums[curr] == 0) curr++;
+            else nums[end++] = nums[curr++];
+        
+        
+        while(end <n)
+            nums[end++] = 0;
+    }
+};
+```

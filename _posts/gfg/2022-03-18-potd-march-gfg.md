@@ -42,3 +42,37 @@ class Solution {
     }
 };
 ```
+
+## 19 March
+
+### Coin Piles
+
+Given a string, find the rank of the string amongst its permutations sorted lexicographically. 
+
+* [Practice]https://practice.geeksforgeeks.org/problems/rank-the-permutations2229/1#)
+
+```cpp
+class Solution{
+  public:
+    long long findRank(string str) {
+      long long fact[19];
+      fact[0]=1;
+      fact[1]=1;
+      long long n=str.size(),ans=0;
+      
+      for(int i=2;i<=18;i++)
+          fact[i]=i*fact[i-1];
+      
+      for(int i=0;i<n;i++){
+        int count=0;
+        for(int j=i+1;j<n;j++)
+            if(str[i]>str[j])
+                count++;
+          
+        ans+=count*fact[n-1-i];
+      }
+      
+      return ans+1;
+   }
+};
+```
