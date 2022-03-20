@@ -9,9 +9,9 @@ tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, st
 
 C++ Solutions to March Leetcoding Challenge, 2022.
 
-## 1 March
+## Week 1
 
-### 338. Counting Bits
+### 1 March | 338. Counting Bits
 
 Given an integer n, return an array ans of length ``n + 1`` such that for each ``i (0 <= i <= n), ans[i]`` is the number of 1's in the binary representation of i.
 
@@ -81,9 +81,8 @@ public:
     }
 };
 ```
-## 2 March
 
-### 392. Is Subsequence
+### 2 March |  392. Is Subsequence
 
 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 
@@ -104,9 +103,7 @@ public:
 };
 ```
 
-## 3 March
-
-### 413. Arithmetic Slices
+### 3 March | 413. Arithmetic Slices
 
 An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
 
@@ -139,9 +136,7 @@ public:
 };
 ```
 
-## 5 March
-
-### 740. Delete and Earn
+### 5 March |  740. Delete and Earn
 
 You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:
 
@@ -172,10 +167,9 @@ public:
 };
 ```
 
+## Week 2
 
-## 7 March
-
-### 21. Merge Two Sorted Lists
+### 7 March | 21. Merge Two Sorted Lists
 
 You are given the heads of two sorted linked lists list1 and list2.
 
@@ -208,9 +202,7 @@ public:
 };
 ```
 
-## 8 March
-
-### 141. Linked List Cycle
+### 8 March | 141. Linked List Cycle
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
@@ -239,9 +231,7 @@ public:
 };
 ```
 
-## 9 March
-
-### 82. Remove Duplicates from Sorted List II
+### 9 March | 82. Remove Duplicates from Sorted List II
 
 Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
 
@@ -269,10 +259,7 @@ public:
 };
 ```
 
-
-## 10 March
-
-### 2. Add Two Numbers
+### 10 March | 2. Add Two Numbers
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 
@@ -318,9 +305,7 @@ public:
 };
 ```
 
-## 11 March
-
-### 61. Rotate List
+### 11 March | 61. Rotate List
 
 Given the head of a linked list, rotate the list to the right by k places.
 
@@ -386,10 +371,7 @@ public:
 };
 ```
 
-
-## 11 March
-
-### 61. Rotate List
+### 12 March | 61. Copy List With Random Pointer
 
 A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
 
@@ -460,9 +442,9 @@ public:
 };
 ```
 
-## 12 March
+## Week 3
 
-### 20. Valid Parentheses
+### 13 March | 20. Valid Parentheses
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -495,94 +477,7 @@ public:
 };
 ```
 
-## 13 March
-
-### 20. Valid Parentheses
-
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-
-An input string is valid if:
-
-1. Open brackets must be closed by the same type of brackets.
-1. Open brackets must be closed in the correct order.
-
-* [Practice](https://leetcode.com/problems/valid-parentheses/)
-
-```cpp
-class Solution {
-public:
-    string simplifyPath(string path) {
-        stack <string> st;
-        int n = path.size();
-        for(int i=0; i<n; i++)
-        {
-            if(path[i] == '/')
-                continue;
-
-            string str;
-
-            while(i<n && path[i] != '/')
-                str += path[i++];
-
-            if(str == ".")
-                continue;
-            else if(str == "..")
-            {
-                if(!st.empty())
-                    st.pop();
-            }
-            else
-                st.push(str);
-        }
-
-        string ans;
-        while(!st.empty())
-        {
-            ans = "/" + st.top() + ans;
-            st.pop();
-        }
-
-        return st.empty() ? "/" : ans;
-    }
-};
-```
-
-## Without creating a new string
-
-```cpp
-class Solution {
-public:
-    string minRemoveToMakeValid(string s) {
-        stack<int> box;
-        int n = s.length();
-        
-        for(int i=0; i<n; i++) {
-            if(s[i] == ')'){
-                if(!box.empty() && s[box.top()] == '(')
-                    box.pop();
-                else{
-                    s.erase(i,1);
-                    i--;
-                }
-            }
-            else if(s[i] == '(')
-                box.push(i);
-            
-        }
-        
-        while(!box.empty()) {
-            s.erase(box.top(),1);
-            box.pop();
-        }
-        
-        return s;
-    }
-};
-```
-
-## 14 March
-
-### 71. Simplify Path
+### 14 March | 71. Simplify Path
 
 Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
 
@@ -635,9 +530,7 @@ public:
 };
 ```
 
-## 15 March
-
-### 1249. Minimum Remove to Make Valid Parentheses
+### 15 March | 1249. Minimum Remove to Make Valid Parentheses
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -721,9 +614,7 @@ public:
 ```
 
 
-## 16 March
-
-### 20. Valid Parentheses
+### 16 March | 20. Valid Parentheses
 
 Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 
@@ -750,80 +641,7 @@ public:
 };
 ```
 
-
-## 17 March
-
-### 856. Score of Parentheses
-
-Given a balanced parentheses string s, return the score of the string.
-
-The score of a balanced parentheses string is based on the following rule:
-
-* "()" has score 1.
-* AB has score A + B, where A and B are balanced parentheses strings.
-* (A) has score 2 * A, where A is a balanced parentheses string.
-
-* [Practice](https://leetcode.com/problems/score-of-parentheses/)
-
-```cpp
-class Solution {
-public:
-    int scoreOfParentheses(string s) {
-        
-        stack<int> st;
-        int idx = 0;
-        
-        for(auto i : s)
-        {
-            if(i == '(')
-            {
-                st.push(idx);
-                idx = 0;
-            }
-            else
-            {
-                idx = st.top() + max(idx*2 ,1);
-                st.pop();
-            }
-                
-        }
-        return ind;
-        
-    }
-};
-```
-
-#### Constant Space
-
-```cpp
-class Solution {
-public:
-    int scoreOfParentheses(string s) {
-        int ans(0), cnt(0);
-        char prev = '(';
-        
-        for (const char &ch: s) {
-            if (ch == '(')
-                cnt++;
-            else {
-                cnt--;
-                if (prev == '(')
-                    ans += pow(2, cnt);
-            }
-            
-            prev = ch;
-        }
-        
-        return ans;
-    }
-};
-```
-
-
-
-## 17 March
-
-### 856. Score of Parentheses
+### 17 March | 856. Score of Parentheses
 
 Given a balanced parentheses string s, return the score of the string.
 
@@ -862,6 +680,42 @@ public:
              visited[s[i]-'a']=1;
         }
         return ans;
+    }
+};
+```
+
+### 19 March | 1007. Minimum Domino Rotations For Equal Row
+
+In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
+
+We may rotate the ith domino, so that tops[i] and bottoms[i] swap values.
+
+Return the minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same.
+
+If it cannot be done, return -1.
+
+* [Practice](https://leetcode.com/problems/score-of-parentheses/)
+
+```cpp
+class Solution {
+public:
+    int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
+        int n = tops.size(), ans = INT_MAX;
+        vector<int> faceA(7), faceB(7), same(7);
+        
+        for(int i = 0; i < n; ++i)
+        {
+            ++faceA[tops[i]];
+            ++faceB[bottoms[i]];
+            if(tops[i] == bottoms[i])
+                ++same[tops[i]];
+        }
+        
+        for(int i = 1; i<=6; ++i)
+            if(faceA[i] + faceB[i] - same[i] == n)
+                ans = min(ans , min(faceA[i],faceB[i]) - same[i]);
+        
+        return ans == INT_MAX ? -1 : ans;   
     }
 };
 ```

@@ -49,7 +49,7 @@ class Solution {
 
 Given a string, find the rank of the string amongst its permutations sorted lexicographically. 
 
-* [Practice]https://practice.geeksforgeeks.org/problems/rank-the-permutations2229/1#)
+* [Practice](https://practice.geeksforgeeks.org/problems/rank-the-permutations2229/1#)
 
 ```cpp
 class Solution{
@@ -74,5 +74,51 @@ class Solution{
       
       return ans+1;
    }
+};
+```
+
+## 20 March | Choose and Swap
+
+You are given a string s of lower case english alphabets. You can choose any two characters in the string and replace all the occurences of the first character with the second character and replace all the occurences of the second character with the first character. Your aim is to find the lexicographically smallest string that can be obtained by doing this operation at most once.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/choose-and-swap0531/1#)
+
+```cpp
+class Solution{
+public:
+    string chooseandswap(string a){
+       int found[26] = {0};
+        char max_so_far = CHAR_MIN ;
+        char smallest   = CHAR_MAX ;
+        for(int i = 0  ; i < a.size() ; ++i){
+            if(found[a[i] - 'a'] == 0 && a[i] < max_so_far){
+                for(int j = i ; j < a.size() ; ++j){
+                    if(found[a[j] - 'a'] == 0){
+                        smallest = min(smallest , a[j]) ;
+                    }
+                    found[a[j] - 'a'] = 1 ;
+                }
+                for(int j = i - 1 ; j >= 0 ; --j){
+                    if(a[j] > smallest){
+                        max_so_far = a[j] ;
+                    }
+                }
+                break;
+            }
+            max_so_far = max(max_so_far , a[i]);
+            found[a[i] - 'a'] = 1 ;
+        }
+        if(max_so_far != CHAR_MIN && smallest != CHAR_MAX){
+            for(int i = 0 ; i < a.size() ; ++i){
+                if(a[i] == max_so_far){
+                    a[i] = smallest ;
+                }
+                else if(a[i] == smallest){
+                    a[i] = max_so_far ;
+                }
+            }
+        }
+        return a;
+    }
 };
 ```
