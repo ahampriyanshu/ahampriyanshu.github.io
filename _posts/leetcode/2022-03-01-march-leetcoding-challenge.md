@@ -656,6 +656,36 @@ The score of a balanced parentheses string is based on the following rule:
 ```cpp
 class Solution {
 public:
+    int scoreOfParentheses(string s) {
+        int ans(0), cnt(0);
+        char prev = '(';
+        
+        for (const char &ch: s) {
+            if (ch == '(')
+                cnt++;
+            else {
+                cnt--;
+                if (prev == '(')
+                    ans += pow(2, cnt);
+            }
+            
+            prev = ch;
+        }
+        
+        return ans;
+    }
+};
+```
+
+### 18 March | 316. Remove Duplicate Letters
+
+Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+
+* [Practice](https://leetcode.com/problems/remove-duplicate-letters/)
+
+```cpp
+class Solution {
+public:
     string removeDuplicateLetters(string s) {
         
         int n = s.length();
@@ -684,7 +714,53 @@ public:
 };
 ```
 
-### 19 March | 1007. Minimum Domino Rotations For Equal Row
+
+### 19 March | 895. Maximum Frequency Stack
+
+Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
+
+Implement the FreqStack class:
+
+* FreqStack() constructs an empty frequency stack.
+* void push(int val) pushes an integer val onto the top of the stack.
+* int pop() removes and returns the most frequent element in the stack.
+
+If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
+
+* [Practice](https://leetcode.com/problems/maximum-frequency-stack/)
+
+```cpp
+class FreqStack {
+public:
+    unordered_map<int,int> frequency;
+    unordered_map<int,stack<int>> group_stack;
+    int max_frequency=0;
+    
+    FreqStack() {
+    }
+    
+    void push(int val) {
+        frequency[val]++;
+        max_frequency=max(max_frequency,frequency[val]);
+        group_stack[frequency[val]].push(val);
+    }
+    
+    int pop() {
+        
+        int ans=group_stack[max_frequency].top();
+        group_stack[max_frequency].pop();
+        frequency[ans]--;
+        
+        if(!group_stack[max_frequency].size())
+            max_frequency--;
+        
+        return ans;
+    }
+};
+
+```
+
+### 20 March | 1007. Minimum Domino Rotations For Equal Row
 
 In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
 
@@ -694,7 +770,43 @@ Return the minimum number of rotations so that all the values in tops are the sa
 
 If it cannot be done, return -1.
 
-* [Practice](https://leetcode.com/problems/score-of-parentheses/)
+* [Practice](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
+
+```cpp
+class Solution {
+public:
+    int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
+        int n = tops.size(), ans = INT_MAX;
+        vector<int> faceA(7), faceB(7), same(7);
+        
+        for(int i = 0; i < n; ++i)
+        {
+            ++faceA[tops[i]];
+            ++faceB[bottoms[i]];
+            if(tops[i] == bottoms[i])
+                ++same[tops[i]];
+        }
+        
+        for(int i = 1; i<=6; ++i)
+            if(faceA[i] + faceB[i] - same[i] == n)
+                ans = min(ans , min(faceA[i],faceB[i]) - same[i]);
+        
+        return ans == INT_MAX ? -1 : ans;   
+    }
+};
+```
+
+## Week 4
+
+### 21 March | 763. Partition Labels
+
+You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+
+Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+
+Return a list of integers representing the size of these parts.
+
+* [Practice](https://leetcode.com/problems/partition-labels/)
 
 ```cpp
 class Solution {
