@@ -122,3 +122,29 @@ public:
     }
 };
 ```
+
+
+## 22 March | Smaller on Left 
+
+Given an array arr[ ] of N positive integers, the task is to find the greatest element on the left of every element in the array which is strictly smaller than itself, if this element does not exist for an index print "-1".
+
+* [Practice](https://practice.geeksforgeeks.org/problems/smaller-on-left20360700/1#)
+
+```cpp
+vector<int> Smallestonleft(int arr[], int n)
+{
+    set<int, greater<int>> s = {arr[0]};
+    vector<int> ans = {-1};
+    
+    for(int i=1; i<n; i++){
+        s.insert(arr[i]);
+        auto it = s.upper_bound(arr[i]);
+        if(it == s.end())
+            ans.push_back(-1);
+        else
+            ans.push_back(*it);
+    }
+    
+    return ans;
+}
+```
