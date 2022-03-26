@@ -148,3 +148,34 @@ vector<int> Smallestonleft(int arr[], int n)
     return ans;
 }
 ```
+
+## 26 March | Maximum average subarray
+
+Given an array Arr of size N and a positive integer K, find the sub-array of length K with the maximum average.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/maximum-average-subarray5859/1#)
+
+```cpp
+class Solution{   
+public:
+    int findMaxAverage(int arr[], int n, int k) {
+        
+        int ans = 0, i=0 ,j=0, sum=0, max_sum = INT_MIN;
+        
+        while(j<n){
+            sum += arr[j];
+            if(j-i+1 == k){
+                if(max_sum <= sum){
+                    ans = i;
+                    max_sum = sum;
+                }
+                sum -= arr[i];
+                i++;
+            }
+            j++;
+        }
+        
+        return ans;
+    }
+};
+```
