@@ -984,3 +984,119 @@ public:
     }
 };
 ```
+
+### 27 March | 1337. The K Weakest Rows in a Matrix
+
+You are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
+
+A row i is **weaker** than a row j if one of the following is true:
+
+* The number of soldiers in row i is less than the number of soldiers in row j.
+* Both rows have the same number of soldiers and i < j.
+
+Return the indices of the ``k`` **weakest** rows in the matrix ordered from weakest to strongest.
+
+* [Practice](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)
+
+```cpp
+class Solution {
+public:
+    vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
+        map<int, vector<int>> mp;
+        vector<int> ans;
+        int n = mat.size(), m = mat[0].size();
+        for(int i=0; i<n; i++){
+            int sum = 0;
+            for(int j=0; j<m; j++)
+                sum += mat[i][j];
+            mp[sum].push_back(i);
+        }
+        
+        for(auto e:mp)
+            for(auto ee:e.second){
+                ans.push_back(ee);
+                if(ans.size() == k)
+                    return ans;
+            }
+
+        return ans;
+    }
+};
+```
+
+#### Using Priority Queue
+
+```cpp
+struct CompareHeapElements {
+    bool operator()(pair<int,int> const& p1, pair<int,int> const& p2)
+    {
+        if(p1.first<p2.first)
+            return true;
+        else if(p1.first==p2.first && p1.second<p2.second)
+            return true;
+        return false;
+    }
+};
+
+class Solution {
+    int calculateSoldierCount(vector<int>& v) {
+        int l=0; int h=v.size()-1;
+        while(l<=h) {
+            int mid=l+(h-l)/2;
+            if(v[mid]==0) {
+                h=mid-1;
+            } else {
+                l=mid+1;
+            }
+        }
+        return l;
+    }
+    
+public:
+    vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
+        
+        priority_queue<pair<int,int>, vector<pair<int,int>>,CompareHeapElements> max_heap;
+        for(int i=0;i<mat.size();++i){
+            max_heap.push({calculateSoldierCount(mat[i]),i});
+            if(max_heap.size()>k){
+                max_heap.pop();
+            }
+        }
+        
+        vector<int>ans;
+        while(max_heap.size()){
+            ans.push_back(max_heap.top().second);
+            max_heap.pop();
+        }
+		
+        reverse(ans.begin(), ans.end());
+        return ans;
+    }
+};
+```
+
+## Week 5
+
+### 28 March | 704. Binary Search
+
+There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
+
+Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is ``[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`` (0-indexed). For example, ``[0,1,2,4,4,4,5,6,6,7]`` might be rotated at pivot index 5 and become ``[4,5,6,6,7,0,1,2,4,4]``.
+
+Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
+
+You must decrease the overall operation steps as much as possible.
+
+* [Practice](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+
+```cpp
+class Solution {
+public:
+    bool search(vector<int>& nums, int target) {
+        for(auto e:nums)
+            if(e == target)
+                return true;
+        return false;
+    }
+};
+```
