@@ -179,3 +179,63 @@ public:
     }
 };
 ```
+
+## 29 March | Maximum average subarray
+
+You have got a maze, which is a n*n Grid. Every cell of the maze contains these numbers 1, 2 or 3. 
+If it contains 1 : means we can go Right from that cell only.
+If it contains 2 : means we can go Down from that cell only.
+If it contains 3 : means we can go Right and Down to both paths from that cell.
+We cant go out of the maze at any time.
+Initially, You are on the Top Left Corner of The maze(Entry). And, You need to go to the Bottom Right Corner of the Maze(Exit).
+You need to find the total number of paths from Entry to Exit Point.
+There may be many paths but you need to select that path which contains the maximum number of Adventure.
+The Adventure on a path is calculated by taking the sum of all the cell values thatlies in the path.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/adventure-in-a-maze2051/1#)
+
+```cpp
+class Solution {
+public:
+vector<int> FindWays(vector<vector<int>> &a){
+    
+    int n=a.size();
+    int i,j;
+    int m=1e9+7;
+    
+    vector<vector<long>> paths(n,vector<long>(n,0)),adv(n,vector<long>(n,-1));
+    paths[0][0]=1;
+    adv[0][0]=a[0][0];
+    
+    for(i=0;i<n;i++)
+        for(j=0;j<n;j++)
+            if(paths[i][j])
+                if(a[i][j]==1 && j+1<n)
+                {
+                    paths[i][j+1]=(paths[i][j+1]+paths[i][j])%m;
+                    adv[i][j+1]=max(adv[i][j+1],(adv[i][j]+a[i][j+1])%m);
+                }
+                else if(a[i][j]==2 && i+1<n)
+                {
+                    paths[i+1][j]=(paths[i+1][j]+paths[i][j])%m;
+                    adv[i+1][j]=max(adv[i+1][j],(adv[i][j]+a[i+1][j])%m);
+                }
+                else if(a[i][j]==3)
+                {
+                    if(i+1<n)
+                    {
+                        paths[i+1][j]=(paths[i+1][j]+paths[i][j])%m;
+                        adv[i+1][j]=max(adv[i+1][j],(adv[i][j]+a[i+1][j])%m);
+                    }
+                    if(j+1<n)
+                    {
+                        paths[i][j+1]=(paths[i][j+1]+paths[i][j])%m;
+                        adv[i][j+1]=max(adv[i][j+1],(adv[i][j]+a[i][j+1])%m);
+                    }
+                }
+
+    if(adv[n-1][n-1]==-1) adv[n-1][n-1]=0;
+    return {paths[n-1][n-1],adv[n-1][n-1]};
+}
+};
+```

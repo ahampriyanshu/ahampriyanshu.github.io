@@ -1100,3 +1100,83 @@ public:
     }
 };
 ```
+
+### 28 March | 287. Find the Duplicate Number
+
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+
+There is only one repeated number in nums, return this repeated number.
+
+You must solve the problem without modifying the array nums and uses only constant extra space.
+
+* [Practice](https://leetcode.com/problems/find-the-duplicate-number/)
+
+#### Brute
+
+```cpp
+int findDuplicate(vector<int>& nums) {
+    sort(nums.begin(),nums.end());
+    for(int i=0;i<nums.size()-1;i++)
+        if(nums[i]==nums[i+1])
+            return nums[i];
+    return -1;
+}
+```
+
+#### Hashset
+
+```cpp
+int findDuplicate(vector<int>& nums){
+     unordered_set<int> s;
+     
+     for(int i=0; i<nums.size(); i++){
+         if(s.find(nums[i])!=s.end()){
+             return nums[i];
+         }
+         s.insert(nums[i]);
+     }
+     return -1;
+}
+```
+
+#### Marking visited elements
+
+```cpp
+int indexSolution(vector<int>& nums) {
+        for(int i = 0; i < nums.size(); i++) {
+            int index = abs(nums[i]) - 1;
+            
+            nums[index] *= -1;
+            if(nums[index] > 0)
+                return abs(nums[i]);
+        }    
+        return -1;
+    }
+```
+
+#### Floyd's Loop Detection
+
+```cpp
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int slow = nums[0];
+        int fast = nums[0];
+        
+        do
+        {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }while(slow != fast);
+        
+        fast = nums[0];
+        while(slow != fast)
+        {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        
+        return slow;
+    }
+};
+```
