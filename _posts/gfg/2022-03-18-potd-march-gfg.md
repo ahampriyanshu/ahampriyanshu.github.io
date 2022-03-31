@@ -268,3 +268,31 @@ long long int calculate(int arr[], int n)
     return ans;
 }
 ```
+
+## 30 March | Counts Zeros Xor Pairs
+
+Given an array A[] of size N. Find the number of pairs (i, j) such that
+Ai XOR Aj = 0, and 1 ≤ i < j ≤ N.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/counts-zeros-xor-pairs0349/1)
+
+```cpp
+
+long long int calculate(int arr[], int n)
+{
+    int key, ans = 0;
+    unordered_map<int, int> m;
+ 
+    for (int i=0; i<n ; i++)
+    {
+        key =  0^arr[i];
+        
+        if (m.find(key) != m.end())
+            ans += m[key];
+            
+        m[arr[i]]++;
+    }
+
+    return ans;
+}
+```
