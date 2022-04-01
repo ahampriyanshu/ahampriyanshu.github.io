@@ -10,7 +10,7 @@ I'm about to start the sixth sem of graduation, yet I haven't started competitiv
 |:--|:--|:--|:--|:--
 | Feb | 891 | 1599 | 1419 | 36
 | Mar | 926 | 1661 | 1419 | 52
-| Apr |  |  |  |
+| Apr | 898 | 1627 | 1438 | 110
 | May |  |  |  |
 | Jun |  |  |  |
 | Jul |  |  |  |
