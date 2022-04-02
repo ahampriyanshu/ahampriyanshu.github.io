@@ -1,5 +1,5 @@
 ---
-title: "Codeforces | February | 2022"
+title: "February | 2022 | Codeforces"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/

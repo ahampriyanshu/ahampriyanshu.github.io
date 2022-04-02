@@ -1,5 +1,5 @@
 ---
-title: "March Leetcoding | 2022 | Leetcode"
+title: "March | 2022 | Leetcoding Challenge"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/

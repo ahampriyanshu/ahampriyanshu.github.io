@@ -1,5 +1,5 @@
 ---
-title: "Atcoder | February | 2022"
+title: "February | 2022 | Atcoder"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
