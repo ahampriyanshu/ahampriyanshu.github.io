@@ -48,23 +48,6 @@ typedef long long ll;
 ll solve()
 {
 
-    ll ans = 0;
-    string correct, typed;
-    unordered_map<char, int> cmp, tmp;
-    cin >> correct >> typed;
-
-    for(char e:correct)
-        cmp[e]++;
-    
-    for(char e:typed)
-        tmp[e]++;
-
-    for(auto e:cmp){
-        if(tmp[e.first] && tmp[e.first] >= e.second) ans += tmp[e.first] - e.second;
-        else return -1;
-    }
-
-    return ans;
 }
 
 int main()
