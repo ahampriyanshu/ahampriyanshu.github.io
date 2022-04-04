@@ -15,7 +15,7 @@ A secret team of programmers is plotting to disrupt the programming language lan
 
 Example Punched Card.
 
-![loading_image](https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4621b)
+![loading_image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1czYfn54qiD2aqETqCx884cVUzIDuxEgv_7KFfDN5b8VWc1JFa-nVRTY2r_KjyYVaL1w/punched_card.png)
 
 The ASCII art of a punched card they want to draw is similar to an R×C matrix without the top-left cell. That means, it has (R⋅C)−1 cells in total. Each cell is drawn in ASCII art as a period (.) surrounded by dashes (-) above and below, pipes (|) to the left and right, and plus signs (+) for each corner. Adjacent cells share the common characters in the border. Periods (.) are used to align the cells in the top row.
 

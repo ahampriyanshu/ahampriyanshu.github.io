@@ -96,7 +96,7 @@ public:
 ```
 
 
-### 2 March | 680. Valid Palindrome II
+### 3 March | 680. Valid Palindrome II
 
 A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
 
@@ -155,6 +155,35 @@ public:
         }
         else
             sort(s.begin(), s.end());
+    }
+};
+```
+
+
+### 4 March | 680. Valid Palindrome II
+
+You are given the head of a linked list, and an integer k.
+
+Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
+
+* [Practice](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
+
+```cpp
+class Solution {
+public:
+    ListNode* swapNodes(ListNode* head, int k) {
+        ListNode*ptr1 = head,*ptr2 = head , *kth = NULL;
+        while(--k){
+            ptr1 = ptr1->next;
+        }
+        kth = ptr1;
+        ptr1 = ptr1->next;
+        while(ptr1){
+            ptr1 = ptr1->next;
+            ptr2 = ptr2->next;
+        }
+        swap(kth->val,ptr2->val);
+        return head;
     }
 };
 ```

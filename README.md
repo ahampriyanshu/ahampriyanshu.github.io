@@ -1,4 +1,4 @@
-# My Experiments With Competitive Programming
+# Experimenting with competitive programming
 
 ## Why
 
