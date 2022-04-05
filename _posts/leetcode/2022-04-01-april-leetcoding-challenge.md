@@ -159,6 +159,33 @@ public:
 };
 ```
 
+### 4 March | 680. Valid Palindrome II
+
+You are given the head of a linked list, and an integer k.
+
+Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
+
+* [Practice](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
+
+```cpp
+class Solution {
+public:
+    ListNode* swapNodes(ListNode* head, int k) {
+        ListNode*ptr1 = head,*ptr2 = head , *kth = NULL;
+        while(--k){
+            ptr1 = ptr1->next;
+        }
+        kth = ptr1;
+        ptr1 = ptr1->next;
+        while(ptr1){
+            ptr1 = ptr1->next;
+            ptr2 = ptr2->next;
+        }
+        swap(kth->val,ptr2->val);
+        return head;
+    }
+};
+```
 
 ### 4 March | 680. Valid Palindrome II
 
@@ -186,4 +213,38 @@ public:
         return head;
     }
 };
+```
+
+
+### 5 March | 11. Container With Most Water
+
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+**Notice** that you may not slant the container.
+
+* [Practice](https://leetcode.com/problems/container-with-most-water/)
+
+```cpp
+int maxArea(vector<int>& height) {
+    int left = 0;
+    int right = height.size() - 1;
+    int maxi = 0;
+    while(left < right){
+        int w = right - left;
+        int h = min(height[left], height[right]);
+        int area = h * w;
+        maxi = max(maxi, area);
+        if(height[left] < height[right]) left++;
+        else if(height[left] > height[right]) right--;
+        else {
+                left++;
+                right--;
+            }
+        }
+        return maxi;
+    }
 ```
