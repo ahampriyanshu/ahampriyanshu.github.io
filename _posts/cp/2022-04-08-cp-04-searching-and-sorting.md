@@ -1,5 +1,5 @@
 ---
-title: 04. Competitive Programming 
+title: Competitive Programming 4
 author: Priyanshu Tiwari
 excerpt: sorting and searching
 categories:

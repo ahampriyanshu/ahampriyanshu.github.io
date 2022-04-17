@@ -1,5 +1,5 @@
 ---
-title: 01. Data Structures
+title: Data Structures 1
 author: Priyanshu Tiwari
 excerpt: Asymptotic Notations
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 01. Competitive Programming 
+title: Competitive Programming 1
 author: Priyanshu Tiwari
 excerpt: time complexity, space complexity, complexity Graph, possible verdicts
 categories:

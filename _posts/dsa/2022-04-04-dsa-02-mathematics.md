@@ -1,5 +1,5 @@
 ---
-title: 02. Data Structures
+title: Data Structures 2
 author: Priyanshu Tiwari
 excerpt: Mathematics
 categories:

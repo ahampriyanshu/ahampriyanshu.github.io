@@ -1,5 +1,5 @@
 ---
-title: 01. Algorithms
+title: Algorithms 1
 author: Priyanshu Tiwari
 excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket Sort
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 05. Competitive Programming 
+title: Competitive Programming 5
 author: Priyanshu Tiwari
 excerpt: Basics of recursions, PMI, power(x,n), count digits of an integer, is_sorted(), fibonacci series
 categories:
