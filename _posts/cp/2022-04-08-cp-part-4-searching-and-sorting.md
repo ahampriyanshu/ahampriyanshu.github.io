@@ -1,11 +1,9 @@
 ---
-title: Competitive Programming 4
+title: "Competitive Programming Part 4: Sorting"
 author: Priyanshu Tiwari
-excerpt: sorting and searching
+excerpt: Aggressive Cows, Variation, Count Inversions, Chef Restaurant, Momos Market, Taj Mahal Entry
 categories:
   - 'competitive-programming'
-  - 'c++'
-  - 'programming'
 tags:
   - 'competitive-programming'
   - 'c++'

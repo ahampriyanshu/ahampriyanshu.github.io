@@ -1,16 +1,13 @@
 ---
-title:  Competitive Programming 3
+title: "Competitive Programming Part 3: Typecasting"
 author: Priyanshu Tiwari
 excerpt: typecasting, reference variables, dynamic allocation, pre-processors, macros, define, const and global variables, inline functions
 categories:
   - 'competitive-programming'
-  - 'c++'
-  - 'programming'
 tags:
   - 'competitive-programming'
   - 'c++'
 ---
-
 
 ## Typecasting
 

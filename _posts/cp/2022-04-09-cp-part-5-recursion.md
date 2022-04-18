@@ -1,11 +1,9 @@
 ---
-title: Competitive Programming 5
+title: "Competitive Programming Part 5: Recursions"
 author: Priyanshu Tiwari
-excerpt: Basics of recursions, PMI, power(x,n), count digits of an integer, is_sorted(), fibonacci series
+excerpt: Recursions and PMI, power(x,n), count digits of an integer, is_sorted(), fibonacci series
 categories:
   - 'competitive-programming'
-  - 'c++'
-  - 'programming'
 tags:
   - 'competitive-programming'
   - 'c++'

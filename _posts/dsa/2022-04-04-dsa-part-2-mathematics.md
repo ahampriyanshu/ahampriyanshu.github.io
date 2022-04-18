@@ -1,16 +1,13 @@
 ---
-title: Data Structures 2
+title: "DSA Part 2: Mathematics"
 author: Priyanshu Tiwari
-excerpt: Mathematics
+excerpt: Arithmetic Progression, Geometric Progression
 categories:
-  - 'data structures & algorithms'
-  - 'c++'
-  - 'programming'
+  - 'DSA'
 tags:
-  - 'data'
-  - 'structures'
-  - 'algorithms'
+  - 'data structures'
   - 'c++'
+  - 'big O'
 ---
 
 ## Number of digits in an integer

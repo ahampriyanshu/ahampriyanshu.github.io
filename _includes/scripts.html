@@ -14,34 +14,23 @@
 {%- endif -%}
 
 {% if site.mathjax == true or site.mathjax.enable == true %}
-<!-- MathJax -->
-{% capture mathjaxjs %}https://cdn.jsdelivr.net/npm/mathjax@3/es5/{{ site.mathjax.combo | default: "tex-svg" }}.js{% endcapture %}
-<script>
-// http://docs.mathjax.org/en/latest/upgrading/v2.html
-MathJax = {
-  tex: {
-      tags: "{{ site.mathjax.tags | default: 'ams' }}"    // eq numbering options: none, ams, all
-  },
-  options: {
-    renderActions: {
-      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
-      find: [10, function (doc) {
-        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-          const display = !!node.type.match(/; *mode=display/);
-          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-          const text = document.createTextNode('');
-          node.parentNode.replaceChild(text, node);
-          math.start = {node: text, delim: '', n: 0};
-          math.end = {node: text, delim: '', n: 0};
-          doc.math.push(math);
-        }
-      }, '']
-    }
-  }
-}
-</script>
 
-<script type="text/javascript" id="MathJax-script" async src="{{ mathjaxjs }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
 {% endif %}
 
 {%- if page.layout == "search" -%}

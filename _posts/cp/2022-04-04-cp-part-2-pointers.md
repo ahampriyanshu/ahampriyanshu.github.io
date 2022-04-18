@@ -1,16 +1,13 @@
 ---
-title: Competitive Programming 2
+title: "Competitive Programming Part 2: Pointers"
 author: Priyanshu Tiwari
 excerpt: need of pointers, pointers and array, character array, double pointers
 categories:
   - 'competitive-programming'
-  - 'c++'
-  - 'programming'
 tags:
   - 'competitive-programming'
   - 'c++'
 ---
-
 
 ## Need of pointers
 

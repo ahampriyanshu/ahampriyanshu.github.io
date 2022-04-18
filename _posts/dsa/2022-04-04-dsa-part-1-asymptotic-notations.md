@@ -1,16 +1,13 @@
 ---
-title: Data Structures 1
+title: "DSA Part 1: Asymptotic Notations"
 author: Priyanshu Tiwari
-excerpt: Asymptotic Notations
-categories:
-  - 'data structures & algorithms'
-  - 'c++'
-  - 'programming'
+excerpt: Asymptotic Notation
+categories: Big-O, Big-Ω, Big-Θ
+  - 'DSA'
 tags:
-  - 'data'
-  - 'structures'
-  - 'algorithms'
+  - 'data structures'
   - 'c++'
+  - 'big O'
 ---
 
 Time taken by a program is always +ve.

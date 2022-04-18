@@ -1,14 +1,16 @@
 ---
-title: Algorithms 1
+title: "Algorithms Part 1: Sorting"
 author: Priyanshu Tiwari
 excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket Sort
 categories:
   - 'algorithms'
-  - 'c++'
-  - 'programming'
 tags:
   - 'algorithms'
   - 'c++'
+  - 'merge'
+  - 'quick'
+  - 'bubble'
+  - 'sort'
 ---
 
 ## Merge Sort
@@ -18,7 +20,9 @@ Merge sort is a divide-and-conquer, comparison-based sorting algorithm.
 Conceptually, a merge sort works as follows:
 
 - Divide the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
-- Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the [sorted list](https://en.wikipedia.org/wiki/Merge_sort).
+- Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.[^1]
+
+[^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
 ![loading](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 

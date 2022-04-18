@@ -1,11 +1,9 @@
 ---
-title: Competitive Programming 1
+title: "Competitive Programming Part 1: Introduction"
 author: Priyanshu Tiwari
 excerpt: time complexity, space complexity, complexity Graph, possible verdicts
 categories:
   - 'competitive-programming'
-  - 'c++'
-  - 'programming'
 tags:
   - 'competitive-programming'
   - 'c++'
