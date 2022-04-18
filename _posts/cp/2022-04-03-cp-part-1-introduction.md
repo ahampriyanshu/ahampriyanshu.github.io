@@ -22,7 +22,7 @@ tags:
 
 ## Analyzing given constraints
 
-Conventionally, we can perform 4.10<sup>18</sup> operation in one second.
+Conventionally, we can perform 4.10<sup>8</sup> operation in one second.
 
 ### Complexity Table
 

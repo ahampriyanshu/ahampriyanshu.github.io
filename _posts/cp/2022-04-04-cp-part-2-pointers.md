@@ -42,7 +42,7 @@ int main(){
 }
 ```
 
-Do not try to access or modify uninitialized pointers as they can point to any segment of the memory. To prevent this we usually initialize pointers with either some valid variable's address or **NULL**
+**Note:** Do not try to access or modify uninitialized pointers as they can point to any segment of the memory. To prevent this we usually initialize pointers with either some valid variable's address or _NULL_. 
 {: .notice--info}
 
 ```cpp
@@ -104,10 +104,12 @@ int main(){
 * In th above code **arr** is a pointer that contains the address to the intial block of 4*5=20 bytes.
 * In other words : ``arr = &arr[0]`` and ``*arr = arr[0]``
 * So,
-    - a[0] = *(a)
-    - a[1] = *(a+1)
-    - ...
-    - **a[i] = *(a+i)**
+    a[0] = *(a)
+    a[1] = *(a+1)
+    .
+    .
+    .
+    **a[i] = *(a+i)**
 
 Hence we can also use
 {: .notice--info}
@@ -159,15 +161,13 @@ ad1|��
 * As we can see that character arrays and pointers behaves a bit differently, this is because how cout is implemented for char arrays and pointers in c++.
 * Instead of printing the address of the 0th index, the content of the array is printed.
 
-Observe
-{: .notice--warning}
-
 ```cpp
 char s1[] = "abc";
 char* s2 = "abc";
 ```
 
 While executing the above code, the compiler will first create a temporary space of the string literal and then copy those values to the memory block provided to s1. But s2 points towards the same temporary which can be very dangerous and hence should be avoided.
+{: .notice--warning}
 
 ## Pointers and functions
 

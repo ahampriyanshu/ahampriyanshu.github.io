@@ -3,12 +3,12 @@ Priyanshu Tiwari:
   picture: logo.png
   twitter: "@ahampriyanshu"
   links:
-    - title: Github
-      url: https://github.com/ahampriyanshu
-      icon: fab fa-github
-    - title: Telegram
-      url: https://t.me/ahampriyanshu
-      icon: fab fa-telegram-plane
-    - title: Discord
-      url: https://discordapp.com/users/746095596175097916
-      icon: fab fa-discord
+    - title: Links
+      url: https://links.ahampriyanshu.com/
+      icon: fab fa-chrome
+    - title: CP
+      url: https://ahampriyanshu.com/cp/
+      icon: fa-code
+    - title: CP
+      url: https://ahampriyanshu.com/data/
+      icon: fa-area-chart 
