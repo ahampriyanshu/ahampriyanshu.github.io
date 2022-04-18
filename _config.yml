@@ -92,9 +92,12 @@ author:
 
 # Footer Links
 footer_links:
-  - title: Links
-    url: https://links.ahampriyanshu.com/
-    icon: fab fa-chrome
+  - title: Github
+    url: https://github.com/ahampriyanshu
+    icon: fab fa-github
+  - title: Linkedin
+    url: https://www.linkedin.com/in/ahampriyanshu/
+    icon: fa fa-linkedin-square
   - title: Telegram
     url: https://t.me/ahampriyanshu
     icon: fab fa-telegram-plane
