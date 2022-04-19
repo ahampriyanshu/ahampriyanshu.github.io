@@ -2,7 +2,7 @@
 
 ## Some Links
 
-* [My Blog](https://ahampriyanshu.com/)
+* [Blog](https://ahampriyanshu.com/)
 * [Links](https://links.ahampriyanshu.com/)
 * [Experimenting with competitive programming](https://ahampriyanshu.com/cp)
 * [Experimenting with data science](https://github.com/ahampriyanshu/experimenting-with-data-science)
