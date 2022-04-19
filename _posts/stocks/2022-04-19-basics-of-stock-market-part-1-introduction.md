@@ -35,13 +35,14 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 ### Circuit Order
 
 **Upper circuit:** Nobody is selling
+
 **Lower circuit:** Nobody is buying
 
 ### Some Pro tips
 
 <figure class="align-center">
   <img src="{{ '/images/stock/stock-01.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/"></a>r/IndianStreetBets</figcaption>
+  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/">r/IndianStreetBets</a></figcaption>
 </figure> 
 
 <figure class="align-center">

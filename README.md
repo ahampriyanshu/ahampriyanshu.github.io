@@ -1,4 +1,4 @@
-* This site is hosted on [GitHub Pages](https://pages.github.com/) with [SO Simple Theme](https://github.com/mmistakes/so-simple-theme)
+* This site is hosted on [GitHub Pages](https://pages.github.com/) with [SO Simple Theme](https://github.com/mmistakes/so-simple-theme).
 
 ## Some Links
 
