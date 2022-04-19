@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+title: "Intro to ML Part 1: Introdction"
+author: Priyanshu Tiwari
+excerpt: Anaconda, jupyter notebook
+categories:
+  - 'into-to-ml'
+tags:
+  - 'data-science'
+  - 'python'
+---
 
-<title>01-Introduction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -14785,12 +14787,3 @@ pip3 install --upgrade --user nbconve</code></pre>
 </div>
 </div>
 </div>
-</body>
-
-
-
-
-
-
-
-</html>

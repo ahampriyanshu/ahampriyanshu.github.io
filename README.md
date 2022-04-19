@@ -3,7 +3,8 @@
 ## Some Links
 
 * [My Blog](https://ahampriyanshu.com/)
+* [Links](https://links.ahampriyanshu.com/)
 * [Experimenting with competitive programming](https://ahampriyanshu.com/cp)
-* [Experimenting with data science](https://ahampriyanshu.com/data)
-* [Algo ds 101](https://dsa.ahampriyanshu.com/)
+* [Experimenting with data science](https://github.com/ahampriyanshu/experimenting-with-data-science)
+* [Algo DS 101](https://github.com/ahampriyanshu/algo-ds-101)
 
