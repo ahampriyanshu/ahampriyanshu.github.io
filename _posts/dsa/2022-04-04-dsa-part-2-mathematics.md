@@ -98,9 +98,10 @@ $ax^{2} + by + c = 0$
 $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
 
 $D = b^{2} - 4ac$
-    * D < 0 : Imaginary roots
-    * D = 0 : Two equal roots
-    * D > 0 : Two distinct roots
+
+* D < 0 : Imaginary roots
+* D = 0 : Two equal roots
+* D > 0 : Two distinct roots
 
 ### Prime numbers
 
