@@ -1,7 +1,7 @@
 ---
 title: "Basics Of Stock Market Part 1: Introduction"
 author: Priyanshu Tiwari
-excerpt: dividend vs interests, types of orders, ipo, fso, bottom up/down, promoter, sebi, nifty, sensex
+excerpt: dividend vs interests, types of orders, ipo, fso, bottom up/down, lower/upper circuit, promoter, sebi, nifty, sensex
 categories:
   - 'stock market'
 tags:
@@ -32,6 +32,19 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 | Taxable | Tax-free |
 | Calculated on principal amount | Calculated on face-value |
 
-### How to Consistently Lose Money in Share Market
+### Circuit Order
 
-![loading](/images/stock/stock-01.png){: .align-center}
+**Upper circuit:** Nobody is selling
+**Lower circuit:** Nobody is buying
+
+### Some Pro tips
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-01.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/"></a>r/IndianStreetBets</figcaption>
+</figure> 
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-01.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/qp50of/use_it_or_lose_it/">r/IndianStreetBets</a></figcaption>
+</figure> 

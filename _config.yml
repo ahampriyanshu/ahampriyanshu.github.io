@@ -97,7 +97,7 @@ footer_links:
     icon: fab fa-github
   - title: Linkedin
     url: https://www.linkedin.com/in/ahampriyanshu/
-    icon: fab fa-linkedin-square
+    icon: fa-brands fa-linkedin
   - title: Telegram
     url: https://t.me/ahampriyanshu
     icon: fab fa-telegram-plane
