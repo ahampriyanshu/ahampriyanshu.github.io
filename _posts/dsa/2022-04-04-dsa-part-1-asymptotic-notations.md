@@ -3,7 +3,7 @@ title: "DSA Part 1: Asymptotic Notations"
 author: Priyanshu Tiwari
 excerpt: Asymptotic Notation
 categories: Big-O, Big-Ω, Big-Θ
-  - 'DSA'
+  - DSA
 tags:
   - 'data structures'
   - 'c++'

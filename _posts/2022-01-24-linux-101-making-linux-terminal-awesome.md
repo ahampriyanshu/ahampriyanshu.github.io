@@ -5,7 +5,6 @@ excerpt: "Themes and plugins to tweak your linux terminal for better productivit
 categories:
   - Tech
 tags:
-  - 'making linux terminal awesome'
   - linux
   - terminal
   - awesome

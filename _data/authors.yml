@@ -1,10 +1,6 @@
 Priyanshu Tiwari:
   name: Priyanshu Tiwari
   picture: logo.png
-  web: https://ahampriyanshu.com
-  bio: "Maybe... or maybe not"
-  email: ahampriyanshu@gmail.com
-  twitter: "@ahampriyanshu"
   links:
     - title: Links
       url: https://links.ahampriyanshu.com/
@@ -12,3 +8,6 @@ Priyanshu Tiwari:
     - title: Instagram
       url: https://www.instagram.com/ahampriyanshu/
       icon: fab fa-instagram
+    - title: CP
+      url: https://ahampriyanshu.com/cp/
+      icon: fab fa-firefox

@@ -63,10 +63,10 @@ void mergeSort(int *arr, int start, int end) {
 }
 ```
 
-Worst-case time complexity : ${\displaystyle O(n\log n)}O(n\log n)$
+**Worst-case time complexity :** ${\displaystyle O(n\log n)}$
 
-Best-case time complexity : ${\displaystyle \Omega (n\log n)}\Omega$
+**Best-case time complexity :** ${\displaystyle \Omega (n\log n)}$
 
-Average time complexity : ${\displaystyle \Theta (n\log n)}\Theta (n\log n)$
+**Average time complexity :** ${\displaystyle \Theta (n\log n)}$
 
-Worst-case space complexity : ${\displaystyle O(n)}O(n)$ 
+**Worst-case space complexity :** ${\displaystyle O(n)}$ 

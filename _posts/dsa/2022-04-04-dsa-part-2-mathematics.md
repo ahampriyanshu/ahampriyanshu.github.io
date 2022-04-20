@@ -3,45 +3,12 @@ title: "DSA Part 2: Mathematics"
 author: Priyanshu Tiwari
 excerpt: Arithmetic Progression, Geometric Progression
 categories:
-  - 'DSA'
+  - DSA
 tags:
   - 'data structures'
   - 'c++'
   - 'big O'
 ---
-
-## Number of digits in an integer
-
-### Iterative
-
-```cpp
-count(n){
-    int cnt = 0;
-    while(n){
-        cnt += n%10;
-        n /= 10;
-    }
-
-    return cnt;
-}
-```
-
-### Recursive
-
-```cpp
-count(n){
-    if(!n) return n;
-    return 1+count(n)l
-}
-```
-
-### Logarithmic
-
-```cpp
-count(n){
-    return floor(log(n) + 1);
-}
-```
 
 ## Number sequences
 
@@ -112,3 +79,246 @@ All the numbers having exactly two factors.
 Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 
 2 and 3 are only consecutive prime numbers.
+
+## Problems
+
+### Number of digits in an integer
+
+#### Iterative
+
+```cpp
+count(n){
+    int cnt = 0;
+    while(n){
+        cnt += n%10;
+        n /= 10;
+    }
+
+    return cnt;
+}
+```
+
+#### Recursive
+
+```cpp
+count(n){
+    if(!n) return n;
+    return 1+count(n)l
+}
+```
+
+#### Logarithmic
+
+```cpp
+count(n){
+    return floor(log(n) + 1);
+}
+```
+
+
+### Check if the given integer is a palindrome or not.
+
+```cpp
+bool isPal(int n){
+  int rev = 0;
+  int tmp = n;
+  
+  while(tmp){
+    int ones = tmp % 10;
+    rev = rev * 10 + ones;
+    tmp /= rmp;
+  }
+
+  return rev == n;
+}
+```
+
+### Factorail
+
+#### Iterative
+
+```cpp
+int fact(int n);
+
+int res = 1;
+
+for(int i=2; i<=n; i++)
+  res *= i;
+
+return res;
+}
+```
+
+#### Recursive
+
+```cpp
+int fact(int n){
+  if(!n) return 1;
+  return n * fact(n-1);
+}
+```
+
+### Count of trailing zeros in the factorial of a number
+
+```cpp
+int ctz(int n){
+  int res = 0;
+  for(int i=5; i<=n; i *= 5)
+    res += n/i;
+  return res;
+}
+```
+
+TC : O(log<sub>5</sub>n)
+
+### GCD of two numbers
+
+#### Naive
+
+```cpp
+int gcd(int a, int b){
+  int res = min(a, b);
+
+  while(res){
+    if(a%res == 0 and b%res == 0)
+      break;
+    res--;
+  }
+
+  return res;
+}
+```
+
+**Time Complexity:** O(min(a,b))
+
+#### Euclidean Algorithm
+
+```cpp
+int gcd(int a, int b){
+  while(a != b)
+    if(a>b)
+      a = a-b;
+    else
+      b = b-a;
+  return a;
+}
+```
+
+#### Optimized Euclidean Algorithm
+
+```cpp
+int gcd(int a, int b){
+  if(b==0)
+  return a;
+  return gcd(b, a%b);
+}
+```
+
+**Time Complexity:** O(log max(a,b))
+
+#### Extended Euclidean Algorithm
+
+```cpp
+int gcd(int a, int b, int *x, int *y)
+{
+    if (a == 0)
+    {
+        *x = 0;
+        *y = 1;
+        return b;
+    }
+ 
+    int gcd = gcd(b%a, a, &x1, &y1);
+ 
+    *x = y1 - (b/a) * x1;
+    *y = x1;
+ 
+    return gcd;
+}
+```
+
+### LCM of two numbers
+
+#### Naive
+
+```cpp
+int gcd(int a, int b){
+  int res = max(a, b);
+
+  while(res){
+    if(res%a == 0 and res%a == 0)
+      break;
+    res++;
+  }
+
+  return res;
+}
+```
+
+**Time Complexity:** O(a*b - max(a,b))
+
+#### Efficient Approach
+
+$\rightarrow  a\times b = gcd(a,b) \times lcm(a,b)$
+$\rightarrow lcm(a,b) = \frac{a\times b}{gcd(a,b)}$
+
+**Time Complexity:** O(log max(a,b))
+
+### Check for prime number
+
+#### Naive approach
+
+```cpp
+bool isPrime(int n)
+{=
+    if (n <= 1)
+        return false;
+  
+    for (int i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+  
+    return true;
+}
+```
+
+**Time Complexity:** O(n)
+
+#### Efficient approach
+
+```cpp
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+  
+    for (int i = 2; i*i <= n; i++)
+        if (n % i == 0)
+            return false;
+  
+    return true;
+}
+```
+
+**Time Complexity:** O($\sqrt{n}$)
+
+#### Optimized approach
+
+```cpp
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    if (n <= 3)
+        return true;
+        
+    if (n % 2 == 0 || n % 3 == 0)
+        return false;
+  
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+  
+    return true;
+}
+```

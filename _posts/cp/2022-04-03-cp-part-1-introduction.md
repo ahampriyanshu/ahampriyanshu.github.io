@@ -11,14 +11,18 @@ tags:
 
 ## Steps to approach a problem
 
-* Ready lengthy and unusual paragrams to decode the problem statement.
+* Read lengthy and unusual paragraphs to decode the problem statement.
 * Observe the input format.
 * Observe the output format.
 * Analyze the given contraints
     - Time Limit : 0.5s - 4s
     - Memomry Limit : 256MB - 1GB
-* Find hidden logic/pattern in the sample input and output.
 * Code
+* Test the output locally
+* Submit
+
+Sometimes instead of reading the problem statement, we can find hidden logic/patterns in the sample input and output.
+{: .notice--info}
 
 ## Analyzing given constraints
 
@@ -39,7 +43,7 @@ Conventionally, we can perform 4.10<sup>8</sup> operation in one second.
 
 ### Complexity Graph
 
-![center-aligned-image](/images/cp/cn-cp-02.png){: .align-center}
+![loading](/images/cp/cn-cp-02.png){: .align-center}
 
 ## Possible verdicts
 

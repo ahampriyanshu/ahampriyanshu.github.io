@@ -1,12 +1,14 @@
 <head>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R63GLN03CG"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSNH6EH1RX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-R63GLN03CG');
+  gtag('config', 'G-VSNH6EH1RX');
 </script>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +18,14 @@
     {% endcomment %}
     {% include head-seo.html %}
   {% else %}
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    
+  <title>
+    {%- unless page.layout == "home" -%}
+      {{ page.title | append: " | "}}
+    {%- endunless -%}
+      {{ site.title }}
+    </title>
+
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
   {% endif %}

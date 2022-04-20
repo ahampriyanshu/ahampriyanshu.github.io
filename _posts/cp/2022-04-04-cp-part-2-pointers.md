@@ -161,10 +161,9 @@ ad1|��
 * As we can see that character arrays and pointers behaves a bit differently, this is because how cout is implemented for char arrays and pointers in c++.
 * Instead of printing the address of the 0th index, the content of the array is printed.
 
-```cpp
 char s1[] = "abc";
+
 char* s2 = "abc";
-```
 
 While executing the above code, the compiler will first create a temporary space of the string literal and then copy those values to the memory block provided to s1. But s2 points towards the same temporary which can be very dangerous and hence should be avoided.
 {: .notice--warning}

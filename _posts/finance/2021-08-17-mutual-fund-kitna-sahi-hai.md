@@ -12,6 +12,6 @@ tags:
 With the average return of 15-18%, should one choose a Mutual Fund over FD
 
 <figure class="align-center">
-  <img src="https://github.com/ahampriyanshu/meta/blob/main/blog/mutual-funds.png?raw=true" alt="norm">
+  <img src="https://github.com/ahampriyanshu/meta/blob/main/blog/mutual-funds.png?raw=true" alt="loading">
   <figcaption>Performance of large cap funds over the last 5 years</figcaption>
 </figure> 

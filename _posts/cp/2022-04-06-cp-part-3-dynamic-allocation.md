@@ -231,7 +231,8 @@ int main(){
 }
 ```
 
-Normally compiler supports 1 to 3 set of instructions as **inline** func, more than that is treated as a normal func only.
+**Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
+{: .notice--warning}
 
 ### Default Func
 
