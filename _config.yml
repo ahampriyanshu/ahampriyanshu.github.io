@@ -2,13 +2,13 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Priyanshu Tiwari"
-description: "Hello and welcome to my blog.I usually write about tech, history, finance, cinema, politics and comedy."
+description: "Hello and welcome to my blog. I usually write about tech, history, finance, and politics."
 baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
-words_per_minute: 90
+words_per_minute: 100
 mathjax:
   enable: true
 google_fonts:

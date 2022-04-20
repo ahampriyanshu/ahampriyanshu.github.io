@@ -1,13 +1,20 @@
 ---
 title: "DSA Part 2: Mathematics"
 author: Priyanshu Tiwari
-excerpt: Arithmetic Progression, Geometric Progression
+excerpt: Number sequences, extended euclidean algorithm, prime factorization, sieve of eratosthenes, lcm , gcd
 categories:
   - DSA
 tags:
   - 'data structures'
-  - 'c++'
-  - 'big O'
+  - cpp
+  - ap
+  - gp
+  - gcd
+  - hcf
+  - lcm
+  - euclidean
+  - prime
+
 ---
 
 ## Number sequences
@@ -17,11 +24,17 @@ tags:
 > 2, 4, 6, 8, ......
 
 a<sub>1</sub> = a + 0.d
+
 a<sub>2</sub> = a + 1.d
+
 a<sub>3</sub> = a + 2.d
+
 .
+
 .
+
 .
+
 a<sub>n</sub> = a + (n-1).d
 
 We know that
@@ -58,7 +71,7 @@ $S_{\infty} = \frac{a}{1-r}$
 
 ### Quadratic formula
 
-1.Roots of quad eq. 
+Roots of quad eq. 
 
 $ax^{2} + by + c = 0$
 
@@ -115,7 +128,6 @@ count(n){
 }
 ```
 
-
 ### Check if the given integer is a palindrome or not.
 
 ```cpp
@@ -133,7 +145,7 @@ bool isPal(int n){
 }
 ```
 
-### Factorail
+### Factorial of a number
 
 #### Iterative
 
@@ -158,7 +170,7 @@ int fact(int n){
 }
 ```
 
-### Count of trailing zeros in the factorial of a number
+### Count trailing zeros in the factorial of a number
 
 ```cpp
 int ctz(int n){
@@ -228,12 +240,12 @@ int gcd(int a, int b, int *x, int *y)
         return b;
     }
  
-    int gcd = gcd(b%a, a, &x1, &y1);
+    int res = gcd(b%a, a, &x1, &y1);
  
     *x = y1 - (b/a) * x1;
     *y = x1;
  
-    return gcd;
+    return res;
 }
 ```
 
@@ -260,11 +272,12 @@ int gcd(int a, int b){
 #### Efficient Approach
 
 $\rightarrow  a\times b = gcd(a,b) \times lcm(a,b)$
+
 $\rightarrow lcm(a,b) = \frac{a\times b}{gcd(a,b)}$
 
 **Time Complexity:** O(log max(a,b))
 
-### Check for prime number
+### Prime number
 
 #### Naive approach
 
@@ -322,3 +335,205 @@ bool isPrime(int n)
     return true;
 }
 ```
+
+### Prime factorization of a number
+
+#### Naive
+
+```cpp
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    if (n <= 3)
+        return true;
+        
+    if (n % 2 == 0 || n % 3 == 0)
+        return false;
+  
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+  
+    return true;
+}
+
+void primeFactors(int n)
+{
+    for (int i = 2; i <= n; i = i + 2)
+    {
+
+      if(isPrime(i))
+
+      int x = i;
+        
+      while (n % x == 0)
+      {
+      cout << i << " ";
+      x = x*i;
+      }
+    }
+ 
+}
+```
+
+**Time Complexity:** O($nlogn $)
+
+#### Efficient
+
+```cpp
+void primeFactors(int n)
+{
+    if (n <= 1) return;
+
+    for (int i = 2; i*i <= n; i = i + 2)
+    {
+        while (n % i == 0)
+        {
+            cout << i << " ";
+            n = n/i;
+        }
+    }
+ 
+    if (n > 1)
+        cout << n << " ";
+}
+```
+
+**Time Complexity:** O($\sqrt{n} logn $)
+
+#### Using Sieve
+
+```cpp
+void primeFactors(int n)
+{
+    int c=2;
+    while(n>1)
+    {
+        if(n%c==0){
+        cout<<c<<" ";
+        n/=c;
+        }
+        else c++;
+    }
+}
+```
+
+**Time Complexity:** O(n)
+
+### Print all divisors in ascending order
+
+#### Naive
+
+```cpp
+void printDivisors(int n)
+{
+    for (int i = 1; i <= n; i++)
+        if (n % i == 0)
+            cout <<" " << i;
+}
+```
+
+**Time Complexity:** O(n)
+
+#### Efficient
+
+```cpp
+void printDivisors(int n)
+{
+    for (int i=1; i*i<=n; i++)
+    {
+        if (n%i == 0)
+          cout << i << " ";
+    }
+
+        for (; i>=1; i--)
+    {
+        if (n%i == 0)
+          cout << n/i << " ";
+    }
+}
+```
+
+**Time Complexity:** O($\sqrt{n}$)
+
+### N Prime Numbers
+
+#### Naive
+
+```cpp
+void nPrimes(){
+  for(int i=2; i<=n; i++)
+    if(isPrime(i))
+      cout << i << " ";
+}
+```
+
+**Time Complexity:** O($n \times \sqrt{n}$)
+
+#### Sieve of Eratosthenes
+
+```cpp
+void manipulated_seive(int n)
+{
+
+  vector<bool> isPrime(n+1, true);
+
+ 
+  for (int i=2; i*i<=n ; i++)
+  {
+    if (isprime[i])
+    {
+      cout << i << " "
+      for(int j=i*i; j<=n; j+= i)
+        isPrime[j] = false;
+    }
+  }   
+}
+```
+
+**Time Complexity:** O($ log log n $)
+
+### Computating Pow(x,n)
+
+#### Naive
+
+FOR(1->n) : x = x*x;
+
+**Time Complexity:** O(n)
+
+#### Optimized
+
+```cpp
+double myPow(double x, int n) {
+        if(n==0) return 1.0;
+        double y = myPow(x, n/2);
+        
+        if(n % 2 == 0)
+            return y*y;
+        else return n < 0 ? (y*y)/x : x*y*y; 
+}
+```
+
+**Time Complexity:** O(logn)
+
+#### Constant Space
+
+$\rightarrow $ Every natural number can be written as the sum of distinct powers of 2.
+
+```cpp
+double myPow(long long int x, long long int n) {
+  long long int res = 1;
+  while(n>0){
+
+    if(n&1)
+    res = res * x;
+    
+    x *= x;
+    n = n >> 1;
+  }
+  return res;
+}
+```
+
+**Time Complexity:** O(logn)

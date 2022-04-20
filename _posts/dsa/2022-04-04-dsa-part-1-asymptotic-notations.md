@@ -2,12 +2,11 @@
 title: "DSA Part 1: Asymptotic Notations"
 author: Priyanshu Tiwari
 excerpt: Asymptotic Notation
-categories: Big-O, Big-Ω, Big-Θ
+categories: 
   - DSA
 tags:
   - 'data structures'
   - 'c++'
-  - 'big O'
 ---
 
 Time taken by a program is always +ve.

@@ -21,7 +21,7 @@ tags:
 * Test the output locally
 * Submit
 
-Sometimes instead of reading the problem statement, we can find hidden logic/patterns in the sample input and output.
+Sometimes instead of reading the problem statement, we can find required logic by observing the pattern in sample input and output.
 {: .notice--info}
 
 ## Analyzing given constraints
