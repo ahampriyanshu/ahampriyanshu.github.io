@@ -230,21 +230,13 @@ Return the maximum amount of water a container can store.
 
 ```cpp
 int maxArea(vector<int>& height) {
-    int left = 0;
-    int right = height.size() - 1;
-    int maxi = 0;
-    while(left < right){
-        int w = right - left;
-        int h = min(height[left], height[right]);
-        int area = h * w;
-        maxi = max(maxi, area);
-        if(height[left] < height[right]) left++;
-        else if(height[left] > height[right]) right--;
-        else {
-                left++;
-                right--;
-            }
+    int maxArea(vector<int>& arr) {
+    int i=0, j=arr.size()-1,maxi = -1;
+    while(i<j){
+        if (arr[i]< arr[j]) i++;
+        else j--;
+        maxi = max(maxi , min(arr[i],arr[j])*(j-i));
         }
-        return maxi;
-    }
+        return maxi ; 
+}
 ```

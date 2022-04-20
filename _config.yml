@@ -1,6 +1,6 @@
 theme: jekyll-theme-chirpy
-baseurl: '/cp'
-url: 'https://ahampriyanshu.com'
+baseurl: ''
+url: 'https://cp.ahampriyanshu.com'
 lang: en
 timezone: Asia/Kolkata
 
@@ -23,13 +23,6 @@ social:
     - https://www.linkedin.com/in/ahampriyanshu
     - https://github.com/ahampriyanshu
     - https://www.instagram.com/ahampriyanshu
-
-google_analytics:
-  id: 'G-R63GLN03CG'                 # fill in your Google Analytics ID
-  # Google Analytics pageviews report settings
-  pv:
-    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
-    cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
 avatar:
 toc: true
