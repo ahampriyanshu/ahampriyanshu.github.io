@@ -31,13 +31,13 @@ comments:
   active: utterances
 
   disqus:
-    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
+    shortname:
+    
   utterances:
-    repo: ahampriyanshu/cp
+    repo: ahampriyanshu/experimenting-with-cp
     issue_term: title
 
-paginate: 12
+paginate: 15
 
 kramdown:
   syntax_highlighter: rouge
