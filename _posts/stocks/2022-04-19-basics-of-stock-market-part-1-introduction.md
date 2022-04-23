@@ -13,7 +13,16 @@ tags:
 * Investing is gambling.
 * You can loose all of your money.
 * Large capital is required.
-* Stocks that plummet must go back up.
+
+* Stock that have skyrocketed must go down.
+
+* Stocks that plummet must go up.
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-02.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/qp50of/use_it_or_lose_it/">r/IndianStreetBets</a></figcaption>
+</figure> 
+
 * High risk equates to high profits.
 * Only meant for "experts".
 
@@ -29,7 +38,7 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 | Interest | Dividend |
 | :-- | :-- |
 | Mandatory | Optional |
-| Taxable | Tax-free |
+| Taxable | Taxable |
 | Calculated on principal amount | Calculated on face-value |
 
 ### Circuit Order
@@ -43,9 +52,4 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 <figure class="align-center">
   <img src="{{ '/images/stock/stock-01.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/">r/IndianStreetBets</a></figcaption>
-</figure> 
-
-<figure class="align-center">
-  <img src="{{ '/images/stock/stock-02.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/qp50of/use_it_or_lose_it/">r/IndianStreetBets</a></figcaption>
 </figure> 

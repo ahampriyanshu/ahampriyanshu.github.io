@@ -21,7 +21,7 @@ tags:
 
 ### Arithmetic progression
 
-> 2, 4, 6, 8, ......
+2, 4, 6, 8, ......
 
 $\rightarrow a\textsubscript{1} = a + 0.d$
 

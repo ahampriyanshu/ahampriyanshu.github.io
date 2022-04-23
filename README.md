@@ -1,6 +1,6 @@
 # Priyanshu Tiwari
 
-Hello and welcome to my blog 👋.I usually write about tech, history, finance, and politics.
+Hello and welcome to my blog 👋
 
 ## Attribution
 
