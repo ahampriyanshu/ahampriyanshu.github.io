@@ -23,13 +23,13 @@ tags:
 
 > 2, 4, 6, 8, ......
 
-$\rightarrow  a<sub>1</sub> = a + 0.d $
+$\rightarrow a\textsubscript{1} = a + 0.d$
 
-$\rightarrow  a<sub>2</sub> = a + 1.d $
+$\rightarrow a\textsubscript{2} = a + 1.d$
 
-$\rightarrow  a<sub>3</sub> = a + 2.d $
+$\rightarrow a\textsubscript{3} = a + 2.d$
 
-$\rightarrow  a<sub>n</sub> = a + (n-1).d $
+$\rightarrow a\textsubscript{n} = a + (n-1).d$
 
 We know that
 
