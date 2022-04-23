@@ -1,5 +1,5 @@
 ---
-title: "Competitive Programming Part 5: Recursions"
+title: "Intro To CP 5: Recursions"
 author: Priyanshu Tiwari
 excerpt: Recursions and PMI, power(x,n), count digits of an integer, is_sorted(), fibonacci series
 categories:

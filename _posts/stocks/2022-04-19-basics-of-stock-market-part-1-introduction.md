@@ -16,11 +16,33 @@ tags:
 
 * Stock that have skyrocketed must go down.
 
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-1-5.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
+</figure> 
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-1-6.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
+</figure> 
+
+Until some bad or major market corrections news arrives.
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-1-2.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
+</figure> 
+
 * Stocks that plummet must go up.
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-02.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/qp50of/use_it_or_lose_it/">r/IndianStreetBets</a></figcaption>
+  <img src="{{ '/images/stock/stock-1-3.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
+</figure> 
+
+<figure class="align-center">
+  <img src="{{ '/images/stock/stock-1-4.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
 * High risk equates to high profits.
@@ -50,6 +72,6 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 ### Some Pro tips
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-01.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stock/stock-1-1.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/">r/IndianStreetBets</a></figcaption>
 </figure> 

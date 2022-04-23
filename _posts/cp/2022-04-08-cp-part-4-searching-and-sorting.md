@@ -1,5 +1,5 @@
 ---
-title: "Competitive Programming Part 4: Sorting"
+title: "Intro To CP 4: Sorting"
 author: Priyanshu Tiwari
 excerpt: Aggressive Cows, Variation, Count Inversions, Chef Restaurant, Momos Market, Taj Mahal Entry
 categories:

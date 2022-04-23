@@ -1,5 +1,5 @@
 ---
-title: "Competitive Programming Part 2: Pointers"
+title: "Intro To CP 2: Pointers"
 author: Priyanshu Tiwari
 excerpt: need of pointers, pointers and array, character array, double pointers
 categories:

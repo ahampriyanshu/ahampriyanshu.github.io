@@ -1,5 +1,5 @@
 ---
-title: "Competitive Programming Part 1: Introduction"
+title: "Intro To CP 1: Introduction"
 author: Priyanshu Tiwari
 excerpt: time complexity, space complexity, complexity Graph, possible verdicts
 categories:

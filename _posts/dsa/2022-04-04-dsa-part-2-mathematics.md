@@ -17,19 +17,62 @@ tags:
 
 ---
 
+
+## Area
+
+### Rectangle
+
+$\rightarrow area = length \times bread$
+
+$\rightarrow perimeter = 2 ( length \plus bread)$
+
+### Square
+
+$\rightarrow area = side\textsuperscript{2} $
+
+$\rightarrow perimeter = 4 \times side$
+
+### Rhombus
+
+$\rightarrow area = \frac{product of diagonals}{2} $
+
+### Equilateral Triangle
+
+$\rightarrow area = \frac{ \sqrt{n} \times side \textsuperscript{2}}{4} $
+
+$\rightarrow radius of incircle = \frac{side}{2 \times \sqrt{3}} $
+
+$\rightarrow radius of circle = \frac{side}{\sqrt{3}} $
+
+### Isosceles Triangle
+
+$\rightarrow area = \frac{base \times length}{2} $
+
+### Heron's Formula
+
+### Circle
+
+$\rightarrow area = \pi \times R \textsuperscript{2} $
+
+$\rightarrow circumference = 2 \times \pi \times R $
+
+### Parallelogram
+
+$\rightarrow area = base \times height $
+
 ## Number sequences
 
 ### Arithmetic progression
 
 2, 4, 6, 8, ......
 
-$\rightarrow a\textsubscript{1} = a + 0.d$
+$\rightarrow a \textsubscript{1} = a + 0.d $
 
-$\rightarrow a\textsubscript{2} = a + 1.d$
+$\rightarrow a \textsubscript{2} = a + 1.d $
 
-$\rightarrow a\textsubscript{3} = a + 2.d$
+$\rightarrow a \textsubscript{3} = a + 2.d $
 
-$\rightarrow a\textsubscript{n} = a + (n-1).d$
+$\rightarrow a \textsubscript{n} = a + (n-1).d $
 
 We know that
 
