@@ -1,13 +1,19 @@
 ---
 title: "LaTeX Cheatsheet"
 author: Priyanshu Tiwari
-excerpt: List of LaTeX mathematical symbols
+excerpt: Guide to mathematical symbols and expressions in latex
 categories:
   - cheatsheet
   - latex
 tags:
-  - 'mathematical expressions'
+  - mathematical
+  - expressions
   - latex
+  - guide
+  - cheatsheet
+  - greek
+  - logical
+  - symbol
 ---
 
 
@@ -176,9 +182,9 @@ $
 
 $
 \begin{cases}
-x & x\ge 0
+x & x\ge 0 \\
 -x & x<0
 \end{cases}
 $
 
-$ \begin{cases} x & x\ge 0 -x & x<0 \end{cases}$
+$ \begin{cases} x & x\ge 0 \\ -x & x<0 \end{cases}$
