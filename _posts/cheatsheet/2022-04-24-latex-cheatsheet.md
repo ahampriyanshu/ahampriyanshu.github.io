@@ -145,21 +145,40 @@ tags:
 
 | Latex | Result |
 | :-- | :-- |
-| \sum_{n=1}^{\infty} A_i | $ \sum_{n=1}^{\infty} A_i $ |
-| \prod_{k=1}^{n} A_i | $ \prod_{k=1}^{n} A_i $ |
+| \sum_{n=1}^{\infty} n | $ \sum_{n=1}^{\infty} n $ |
+| \prod_{k=1}^{n} k^2 | $ \prod_{k=1}^{n} k^2 $ |
 | \bigcup_{i=1}^{\infty} A_i | $ \bigcup_{i=1}^{\infty} A_i $ |
 | \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
 | \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
 | \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
 
-f(x) = \left\{ \begin{array}{rcl}
-\sqrt{x} & \mbox{for} & x<0 
-\\ 0 & \mbox{for} & x = 0 
-\\ x^{2} & \mbox{for} & x>0
-\end{array}\right
+\begin{cases}
+x & x\ge 0\\
+-x & x<0
+\end{cases}
 
-$f(x) = \left\{ \begin{array}{rcl}
-\sqrt{x} & \mbox{for} & x<0 
-\\ 0 & \mbox{for} & x = 0 
-\\ x^{2} & \mbox{for} & x>0
-\end{array}\right $
+$\begin{cases}
+x & x\ge 0\\
+-x & x<0
+\end{cases}$
+
+$\begin{cases}
+x & x\ge 0
+-x & x<0
+\end{cases}$
+
+$
+\begin{cases}
+x & x\ge 0\\
+-x & x<0
+\end{cases}
+$
+
+$
+\begin{cases}
+x & x\ge 0
+-x & x<0
+\end{cases}
+$
+
+$ \begin{cases} x & x\ge 0 -x & x<0 \end{cases}$
