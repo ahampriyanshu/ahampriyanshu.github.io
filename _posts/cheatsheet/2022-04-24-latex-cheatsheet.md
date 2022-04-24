@@ -16,6 +16,7 @@ tags:
   - symbol
 ---
 
+This website is using [MathJax v3](https://www.mathjax.org/#gettingstarted) to render LaTeX.
 
 ## Algebric & logical Symbols
 
@@ -36,6 +37,7 @@ tags:
 | a_{b_{c_{d}}}  | $ a_{b_{c_{d}}}  $ |
 | \sqrt{a}  | $ \sqrt{a}  $ |
 | \sqrt[n]{a} | $ \sqrt[n]{a} $ |
+| \log_a{b} | $ \log_a{b} $ |
 | \pm n | $ \pm n $ |
 | \mp n | $ \mp n $ |
 | \binom{a}{b}  | $ \binom{a}{b}  $ |
@@ -157,34 +159,3 @@ tags:
 | \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
 | \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
 | \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
-
-\begin{cases}
-x & x\ge 0\\
--x & x<0
-\end{cases}
-
-$\begin{cases}
-x & x\ge 0\\
--x & x<0
-\end{cases}$
-
-$\begin{cases}
-x & x\ge 0
--x & x<0
-\end{cases}$
-
-$
-\begin{cases}
-x & x\ge 0\\
--x & x<0
-\end{cases}
-$
-
-$
-\begin{cases}
-x & x\ge 0\\
--x & x<0
-\end{cases}
-$
-
-$ \begin{cases} x & x\ge 0\\ -x & x<0 \end{cases}$

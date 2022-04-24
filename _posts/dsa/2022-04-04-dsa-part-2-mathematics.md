@@ -7,6 +7,9 @@ categories:
 tags:
   - 'data structures'
   - cpp
+  - 'number theory'
+  - trignomety
+  - 'test of divisibility'
   - ap
   - gp
   - gcd
@@ -14,9 +17,7 @@ tags:
   - lcm
   - euclidean
   - prime
-
 ---
-
 
 ## Area
 
@@ -80,7 +81,7 @@ $\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
 
 **Median** is the middle value
 
-$\rightarrow median = n+1/2 if n is odd else $
+$\rightarrow median = A[\frac{n+1}{2}] if n is odd else \frac{A[\frac{n}{2}] + A[\frac{n+1}{2} + 1]}{2} $
 
 **Mode** is the number with the maximum frequency
 
@@ -153,6 +154,138 @@ All the numbers having exactly two factors.
 Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 
 2 and 3 are only consecutive prime numbers.
+
+## Divisibility Test
+
+| Number | Test |
+| -- | -- |
+| 2 | Last one digit is divisible by 2 (Unit digist is 0, 2, 4, 6, 8) |
+| 3 | Sum is divisble by 3 |
+| 4 | Last two digit is divisible by 4 |
+| 5 | Unit digit is either 0 or 5 |
+| 6 | Divisible by both 2 and 3 |
+| 7 | Difference between twice the unit digit of the given number and the remaining part is divisible by 7 |
+| 8 | Last three digit is divisible by 8 |
+| 9 | Sum is divisble by 9 |
+| 10 | Unit digit is 0|
+| 11 | Difference between sum of digits at odd places and even places is either 0 or is divisible by 11 |
+
+## HCF and LCM
+
+There are three ways to find HCM and LCM
+
+1. Listing factors/multiple
+2. Prime fractorization
+3. Division method
+
+$\rightarrow  a\times b = HCF(a,b) \times LCM(a,b)$
+
+HCF of co-primes is 1.
+
+For fractions
+
+$ HCF = \frac{HCF(Numerators)}{LCM(Denominators)} $
+$ LCM = \frac{LCM(Numerators)}{HCF(Denominators)} $
+
+## Trignometry
+
+$Radian = \frac{\pi}{180} \times θ$
+
+<figure class="align-center">
+  <img src="{{ '/images/dsa/2-2.png' | absolute_url }}" alt="loading">
+  <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Applications_of_Right_Triangle_Trigonometry_Figure_1.svg">Wikimedia</a></figcaption>
+</figure> 
+
+$ sin θ = \frac{Perpendicular}/{Hypotenuse} $
+
+$ cos θ = \frac{Base}/{Hypotenuse} $
+
+$ tan θ = \frac{Perpendicular}/{Base} $
+
+$ sec θ = \frac{Hypotenuse}/{Base} $
+
+$ cosec θ = \frac{Hypotenuse}/{Perpendicular} $
+
+$ cot θ = \frac{Base}/{Perpendicular} $
+
+
+### Fundamental Trignometric identities
+
+1. $sin^2 A + cos^2 A = 1$
+2. $1 + tan^2 A = sec^2 A$
+3. $1 + cot^2 A = cosce^2 A$
+
+### Reciprocal Identities
+
+$sin θ = \frac{1}{cosec θ} $
+
+$cos θ = \frac{1}{sec θ} $
+
+$tan θ = \frac{1}{cot θ} $
+
+### Trigonometry Table
+
+| Angle	| 0°, 0 | 30°, π/6 | 45°, π/4 | 60°, π/3 | 90°, π/2 |
+| -- | -- | -- | -- | -- | -- |  
+| sin θ |	0 |	1/2 |	1/√2 |	√3/2 |	1 |
+| cos θ |	1 |	√3/2 | 1/√2 |	1/2 |	0 |
+| tan θ |	0 |	1/√3 |	1 |	√3 |	∞ |
+| cot θ |	∞ |	√3 |	1	| 1/√3 |	0 |
+| sec θ |	1 |	2/√3 |	√2 |	2 |	∞ |
+| cosec θ |	∞ |	2	| √2 | 2/√3 |	1 |
+
+### Periodicity Identities
+
+First Quadrant:
+
+- sin (π/2 – θ) = cos θ
+- cos (π/2 – θ) = sin θ
+- sin (π/2 + θ) = cos θ
+- cos (π/2 + θ) = – sin θ
+
+Second Quadrant:
+
+- sin (3π/2 – θ) = – cos θ
+- cos (3π/2 – θ) = – sin θ
+- sin (3π/2 + θ) = – cos θ
+- cos (3π/2 + θ) = sin θ
+
+Third Quadrant:
+
+- sin (π – θ) = sin θ
+- cos (π – θ) = – cos θ
+- sin (π + θ) = – sin θ
+- cos (π + θ) = – cos θ
+
+Fourth Quadrant:
+
+- sin (2π – θ) = – sin θ
+- cos (2π – θ) = cos θ
+- sin (2π + θ) = sin θ
+- cos (2π + θ) = cos θ
+
+### Co-function Identities
+
+- sin(90° − x) = cos x
+- cos(90° − x) = sin x
+- tan(90° − x) = cot x
+- cot(90° − x) = tan x
+- sec(90° − x) = cosec x
+- cosec(90° − x) = sec x
+
+### Inverse Formulas
+
+- $sin^{-1} (-x) = -sin^{-1} x$
+
+- $cos^{-1} (-x) = π - cos^{-1} x$
+
+- $tan^{-1} (-x) = -tan^{-1} x$
+
+- $cosec^{-1} (-x) = -cosec^{-1} x$
+
+- $sec^{-1} (-x) = π - sec^{-1} x$
+
+- $cot^{-1} (-x) = π - cot^{-1} x$
 
 ## Problems
 
