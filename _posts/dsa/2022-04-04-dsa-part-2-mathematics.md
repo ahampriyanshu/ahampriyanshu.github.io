@@ -50,7 +50,11 @@ $\rightarrow area = \frac{base \times length}{2} $
 
 ### Heron's Formula
 
-$\rightarrow area = \sqrt{n} (s-a)(s-b)(s-c) $
+$\rightarrow area = \sqrt{s(s-a)(s-b)(s-c)} $
+
+where s is semi-perimeter
+
+$\rightarrow mean = \frac{a + b + c}{2}$
 
 ### Circle
 
