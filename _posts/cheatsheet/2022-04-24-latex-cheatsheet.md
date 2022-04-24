@@ -41,19 +41,13 @@ tags:
 | \nsim | $ \nsim $ |
 | \mid | $ \mid $ |
 | \nmid | $ \nmid $ |
-| \Floor{\frac{a}{b}} | $ \Floor{\frac{a}{b}} $ |
-| \Ceil{\frac{a}{b}} | $ \Ceil{\frac{a}{b}} $ |
 | \ldots | $ \ldots $ |
 | \dotsb  | $ \dotsb  $ |
 | \vdots | $ \vdots $ |
 | \ddots | $ \ddots $ |
 | \to | $ \to $ |
-| \into | $ \into $ |
-| \onto | $ \onto $ |
-| \isom | $ \isom $ |
 | \circ | $ \circ $ |
 | \mapsto | $ \mapsto $ |
-| 5\inv | $ 5\inv $ |
 | \overline{a} | $ \overline{a} $ |
 | \underline{a} | $ \underline{a} $ |
 | \overrightarrow{a} | $ \overrightarrow{a} $ |
@@ -63,6 +57,7 @@ tags:
 | \lceil | $ \lceil $ |
 | \rceil | $ \rceil $ |
 | \rceil | $ \rceil $ |
+| \sum | $ \sum $ |
 | \prod | $ \prod $ |
 | \coprod | $ \coprod $ |
 | \int | $ \int $ |
@@ -148,36 +143,23 @@ tags:
 
 ## Function Notation
 
+| Latex | Result |
+| :-- | :-- |
+| \sum_{n=1}^{\infty} A_i | $ \sum_{n=1}^{\infty} A_i $ |
+| \prod_{k=1}^{n} A_i | $ \prod_{k=1}^{n} A_i $ |
+| \bigcup_{i=1}^{\infty} A_i | $ \bigcup_{i=1}^{\infty} A_i $ |
+| \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
+| \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
+| \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
+
 f(x) = \left\{ \begin{array}{rcl}
- \sqrt{x} & \mbox{for}
-& x<0 \\ 0 & \mbox{for} & x = 0 \\
-\{x^2} & \mbox{for} &  x>0
+\sqrt{x} & \mbox{for} & x<0 
+\\ 0 & \mbox{for} & x = 0 
+\\ x^{2} & \mbox{for} & x>0
 \end{array}\right
 
-$ f(x) = \left\{ \begin{array}{rcl}
- \sqrt{x} & \mbox{for}
-& x<0 \\ 0 & \mbox{for} & x = 0 \\
-\{x^2} & \mbox{for} &  x>0
+$f(x) = \left\{ \begin{array}{rcl}
+\sqrt{x} & \mbox{for} & x<0 
+\\ 0 & \mbox{for} & x = 0 
+\\ x^{2} & \mbox{for} & x>0
 \end{array}\right $
-
-\sum_{n=1}^{\infty} A_i
-
-$\sum_{n=1}^{\infty} A_i$
-
-\prod_{k=1}^{n} A_i
-
-\bigcup_{i=1}^{\infty} A_i
-
-$\bigcup_{i=1}^{\infty} A_i$
-
-\bigcap_{i=1}^{n} A_i
-
-$\bigcap_{i=1}^{n} A_i$
-
-\cos(\pi) + i \sin(\pi)
-
-$\cos(\pi) + i \sin(\pi)$
-
-\lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx
-
-$\lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx$
