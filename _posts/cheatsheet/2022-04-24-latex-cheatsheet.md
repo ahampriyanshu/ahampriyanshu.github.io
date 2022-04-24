@@ -182,9 +182,9 @@ $
 
 $
 \begin{cases}
-x & x\ge 0 \\
+x & x\ge 0\\
 -x & x<0
 \end{cases}
 $
 
-$ \begin{cases} x & x\ge 0 \\ -x & x<0 \end{cases}$
+$ \begin{cases} x & x\ge 0\\ -x & x<0 \end{cases}$
