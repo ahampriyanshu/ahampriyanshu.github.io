@@ -312,7 +312,7 @@ public:
 #### Formula based  
 
 > NCr = (NCr - 1 * (N - r + 1)) / r
-{: .prompt-note }
+{: .notice--info}
 
 ```cpp
 class Solution {

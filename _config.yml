@@ -33,7 +33,7 @@ feed:
   path: feed.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 24
+paginate: 20
 paginate_path: /page:num/
 
 copyright: "Priyanshu Tiwari"
@@ -73,6 +73,7 @@ defaults:
     values:
       layout: post
       share: true
+      
 # Site Author
 author:
   name: Priyanshu Tiwari

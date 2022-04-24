@@ -3,13 +3,13 @@ title: "InfyTQ Certification Round | Infosys | 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Infytq]
 tags: [live, contest, infosys, infytq, certification, round, hash, set, array, string]
-mermaid: true
+
 ---
 
 All of the submissions for InfyTQ Certification Round, February 2022.
 
 > All the submissions are posted once the examination was already over.
-{: .prompt-warning }
+{: .notice--warning}
 
 ## Morning Shift : 8 Feb
 
@@ -27,7 +27,7 @@ Identify and print a string outstr based on the below logic:
 * If the value of minsum and maxsum are equal, then print minsum.
 
 > The basic logic was to skip to the end of the line after reading the value of n and innum scan. Then read 'n' input strings, split them, convert them to form a 2D integer matrix.
-{: .prompt-note }
+{: .notice--info}
 
 
 ```java
@@ -89,7 +89,7 @@ Given a non-empty array of integers inarr, identify and print an integer outnum 
 * Assign the maximum sum to outnum.
 
 > The basic logic was to scan the whole input as buffer and convert it into array of type Long to avoid overflow.
-{: .prompt-note }
+{: .notice--info}
 
 
 ```java
@@ -158,7 +158,7 @@ Consider two non-empty input strings of alphabets instr1, instr2 and a non zero 
 * If innum is greater than the total number of alphabets in any of the input strings, then take both input strings completely and process in the same order.
 
 > The basic logic was to create a hash array to sort the string in O(n) time complexity.
-{: .prompt-note }
+{: .notice--info}
 
 ```java
 import java.util.*;
@@ -228,7 +228,7 @@ Consider a non-empty string instr consisting of only lower-case alphabets. Ident
 > Note Lexicographical order is tabcde....xyz"
 
 > The basic logic was to use the substring method of the String class.
-{: .prompt-note }
+{: .notice--info}
 
 ```java
 import java.util.*;

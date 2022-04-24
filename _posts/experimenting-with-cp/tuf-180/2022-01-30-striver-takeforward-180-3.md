@@ -9,7 +9,8 @@ tags: [striver, tuf, ds, algo, binary, search, tree, takeUforward]
 
 ### Problem 1: Floor in a BST
 
-> You are given a BST (Binary search tree) with’ N’ number of nodes and a value ‘X’. Your task is to find the greatest value node of the BST which is smaller than or equal to ‘X’.
+You are given a BST (Binary search tree) with’ N’ number of nodes and a value ‘X’. Your task is to find the greatest value node of the BST which is smaller than or equal to ‘X’.
+
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/920457)
 
 #### Worst
@@ -66,7 +67,8 @@ int floorInBST(TreeNode<int> * root, int X)
 
 ### Problem 2: Ceil in a BST
 
-> Ninja is given a binary search tree and an integer. Now he is given a particular key in the tree and returns its ceil value. Can you help Ninja solve the problem?
+Ninja is given a binary search tree and an integer. Now he is given a particular key in the tree and returns its ceil value. Can you help Ninja solve the problem ?
+
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/ceil-from-bst_920464)
 
 #### Worst
@@ -95,7 +97,6 @@ int findCeil(BinaryTreeNode<int> *root, int x){
     return ans >= x ? ans : root->data;
 }
 ```
-
 
 #### Optimal 
 

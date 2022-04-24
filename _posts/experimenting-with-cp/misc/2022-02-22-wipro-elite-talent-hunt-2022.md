@@ -1,15 +1,13 @@
 ---
 title: "NLTH | Wipro | 2022"
 author: Priyanshu Tiwari
+excerpt: All of the submissions for Elite NLTH, February 2022.
 categories: [Contests, Wipro]
 tags: [live, contest, wipro, national, talent, hunt, hash, set, array, string]
-mermaid: true
 --- 
 
-All of the submissions for Elite NLTH, February 2022.
-
-> All the submissions are posted once the examination was already over.
-{: .prompt-warning }
+All the submissions are posted once the examination was already over.
+{: .notice--warning}
 
 ## 22 Feb
 

@@ -3,7 +3,7 @@ title: "1 - 25 | Project Euler | 2022"
 author: Priyanshu Tiwari
 categories: [Sheets, Projectuler]
 tags: [live, sheets, project, euler, mathematics, primes]
-mermaid: true
+
 ---
 
 ## 1. Multiples of 3 and 5
