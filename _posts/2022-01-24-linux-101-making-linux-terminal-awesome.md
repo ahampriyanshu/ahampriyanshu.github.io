@@ -127,4 +127,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 * To make bash the default terminal : `` chsh -s $(which bash) ``
 
 ## Copyright Guidelines
+
 * I will also soon be publishing this article on [GeeksforGeeks](https://www.geeksforgeeks.org/)

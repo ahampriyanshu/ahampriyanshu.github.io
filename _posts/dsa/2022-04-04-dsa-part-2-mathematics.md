@@ -24,11 +24,11 @@ tags:
 
 $\rightarrow area = length \times bread$
 
-$\rightarrow perimeter = 2 ( length \plus bread)$
+$\rightarrow perimeter = 2 ( length + bread)$
 
 ### Square
 
-$\rightarrow area = side\textsuperscript{2} $
+$\rightarrow area = side^{2} $
 
 $\rightarrow perimeter = 4 \times side$
 
@@ -38,7 +38,7 @@ $\rightarrow area = \frac{product of diagonals}{2} $
 
 ### Equilateral Triangle
 
-$\rightarrow area = \frac{ \sqrt{n} \times side \textsuperscript{2}}{4} $
+$\rightarrow area = \frac{ \sqrt{n} \times side^{2}}{4} $
 
 $\rightarrow radius of incircle = \frac{side}{2 \times \sqrt{3}} $
 
@@ -50,9 +50,11 @@ $\rightarrow area = \frac{base \times length}{2} $
 
 ### Heron's Formula
 
+$\rightarrow area = \sqrt{n} (s-a)(s-b)(s-c) $
+
 ### Circle
 
-$\rightarrow area = \pi \times R \textsuperscript{2} $
+$\rightarrow area = \pi \times R^{2} $
 
 $\rightarrow circumference = 2 \times \pi \times R $
 
@@ -60,19 +62,37 @@ $\rightarrow circumference = 2 \times \pi \times R $
 
 $\rightarrow area = base \times height $
 
+## Average
+
+The central of middle value in a set of data. Commons ways to calculate average are mean, median, mode.
+
+Suppose
+
+$a_{1}, a_{2}, a_{3}, .... , a_{n}$
+
+**Mean** is the arithmetic average of a given data.
+
+$\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
+
+**Median** is the middle value
+
+$\rightarrow median = n+1/2 if n is odd else $
+
+**Mode** is the number with the maximum frequency
+
 ## Number sequences
 
 ### Arithmetic progression
 
 2, 4, 6, 8, ......
 
-$\rightarrow a \textsubscript{1} = a + 0.d $
+$\rightarrow a_{1} = a + 0.d $
 
-$\rightarrow a \textsubscript{2} = a + 1.d $
+$\rightarrow a_{2} = a + 1.d $
 
-$\rightarrow a \textsubscript{3} = a + 2.d $
+$\rightarrow a_{3} = a + 2.d $
 
-$\rightarrow a \textsubscript{n} = a + (n-1).d $
+$\rightarrow a_{n} = a + (n-1).d $
 
 We know that
 

@@ -1,7 +1,7 @@
 ---
-title: "Basics Of Stock Market Part 1: Introduction"
+title: "Intro To Stock Market Part 1: Introduction"
 author: Priyanshu Tiwari
-excerpt: dividend vs interests, types of orders, ipo, fso, bottom up/down, lower/upper circuit, promoter, sebi, nifty, sensex
+excerpt: common myths, dividend vs interests, types of orders, ipo, fso, bottom up/down, lower/upper circuit, promoter, sebi, nifty, sensex
 categories:
   - 'stock market'
 tags:
@@ -17,31 +17,31 @@ tags:
 * Stock that have skyrocketed must go down.
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-5.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-5.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-6.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-6.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
-Until some bad or major market corrections news arrives.
+Until some serious bad news arrives.
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-2.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-2.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
 * Stocks that plummet must go up.
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-3.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-3.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-4.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-4.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
@@ -72,6 +72,6 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 ### Some Pro tips
 
 <figure class="align-center">
-  <img src="{{ '/images/stock/stock-1-1.png' | absolute_url }}" alt="loading">
+  <img src="{{ '/images/stocks/stock-1-1.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/">r/IndianStreetBets</a></figcaption>
 </figure> 
