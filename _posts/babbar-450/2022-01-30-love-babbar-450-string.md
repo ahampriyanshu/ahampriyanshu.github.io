@@ -69,7 +69,7 @@ public:
 };
 ```
 
-## Problem 3: Print duplicates in a string
+## Problem 3: Print duplicates
 
 Print all the duplicates in the input string.
 
@@ -85,7 +85,7 @@ Either create a hash-array or a hash-map.
 
 Why String is Immutable or Final in Java
 * [Stack Overflow](https://stackoverflow.com/a/48840927/15876098)
-* [Baeldng]https://www.baeldung.com/java-string-immutable
+* [Baeldng](https://www.baeldung.com/java-string-immutable)
 
 ## Problem 5: To check if strings are rotations of each other or not
 
@@ -103,6 +103,10 @@ bool solve(string s1,string s2){
     return (s1.find(s2) != string::npos);
 }
 ```
+
+**Time Complexity:** $ O(m*n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ### Using queue
 
@@ -131,6 +135,6 @@ bool solve(string s1, string s2)
 }
 ```
 
-**Time Complexity:** $ O(max(m,n)) $ 
+**Time Complexity:** $ O(m*n) $ 
 
 **Space Complexity:** $ O(m+n) $
