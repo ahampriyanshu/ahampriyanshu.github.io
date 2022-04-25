@@ -19,77 +19,48 @@ tags:
   - prime
 ---
 
-## Area
+# Number System
 
-### Rectangle
+Number system consists values from **0** to **N-1**
 
-$\rightarrow area = length \times bread$
+## Types of number
 
-$\rightarrow perimeter = 2 ( length + bread)$
+| Type | Value |
+| -- | -- |
+| Natural Numbers	| $N=1,2,3,4, \ldots$ |
+| Prime Number | $P=2,3,5,7,11,13,17, \ldots$ |
+| Composite Number | $4,6,8,9,10,12, \ldots$ | 
+| Whole Numbers	| $W=0,1,2,3,4, \ldots$ |
+| Integers| $Z= \ldots,−3,−2,−1,0,1,2,3, \ldots$ |
+| Rational Numbers | $Q= \frac{1}{2} ,0.33333 \ldots,52,1110, \ldots$ |
+| Irrational Numbers | $F= \ldots ,π, \sqrt{2} ,0.121221222 \ldots$ | 
+| Real Numbers | $R= \ldots ,−3,−1,0, \frac{1}{5},1.1, \sqrt{2} ,2,3,π, \ldots$ |
+| Complex Number | $C= \ldots ,−3+2i,0,1+3i, \ldots$|
 
-### Square
+## Types of number system
 
-$\rightarrow area = side^{2} $
+| Number System | Value |
+| -- | -- |
+| Binary | 0 and 1 |
+| Octal | 0 to 7 |
+| Decimal | 0 to 9 |
+| HexaDecimal | 0 to 7 and A to F |
 
-$\rightarrow perimeter = 4 \times side$
+# Number Series
 
-### Rhombus
+| Series | Formula |
+| -- | -- |
+| Sum of first n numbers | $ \frac{n  \cdot (n+1)}{2} $ |
+| Squares of first n numbers | $ \frac{n  \cdot (n+1) \cdot (2n+1)}{6} $ |
+| Cube of first n numbers | $ \frac{n  \cdot (n+1)}{4} $ |
+| Sum of first n even numbers | $ n \cdot (n+1) $ |
+| Sum of first n odd numbers | $ n n^2 $ |
 
-$\rightarrow area = \frac{product of diagonals}{2} $
+# Number Sequences
 
-### Equilateral Triangle
+## Arithmetic progression
 
-$\rightarrow area = \frac{ \sqrt{n} \times side^{2}}{4} $
-
-$\rightarrow radius of incircle = \frac{side}{2 \times \sqrt{3}} $
-
-$\rightarrow radius of circle = \frac{side}{\sqrt{3}} $
-
-### Isosceles Triangle
-
-$\rightarrow area = \frac{base \times length}{2} $
-
-### Heron's Formula
-
-$\rightarrow area = \sqrt{s(s-a)(s-b)(s-c)} $
-
-where s is semi-perimeter
-
-$\rightarrow mean = \frac{a + b + c}{2}$
-
-### Circle
-
-$\rightarrow area = \pi \times R^{2} $
-
-$\rightarrow circumference = 2 \times \pi \times R $
-
-### Parallelogram
-
-$\rightarrow area = base \times height $
-
-## Average
-
-The central of middle value in a set of data. Commons ways to calculate average are mean, median, mode.
-
-Suppose
-
-$a_{1}, a_{2}, a_{3}, .... , a_{n}$
-
-**Mean** is the arithmetic average of a given data.
-
-$\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
-
-**Median** is the middle value
-
-$\rightarrow median = A[\frac{n+1}{2}] if n is odd else \frac{A[\frac{n}{2}] + A[\frac{n+1}{2} + 1]}{2} $
-
-**Mode** is the number with the maximum frequency
-
-## Number sequences
-
-### Arithmetic progression
-
-2, 4, 6, 8, ......
+$2, 4, 6, 8, \ldots$
 
 $\rightarrow a_{1} = a + 0.d $
 
@@ -97,7 +68,9 @@ $\rightarrow a_{2} = a + 1.d $
 
 $\rightarrow a_{3} = a + 2.d $
 
-$\rightarrow a_{n} = a + (n-1).d $
+$ \vdots $
+
+$\rightarrow T_{n} = a + (n-1) \cdot d $
 
 We know that
 
@@ -111,9 +84,9 @@ $\rightarrow avg = \frac{first + last}{2}$
 
 $\rightarrow sum = \frac{(a + a + (n-1).d)n}{2}$
 
-$\rightarrow sum = \frac{n(2a + (n-1)*d)}{2}$
+$\rightarrow S_n = \frac{n(2a + (n-1)*d)}{2}$
 
-### Geometric progression
+## Geometric progression
 
 2, 4, 16, 32, 64 ......
 
@@ -121,7 +94,7 @@ a, $a.r^{1}$,  $a.r^{2}$, $a.r^{3}$, ... $r^{n-1}$
 
 Nth term $\rightarrow$
 
-$a_{n} = a*r^{n-1}$
+$T_{n} = a*r^{n-1}$
 
 Sum till N terms $\rightarrow$
 
@@ -131,7 +104,17 @@ Sum of infinite terms $\rightarrow$
 
 $S_{\infty} = \frac{a}{1-r}$
 
-### Quadratic formula
+## Harmonic Progression
+
+Harmonic progression (or harmonic sequence) is a progression formed by taking the reciprocals of an arithmetic progression.
+
+$\rightarrow \frac{1}{5}, \frac{1}{10}, \frac{1}{15}, \ldots$
+
+Nth term $\rightarrow$
+
+$T_{n} = \frac{1}{a + (n-1) \cdot d}$
+
+# Quadratic formula
 
 Roots of quad eq. 
 
@@ -145,7 +128,7 @@ $D = b^{2} - 4ac$
 * D = 0 : Two equal roots
 * D > 0 : Two distinct roots
 
-### Prime numbers
+## Prime numbers
 
 2,3,5,7,11, .... 
 
@@ -155,7 +138,7 @@ Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 
 2 and 3 are only consecutive prime numbers.
 
-## Divisibility Test
+# Divisibility Test
 
 | Number | Test |
 | -- | -- |
@@ -170,7 +153,7 @@ Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 | 10 | Unit digit is 0|
 | 11 | Difference between sum of digits at odd places and even places is either 0 or is divisible by 11 |
 
-## HCF and LCM
+# HCF and LCM
 
 There are three ways to find HCM and LCM
 
@@ -187,7 +170,127 @@ For fractions
 $ HCF = \frac{HCF(Numerators)}{LCM(Denominators)} $
 $ LCM = \frac{LCM(Numerators)}{HCF(Denominators)} $
 
-## Trignometry
+# Area
+
+## Rectangle
+
+$\rightarrow area = length \times bread$
+
+$\rightarrow perimeter = 2 ( length + bread)$
+
+## Square
+
+$\rightarrow area = side^{2} $
+
+$\rightarrow perimeter = 4 \times side$
+
+## Rhombus
+
+$\rightarrow area = \frac{product of diagonals}{2} $
+
+## Equilateral Triangle
+
+$\rightarrow area = \frac{ \sqrt{n} \times side^{2}}{4} $
+
+$\rightarrow radius of incircle = \frac{side}{2 \times \sqrt{3}} $
+
+$\rightarrow radius of circle = \frac{side}{\sqrt{3}} $
+
+## Isosceles Triangle
+
+$\rightarrow area = \frac{base \times length}{2} $
+
+## Heron's Formula
+
+$\rightarrow area = \sqrt{s(s-a)(s-b)(s-c)} $
+
+where s is semi-perimeter
+
+$\rightarrow s = \frac{a + b + c}{2}$
+
+## Circle
+
+$\rightarrow area = \pi \times R^{2} $
+
+$\rightarrow circumference = 2 \times \pi \times R $
+
+## Parallelogram
+
+$\rightarrow area = base \times height $
+
+# Volume
+
+## Cuboid
+
+$\rightarrow Volume = L \ast B \ast H $
+
+$\rightarrow Surface area = 2 \cdot (LB + BH + LH) $
+
+$\rightarrow Diagonal = \sqrt{L^2 + B^2 + H^2} $
+
+## Cube
+
+$\rightarrow Volume = a^3 $
+
+$\rightarrow Surface area = 6 \cdot a^2 $
+
+$\rightarrow Diagonal = \sqrt{3}a $
+
+## Cylinder
+
+$\rightarrow Volume = \pi r^2h $
+
+$\rightarrow Curved surface area = 2 \pi rh $
+
+$\rightarrow Total surface area = 2 \pi rh + 2 \pi r^2 $
+
+## Cylinder
+
+$\rightarrow Slant height = \sqrt{h^2 + r^2} $
+
+$\rightarrow Volume = \frac{\pi r^2 h}{3} $
+
+$\rightarrow Curved surface area = \pi rL $
+
+$\rightarrow Total surface area = \pi rL + \pi r^2 $
+
+## Cylinder
+
+$\rightarrow Volume = \frac{4 \pi r^3}{3} $
+
+$\rightarrow Surface area = 4 \pi r^2 $
+
+# Average
+
+The central of middle value in a set of data. Commons ways to calculate average are mean, median, mode.
+
+Suppose
+
+$a_{1}, a_{2}, a_{3}, .... , a_{n}$
+
+**Mean** is the arithmetic average of a given data.
+
+$\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
+
+## Types of Mean
+
+| Number | Test |
+| -- | -- |
+| Arithmetic Mean(AM) | $\frac{a+b}{2}$|
+| Geometric Mean(AM) | $\sqrt{ab}$|
+| Harmonic Mean(AM) | $ (2ab) \cdot (a+b) $|
+
+$\rightarrow GM^2 = AM \ast GM $
+
+**Median** is the middle value
+
+$\rightarrow median = A[\frac{n+1}{2}] if n is odd else \frac{A[\frac{n}{2}] + A[\frac{n+1}{2} + 1]}{2} $
+
+**Mode** is the number with the maximum frequency
+
+$\rightarrow 3 Median = 2 Mean + Mode $
+
+# Trignometry
 
 $Radian = \frac{\pi}{180} \times θ$
 
@@ -196,26 +299,26 @@ $Radian = \frac{\pi}{180} \times θ$
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Applications_of_Right_Triangle_Trigonometry_Figure_1.svg">Wikimedia</a></figcaption>
 </figure> 
 
-$ sin θ = \frac{Perpendicular}/{Hypotenuse} $
+$ sin θ = \frac{Perpendicular}{Hypotenuse} $
 
-$ cos θ = \frac{Base}/{Hypotenuse} $
+$ cos θ = \frac{Base}{Hypotenuse} $
 
-$ tan θ = \frac{Perpendicular}/{Base} $
+$ tan θ = \frac{Perpendicular}{Base} $
 
-$ sec θ = \frac{Hypotenuse}/{Base} $
+$ sec θ = \frac{Hypotenuse}{Base} $
 
-$ cosec θ = \frac{Hypotenuse}/{Perpendicular} $
+$ cosec θ = \frac{Hypotenuse}{Perpendicular} $
 
-$ cot θ = \frac{Base}/{Perpendicular} $
+$ cot θ = \frac{Base}{Perpendicular} $
 
 
-### Fundamental Trignometric identities
+## Fundamental Trignometric identities
 
 1. $sin^2 A + cos^2 A = 1$
 2. $1 + tan^2 A = sec^2 A$
 3. $1 + cot^2 A = cosce^2 A$
 
-### Reciprocal Identities
+## Reciprocal Identities
 
 $sin θ = \frac{1}{cosec θ} $
 
@@ -223,48 +326,48 @@ $cos θ = \frac{1}{sec θ} $
 
 $tan θ = \frac{1}{cot θ} $
 
-### Trigonometry Table
+## Trigonometry Table
 
 | Angle	| 0°, 0 | 30°, π/6 | 45°, π/4 | 60°, π/3 | 90°, π/2 |
 | -- | -- | -- | -- | -- | -- |  
-| sin θ |	0 |	1/2 |	1/√2 |	√3/2 |	1 |
-| cos θ |	1 |	√3/2 | 1/√2 |	1/2 |	0 |
-| tan θ |	0 |	1/√3 |	1 |	√3 |	∞ |
-| cot θ |	∞ |	√3 |	1	| 1/√3 |	0 |
-| sec θ |	1 |	2/√3 |	√2 |	2 |	∞ |
-| cosec θ |	∞ |	2	| √2 | 2/√3 |	1 |
+| $sin θ$ |	0 |	1/2 |	1/√2 |	√3/2 |	1 |
+| $cos θ$ |	1 |	√3/2 | 1/√2 |	1/2 |	0 |
+| $tan θ$ |	0 |	1/√3 |	1 |	√3 |	∞ |
+| $cot θ$ |	∞ |	√3 |	1	| 1/√3 |	0 |
+| $sec θ$ |	1 |	2/√3 |	√2 |	2 |	∞ |
+| $cosec θ$ |	∞ |	2	| √2 | 2/√3 |	1 |
 
-### Periodicity Identities
+## Periodicity Identities
 
 First Quadrant:
 
-- sin (π/2 – θ) = cos θ
-- cos (π/2 – θ) = sin θ
-- sin (π/2 + θ) = cos θ
-- cos (π/2 + θ) = – sin θ
+- $sin (π/2 – θ) = cos θ$
+- $cos (π/2 – θ) = sin θ$
+- $sin (π/2 + θ) = cos θ$
+- $cos (π/2 + θ) = – sin θ$
 
 Second Quadrant:
 
-- sin (3π/2 – θ) = – cos θ
-- cos (3π/2 – θ) = – sin θ
-- sin (3π/2 + θ) = – cos θ
-- cos (3π/2 + θ) = sin θ
+- $sin (3π/2 – θ) = – cos θ$
+- $cos (3π/2 – θ) = – sin θ$
+- $sin (3π/2 + θ) = – cos θ$
+- $cos (3π/2 + θ) = sin θ$
 
 Third Quadrant:
 
-- sin (π – θ) = sin θ
-- cos (π – θ) = – cos θ
-- sin (π + θ) = – sin θ
-- cos (π + θ) = – cos θ
+- $sin (π – θ) = sin θ$
+- $cos (π – θ) = – cos θ$
+- $sin (π + θ) = – sin θ$
+- $cos (π + θ) = – cos θ$
 
 Fourth Quadrant:
 
-- sin (2π – θ) = – sin θ
-- cos (2π – θ) = cos θ
-- sin (2π + θ) = sin θ
-- cos (2π + θ) = cos θ
+- $sin (2π – θ) = – sin θ$
+- $cos (2π – θ) = cos θ$
+- $sin (2π + θ) = sin θ$
+- $cos (2π + θ) = cos θ$
 
-### Co-function Identities
+## Co-function Identities
 
 - sin(90° − x) = cos x
 - cos(90° − x) = sin x
@@ -273,7 +376,7 @@ Fourth Quadrant:
 - sec(90° − x) = cosec x
 - cosec(90° − x) = sec x
 
-### Inverse Formulas
+## Inverse Formulas
 
 - $sin^{-1} (-x) = -sin^{-1} x$
 
@@ -287,11 +390,54 @@ Fourth Quadrant:
 
 - $cot^{-1} (-x) = π - cot^{-1} x$
 
-## Problems
+# Logarithm
 
-### Number of digits in an integer
+Logarithm is the inverse function to exponentiation. 
 
-#### Iterative
+$ \log_a{b} = c \implies a^c = b $
+
+$ \log_2{8} = 3 \implies 2^3 = 8 $
+
+* $ common log \rightarrow  base 10 \rightarrow log_10{x} $
+* $ natural log \rightarrow  base e \rightarrow log_e{x} or lnx $
+* $ binary log \rightarrow  base 2 \rightarrow log_2{x} $
+
+## Laws of logarithms
+
+### Addition Property
+
+$\log_ab + \log_ac = \log_a{bc}$
+
+### Subtraction Property
+
+$\log_ab - \log_ac = \log_a{\frac{b}{c}}$
+
+### Argument-Power Property
+
+$\log_ab^n = n\log_ab$
+
+### Inverse Property
+
+$\log_ab = \frac{1}{\log_ba}$
+
+$\log_a{\frac{1}{b}} = - \log_ab$
+
+### Power Property
+
+$\log_{a^n}b^n = \log_ab$
+
+### Change-of-Base
+
+$\frac{\log_cb}{\log_ca} = \log_ab$
+
+* $log_a{1} = 0$
+* $log_aa = 1$
+
+# Problems
+
+## Number of digits in an integer
+
+### Iterative
 
 ```cpp
 count(n){
@@ -305,7 +451,7 @@ count(n){
 }
 ```
 
-#### Recursive
+### Recursive
 
 ```cpp
 count(n){
@@ -314,7 +460,7 @@ count(n){
 }
 ```
 
-#### Logarithmic
+### Logarithmic
 
 ```cpp
 count(n){
@@ -322,7 +468,7 @@ count(n){
 }
 ```
 
-### Check if the given integer is a palindrome or not.
+## Check if the given integer is a palindrome or not.
 
 ```cpp
 bool isPal(int n){
@@ -339,9 +485,9 @@ bool isPal(int n){
 }
 ```
 
-### Factorial of a number
+## Factorial of a number
 
-#### Iterative
+### Iterative
 
 ```cpp
 int fact(int n);
@@ -355,7 +501,7 @@ return res;
 }
 ```
 
-#### Recursive
+### Recursive
 
 ```cpp
 int fact(int n){
@@ -364,7 +510,7 @@ int fact(int n){
 }
 ```
 
-### Count trailing zeros in the factorial of a number
+## Count trailing zeros in the factorial of a number
 
 ```cpp
 int ctz(int n){
@@ -377,9 +523,9 @@ int ctz(int n){
 
 TC : O(log<sub>5</sub>n)
 
-### GCD of two numbers
+## GCD of two numbers
 
-#### Naive
+### Naive
 
 ```cpp
 int gcd(int a, int b){
@@ -397,7 +543,7 @@ int gcd(int a, int b){
 
 **Time Complexity:** O(min(a,b))
 
-#### Euclidean Algorithm
+### Euclidean Algorithm
 
 ```cpp
 int gcd(int a, int b){
@@ -410,7 +556,7 @@ int gcd(int a, int b){
 }
 ```
 
-#### Optimized Euclidean Algorithm
+### Optimized Euclidean Algorithm
 
 ```cpp
 int gcd(int a, int b){
@@ -422,7 +568,7 @@ int gcd(int a, int b){
 
 **Time Complexity:** O(log max(a,b))
 
-#### Extended Euclidean Algorithm
+### Extended Euclidean Algorithm
 
 ```cpp
 int gcd(int a, int b, int *x, int *y)
@@ -443,9 +589,9 @@ int gcd(int a, int b, int *x, int *y)
 }
 ```
 
-### LCM of two numbers
+## LCM of two numbers
 
-#### Naive
+### Naive
 
 ```cpp
 int gcd(int a, int b){
@@ -463,7 +609,7 @@ int gcd(int a, int b){
 
 **Time Complexity:** O(a*b - max(a,b))
 
-#### Efficient Approach
+### Efficient Approach
 
 $\rightarrow  a\times b = gcd(a,b) \times lcm(a,b)$
 
@@ -471,9 +617,9 @@ $\rightarrow lcm(a,b) = \frac{a\times b}{gcd(a,b)}$
 
 **Time Complexity:** O(log max(a,b))
 
-### Prime number
+## Prime number
 
-#### Naive approach
+### Naive approach
 
 ```cpp
 bool isPrime(int n)
@@ -491,7 +637,7 @@ bool isPrime(int n)
 
 **Time Complexity:** O(n)
 
-#### Efficient approach
+### Efficient approach
 
 ```cpp
 bool isPrime(int n)
@@ -509,7 +655,7 @@ bool isPrime(int n)
 
 **Time Complexity:** O($\sqrt{n}$)
 
-#### Optimized approach
+### Optimized approach
 
 ```cpp
 bool isPrime(int n)
@@ -530,9 +676,9 @@ bool isPrime(int n)
 }
 ```
 
-### Prime factorization of a number
+## Prime factorization of a number
 
-#### Naive
+### Naive
 
 ```cpp
 bool isPrime(int n)
@@ -573,7 +719,7 @@ void primeFactors(int n)
 
 **Time Complexity:** O($nlogn $)
 
-#### Efficient
+### Efficient
 
 ```cpp
 void primeFactors(int n)
@@ -596,7 +742,7 @@ void primeFactors(int n)
 
 **Time Complexity:** O($\sqrt{n} logn $)
 
-#### Using Sieve
+### Using Sieve
 
 ```cpp
 void primeFactors(int n)
@@ -615,9 +761,9 @@ void primeFactors(int n)
 
 **Time Complexity:** O(n)
 
-### Print all divisors in ascending order
+## Print all divisors in ascending order
 
-#### Naive
+### Naive
 
 ```cpp
 void printDivisors(int n)
@@ -630,7 +776,7 @@ void printDivisors(int n)
 
 **Time Complexity:** O(n)
 
-#### Efficient
+### Efficient
 
 ```cpp
 void printDivisors(int n)
@@ -651,9 +797,9 @@ void printDivisors(int n)
 
 **Time Complexity:** O($\sqrt{n}$)
 
-### N Prime Numbers
+## N Prime Numbers
 
-#### Naive
+### Naive
 
 ```cpp
 void nPrimes(){
@@ -665,7 +811,7 @@ void nPrimes(){
 
 **Time Complexity:** O($n \times \sqrt{n}$)
 
-#### Sieve of Eratosthenes
+### Sieve of Eratosthenes
 
 ```cpp
 void manipulated_seive(int n)
@@ -688,15 +834,15 @@ void manipulated_seive(int n)
 
 **Time Complexity:** O($ log log n $)
 
-### Computating Pow(x,n)
+## Computating Pow(x,n)
 
-#### Naive
+### Naive
 
 FOR(1->n) : x = x*x;
 
 **Time Complexity:** O(n)
 
-#### Optimized
+### Optimized
 
 ```cpp
 double myPow(double x, int n) {
@@ -711,7 +857,7 @@ double myPow(double x, int n) {
 
 **Time Complexity:** O(logn)
 
-#### Constant Space
+### Constant Space
 
 $\rightarrow $ Every natural number can be written as the sum of distinct powers of 2.
 
