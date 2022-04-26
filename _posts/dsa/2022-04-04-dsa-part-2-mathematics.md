@@ -168,6 +168,7 @@ HCF of co-primes is 1.
 For fractions
 
 $ HCF = \frac{HCF(Numerators)}{LCM(Denominators)} $
+
 $ LCM = \frac{LCM(Numerators)}{HCF(Denominators)} $
 
 # Area

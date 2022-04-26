@@ -2,10 +2,9 @@
 title: "Programming Skills I | Study Plan | Leetcode"
 author: Priyanshu Tiwari
 categories: [Sheets, Leetcode]
+excerpt: C++ Solutions to Dynamic Programming I, Leetcode.
 tags: [leetcode, programming, skills, back, to, study, plan, easy]
 ---
-
-C++ Solutions to Programming Skills I, Leetcode.
 
 ## Day 1 | Array
 

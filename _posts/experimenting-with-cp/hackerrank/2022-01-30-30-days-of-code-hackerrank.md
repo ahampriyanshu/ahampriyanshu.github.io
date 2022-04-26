@@ -6,11 +6,11 @@ categories: [Sheets, Hackerrank]
 tags: [hackerrank, '30 days of code', 'c++', 'cpp', 'c', 'js', 'java', 'python']
 ---
 
-# Day 00 Hello World
+## Day 00 Hello World
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-hello-world/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 
@@ -24,7 +24,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -40,7 +40,7 @@ int main()
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -58,7 +58,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 function processData(inputString) {
     console.log("Hello, World.\n" + inputString);
@@ -76,16 +76,16 @@ process.stdin.on("end", function () {
 });
 ```
 
-## Python
+### Python
 ```python
 print('Hello, World.\n' + input())
 ```
 
-# Day 01 Data Types
+## Day 01 Data Types
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-data-types/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <iomanip>
@@ -111,7 +111,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -162,7 +162,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -201,7 +201,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 i = 4
 d = 4.0
@@ -211,11 +211,11 @@ print(d + float(input()))
 print(s + input())
 ```
 
-# Day 02 Operators
+## Day 02 Operators
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-operators/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -275,7 +275,7 @@ string rtrim(const string &str)
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -449,7 +449,7 @@ int parse_int(char *str)
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -498,7 +498,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -538,11 +538,11 @@ function main() {
 }
 ```
 
-# Day 03 Conditional Statements
+## Day 03 Conditional Statements
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-conditional-statements/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -589,7 +589,7 @@ string rtrim(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -740,7 +740,7 @@ int parse_int(char *str)
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -770,7 +770,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -802,7 +802,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 
@@ -821,11 +821,11 @@ if __name__ == '__main__':
 
 ```
 
-# Day 04 Class vs. Instance
+## Day 04 Class vs. Instance
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-class-vs-instance/problem)
 
-## CPP
+### CPP
 ```cpp
 using namespace std;
 #include <iostream>
@@ -895,7 +895,7 @@ int main()
 ```
 
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -934,7 +934,7 @@ public class Person {
 	public static void main(String[] args) {
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -981,7 +981,7 @@ function Person(initialAge){
 function main() {
 ```
 
-## Python
+### Python
 ```python
 class Person:
     def __init__(self, initialAge):
@@ -1014,11 +1014,11 @@ for i in range(0, t):
     print("")
 ```
 
-# Day 05 Loops
+## Day 05 Loops
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-loops/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1064,7 +1064,7 @@ string rtrim(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -1194,7 +1194,7 @@ int parse_int(char* str) {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -1223,7 +1223,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -1256,7 +1256,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 
@@ -1274,11 +1274,11 @@ if __name__ == '__main__':
         print(str(n) +" x "+str(i)+" = " +str(i*n))
 ```
 
-# Day 06 Let’s Review
+## Day 06 Let’s Review
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-review-loop/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -1306,7 +1306,7 @@ int main() {
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -1331,7 +1331,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -1361,7 +1361,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 function processData(input) {
     input = input.split('\n')
@@ -1389,18 +1389,18 @@ process.stdin.on("end", function () {
 });
 ```
 
-## Python
+### Python
 ```python
 for i in range(int(input())):
     s = input()
     print(s[::2], s[1::2])
 ```
 
-# Day 07 Arrays
+## Day 07 Arrays
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-arrays/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1478,7 +1478,7 @@ vector<string> split(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -1642,7 +1642,7 @@ int parse_int(char* str) {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -1676,7 +1676,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -1710,18 +1710,18 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 input()
 arr = str(input()).split(" ")
 print(" ".join(map(str, arr[::-1])))
 ```
 
-# Day 08 Dictionaries and Maps
+## Day 08 Dictionaries and Maps
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -1754,7 +1754,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -1782,7 +1782,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 function processData(input) {
     input = input.split('\n');
@@ -1814,7 +1814,7 @@ process.stdin.on("end", function () {
 });
 ```
 
-## Python
+### Python
 ```python
 import sys
 pb = {}
@@ -1832,11 +1832,11 @@ while query:
 ```
 
 
-# Day 09 Recursion 3
+## Day 09 Recursion 3
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-recursion/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1899,12 +1899,12 @@ string rtrim(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -1953,7 +1953,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -2005,7 +2005,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 
@@ -2040,11 +2040,11 @@ if __name__ == '__main__':
 ```
 
 
-# Day 10 Binary Numbers
+## Day 10 Binary Numbers
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -2099,7 +2099,7 @@ string rtrim(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -2238,7 +2238,7 @@ int parse_int(char* str) {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -2275,7 +2275,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -2318,7 +2318,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 
@@ -2345,11 +2345,11 @@ if __name__ == '__main__':
     print(ans)
 ```
 
-# Day 11 2D Arrays
+## Day 11 2D Arrays
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-2d-arrays/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -2430,7 +2430,7 @@ vector<string> split(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -2601,7 +2601,7 @@ int parse_int(char* str) {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.Scanner;
 
@@ -2629,7 +2629,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -2670,7 +2670,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 
@@ -2694,11 +2694,11 @@ if __name__ == '__main__':
     print (ans)
 ```
 
-# Day 12 Inheritance
+## Day 12 Inheritance
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-inheritance/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <vector>
@@ -2767,7 +2767,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 
@@ -2833,7 +2833,7 @@ class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -2901,7 +2901,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 class Person:
 	def __init__(self, firstName, lastName, idNumber):
@@ -2933,11 +2933,11 @@ class Student(Person):
 line = input().split()
 ```
 
-# Day 13 Abstract Classes
+## Day 13 Abstract Classes
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-abstract-classes/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -2983,7 +2983,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 
@@ -3027,7 +3027,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -3071,7 +3071,7 @@ class MyBook extends Book{
 }
 ```
 
-## Python
+### Python
 ```python
 from abc import ABCMeta, abstractmethod
 class Book(object, metaclass=ABCMeta):
@@ -3096,11 +3096,11 @@ new_novel=MyBook(title,author,price)
 new_novel.display()
 ```
 
-# Day 14 Scope
+## Day 14 Scope
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-scope/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -3155,7 +3155,7 @@ int main() {
 ```
 
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -3195,7 +3195,7 @@ public class Solution {
 }
 ```
 
-## Python
+### Python
 ```python
 class Difference:
     def __init__(self, a):
@@ -3222,11 +3222,11 @@ d.computeDifference()
 print(d.maximumDifference)
 ```
 
-# Day 15 Linked List
+## Day 15 Linked List
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <cstddef>
@@ -3276,7 +3276,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <stdlib.h>
 #include <stdio.h>	
@@ -3320,7 +3320,7 @@ int main()
 
 ```
 
-## Java
+### Java
 ```java
 import java.util.Scanner;
 
@@ -3368,7 +3368,7 @@ class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -3422,7 +3422,7 @@ function main(){
 }		
 ```
 
-## Python
+### Python
 ```python
 class Node:
     def __init__(self,data):
@@ -3452,11 +3452,11 @@ for i in range(T):
 mylist.display(head); 	  
 ```
 
-# Day 16 Exceptions
+## Day 16 Exceptions
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -3475,7 +3475,7 @@ int main()
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -3505,7 +3505,7 @@ public class Solution {
 
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -3540,17 +3540,17 @@ function main() {
 
 ```
 
-## Python
+### Python
 ```python
 try: print(int(input()))
 except: print("Bad String")
 ```
 
-# Day 17 More Exceptions
+## Day 17 More Exceptions
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-more-exceptions/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <iostream>
@@ -3585,7 +3585,7 @@ int main()
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.Scanner;
 
@@ -3619,7 +3619,7 @@ class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -3665,7 +3665,7 @@ function main(){
 }
 ```
 
-## Python
+### Python
 ```python
 class Calculator:
 
@@ -3684,11 +3684,11 @@ for i in range(T):
         print(e)   
 ```
 
-# Day 18 Queues and Stacks
+## Day 18 Queues and Stacks
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-queues-stacks/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -3758,7 +3758,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 import java.util.Scanner;
@@ -3810,7 +3810,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -3871,7 +3871,7 @@ function main(){
 }
 ```
 
-## Python
+### Python
 ```python
 import sys
 from collections import deque
@@ -3913,11 +3913,11 @@ else:
     print("The word, "+s+", is not a palindrome.")    
 ```
 
-# Day 19 Interfaces
+## Day 19 Interfaces
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-interfaces/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -3949,7 +3949,7 @@ int main(){
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.Scanner;
 
@@ -3980,7 +3980,7 @@ class Solution {
 }
 ```
 
-## Python
+### Python
 ```python
 class AdvancedArithmetic(object):
     def divisorSum(n):
@@ -4002,11 +4002,11 @@ print(s)
 ```
 
 
-# Day 20 Sorting
+## Day 20 Sorting
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-sorting/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -4099,7 +4099,7 @@ vector<string> split(const string &str) {
 }
 ```
 
-## C
+### C
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -4138,7 +4138,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -4186,7 +4186,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -4233,7 +4233,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 import math
@@ -4259,11 +4259,11 @@ if __name__ == '__main__':
 print("Array is sorted in {} swaps.\nFirst Element: {}\nLast Element: {}\n".format(numberOfSwaps,a[0],a[n-1]))
 ```
 
-# Day 21 Generics
+## Day 21 Generics
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-generics/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <vector>
@@ -4302,7 +4302,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 
@@ -4341,11 +4341,11 @@ public class Generics {
 }
 ```
 
-# Day 22 Binary Search Trees 
+## Day 22 Binary Search Trees 
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-binary-search-trees/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <cstddef>
@@ -4409,7 +4409,7 @@ int main() {
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -4463,7 +4463,7 @@ int main(){
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 import java.io.*;
@@ -4514,7 +4514,7 @@ class Solution{
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 // Start of function Node
 function Node(data) {
@@ -4579,7 +4579,7 @@ process.stdin.on('end', function () {
 });
 ```
 
-## Python
+### Python
 ```python
 class Node:
     def __init__(self,data):
@@ -4612,11 +4612,11 @@ height=myTree.getHeight(root)
 print(height)       
 ```
 
-# Day 23 BST Level-Order Traversal
+## Day 23 BST Level-Order Traversal
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-binary-trees/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <iostream>
 #include <cstddef>
@@ -4687,7 +4687,7 @@ int main(){
 }
 ```
 
-## C
+### C
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -4756,7 +4756,7 @@ int main(){
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -4813,7 +4813,7 @@ class Solution{
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 // Start of function Node
 function Node(data) {
@@ -4885,7 +4885,7 @@ process.stdin.on('end', function () {
 });
 ```
 
-## Python
+### Python
 ```python
 import sys
 
@@ -4926,11 +4926,11 @@ for i in range(T):
 myTree.levelOrder(root)
 ```
 
-# Day 24 More Linked Lists
+## Day 24 More Linked Lists
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list-deletion/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cstddef>
 #include <cmath>
@@ -5011,7 +5011,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -5085,7 +5085,7 @@ int main()
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -5153,7 +5153,7 @@ class Solution
     }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -5228,7 +5228,7 @@ function main(){
 }		
 ```
 
-## Python
+### Python
 ```python
 class Node:
     def __init__(self,data):
@@ -5271,11 +5271,11 @@ head=mylist.removeDuplicates(head)
 mylist.display(head); 
 ```
 
-# Day 25 Running Time and Complexity
+## Day 25 Running Time and Complexity
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -5302,7 +5302,7 @@ int main() {
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -5329,7 +5329,7 @@ int main() {
 
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -5358,7 +5358,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 function ifPrime(number){
     if (number == 1) return false;
@@ -5386,7 +5386,7 @@ process.stdin.on("end", function () {
 });
 ```
 
-## Python
+### Python
 ```python
 import math
 
@@ -5401,11 +5401,11 @@ for _ in range(int(input())):
     else: print("Not prime")
 ```
 
-# Day 26 Nested Logic
+## Day 26 Nested Logic
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-nested-logic/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -5430,7 +5430,7 @@ int main() {
 }
 ```
 
-## C
+### C
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -5452,7 +5452,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -5482,7 +5482,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 function processData(input) {
     let data = input.split("\n");
@@ -5509,7 +5509,7 @@ process.stdin.on("end", function () {
 });
 ```
 
-## Python
+### Python
 ```python
 (d1, m1, y1) = [int(x.strip()) for x in input().split()]
 (d2, m2, y2) = [int(x.strip()) for x in input().split()]
@@ -5522,11 +5522,11 @@ elif y1 == y2:
 print(ans)
 ```
 
-# Day 27 Testing
+## Day 27 Testing
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-testing/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <algorithm>
 #include <iostream>
@@ -5623,7 +5623,7 @@ int main() {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.util.*;
 
@@ -5728,7 +5728,7 @@ public class Solution {
 }
 ```
 
-## Python
+### Python
 ```python
 def minimum_index(seq):
     if len(seq) == 0:
@@ -5802,11 +5802,11 @@ print("OK")
 
 ```
 
-# Day 28 RegEx, Patterns, and Intro to Databases
+## Day 28 RegEx, Patterns, and Intro to Databases
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-regex-patterns/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -5832,7 +5832,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -5863,7 +5863,7 @@ int main(){
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.util.*;
@@ -5892,7 +5892,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -5931,7 +5931,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 #!/bin/python3
 import sys
@@ -5949,11 +5949,11 @@ for user in list:
     print(user)
 ```
 
-# Day 29 Bitwise AND
+## Day 29 Bitwise AND
 
 * [Problem Statement](https://www.hackerrank.com/challenges/30-bitwise-and/problem)
 
-## CPP
+### CPP
 ```cpp
 #include <bits/stdc++.h>
 
@@ -5987,7 +5987,7 @@ int main()
 }
 ```
 
-## C
+### C
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -6166,7 +6166,7 @@ int parse_int(char* str) {
 }
 ```
 
-## Java
+### Java
 ```java
 import java.io.*;
 import java.math.*;
@@ -6212,7 +6212,7 @@ public class Solution {
 }
 ```
 
-## Javascript
+### Javascript
 ```javascript
 'use strict';
 
@@ -6264,7 +6264,7 @@ function main() {
 }
 ```
 
-## Python
+### Python
 ```python
 for i in range(int(input())):
     n, k = [int(x) for x in input().split()]

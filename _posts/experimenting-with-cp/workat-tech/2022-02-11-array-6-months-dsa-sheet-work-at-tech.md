@@ -1,7 +1,7 @@
 ---
 title: "Array | 6 Months DSA Sheet | Work@Tech"
 author: Priyanshu Tiwari
-excerpt: C++ Solutions to six month DSA Sheets, Work@Tech.
+excerpt: C++ Solutions to six month DSA Sheets, Work@Tech
 categories: [Sheets, DSA]
 tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon, VMware, Meta, Amazon, D. E. Shaw, Facebook, Goldman Sachs, Google, Ola, PayPal, PayU, Samsung, Teradata, Visa, Yahoo]
 ---

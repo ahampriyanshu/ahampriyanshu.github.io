@@ -1,6 +1,7 @@
 ---
-title: "1 - 25 | Project Euler | 2022"
+title: "Project Euler"
 author: Priyanshu Tiwari
+excerpt: Python solutions to first 100 problems on Project Euler
 categories: [Sheets, Projectuler]
 tags: [live, sheets, project, euler, mathematics, primes]
 

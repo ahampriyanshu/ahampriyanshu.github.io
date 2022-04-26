@@ -1,11 +1,10 @@
 ---
-title: "A. Div 2 | Ladder 4 | a2oj"
+title: "C++ | Ladder 4 | a2oj"
 author: Priyanshu Tiwari
 categories: [Sheets, A2oj]
+excerpt: Solutions to some random Codeforces problems [A Div 2]
 tags: [codeforces, a2oj, ladder, id5, div, A]
 ---
-
-Solutions to some random Codeforces Div. 2 A problems in C++.
 
 ## Problem 1-10
 
