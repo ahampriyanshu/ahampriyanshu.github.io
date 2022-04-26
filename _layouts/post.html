@@ -26,7 +26,7 @@ layout: default
 
         <h1>Table Of Content</h1>
 
-        {% include toc.html content=page.content skip_toc=page.skip_toc %}
+        {% include toc.html html=content %}
 
         <div class="e-content">
           {% include anchor_headings.html html=content anchorBody="#" %}

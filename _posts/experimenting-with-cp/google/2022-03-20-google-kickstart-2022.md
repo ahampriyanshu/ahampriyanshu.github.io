@@ -1,5 +1,5 @@
 ---
-title: "Round A | Kickstart | 2022"
+title: "Google Kickstart 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Google]
 tags: [live, contest, online, qualification, round, google, hashcode]

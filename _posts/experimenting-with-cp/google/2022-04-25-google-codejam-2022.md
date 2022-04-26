@@ -1,5 +1,5 @@
 ---
-title: "Google Codejam | 2022"
+title: "Google Codejam 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Google]
 tags: [live, contest, online, qualification, 1B, round, google, codejam]

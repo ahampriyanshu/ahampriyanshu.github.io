@@ -1,5 +1,5 @@
 ---
-title: "Google Hashcode | 2022"
+title: "Google Hashcode 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Google]
 tags: [live, contest, practice, round, google, hashcode, '2022', pizza]
