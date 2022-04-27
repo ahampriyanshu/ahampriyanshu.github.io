@@ -57,7 +57,6 @@ class Main
         int maxi = Integer.MIN_VALUE;
         int mini = Integer.MAX_VALUE;
     
- 
         for (int i = 0; i <= n-innum; i++) {
      
             for (int j = 0; j <= n-innum; j++) {
@@ -211,7 +210,7 @@ public class myCode {
 }
 ```
 
-![Results](/assets/img/posts/infytq-08-01.jpg){: .shadow }
+![Results](/images/cp/misc/infytq-08-01.jpg)
 
 ### Problem 2
 
@@ -264,4 +263,4 @@ class myCode {
 }
 ```
 
-![Results](/assets/img/posts/infytq-08-02.jpg){: .shadow }
+![Results](/images/cp/misc/infytq-08-02.jpg)

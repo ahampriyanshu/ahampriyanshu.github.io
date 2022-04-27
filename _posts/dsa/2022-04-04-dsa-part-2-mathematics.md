@@ -21,8 +21,6 @@ tags:
 
 # Number System
 
-Number system consists values from **0** to **N-1**
-
 ## Types of number
 
 | Type | Value |
@@ -39,6 +37,8 @@ Number system consists values from **0** to **N-1**
 
 ## Types of number system
 
+Number system consists values from **0** to **N-1**
+
 | Number System | Value |
 | -- | -- |
 | Binary | 0 and 1 |
@@ -52,9 +52,9 @@ Number system consists values from **0** to **N-1**
 | -- | -- |
 | Sum of first n numbers | $ \frac{n  \cdot (n+1)}{2} $ |
 | Squares of first n numbers | $ \frac{n  \cdot (n+1) \cdot (2n+1)}{6} $ |
-| Cube of first n numbers | $ \frac{n  \cdot (n+1)}{4} $ |
+| Cube of first n numbers | $ (\frac{n  \cdot (n+1)}{2})^2 $ |
 | Sum of first n even numbers | $ n \cdot (n+1) $ |
-| Sum of first n odd numbers | $ n n^2 $ |
+| Sum of first n odd numbers | $ n^2 $ |
 
 # Number Sequences
 
@@ -114,6 +114,42 @@ Nth term $\rightarrow$
 
 $T_{n} = \frac{1}{a + (n-1) \cdot d}$
 
+# Average
+
+## Mean
+
+The central of middle value in a set of data. Commons ways to calculate average are mean, median, mode.
+
+Suppose
+
+$a_{1}, a_{2}, a_{3}, .... , a_{n}$
+
+**Mean** is the arithmetic average of a given data.
+
+$\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
+
+### Types of Mean
+
+| Number | Test |
+| -- | -- |
+| Arithmetic Mean(AM) | $\frac{a+b}{2}$|
+| Geometric Mean(AM) | $\sqrt{ab}$|
+| Harmonic Mean(AM) | $ (2ab) \cdot (a+b) $|
+
+$\rightarrow GM^2 = AM \ast GM $
+
+## Median
+
+**Median** is the middle value
+
+$\rightarrow median = A[\frac{n+1}{2}] if n is odd else \frac{A[\frac{n}{2}] + A[\frac{n+1}{2} + 1]}{2} $
+
+## Mode
+
+**Mode** is the number with the maximum frequency
+
+$\rightarrow 3 Median = 2 Mean + Mode $
+
 # Quadratic formula
 
 Roots of quad eq. 
@@ -138,7 +174,7 @@ Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 
 2 and 3 are only consecutive prime numbers.
 
-# Divisibility Test
+# Test Of Divisibility
 
 | Number | Test |
 | -- | -- |
@@ -245,7 +281,7 @@ $\rightarrow Curved surface area = 2 \pi rh $
 
 $\rightarrow Total surface area = 2 \pi rh + 2 \pi r^2 $
 
-## Cylinder
+## Cone
 
 $\rightarrow Slant height = \sqrt{h^2 + r^2} $
 
@@ -255,41 +291,11 @@ $\rightarrow Curved surface area = \pi rL $
 
 $\rightarrow Total surface area = \pi rL + \pi r^2 $
 
-## Cylinder
+## Sphere
 
 $\rightarrow Volume = \frac{4 \pi r^3}{3} $
 
 $\rightarrow Surface area = 4 \pi r^2 $
-
-# Average
-
-The central of middle value in a set of data. Commons ways to calculate average are mean, median, mode.
-
-Suppose
-
-$a_{1}, a_{2}, a_{3}, .... , a_{n}$
-
-**Mean** is the arithmetic average of a given data.
-
-$\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
-
-## Types of Mean
-
-| Number | Test |
-| -- | -- |
-| Arithmetic Mean(AM) | $\frac{a+b}{2}$|
-| Geometric Mean(AM) | $\sqrt{ab}$|
-| Harmonic Mean(AM) | $ (2ab) \cdot (a+b) $|
-
-$\rightarrow GM^2 = AM \ast GM $
-
-**Median** is the middle value
-
-$\rightarrow median = A[\frac{n+1}{2}] if n is odd else \frac{A[\frac{n}{2}] + A[\frac{n+1}{2} + 1]}{2} $
-
-**Mode** is the number with the maximum frequency
-
-$\rightarrow 3 Median = 2 Mean + Mode $
 
 # Trignometry
 
@@ -299,6 +305,8 @@ $Radian = \frac{\pi}{180} \times θ$
   <img src="{{ '/images/dsa/2-2.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Applications_of_Right_Triangle_Trigonometry_Figure_1.svg">Wikimedia</a></figcaption>
 </figure> 
+
+## Trignometric Ratios
 
 $ sin θ = \frac{Perpendicular}{Hypotenuse} $
 
@@ -399,9 +407,11 @@ $ \log_a{b} = c \implies a^c = b $
 
 $ \log_2{8} = 3 \implies 2^3 = 8 $
 
-* $ common log \rightarrow  base 10 \rightarrow log_10{x} $
-* $ natural log \rightarrow  base e \rightarrow log_e{x} or lnx $
-* $ binary log \rightarrow  base 2 \rightarrow log_2{x} $
+## Types of logs
+
+* Common log $\rightarrow$  base 10 $\rightarrow log_10{x} $
+* Natural log $\rightarrow$  base e $\rightarrow log_e{x}$ or $ lnx $
+* Binary log $\rightarrow$  base 2 $\rightarrow log_2{x} $
 
 ## Laws of logarithms
 

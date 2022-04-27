@@ -1,5 +1,5 @@
 ---
-title: "Intro To Stock Market Part 1: Introduction"
+title: "Intro To Stock Market"
 author: Priyanshu Tiwari
 excerpt: common myths, dividend vs interests, types of orders, ipo, fso, bottom up/down, lower/upper circuit, promoter, sebi, nifty, sensex
 categories:
@@ -8,7 +8,7 @@ tags:
   - 'stock market'
 ---
 
-## Myths about stock markets
+# Myths about stock markets
 
 * Investing is just like gambling.
 * Eventually, one day the market will crash and you will lose all your gains as well as the principal amount.
@@ -67,14 +67,14 @@ Until some serious bad news arrives.
   <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
 </figure> 
 
-## Dividend
+# Dividend
 
 A dividend is a distribution of profits by a corporation to its shareholders.[1] When a corporation earns a profit or surplus, it is able to pay a proportion of the profit as a dividend to shareholders. Any amount not distributed is taken to be re-invested in the business (called retained earnings).[^1]
 
 [^1]: <https://en.wikipedia.org/wiki/Dividend#cite_note-1>
 
 
-### Interest vs Dividend
+## Interest vs Dividend
 
 | Interest | Dividend |
 | :-- | :-- |
@@ -82,13 +82,13 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 | Taxable | Taxable |
 | Calculated on principal amount | Calculated on face-value |
 
-### Circuit Order
+## Circuit Order
 
 **Upper circuit:** Nobody is selling
 
 **Lower circuit:** Nobody is buying
 
-### Some Pro tips
+# TL;DR
 
 <figure class="align-center">
   <img src="{{ '/images/stocks/1-6.png' | absolute_url }}" alt="loading">

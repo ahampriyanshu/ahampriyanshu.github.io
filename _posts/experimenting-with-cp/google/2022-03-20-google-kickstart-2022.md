@@ -6,9 +6,9 @@ excerpt: C++ Solutions to Google Kickstart, 2022.
 tags: [live, contest, online, qualification, round, google, hashcode]
 ---
 
-## Problem A
+# Problem A
 
-### Description
+## Description
 
 Ada gives John a positive integer N. She challenges him to construct a new number (without leading zeros), that is a multiple of 9, by inserting exactly one digit (0 … 9) anywhere in the given number N. It is guaranteed that N does not have any leading zeros.
 
@@ -75,7 +75,7 @@ int main()
 }
 ```
 
-## Problem B
+# Problem B
 
 ### Description
 
