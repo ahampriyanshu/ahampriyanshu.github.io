@@ -6,9 +6,9 @@ excerpt: C++ Solutions to March Leetcoding Challenge, 2022.
 tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-## Week 1
+# Week 1
 
-### 1 March | 338. Counting Bits
+## 1 March | 338. Counting Bits
 
 Given an integer n, return an array ans of length ``n + 1`` such that for each ``i (0 <= i <= n), ans[i]`` is the number of 1's in the binary representation of i.
 
@@ -79,7 +79,7 @@ public:
 };
 ```
 
-### 2 March |  392. Is Subsequence
+## 2 March |  392. Is Subsequence
 
 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 
@@ -100,7 +100,7 @@ public:
 };
 ```
 
-### 3 March | 413. Arithmetic Slices
+## 3 March | 413. Arithmetic Slices
 
 An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
 
@@ -133,7 +133,7 @@ public:
 };
 ```
 
-### 5 March |  740. Delete and Earn
+## 5 March |  740. Delete and Earn
 
 You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:
 
@@ -164,9 +164,9 @@ public:
 };
 ```
 
-## Week 2
+# Week 2
 
-### 7 March | 21. Merge Two Sorted Lists
+## 7 March | 21. Merge Two Sorted Lists
 
 You are given the heads of two sorted linked lists list1 and list2.
 
@@ -199,7 +199,7 @@ public:
 };
 ```
 
-### 8 March | 141. Linked List Cycle
+## 8 March | 141. Linked List Cycle
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
@@ -228,7 +228,7 @@ public:
 };
 ```
 
-### 9 March | 82. Remove Duplicates from Sorted List II
+## 9 March | 82. Remove Duplicates from Sorted List II
 
 Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
 
@@ -256,7 +256,7 @@ public:
 };
 ```
 
-### 10 March | 2. Add Two Numbers
+## 10 March | 2. Add Two Numbers
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 
@@ -302,7 +302,7 @@ public:
 };
 ```
 
-### 11 March | 61. Rotate List
+## 11 March | 61. Rotate List
 
 Given the head of a linked list, rotate the list to the right by k places.
 
@@ -368,7 +368,7 @@ public:
 };
 ```
 
-### 12 March | 61. Copy List With Random Pointer
+## 12 March | 61. Copy List With Random Pointer
 
 A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
 
@@ -439,9 +439,9 @@ public:
 };
 ```
 
-## Week 3
+# Week 3
 
-### 13 March | 20. Valid Parentheses
+## 13 March | 20. Valid Parentheses
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -474,7 +474,7 @@ public:
 };
 ```
 
-### 14 March | 71. Simplify Path
+## 14 March | 71. Simplify Path
 
 Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
 
@@ -527,7 +527,7 @@ public:
 };
 ```
 
-### 15 March | 1249. Minimum Remove to Make Valid Parentheses
+## 15 March | 1249. Minimum Remove to Make Valid Parentheses
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -577,7 +577,7 @@ public:
 };
 ```
 
-#### Without creating a new string
+### Without creating a new string
 
 ```cpp
 class Solution {
@@ -611,7 +611,7 @@ public:
 ```
 
 
-### 16 March | 20. Valid Parentheses
+## 16 March | 20. Valid Parentheses
 
 Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 
@@ -638,7 +638,7 @@ public:
 };
 ```
 
-### 17 March | 856. Score of Parentheses
+## 17 March | 856. Score of Parentheses
 
 Given a balanced parentheses string s, return the score of the string.
 
@@ -674,7 +674,7 @@ public:
 };
 ```
 
-### 18 March | 316. Remove Duplicate Letters
+## 18 March | 316. Remove Duplicate Letters
 
 Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 
@@ -712,7 +712,7 @@ public:
 ```
 
 
-### 19 March | 895. Maximum Frequency Stack
+## 19 March | 895. Maximum Frequency Stack
 
 Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 
@@ -754,10 +754,9 @@ public:
         return ans;
     }
 };
-
 ```
 
-### 20 March | 1007. Minimum Domino Rotations For Equal Row
+## 20 March | 1007. Minimum Domino Rotations For Equal Row
 
 In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
 
@@ -793,9 +792,9 @@ public:
 };
 ```
 
-## Week 4
+# Week 4
 
-### 21 March | 763. Partition Labels
+## 21 March | 763. Partition Labels
 
 You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
 
@@ -829,7 +828,7 @@ public:
 };
 ```
 
-### 22 March | 1663. Smallest String With A Given Numeric Value
+## 22 March | 1663. Smallest String With A Given Numeric Value
 
 The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on.
 
@@ -864,7 +863,7 @@ public:
 };
 ```
 
-### 23 March | 991. Broken Calculator
+## 23 March | 991. Broken Calculator
 
 There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:
 
@@ -892,7 +891,7 @@ public:
 };
 ```
 
-### 24 March | 881. Boats to Save People
+## 24 March | 881. Boats to Save People
 
 You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
 
@@ -921,7 +920,7 @@ public:
 };
 ``` 
 
-### 25 March | 1029. Two City Scheduling
+## 25 March | 1029. Two City Scheduling
 
 A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti.
 
@@ -958,7 +957,7 @@ public:
 };
 ```
 
-### 26 March | 704. Binary Search
+## 26 March | 704. Binary Search
 
 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 
@@ -982,7 +981,7 @@ public:
 };
 ```
 
-### 27 March | 1337. The K Weakest Rows in a Matrix
+## 27 March | 1337. The K Weakest Rows in a Matrix
 
 You are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
 
@@ -1021,7 +1020,7 @@ public:
 };
 ```
 
-#### Using Priority Queue
+### Using Priority Queue
 
 ```cpp
 struct CompareHeapElements {
@@ -1072,9 +1071,9 @@ public:
 };
 ```
 
-## Week 5
+# Week 5
 
-### 28 March | 704. Binary Search
+## 28 March | 704. Binary Search
 
 There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
 
@@ -1098,7 +1097,7 @@ public:
 };
 ```
 
-### 29 March | 287. Find the Duplicate Number
+## 29 March | 287. Find the Duplicate Number
 
 Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
 
@@ -1108,7 +1107,7 @@ You must solve the problem without modifying the array nums and uses only consta
 
 * [Practice](https://leetcode.com/problems/find-the-duplicate-number/)
 
-#### Brute
+### Brute
 
 ```cpp
 int findDuplicate(vector<int>& nums) {
@@ -1120,7 +1119,7 @@ int findDuplicate(vector<int>& nums) {
 }
 ```
 
-#### Hashset
+### Hashset
 
 ```cpp
 int findDuplicate(vector<int>& nums){
@@ -1136,7 +1135,7 @@ int findDuplicate(vector<int>& nums){
 }
 ```
 
-#### Marking visited elements
+### Marking visited elements
 
 ```cpp
 int indexSolution(vector<int>& nums) {
@@ -1151,7 +1150,7 @@ int indexSolution(vector<int>& nums) {
     }
 ```
 
-#### Floyd's Loop Detection
+### Floyd's Loop Detection
 
 ```cpp
 class Solution {
@@ -1178,7 +1177,7 @@ public:
 };
 ```
 
-### 30 March | 287. Find the Duplicate Number
+## 30 March | 287. Find the Duplicate Number
 
 Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
 
@@ -1187,7 +1186,7 @@ Write an efficient algorithm that searches for a value target in an m x n intege
 
 * [Practice](https://leetcode.com/problems/search-a-2d-matrix/)
 
-#### Brute
+### Brute
 
 ```cpp
 class Solution {
@@ -1219,7 +1218,7 @@ Write an algorithm to minimize the largest sum among these m subarrays.
 
 * [Practice](https://leetcode.com/problems/split-array-largest-sum/)
 
-#### Brute
+### Brute
 
 ```cpp
 class Solution {

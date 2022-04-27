@@ -2,6 +2,7 @@
 title: "Google Codejam 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Google]
+excerpt: C++ Solutions to Google Codejam, 2022.
 tags: [live, contest, online, qualification, 1B, round, google, codejam]
 ---
 
@@ -21,6 +22,7 @@ The ASCII art of a punched card they want to draw is similar to an R×C matrix w
 
 For example, the following is a punched card with R=3 rows and C=4 columns:
 
+```
 ..+-+-+-+
 
 ..|.|.|.|
@@ -34,6 +36,7 @@ For example, the following is a punched card with R=3 rows and C=4 columns:
 |.|.|.|.|
 
 +-+-+-+-+
+```
 
 There are more examples with other sizes in the samples below. Given the integers R and C describing the size of a punched card, print the ASCII art drawing of it as described above.
 
@@ -44,6 +47,8 @@ The first line of the input gives the number of test cases, T. T lines follow, e
 ## Output
 
 For each test case, output one line containing Case #x:, where x is the test case number (starting from 1). Then, output (2⋅R)+1 additional lines with the ASCII art drawing of a punched card with R rows and C columns.
+
+## Solution
 
 ```cpp
 #include <bits/stdc++.h>
@@ -129,6 +134,8 @@ The first line of the input gives the number of test cases, T. T test cases foll
 
 For each test case, output one line containing Case #x: r, where x is the test case number (starting from 1) and r is IMPOSSIBLE if there is no color that can be printed by all 3 printers. Otherwise, r must be equal to "c m y k" where c, m, y, and k are non-negative integers that add up to 106 and c≤Ci, m≤Mi, y≤Yi, and k≤Ki, for all i.
 
+## Solution
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -207,6 +214,8 @@ The first line of the input gives the number of test cases, T. T test cases foll
 ## Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the maximum number of input dice that can be put in a straight.
+
+## Solution
 
 ```cpp
 #include <bits/stdc++.h>

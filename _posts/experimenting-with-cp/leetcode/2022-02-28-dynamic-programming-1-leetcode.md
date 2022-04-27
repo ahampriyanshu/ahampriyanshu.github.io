@@ -6,9 +6,9 @@ excerpt: C++ Solutions to Dynamic Programming I, Leetcode.
 tags: [leetcode, programming, skills, back, to, study, plan, easy]
 ---
 
-## Day 1 | Array
+# Day 1 | Array
 
-### 509. Fibonacci Number
+## 509. Fibonacci Number
 
 The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
 
@@ -21,7 +21,7 @@ Given n, calculate F(n).
 
 * [Practice](https://leetcode.com/problems/fibonacci-number/)
 
-#### Recursion
+### Recursion
 
 ```cpp
 class Solution {
@@ -43,7 +43,7 @@ public:
 };
 ```
 
-#### DP
+### DP
 
 ```cpp
 int fib(int n) {
@@ -53,7 +53,7 @@ int fib(int n) {
 }
 ```
 
-#### Binet's Formula
+### Binet's Formula
 
 Binet's formula for the n'th Fibonacci number:
 
@@ -73,7 +73,7 @@ public:
 };
 ```
 
-#### Golden Ration
+### Golden Ration
 
 This formula can compute the solution in **O(logn) time** and **O(1) space**.
 
@@ -86,7 +86,7 @@ int fib(int n) {
 }
 ```
 
-### 1491. Average Salary Excluding the Minimum and Maximum Salary
+## 1491. Average Salary Excluding the Minimum and Maximum Salary
 
 The Tribonacci sequence Tn is defined as follows: 
 
@@ -96,7 +96,7 @@ Given n, return the value of Tn.
 
 * [Practice](https://leetcode.com/problems/n-th-tribonacci-number/discuss/1575588/C%2B%2B-Easy-Solution-or-DP-or-100-Faster)
 
-#### Recursion
+### Recursion
 
 ```cpp
 class Solution {
@@ -110,7 +110,7 @@ public:
 };
 ```
 
-### DP
+## DP
 
 ```cpp
 class Solution {
@@ -124,9 +124,9 @@ public:
 };
 ```
 
-## Day 2
+# Day 2
 
-### 70. Climbing Stairs
+## 70. Climbing Stairs
 
 You are climbing a staircase. It takes n steps to reach the top.
 
@@ -134,7 +134,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
 * [Practice](https://leetcode.com/problems/climbing-stairs/)
 
-#### Recursion
+### Recursion
 
 ```cpp
 class Solution {
@@ -145,7 +145,7 @@ public:
 };
 ```
 
-### DP
+## DP
 
 ```cpp
 class Solution {
@@ -162,7 +162,7 @@ public:
 };
 ```
 
-### 746. Min Cost Climbing Stairs
+## 746. Min Cost Climbing Stairs
 
 You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
 

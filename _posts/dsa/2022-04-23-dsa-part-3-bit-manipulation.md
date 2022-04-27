@@ -18,3 +18,12 @@ tags:
 | >> | Left Shift |
 | << | Right Shift |
 | ~ | Not |
+
+# Signed & unsigned int
+
+## Signed
+
+## Unsigned
+
+### 2's complement
+

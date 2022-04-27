@@ -6,12 +6,11 @@ excerpt: C++ Solutions to Programming Skills I, Leetcode.
 tags: [leetcode, programming, skills, back, to, study, plan, easy]
 ---
 
-## Day 1 | Array
+# Day 1 | Array
 
-### 1523. Count Odd Numbers in an Interval Range
+## 1523. Count Odd Numbers in an Interval Range
 
-Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
-
+Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive)
 
 * [Practice](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
 
@@ -24,7 +23,7 @@ public:
 };
 ```
 
-### 1491. Average Salary Excluding the Minimum and Maximum Salary
+## 1491. Average Salary Excluding the Minimum and Maximum Salary
 
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 
@@ -51,7 +50,7 @@ public:
 };
 ```
 
-### STL
+## STL
 
 ```cpp
 double average(vector<int>& s) {
@@ -59,9 +58,9 @@ double average(vector<int>& s) {
 }
 ```
 
-## Day 2 | Operator
+# Day 2 | Operator
 
-### 191. Number of 1 Bits
+## 191. Number of 1 Bits
 
 Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 
@@ -72,7 +71,7 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 
 * [Practice](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
 
-#### Brute
+### Brute
 
 ```cpp
 class Solution {
@@ -88,7 +87,7 @@ public:
 };
 ```
 
-#### Optimal
+### Optimal
 
 ```cpp
 class Solution {
@@ -104,7 +103,7 @@ public:
 };
 ```
 
-#### STL
+### STL
 
 ```cpp
 class Solution {
@@ -115,7 +114,7 @@ public:
 };
 ```
 
-### 1281. Subtract the Product and Sum of Digits of an Integer
+## 1281. Subtract the Product and Sum of Digits of an Integer
 
 Given an integer number n, return the difference between the product of its digits and the sum of its digits.
 
@@ -137,9 +136,9 @@ public:
 };
 ```
 
-## Day 3 | Conditional Statements
+# Day 3 | Conditional Statements
 
-### 976. Largest Perimeter Triangle
+## 976. Largest Perimeter Triangle
 
 Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.
 
@@ -161,7 +160,7 @@ public:
 };
 ```
 
-### 1779. Find Nearest Point That Has the Same X or Y Coordinate
+## 1779. Find Nearest Point That Has the Same X or Y Coordinate
 
 You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.
 
@@ -192,9 +191,9 @@ public:
 ```
 
 
-## Day 4 | Loop
+# Day 4 | Loop
 
-### 1502. Can Make Arithmetic Progression From Sequence
+## 1502. Can Make Arithmetic Progression From Sequence
 
 A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
 
@@ -222,7 +221,7 @@ public:
 };
 ```
 
-#### Linear Time
+### Linear Time
 
 ```cpp
 class Solution {
@@ -259,7 +258,7 @@ public:
 };
 ```
 
-### 202. Happy Number
+## 202. Happy Number
 
 Write an algorithm to determine if a number n is happy.
 
@@ -299,7 +298,7 @@ public:
 };
 ```
 
-#### Floyd's Cycle Detection Algorithm
+### Floyd's Cycle Detection Algorithm
 
 ```cpp
 class Solution {
@@ -333,7 +332,7 @@ public:
 };
 ```
 
-#### Brent's Cycle Detection Algorithm
+### Brent's Cycle Detection Algorithm
 
 ```cpp
 class Solution {
@@ -377,7 +376,7 @@ public:
 };
 ```
 
-### 1790. Check if One String Swap Can Make Strings Equal
+## 1790. Check if One String Swap Can Make Strings Equal
 
 You are given two strings s1 and s2 of equal length. A string swap is an operation where you choose two indices in a string (not necessarily different) and swap the characters at these indices.
 
@@ -399,9 +398,9 @@ public:
 ```
 
 
-## Day 6 | Array
+# Day 6 | Array
 
-### 283. Move Zeroes
+## 283. Move Zeroes
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 

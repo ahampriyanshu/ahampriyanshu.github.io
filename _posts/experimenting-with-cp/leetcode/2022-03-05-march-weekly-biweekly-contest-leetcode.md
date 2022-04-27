@@ -6,9 +6,9 @@ excerpt: All of my accepted submissions on Leetcode , March 2022.
 tags: [leetcode, Contests, challenge, march, weekly, biweekly]
 ---
 
-## Biweekly Contest 73
+# Biweekly Contest 73
 
-### 6024. Most Frequent Number Following Key In an Array
+## 6024. Most Frequent Number Following Key In an Array
 
 You are given a 0-indexed integer array nums. You are also given an integer key, which is present in nums.
 
@@ -42,7 +42,7 @@ public:
 };
 ```
 
-### 5217. Sort the Jumbled Numbers
+## 5217. Sort the Jumbled Numbers
 
 You are given a 0-indexed integer array mapping which represents the mapping rule of a shuffled decimal system. mapping[i] = j means digit i should be mapped to digit j in this system.
 
@@ -89,9 +89,9 @@ public:
 };
 ```
 
-## Weekly Contest 284
+# Weekly Contest 284
 
-### 2200. Find All K-Distant Indices in an Array
+## 2200. Find All K-Distant Indices in an Array
 
 You are given a 0-indexed integer array nums and two integers key and k. A k-distant index is an index i of nums for which there exists at least one index j such that |i - j| <= k and nums[j] == key.
 

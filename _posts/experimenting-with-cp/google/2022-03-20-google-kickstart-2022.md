@@ -2,6 +2,7 @@
 title: "Google Kickstart 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Google]
+excerpt: C++ Solutions to Google Kickstart, 2022.
 tags: [live, contest, online, qualification, round, google, hashcode]
 ---
 
@@ -22,6 +23,8 @@ Each test case has a single line containing a positive integer N: the number Ada
 ## Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the new number constructed by John. As mentioned earlier, y cannot have leading zeros.
+
+## Solution
 
 ```cpp
 #include <bits/stdc++.h>
@@ -93,6 +96,8 @@ Each test case has 2 lines. The first line of each test case is an input string 
 ## Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the number of extra letters that need to be removed in order to obtain I. If it is not possible to obtain I then output IMPOSSIBLE as y.
+
+## Solution
 
 ```cpp
 #include <bits/stdc++.h>

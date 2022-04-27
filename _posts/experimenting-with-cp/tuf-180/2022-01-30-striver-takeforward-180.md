@@ -5,33 +5,41 @@ categories: [Sheets, TakeUforward]
 tags: [striver, tuf, ds, algo, takeUforward]
 ---
 
-## Day 1 | Arrays
+# Day 1 | Arrays
 
-### Problem 1
+## Problem 1
 
-* [Find the duplicate in an array of N+1 integers.](https://leetcode.com/problems/find-the-duplicate-number/)
+Find the duplicate in an array of N+1 integers.
 
-#### Worst
+* [Leetcode](https://leetcode.com/problems/find-the-duplicate-number/)
 
-* Just apply mergesort
-* Time Complexity : **O(nlogn)**
-* Space Complexity : **O(n)**
+### Worst
 
-#### Better 
+Just apply mergesort
 
-* Count the occurences of 0,1,2 in first transversal and update the array in the second.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+**Time Complexity:** $ O(nlogn) $
+
+**Space Complexity:** $ O(n) $
+
+### Better 
+
+Count the occurences of 0,1,2 in first transversal and update the array in the second.
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 
 ```
 
-#### Optimal
+### Optimal
 
-* Use three variable pointing to and 
-* Time Complexity : **O(n)**
-* Space Complexity : **O(1)**
+Use three variable pointing to and 
+
+**Time Complexity:** $ O(n) $
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -52,26 +60,31 @@ public:
                 high--;
             }
         }
-        
     }
 };
 ```
 
-### Problem 2
+## Problem 2
 
-* [Sort an array of 0’s 1’s 2’s without using extra space or sorting algo ](https://leetcode.com/problems/sort-colors/)
+Sort an array of 0’s 1’s 2’s without using extra space or sorting algo
 
-#### Worst
+* [Leetcode](https://leetcode.com/problems/sort-colors/)
 
-* Just apply mergesort
-* Time Complexity : **O(nlogn)**
-* Space Complexity : **O(n)**
+### Worst
 
-#### Better 
+Just apply mergesort
 
-* Count the occurences of **0**,**1**,**2** in first transversal and update the array in the second.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+**Time Complexity:** $ O(nlogn) $
+
+**Space Complexity:** $ O(n) $
+
+### Better 
+
+Count the occurences of **0**,**1**,**2** in first transversal and update the array in the second.
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution
@@ -115,11 +128,13 @@ public:
 };
 ```
 
-#### Optimal
+### Optimal
 
-* Use three variable pointing to and 
-* Time Complexity : **O(n)**
-* Space Complexity : **O(1)**
+Use three variable pointing to and 
+
+**Time Complexity:** $ O(n) $
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -146,21 +161,27 @@ public:
 ```
 
 
-### Problem 3
+## Problem 3
 
-* [Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/)
+Find the repeating and the missing number.
 
-#### Worst 
+* [GFG](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/)
 
-* Apply mergesort and then find the missing and repeating value.
-* Time Complexity : **O(nlogn)**
-* Space Complexity : **O(n)**
+### Worst 
 
-#### Better 
+Apply mergesort and then find the missing and repeating value.
 
-* Use a hash array or hash map to count the occurrences of numbers.Index with values '2' and '0' will give the repeating and missing numbers respectively.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(n)**
+**Time Complexity:** $ O(nlogn) $
+
+**Space Complexity:** $ O(n) $
+
+### Better 
+
+Use a hash array or hash map to count the occurrences of numbers.Index with values '2' and '0' will give the repeating and missing numbers respectively.
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(n) $
 
 ```cpp
 class Solution
@@ -195,11 +216,13 @@ public:
 
 ```
 
-#### Better
+### Better
 
-* Use three variable pointing to and 
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+Use three variable pointing to and 
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -223,11 +246,13 @@ public:
 };
 ```
 
-#### Optimal
+### Optimal
 
-* Use three variable pointing to and 
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+Use three variable pointing to and 
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -239,15 +264,17 @@ public:
 };
 ```
 
-### Problem 4
+## Problem 4
 
 * [Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/)
 
-#### Worst 
+### Worst 
 
-* Swap all the smaller numbers from the second array and then sort both the resultant arrays.
-* Time Complexity : **O(nlogn)**
-* Space Complexity : **O(n)**
+Swap all the smaller numbers from the second array and then sort both the resultant arrays.
+
+**Time Complexity:** $ O(nlogn) $
+
+**Space Complexity:** $ O(n) $
 
 ```cpp
 class Solution{
@@ -272,11 +299,13 @@ class Solution{
 };
 ```
 
-#### Better 
+### Better 
 
-* Use **inserstion sort**.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(n)**
+Use **inserstion sort**.
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(n) $
 
 ```cpp
 class Solution
@@ -311,11 +340,13 @@ public:
 
 ```
 
-#### Optimal
+### Optimal
 
-* Use three variable pointing to and 
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+Use three variable pointing to and 
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -327,7 +358,7 @@ public:
 };
 ```
 
-### 5. Maximum Subarray
+## 5. Maximum Subarray
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -351,11 +382,11 @@ public:
 };
 ```
 
-### 6. Stocks Sell or Buy
+## 6. Stocks Sell or Buy
 
 * [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
-#### Brute
+### Brute
 
 ```cpp
 class Solution
@@ -375,7 +406,7 @@ public:
 };
 ```
 
-#### Optimal
+### Optimal
 
 ```cpp
 class Solution {
@@ -392,15 +423,15 @@ public:
 };
 ```
 
-## Day 2 | Arrays
+# Day 2 | Arrays
 
-### Problem 1
+## Problem 1
 
 * [Leetcode](https://leetcode.com/problems/set-matrix-zeroes/)
 
-#### Brute
+### Brute
 
-* This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
+This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
 
 ```cpp
 class Solution {
@@ -447,7 +478,7 @@ public:
 };
 ```
 
-#### Optimal 
+### Optimal 
 
 ```cpp
 class Solution {
@@ -474,19 +505,21 @@ public:
 };
 ```
 
-### Problem 5
+## Problem 5
 
 * [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-#### Brute
+### Brute
 
-* This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
+This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
 
-#### Optimal 
+### Optimal 
 
 * In this approach, we will iterate over the array and store the minimun value & the maximum profit in seperate variables.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -502,9 +535,9 @@ public:
     }
 };
 ```
-## Day 5 | Linked List
+# Day 5 | Linked List
 
-### Reverse a LinkedList
+## Reverse a LinkedList
 
 * [Leetcode](https://leetcode.com/problems/reverse-linked-list/)
 
@@ -525,9 +558,9 @@ public:
 };
 ```
 ``
-## Day 8 | Greedy
+# Day 8 | Greedy
 
-### Problem 1
+## Problem 1
 
 * [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1)
 
@@ -559,9 +592,9 @@ class Solution
 };
 ```
 
-## Day 9 | Recursion
+# Day 9 | Recursion
 
-### Subset Sums
+## Subset Sums
 
 Given a list arr of N integers, print sums of all subsets in it.
 
@@ -569,7 +602,7 @@ Note: Return all the element is increasing order.
 
 * [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
 
-#### Brute
+### Brute
 
 ```cpp
 class Solution
@@ -594,7 +627,7 @@ public:
 };
 ```
 
-#### Optimal
+### Optimal
 
 ```cpp
 class Solution
@@ -623,25 +656,27 @@ public:
 ```
 
 
-## Day 11 | Binary Search
+# Day 11 | Binary Search
 
-### Problem 1: Nth Root Of M
+## Problem 1: Nth Root Of M
 
 You are given two positive integers N and M. You have to find the Nth root of M i.e. M^(1/N).
 
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/1062679)
 * [GFG](https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1/#)
 
-#### Worst
+### Worst
 
 Import math library and use built-in methods.
 
-#### Better
+### Better
 
 Apply binary search.
 
-* Time Complexity : **O(n*log(m*(d^10)))** 
-* Space Complexity : **O(1)**
+
+**Time Complexity:** $ O(n*log(m*(d^10))) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 #include<bits/stdc++.h>
@@ -695,12 +730,14 @@ int main() {
 } // } Driver Code Ends
 ```
 
-#### Optimal 
+### Optimal 
 
 Apply [Newton-Raphson Method](https://brilliant.org/wiki/newton-raphson-method/)
 
-* Time Complexity : **O(log(M) * log(N))** 
-* Space Complexity : **O(1)**
+
+**Time Complexity:** $ O(log(M) * log(N)) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 
@@ -722,26 +759,30 @@ double findNthRootOfM(int n, long long m) {
 ```
 
 
-## Day 15 | String
+# Day 15 | String
 
-### Problem 1: Reverse Words in a String
+## Problem 1: Reverse Words in a String
 
 You are given a string of length N. You need to reverse the string word by word. There can be multiple spaces between two words and there can be leading or trailing spaces but in the output reversed string you need to put a single space between two words, and your reversed string should not contain leading or trailing spaces.
 
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/696444)
 * [Leetcode](https://leetcode.com/problems/reverse-words-in-a-string/)
 
-#### Worst/Better
+### Worst/Better
 
-* Use in built methods and containers like stack, vector.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(n)**
+Use in built methods and containers like stack, vector.
 
-#### Optimal 
+**Time Complexity:** $ O(n) $ 
 
-* Reverse the whole string and then reverse word by word.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(1)**
+**Space Complexity:** $ O(n) $
+
+### Optimal 
+
+Reverse the whole string and then reverse word by word.
+
+**Time Complexity:** $ O(n) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 
@@ -771,48 +812,29 @@ public:
 ```
 
 
-## Day 21 | Binary Search Tree Part-II
+# Day 21 | Binary Search Tree Part-II
 
-### Problem 1: Floor in a BST
+## Problem 1: Floor in a BST
 
 You are given a BST (Binary search tree) with’ N’ number of nodes and a value ‘X’. Your task is to find the greatest value node of the BST which is smaller than or equal to ‘X’.
 
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/920457)
 
-#### Worst
+### Worst
 
-* Transerse the whole tree. Keep track of the closest smaller or same element.
-* Time Complexity : **O(n)**
-* Space Complexity : **O(n)**
+Transerse the whole tree. Keep track of the closest smaller or same element.
 
-#### Better
+**Time Complexity:** $ O(n) $
 
-* Check whether the key is < or == or > than the root node.
-* Time Complexity : **O(h)** 
-* Space Complexity : **O(n)**
+**Space Complexity:** $ O(n) $
 
-```cpp
-int floorInBST(TreeNode<int> * root, int X)
-{
-    if (!root)
-        return INT_MAX;
- 
-    if (root->val == X)
-        return root->val;
- 
-    if (root->val > X)
-        return floorInBST(root->left, X);
- 
-    int ans = floorInBST(root->right, X);
-    return ans <= X ? ans : root->val;
-}
-```
+### Better
 
-#### Optimal 
+Check whether the key is < or == or > than the root node.
 
-* Check whether the key is < or == or > than the root node.
-* Time Complexity : **O(h)** 
-* Space Complexity : **O(1)**
+**Time Complexity:** $ O(h) $ 
+
+**Space Complexity:** $ O(n) $
 
 ```cpp
 int floorInBST(TreeNode<int> * root, int X)
@@ -831,23 +853,52 @@ int floorInBST(TreeNode<int> * root, int X)
 }
 ```
 
-### Problem 2: Ceil in a BST
+### Optimal 
+
+Check whether the key is < or == or > than the root node.
+
+**Time Complexity:** $ O(h) $ 
+
+**Space Complexity:** $ O(1) $
+
+```cpp
+int floorInBST(TreeNode<int> * root, int X)
+{
+    if (!root)
+        return INT_MAX;
+ 
+    if (root->val == X)
+        return root->val;
+ 
+    if (root->val > X)
+        return floorInBST(root->left, X);
+ 
+    int ans = floorInBST(root->right, X);
+    return ans <= X ? ans : root->val;
+}
+```
+
+## Problem 2: Ceil in a BST
 
 Ninja is given a binary search tree and an integer. Now he is given a particular key in the tree and returns its ceil value. Can you help Ninja solve the problem ?
 
 * [Code Studio](https://www.codingninjas.com/codestudio/problems/ceil-from-bst_920464)
 
-#### Worst
+### Worst
 
-* Transerse the whole tree. Keep track of the least greater than or same element.
-* Time Complexity : **O(n)** 
-* Space Complexity : **O(n)**
+Transerse the whole tree. Keep track of the least greater than or same element.
 
-#### Better
+**Time Complexity:** $ O(n) $ 
 
-* Check whether the key is < or == or > than the root node.
-* Time Complexity : **O(h)** 
-* Space Complexity : **O(n)**
+**Space Complexity:** $ O(n) $
+
+### Better
+
+Check whether the key is < or == or > than the root node.
+
+**Time Complexity:** $ O(h) $ 
+
+**Space Complexity:** $ O(n) $
 
 ```cpp
 int findCeil(BinaryTreeNode<int> *root, int x){
@@ -864,11 +915,13 @@ int findCeil(BinaryTreeNode<int> *root, int x){
 }
 ```
 
-#### Optimal 
+### Optimal 
 
-* Check whether the key is < or == or > than the root node.
-* Time Complexity : **O(h)** 
-* Space Complexity : **O(1)**
+Check whether the key is < or == or > than the root node.
+
+**Time Complexity:** $ O(h) $ 
+
+**Space Complexity:** $ O(1) $
 
 ```cpp
 int findCeil(BinaryTreeNode<int> *root, int x){
