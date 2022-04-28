@@ -1,7 +1,7 @@
 ---
 title: "DSA Part 3: Bit Manipulation"
 author: Priyanshu Tiwari
-excerpt: binary numbers, msb, lsb, unsigned and signed 32-bits int, 2's complement, bitwise operators
+excerpt: binary numbers, msb, lsb, unsigned and signed 32-bits int, 2's complement, bitwise operators, some common bitwise operators
 categories:
   - DSA
 tags:
@@ -24,7 +24,7 @@ In C++, there are either 32-bit or 64-bit numbers an are stored as
 
 <figure class="align-center">
   <img src="{{ '/images/dsa/3-1.png' | absolute_url }}" alt="loading">
-  <figcaption>Binary representation of $11_10$</figcaption>
+  <figcaption>Binary representation of $11_{10}$</figcaption>
 </figure> 
 
 ## Significant bits
@@ -205,7 +205,7 @@ Inverts all bits of the operand.
 | ~1 | 0 |
 
 
-``~a`` $\implies$ INT_MAX - a (only for +ve integers)
+* ``~a`` $\implies$ ``INT_MAX - a`` (only for +ve integers)
 
 ## RSB
 
@@ -367,7 +367,7 @@ Given two signed integers, write a function that returns true if the signs of gi
 
 * [Practice](https://www.geeksforgeeks.org/detect-if-two-integers-have-opposite-signs/)
 
-## Arithmetic comparison
+### Arithmetic comparison
 
 ```cpp
 bool oppositeSigns(int x, int y)
@@ -376,7 +376,7 @@ bool oppositeSigns(int x, int y)
 }
 ```
 
-## Using XOR
+### Using XOR
 
 We can utilize the fact that XOR operation evalutes to 1 iff both the operands differ from each other. So we can say that the resultant MSB would be 1 iff x and y have opposite signs.
 
@@ -391,7 +391,7 @@ bool oppositeSigns(int x, int y)
 
 Given two variables, x, and y, swap two variables without using a third variable. 
 
-## Arithmetic Operators
+### Arithmetic Operators
 
 
 ```cpp
@@ -403,7 +403,7 @@ void swapped(int* x, int* y)
 }
 ```
 
-## Using XOR
+### Using XOR
 
 Use the fact `` x ^ x = 0 ``
 
@@ -536,7 +536,7 @@ Variation of the previous question.
 
 Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences.
 
-* [Practise](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
+* [Practice](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
 
 ### Naive 
 
@@ -601,7 +601,6 @@ int getSingle(int arr[], int n)
         common_bit_mask = ~(ones & twos);
         ones &= common_bit_mask;
         twos &= common_bit_mask;
- 
     }
  
     return ones;
@@ -616,7 +615,7 @@ int getSingle(int arr[], int n)
 
 Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences.
 
-* [Practise](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
+* [Practice](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
 
 ```cpp
 vector<string> AllPossibleStrings(string s){

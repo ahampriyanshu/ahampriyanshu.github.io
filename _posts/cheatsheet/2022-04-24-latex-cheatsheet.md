@@ -37,7 +37,7 @@ This website is using [MathJax v3](https://www.mathjax.org/#gettingstarted) to r
 | a_{b_{c_{d}}}  | $ a_{b_{c_{d}}}  $ |
 | \sqrt{a}  | $ \sqrt{a}  $ |
 | \sqrt[n]{a} | $ \sqrt[n]{a} $ |
-| \log_a{b} | $ \log_a{b} $ |
+| log_{a}b | $ log_{a}b $ |
 | \pm n | $ \pm n $ |
 | \mp n | $ \mp n $ |
 | \binom{a}{b}  | $ \binom{a}{b}  $ |
