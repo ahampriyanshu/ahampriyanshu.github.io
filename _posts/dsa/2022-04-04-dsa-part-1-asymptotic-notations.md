@@ -5,7 +5,7 @@ excerpt: Asymptotic Notation
 categories: 
   - DSA
 tags:
-  - 'data structures'
+  - 'data structures and algorithms'
   - 'c++'
 ---
 

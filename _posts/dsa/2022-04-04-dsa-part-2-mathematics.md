@@ -5,7 +5,7 @@ excerpt: Number sequences, extended euclidean algorithm, prime factorization, si
 categories:
   - DSA
 tags:
-  - 'data structures'
+  - 'data structures and algorithms'
   - cpp
   - 'number theory'
   - trignomety
@@ -17,6 +17,8 @@ tags:
   - lcm
   - euclidean
   - prime
+  - aptitude
+  - reasoning
 ---
 
 # Number System
@@ -44,7 +46,7 @@ Number system consists values from **0** to **N-1**
 | Binary | 0 and 1 |
 | Octal | 0 to 7 |
 | Decimal | 0 to 9 |
-| HexaDecimal | 0 to 7 and A to F |
+| HexaDecimal | 0 to 9 and A to F |
 
 # Number Series
 

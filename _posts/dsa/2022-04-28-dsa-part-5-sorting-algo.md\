@@ -1,11 +1,11 @@
 ---
-title: "Algorithms Part 1: Sorting"
+title: "DSA Part 5: Sorting Algos"
 author: Priyanshu Tiwari
-excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket Sort
+excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket, Tim Sort
 categories:
-  - 'algorithms'
+  - DSA
 tags:
-  - 'algorithms'
+  - 'data structures and algorithms'
   - 'c++'
   - 'merge'
   - 'quick'
@@ -63,10 +63,10 @@ void mergeSort(int *arr, int start, int end) {
 }
 ```
 
-**Worst-case time complexity :** ${\displaystyle O(n\log n)}$
+**Worst-case time complexity :** $O(n \cdot \log n)$
 
-**Best-case time complexity :** ${\displaystyle \Omega (n\log n)}$
+**Best-case time complexity :** $\Omega (n \cdot \log n)$
 
-**Average time complexity :** ${\displaystyle \Theta (n\log n)}$
+**Average time complexity :** $\Theta (n \cdot \log n)$
 
-**Worst-case space complexity :** ${\displaystyle O(n)}$ 
+**Worst-case space complexity :** $O(n)$ 

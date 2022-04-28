@@ -62,7 +62,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 * Change the default theme to ``ZSH_THEME="powerlevel10k/powerlevel10k"`` inside ``~/.zshrc ``.
 * Commit the changes by running ``source ~/.zshrc``
 
-![2](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/2.gif)
+tags:
+  - 'data structures and algorithms'2](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/2.gif)
 
 ### [zsh-autosuggestions](https://github.com/marlonrichert/zsh-autosuggestions)
 

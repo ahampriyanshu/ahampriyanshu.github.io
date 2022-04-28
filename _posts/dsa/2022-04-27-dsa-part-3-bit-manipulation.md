@@ -5,13 +5,15 @@ excerpt: binary numbers, msb, lsb, unsigned and signed 32-bits int, 2's compleme
 categories:
   - DSA
 tags:
-  - 'data structures'
+  - 'data structures and algorithms'
   - 'bitwise operators'
   - 'binary numbers'
   - 'unsigned and unsigned'
   - 'xor'
   - 'or'
   - 'and'
+  - 'not'
+  - 'rightmost setbit'
 ---
 
 # Binary Numbers
@@ -52,7 +54,7 @@ When all the bits are set to 0.
   <figcaption>Binary representation of 0</figcaption>
 </figure> 
 
-$\rightarrow (2^{31} \dot 0) + (2^{30} \dot 0) + \ldots( 2^0 \dot 0) = 0$
+$\rightarrow (2^{31} \cdot 0) + (2^{30} \cdot 0) + \ldots( 2^0 \cdot 0) = 0$
 
 ```cpp
 unsigned int mini = 0;
@@ -67,7 +69,7 @@ When all the bits are set to 1.
   <figcaption>Binary representation of 1</figcaption>
 </figure> 
 
-$\rightarrow (2^{31} \dot) 1 + 2^{30} \dot 1 + \ldots 2^0 \dot 1 $
+$\rightarrow (2^{31} \cdot 1) + (2^{30} \cdot 1) + \ldots + (2^0 \cdot 1) $
 
 $\rightarrow 2^{32} - 1 =  4,294,967,295 $ (approx. 4 billion)
 
@@ -98,7 +100,7 @@ When all the bits are set to 1.
   <figcaption>Binary representation of –2,147,483,648</figcaption>
 </figure> 
 
-$\rightarrow - {(2^{31} \dot 1) + (2^{30} \dot 1) + \ldots + (2^0 \dot 1)} $
+$\rightarrow - {(2^{31} \cdot 1) + (2^{30} \cdot 1) + \ldots + (2^0 \cdot 1)} $
 
 $\rightarrow -2^{31} = –2,147,483,648 $ (approx. -2 billion)
 
@@ -115,7 +117,7 @@ When all the bits are set to 1, except the MSB.
   <figcaption>Binary representation of 2,147,483,647</figcaption>
 </figure> 
 
-$\rightarrow (2^{31} \dot 1) + (2^{30} \dot 1) + \ldots + (2^0 \dot 1) $
+$\rightarrow (2^{31} \cdot 1) + (2^{30} \cdot 1) + \ldots + (2^0 \cdot 1) $
 
 $\rightarrow 2^{31} - 1 = 2,147,483,647 $ (approx. 2 billion)
 
@@ -202,9 +204,8 @@ Inverts all bits of the operand.
 | ~0 | 1 |
 | ~1 | 0 |
 
-* ~a | a = 1
-* ~a & a = 0
-* ~a $\implies$ ``INT_MAX - a `` (only for +ve integers)
+
+``~a`` $\implies$ INT_MAX - a (only for +ve integers)
 
 ## RSB
 
@@ -251,7 +252,7 @@ int rsb = a & ~(a-1);
 
 The above operation will shift all bits of 'b', 'a' bits towards the left. Bits vacated after shifting are filled with 0. 
 
-`` b << a  `` $\implies b \times 2^a $ 
+* b << a $\implies b \times 2^a $ 
 
 ### >> (Right Shift)
 
@@ -267,7 +268,7 @@ The above operation will shift all bits of 'b', 'a' bits towards the left. Bits 
 
 The above operation will shift all bits of 'b', 'a' bits towards the right. Bits vacated after shifting are filled with 0. 
 
-`` b >> a  `` $\implies \lfloor \frac{b}{2^a} \rfloor $ 
+* b >> a $\implies \lfloor \frac{b}{2^a} \rfloor $ 
 
 # Problems
 
@@ -360,6 +361,61 @@ int setBits(int n)
 
 **Time Complexity:** $O(1)$
 
+## Detect if two integers have opposite signs
+
+Given two signed integers, write a function that returns true if the signs of given integers are different, otherwise false.
+
+* [Practice](https://www.geeksforgeeks.org/detect-if-two-integers-have-opposite-signs/)
+
+## Arithmetic comparison
+
+```cpp
+bool oppositeSigns(int x, int y)
+{
+    return (x < 0) ? (y >= 0) : (y < 0);
+}
+```
+
+## Using XOR
+
+We can utilize the fact that XOR operation evalutes to 1 iff both the operands differ from each other. So we can say that the resultant MSB would be 1 iff x and y have opposite signs.
+
+```cpp
+bool oppositeSigns(int x, int y)
+{
+    return ((x ^ y) < 0);
+}
+```
+
+##  Swap two numbers without using temp variable
+
+Given two variables, x, and y, swap two variables without using a third variable. 
+
+## Arithmetic Operators
+
+
+```cpp
+void swapped(int* x, int* y)
+{
+    x = x + y;
+    y = x - y; 
+    x = x - y;
+}
+```
+
+## Using XOR
+
+Use the fact `` x ^ x = 0 ``
+
+```cpp
+void swapped(int* x, int* y)
+{
+    x = x ^ y;
+    y = x ^ y; 
+    x = x ^ y;
+}
+```
+
 ## Is power of 2
 
 Given a positive integer, write a function to find if it is a power of two or not.
@@ -423,6 +479,23 @@ bool isPowerofTwo(long long n){
 
 **Time Complexity:** $O(1)$
 
+## Add two numbers without using arithmetic operators
+
+Write a function that returns sum of two integers. The function should not use any of the arithmetic operators
+
+```cpp
+int Add(int x, int y)
+{
+    while (y)
+    {
+        unsigned carry = x & y;
+        x = x ^ y;
+        y = carry << 1;
+    }
+    return x;
+}
+```
+
 ## Find odd occuring number
 
 Given an array of positive integers. All numbers occur an even number of times except one number which occurs an odd number of times. 
@@ -431,9 +504,10 @@ Given an array of positive integers. All numbers occur an even number of times e
 
 ### Naive
 
-Use hashmap to store the frequencies.
+Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
+
 **Space Complexity:** $O(n)$
 
 ### Using XOR
@@ -451,7 +525,12 @@ int oddoccur(int arr[], int arr_size)
 ```
 
 **Time Complexity:** $O(n)$
+
 **Space Complexity:** $O(1)$
+
+## Find the only non-duplicate in array
+
+Variation of the previous question.
 
 ## Find the two numbers with odd occurrences in an unsorted array
 
@@ -461,9 +540,10 @@ Given an unsorted array that contains even number of occurrences for all numbers
 
 ### Naive 
 
-Use hashmap to store the frequencies.
+Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
+
 **Space Complexity:** $O(n)$
 
 ### Using XOR
@@ -489,6 +569,47 @@ Use hashmap to store the frequencies.
 ```
 
 **Time Complexity:** $O(n)$
+
+**Space Complexity:** $O(1)$
+
+## Find the element that appears once
+
+Given an array where every element occurs three times, except one element which occurs only once. Find the element that occurs once. 
+
+* [Practice](https://www.geeksforgeeks.org/find-the-element-that-appears-once/)
+
+### Naive
+
+Use hashmap to store the frequency.
+
+**Time Complexity:** $O(n)$
+
+**Space Complexity:** $O(n)$
+
+### Using XOR
+
+use the fact that `` a ^ a = 0 ``
+
+```cpp
+int getSingle(int arr[], int n)
+{
+    int ones = 0, twos = 0;
+    int common_bit_mask;
+    for (int i = 0; i < n; i++) {
+        twos = twos | (ones & arr[i]);
+        ones = ones ^ arr[i];
+        common_bit_mask = ~(ones & twos);
+        ones &= common_bit_mask;
+        twos &= common_bit_mask;
+ 
+    }
+ 
+    return ones;
+}
+```
+
+**Time Complexity:** $O(n)$
+
 **Space Complexity:** $O(1)$
 
 ## Power Set
@@ -513,4 +634,5 @@ vector<string> AllPossibleStrings(string s){
 ```
 
 **Time Complexity:** $O(n \times 2^n)$
+
 **Space Complexity:** $O(1)$
