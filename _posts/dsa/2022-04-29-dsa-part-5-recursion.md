@@ -1,17 +1,20 @@
 ---
-title: "Intro To CP 5: Recursions"
+title: "DSA Part 5: Recursion"
 author: Priyanshu Tiwari
-excerpt: Recursions and PMI, power(x,n), count digits of an integer, is_sorted(), fibonacci series
+excerpt: Basic of recursion, PMI, tail recursion, pow(x,n), subset, powerset, count and sum of integer, is_sorted(), fibonacci series, factorial, first and last index of a number
 categories:
-  - 'competitive-programming'
+  - DSA
 tags:
-  - 'competitive-programming'
-  - 'c++'
+  - 'recursion'
+  - 'tail recursion'
+  - 'is_sorted()'
+  - 'fibonacci series'
+  - 'subset'
 ---
 
 # Recursion
 
-When a function calls itself. Can cause **segmentation fault** in c++ or **stack overflow** in java, if base case is implemented poorly. Based on **PMI**(Principle of Mathematical Induction). Memory consuming but easier(and sometimes more natural) to implement.
+When a function calls itself. Recursion can cause **segmentation fault** in c++ or **stack overflow** in java, if base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). It is memory consuming but easier(and sometimes more natural) to implement.
 
 ## Tail Recursion
 
@@ -93,7 +96,7 @@ double myPow(double x, int n) {
 }
 ```
 
-## Print N to 1 numbers
+## Print N to 1
 
 You are given an integer N. Print numbers from N to 1 without the help of loops.
 
@@ -108,7 +111,7 @@ void print(int N)
 }
 ```
 
-## Print 1 to N numbers
+## Print 1 to N
 
 You are given an integer N. Print numbers from 1 to N without the help of loops.
 

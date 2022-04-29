@@ -159,3 +159,18 @@ This website is using [MathJax v3](https://www.mathjax.org/#gettingstarted) to r
 | \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
 | \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
 | \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
+
+$$
+\alpha=\begin{cases}
+x^2, & x \ge 0 \\
+\sqrt{x}, & x < 0
+\end{cases}
+$$
+
+$$
+\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i \\
+\end{pmatrix}
+$$
