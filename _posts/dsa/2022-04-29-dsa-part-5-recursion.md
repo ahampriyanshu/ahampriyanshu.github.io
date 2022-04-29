@@ -25,9 +25,9 @@ When the last step in a recursive function is the recursive call itself. These k
 ```cpp
 int fact(int n)
 {
-    if(n == 0 || n == 1)
-    return 1;
-    return n * fact(n-1);
+  if(n == 0 || n == 1)
+  return 1;
+  return n * fact(n-1);
 }
 ```
 
@@ -38,9 +38,9 @@ int fact(int n)
 ```cpp
 int fact(int n, int k)
 {
-    if(n == 0 || n == 1)
-    return k;
-    return fact(n-1, k*n);
+  if(n == 0 || n == 1)
+  return k;
+  return fact(n-1, k*n);
 }
 ```
 
@@ -61,9 +61,9 @@ Implement log2(n), which calculates floor of $log_2n$.
 
 ```cpp
 int log2(int n) {
-    if(n==1)
-    return 0;
-    return 1 + log2(n/2);
+  if(n==1)
+  return 0;
+  return 1 + log2(n/2);
 }
 ```
 
@@ -73,10 +73,10 @@ Implement deci_to_bin(n), which prints the binary representation of a +ve intege
 
 ```cpp
 void deci_to_bin(int n) {
-    if(n==10)
-    return;
-    func(n/2);
-    cout << n << " ";
+  if(n==10)
+  return;
+  func(n/2);
+  cout << n << " ";
 }
 ```
 
@@ -86,13 +86,13 @@ Implement pow(x, n), which calculates x raised to the power n (i.e., x<sup>n</su
 
 ```cpp
 double myPow(double x, int n) {
-    
-    if(n==0) return 1.0;
-        double y = myPow(x, n/2);
-        
-    if(n % 2 == 0)
-        return y*y;
-    return n < 0 ? (y*y)/x : x*y*y; 
+  
+  if(n==0) return 1.0;
+      double y = myPow(x, n/2);
+      
+  if(n % 2 == 0)
+      return y*y;
+  return n < 0 ? (y*y)/x : x*y*y; 
 }
 ```
 
@@ -103,11 +103,11 @@ You are given an integer N. Print numbers from N to 1 without the help of loops.
 ```cpp
 void print(int N)
 {
-    if(N == 0)
-        return;
+  if(N == 0)
+      return;
 
-    cout << N << " ";
-    print(N-1);
+  cout << N << " ";
+  print(N-1);
 }
 ```
 
@@ -118,11 +118,11 @@ You are given an integer N. Print numbers from 1 to N without the help of loops.
 ```cpp
 void print(int N)
 {
-    if(N == 0)
-        return;
+  if(N == 0)
+      return;
 
-    print(N-1);
-    cout << N << " ";
+  print(N-1);
+  cout << N << " ";
 }
 ```
 

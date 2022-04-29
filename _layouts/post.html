@@ -4,8 +4,8 @@ layout: default
 
 <main id="main" class="main-content" aria-label="Content">
   <article class="h-entry">
-    {% include page-image.html %}
     <div class="page-wrapper">
+      
       <header class="page-header animated fadeIn">
         {% assign title = page.title | markdownify | strip_html %}
         {% if page.link %}
@@ -25,7 +25,6 @@ layout: default
       <div class="page-content">
 
         <h1>Table Of Content</h1>
-
         {% include toc.html html=content %}
 
         <div class="e-content">
@@ -35,11 +34,7 @@ layout: default
         {% if page.share %}
         {% include social-share.html %}
         {% endif %}
-
-        {% if site.disqus.shortname %}
-        {% include disqus-comments.html %}
-        {% endif %}
-
+        
         {% include page-pagination.html %}
       </div>
     </div>

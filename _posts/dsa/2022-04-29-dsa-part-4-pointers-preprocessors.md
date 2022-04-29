@@ -1,7 +1,7 @@
 ---
-title: "DSA Part 4: Pointers & Dynamic Allocation"
+title: "DSA Part 4: Pointers & Preprocessors"
 author: Priyanshu Tiwari
-excerpt: Pointers, pointer arithmetic, character array, double pointer, typecasting, reference variables, dynamic allocation, macros, define, const and global variables, inline functions
+excerpt: Pointers, pointer arithmetic, character array, double pointer, typecasting, reference variables, dynamic allocation,preprocessors, macros, define, const and global variables, inline functions
 categories:
   - DSA
 tags:
@@ -14,6 +14,7 @@ tags:
   - 'dynamic allocation'
   - 'macros'
   - 'define'
+  - 'typedef'
 ---
 
 # Pointers
@@ -165,7 +166,7 @@ a
 ad1|��
 ```
 
-* As we can see that character arrays and pointers behaves a bit differently, this is because how cout is implemented for char arrays and pointers in c++.
+* As we can see that character arrays and pointers behave a bit differently, this is because of how cout is implemented for char arrays and pointers in c++.
 * Instead of printing the address of the 0th index, the content of the array is printed.
 
 char s1[] = "abc";
@@ -258,7 +259,7 @@ int main(){
 4
 ```
 
-## Pointer to a Pointer : Double Pointers
+## Pointer to a Pointer: Double Pointers
 
 ```cpp
 int main(){
@@ -372,11 +373,11 @@ dynamic-2.cpp:14:9: note: declared here
 12 12
 ```
 
-Two different containers to reach same memory location.
+Two different containers to reach the same memory location.
 Doesn't occupy new space in the memory.
 Mostly used while passing variables to any functions that should alter/update the value of the original variable.
 
-We can't declare and initialize reference variable  in two different steps
+We can't declare and initialize reference variables in two different steps
 {: .notice--info}
 
 ```cpp
@@ -401,8 +402,8 @@ delete p;
 
 This command consumes 12 bytes $\rightarrow$
 
-* 4 bytes in heap for allocating an integer.
-* 8 bytes in stack for storing the address of the integer allocated in the heap;
+* 4 bytes in the heap for allocating an integer.
+* 8 bytes in the stack for storing the address of the integer allocated in the heap;
 
 ```cpp
 int main(){
@@ -445,9 +446,75 @@ int main(){
 }
 ```
 
-# Macros
+# Preprocessors
 
-## #define
+Preprocessors are directives given to a compiler before the compilation begin. These are replaced with some other predefined values.
+
+## Macros
+
+### #define
+
+```cpp
+#include <iostream>
+
+// defining macro without argument
+#define AREA(r) (3.14 * r *r)
+
+int main(){
+
+    int r;
+    cin >> r;
+    cout << AREA(r);
+}
+```
+
+```cpp
+#include <iostream>
+
+// defining macro with arguments
+#define PI 3.14
+
+int main(){
+
+    int r;
+    cin >> r;
+    cout << PI * r * r;
+}
+```
+
+### Predefined macros
+
+| Macro | Usage |
+| -- | -- |
+| __LINE__ | Current line number in the source code |
+| __FILE__ | Filename of the source code |
+| __DATE__ | MM DD YY of the time when the program was compiled |
+| __TIME__ | HH:MM:SS of the time when the program was compiled |
+
+### Header files
+
+tells the compiler to include a file in the source code program.
+
+```cpp
+
+// standard header files
+#include <iostream>
+
+// user defined header files
+#include "my_func.h"
+
+```
+
+# Typedef
+
+Typedef keyword is used to assign a new name to an existing data type. Unlike #define macros, it is terminated by a semi-colon(;) and is interpreted by the compiler during compile time.
+
+```cpp
+typedef long long ll;
+typedef unsigned int positive_integer;
+```
+
+# Global variables
 
 ```cpp
 #include<bits/stdc++.h>
@@ -479,7 +546,7 @@ int main(){
 }
 ```
 
-## Inline functions
+# Inline functions
 
 ```cpp
 #include<bits/stdc++.h>
@@ -510,7 +577,7 @@ int main(){
     // degrades performance as the instruction flow breaks for a moment
     int f = max(a, b);
 
-    // at compile time whole code of the inline function gets inserted or substituted, therefore preserving the performance
+    // at compile-time whole code of the inline function gets inserted or substituted, therefore preserving the performance
     int g = max_inline(a, b);
 }
 ```
@@ -518,7 +585,7 @@ int main(){
 **Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
 {: .notice--warning}
 
-## Default Func
+# Default arguments
 
 ```cpp
 int sum(int a[], int size, int start = 0){
@@ -534,7 +601,7 @@ int main(){
 }
 ```
 
-## Constant Variables
+# Constant Variables
 
 ```cpp
 const int i = 10; ✅

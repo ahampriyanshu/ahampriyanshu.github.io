@@ -1,22 +1,20 @@
 ---
-title: "LaTeX Cheatsheet"
-author: Priyanshu Tiwari
-excerpt: Guide to mathematical symbols and expressions in latex
-categories:
-  - cheatsheet
-  - latex
-tags:
-  - mathematical
-  - expressions
-  - latex
-  - guide
-  - cheatsheet
-  - greek
-  - logical
-  - symbol
+title: "Latex Cheatsheet"
+excerpt: Guide to mathematical symbols and expressions in LaTeX
+image: 
+  thumbnail: /images/tutorial/latex.png
+  caption: "SS of the page"
 ---
 
-This website is using [MathJax v3](https://www.mathjax.org/#gettingstarted) to render LaTeX.
+# What is Latex ?
+
+> [LaTeX](https://www.latex-project.org/) is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation.
+
+# What is MathJax ?
+
+> [MathJax](https://www.mathjax.org/) is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all modern browsers, with built-in support for assistive technology like screen readers.
+
+# Maths Symbol
 
 ## Algebric & logical Symbols
 
@@ -159,13 +157,29 @@ This website is using [MathJax v3](https://www.mathjax.org/#gettingstarted) to r
 | \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
 | \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
 | \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
-
+|
+```
+\alpha=\begin{cases}
+x^2, & x \ge 0 \\
+\sqrt{x}, & x < 0
+\end{cases}
+```
+|
 $$
 \alpha=\begin{cases}
 x^2, & x \ge 0 \\
 \sqrt{x}, & x < 0
 \end{cases}
 $$
+|
+
+```
+\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i \\
+\end{pmatrix}
+```
 
 $$
 \begin{pmatrix}

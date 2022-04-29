@@ -64,12 +64,23 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:path/
+
 # Front Matter Defaults
 defaults:
   # Posts defaults
   - scope:
       path: "_posts"
       type: posts
+    values:
+      layout: post
+      share: true
+  - scope:
+      path: "_tutorials"
+      type: tutorials
     values:
       layout: post
       share: true
