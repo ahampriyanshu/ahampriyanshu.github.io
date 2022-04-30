@@ -14,13 +14,15 @@ tags:
 
 # Recursion
 
-When a function calls itself. Recursion can cause **segmentation fault** in c++ or **stack overflow** in java, if base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). It is memory consuming but easier(and sometimes more natural) to implement.
+Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow, if base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). 
+
+A program/algo based on recursive approach is memory consuming but easier(and sometimes more natural) to implement when compared to the iterative solution.
 
 ## Tail Recursion
 
 When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are memory-friendly in modern compiler as the compiler replaces the recursive call with ``GOTO`` statement. Hence, no extra memory is needed to store the previous function in the stack.
 
-* Augmented recursion
+* No-Tail recursion
 
 ```cpp
 int fact(int n)
@@ -73,10 +75,10 @@ Implement deci_to_bin(n), which prints the binary representation of a +ve intege
 
 ```cpp
 void deci_to_bin(int n) {
-  if(n==10)
+  if(n==0)
   return;
   func(n/2);
-  cout << n << " ";
+  cout << n%2;
 }
 ```
 
@@ -141,7 +143,7 @@ void print(int N, int i = 1)
 
 ## Count digits in an integer
 
-Count the number of digits in a long integer entered by a user.
+Count the number of digits in an integer.
 
 ```cpp
 int countDigit(long long n)
@@ -149,6 +151,19 @@ int countDigit(long long n)
     if (n/10 == 0)
         return 1;
     return 1 + countDigit(n / 10);
+}
+```
+
+## Sum of digits in an integer
+
+Return the sum of digits of an integer.
+
+```cpp
+int sum(long long n)
+{
+    if (n <= 9)
+        return n;
+    return n%10 + sum(n / 10);
 }
 ```
 
@@ -263,5 +278,52 @@ bool isPalindrome(string s, int i){
 
     return s[i] == s[s.size()-i-1] && isPalindrome(s, i+1) ;
     
+}
+```
+
+## Subset Sums
+
+Given a list arr of N integers, print sums of all subsets in it.
+
+* [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
+
+```cpp
+class Solution
+{
+public:
+
+    void solve(int index, int sum, int N, vector<int> &arr, vector<int> &ans)
+    {
+        if(index == N){
+            ans.push_back(sum);
+            return;
+        }
+        
+        solve(index+1, sum + arr[index], N, arr, ans);
+        solve(index+1, sum, N, arr, ans);
+    }
+
+    vector<int> subsetSums(vector<int> arr, int N)
+    {
+        vector<int> ans;
+        solve(0, 0, N, arr, ans);
+        return ans;
+    }
+};
+```
+
+##  
+
+```cpp
+int josephus(int n, int k)
+{
+    if (n == 1)
+        return 1;
+    else
+        /* The position returned by josephus(n - 1, k)
+        is adjusted because the recursive call
+        josephus(n - 1, k) considers the
+        original position k % n + 1 as position 1 */
+        return (josephus(n - 1, k) + k - 1) % n + 1;
 }
 ```

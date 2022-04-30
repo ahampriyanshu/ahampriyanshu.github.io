@@ -1,9 +1,10 @@
 ---
 title: "Latex Cheatsheet"
+author: Priyanshu Tiwari
 excerpt: Guide to mathematical symbols and expressions in LaTeX
 image: 
-  thumbnail: /images/tutorial/latex.png
-  caption: "SS of the page"
+  thumbnail: /images/tutorials/latex.png
+  caption: "latex"
 ---
 
 # What is Latex ?
