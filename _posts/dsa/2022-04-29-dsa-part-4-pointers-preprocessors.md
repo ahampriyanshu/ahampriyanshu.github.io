@@ -585,7 +585,9 @@ int main(){
 **Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
 {: .notice--warning}
 
-# Default arguments
+# Default Arguments
+
+It allows a function to be called without providing one or more trailing arguments.
 
 ```cpp
 int sum(int a[], int size, int start = 0){
@@ -600,6 +602,9 @@ int main(){
   cout << sum(a, 20, 5) << endl;
 }
 ```
+
+**Note**: As of now, Java does not support default arguments.
+{: .notice--warning}
 
 # Constant Variables
 

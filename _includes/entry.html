@@ -19,7 +19,7 @@
         {% assign entry_image = entry_image | relative_url %}
       {% endunless %}
       {% assign entry_image = entry_image | escape %}
-      <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
+      <img class="entry-image u-photo" src="{{ entry_image }}" alt=" {{ entry.image.caption }} ">
     {% endif %}
   </header>
   {% unless page.show_excerpts == false %}

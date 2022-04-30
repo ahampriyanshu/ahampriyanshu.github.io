@@ -10,17 +10,21 @@ tags:
   - 'is_sorted()'
   - 'fibonacci series'
   - 'subset'
+  - 'powerset'
+  - josephus'
+  - 'tower of hanoi'
+  - 'check palindrome'
 ---
 
 # Recursion
 
-Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow, if base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). 
+Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow if the base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). 
 
-A program/algo based on recursive approach is memory consuming but easier(and sometimes more natural) to implement when compared to the iterative solution.
+A program/algo based on a recursive approach is memory-consuming but easier(and sometimes more natural, i.e. DFS, BFS, MergeSort) to implement when compared to the iterative solution.
 
 ## Tail Recursion
 
-When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are memory-friendly in modern compiler as the compiler replaces the recursive call with ``GOTO`` statement. Hence, no extra memory is needed to store the previous function in the stack.
+When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are as the compiler replaces the recursive call with the ``GOTO`` statement. Hence, no extra memory is needed to store the previous function in the stack.
 
 * No-Tail recursion
 
@@ -227,7 +231,7 @@ Given an array of length N and an integer x, you need to find and return the fir
 
 ```cpp
 int firstIndex(int input[], int size, int x) {
-	if(size == 0) return -1;
+    if(size == 0) return -1;
     if(input[0] == x) return 0;
     int ans = firstIndex(input+1, size-1, x);
     if(ans != -1) return ans + 1;
@@ -266,6 +270,27 @@ int indexes(int input[], int size, int x, int output[]){
 }
 ```
 
+## Tower Of Hanoi
+
+The tower of Hanoi is a famous puzzle where we have three rods and N disks. The objective of the puzzle is to move the entire stack to another rod. You are given the number of discs N. Initially, these discs are in rod 1. You need to print all the steps of the discs movement so that all the discs reach the 3rd rod.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1/)
+
+```cpp
+long long toh(int N, int from, int to, int aux) {
+
+        long long count=0;
+        if(N==0) return 0;
+       
+        count += toh(N-1 , from , aux , to);
+        cout<<"move disk "<<N<<" from rod "<<from<<" to rod "<<to<<endl;
+        count += toh(N-1 , aux, to , from);
+        
+         return ++count;
+         
+    }
+```
+
 ## Check Palindrome
 
 Given a string, write a recursive function that checks if the given string is a palindrome, else, not a palindrome.
@@ -285,22 +310,22 @@ bool isPalindrome(string s, int i){
 
 Given a list arr of N integers, print sums of all subsets in it.
 
-* [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
+* [Practice](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
 
 ```cpp
 class Solution
 {
 public:
 
-    void solve(int index, int sum, int N, vector<int> &arr, vector<int> &ans)
+    void subset(int index, int sum, int N, vector<int> &arr, vector<int> &ans)
     {
         if(index == N){
             ans.push_back(sum);
             return;
         }
         
-        solve(index+1, sum + arr[index], N, arr, ans);
-        solve(index+1, sum, N, arr, ans);
+        subset(index+1, sum + arr[index], N, arr, ans);
+        subset(index+1, sum, N, arr, ans);
     }
 
     vector<int> subsetSums(vector<int> arr, int N)
@@ -312,18 +337,54 @@ public:
 };
 ```
 
-##  
+## Josephus Problem
+
+N people are standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom. Given the total number of person n and a number k which indicates that k-1 persons are skipped and the kth person is killed in the circle. The task is to choose the place in the initial circle so that you are the last one remaining and so survive.
+
+* [Practice](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)
 
 ```cpp
 int josephus(int n, int k)
 {
     if (n == 1)
         return 1;
-    else
-        /* The position returned by josephus(n - 1, k)
-        is adjusted because the recursive call
-        josephus(n - 1, k) considers the
-        original position k % n + 1 as position 1 */
-        return (josephus(n - 1, k) + k - 1) % n + 1;
+    return (josephus(n - 1, k) + k - 1) % n + 1;
+}
+```
+
+## Generate powerset
+
+Given a set represented as a string, write a recursive code to print all subsets of it. The subsets can be printed in any order. 
+
+* [Practice](https://www.geeksforgeeks.org/recursive-program-to-generate-power-set/)
+
+<div class="mermaid">
+graph TD;
+    A-->B["∅"];
+    A-->C["A"];
+    B-->D["∅"];
+    B-->E["B"];
+    C-->F["A"];
+    C-->G["AB"];
+    D-->H["∅"];
+    D-->I["C"];
+    E-->J["B"];
+    E-->K["BC"];
+    F-->L["A"];
+    F-->M["AC"];
+    G-->N["AB"];
+    G-->O["ABC"];
+</div>
+
+```cpp
+void powerset(string str, string curr = "", int index = 0,)
+{
+    if(index == str.length()){
+        cout << curr << " ";
+        return;
+    }
+        
+    powerset(str,curr,index+1,);
+    powerset(str, curr + s[i], sum,index+1,);
 }
 ```
