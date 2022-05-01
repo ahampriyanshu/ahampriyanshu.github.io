@@ -5,7 +5,7 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, matrix]
 ---
 
-### Search a node in BST
+#### Search a node in BST
 
 Given a matrix of size r*c. Traverse the matrix in spiral form.
 

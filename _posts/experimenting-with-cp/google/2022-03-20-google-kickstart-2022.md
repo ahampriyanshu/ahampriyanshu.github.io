@@ -6,25 +6,25 @@ excerpt: C++ Solutions to Google Kickstart, 2022.
 tags: [live, contest, online, qualification, round, google, hashcode]
 ---
 
-# Problem A
+## Problem A
 
-## Description
+### Description
 
 Ada gives John a positive integer N. She challenges him to construct a new number (without leading zeros), that is a multiple of 9, by inserting exactly one digit (0 … 9) anywhere in the given number N. It is guaranteed that N does not have any leading zeros.
 
 As John prefers smaller numbers, he wants to construct the smallest such number possible. Can you help John?
 
-## Input
+### Input
 
 The first line of the input gives the number of test cases, T. T test cases follow.
 
 Each test case has a single line containing a positive integer N: the number Ada gives John.
 
-## Output
+### Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the new number constructed by John. As mentioned earlier, y cannot have leading zeros.
 
-## Solution
+### Solution
 
 ```cpp
 #include <bits/stdc++.h>
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-# Problem B
+## Problem B
 
-### Description
+#### Description
 
 Barbara is a speed typer. In order to check her typing speed, she performs a speed test. She is given a string I that she is supposed to type.
 
@@ -87,17 +87,17 @@ Now she wonders how many extra letters she needs to delete in order to get I fro
 
 Help Barbara find out how many extra letters she needs to remove in order to obtain I or if I cannot be obtained from P by removing letters then output IMPOSSIBLE.
 
-## Input
+### Input
 
 The first line of the input gives the number of test cases, T. T test cases follow.
 
 Each test case has 2 lines. The first line of each test case is an input string I (that denotes the string that the typing test has provided). The next line is the produced string P (that Barbara has entered).
 
-## Output
+### Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the number of extra letters that need to be removed in order to obtain I. If it is not possible to obtain I then output IMPOSSIBLE as y.
 
-## Solution
+### Solution
 
 ```cpp
 #include <bits/stdc++.h>

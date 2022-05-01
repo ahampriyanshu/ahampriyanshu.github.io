@@ -11,9 +11,9 @@ All of the submissions for InfyTQ Certification Round, February 2022.
 > All the submissions are posted once the examination was already over.
 {: .notice--warning}
 
-## Morning Shift : 8 Feb
+### Morning Shift : 8 Feb
 
-### Problem 1
+#### Problem 1
 
 Consider the following inputs:
 
@@ -80,7 +80,7 @@ class Main
 }
 ```
 
-### Problem 2
+#### Problem 2
 
 Given a non-empty array of integers inarr, identify and print an integer outnum based on the below logic:
 
@@ -140,9 +140,9 @@ class Main
 }
 ```
 
-## Evening Shift : 8 Feb
+### Evening Shift : 8 Feb
 
-### Problem 1
+#### Problem 1
 
 Consider two non-empty input strings of alphabets instr1, instr2 and a non zero positive integer innum.Generate and print the output string outstr based on the below logic:
 
@@ -212,7 +212,7 @@ public class myCode {
 
 ![Results](/images/cp/misc/infytq-08-01.jpg)
 
-### Problem 2
+#### Problem 2
 
 Consider a non-empty string instr consisting of only lower-case alphabets. Identify and print the string outstr, based on the below logic:
 

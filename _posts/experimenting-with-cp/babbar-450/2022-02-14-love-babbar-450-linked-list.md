@@ -5,7 +5,7 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, string]
 ---
 
-## Reverse a string
+### Reverse a string
 
 The task is to complete the function reverseList() with head reference as the only argument and should return new head after reversing the list.
 
@@ -33,7 +33,7 @@ class Solution
     
 ```
 
-## Reverse a Linked List in groups of given size
+### Reverse a Linked List in groups of given size
 
 Given a linked list of size N. The task is to reverse every k nodes (where k is an input to the function) in the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should be considered as a group and must be reversed (See Example 2 for clarification).
 
@@ -65,13 +65,13 @@ class Solution
 };
 ```
 
-## Detect Loop in linked list
+### Detect Loop in linked list
 
 Given a linked list of N nodes. The task is to check if the linked list has a loop. Linked list can contain self loop.
 
 * [GFG](https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1)
 
-### Brute
+#### Brute
 
 ```cpp
 class Solution
@@ -92,7 +92,7 @@ class Solution
 };
 ```
 
-### Optimal
+#### Optimal
 
 ```cpp
 class Solution
@@ -113,7 +113,7 @@ class Solution
 };
 ```
 
-## Nth node from end of linked list
+### Nth node from end of linked list
 
 Given a linked list consisting of L nodes and given a number N. The task is to find the Nth node from the end of the linked list.
 

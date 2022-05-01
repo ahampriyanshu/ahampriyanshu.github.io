@@ -6,9 +6,9 @@ excerpt: C++ Solutions to April Leetcoding Challenge, 2022.
 tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-# Week 1
+## Week 1
 
-## 1 March | 344. Reverse String
+### 1 March | 344. Reverse String
 
 Write a function that reverses a string. The input string is given as an array of characters s.
 
@@ -27,7 +27,7 @@ public:
 };
 ```
 
-## 2 March | 680. Valid Palindrome II
+### 2 March | 680. Valid Palindrome II
 
 Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
@@ -93,7 +93,7 @@ public:
 ```
 
 
-## 3 March | 680. Valid Palindrome II
+### 3 March | 680. Valid Palindrome II
 
 A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
 
@@ -156,7 +156,7 @@ public:
 };
 ```
 
-## 4 March | 680. Valid Palindrome II
+### 4 March | 680. Valid Palindrome II
 
 You are given the head of a linked list, and an integer k.
 
@@ -184,7 +184,7 @@ public:
 };
 ```
 
-## 5 March | 11. Container With Most Water
+### 5 March | 11. Container With Most Water
 
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 

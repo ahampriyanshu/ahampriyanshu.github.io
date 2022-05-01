@@ -16,13 +16,13 @@ tags:
   - 'check palindrome'
 ---
 
-# Recursion
+## Recursion
 
 Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow if the base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). 
 
 A program/algo based on a recursive approach is memory-consuming but easier(and sometimes more natural, i.e. DFS, BFS, MergeSort) to implement when compared to the iterative solution.
 
-## Tail Recursion
+### Tail Recursion
 
 When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are as the compiler replaces the recursive call with the ``GOTO`` statement. Hence, no extra memory is needed to store the previous function in the stack.
 
@@ -52,16 +52,16 @@ int fact(int n, int k)
 
 **Space Complexity:** $O(1)$
 
-## Tail vs Non-Tail
+### Tail vs Non-Tail
 
 | Tail | Non-Tail |
 | -- | -- |
 | Quick Sort | Merge Sort |
 | Inorder, Preorder Traversal | Postorder Traversal |
 
-# Problems
+## Problems
 
-## Implement $log_2n$
+### Implement $log_2n$
 
 Implement log2(n), which calculates floor of $log_2n$.
 
@@ -73,7 +73,7 @@ int log2(int n) {
 }
 ```
 
-## Implement deci_to_bin
+### Implement deci_to_bin
 
 Implement deci_to_bin(n), which prints the binary representation of a +ve integer.
 
@@ -86,7 +86,7 @@ void deci_to_bin(int n) {
 }
 ```
 
-## Implement Pow(x, n)
+### Implement Pow(x, n)
 
 Implement pow(x, n), which calculates x raised to the power n (i.e., x<sup>n</sup>).
 
@@ -102,7 +102,7 @@ double myPow(double x, int n) {
 }
 ```
 
-## Print N to 1
+### Print N to 1
 
 You are given an integer N. Print numbers from N to 1 without the help of loops.
 
@@ -117,7 +117,7 @@ void print(int N)
 }
 ```
 
-## Print 1 to N
+### Print 1 to N
 
 You are given an integer N. Print numbers from 1 to N without the help of loops.
 
@@ -132,7 +132,7 @@ void print(int N)
 }
 ```
 
-## Tail Recursive Approach
+### Tail Recursive Approach
 
 ```cpp
 void print(int N, int i = 1)
@@ -145,7 +145,7 @@ void print(int N, int i = 1)
 }
 ```
 
-## Count digits in an integer
+### Count digits in an integer
 
 Count the number of digits in an integer.
 
@@ -158,7 +158,7 @@ int countDigit(long long n)
 }
 ```
 
-## Sum of digits in an integer
+### Sum of digits in an integer
 
 Return the sum of digits of an integer.
 
@@ -171,7 +171,7 @@ int sum(long long n)
 }
 ```
 
-## Sum of n natural numbers
+### Sum of n natural numbers
 
 Return sum of n natural numbers using recursion.
 
@@ -184,7 +184,7 @@ int sum(int n)
 }
 ```
 
-## Fibonacci Series
+### Fibonacci Series
 
 Print fibonacci numbers till n.
 
@@ -197,7 +197,7 @@ int fib(int n)
 }
 ```
 
-## Implement is_sorted()
+### Implement is_sorted()
 
 Implement is_sorted() for array of integers.
 
@@ -212,7 +212,7 @@ bool is_sorted(int a[], int size){
 }
 ```
 
-## Sum of array
+### Sum of array
 
 Given an array of length N, you need to find and return the sum of all elements of the array.
 
@@ -225,7 +225,7 @@ int sum(int a[], int size){
 }
 ```
 
-## First Index of Number
+### First Index of Number
 
 Given an array of length N and an integer x, you need to find and return the first index of integer x present in the array. Return -1 if it is not present in the array.
 
@@ -239,7 +239,7 @@ int firstIndex(int input[], int size, int x) {
 }
 ```
 
-## Last Index of Number
+### Last Index of Number
 
 Given an array of length N and an integer x, you need to find and return the last index of integer x present in the array. Return -1 if it is not present in the array.
 
@@ -254,7 +254,7 @@ int lastIndex(int input[], int size, int x){
 }
 ```
 
-## All Indices of Number
+### All Indices of Number
 
 Given an array of length N and an integer x, you need to find all the indexes where x is present in the input array. Save all the indexes in an array (in increasing order).
 
@@ -270,7 +270,7 @@ int indexes(int input[], int size, int x, int output[]){
 }
 ```
 
-## Tower Of Hanoi
+### Tower Of Hanoi
 
 The tower of Hanoi is a famous puzzle where we have three rods and N disks. The objective of the puzzle is to move the entire stack to another rod. You are given the number of discs N. Initially, these discs are in rod 1. You need to print all the steps of the discs movement so that all the discs reach the 3rd rod.
 
@@ -291,7 +291,7 @@ long long toh(int N, int from, int to, int aux) {
     }
 ```
 
-## Check Palindrome
+### Check Palindrome
 
 Given a string, write a recursive function that checks if the given string is a palindrome, else, not a palindrome.
 
@@ -306,7 +306,7 @@ bool isPalindrome(string s, int i){
 }
 ```
 
-## Subset Sums
+### Subset Sums
 
 Given a list arr of N integers, print sums of all subsets in it.
 
@@ -337,7 +337,7 @@ public:
 };
 ```
 
-## Josephus Problem
+### Josephus Problem
 
 N people are standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom. Given the total number of person n and a number k which indicates that k-1 persons are skipped and the kth person is killed in the circle. The task is to choose the place in the initial circle so that you are the last one remaining and so survive.
 
@@ -347,12 +347,12 @@ N people are standing in a circle waiting to be executed. The counting out begin
 int josephus(int n, int k)
 {
     if (n == 1)
-        return 1;
-    return (josephus(n - 1, k) + k - 1) % n + 1;
+        return 0;
+    return (josephus(n - 1, k) + k) % n;
 }
 ```
 
-## Generate powerset
+### Generate powerset
 
 Given a set represented as a string, write a recursive code to print all subsets of it. The subsets can be printed in any order. 
 
@@ -387,4 +387,42 @@ void powerset(string str, string curr = "", int index = 0,)
     powerset(str,curr,index+1,);
     powerset(str, curr + s[i], sum,index+1,);
 }
+```
+
+
+### All permutation
+
+A permutation also called an “arrangement number” or “order,” is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has n! permutation. 
+
+* [Practice](https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/)
+
+<div class="mermaid">
+graph TD;
+    A["ABC"]-->B["ABC"];
+    A-->C["BAC"];
+    A-->D["CBA"];
+    B-->E["ABC"];
+    B-->F["ACB"];
+    C-->G["BAC"];
+    C-->H["BCA"];
+    D-->J["CBA"];
+    D-->K["CAB"];
+</div>
+
+```cpp
+void find_permutation(string s, int i=0)
+		{
+		    
+		    if(i == s.length()-1){
+		        cout << s << " ";
+                return;
+		    }
+		        
+		    for(int j=i; j<s.length(); j++){
+		        swap(s[i], s[j]);
+		        find_permutation(s, i+1); 
+		        swap(s[i], s[j]);
+		    }
+	        return ans;
+		}
 ```

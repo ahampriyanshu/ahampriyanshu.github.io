@@ -13,7 +13,7 @@ tags:
   - 'sort'
 ---
 
-## Merge Sort
+### Merge Sort
 
 Merge sort is a divide-and-conquer, comparison-based sorting algorithm.
 
@@ -72,7 +72,7 @@ void mergeSort(int *arr, int start, int end) {
 **Worst-case space complexity :** $O(n)$ 
 
 
-## Aggressive Cows
+### Aggressive Cows
 
 Given an array of length ‘N’, where each element denotes the position of a stall. Now you have ‘N’ stalls and an integer ‘K’ which denotes the number of cows that are aggressive. To prevent the cows from hurting each other, you need to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible. Return the largest minimum distance.
 
@@ -120,7 +120,7 @@ int aggressiveCows(vector<int> &stalls, int k)
 }
 ```
 
-## Variation 
+### Variation 
 
 We say that two integers x and y have a variation of at least K, if x − y ≥ K (the absolute value of their difference is at least K). Given a sequence of N integers a1,a2,...,aN and K, the total variation count is the number of pairs of elements in the sequence with variation at least K.
 
@@ -154,7 +154,7 @@ int main() {
 }
 ```
 
-## Count Inversions 
+### Count Inversions 
 
 For an array, inversion count indicates how far (or close) the array is from being sorted. If array is already sorted then the inversion count is 0. If an array is sorted in the reverse order then the inversion count is the maximum. 
 
@@ -209,7 +209,7 @@ class Solution{
 };
 ```
 
-## Chef Restaurant 
+### Chef Restaurant 
 
 Chef is a cook and he has recently opened a restaurant.
 
@@ -261,7 +261,7 @@ For each person, calculate how long they have to wait (possibly 0 time), or dete
 ```
 
 
-## Murder
+### Murder
 
 Once detective Saikat was solving a murder case. While going to the crime scene he took the stairs and saw that a number is written on every stair. He found it suspicious and decides to remember all the numbers that he has seen till now. While remembering the numbers he found that he can find some pattern in those numbers. So he decides that for each number on the stairs he will note down the sum of all the numbers previously seen on the stairs which are smaller than the present number. Calculate the sum of all the numbers written on his notes diary.
 
@@ -320,7 +320,7 @@ int t;
 }
 ```
 
-##  Distribute Candies
+###  Distribute Candies
 
 Shaky has N (1<=N<=50000) candy boxes each of them contains a non-zero number of candies (between 1 and 1000000000). Shaky want to distibute these candies among his K (1<=K<=1000000000) IIIT-Delhi students. He want to distibute them in a way such that:
 * All students get equal number of candies.
@@ -364,7 +364,7 @@ int main() {
 }
 ```
 
-## Momos Market
+### Momos Market
 
 Shreya loves to eat momos. Her mother gives her money to buy vegetables but she manages to save some money out of it daily. After buying vegetables, she goes to "Momos Market", where there are ‘n’ number of shops of momos. Each of the shops of momos has a rate per momo. She visits the market and starts buying momos (one from each shop) starting from the first shop. She will visit the market for ‘q’ days. You have to tell that how many momos she can buy each day if she starts buying from the first shop daily. She cannot use the remaining money of one day on some other day. But she will save them for other expenses in the future, so, you also need to tell the sum of money left with her at the end of each day.
 
@@ -411,7 +411,7 @@ int arr[n];
 }
 ```
 
-##  Taj Mahal Entry
+###  Taj Mahal Entry
 
 Taj Mahal is one of the seven wonders of the world. Aahad loves to travel places and wants to visit Taj Mahal. He visited Agra to view Taj Mahal. There is a ticketing system at Taj Mahal. There are total ‘n’ windows which provide the tickets to get entry into Taj Mahal. There are ‘Ai’ people already present at each window to get the tickets. Each window gives ticket to one person in one minute. Initially, Aahad stands in front of the first window. After each minute, if he didn’t get the ticket, he moves on to the next window to get the ticket. If he is at window 1, he will move to 2. If at 2nd, he will move to 3rd. If he is at last window, he will move to 1st again and so on. Find the window number at which he will get the ticket.
 

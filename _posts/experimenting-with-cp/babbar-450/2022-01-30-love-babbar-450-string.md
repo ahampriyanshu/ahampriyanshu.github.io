@@ -5,12 +5,12 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, string]
 ---
 
-## Problem 1: Reverse a string
+### Problem 1: Reverse a string
 
 Write a function that reverses a string. The input string is given as an array of characters s.
 * [Leetcode](https://leetcode.com/problems/reverse-string/)
 
-### Worst/ Better
+#### Worst/ Better
 
 Loop through the string from the back and store the elements in a new string.
 
@@ -18,7 +18,7 @@ Loop through the string from the back and store the elements in a new string.
 
 **Space Complexity:** $ O(n) $
 
-### Optimal 
+#### Optimal 
 
 Make two pointers pointing towards the extreme ends and swap till the front < rear.
 
@@ -40,12 +40,12 @@ public:
 };
 ```
 
-## Problem 2: Check for palindrome
+### Problem 2: Check for palindrome
 
 Given a string S, check if it is palindrome or not.
 * [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/palindrome-string0817/1)
 
-### Worst/ Better/Optimal 
+#### Worst/ Better/Optimal 
 
 Make two pointers pointing towards the extreme ends and check if ch[front] == ch[rear] till the front < rear.
 
@@ -67,11 +67,11 @@ public:
 };
 ```
 
-## Problem 3: Print duplicates
+### Problem 3: Print duplicates
 
 Print all the duplicates in the input string.
 
-### Worst/Better/Optimal 
+#### Worst/Better/Optimal 
 
 Either create a hash-array or a hash-map.
 
@@ -79,19 +79,19 @@ Either create a hash-array or a hash-map.
 
 **Space Complexity:** $ O(k) $ (number of distinct characters)
 
-## Problem 4: Subjective
+### Problem 4: Subjective
 
 Why String is Immutable or Final in Java
 * [Stack Overflow](https://stackoverflow.com/a/48840927/15876098)
 * [Baeldng](https://www.baeldung.com/java-string-immutable)
 
-## Problem 5: To check if strings are rotations of each other or not
+### Problem 5: To check if strings are rotations of each other or not
 
 Given a string s1 and a string s2, write a snippet to say whether s2 is a rotation of s1? Given s1 = ABCD and s2 = CDAB, return true, given s1 = ABCD, and s2 = ACBD , return false.
 
 * [Geeks For Geeks](https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1)
 
-### Using substr
+#### Using substr
 
 ```cpp
 bool solve(string s1,string s2){
@@ -106,7 +106,7 @@ bool solve(string s1,string s2){
 
 **Space Complexity:** $ O(1) $
 
-### Using queue
+#### Using queue
 
 ```cpp
 bool solve(string s1, string s2)

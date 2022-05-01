@@ -7,17 +7,17 @@ image:
   caption: "latex"
 ---
 
-# What is Latex ?
+## What is Latex ?
 
 > [LaTeX](https://www.latex-project.org/) is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation.
 
-# What is MathJax ?
+## What is MathJax ?
 
 > [MathJax](https://www.mathjax.org/) is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all modern browsers, with built-in support for assistive technology like screen readers.
 
-# Maths Symbol
+## Maths Symbol
 
-## Algebric & logical Symbols
+### Algebric & logical Symbols
 
 | Latex | Result |
 | :-- | :-- |
@@ -107,7 +107,7 @@ image:
 | \cup  | $ \cup  $ |
 | \cap  | $ \cap  $ |
 
-## Greek Symbols
+### Greek Symbols
 
 | Latex | Result |
 | :-- | :-- |
@@ -136,7 +136,7 @@ image:
 | \Psi, \psi | $ \Psi, \psi $ |
 | \Omega, \omega | $ \Omega, \omega $ |
 
-## Arrows Symbols
+### Arrows Symbols
 
 | Latex | Result |
 | :-- | :-- |
@@ -148,7 +148,7 @@ image:
 | \Leftrightarrow | $ \Leftrightarrow $ |
 | \circlearrowleft | $ \circlearrowleft $ |
 
-## Function Notation
+### Function Notation
 
 | Latex | Result |
 | :-- | :-- |
@@ -158,21 +158,21 @@ image:
 | \bigcap_{i=1}^{n} A_i | $ \bigcap_{i=1}^{n} A_i $ |
 | \cos(\pi) + i \sin(\pi) | $ \cos(\pi) + i \sin(\pi) $ |
 | \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx | $ \lim_{x \to \infty} \int_1^x \frac{1}{x}\,dx $ |
-|
+
+
 ```
 \alpha=\begin{cases}
 x^2, & x \ge 0 \\
 \sqrt{x}, & x < 0
 \end{cases}
 ```
-|
+
 $$
 \alpha=\begin{cases}
 x^2, & x \ge 0 \\
 \sqrt{x}, & x < 0
 \end{cases}
 $$
-|
 
 ```
 \begin{pmatrix}

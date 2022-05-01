@@ -7,9 +7,9 @@ image:
   caption: "linux omz"
 ---
 
-# Making Linux Terminal Awesome
+## Making Linux Terminal Awesome
 
-## [Zsh](https://www.zsh.org/)
+### [Zsh](https://www.zsh.org/)
 
 > The Z-shell or Zsh is an UNIX shell with support for various plugins and themes.
 
@@ -21,7 +21,7 @@ sudo dnf install zsh      [ Fedora ]
 sudo zypper install zsh   [ OpenSUSE ]
 ```
 
-## [Oh My Zsh](https://ohmyz.sh/)
+### [Oh My Zsh](https://ohmyz.sh/)
 
 > Oh My Zsh is an open source and community-driven framework for managing Zsh configuration.
 
@@ -32,7 +32,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 ![2](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/2.png)
 
-## Nerd Fonts
+### Nerd Fonts
 
 > Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons)
 
@@ -41,7 +41,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 ![3](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/3.png)
 
-## [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+### [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 > Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
@@ -58,7 +58,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 tags:
   - 'data structures and algorithms'2](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/2.gif)
 
-## [zsh-autosuggestions](https://github.com/marlonrichert/zsh-autosuggestions)
+### [zsh-autosuggestions](https://github.com/marlonrichert/zsh-autosuggestions)
 
 > Real-time type-ahead completion for Zsh. Asynchronous find-as-you-type autocompletion.
 
@@ -71,7 +71,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ![3](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/3.gif)
 
-## [zsh-syntaxhighlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+### [zsh-syntaxhighlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 > This package provides syntax highlighting for the shell zsh. It enables highlighting of commands whilst they are typed at a zsh prompt into an interactive terminal. This helps in reviewing commands before running them, particularly in catching syntax errors.
 
@@ -84,7 +84,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ![4](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/4.gif)
 
-## [fzf](https://github.com/junegunn/fzf)
+### [fzf](https://github.com/junegunn/fzf)
 
 >It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 
@@ -103,7 +103,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 ![7](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/7.gif)
 
-# If you use VS Code
+## If you use VS Code
 
 * Paste this into ``setting.json`` to render all the glyphs-icons in the integrated-terminal.
 ```
@@ -115,7 +115,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 }
 ```
  
-# To use ``bash`` again
+## To use ``bash`` again
 
 * For a single session : ``bash``
 * To make bash the default terminal : `` chsh -s $(which bash) ``

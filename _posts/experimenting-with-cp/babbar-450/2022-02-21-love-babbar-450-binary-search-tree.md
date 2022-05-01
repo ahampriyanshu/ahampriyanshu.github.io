@@ -5,7 +5,7 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, binary, search, tree]
 ---
 
-### Search a node in BST
+#### Search a node in BST
 
 Given a Binary Search Tree and a node value X, find if the node with value X is present in the BST or not.
 

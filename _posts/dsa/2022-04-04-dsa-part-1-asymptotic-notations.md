@@ -9,22 +9,22 @@ tags:
   - 'c++'
 ---
 
-# Asymptotic Notations
+## Asymptotic Notations
 
 Time taken by a program is always +ve.
 Input provided is also always +ve.
 
 Hence, analysis of an algorrithm is done always in the first quadrant.
 
-## Big-O Notation
+### Big-O Notation
 
-## Big-Ω Notation
+### Big-Ω Notation
 
-## Big-Θ Notation
+### Big-Θ Notation
 
-# Complexity analysis of a problem
+## Complexity analysis of a problem
 
-## Steps to approach a problem
+### Steps to approach a problem
 
 * Read lengthy and unusual paragraphs to decode the problem statement.
 * Observe the input format.
@@ -39,11 +39,11 @@ Hence, analysis of an algorrithm is done always in the first quadrant.
 Sometimes instead of reading the problem statement, we can find required logic by observing the pattern in sample input and output.
 {: .notice--info}
 
-## Analyzing given constraints
+### Analyzing given constraints
 
 Conventionally, we can perform 4.10<sup>8</sup> operation in one second.
 
-### Complexity Table
+#### Complexity Table
 
 | N | T.C. |
 | :-- | :-- |
@@ -56,7 +56,7 @@ Conventionally, we can perform 4.10<sup>8</sup> operation in one second.
 | 20 | $O(2^N)$ |
 | 11 | $O(N!)$ |
 
-## Possible verdicts
+### Possible verdicts
 
 * Accpeted
 * Time limit Exceeded

@@ -5,7 +5,7 @@ categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, tree]
 ---
 
-## Level order traversal 
+### Level order traversal 
 
 Given a binary tree, find its level order traversal. Level order traversal of a tree is breadth-first traversal for the tree.
 
@@ -39,7 +39,7 @@ class Solution
 };
 ```
 
-## Reverse Level Order Traversal
+### Reverse Level Order Traversal
 
 Given a binary tree of size N, find its reverse level order traversal. ie- the traversal must begin from the last level.
 
@@ -72,7 +72,7 @@ vector<int> reverseLevelOrder(Node *root)
 }
 ```
 
-## Height of Binary Tree
+### Height of Binary Tree
 
 Given a binary tree, find its height.
 

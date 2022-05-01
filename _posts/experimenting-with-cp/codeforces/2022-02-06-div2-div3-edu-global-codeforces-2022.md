@@ -6,11 +6,11 @@ excerpt: All of my accepted submissions on Codeforces [2022]
 tags: [live, contest, codeforces, div2, div3, educational, global, round]
 ---
 
-# February
+## February
 
-## Round #770 (Div. 2)
+### Round #770 (Div. 2)
 
-### Reverse and Concatenate
+#### Reverse and Concatenate
 
 You are given a string s of length n and a number k. Let's denote by rev(s) the reversed string s (i.e. rev(s)=snsn−1...s1). You can apply one of the two kinds of operations to the string:
 
@@ -53,7 +53,7 @@ int main()
 }
 ```
 
-### Fortune Telling
+#### Fortune Telling
 
 Your friends Alice and Bob practice fortune telling.
 
@@ -118,9 +118,9 @@ int main()
 }
 ```
 
-## Round #771 (Div. 2)
+### Round #771 (Div. 2)
 
-### A. Reverse
+#### A. Reverse
 
 You are given a permutation p1,p2,…,pn of length n. You have to choose two integers l,r (1≤l≤r≤n) and reverse the subsegment [l,r] of the permutation. The permutation will become p1,p2,…,pl−1,pr,pr−1,…,pl,pr+1,pr+2,…,pn.
 
@@ -172,7 +172,7 @@ int main()
 }
 ```
 
-### B. Odd Swap Sort
+#### B. Odd Swap Sort
 
 You are given an array a1,a2,…,an. You can perform operations on the array. In each operation you can choose an integer i (1 ≤ i < n), and swap elements ai and ai+1 of the array, if ai+ai+1 is odd.
 
@@ -227,9 +227,9 @@ int main()
 ```
 
 
-## Round #772 (Div. 2)
+### Round #772 (Div. 2)
 
-### A. Min Or Sum
+#### A. Min Or Sum
 
 You are given an array a of size n.
 
@@ -269,7 +269,7 @@ int main()
 }
 ```
 
-### B. Avoid Local Maximums
+#### B. Avoid Local Maximums
 
 You are given an array a of size n. Each element in this array is an integer between 1 and 109.
 
@@ -329,12 +329,12 @@ int main()
 }
 ```
 
-# March
+## March
 
 
-## Round #755 (Div. 2)
+### Round #755 (Div. 2)
 
-### A. Game
+#### A. Game
 
 You are playing a very popular computer game. The next level consists of n consecutive locations, numbered from 1 to n, each of them containing either land or water. It is known that the first and last locations contain land, and for completing the level you have to move from the first location to the last. Also, if you become inside a location with water, you will die, so you can only move between locations with land.
 
@@ -391,12 +391,12 @@ int main()
 }
 ```
 
-# April
+## April
 
 
-## April Fools Day Contest 2022
+### April Fools Day Contest 2022
 
-### A. Game
+#### A. Game
 
 ![loading](https://espresso.codeforces.com/fbe5755ad6373642cf347efaf5896410a028f4fb.png)
 
@@ -411,7 +411,7 @@ cout << "red panda" << endl;
 }
 ```
 
-### C. Pōja Verdon
+#### C. Pōja Verdon
 
 Aenar has an array a consisting of n integers.
 

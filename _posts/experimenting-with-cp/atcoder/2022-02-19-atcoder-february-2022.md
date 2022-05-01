@@ -6,11 +6,11 @@ excerpt: All of my accepted submissions on Atcoder [2022]
 tags: [live, contest, atcoder, div2, grand]
 ---
 
-# February
+## February
 
-## ABC 239
+### ABC 239
 
-### A - Horizon
+#### A - Horizon
 
 Assuming that the horizon seen from a place x meters above the ground is x(12800000+x) meters away, find how many meters away the horizon seen from a place H meters above the ground is.
 
@@ -39,7 +39,7 @@ int main()
 }
 ```
 
-### B - Integer Division
+#### B - Integer Division
 
 Given an integer X between −10^-18 and 10^18 (inclusive), print ⌊10/X​⌋.
 
@@ -67,7 +67,7 @@ int main()
 }
 ```
 
-### C - Knight Fork
+#### C - Knight Fork
 
 On an xy-coordinate plane, is there a lattice point whose distances from two lattice points (x1, y1) and (x2, y2) are both √5.
 
@@ -100,12 +100,12 @@ int main()
 }
 ```
 
-# March
+## March
 
 
-## ABC 242
+### ABC 242
 
-### A - Horizon
+#### A - Horizon
 
 In a certain programming contest, T-shirts are awarded to participants according to the following rules.
 
@@ -144,7 +144,7 @@ int main()
 }
 ```
 
-### B - Integer Division
+#### B - Integer Division
 
 Given an integer X between −10^-18 and 10^18 (inclusive), print ⌊10/X​⌋.
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-### C - 1111gal password
+#### C - 1111gal password
 
 Given an integer N, find the number of integers X that satisfy all of the following conditions, modulo 998244353.
 
@@ -229,12 +229,12 @@ int main()
 }
 ```
 
-# April
+## April
 
 
-## ABC 246
+### ABC 246
 
-### A - Four Points
+#### A - Four Points
 
 There is a rectangle in the xy-plane. Each edge of this rectangle is parallel to the x- or y-axis, and its area is not zero.
 
@@ -278,7 +278,7 @@ int main()
 ```
 
 
-### B - Get Closer
+#### B - Get Closer
 
 From the point (0,0) in a two-dimensional plane, let us move the distance of 1 toward the point (A,B). Find our coordinates after the move.
 
@@ -312,7 +312,7 @@ int main()
 ```
 
 
-### C - 1111gal password
+#### C - 1111gal password
 
 There are N items in a shop. For each i=1,2,…,N, the price of the i-th item is Ai yen (the currency of Japan).
 

@@ -17,9 +17,9 @@ tags:
   - 'typedef'
 ---
 
-# Pointers
+## Pointers
 
-## Need for pointers
+### Need for pointers
 
 * To store the address of some variables from the symbol table.
 * This address can be retrieved using **&** and is stored in hexadecimal form. Eg : ``0x7ffc40fe4b94``
@@ -63,7 +63,7 @@ cout << *p << endl;
 ```
 
 
-## Pointer arithmetic
+### Pointer arithmetic
 
 * We can use normal arithmetic on pointers too.
 * With each decrement/increment, the pointer now shifts to x data_type bytes and starts pointing to the new location(variable).
@@ -89,7 +89,7 @@ int main(){
 }
 ```
 
-## Pointers and arrays
+### Pointers and arrays
 
 ```cpp
 int main(){
@@ -124,14 +124,14 @@ Hence we can also use
 
 ``a[i] == i[a]`` as ``*(a+i) == *(i+a)``
 
-### Differences b/w array and pointer
+#### Differences b/w array and pointer
 
 1. The basic difference is that the pointer allocates the memory of 8byte when initialized but the arr is nothing but the address of the first of n blocks.
 1. The ``sizeof()`` of operator on an integer pointer with always give 8(or 4) bytes but **sizeof(arr) = sizeof(int)xn**
 1. p and &p are two different things but arr and &arr will give the same output as arr is nothing but the address of the first block.
 1. We can never do `` arr = arr + 3 `` as once array can't be reassigned.
 
-## Characters Pointers
+### Characters Pointers
 
 ```cpp
 #include<bits/stdc++.h>
@@ -176,7 +176,7 @@ char* s2 = "abc";
 While executing the above code, the compiler will first create a temporary space of the string literal and then copy those values to the memory block provided to s1. But s2 points towards the same temporary which can be very dangerous and hence should be avoided.
 {: .notice--warning}
 
-## Pointers and functions
+### Pointers and functions
 
 * Array is always passed as a pointer to a function in c++.
 
@@ -259,7 +259,7 @@ int main(){
 4
 ```
 
-## Pointer to a Pointer: Double Pointers
+### Pointer to a Pointer: Double Pointers
 
 ```cpp
 int main(){
@@ -294,7 +294,7 @@ int main(){
 10
 ```
 
-# Typecasting
+## Typecasting
 
 ```cpp
 #include<bits/stdc++.h>
@@ -331,7 +331,7 @@ A
 
 ```
 
-# Reference Variables
+## Reference Variables
 
 ```cpp
 #include<bits/stdc++.h>
@@ -388,7 +388,7 @@ int &j;
 j = i; ❌
 ```
 
-# Dynamic Allocation
+## Dynamic Allocation
 
 * Stack $\rightarrow$ Static Memmory Allocation
 * Heap $\rightarrow$ Dynamic Memmory Allocation
@@ -420,7 +420,7 @@ int main(){
 }
 ```
 
-## 2D Dynamic Allocation
+### 2D Dynamic Allocation
 
 ```cpp
 
@@ -446,13 +446,13 @@ int main(){
 }
 ```
 
-# Preprocessors
+## Preprocessors
 
 Preprocessors are directives given to a compiler before the compilation begin. These are replaced with some other predefined values.
 
-## Macros
+### Macros
 
-### #define
+#### #define
 
 ```cpp
 #include <iostream>
@@ -482,7 +482,7 @@ int main(){
 }
 ```
 
-### Predefined macros
+#### Predefined macros
 
 | Macro | Usage |
 | -- | -- |
@@ -491,7 +491,7 @@ int main(){
 | __DATE__ | MM DD YY of the time when the program was compiled |
 | __TIME__ | HH:MM:SS of the time when the program was compiled |
 
-### Header files
+#### Header files
 
 tells the compiler to include a file in the source code program.
 
@@ -505,7 +505,7 @@ tells the compiler to include a file in the source code program.
 
 ```
 
-# Typedef
+## Typedef
 
 Typedef keyword is used to assign a new name to an existing data type. Unlike #define macros, it is terminated by a semi-colon(;) and is interpreted by the compiler during compile time.
 
@@ -514,7 +514,7 @@ typedef long long ll;
 typedef unsigned int positive_integer;
 ```
 
-# Global variables
+## Global variables
 
 ```cpp
 #include<bits/stdc++.h>
@@ -546,7 +546,7 @@ int main(){
 }
 ```
 
-# Inline functions
+## Inline functions
 
 ```cpp
 #include<bits/stdc++.h>
@@ -585,7 +585,7 @@ int main(){
 **Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
 {: .notice--warning}
 
-# Default Arguments
+## Default Arguments
 
 It allows a function to be called without providing one or more trailing arguments.
 
@@ -606,7 +606,7 @@ int main(){
 **Note**: As of now, Java does not support default arguments.
 {: .notice--warning}
 
-# Constant Variables
+## Constant Variables
 
 ```cpp
 const int i = 10; ✅

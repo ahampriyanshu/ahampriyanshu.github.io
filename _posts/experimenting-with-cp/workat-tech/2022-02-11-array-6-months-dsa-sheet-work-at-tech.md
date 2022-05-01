@@ -6,7 +6,7 @@ categories: [Sheets, DSA]
 tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon, VMware, Meta, Amazon, D. E. Shaw, Facebook, Goldman Sachs, Google, Ola, PayPal, PayU, Samsung, Teradata, Visa, Yahoo]
 ---
 
-## Cumulative Sum
+### Cumulative Sum
 
 The cumulative sum of an array at index i is defined as the sum of all elements of the array from index 0 to index i.
 
@@ -22,7 +22,7 @@ vector<int> getCumulativeSum(vector<int> &arr) {
 }
 ```
 
-## Positive Cumulative Sum
+### Positive Cumulative Sum
 
 The cumulative sum of an array at index i is defined as the sum of all elements of the array from index 0 to index i.
 
@@ -41,13 +41,13 @@ vector<int> getPositiveCumulativeSum(vector<int> &arr) {
 }
 ```
 
-## Identical Twins
+### Identical Twins
 
 For an array of integers nums, an identical twin is defined as pair (i, j) where nums[i] is equal to nums[j] and i < j.
 
 * [Practice](https://workat.tech/problem-solving/practice/identical-twins)
 
-### Constant Space
+#### Constant Space
 
 ```cpp
 int getIdenticalTwinsCount(vector<int> &arr) {
@@ -59,7 +59,7 @@ int getIdenticalTwinsCount(vector<int> &arr) {
 }
 ```
 
-### Linear Time
+#### Linear Time
 
 ```cpp
 int getIdenticalTwinsCount(vector<int> &arr) {
@@ -76,7 +76,7 @@ int getIdenticalTwinsCount(vector<int> &arr) {
 }
 ```
 
-## Even Number of Digits
+### Even Number of Digits
 
 Given an array of integers, find the elements which have an even number of digits.
 
@@ -119,7 +119,7 @@ vector<int> getEvenDigitNumbers(vector<int> &arr) {
 }
 ```
 
-## Implement Insertion Sort
+### Implement Insertion Sort
 
 Given an array, sort it using insertion sort.
 
@@ -143,7 +143,7 @@ void insertionSort(vector<int> &arr) {
 }
 ```
 
-## Merge Two Sorted Arrays
+### Merge Two Sorted Arrays
 
 Given two sorted arrays **A** and **B**, find the merged sorted array **C** by merging **A** and **B**.
 
@@ -170,7 +170,7 @@ vector<int> mergeSortedArrays(vector<int> &A, vector<int> B) {
 }
 ```
 
-## Merge Sorted Subarrays
+### Merge Sorted Subarrays
 
 Consider an array that is divided into two parts and both of the parts are sorted individually. Given the mentioned array and the end index of the first part, merge them to create a sorted array. Update the same array with the merged elements. You can use extra auxiliary space.
 
@@ -199,7 +199,7 @@ void merge(vector<int> &arr, int endIndex) {
 }
 ```
 
-## Square sorted array
+### Square sorted array
 
 Given an array of numbers, return an array that contains the squares of all the numbers in non-decreasing order.
 
@@ -215,7 +215,7 @@ vector<int> getSquareSortedArray(vector<int> &arr) {
 }
 ```
 
-## Max Consecutive Ones
+### Max Consecutive Ones
 
 Given an array **A**, find the maximum number of consecutive **1s** in the array.
 
@@ -236,7 +236,7 @@ int getMaxConsecutiveOnes(vector<int> &A) {
 }
 ```
 
-## Arithmetic Sequence
+### Arithmetic Sequence
 
 An Arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 5, 7, 9, 11, 13, 15, . . . is an arithmetic progression with a common difference of 2.
 
@@ -266,7 +266,7 @@ bool isArithmeticSequence(vector<int> &arr) {
 }
 ```
 
-## Largest Contiguous Sum
+### Largest Contiguous Sum
 
 A subarray is a part of an array including one or more contiguous/adjacent elements.
 
@@ -284,7 +284,7 @@ int largestContiguousSum(vector <int> &arr){
 }
 ```
 
-## Pascal's Triangle
+### Pascal's Triangle
 
 The triangle below is known as Pascal’s triangle.
 
@@ -307,7 +307,7 @@ vector<int> pascalTriangleRow(int row) {
 }
 ```
 
-## Contains Element?
+### Contains Element?
 
 Given a sorted array and a number key, return whether the key is present in the array or not.
 
@@ -326,7 +326,7 @@ bool containsElement(vector<int> &arr, int key) {
 }
 ```
 
-## Search Range
+### Search Range
 
 Given a sorted array and a number key, find the index of the first and last occurrence of the key in the array.
 
@@ -335,7 +335,7 @@ If the key is not present, return [-1, -1].
 * [Practice](https://workat.tech/problem-solving/practice/search-range)
 * [GFG](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#)
 
-### Linear
+#### Linear
 
 ```cpp
 vector<int> searchRange(vector<int> &arr, int target) {
@@ -352,7 +352,7 @@ vector<int> searchRange(vector<int> &arr, int target) {
 }
 ```
 
-### STL
+#### STL
 
 ```cpp
         bool isPresent = binary_search(arr.begin(),arr.end(),x);
@@ -363,7 +363,7 @@ vector<int> searchRange(vector<int> &arr, int target) {
         return {lb,ub};s
 ```
 
-### Binary Search
+#### Binary Search
 
 ```cpp
 class Solution {
@@ -422,7 +422,7 @@ class Solution {
 };
 ```
 
-## Negative numbers in sorted array
+### Negative numbers in sorted array
 
 Given a sorted array of integers, find the number of negative numbers.
 
@@ -440,7 +440,7 @@ int getNegativeNumbersCount(vector<int> &arr) {
 }
 ```
 
-## Next Greater Element In Sorted Array
+### Next Greater Element In Sorted Array
 
 Given a sorted array and a number key, find the smallest array element which is greater than the key.
 
@@ -460,7 +460,7 @@ int getNextGreaterElement(vector<int> &arr, int key) {
 }
 ```
 
-## Remove occurences
+### Remove occurences
 
 Given an array and a number k, remove all occurrences of k from the array (in-place). Return the number of elements 'remainingSize' left after removing k. There can be anything beyond the first 'remainingSize' elements. It will be ignored.
 
@@ -476,13 +476,13 @@ int removeOccurences(vector<int> &A, int k) {
 }
 ```
 
-## Two Sum Sorted
+### Two Sum Sorted
 
 Given a sorted array, check if there exist two numbers whose sum is zero.
 
 * [Practice](https://workat.tech/problem-solving/practice/two-sum-sorted)
 
-### STL
+#### STL
 
 ```cpp
 bool hasTwoSumZero(vector<int> &A) {
@@ -496,7 +496,7 @@ bool hasTwoSumZero(vector<int> &A) {
 }
 ```
 
-### Two sum
+#### Two sum
 
 ```cpp
 bool hasTwoSumZero(vector<int> A) {
@@ -515,7 +515,7 @@ bool hasTwoSumZero(vector<int> A) {
 }
 ```
 
-## Is Perfect Square
+### Is Perfect Square
 
 Given a positive integer num, write a function that returns true if num is a perfect square else false.
 
@@ -536,7 +536,7 @@ bool isPerfectSquare(int num) {
 }
 ```
 
-### Binary Search
+#### Binary Search
 
 ```cpp
 bool isPerfectSquare(int x)

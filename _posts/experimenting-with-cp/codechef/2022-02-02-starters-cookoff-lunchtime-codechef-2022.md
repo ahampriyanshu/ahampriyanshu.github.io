@@ -6,11 +6,11 @@ excerpt: All of my accepted submissions on Codechef [2022]
 tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april]
 ---
 
-# Febuary
+## Febuary
 
-## CodeChef Starters 24
+### CodeChef Starters 24
 
-### Badminton Serves 
+#### Badminton Serves 
 
 Chef is playing badminton today. The service rules of this singles game of badminton are as follows:
 
@@ -45,7 +45,7 @@ int main()
 }
 ```
 
-### Avoid Contact 
+#### Avoid Contact 
 
 A hostel has N rooms in a straight line. It has to accommodate X people. Unfortunately, out of these X people, Y of them are infected with chickenpox. Due to safety norms, the following precaution must be taken:
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-### EVM Hacking
+#### EVM Hacking
 
 There are three cities and thus three EVMs. An insider told Chef that his party got A,B,C votes respectively in these three cities according to the EVMs. Also, the total number of votes cast are P,Q,R respectively for the three cities.
 
@@ -118,7 +118,7 @@ int main()
 }
 ```
 
-### Yet Another Constructive Problem
+#### Yet Another Constructive Problem
 
 You are given a positive integer X which is at most 108.
 
@@ -163,7 +163,7 @@ int main()
 }
 ```
 
-### Anti Palindrome
+#### Anti Palindrome
 
 A (1-indexed) string S of length N is said to be anti-palindrome if, for each 1≤i≤N, Si≠S(N+1−i).
 
@@ -248,12 +248,12 @@ int main()
 ```
 
 
-# March
+## March
 
 
-## Lunchtime
+### Lunchtime
 
-### Parallel Processing
+#### Parallel Processing
 
 There are N tasks waiting in line to be executed. The execution time for the ith task is Ai seconds.
 
@@ -325,7 +325,7 @@ int main()
 }
 ```
 
-### Four Equidistant Points on a Grid
+#### Four Equidistant Points on a Grid
 
 The manhattan distance between two points P1(x1,y1) and P2(x2,y2) is given by d(P1,P2)=|x2−x1|+|y2−y1|.
 
@@ -371,12 +371,12 @@ int main()
 }
 ```
 
-# April
+## April
 
 
-## Cookoff
+### Cookoff
 
-### A. Digit Sum Parities
+#### A. Digit Sum Parities
 
 For a positive integer M, MoEngage defines ``digitSum(M)`` as the sum of digits of the number M (when written in decimal).
 
@@ -434,7 +434,7 @@ int main()
 }
 ```
 
-### B. Sticks and Rectangles
+#### B. Sticks and Rectangles
 
 MoEngage has a bundle of N sticks. The ith stick has a length Li meters.
 

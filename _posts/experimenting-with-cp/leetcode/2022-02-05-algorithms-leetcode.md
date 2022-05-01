@@ -6,9 +6,9 @@ excerpt: C++ Solutions to Algorithm I of 2 weeks study plan, Leetcode.
 tags: [leetcode, algorithms, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-## Day 1 | Binary Search
+### Day 1 | Binary Search
 
-### 704. Binary Search
+#### 704. Binary Search
 
 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-### 278. First Bad Version
+#### 278. First Bad Version
 
 You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
@@ -61,9 +61,9 @@ public:
 };
 ```
 
-## Day 2 | Two Pointers
+### Day 2 | Two Pointers
 
-### 977. Squares of a Sorted Array
+#### 977. Squares of a Sorted Array
 
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
@@ -81,11 +81,11 @@ public:
 };
 ```
 
-### 189. Rotate Array
+#### 189. Rotate Array
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
-#### Brute
+##### Brute
 
 ```cpp
 class Solution {
@@ -108,7 +108,7 @@ public:
 };
 ```
 
-#### Optimal
+##### Optimal
 
 ```cpp
 class Solution {
@@ -122,9 +122,9 @@ public:
 };
 ```
 
-## Day 3 | Two Pointers
+### Day 3 | Two Pointers
 
-### 283. Move Zeroes
+#### 283. Move Zeroes
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
@@ -149,9 +149,9 @@ public:
 };
 ```
 
-## Day 4 | Two Pointers
+### Day 4 | Two Pointers
 
-### 344. Reverse String
+#### 344. Reverse String
 
 Write a function that reverses a string. The input string is given as an array of characters s.
 
@@ -170,7 +170,7 @@ public:
 };
 ```
 
-### 557. Reverse Words in a String III
+#### 557. Reverse Words in a String III
 
 Given a string **s**, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
@@ -193,9 +193,9 @@ public:
 };
 ```
 
-## Day 5 | Two Pointers
+### Day 5 | Two Pointers
 
-### 876. Middle of the Linked List
+#### 876. Middle of the Linked List
 
 Given the head of a singly linked list, return the middle node of the linked list.
 

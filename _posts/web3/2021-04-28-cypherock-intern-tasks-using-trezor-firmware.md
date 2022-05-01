@@ -17,21 +17,21 @@ tags:
   - 'chain node'
 ---
 
-## Tasks
+### Tasks
 
-### Task 1 : To implement Shamir Secret Sharing Alogithm using C.
+#### Task 1 : To implement Shamir Secret Sharing Alogithm using C.
 
 ![task 1](https://github.com/ahampriyanshu/meta/blob/main/intern/1.png?raw=true)
 
 * [Source Code](https://github.com/ahampriyanshu/trying-something-new/tree/master/intern/crypto/task1)
 
-### Task 2 : To understand how Make works and then calculate a BIP39 Seed using 24 bip mnemonics.
+#### Task 2 : To understand how Make works and then calculate a BIP39 Seed using 24 bip mnemonics.
 
 ![task 2](https://github.com/ahampriyanshu/meta/blob/main/intern/2.png?raw=true)
 
 * [Source Code](https://github.com/ahampriyanshu/trying-something-new/tree/master/intern/crypto/task2)
 
-### Task 3 : To derive public key, private key, chain node and reciever-change address for Bitcoin Testnet for derivation path m/44'/1'/0'/0/
+#### Task 3 : To derive public key, private key, chain node and reciever-change address for Bitcoin Testnet for derivation path m/44'/1'/0'/0/
 
 * Derive address from public and private from mnemonics
 * The first node derived is the master node
@@ -47,7 +47,7 @@ tags:
 
 * [Source Code](https://github.com/ahampriyanshu/trying-something-new/tree/master/intern/crypto/task3)
 
-### Task 4 : To sign an unsigned bitcoin testnet transaction
+#### Task 4 : To sign an unsigned bitcoin testnet transaction
 * Generate unsigned trans using extendended public key of account node
 * complete byte_array_to_unsigned_txn() to fill the unsigned txn struct
         2.1 Use malloc for input and ouput struct inside unsigned_strcut
@@ -62,7 +62,7 @@ tags:
 
 * [Source Code](https://github.com/ahampriyanshu/trying-something-new/tree/master/intern/crypto/task4)
 
-### Task 5 : To sign a raw Ethereum (Ropsten) transaction 
+#### Task 5 : To sign a raw Ethereum (Ropsten) transaction 
 * Search for how ethereum address is generated from public key
 * Convert signed txn from my ether wallet to unsigned txn
 * Code for RLP encoding
@@ -72,7 +72,7 @@ tags:
 * Create RLP encoded signed txn from the derived R and S values
 * Broadcast the signed txn using ethers scan
 
-#### Transcation Details : 
+##### Transcation Details : 
 ```json
   { 
   "nonce": "0x02",
@@ -91,7 +91,7 @@ tags:
 
 * Copy and paste the [trezor-crypto](https://github.com/ahampriyanshu/trying-something-new/tree/master/intern/crypto/crypto) library before executing the Makefile.
 
-## Resources : 
+### Resources : 
 * [https://iancoleman.io/bip39](https://iancoleman.io/bip39)
 * [http://bip32.org](http://bip32.org)
 * [https://coinb.in/](https://coinb.in/)

@@ -16,7 +16,7 @@ tags:
   - 'rightmost setbit'
 ---
 
-# Binary Numbers
+## Binary Numbers
 
 A binary number is a number that is represented by using two digits only, usually ``0`` and ``1``.
 
@@ -27,25 +27,25 @@ In C++, there are either 32-bit or 64-bit numbers an are stored as
   <figcaption>Binary representation of $11_{10}$</figcaption>
 </figure> 
 
-## Significant bits
+### Significant bits
 
-### MSB
+#### MSB
 
 * Most Significant Bit(high-order bit or left-most bit) 
 * The MSB gives the sign of the number (sign bit) , 0 for positive and 1 for negative. 
 
-### LSB 
+#### LSB 
 
 * Least Significant Bit(low-order bit or right-most bit) 
 * To determine whether the number is even or odd.
 
-# Signed and Unsigned 32-bit Int
+## Signed and Unsigned 32-bit Int
 
-## Unsigned Integer
+### Unsigned Integer
 
 These uses all the 32 bits to store the magnitude of the number. As a result there is no way to determine whether polarity of the number so we assume the number to be +ve.The range of unsigned binary number is from  0 to (2n-1).
 
-### Minimum Possible Value
+#### Minimum Possible Value
 
 When all the bits are set to 0.
 
@@ -60,7 +60,7 @@ $\rightarrow (2^{31} \cdot 0) + (2^{30} \cdot 0) + \ldots( 2^0 \cdot 0) = 0$
 unsigned int mini = 0;
 ```
 
-### Maximum Possible Value
+#### Maximum Possible Value
 
 When all the bits are set to 1.
 
@@ -77,21 +77,21 @@ $\rightarrow 2^{32} - 1 =  4,294,967,295 $ (approx. 4 billion)
 unsigned int maxi = UINT_MAX;
 ```
 
-## Signed 
+### Signed 
 
 The first bit from the left(msb) is reserved. All the positive integers are stored as it is. For negative numbers, we set the msb to 1 and then store the rest of the number in 2's complement. Why ?
 
 * To avoid double representation of 0.
 * Also increases the range by one.
 
-#### 2's Complement
+##### 2's Complement
 
 2’s complement of a number is obtained by inverting each bit of given number plus 1 to least significant bit(LSB).
 
 **Note:** Overflow is ignored while computing 2's complement.
 {: .notice--info}
 
-### Minimum Possible Value
+#### Minimum Possible Value
 
 When all the bits are set to 1.
 
@@ -108,7 +108,7 @@ $\rightarrow -2^{31} = –2,147,483,648 $ (approx. -2 billion)
 int mini = INT_MIN;
 ```
 
-### Maximum Possible Value
+#### Maximum Possible Value
 
 When all the bits are set to 1, except the MSB.
 
@@ -125,9 +125,9 @@ $\rightarrow 2^{31} - 1 = 2,147,483,647 $ (approx. 2 billion)
 int maxi = INT_MAX;
 ```
 
-# Bitwise Operators
+## Bitwise Operators
 
-## Types of operators
+### Types of operators
 
 | Operator | Operation |
 | -- | -- |
@@ -138,9 +138,9 @@ int maxi = INT_MAX;
 | << | Right Shift |
 | ~ | NOT |
 
-## Unary operators
+### Unary operators
 
-### & - Bitwise AND
+#### & - Bitwise AND
 
 Performs bitwise *AND* on every bit of the operands.
 
@@ -155,7 +155,7 @@ Performs bitwise *AND* on every bit of the operands.
 | 1 & 0 | 0 |
 | 1 & 1 | 1 |
 
-### | - Bitwise OR
+#### | - Bitwise OR
 
 Performs bitwise *OR* on every bit of the operands.
 
@@ -170,7 +170,7 @@ Performs bitwise *OR* on every bit of the operands.
 | 1 \| 0 | 1 |
 | 1 \| 1 | 1 |
 
-### ^ - Bitwise XOR
+#### ^ - Bitwise XOR
 
 Performs bitwise *XOR* on every bit of the operands.
 
@@ -190,7 +190,7 @@ Performs bitwise *XOR* on every bit of the operands.
 * x ^ x = 0
 * x ^ y = y ^ x
 
-### ~ - Bitwise NOT
+#### ~ - Bitwise NOT
 
 Inverts all bits of the operand.
 
@@ -207,7 +207,7 @@ Inverts all bits of the operand.
 
 * ``~a`` $\implies$ ``INT_MAX - a`` (only for +ve integers)
 
-## RSB
+### RSB
 
 Subtracting 1 from a decimal number flips all the bits after the rightmost set bit including the rightmost set bit.
 {: .notice--info}
@@ -236,9 +236,9 @@ int rsb = a & ~(a-1);
 
 ```
 
-## Binary operators
+### Binary operators
 
-### << (Left Shift)
+#### << (Left Shift)
 
 ```cpp
   int a = 7, b = 2;
@@ -254,7 +254,7 @@ The above operation will shift all bits of 'b', 'a' bits towards the left. Bits 
 
 * b << a $\implies b \times 2^a $ 
 
-### >> (Right Shift)
+#### >> (Right Shift)
 
 ```cpp
   int a = 7, b = 2;
@@ -270,15 +270,15 @@ The above operation will shift all bits of 'b', 'a' bits towards the right. Bits
 
 * b >> a $\implies \lfloor \frac{b}{2^a} \rfloor $ 
 
-# Problems
+## Problems
 
-## Check Kth bit is set or not
+### Check Kth bit is set or not
 
 Given a number n, check if the Kth bit of n is set or not.
 
 * [Practice](https://www.geeksforgeeks.org/check-whether-k-th-bit-set-not/)
 
-### Using left shift
+#### Using left shift
 
 ```cpp
 bool kthbit(int k, int n){
@@ -290,7 +290,7 @@ bool kthbit(int k, int n){
 
 **Time Complexity:** $O(1)$
 
-### Using right shift
+#### Using right shift
 
 ```cpp
 bool kthbit(int k, int n){
@@ -302,13 +302,13 @@ bool kthbit(int k, int n){
 
 **Time Complexity:** $O(1)$
 
-## Count set bit
+### Count set bit
 
 Write a program to count the number of 1s in the binary representation of an integer.
 
 * [Practice](https://www.geeksforgeeks.org/count-set-bits-in-an-integer/)
 
-### Naive
+#### Naive
 
 ```cpp
 int setBits(int N) {
@@ -324,7 +324,7 @@ int setBits(int N) {
 
 **Time Complexity:** $O(logn)$
 
-### Brian Kernighan’s Algorithm
+#### Brian Kernighan’s Algorithm
 
 ```cpp
 int setBits(int N) {
@@ -339,7 +339,7 @@ int setBits(int N) {
 
 **Time Complexity:** $O(logn)$
 
-### Using Lookup Table
+#### Using Lookup Table
 
 ```cpp
 int bits[256];
@@ -361,13 +361,13 @@ int setBits(int n)
 
 **Time Complexity:** $O(1)$
 
-## Detect if two integers have opposite signs
+### Detect if two integers have opposite signs
 
 Given two signed integers, write a function that returns true if the signs of given integers are different, otherwise false.
 
 * [Practice](https://www.geeksforgeeks.org/detect-if-two-integers-have-opposite-signs/)
 
-### Arithmetic comparison
+#### Arithmetic comparison
 
 ```cpp
 bool oppositeSigns(int x, int y)
@@ -376,7 +376,7 @@ bool oppositeSigns(int x, int y)
 }
 ```
 
-### Using XOR
+#### Using XOR
 
 We can utilize the fact that XOR operation evalutes to 1 iff both the operands differ from each other. So we can say that the resultant MSB would be 1 iff x and y have opposite signs.
 
@@ -387,11 +387,11 @@ bool oppositeSigns(int x, int y)
 }
 ```
 
-##  Swap two numbers without using temp variable
+###  Swap two numbers without using temp variable
 
 Given two variables, x, and y, swap two variables without using a third variable. 
 
-### Arithmetic Operators
+#### Arithmetic Operators
 
 
 ```cpp
@@ -403,7 +403,7 @@ void swapped(int* x, int* y)
 }
 ```
 
-### Using XOR
+#### Using XOR
 
 Use the fact `` x ^ x = 0 ``
 
@@ -416,13 +416,13 @@ void swapped(int* x, int* y)
 }
 ```
 
-## Is power of 2
+### Is power of 2
 
 Given a positive integer, write a function to find if it is a power of two or not.
 
 * [Practice](https://www.geeksforgeeks.org/program-to-find-whether-a-given-number-is-power-of-2/)
 
-### Naive
+#### Naive
 
 ```cpp
 int setBits(int N) {
@@ -441,7 +441,7 @@ int setBits(int N) {
 
 **Time Complexity:** $O(logn)$
 
-### Brian Kernighan’s Algorithm
+#### Brian Kernighan’s Algorithm
 
 ```cpp
 int setBits(int N) {
@@ -459,7 +459,7 @@ int setBits(int N) {
 
 **Time Complexity:** $O(logn)$
 
-### Optimized
+#### Optimized
 
 ```cpp
 bool isPowerofTwo(long long n){
@@ -469,7 +469,7 @@ bool isPowerofTwo(long long n){
 
 **Time Complexity:** $O(1)$
 
-### Using log
+#### Using log
 
 ```cpp
 bool isPowerofTwo(long long n){
@@ -479,7 +479,7 @@ bool isPowerofTwo(long long n){
 
 **Time Complexity:** $O(1)$
 
-## Add two numbers without using arithmetic operators
+### Add two numbers without using arithmetic operators
 
 Write a function that returns sum of two integers. The function should not use any of the arithmetic operators
 
@@ -496,13 +496,13 @@ int Add(int x, int y)
 }
 ```
 
-## Find odd occuring number
+### Find odd occuring number
 
 Given an array of positive integers. All numbers occur an even number of times except one number which occurs an odd number of times. 
 
 * [Practice](https://www.geeksforgeeks.org/find-the-number-occurring-odd-number-of-times/)
 
-### Naive
+#### Naive
 
 Use hashmap to store the frequency.
 
@@ -510,7 +510,7 @@ Use hashmap to store the frequency.
 
 **Space Complexity:** $O(n)$
 
-### Using XOR
+#### Using XOR
 
 use the fact that `` a ^ a = 0 ``
 
@@ -528,17 +528,17 @@ int oddoccur(int arr[], int arr_size)
 
 **Space Complexity:** $O(1)$
 
-## Find the only non-duplicate in array
+### Find the only non-duplicate in array
 
 Variation of the previous question.
 
-## Find the two numbers with odd occurrences in an unsorted array
+### Find the two numbers with odd occurrences in an unsorted array
 
 Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences.
 
 * [Practice](https://www.geeksforgeeks.org/find-the-two-numbers-with-odd-occurences-in-an-unsorted-array/)
 
-### Naive 
+#### Naive 
 
 Use hashmap to store the frequency.
 
@@ -546,7 +546,7 @@ Use hashmap to store the frequency.
 
 **Space Complexity:** $O(n)$
 
-### Using XOR
+#### Using XOR
 
 ```cpp
     vector<int> twoOddNum(int arr[], int n)  
@@ -572,13 +572,13 @@ Use hashmap to store the frequency.
 
 **Space Complexity:** $O(1)$
 
-## Find the element that appears once
+### Find the element that appears once
 
 Given an array where every element occurs three times, except one element which occurs only once. Find the element that occurs once. 
 
 * [Practice](https://www.geeksforgeeks.org/find-the-element-that-appears-once/)
 
-### Naive
+#### Naive
 
 Use hashmap to store the frequency.
 
@@ -586,7 +586,7 @@ Use hashmap to store the frequency.
 
 **Space Complexity:** $O(n)$
 
-### Using XOR
+#### Using XOR
 
 use the fact that `` a ^ a = 0 ``
 
@@ -611,7 +611,7 @@ int getSingle(int arr[], int n)
 
 **Space Complexity:** $O(1)$
 
-## Power Set
+### Power Set
 
 Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences.
 

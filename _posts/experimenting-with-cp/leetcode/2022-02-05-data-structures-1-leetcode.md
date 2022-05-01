@@ -6,9 +6,9 @@ excerpt: C++ Solutions to Data Structure I of 2 Weeks Study Plan, Leetcode.
 tags: [leetcode, data, structure, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-# Day 1 | Array
+## Day 1 | Array
 
-## 217. Contains Duplicate
+### 217. Contains Duplicate
 
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
@@ -23,7 +23,7 @@ public:
 };
 ```
 
-## 53. Maximum Subarray
+### 53. Maximum Subarray
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -47,9 +47,9 @@ public:
 };
 ```
 
-# Day 2 | Array
+## Day 2 | Array
 
-## 1. Two Sum
+### 1. Two Sum
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## 88. Merge Sorted Array
+### 88. Merge Sorted Array
 
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
@@ -103,7 +103,7 @@ public:
 };
 ```
 
-### Single loop
+#### Single loop
 
 ```cpp
 class Solution {
@@ -114,15 +114,15 @@ public:
 };
 ```
 
-# Day 3 | Array
+## Day 3 | Array
 
-## 350. Intersection of Two Arrays II
+### 350. Intersection of Two Arrays II
 
 Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
 
 * [Practice](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 
-### Hashing
+#### Hashing
 
 ```cpp
 class Solution {
@@ -146,7 +146,7 @@ public:
 };
 ```
 
-### Sorting
+#### Sorting
 
 ```cpp
 class Solution {
@@ -176,7 +176,7 @@ public:
 };
 ```
 
-## 121. Best Time to Buy and Sell Stock
+### 121. Best Time to Buy and Sell Stock
 
 You are given an array _prices_ where _prices[i]_ is the price of a given stock on the ith day.
 
@@ -201,7 +201,7 @@ public:
 };
 ```
 
-### Kadane
+#### Kadane
 
 ```cpp
 class Solution {
@@ -217,9 +217,9 @@ public:
 };
 ```
 
-# Day 4 | Array
+## Day 4 | Array
 
-## 118. Pascal's Triangle
+### 118. Pascal's Triangle
 
 In MATLAB, there is a handy function called reshape which can reshape an m x n matrix into a new one with a different size r x c keeping its original data.
 
@@ -263,7 +263,7 @@ public:
 };
 ```
 
-## Single loop
+### Single loop
 
 ```cpp
 class Solution {
@@ -281,7 +281,7 @@ public:
 };
 ```
 
-## 118. Pascal's Triangle
+### 118. Pascal's Triangle
 
 Given an integer numRows, return the first numRows of Pascal's triangle.
 
@@ -308,7 +308,7 @@ public:
 };
 ```
 
-### Formula based  
+#### Formula based  
 
 > NCr = (NCr - 1 * (N - r + 1)) / r
 {: .notice--info}
@@ -336,9 +336,9 @@ public:
 };
 ```
 
-# Day 5 | Array
+## Day 5 | Array
 
-## 36. Valid Sudoku
+### 36. Valid Sudoku
 
 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 
@@ -371,7 +371,7 @@ public:
 };
 ```
 
-## 74. Search a 2D Matrix
+### 74. Search a 2D Matrix
 
 Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
 
@@ -401,9 +401,9 @@ public:
 };
 ```
 
-# Day 6 | String   
+## Day 6 | String   
 
-## 387. First Unique Character in a String
+### 387. First Unique Character in a String
 
 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
 
@@ -427,7 +427,7 @@ public:
 };
 ```
 
-## 383. Ransom Note
+### 383. Ransom Note
 
 Given two strings ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise.
 
@@ -455,7 +455,7 @@ public:
 };
 ```
 
-## 242. Valid Anagram
+### 242. Valid Anagram
 
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
@@ -485,9 +485,9 @@ public:
     }
 };
 ```
-# Day 7 | Linked List  
+## Day 7 | Linked List  
 
-## 141. Linked List Cycle
+### 141. Linked List Cycle
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
@@ -516,7 +516,7 @@ public:
 };
 ```
 
-## 21. Merge Two Sorted Lists
+### 21. Merge Two Sorted Lists
 
 You are given the heads of two sorted linked lists list1 and list2.
 
@@ -549,7 +549,7 @@ public:
 };
 ```
 
-## 203. Remove Linked List Elements
+### 203. Remove Linked List Elements
 
 Given the head of a linked list and an integer **val**, remove all the nodes of the linked list that has **Node.val == val**, and return the new head.
 
@@ -575,9 +575,9 @@ public:
 };
 ```
 
-# Day 8 | Linked List
+## Day 8 | Linked List
 
-## 206. Reverse Linked List
+### 206. Reverse Linked List
 
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 
@@ -601,7 +601,7 @@ public:
 };
 ```
 
-## 83. Remove Duplicates from Sorted List
+### 83. Remove Duplicates from Sorted List
 
 Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 
@@ -626,9 +626,9 @@ public:
 };
 ```
 
-# Day 9 | Stack / Queue
+## Day 9 | Stack / Queue
 
-## 20. Valid Parentheses
+### 20. Valid Parentheses
 
 Given a string s containing just the characters ``'(', ')', '{', '}', '[' and ']'``, determine if the input string is valid.
 
@@ -659,7 +659,7 @@ public:
 };
 ```
 
-## 232. Implement Queue using Stacks
+### 232. Implement Queue using Stacks
 
 Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
 
@@ -671,7 +671,7 @@ Implement the MyQueue class:
 * boolean empty() Returns true if the queue is empty, false otherwise.
 
 
-### O(1) pop
+#### O(1) pop
 
 ```cpp
 class MyQueue {
@@ -713,7 +713,7 @@ public:
 };
 ```
 
-### O(1) push
+#### O(1) push
 
 ```cpp
 class MyQueue {
@@ -768,7 +768,7 @@ public:
 };
 ```
 
-### O(1) push, O(1) pop b
+#### O(1) push, O(1) pop b
 
 ```cpp
 class MyQueue {
@@ -819,9 +819,9 @@ public:
 };
 ```
 
-# Day 11 | Tree
+## Day 11 | Tree
 
-## 102. Binary Tree Level Order Traversal
+### 102. Binary Tree Level Order Traversal
 
 Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 
@@ -856,13 +856,13 @@ public:
 };
 ```
 
-## 101. Symmetric Tree
+### 101. Symmetric Tree
 
 Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 
 * [Practice](https://leetcode.com/problems/symmetric-tree/)
 
-### Recursive
+#### Recursive
 
 ```cpp
 class Solution {
@@ -885,7 +885,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -922,7 +922,7 @@ public:
 };
 ```
 
-## 104. Maximum Depth of Binary Tree
+### 104. Maximum Depth of Binary Tree
 
 Given the root of a binary tree, return its maximum depth.
 
@@ -930,7 +930,7 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 
 * [Practice]()
 
-### Recursive
+#### Recursive
 
 ```cpp
 class Solution {
@@ -942,7 +942,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -970,9 +970,9 @@ public:
 };
 ```
 
-# Day 12 | Tree
+## Day 12 | Tree
 
-## 226. Invert Binary Tree 
+### 226. Invert Binary Tree 
 
 Given the root of a binary tree, invert the tree, and return its root.
 
@@ -980,7 +980,7 @@ Given the root of a binary tree, invert the tree, and return its root.
 
 * [Practice](https://leetcode.com/problems/invert-binary-tree/)
 
-### Recursion
+#### Recursion
 
 ```cpp
 class Solution {
@@ -995,7 +995,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -1018,13 +1018,13 @@ public:
 };
 ```
 
-## 112. Path Sum
+### 112. Path Sum
 
 Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 
 * [Practice](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 
-### Recursion
+#### Recursion
 
 ```cpp
 class Solution {
@@ -1038,7 +1038,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -1069,15 +1069,15 @@ public:
 };
 ```
 
-# Day 13 | Tree
+## Day 13 | Tree
 
-## 700. Search in a Binary Search Tree
+### 700. Search in a Binary Search Tree
 
 Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 
 * [Practice](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 
-### Recursion
+#### Recursion
 
 ```cpp
 class Solution {
@@ -1091,7 +1091,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -1104,13 +1104,13 @@ public:
 };
 ```
 
-## 701. Insert into a Binary Search Tree
+### 701. Insert into a Binary Search Tree
 
 You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
 
 * [Practice](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
 
-### Recursive
+#### Recursive
 
 ```cpp
 class Solution {
@@ -1131,15 +1131,15 @@ public:
 };
 ```
 
-# Day 14 | Tree
+## Day 14 | Tree
 
-## 235. Lowest Common Ancestor of a Binary Search Tree
+### 235. Lowest Common Ancestor of a Binary Search Tree
 
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
 
 * [Practice](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
-### Recursive
+#### Recursive
 
 ```cpp
 class Solution {
@@ -1156,7 +1156,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {
@@ -1176,13 +1176,13 @@ public:
 };
 ```
 
-## 653. Two Sum IV - Input is a BST
+### 653. Two Sum IV - Input is a BST
 
 Given the root of a Binary Search Tree and a target number k, return true if there exist two elements in the BST such that their sum is equal to the given target.
 
 * [Practice](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
 
-### Recursive
+#### Recursive
 
 ```cpp
 class Solution {
@@ -1197,7 +1197,7 @@ public:
 };
 ```
 
-### Iterative
+#### Iterative
 
 ```cpp
 class Solution {

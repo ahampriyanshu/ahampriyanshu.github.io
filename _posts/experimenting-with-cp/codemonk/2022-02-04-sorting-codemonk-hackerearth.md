@@ -7,7 +7,7 @@ tags: [sorting, codemonk, sheet, hackerearth]
 
 Sorting is a process of arranging items in ascending or descending order. This process can be implemented via many different algorithms. You will be learning about various types sorting algorithms.
 
-## Monk and Nice Strings
+### Monk and Nice Strings
 
 Monk's best friend Micro's birthday is coming up. Micro likes Nice Strings very much, so Monk decided to gift him one. Monk is having N nice strings, so he'll choose one from those. But before he selects one, he need to know the Niceness value of all of those. Strings are arranged in an array A, and the Niceness value of string at position i is defined as the number of strings having position less than i which are lexicographicaly smaller than A[i]. Since nowadays, Monk is very busy with the Code Monk Series, he asked for your help.
 
@@ -41,7 +41,7 @@ int main()
 }
 ```
 
-## Monk and Suffix Sort
+### Monk and Suffix Sort
 
 Monk loves to play games. On his birthday, his friend gifted him a string S. Monk and his friend started playing a new game called as Suffix Game. In Suffix Game, Monk's friend will ask him lexicographically k<sup>th</sup> smallest suffix of the string S. Monk wants to eat the cake first so he asked you to play the game.
 
