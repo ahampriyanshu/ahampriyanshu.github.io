@@ -10,7 +10,12 @@
 {%- else -%}
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+
+  {%- if page.mermaid == true -%}
   <script src="{{ '/assets/js/plugins/mermaid.min.js' | relative_url }}"></script>
+  {%- endif -%}
+
+  
   <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 {%- endif -%}
 

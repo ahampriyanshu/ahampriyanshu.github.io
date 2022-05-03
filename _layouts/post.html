@@ -25,7 +25,10 @@ layout: default
       <div class="page-content">
 
         <h1>Table Of Content</h1>
+
+        <div class="toc-div">
         {% include toc.html html=content %}
+        </div>
 
         <div class="e-content">
           {% include anchor_headings.html html=content anchorBody="#" %}
@@ -40,3 +43,13 @@ layout: default
     </div>
   </article>
 </main>
+
+<style>
+  .toc-div {
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+}
+</style>

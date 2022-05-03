@@ -2,6 +2,7 @@
 title: "DSA Part 5: Recursion"
 author: Priyanshu Tiwari
 excerpt: Basic of recursion, PMI, tail recursion, pow(x,n), subset, powerset, count and sum of integer, is_sorted(), fibonacci series, factorial, first and last index of a number
+mermaid: true
 categories:
   - DSA
 tags:
@@ -410,19 +411,17 @@ graph TD;
 </div>
 
 ```cpp
-void find_permutation(string s, int i=0)
-		{
+void find_permutation(string s, int i=0){
 		    
-		    if(i == s.length()-1){
-		        cout << s << " ";
-                return;
-		    }
+	if(i == s.length()-1){
+		cout << s << " ";
+        return;
+	}
 		        
-		    for(int j=i; j<s.length(); j++){
-		        swap(s[i], s[j]);
-		        find_permutation(s, i+1); 
-		        swap(s[i], s[j]);
-		    }
-	        return ans;
-		}
+	for(int j=i; j<s.length(); j++){
+		swap(s[i], s[j]);
+		find_permutation(s, i+1); 
+		swap(s[i], s[j]);
+	}
+}
 ```
