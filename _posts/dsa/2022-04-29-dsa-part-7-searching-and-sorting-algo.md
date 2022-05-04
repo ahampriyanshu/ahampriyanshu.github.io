@@ -13,6 +13,8 @@ tags:
   - 'sort'
 ---
 
+## Sorting Algo
+
 ### Merge Sort
 
 Merge sort is a divide-and-conquer, comparison-based sorting algorithm.
@@ -63,14 +65,14 @@ void mergeSort(int *arr, int start, int end) {
 }
 ```
 
-**Worst-case time complexity :** $O(n \cdot \log n)$
+| | |
+| -- | -- |
+| Worst-case time complexity | $O(n \cdot \log n)$ |
+| Best-case time complexity | $\Omega (n \cdot \log n)$ |
+| Average time complexity | $\Theta (n \cdot \log n)$ |
+| Worst-case space complexity | $O(n)$ |
 
-**Best-case time complexity :** $\Omega (n \cdot \log n)$
-
-**Average time complexity :** $\Theta (n \cdot \log n)$
-
-**Worst-case space complexity :** $O(n)$ 
-
+## Problems
 
 ### Aggressive Cows
 
@@ -259,7 +261,6 @@ For each person, calculate how long they have to wait (possibly 0 time), or dete
     	return 0;
     }
 ```
-
 
 ### Murder
 

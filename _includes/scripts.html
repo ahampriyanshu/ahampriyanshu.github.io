@@ -44,6 +44,6 @@
 
 {% endif %}
 
-{%- if page.layout == "search" -%}
+{%- if page.layout == "search" or page.is404 -%}
   {% include lunr-search-scripts.html %}
 {%- endif -%}

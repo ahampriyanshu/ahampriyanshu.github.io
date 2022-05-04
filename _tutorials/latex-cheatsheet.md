@@ -1,7 +1,7 @@
 ---
-title: "Latex Cheatsheet"
+title: "Installing MathJax & Latex Cheat Sheet"
 author: Priyanshu Tiwari
-excerpt: Guide to mathematical symbols and expressions in LaTeX
+excerpt: Installing MathJax & Guide to Mathematical symbols in LaTeX
 image: 
   thumbnail: /images/tutorials/latex.png
   caption: "latex"
@@ -14,6 +14,10 @@ image:
 ## What is MathJax ?
 
 > [MathJax](https://www.mathjax.org/) is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all modern browsers, with built-in support for assistive technology like screen readers.
+
+## Using MathJax
+
+
 
 ## Maths Symbol
 

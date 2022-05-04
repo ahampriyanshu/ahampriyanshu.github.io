@@ -2,7 +2,7 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Priyanshu Tiwari"
-description: "Hello and welcome to my blog ✌️"
+description: "Hello and welcome to my blog"
 baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
@@ -60,7 +60,6 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
 
@@ -84,6 +83,10 @@ defaults:
     values:
       layout: post
       share: true
+  - scope:
+      path: "assets/**"
+    values:
+      sitemap_omit: true
       
 # Site Author
 author:

@@ -77,7 +77,7 @@ int main()
 
 ## Problem B
 
-#### Description
+### Description
 
 Barbara is a speed typer. In order to check her typing speed, she performs a speed test. She is given a string I that she is supposed to type.
 
