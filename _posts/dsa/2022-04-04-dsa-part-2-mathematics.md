@@ -135,10 +135,10 @@ $\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
 | Number | Test |
 | -- | -- |
 | Arithmetic Mean(AM) | $\frac{a+b}{2}$|
-| Geometric Mean(AM) | $\sqrt{ab}$|
-| Harmonic Mean(AM) | $ (2ab) \cdot (a+b) $|
+| Geometric Mean(GM) | $\sqrt{ab}$|
+| Harmonic Mean(HM) | $ (2ab) \cdot (a+b) $|
 
-$\rightarrow GM^2 = AM \ast GM $
+$\rightarrow GM^2 = AM \times GM $
 
 ### Median
 

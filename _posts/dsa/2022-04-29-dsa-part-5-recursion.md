@@ -338,6 +338,8 @@ public:
 };
 ```
 
+**Time Complexity:** $O(2^n)$ 
+
 ### Josephus Problem
 
 N people are standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom. Given the total number of person n and a number k which indicates that k-1 persons are skipped and the kth person is killed in the circle. The task is to choose the place in the initial circle so that you are the last one remaining and so survive.
@@ -352,6 +354,8 @@ int josephus(int n, int k)
     return (josephus(n - 1, k) + k) % n;
 }
 ```
+
+**Time Complexity:** $O(n)$ 
 
 ### Generate powerset
 
@@ -390,6 +394,26 @@ void powerset(string str, string curr = "", int index = 0,)
 }
 ```
 
+**Time Complexity:** $O(2^n)$ 
+
+### LCS
+
+You are given two strings, find the longest common sequece.
+
+```cpp
+    int longestCommonSubstr (string S1, string S2, int n, int m)
+    {
+    if(n == 0 || m == 0) 
+        return 0;
+        
+    if(S1[n-1] == S2[m-1]) 
+        return 1 + longestCommonSubstr(S1, S2, n-1, m-1);
+    
+    return max(longestCommonSubstr(S1, S2, n, m-1), longestCommonSubstr(S1, S2, n-1, m));
+    }
+```
+
+**Time Complexity:** $O(2^n)$ 
 
 ### All permutation
 
