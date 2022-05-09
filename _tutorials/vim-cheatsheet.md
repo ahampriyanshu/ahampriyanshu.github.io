@@ -4,7 +4,7 @@ author: Priyanshu Tiwari
 excerpt: Vim Plugins and Keybindings
 image: 
   thumbnail: /images/tutorials/git.png
-  caption: "latex"
+  caption: vim-cheatsheet
 ---
 
 ## What is Vim ?
@@ -21,14 +21,47 @@ sudo dnf install vim      [ Fedora ]
 sudo zypper install vim   [ OpenSUSE ]
 ```
 
-### gVim
-
 ## Keybindings
 
 ## Plugins
 
+To install vim plugins, I prefer [vim-plug](https://github.com/junegunn/vim-plug).
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+```
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
+```
+
+Then append the following section to your .vimrc file.
+
+```bash
+call plug#begin('~/.vim/plugged')
+
+Plug 'user/repo'
+OR
+Plug 'git URL'
+
+call plug#end()
+```
+
+| Command | Usage |
+| -- | -- |
+| :PlugInstall | Installs a plugins |
+| :PlugUninstall | Uninstalls a plugins |
+| :PlugUpdate | Updates a plugins |
+| :PlugStatus | View the current status |
+| :PlugUpgrade | Updates vim-plug |
+
+### Some Awesome Plugins
+
+
 ## Resources
 
-* [My .vimrc](https://gist.github.com/ahampriyanshu/27044cee6455ecd566f340b99f7595c3)
-* [VSCodeVim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-* [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
+* [my .vimrc](https://gist.github.com/ahampriyanshu/27044cee6455ecd566f340b99f7595c3)
+* [vscodevim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+* [vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
