@@ -508,7 +508,7 @@ Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(n)$
+**Auxiliary Space:** $O(n)$
 
 #### Using XOR
 
@@ -526,7 +526,7 @@ int oddoccur(int arr[], int arr_size)
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(1)$
+**Auxiliary Space:** $O(1)$
 
 ### Find the only non-duplicate in array
 
@@ -544,7 +544,7 @@ Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(n)$
+**Auxiliary Space:** $O(n)$
 
 #### Using XOR
 
@@ -570,7 +570,7 @@ Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(1)$
+**Auxiliary Space:** $O(1)$
 
 ### Find the element that appears once
 
@@ -584,7 +584,7 @@ Use hashmap to store the frequency.
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(n)$
+**Auxiliary Space:** $O(n)$
 
 #### Using XOR
 
@@ -609,7 +609,7 @@ int getSingle(int arr[], int n)
 
 **Time Complexity:** $O(n)$
 
-**Space Complexity:** $O(1)$
+**Auxiliary Space:** $O(1)$
 
 ### Power Set
 
@@ -634,4 +634,4 @@ vector<string> AllPossibleStrings(string s){
 
 **Time Complexity:** $O(n \times 2^n)$
 
-**Space Complexity:** $O(1)$
+**Auxiliary Space:** $O(1)$

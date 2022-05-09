@@ -19,7 +19,7 @@ Just apply mergesort
 
 **Time Complexity:** $ O(nlogn) $
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Better 
 
@@ -27,7 +27,7 @@ Count the occurences of 0,1,2 in first transversal and update the array in the s
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 
@@ -39,7 +39,7 @@ Use three variable pointing to and
 
 **Time Complexity:** $ O(n) $
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -76,7 +76,7 @@ Just apply mergesort
 
 **Time Complexity:** $ O(nlogn) $
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Better 
 
@@ -84,7 +84,7 @@ Count the occurences of **0**,**1**,**2** in first transversal and update the ar
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution
@@ -134,7 +134,7 @@ Use three variable pointing to and
 
 **Time Complexity:** $ O(n) $
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -173,7 +173,7 @@ Apply mergesort and then find the missing and repeating value.
 
 **Time Complexity:** $ O(nlogn) $
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Better 
 
@@ -181,7 +181,7 @@ Use a hash array or hash map to count the occurrences of numbers.Index with valu
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 ```cpp
 class Solution
@@ -222,7 +222,7 @@ Use three variable pointing to and
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -252,7 +252,7 @@ Use three variable pointing to and
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -274,7 +274,7 @@ Swap all the smaller numbers from the second array and then sort both the result
 
 **Time Complexity:** $ O(nlogn) $
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 ```cpp
 class Solution{
@@ -305,7 +305,7 @@ Use **inserstion sort**.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 ```cpp
 class Solution
@@ -346,7 +346,7 @@ Use three variable pointing to and
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution{
@@ -519,7 +519,7 @@ This question has been updated on leetcode with newer constraints : _-2^31 <= ma
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -676,7 +676,7 @@ Apply binary search.
 
 **Time Complexity:** $ O(n*log(m*(d^10))) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 #include<bits/stdc++.h>
@@ -737,7 +737,7 @@ Apply [Newton-Raphson Method](https://brilliant.org/wiki/newton-raphson-method/)
 
 **Time Complexity:** $ O(log(M) * log(N)) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 
@@ -774,7 +774,7 @@ Use in built methods and containers like stack, vector.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Optimal 
 
@@ -782,7 +782,7 @@ Reverse the whole string and then reverse word by word.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 
@@ -826,7 +826,7 @@ Transerse the whole tree. Keep track of the closest smaller or same element.
 
 **Time Complexity:** $ O(n) $
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Better
 
@@ -834,7 +834,7 @@ Check whether the key is < or == or > than the root node.
 
 **Time Complexity:** $ O(h) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 ```cpp
 int floorInBST(TreeNode<int> * root, int X)
@@ -859,7 +859,7 @@ Check whether the key is < or == or > than the root node.
 
 **Time Complexity:** $ O(h) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 int floorInBST(TreeNode<int> * root, int X)
@@ -890,7 +890,7 @@ Transerse the whole tree. Keep track of the least greater than or same element.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Better
 
@@ -898,7 +898,7 @@ Check whether the key is < or == or > than the root node.
 
 **Time Complexity:** $ O(h) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 ```cpp
 int findCeil(BinaryTreeNode<int> *root, int x){
@@ -921,7 +921,7 @@ Check whether the key is < or == or > than the root node.
 
 **Time Complexity:** $ O(h) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 int findCeil(BinaryTreeNode<int> *root, int x){

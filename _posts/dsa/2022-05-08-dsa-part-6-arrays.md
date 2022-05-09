@@ -1,5 +1,5 @@
 ---
-title: "DSA Part 5: Recursion"
+title: "DSA Part 6: arrays"
 author: Priyanshu Tiwari
 excerpt: Basic of recursion, PMI, tail recursion, pow(x,n), subset, powerset, count and sum of integer, is_sorted(), fibonacci series, factorial, first and last index of a number
 mermaid: true
@@ -324,6 +324,7 @@ public:
             ans.push_back(sum);
             return;
         }
+        
         subset(index+1, sum + arr[index], N, arr, ans);
         subset(index+1, sum, N, arr, ans);
     }
@@ -448,37 +449,3 @@ void find_permutation(string s, int i=0){
 	}
 }
 ```
-
-### Calculate lenght of the string 
-
-Given a string calculate length of the string using recursion. 
-
-```cpp
-int length(string str)
-
-if(str[0] == '\0')
-    return 0;
-return 1 + length(str + 1);
-```
-
-**Time Complexity:** $O(n)$
-
-**Auxiliary Space:** $O(1)$
-
-### Replace character in a string
-
-Given a string str and two characters X and Y, the task is to write a recursive function to replace all occurrences of character X with character Y
-
-```cpp
-void length(string str, char c1, char c2)
-dffddf
-if(str[0] == '\0')
-    return 0;
-if(str[0] == c1) str[0] = c2;    
-return length(str + 1, c1, c2);
-``` 
-
-**Time Complexity:** $O(n)$
-
-**Auxiliary Space:** $O(1)$
-

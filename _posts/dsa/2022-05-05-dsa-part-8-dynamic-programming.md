@@ -1,7 +1,7 @@
 ---
-title: "DSA Part 6: Dynamic Programming"
+title: "DSA Part 8: Dynamic Programming"
 author: Priyanshu Tiwari
-excerpt: 
+excerpt: What is dynamic programming, top down and bottom up approach, lcs, lis
 categories:
   - DSA
 tags:
@@ -53,7 +53,7 @@ int fib(int n){
 
 ## Applications
 
-| Application | Algorithm |
+| Utitlity | Algorithm |
 | :-- | :-- |
 | Git Diff | LCS |
 | Close Search | Edit distance |
@@ -109,7 +109,7 @@ int lcs( string s1, string s2, int m, int n, vector<vector<int> >& dp){
 
 **Time Complexity:** $O(m \times n)$ 
 
-**Space Complexity:** $O(m \times n)$ 
+**Auxiliary Space:** $O(m \times n)$ 
 
 - Tabulation
 
@@ -134,7 +134,7 @@ int lcs(int m, int n, string X, string Y)
 
 **Time Complexity:** $O(m \times n)$ 
 
-**Space Complexity:** $O(m \times n)$ 
+**Auxiliary Space:** $O(m \times n)$ 
 
 - Space Optimized
 
@@ -166,7 +166,7 @@ int lcs(int m, int n, string X, string Y)
 
 **Time Complexity:** $O(m \times n)$ 
 
-**Space Complexity:** $O(n)$ 
+**Auxiliary Space:** $O(n)$ 
 
 ### Coin Change
 

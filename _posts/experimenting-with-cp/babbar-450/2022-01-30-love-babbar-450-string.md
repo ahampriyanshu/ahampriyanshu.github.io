@@ -16,7 +16,7 @@ Loop through the string from the back and store the elements in a new string.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(n) $
 
 #### Optimal 
 
@@ -24,7 +24,7 @@ Make two pointers pointing towards the extreme ends and swap till the front < re
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -51,7 +51,7 @@ Make two pointers pointing towards the extreme ends and check if ch[front] == ch
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 ```cpp
 class Solution {
@@ -77,7 +77,7 @@ Either create a hash-array or a hash-map.
 
 **Time Complexity:** $ O(n) $ 
 
-**Space Complexity:** $ O(k) $ (number of distinct characters)
+**Auxiliary Space:** $ O(k) $ (number of distinct characters)
 
 ### Problem 4: Subjective
 
@@ -104,7 +104,7 @@ bool solve(string s1,string s2){
 
 **Time Complexity:** $ O(m*n) $ 
 
-**Space Complexity:** $ O(1) $
+**Auxiliary Space:** $ O(1) $
 
 #### Using queue
 
@@ -135,4 +135,4 @@ bool solve(string s1, string s2)
 
 **Time Complexity:** $ O(m*n) $ 
 
-**Space Complexity:** $ O(m+n) $
+**Auxiliary Space:** $ O(m+n) $

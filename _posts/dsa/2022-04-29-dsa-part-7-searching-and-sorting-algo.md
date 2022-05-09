@@ -30,11 +30,11 @@ Conceptually, a merge sort works as follows:
 
 ```cpp
 
-void merge(int arr[], int start, int mid, int end) {
+void merge(int arr[], int start, int end) {
 
 	int temp[end - start + 1];
 
-	int i = start, j = mid, k = 0;
+	int i = start, j = start + (end-start)/2, k = 0;
 
 	while(i < mid && j <= end) 
 		if(arr[i] <= arr[j])
@@ -67,10 +67,10 @@ void mergeSort(int *arr, int start, int end) {
 
 | | |
 | -- | -- |
-| Worst-case time complexity | $O(n \cdot \log n)$ |
-| Best-case time complexity | $\Omega (n \cdot \log n)$ |
-| Average time complexity | $\Theta (n \cdot \log n)$ |
-| Worst-case space complexity | $O(n)$ |
+| Worst-case time complexity | $O(n \cdot log n)$ |
+| Best-case time complexity | $\Omega (n \cdot log n)$ |
+| Average time complexity | $\Theta (n \cdot log n)$ |
+| Worst-case space complexity | $O(n \cdot log n)$ |
 
 ## Problems
 
