@@ -1,7 +1,7 @@
 ---
 title: "DSA Part 6: Arrays"
 author: Priyanshu Tiwari
-excerpt: Basic of recursion, PMI, tail recursion, pow(x,n), subset, powerset, count and sum of integer, is_sorted(), fibonacci series, factorial, first and last index of a number
+excerpt: Static and dynamic arrays, vectors in STL, trapping rainwater, window sliding, prefix sum 
 mermaid: true
 categories:
   - DSA
@@ -9,7 +9,7 @@ tags:
   - 'arrays'
 ---
 
-Array is a continuos block of memory. We use an 'index' to access ith element of the array. In most of the programming languages indexing start from 0.
+Array is a continuos block of memory. We use an 'index' to access i^{th} element of the array. In most of the programming languages indexing start from 0.
 
 ## Time complexity
 
@@ -22,11 +22,11 @@ Array is a continuos block of memory. We use an 'index' to access ith element of
 
 ## Dynamic Arrays
 
-Automatically double up in size once the size limit is exhausted.
+Automatically double up in size once the limit is exhausted.
 
-* Vector[C++]
-* ArrayList[Java]
-* List[Python]
+* **Vector** - C++
+* **ArrayList** - Java
+* **List** - Python
 
 Avereage T.C. for insertion at end is $O(1)$.
 
@@ -88,7 +88,9 @@ bool is_sorted(int a[], int size){
 
 ### Remove duplicate elements from sorted array
 
-Given a sorted array A[] of size N, delete all the duplicates elements from A[].
+Given a sorted array arr[] of size N, delete all the duplicates elements from arr[].
+
+* [Practice](https://www.geeksforgeeks.org/remove-duplicates-sorted-array/)
 
 ```cpp
 int remove_duplicate(int arr[],int n){
@@ -101,3 +103,19 @@ int remove_duplicate(int arr[],int n){
     return index;
 }
 ```
+
+### Rotate array
+
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+* [Practice](https://leetcode.com/problems/rotate-array/)
+
+```cpp
+  void rotate(vector<int>& nums, int k) {
+      k %=nums.size();
+      reverse(nums.begin(), nums.end());
+      reverse(nums.begin(), nums.begin()+k);
+      reverse(nums.begin()+k, nums.end());
+  }
+```
+
