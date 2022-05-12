@@ -9,7 +9,8 @@ image:
 
 In the end the final `sitemap.xml` file should look like this,
 
-```
+```xml
+{%raw%}---
 ---
 layout: null
 sitemap_omit: true
@@ -65,4 +66,5 @@ sitemap_omit: true
     {% endunless %}
   {% endfor %}
 </urlset>
+{%endraw%}
 ```

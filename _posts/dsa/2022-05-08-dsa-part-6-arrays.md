@@ -9,7 +9,7 @@ tags:
   - 'arrays'
 ---
 
-Array is a continuos block of memory. We use an 'index' to access i^{th} element of the array. In most of the programming languages indexing start from 0.
+Array is a continuos block of memory. We use an 'index' to access $i^{th}$ element of the array. In most of the programming languages indexing start from 0.
 
 ## Time complexity
 

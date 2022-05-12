@@ -1,7 +1,7 @@
 ---
 title: Vim Cheat Sheet
 author: Priyanshu Tiwari
-excerpt: Vim Plugins and Keybindings
+excerpt: Let's improve Vi Improved
 image: 
   thumbnail: /images/tutorials/vim.png
   caption: vim-cheatsheet
@@ -36,7 +36,7 @@ sudo zypper install vim   [ OpenSUSE ]
 | . | Repeat last command |
 | u | Undo |
 | Ctrl + r | Redo |
-| :<num> / <num>G | Jump to <num>th line |
+| :n / nG | Jump to $n^{th}$ line |
 
 ### Movement
 
@@ -52,16 +52,16 @@ sudo zypper install vim   [ OpenSUSE ]
 | zz | Move to center of the screen |
 | zt | Scroll current line to top of the page |
 | zb | Scroll current line to bottom of the page |
-| G | Move to end of the file |
-| gg | Move to top of the file |
-| g_ | Move to the last non-blank line of the file |
+| G | Jump to end of the file |
+| gg | Jump to top of the file |
+| g_ | Jump to the last non-blank line of the file |
 | 0 | Jump to the start of the line |
 | ^ | Jump to the first non-blank character of the line |
 | $ | Jump to the end of the line |
-| b |
-| w |
-| B |
-| W |
+| % | Jump to matching parenthesis |
+| w | Jump to beginning of the next word | 
+| e | Jump to end of the current word |
+| w | Jump to beginning of the current word | 
 
 ### Editing
 
@@ -90,9 +90,9 @@ sudo zypper install vim   [ OpenSUSE ]
 | yy / Y | Copy current line |
 | Y$ | Copy from cursor till end of the end |
 | yw | Copy from cursor till the next word |
-| y + <i/a> + w | Copy word under the cursor excluding/including whitespaces |
-| y + <t/f> + <key> | Copy from cursor till <key>i, excluding/including <key> |
-| y + <{/}> | Copy till next/previous block |
+| y + i or a + w | Copy word under the cursor excluding/including whitespaces |
+| y + t or f + # | Copy from cursor till # (excluding/including #) |
+| y + { or } | Copy till next/previous block |
 | p | Paste after cursor |
 | P | Paste before the cursor |
 | gp | Paste after the cursor and move to next block |
@@ -101,16 +101,16 @@ sudo zypper install vim   [ OpenSUSE ]
 | D | Delete(cut) from cursor till the end of the line |
 | dd | Delete(cut) current line |
 | dw | Delete(cut) from cursor till the next word |
-| d + <i/a> + w | Delete(cut) word under the cursor excluding/including whitespaces |
-| d + <t/f> + <key> | Delete(cut) from cursor till <key>i, excluding/including <key> |
-| d + <{/}> | Delete(cut) till next/previous block |
-| d | Delete(cut) mark text |
-| D | Delete(cut) from cursor till the end of the line |
-| dd | Delete(cut) current line |
-| dw | Delete(cut) from cursor till the next word |
-| d + <i/a> + w | Delete(cut) word under the cursor excluding/including whitespaces |
-| d + <t/f> + <key> | Delete(cut) from cursor till <key>i, excluding/including <key> |
-| d + <{/}> | Delete(cut) till next/previous block |
+| d + i or a + w | Delete(cut) word under the cursor excluding/including whitespaces |
+| d + t or f + # | Delete(cut) from cursor till # (excluding/including #) |
+| d + { or } | Delete(cut) till next/previous block |
+| c | Delete(cut) mark text in insert mode |
+| C | Delete(cut) from cursor till the end of the line in insert mode |
+| cc | Delete(cut) current line in insert mode |
+| cw | Delete(cut) from cursor till the next word in insert mode |
+| c + i or a + w | Delete(cut) word under the cursor excluding/including whitespaces in insert mode |
+| c + t or f + # | Delete(cut) from cursor till # (excluding/including #) in insert mode |
+| c + { or } | Delete(cut) till next/previous block in insert mode |
 
 
 ### Search & Patterns
@@ -121,7 +121,6 @@ sudo zypper install vim   [ OpenSUSE ]
 | # | Previous instance of the word under cursor |
 | n | Next matching search pattern |
 | N | Previous matching search pattern |
-
 
 ### Macros
 
@@ -148,12 +147,12 @@ sudo zypper install vim   [ OpenSUSE ]
 
 To install vim plugins, I prefer [vim-plug](https://github.com/junegunn/vim-plug).
 
-```
+```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-```
+```bash
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 ```
@@ -178,6 +177,15 @@ call plug#end()
 | :PlugUpgrade | Updates vim-plug |
 
 ### Some Awesome Plugins
+
+* [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+* [gruvbox](https://github.com/morhetz/gruvbox)
+* [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+* [vim-airline](https://github.com/vim-airline/vim-airline)
+* [vim-rainbow](https://github.com/frazrepo/vim-rainbow)
+* [ale](https://github.com/dense-analysis/ale)
+* [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ## Resources
 
