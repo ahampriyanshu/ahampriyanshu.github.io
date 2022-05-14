@@ -1,6 +1,6 @@
 ## Priyanshu Tiwari
 
-Hello and welcome to my blog 👋
+Hello and welcome to my blog.
 
 ### Attribution
 
@@ -12,4 +12,7 @@ Hello and welcome to my blog 👋
 
 * [Blog](https://ahampriyanshu.com/)
 * [Links](https://links.ahampriyanshu.com/)
-
+* [Gist](https://gist.github.com/ahampriyanshu)
+* [Resume](cv.ahampriyanshu.com)
+* [Github](https://github.com/ahampriyanshu)
+* [LinkedIn](https://www.linkedin.com/in/ahampriyanshu/)
