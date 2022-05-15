@@ -11,6 +11,21 @@ tags:
 
 ## Git
 
+* Explain $HEAD$.
+* Explain $tags$.
+* Explain staging area.
+* Explain $git cherry-pick$, $git reflog$, $git bisect$, $git stash$, $git diff$ and $git blame$. 
+* $--soft$ vs $--mixed$ $--hard$ reset.
+* Pull vs fetch.
+* Diff vs git status.
+* Reset vs revert.
+* Rebase vs merge.
+* What are git conflits and how to resolve them ?
+* How to squash multiple commits into a single commit ?
+* How to revert a commit ? 
+* Amending pushed/unpushed commit.
+
+
 ## Docker 
 
 * Virtualization vs containerization.
@@ -24,3 +39,7 @@ tags:
 * Attached and detached mode.
 
 ## Kubernetes
+
+* How to control usage of POD ?
+* What is PDB ?
+* Expalin Kubernetes Load Balancing.

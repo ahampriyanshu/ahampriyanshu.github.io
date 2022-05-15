@@ -4,10 +4,12 @@ author: Priyanshu Tiwari
 excerpt: Generating sitemap with custom priority in Jekyll site without any plugin
 image: 
   thumbnail: /images/tutorials/sitemap.png
-  caption: "latex"
+  caption: "sitemap.xml"
 ---
 
-In the end the final `sitemap.xml` file should look like this,
+1. Create a new file `sitemap.xml` in the base folder of your project.
+
+2. Copy-Paste the following contetnt into the newly create file and fine tune it according to your needs. Here, we are hard coding a sitemap file and then using two for loops to render urls for the posts and then the site's page.
 
 ```xml
 {%raw%}
@@ -68,3 +70,25 @@ sitemap_omit: true
 </urlset>
 {%endraw%}
 ```
+
+3. Now, for front-matter use 
+
+```xml
+{%raw%}
+sitemap_omit: boolean
+sitemap:
+  priority: 0.1 - 1.0
+  changefreq: 'daily' or 'weekly' or 'monthly' or 'yearly'
+{%endraw%}
+```
+
+4. Atlast, add a new default scope in the _config.yml file to exclude all the js/css assets.
+
+```yml
+- scope:
+    path: "assets/**"
+  values:
+    sitemap_omit: true
+```
+
+5. Voilà. Verfify the results by visiting basename/sitemap.
