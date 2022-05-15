@@ -1,5 +1,5 @@
 ---
-title: "Interview Prep: MERN Interview Questions"
+title: "Interview Prep: HTML & CSS Interview Questions"
 author: Priyanshu Tiwari
 excerpt: All of the questions I have been asked so far
 categories:
@@ -35,3 +35,4 @@ tags:
 * Position property with examples.
 * Display property with examples.
 * Padding, margin, content, border of Box model.
+* How to override styles applied via a base file.
