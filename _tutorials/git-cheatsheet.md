@@ -4,7 +4,7 @@ author: Priyanshu Tiwari
 excerpt: Installing and using LaTeX 
 image: 
   thumbnail: /images/tutorials/git.png
-  caption: "latex"
+  caption: "git and github"
 ---
 
 ## What is Git ?
@@ -13,7 +13,24 @@ image:
 
 ### Installing git
 
+```bash
+sudo apt install git      [ Debian/Ubuntu ]
+sudo yum install git      [ RedHat/CentOS ]
+sudo pacman -S git        [ Arch/Manjaro ]
+sudo dnf install git      [ Fedora ]
+sudo zypper install git   [ OpenSUSE ]
+sudo brew install git     [ MacOS ]
+```
+
 ### Configuring username, email, editor
+
+```bash
+$ git config --global user.name "Priyanshu Tiwari"
+```
+
+```bash
+$ git config --global user.email "ahampriyanshu@gmail.com"
+```
 
 ### Intializing local git repo
 

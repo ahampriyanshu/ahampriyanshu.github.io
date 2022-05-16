@@ -7,9 +7,9 @@ image:
   caption: "sitemap.xml"
 ---
 
-1. Create a new file `sitemap.xml` in the base folder of your project.
+1. Create a new file `sitemap.xml` in the root of your folder.
 
-2. Copy-Paste the following contetnt into the newly create file and fine tune it according to your needs. Here, we are hard coding a sitemap file and then using two for loops to render urls for the posts and then the site's page.
+2. Copy-&-paste the following content into the newly created file and fine tune it according to your needs. Here, we are using two for loops to render `<url>` , the first for the posts, and the second for the site's pages.
 
 ```xml
 {%raw%}
@@ -73,16 +73,14 @@ sitemap_omit: true
 
 3. Now, for front-matter use 
 
-```xml
-{%raw%}
+```yml
 sitemap_omit: boolean
 sitemap:
   priority: 0.1 - 1.0
   changefreq: 'daily' or 'weekly' or 'monthly' or 'yearly'
-{%endraw%}
 ```
 
-4. Atlast, add a new default scope in the _config.yml file to exclude all the js/css assets.
+4. Atlast, add new default scope in the _config.yml file to exclude all the js/css assets.
 
 ```yml
 - scope:
@@ -91,4 +89,7 @@ sitemap:
     sitemap_omit: true
 ```
 
-5. Voilà. Verfify the results by visiting basename/sitemap.
+5. Voilà 🎉
+
+Verfify the changes by visiting [basename/sitemap.xml](https://ahampriyanshu.com/sitemap.xml)
+{: .notice--info}

@@ -1,7 +1,7 @@
 ---
 title: "Installing and using MermaidJS"
 author: Priyanshu Tiwari
-excerpt: Installing mermaid in a jekyll site and generating data structures through it.
+excerpt: Installing mermaid in a Jekyll site and generating data structures through it.
 mermaid: true
 image: 
   thumbnail: /images/tutorials/mermaid.png
@@ -10,29 +10,32 @@ image:
 
 ## Mermaid JS
 
-> Mermaid is a Javascript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
+> Mermaid is a Javascript-based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
 
 ## Installation
 
-1. Click [here] and download the min file of the latest version of mermaid and store it in the assets folder.
+1. Click [here](https://unpkg.com/mermaid/) and download the minified file of the latest version of mermaid.
 
-2. Include the min file after closing the body tag in the base html file.
+2. Include the downloaded file in the base html.
 
 ```html
 <script src='./assets/js/plugins/mermaid.min.js'></script>
 ```
 
-**Note:** If you are using a jekyll site, use the following snippet to reduce unnecessary loading.
+**Note:** If you are using a Jekyll site, use the following snippet to reduce unnecessary loading.
 
 ```html
+{%raw%}
 {%- if page.mermaid == true -%}
   <script src="{{ '/assets/js/plugins/mermaid.min.js' | relative_url }}"></script>
 {%- endif -%}
+{%endraw%}
 ```
 
 ## Usage
 
-```
+```html
+<div class="mermaid">
 graph TD;
     A-->B["∅"];
     A-->C["A"];
@@ -48,6 +51,7 @@ graph TD;
     F-->M["AC"];
     G-->N["AB"];
     G-->O["ABC"];
+</div>
 ```
 
 <div class="mermaid">

@@ -1,5 +1,5 @@
 ---
-title: "Interview Prep: DevOps Interview Questions"
+title: "Interview Prep: DevOps"
 author: Priyanshu Tiwari
 excerpt: All of the questions I have been asked so far
 categories:

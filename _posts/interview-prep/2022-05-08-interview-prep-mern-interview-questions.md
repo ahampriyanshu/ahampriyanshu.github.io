@@ -1,5 +1,5 @@
 ---
-title: "Interview Prep: MERN Interview Questions"
+title: "Interview Prep: MERN"
 author: Priyanshu Tiwari
 excerpt: All of the questions I have been asked so far
 categories:
@@ -20,19 +20,19 @@ tags:
 * Prevent re-rendering of child components, when parent component is updated.
 * Explain side-effects in react components.
 * Uncontrolled vs controlled components.
-* How to debug infinte re-rendering ?
+* How to debug infinte rendering loop(useEffect, memo and profiler) ?
 * Keys in react and why index of array shouldn't be used as a key ?
 * Some techniques to optimize React app.
 * Render a simple component with and without using JSX.
 * Advantages of virtual DOM ?
 * Props in react.
+* MVC vs MVT.
 * Functional components vs Class components.
 * What is a pure component in react and can functional component be pure ?
 * How to avoid prop drilling ?
 * Pass data form parent->child and child->parent.
 * Styling a react component.
 * Conditional chaining in react.
-* MVC vs MVT.
 * Need of are Higher Order Components ?
 * Pros and cons(componentDidCatch(), getDerivedStateFromError()) of hooks.
 * React router and its major components.
@@ -42,3 +42,5 @@ tags:
 ## Mongo
 
 ## Node
+
+* Is node single or multi threaded and why so ?
