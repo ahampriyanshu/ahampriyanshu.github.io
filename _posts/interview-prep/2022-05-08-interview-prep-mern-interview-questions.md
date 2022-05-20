@@ -9,8 +9,6 @@ tags:
   - 'interview questions'
 ---
 
-## React
-
 * Explain and demonstrate [useState, useRef, useEffect, useMemo, useContext].
 * Is JS statically or dynamically typed language?
 * Is Babel a compiler or a transpiler ?
@@ -36,11 +34,3 @@ tags:
 * Need of are Higher Order Components ?
 * Pros and cons(componentDidCatch(), getDerivedStateFromError()) of hooks.
 * React router and its major components.
-
-## Express
-
-## Mongo
-
-## Node
-
-* Is node single or multi threaded and why so ?

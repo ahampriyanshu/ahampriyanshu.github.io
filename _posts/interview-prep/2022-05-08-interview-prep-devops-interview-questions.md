@@ -8,14 +8,12 @@ tags:
   - 'devops'
   - 'interview questions'
 ---
-
-## Git
-
-* Explain $HEAD$.
-* Explain $tags$.
+'
+* Explain HEAD.
+* Explain tags.
 * Explain staging area.
-* Explain $git cherry-pick$, $git reflog$, $git bisect$, $git stash$, $git diff$ and $git blame$. 
-* $--soft$ vs $--mixed$ $--hard$ reset.
+* Explain git cherry-pick, git reflog, git bisect, git stash, git diff and git blame. 
+* --soft vs --mixed --hard reset.
 * Pull vs fetch.
 * Diff vs git status.
 * Reset vs revert.
@@ -24,10 +22,6 @@ tags:
 * How to squash multiple commits into a single commit ?
 * How to revert a commit ? 
 * Amending pushed/unpushed commit.
-
-
-## Docker 
-
 * Virtualization vs containerization.
 * Can a paused/running container be removed from docker ?
 * Container vs images.
@@ -37,9 +31,6 @@ tags:
 * Docker commands.
 * Logging in docker.
 * Attached and detached mode.
-
-## Kubernetes
-
 * How to control usage of POD ?
 * What is PDB ?
 * Expalin Kubernetes Load Balancing.
