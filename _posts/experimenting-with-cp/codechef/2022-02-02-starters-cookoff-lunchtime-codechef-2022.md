@@ -3,10 +3,10 @@ title: "Codechef Contests 2022"
 author: Priyanshu Tiwari
 categories: [Contests, Codechef]
 excerpt: All of my accepted submissions on Codechef [2022]
-tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april]
+tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april, june]
 ---
 
-## Febuary
+## Febtruary
 
 ### CodeChef Starters 24
 
@@ -247,9 +247,7 @@ int main()
 }
 ```
 
-
 ## March
-
 
 ### Lunchtime
 
@@ -373,7 +371,6 @@ int main()
 
 ## April
 
-
 ### Cookoff
 
 #### A. Digit Sum Parities
@@ -477,5 +474,104 @@ int main()
     ll test;
     for (cin >> test; test--;)
         cout << solve() << endl;
+}
+```
+
+## June
+
+### Cookoff
+
+#### A. Break the Stick
+
+Chef has a stick of length N.
+
+He can break the stick into 2 or more parts such that the parity of length of each part is same. For example, a stick of length 11 can be broken into three sticks of lengths {3,3,5} since each part is odd, but it cannot be broken into two sticks of lengths {5,6} since one is even and the other is odd.
+
+Chef can then continue applying this operation on the smaller sticks he obtains, as many times as he likes.
+
+Can Chef obtain a stick of length exactly X by doing this?
+
+* [BREAKSTICK](https://www.codechef.com/COOK142B/problems/BREAKSTICK)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll n, x;
+    cin >> n >> x;
+
+    if (n % 2 and x%2 == 0){
+        cout << "NO" << endl;
+        return;
+    }
+    cout << "YES" << endl;
+        
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+
+    return 0;
+}
+```
+
+#### B. Sticks and Rectangles
+
+You are given two integers L and R(L+3≤R). Output any four distinct integers between L and R (inclusive) such that their bitwise XOR is zero.
+
+More formally, output any four integers a1,a2,a3,a4 such that:
+
+* a1⊕a2⊕a3⊕a4=0
+* L≤a1,a2,a3,a4≤R
+* ai=aj if and only if i=j
+
+If more than one such quadruple exists, you may output any of them. If no such quadruple exists, print −1 instead.
+
+* [SIMPLE_XOR](https://www.codechef.com/COOK142B/problems/SIMPLE_XOR)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll l, r;
+    cin >> l >> r;
+
+    if (l % 2)
+        l++;
+
+    if (l+3 <= r)
+        cout << l << " " << l + 1 << " " << l + 2 << " " << l + 3 << endl;
+    else
+        cout << -1 << endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+
+    return 0;
 }
 ```

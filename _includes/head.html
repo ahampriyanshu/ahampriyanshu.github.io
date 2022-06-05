@@ -12,18 +12,29 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   {% if site.plugins contains 'jekyll-seo-tag' or site.gems contains 'jekyll-seo-tag' %}
-    {% comment %}
-      Add metadata for search engines and social networks if jekyll-seo-tag plugin is enabled
-    {% endcomment %}
-    {% include head-seo.html %}
-  {% else %}
-    
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    {% seo %}
+  {% endif %}
+
+
+  <!-- <title>
+    {%- unless page.layout == "home" -%}
+      {{ page.title | append: " | "}}
+    {%- endunless -%}
+      {{ site.title }}
+    </title>
+
+    <title>
+      {%- unless page.layout == "home" -%}
+        {{ page.title | append: " | "}}
+      {%- endunless -%}
+        {{ site.title }}
+      </title>
 
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
-  {% endif %}
+  -->
 
   <script>
     if ( 'querySelector' in document && 'addEventListener' in window ) {

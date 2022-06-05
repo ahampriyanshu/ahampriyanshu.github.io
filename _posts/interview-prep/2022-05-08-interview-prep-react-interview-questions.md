@@ -1,11 +1,11 @@
 ---
-title: "Interview Prep: MERN"
+title: "Interview Prep: React"
 author: Priyanshu Tiwari
 excerpt: All of the questions I have been asked so far
 categories:
   - 'inteview prep'
 tags:
-  - 'mern'
+  - 'react'
   - 'interview questions'
 ---
 
