@@ -14,34 +14,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if site.plugins contains 'jekyll-seo-tag' or site.gems contains 'jekyll-seo-tag' %}
-    {% seo %}
+    {% seo title=false %}
   {% endif %}
 
-
-  <!-- <title>
+  <title>
     {%- unless page.layout == "home" -%}
       {{ page.title | append: " | "}}
     {%- endunless -%}
       {{ site.title }}
-    </title>
+  </title>
 
-    <title>
-      {%- unless page.layout == "home" -%}
-        {{ page.title | append: " | "}}
-      {%- endunless -%}
-        {{ site.title }}
-      </title>
-
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
-  -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/logo/favicon.ico' | relative_url }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/logo/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logo/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16"  href="{{ '/assets/logo/favicon-16x16.png' | relative_url }}">
+<link rel="manifest" href="{{ '/assets/logo/site.webmanifest' | relative_url }}">
+<link rel="mask-icon" href="{{ '/assets/logo/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
   <script>
     if ( 'querySelector' in document && 'addEventListener' in window ) {
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
     }
   </script>
-  
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ site.skin | default: '/assets/css/skins/default.css' | relative_url }}">
   {% if site.google_fonts %}
@@ -66,5 +62,4 @@
     {%- endfor -%}
   {%- endif -%}
 
-  {% include head-custom.html %}
 </head>
