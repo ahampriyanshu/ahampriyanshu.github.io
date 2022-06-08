@@ -53,7 +53,7 @@ int main()
 }
 ```
 
-#### Fortune Telling
+#### B. Fortune Telling
 
 Your friends Alice and Bob practice fortune telling.
 
@@ -433,5 +433,141 @@ for(int i=0; i<n; i++){
  
 cout << sum << endl;
  
+}
+```
+
+## June
+
+### Round #797 (Div. 3)
+
+#### A. Print a Pedestal
+
+Given the integer n — the number of available blocks. You must use all blocks to build a pedestal.
+
+The pedestal consists of 3 platforms for 2-nd, 1-st and 3-rd places respectively. The platform for the 1-st place must be strictly higher than for the 2-nd place, and the platform for the 2-nd place must be strictly higher than for the 3-rd place. Also, the height of each platform must be greater than zero (that is, each platform must contain at least one block).
+
+![fig1](https://espresso.codeforces.com/24d7d231439d1d5b474e5d7f27d3fdec09725412.png)
+
+Example pedestal of n=11 blocks: second place height equals 4 blocks, first place height equals 5 blocks, third place height equals 2 blocks.
+Among all possible pedestals of n blocks, deduce one such that the platform height for the 1-st place minimum as possible. If there are several of them, output any of them.
+
+* [1690/A](https://codeforces.com/contest/1690/problem/A)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll n, hq, hr, h1, h2, h3;
+    cin >> n;
+
+    hq = n / 3;
+    hr = n % 3;
+
+    if (hr == 2)
+    {
+        cout << hq + 1 << " " << hq + 2 << " " << hq - 1 << endl;
+    }
+    else if (hr == 1)
+    {
+        if (hq == 2)
+            cout << hq << " " << hq + 2 << " " << hq - 1 << endl;
+        else
+            cout << hq + 1 << " " << hq + 2 << " " << hq - 2 << endl;
+    }
+    else
+    {
+        cout << hq << " " << hq + 1 << " " << hq - 1 << endl;
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+
+    return 0;
+}
+```
+
+#### B. Array Decrements
+
+Kristina has two arrays a and b, each containing n non-negative integers. She can perform the following operation on array a any number of times:
+
+* apply a decrement to each non-zero element of the array, that is, replace the value of each element ai such that ai>0 with the value ai−1 (1≤i≤n). If ai was 0, its value does not change.
+
+Determine whether Kristina can get an array b from an array a in some number of operations (probably zero). In other words, can she make ai=bi after some number of operations for each 1≤i≤n?
+
+For example, let n=4, a=[3,5,4,1] and b=[1,3,2,0]. In this case, she can apply the operation twice:
+
+* after the first application of the operation she gets a=[2,4,3,0];
+* after the second use of the operation she gets a=[1,3,2,0].
+
+Thus, in two operations, she can get an array b from an array a.
+
+* [1690/B](https://codeforces.com/contest/1690/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+bool solve()
+{
+    ll n, i, diff, sum = 0, mini = INT_MAX;
+    cin >> n;
+    vector<ll> a(n), b(n);
+
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+
+    for (i = 0; i < n; i++)
+        cin >> b[i];
+
+    for (i = 0; i < n; i++)
+    {
+        diff = a[i] - b[i];
+        if (diff < 0)
+            return false;
+        if (b[i] > 0)
+            mini = min(mini, diff);
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        a[i] -= mini;
+        if (a[i] > b[i])
+            return false;
+    }
+
+    return true;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+    {
+        if (solve())
+            cout << "YES\n";
+        else
+            cout << "NO\n";
+    }
+    return 0;
 }
 ```
