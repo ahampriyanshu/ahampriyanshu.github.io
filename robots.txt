@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /cp/
-Disallow: /blog/
-Sitemap: https://ahampriyanshu.com/sitemap.xml

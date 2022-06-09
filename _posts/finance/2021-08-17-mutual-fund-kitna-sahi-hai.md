@@ -1,6 +1,8 @@
 ---
 title: "Mutual fund kitna sahi hai"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "With the average return of 15-18%, should one choose Mutual Funds over FD"
 categories:
   - Finance

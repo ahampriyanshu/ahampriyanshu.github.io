@@ -1,6 +1,8 @@
 ---
 title: "C++ | Ladder 5 | a2oj"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Sheets, A2oj]
 excerpt: Solutions to some random Codeforces problems [B Div 2]
 tags: [a2oj, ladder, codeforces, id5, problems, one, ten]

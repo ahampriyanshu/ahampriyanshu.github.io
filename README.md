@@ -6,7 +6,7 @@ Hello and welcome to my blog.
 
 * [GitHub Pages](https://pages.github.com/)
 * [Jekyll](https://jekyllrb.com/)
-* [SO Simple Theme](https://github.com/mmistakes/so-simple-theme)
+* [Chirpy Theme](https://github.com/cotes2020/jekyll-theme-chirpy)
 
 ### Some Links
 

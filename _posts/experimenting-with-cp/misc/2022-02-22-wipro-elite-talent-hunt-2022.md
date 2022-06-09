@@ -1,6 +1,8 @@
 ---
 title: "NLTH | Wipro | 2022"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: All of the submissions for Elite NLTH, February 2022.
 categories: [Contests, Wipro]
 tags: [live, contest, wipro, national, talent, hunt, hash, set, array, string]

@@ -1,6 +1,8 @@
 ---
 title: "Arrays & Strings | Codemonk | Hackerearth"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Sheets, CodeMonk]
 tags: [arrays, strings, codemonk, sheet, hackerearth]
 ---

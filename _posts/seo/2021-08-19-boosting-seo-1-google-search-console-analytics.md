@@ -1,6 +1,8 @@
 ---
 title: "Boosting SEO organically 1: Google Search Console, Analytics and Bing Webmaster"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "Boosting SEO organically 1: Google Search Console, Analytics and Bing Webmaster"
 categories:
   - Tech

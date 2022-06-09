@@ -1,6 +1,8 @@
 ---
 title: "Atcoder Contests 2022"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Contests, Atcoder]
 excerpt: All of my accepted submissions on Atcoder [2022]
 tags: [live, contest, atcoder, div2, grand]

@@ -1,6 +1,8 @@
 ---
 title: "Weekly and Biweekly Contests | March | Leetcode"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Contests, Leetcode]
 excerpt: All of my accepted submissions on Leetcode , March 2022.
 tags: [leetcode, Contests, challenge, march, weekly, biweekly]

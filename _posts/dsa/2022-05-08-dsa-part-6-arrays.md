@@ -1,6 +1,8 @@
 ---
 title: "DSA Part 6: Arrays"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: Static and dynamic arrays, vectors in STL, trapping rainwater, window sliding, prefix sum 
 mermaid: true
 categories:

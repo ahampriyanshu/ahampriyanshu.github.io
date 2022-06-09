@@ -1,6 +1,8 @@
 ---
 title: "Codeforces Contests 2022"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Contests, Codeforces]
 excerpt: All of my accepted submissions on Codeforces [2022]
 tags: [live, contest, codeforces, div2, div3, educational, global, round]

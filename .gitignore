@@ -1,14 +1,17 @@
-_asset_bundler_cache
+# hidden files
+.*
+!.git*
+!.editorconfig
+!.nojekyll
+!.travis.yml
+
+# bundler cache
 _site
-.bundle
-.DS_Store
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
+vendor
+
+# rubygem
 *.gem
-*.sublime-project
-*.sublime-workspace
-codekit-config.json
-Gemfile.lock
+
+# npm dependencies
 node_modules
-npm-debug.log*
+package-lock.json

@@ -1,6 +1,8 @@
 ---
 title: "Dynamic Programming I | Study Plan | Leetcode"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Sheets, Leetcode]
 excerpt: C++ Solutions to Dynamic Programming I, Leetcode.
 tags: [leetcode, programming, skills, back, to, study, plan, easy]

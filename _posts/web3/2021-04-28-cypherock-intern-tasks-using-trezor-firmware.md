@@ -1,6 +1,8 @@
 ---
 title: "Cypherock internship tasks using trezor-firmware"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "Shamir Secret Sharing Alogithm in C, generating BIP39 Seed using 24 bip mnemonics, To derive public key, private key, chain node and reciever and change address for Bitcoin Testnet, To sign an unsigned bitcoin testnet transaction. To sign a raw Ethereum (Ropsten) transaction."
 categories:
   - Tech

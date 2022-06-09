@@ -1,6 +1,8 @@
 ---
 title: "DSA Part 8: Dynamic Programming"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: What is dynamic programming, top down and bottom up approach, lcs, lis
 categories:
   - DSA

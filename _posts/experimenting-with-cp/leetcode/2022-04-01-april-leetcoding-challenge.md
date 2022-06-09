@@ -1,6 +1,8 @@
 ---
 title: "April | 2022 | Leetcoding Challenge"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Contests, Leetcode]
 excerpt: C++ Solutions to April Leetcoding Challenge, 2022.
 tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]

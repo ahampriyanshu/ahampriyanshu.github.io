@@ -1,6 +1,8 @@
 ---
 title: "Boosting SEO organically 5: URL pattern"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "Boosting SEO organically 5: URL pattern"
 categories:
   - Tech

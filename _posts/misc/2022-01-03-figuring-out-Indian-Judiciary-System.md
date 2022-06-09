@@ -1,6 +1,8 @@
 ---
 title: "Figuring Out Part: Indian Judiciary System"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "Figuring Out Part: Indian Judiciary System"
 categories:
   - Misc

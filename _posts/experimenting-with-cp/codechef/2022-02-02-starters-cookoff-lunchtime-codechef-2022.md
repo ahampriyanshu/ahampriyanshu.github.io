@@ -1,6 +1,8 @@
 ---
 title: "Codechef Contests 2022"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 categories: [Contests, Codechef]
 excerpt: All of my accepted submissions on Codechef [2022]
 tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april, june]
@@ -251,7 +253,7 @@ int main()
 
 ### Lunchtime
 
-#### Parallel Processing
+#### A. Parallel Processing
 
 There are N tasks waiting in line to be executed. The execution time for the ith task is Ai seconds.
 
@@ -323,7 +325,7 @@ int main()
 }
 ```
 
-#### Four Equidistant Points on a Grid
+#### B. Four Equidistant Points on a Grid
 
 The manhattan distance between two points P1(x1,y1) and P2(x2,y2) is given by d(P1,P2)=|x2−x1|+|y2−y1|.
 
@@ -479,7 +481,7 @@ int main()
 
 ## June
 
-### Cookoff
+### Starters 41
 
 #### A. Break the Stick
 
@@ -491,7 +493,7 @@ Chef can then continue applying this operation on the smaller sticks he obtains,
 
 Can Chef obtain a stick of length exactly X by doing this?
 
-* [BREAKSTICK](https://www.codechef.com/COOK142B/problems/BREAKSTICK)
+* [BREAKSTICK](https://www.codechef.com/START41B/problems/BREAKSTICK)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -539,7 +541,7 @@ More formally, output any four integers a1,a2,a3,a4 such that:
 
 If more than one such quadruple exists, you may output any of them. If no such quadruple exists, print −1 instead.
 
-* [SIMPLE_XOR](https://www.codechef.com/COOK142B/problems/SIMPLE_XOR)
+* [SIMPLE_XOR](https://www.codechef.com/START41B/problems/SIMPLE_XOR)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -575,3 +577,206 @@ int main()
     return 0;
 }
 ```
+
+### Starters 42
+
+#### A. Minimum number of Flips
+
+Chef has an array A of length N consisting of 1 and −1 only.
+
+In one operation, Chef can choose any index i (1≤i≤N) and multiply the element Ai by −1.
+
+Find the minimum number of operations required to make the sum of the array equal to 0. Output -1 if the sum of the array cannot be made 0.
+
+* [MINFLIPS](https://www.codechef.com/START42C/problems/MINFLIPS)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll n,i,e, sum(0);
+    cin >> n;
+
+    for (i = 0; i < n; i++)
+    {
+        cin >> e;
+        sum += e;
+    }
+
+    sum = abs(sum);
+
+    if(sum%2) return -1;
+    return sum/2;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+    cout << solve() << endl;
+
+    return 0;
+}
+```
+
+#### B. Divisible by 3 
+
+Stack likes the number 3 a lot.
+
+He has two non-negative integers A and B.
+In one operation, Stack can do either of the following:
+
+* A:=|A−B| (change A to |A−B|)
+* B:=|A−B| (change B to |A−B|)
+
+**Note: ** that |X| denotes absolute value of X. For example |−7|=7 and |4|=4.
+
+Find the minimum number of operations after which at least one integer out of A and B becomes divisible by 3.
+
+* [MODULO3](https://www.codechef.com/START42C/problems/MODULO3)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll a, b, mini, maxi;
+    cin >> a >> b;
+    mini = min(a%3, b%3);
+    maxi = max(a%3, b%3);
+
+    if(mini == 0) return 0;
+    if(mini == 1 and maxi == 1) return 1;
+    if( abs(a-b)%3 == 0) return 1;
+    return 2;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+
+    return 0;
+}
+```
+
+
+#### C. How Many Maximums 
+
+From an array A containing N integers, you construct a binary string S of length (N−1) as follows. For all 1≤i<N:
+
+* If Ai<Ai+1, then Si=0.
+* If Ai>Ai+1, then Si=1.
+
+Given the string S, determine the count of indices i (1≤i≤N) such that it is possible for Ai to be the maximum element of the array A.
+
+* [HOWMANYMAX](https://www.codechef.com/START42C/problems/HOWMANYMAX)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll n,i,e, ans(0);
+    bool upwards = true;
+    string s;
+    cin >> n >> s;
+
+    for(i=0; i<=n-2; i++){
+        if(s[i] == '1') {
+            if(upwards) ans++;
+            upwards = false;
+        } else upwards = true;
+
+    }
+
+    if(s[n-2] == '0' and upwards) ans++;
+
+    return ans;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+    cout << solve() << endl;
+
+    return 0;
+}
+```
+
+#### D. Minimum or Maximum 
+
+From a hidden array A of length N, Stack constructs an array B of length N such that:
+
+For all i (1≤i≤N), Bi=max(A1,A2,…,Ai) or Bi=min(A1,A2,…,Ai).
+For the given array B of length N, Stack wants you to check whether a possible array A exists or not.
+
+* [MINORMAX](https://www.codechef.com/START42C/problems/MINORMAX)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll n,i,e, maxi = INT_MIN, mini = INT_MAX;
+    bool possible = true;
+
+    cin >> n;
+
+    for(i = 0; i<n; i++){
+        cin >> e;
+        mini = min(mini, e);
+        maxi = max(maxi, e);
+        if(e > mini and e < maxi) possible = false;
+    }
+
+    if(possible) cout << "YES" << endl;
+    else cout << "NO" << endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+
+    return 0;
+}
+```
+
+

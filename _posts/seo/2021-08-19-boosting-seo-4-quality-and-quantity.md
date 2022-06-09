@@ -1,6 +1,8 @@
 ---
 title: "Boosting SEO organically 4: quality and quantity"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "Boosting SEO organically 4: quality and quantity"
 categories:
   - Tech

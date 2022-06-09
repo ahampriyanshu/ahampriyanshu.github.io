@@ -1,6 +1,8 @@
 ---
 title: "Any history buffs here? Remembering Norm Macdonald"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: "It's official, I'm not Norm isn't actually Norm."
 categories:
   - Comedy

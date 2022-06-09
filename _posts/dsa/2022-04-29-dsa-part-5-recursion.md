@@ -1,6 +1,8 @@
 ---
 title: "DSA Part 5: Recursion"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: Basic of recursion, PMI, tail recursion, pow(x,n), subset, powerset, count and sum of integer, is_sorted(), fibonacci series, factorial, first and last index of a number
 mermaid: true
 categories:

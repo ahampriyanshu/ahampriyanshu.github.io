@@ -1,6 +1,8 @@
 ---
 title: "Intro To Stock Market"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: common myths, dividend vs interests, types of orders, ipo, fso, bottom up/down, lower/upper circuit, promoter, sebi, nifty, sensex
 categories:
   - 'stock market'

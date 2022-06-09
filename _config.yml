@@ -1,121 +1,145 @@
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
-skin: "/assets/css/skins/default.css"
-locale: en-US
-title: "Priyanshu Tiwari"
-description: "Hello and welcome to my blog. I usually write about programming, finance, and comedy. You can reach me at ahampriyanshu@gmail.com"
-baseurl: "/"
+theme: jekyll-theme-chirpy
+baseurl: ''
 url: "https://ahampriyanshu.com"
-logo: "/logo.png"
-date_format: "%B %-d, %Y"
-read_time: true
-words_per_minute: 100
-mathjax:
-  enable: true
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-google_analytics:
-disqus:
-  shortname:
+lang: en
+
+# Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
+prefer_datetime_locale:
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Asia/Kolkata
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
+
+title: Priyanshu Tiwari 
+tagline: Hello and welcome to my blog.
+
+description: Hello and welcome to my blog. I usually write about programming, finance, and comedy. You can reach me at ahampriyanshu@gmail.com
+
 twitter:
-  username: "ahampriyanshu"
+  username: ahampriyanshu
 
-# Liquid
-liquid:
-  error_mode: strict
+github:
+  username: ahampriyanshu
 
-# Build settings
-permalink: /:title/
-markdown: kramdown
-feed:
-  path: feed.xml
+social:
+  name: Priyanshu Tiwari
+  email: ahampriyanshu@gmail.com     
+  links:
+    - https://twitter.com/ahampriyanshu
+    - https://www.linkedin.com/in/ahampriyanshu
+    - https://github.com/ahampriyanshu
+    - https://www.instagram.com/ahampriyanshu
 
-# Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 20
-# paginate_path: /page:num/
+img_cdn:
 
-copyright: "Priyanshu Tiwari"
+avatar: '/assets/avatar.jpg'
 
-# Search
-search_full_content: true # can have performance implications for large sites
+toc: true
 
-# Taxonomy pages
-category_archive_path: "/categories/#"
-tag_archive_path: "/tags/#"
-  
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
+comments:
+  active: utterances
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-paginate
+  disqus:
+    shortname:
+    
+  utterances:
+    repo: ahampriyanshu/meta
+    issue_term: title
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled:      # boolean, keep empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env:          # [development|production]
+
+google_analytics:
+  id: 'G-VSNH6EH1RX'
+  # Google Analytics pageviews report settings
+  pv:
+    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
+    cache_path:       # the local PV cache data, friendly to visitors from GFW region
+
+paginate: 20
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 collections:
-  tutorials:
+  tabs:
     output: true
-    permalink: /:collection/:path/
+    sort_by: order
 
-# Front Matter Defaults
 defaults:
-  # Posts defaults
   - scope:
-      path: "_posts"
+      path: ''          # An empty string here means all files in the project
       type: posts
     values:
       layout: post
-      share: true
+      comments: true    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /blog/:title/
   - scope:
-      path: "_tutorials"
-      type: tutorials
+      path: _drafts
     values:
-      layout: post
-      share: true
+      comments: false
   - scope:
-      path: "assets/**"
+      path: ''
+      type: tabs             # see `site.collections`
     values:
-      sitemap_omit: true
-      
-# Site Author
-author:
-  name: Priyanshu Tiwari
-  picture: /logo.png
-  email: ahampriyanshu@gmail.com
-  twitter: ahampriyanshu
-  links:
-    - title: Twitter
-      url: https://twitter.com/ahampriyanshu
-      icon: fab fa-twitter-square
-    - title: Instagram
-      url: https://instagram.com/ahampriyanshu
-      icon: fab fa-instagram
-    - title: GitHub
-      url: https://github.com/ahampriyanshu
-      icon: fab fa-github-square
+      layout: page
+      permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
-# Footer Links
-footer_links:
-  - title: Github
-    url: https://github.com/ahampriyanshu
-    icon: fab fa-github
-  - title: Linkedin
-    url: https://www.linkedin.com/in/ahampriyanshu/
-    icon: fab fa-linkedin-in
-  - title: Telegram
-    url: https://t.me/ahampriyanshu
-    icon: fab fa-telegram-plane
-  - title: Discord
-    url: https://discordapp.com/users/746095596175097916
-    icon: fab fa-discord
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - tools
+  - README.md
+  - LICENSE
+  - gulpfile.js
+  - node_modules
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

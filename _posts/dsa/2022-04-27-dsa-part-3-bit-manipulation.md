@@ -1,6 +1,8 @@
 ---
 title: "DSA Part 3: Bit Manipulation"
-author: Priyanshu Tiwari
+author:
+  name: Priyanshu Tiwari
+  link: https://links.ahampriyanshu.com/
 excerpt: binary numbers, msb, lsb, unsigned and signed 32-bits int, 2's complement, bitwise operators, some common bitwise operators
 categories:
   - DSA
