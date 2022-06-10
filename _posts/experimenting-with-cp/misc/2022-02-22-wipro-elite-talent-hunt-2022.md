@@ -9,7 +9,7 @@ tags: [live, contest, wipro, national, talent, hunt, hash, set, array, string]
 --- 
 
 All the submissions are posted once the examination was already over.
-{: .notice--warning}
+{: .prompt-warning }
 
 ### 22 Feb
 

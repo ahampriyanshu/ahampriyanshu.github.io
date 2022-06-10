@@ -15,10 +15,9 @@ tags:
 * Investing is just like gambling.
 * Eventually, one day the market will crash and you will lose all your gains as well as the principal amount.
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-7.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-7.png){: .shadow }
+_Source: Google Finance_
+
 
 <figure class="align-center">
   <img src="{{ '/images/stocks/1-8.png' | absolute_url }}" alt="loading">

@@ -14,7 +14,7 @@ Given a binary tree, find its level order traversal. Level order traversal of a 
 * [GFG](https://practice.geeksforgeeks.org/problems/level-order-traversal/1#)
 
 > Create a queue, insert the root node, pop the queue in a temp variable and push the left and the right child. Repeat until the queue is empty.
-{: .notice--info}
+{: .prompt-tip }
 
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(n)**
@@ -48,7 +48,7 @@ Given a binary tree of size N, find its reverse level order traversal. ie- the t
 * [GFG](https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1#)
 
 > Create a queue, insert the root node, pop the queue in a temp variable and push the right and then the left child. Repeat until the queue is empty. Reverse the resultant vector.
-{: .notice--info}
+{: .prompt-tip }
 
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(n)**
@@ -81,7 +81,7 @@ Given a binary tree, find its height.
 * [GFG](https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1#)
 
 > Calculate the height of the left or the right subtree 
-{: .notice--info}
+{: .prompt-tip }
 
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(n)**

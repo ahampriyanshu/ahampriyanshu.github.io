@@ -3,8 +3,8 @@ title: "Data Structure I | Study Plan | Leetcode"
 author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
-categories: [Sheets, Leetcode]
 excerpt: C++ Solutions to Data Structure I of 2 Weeks Study Plan, Leetcode.
+categories: [Sheets, Leetcode]
 tags: [leetcode, data, structure, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
@@ -313,7 +313,7 @@ public:
 #### Formula based  
 
 > NCr = (NCr - 1 * (N - r + 1)) / r
-{: .notice--info}
+{: .prompt-tip }
 
 ```cpp
 class Solution {

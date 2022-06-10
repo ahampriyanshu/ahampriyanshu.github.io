@@ -39,7 +39,7 @@ Hence, analysis of an algorrithm is done always in the first quadrant.
 * Submit
 
 Sometimes instead of reading the problem statement, we can find required logic by observing the pattern in sample input and output.
-{: .notice--info}
+{: .prompt-tip }
 
 ### Analyzing given constraints
 

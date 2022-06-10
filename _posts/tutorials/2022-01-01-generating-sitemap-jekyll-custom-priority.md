@@ -98,4 +98,4 @@ sitemap:
 5. Voilà 🎉
 
 Verfify the changes by visiting [basename/sitemap.xml](https://ahampriyanshu.com/sitemap.xml)
-{: .notice--info}
+{: .prompt-tip }

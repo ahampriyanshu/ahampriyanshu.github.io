@@ -122,7 +122,7 @@ Given a linked list consisting of L nodes and given a number N. The task is to f
 * [GFG](https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1)
 
 > Initialize two pointers to head. Move the right pointer n times and then move move both the pointer untill the right reaches the end. Now the left pointer points to the nth node from the end. 
-{: .notice--info}
+{: .prompt-tip }
 
 * Time Complexity : **O(n)** 
 * Space Complexity : **O(1)**

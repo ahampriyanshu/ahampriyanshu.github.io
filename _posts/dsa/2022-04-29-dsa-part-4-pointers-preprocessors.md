@@ -56,7 +56,7 @@ int main(){
 ```
 
 **Note:** Do not try to access or modify uninitialized pointers as they can point to any segment of the memory. To prevent this we usually initialize pointers with either some valid variable's address or _NULL_. 
-{: .notice--info}
+{: .prompt-tip }
 
 ```cpp
 int* p;
@@ -122,7 +122,7 @@ int main(){
     **a[i] = *(a+i)**
 
 Hence we can also use
-{: .notice--info}
+{: .prompt-tip }
 
 ``a[i] == i[a]`` as ``*(a+i) == *(i+a)``
 
@@ -176,7 +176,7 @@ char s1[] = "abc";
 char* s2 = "abc";
 
 While executing the above code, the compiler will first create a temporary space of the string literal and then copy those values to the memory block provided to s1. But s2 points towards the same temporary which can be very dangerous and hence should be avoided.
-{: .notice--warning}
+{: .prompt-warning }
 
 ### Pointers and functions
 
@@ -380,7 +380,7 @@ Doesn't occupy new space in the memory.
 Mostly used while passing variables to any functions that should alter/update the value of the original variable.
 
 We can't declare and initialize reference variables in two different steps
-{: .notice--info}
+{: .prompt-tip }
 
 ```cpp
 int i;
@@ -585,7 +585,7 @@ int main(){
 ```
 
 **Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
-{: .notice--warning}
+{: .prompt-warning }
 
 ## Default Arguments
 
@@ -606,7 +606,7 @@ int main(){
 ```
 
 **Note**: As of now, Java does not support default arguments.
-{: .notice--warning}
+{: .prompt-warning }
 
 ## Constant Variables
 

@@ -91,7 +91,7 @@ The first bit from the left(msb) is reserved. All the positive integers are stor
 2’s complement of a number is obtained by inverting each bit of given number plus 1 to least significant bit(LSB).
 
 **Note:** Overflow is ignored while computing 2's complement.
-{: .notice--info}
+{: .prompt-tip }
 
 #### Minimum Possible Value
 
@@ -212,7 +212,7 @@ Inverts all bits of the operand.
 ### RSB
 
 Subtracting 1 from a decimal number flips all the bits after the rightmost set bit including the rightmost set bit.
-{: .notice--info}
+{: .prompt-tip }
 
 ```
 110100            (52)
@@ -221,7 +221,7 @@ Subtracting 1 from a decimal number flips all the bits after the rightmost set b
 ```
 
 To find the right most set bit of a number we can perform AND between the given number and inverse of the number decremented by 1.
-{: .notice--info}
+{: .prompt-tip }
 
 ```cpp
 int rsb = a & ~(a-1);
