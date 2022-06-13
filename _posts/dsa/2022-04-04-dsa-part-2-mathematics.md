@@ -4,6 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 excerpt: Number sequences, extended euclidean algorithm, prime factorization, sieve of eratosthenes, lcm , gcd
+math: true
 categories:
   - DSA
 tags:

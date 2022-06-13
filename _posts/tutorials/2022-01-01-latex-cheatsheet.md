@@ -6,6 +6,7 @@ author:
 excerpt: Installing MathJax & Guide to Mathematical symbols in LaTeX
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
+math: true
 image:
   src: /images/tutorials/latex.png
   width: 1000
