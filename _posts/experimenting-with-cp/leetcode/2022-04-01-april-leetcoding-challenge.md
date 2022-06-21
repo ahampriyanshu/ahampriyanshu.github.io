@@ -5,7 +5,7 @@ author:
   link: https://links.ahampriyanshu.com/
 categories: [Contests, Leetcode]
 excerpt: C++ Solutions to April Leetcoding Challenge, 2022.
-tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
+tags: [leetcode, leetcoding, challenge, april, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
 ## Week 1
