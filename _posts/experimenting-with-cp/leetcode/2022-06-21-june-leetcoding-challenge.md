@@ -61,3 +61,35 @@ int furthestBuilding(vector<int>& heights, int bricks, int ladders) {
     return i;
 }
 ```
+
+## 22 June | 215. Kth Largest Element in an Array
+
+Given an integer array ``nums`` and an integer ``k``, return the ``kth`` largest element in the array.
+
+Note that it is the ``kth`` largest element in the sorted order, not the ``kth`` distinct element.
+
+* [Practice](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+### Maxheap
+
+```cpp
+int findKthLargest(vector<int>& nums, int k) {
+    priority_queue<int> pq(nums.begin(), nums.end());
+    int i=0;
+	while(i++ < k-1) 
+        pq.pop();
+	return pq.top();
+}
+```
+
+### Sorting
+
+```cpp
+int findKthLargest(vector<int>& nums, int k) {
+    priority_queue<int> pq(nums.begin(), nums.end());
+    int i=0;
+	while(i++ < k-1) 
+        pq.pop();
+	return pq.top();
+}
+```

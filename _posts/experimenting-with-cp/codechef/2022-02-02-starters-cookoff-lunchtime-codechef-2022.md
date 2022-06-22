@@ -6,6 +6,7 @@ author:
 categories: [Contests, Codechef]
 excerpt: All of my accepted submissions on Codechef [2022]
 tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april, june]
+math: true
 ---
 
 ## Febtruary
@@ -779,4 +780,205 @@ int main()
 }
 ```
 
+### Starters 44
 
+#### The Attack of Knight
+
+While playing chess, Chef noticed that it is generally advantageous for him if his knight attacks two or more of his opponent's pieces simultaneously. To practice this skill, Chef decided to perform the following exercise:
+
+* Take an empty 8 \times 88×8 chessboard, and any two white pieces.
+
+* Choose two distinct cells $ (X_1, Y_1), (X_2, Y_2) $ and place the pieces on those cells (the cell at the intersection of the ii-th row and jj-th column is denoted (i, j)(i,j)).
+
+* Check if there exists an empty cell where he can place a black knight in such a way that the knight attacks both the white pieces simultaneously.
+
+Given the position of the two white pieces $ (X_1, Y_1), (X_2, Y_2) $, print 'YES' if there exists an empty cell where he can place a black knight in such a way that the knight attacks both the white pieces simultaneously, otherwise print NO.
+
+For reference, a knight attacks a piece placed in a cell that is:
+
+* One square horizontally and two squares vertically away from it, or
+* One square vertically and two squares horizontally away from it
+
+* [Practise](https://www.codechef.com/submit/KNIGHTATTACK?tab=statement)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+unordered_map<ll, ll> mp;
+
+void insertXY(ll x, ll y)
+{
+
+    if (x < 9 and x > 0 and y < 9 and y > 0){
+        ll key = x*10 + y;
+        mp[key]++;
+    }
+}
+
+void allMoves(ll x, ll y)
+{
+    insertXY(x + 2, y + 1);
+    insertXY(x + 2, y - 1);
+    insertXY(x - 2, y + 1);
+    insertXY(x - 2, y - 1);
+    insertXY(x + 1, y + 2);
+    insertXY(x - 1, y + 2);
+    insertXY(x + 1, y - 2);
+    insertXY(x - 1, y - 2);
+}
+
+bool solve()
+{
+    ll x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+
+    allMoves(x1, y1);
+    allMoves(x2, y2);
+
+    for (auto e : mp)
+        if (e.second > 1)
+            return true;
+
+    return false;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+    {
+        if (solve())
+            cout << "YES\n";
+        else
+            cout << "NO\n";
+        mp.clear();
+    }
+    return 0;
+}
+```
+
+#### Jogging
+
+Alice jogs everyday to keep herself fit and active. She noticed that she burns $X$ calories when jogging the first kilometer, and for $ K>1 $, jogging the $K^{th}$ kilometer burns calories equivalent to the total number of calories burned while jogging the first $K-1$ kilometers.
+
+What is the total number of calories that Alice burns after jogging for $N$ kilometers? The answer can be very large, so report it modulo $10^9 + 7$.
+
+* [Practise](https://www.codechef.com/submit/JOGGING?tab=statement)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define MOD 1000000007
+
+typedef long long ll;
+
+ll myPow(ll x, ll y)
+{
+    if (y == 0)
+        return 1;
+
+    if (y % 2 == 0)
+        return (myPow(x, y / 2) * myPow(x, y / 2)) % MOD;
+    
+    return (x * myPow(x, y / 2) * myPow(x, y / 2) % MOD);
+}
+
+void solve()
+{
+    ll n, x, rn = 0, ans = 0;
+
+    cin >> n >> x;
+
+    n--;
+
+    ll y = myPow(2, n);
+
+    cout << (x * y) % MOD << endl;
+    
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+    return 0;
+}
+```
+
+#### Dense Bracket Sequence
+
+A bracket sequence SS is called dense if one of the following is true:
+
+* SS is empty.
+* S = (X)S=(X) where XX is dense.
+
+You are given a bracket sequence SS. What is the **minimum** number of brackets you must remove to make it dense?
+
+* [Practise](https://www.codechef.com/submit/DENSE?tab=statement)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+        ll n;
+        string s;
+
+        cin >> n >> s;
+
+        ll ans=0,i=0,j=n-1;
+
+        while(i<=j)
+        {
+            if(s[i]=='(' && s[j]==')')
+            {
+                i++;
+                j--;
+            }
+            else if(s[i]==')')
+            {
+                i++;
+                ans++;
+            }
+
+            else if(s[j]=='(')
+            {
+                j--;
+                ans++;
+            }
+        }
+
+        cout << ans << endl;
+    
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+    return 0;
+}
+```

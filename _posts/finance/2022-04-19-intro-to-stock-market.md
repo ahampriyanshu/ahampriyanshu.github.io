@@ -15,58 +15,42 @@ tags:
 * Investing is just like gambling.
 * Eventually, one day the market will crash and you will lose all your gains as well as the principal amount.
 
-![loading](/images/stocks/1-7.png){: .shadow }
+![loading](/images/stocks/1-7.png)
 _Source: Google Finance_
 
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-8.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-8.png)
+_Source: Google Finance_
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-9.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-9.png)
+_Source: Google Finance_
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-10.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-10.png)
+_Source: Google Finance_
 
 * High risk equates to high profits.
 * Only meant for "experts" with "large" capital.
 
 * Stock that have skyrocketed must go down.
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-1.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-1.png)
+_Source: Google Finance_
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-2.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-2.png)
+_Source: Google Finance_
 
 Until some serious bad news arrives.
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-3.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-3.png)
+_Source: Google Finance_
 
 * Stocks that plummet must go up.
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-4.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-4.png)
+_Source: Google Finance_
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-5.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.google.com/finance/">Google Finance</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-5.png)
+_Source: Google Finance_
 
 ## Dividend
 
@@ -91,7 +75,5 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 
 ## TL;DR
 
-<figure class="align-center">
-  <img src="{{ '/images/stocks/1-6.png' | absolute_url }}" alt="loading">
-  <figcaption>Source: <a href="https://www.reddit.com/r/IndianStreetBets/comments/u5vjp7/how_to_consistently_lose_money_in_stocks/">r/IndianStreetBets</a></figcaption>
-</figure> 
+![loading](/images/stocks/1-6.png)
+_Source: Google Finance_
