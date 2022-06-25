@@ -76,4 +76,4 @@ A dividend is a distribution of profits by a corporation to its shareholders.[1]
 ## TL;DR
 
 ![loading](/images/stocks/1-6.png)
-_Source: Google Finance_
+_Source: r/IndianStreetBets_

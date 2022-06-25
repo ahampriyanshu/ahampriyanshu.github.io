@@ -5,12 +5,14 @@ author:
   link: https://links.ahampriyanshu.com/
 categories: [Contests, Leetcode]
 excerpt: All of my accepted submissions on Leetcode , March 2022.
-tags: [leetcode, Contests, challenge, march, weekly, biweekly]
+tags: [leetcode, Contests, challenge, march, june, weekly, biweekly]
 ---
 
-## Biweekly Contest 73
+## March
 
-### 6024. Most Frequent Number Following Key In an Array
+### Biweekly Contest 73
+
+#### 6024. Most Frequent Number Following Key In an Array
 
 You are given a 0-indexed integer array nums. You are also given an integer key, which is present in nums.
 
@@ -44,7 +46,7 @@ public:
 };
 ```
 
-### 5217. Sort the Jumbled Numbers
+#### 5217. Sort the Jumbled Numbers
 
 You are given a 0-indexed integer array mapping which represents the mapping rule of a shuffled decimal system. mapping[i] = j means digit i should be mapped to digit j in this system.
 
@@ -91,9 +93,9 @@ public:
 };
 ```
 
-## Weekly Contest 284
+### Weekly Contest 284
 
-### 2200. Find All K-Distant Indices in an Array
+#### 2200. Find All K-Distant Indices in an Array
 
 You are given a 0-indexed integer array nums and two integers key and k. A k-distant index is an index i of nums for which there exists at least one index j such that |i - j| <= k and nums[j] == key.
 
@@ -124,4 +126,31 @@ public:
         return ans;
     }
 };
+```
+
+## March
+
+### Biweekly Contest 81
+
+#### 2315. Count Asterisks
+
+You are given a string s, where every two consecutive vertical bars ``'|'`` are grouped into a pair. In other words, the 1st and 2nd ``'|'`` make a pair, the 3rd and 4th ``'|'`` make a pair, and so forth.
+
+Return the number of ``'*'`` in s, excluding the ``'*'`` between each pair of ``'|'``.
+
+Note that each ``'|'`` will belong to exactly one pair.
+
+* [Practice](https://leetcode.com/problems/count-asterisks/)
+
+```cpp
+int countAsterisks(string s) {  
+    int ans(0), bars(0);        
+    for(char ch:s){
+        if(ch == '|')
+            bars++;
+        if(ch == '*' and bars%2 == 0)
+            ans++;
+        }        
+    return ans; 
+}
 ```

@@ -86,10 +86,76 @@ int findKthLargest(vector<int>& nums, int k) {
 
 ```cpp
 int findKthLargest(vector<int>& nums, int k) {
-    priority_queue<int> pq(nums.begin(), nums.end());
-    int i=0;
-	while(i++ < k-1) 
-        pq.pop();
-	return pq.top();
+    sort(nums.begin(), nums.end(), greater<int>());
+    return nums[k-1];
+}
+```
+
+## 23 June | 630. Course Schedule III
+
+There are ``n`` different online courses numbered from ``1`` to ``n``. You are given an array ``courses`` where ``courses[i] = [durationi, lastDayi]`` indicate that the ith course should be taken **continuously** for ``durationi`` days and must be finished before or on ``lastDayi``.
+
+You will start on the ``1st`` day and you cannot take two or more courses simultaneously.
+
+_Return the maximum number of courses that you can take._
+
+* [Practice](https://leetcode.com/problems/course-schedule-iii/)
+
+### Maxheap
+
+```cpp
+    static bool comp(const vector<int>& a, vector<int>& b){
+        return a[1] < b[1];
+    }
+    
+    int scheduleCourse(vector<vector<int>>& courses) {
+    
+        sort(courses.begin(), courses.end(), comp);
+        
+        priority_queue<int> pq;
+        int sum = 0;
+        
+        for(vector<int> course : courses) {
+            sum += course[0];
+            pq.push(course[0]);
+            if(sum > course[1]){ 
+                sum -= pq.top();
+                pq.pop();
+            }
+        }
+        return pq.size();
+    }
+```
+
+## 25 June | 665. Non-decreasing Array
+
+Given an array nums with n integers, your task is to check if it could become non-decreasing by modifying **at most one element**.
+
+We define an array is non-decreasing if ``nums[i] <= nums[i + 1]`` holds for every i (**0-based**) such that ``(0 <= i <= n - 2)``.
+
+* [Practice](https://leetcode.com/problems/course-schedule-iii/)
+
+### Maxheap
+
+```cpp
+bool checkPossibility(vector<int>& nums) 
+    {
+        for(int i=0;i<nums.size()-1;i++)
+        {
+            if(nums[i]>nums[i+1])
+            {
+                if(i-1>=0&&nums[i-1]>nums[i+1])
+                    nums[i+1]=nums[i];
+                else
+                    nums[i]=nums[i+1];
+                break;
+            }
+        
+        for(int i=0;i<nums.size()-1;i++)
+            if(nums[i]>nums[i+1])
+                return false;
+
+        return true; 
+    }
 }
 ```

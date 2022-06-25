@@ -799,7 +799,7 @@ For reference, a knight attacks a piece placed in a cell that is:
 * One square horizontally and two squares vertically away from it, or
 * One square vertically and two squares horizontally away from it
 
-* [Practise](https://www.codechef.com/submit/KNIGHTATTACK?tab=statement)
+* [Practice](https://www.codechef.com/submit/KNIGHTATTACK?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -870,7 +870,7 @@ Alice jogs everyday to keep herself fit and active. She noticed that she burns $
 
 What is the total number of calories that Alice burns after jogging for $N$ kilometers? The answer can be very large, so report it modulo $10^9 + 7$.
 
-* [Practise](https://www.codechef.com/submit/JOGGING?tab=statement)
+* [Practice](https://www.codechef.com/submit/JOGGING?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -928,7 +928,7 @@ A bracket sequence SS is called dense if one of the following is true:
 
 You are given a bracket sequence SS. What is the **minimum** number of brackets you must remove to make it dense?
 
-* [Practise](https://www.codechef.com/submit/DENSE?tab=statement)
+* [Practice](https://www.codechef.com/submit/DENSE?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
