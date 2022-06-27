@@ -133,9 +133,7 @@ Given an array nums with n integers, your task is to check if it could become no
 
 We define an array is non-decreasing if ``nums[i] <= nums[i + 1]`` holds for every i (**0-based**) such that ``(0 <= i <= n - 2)``.
 
-* [Practice](https://leetcode.com/problems/course-schedule-iii/)
-
-### Maxheap
+* [Practice](https://leetcode.com/problems/non-decreasing-array/)
 
 ```cpp
 bool checkPossibility(vector<int>& nums) 
@@ -144,7 +142,7 @@ bool checkPossibility(vector<int>& nums)
         {
             if(nums[i]>nums[i+1])
             {
-                if(i-1>=0&&nums[i-1]>nums[i+1])
+                if(i-1>=0 && nums[i-1] > nums[i+1])
                     nums[i+1]=nums[i];
                 else
                     nums[i]=nums[i+1];
@@ -157,5 +155,56 @@ bool checkPossibility(vector<int>& nums)
 
         return true; 
     }
+}
+```
+
+## 26 June | 1423. Maximum Points You Can Obtain from Cards
+
+There are several cards **arranged in a row**, and each card has an associated number of points. The points are given in the integer array cardPoints.
+
+In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards.
+
+Your score is the sum of the points of the cards you have taken.
+
+Given the integer array cardPoints and the integer k, return the maximum score you can obtain.
+
+* [Practice](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)
+
+```cpp
+    int maxScore(vector<int>& nums, int k) {
+        
+        int front=k-1, rear=nums.size()-1, sum=0;
+        
+        for(int i=0;i<k;i++)
+            sum+=nums[i];
+        
+        int maxi = sum;
+        
+        while(front>=0 && front<rear){
+            sum+=nums[rear--] - nums[front--];
+            maxi=max(maxi,sum);
+        }
+        return maxi;
+    }
+```
+
+## 27 June | 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
+
+A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example, 101 and 1100 are deci-binary, while 112 and 3001 are not.
+
+Given a string n that represents a positive decimal integer, return the minimum number of positive deci-binary numbers needed so that they sum up to n.
+
+* [Practice](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)
+
+```cpp
+int minPartitions(string n) {
+    char mx = '0';
+    for(auto ch:n){
+        if(ch == '9')
+            return 9;
+        if(ch > mx)
+            mx = ch;
+    }
+    return mx - '0';
 }
 ```
