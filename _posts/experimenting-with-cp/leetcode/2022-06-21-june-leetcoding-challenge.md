@@ -4,6 +4,7 @@ author:
   name: Priyanshu Tiwari
   link: https://links.ahampriyanshu.com/
 categories: [Contests, Leetcode]
+math: true
 excerpt: C++ Solutions to June Leetcoding Challenge, 2022
 tags: [leetcode, leetcoding, challenge, june, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
@@ -100,8 +101,6 @@ You will start on the ``1st`` day and you cannot take two or more courses simult
 _Return the maximum number of courses that you can take._
 
 * [Practice](https://leetcode.com/problems/course-schedule-iii/)
-
-### Maxheap
 
 ```cpp
     static bool comp(const vector<int>& a, vector<int>& b){
@@ -245,4 +244,35 @@ int minDeletions(string s) {
         
     return ans;
 }
+```
+
+## 28 June | 1647. Minimum Deletions to Make Character Frequencies Unique
+
+You are given an array of people, people, which are the attributes of some people in a queue (not necessarily in order). Each $people[i] = [h_i, ki]$ represents the $i_th$ person of height $h_i$ with exactly $k_i$ other people in front who have a height greater than or equal to $h_i$
+
+Reconstruct and return the queue that is represented by the input array people. The returned queue should be formatted as an array queue, where $queue[j] = [h_j, k_j]$ is the attributes of the $j_th$ person in the queue (queue[0] is the person at the front of the queue).
+
+* [Practice](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)
+
+```cpp
+    static bool compare(vector<int>& a, vector<int> & b)
+    {
+        if(a[0] == b[0])
+            return a[1] < b[1];
+        return a[0] > b[0];
+    }
+    
+    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {   
+        
+        int n = people.size();
+        sort(people.begin(), people.end(), compare);
+        vector<vector<int>> ans; 
+        for(int i = 0; i < n; i++)
+        {
+            int pos = people[i][1];
+            ans.insert(ans.begin() + pos, people[i]); 
+        }
+        
+        return ans;
+    }
 ```
