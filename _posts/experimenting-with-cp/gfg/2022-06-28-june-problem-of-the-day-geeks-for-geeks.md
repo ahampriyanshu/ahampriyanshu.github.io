@@ -6,9 +6,8 @@ author:
 categories: [Contests, GFG]
 excerpt: C++ Solutions to Problem Of The Day Geeks For Geeks, June 2022
 math: true
-tags: [gfg, geeksforgeeks, geeks, for, potd, problem, of, the, data, june, ds, array, tree, trie, string, stacks, queue, linked list]
+tags: [gfg, geeksforgeeks, geeks, for, potd, problem, of, the, day, june, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
-
 
 ## 28 June | Sum of elements between k1'th and k2'th smallest elements 
 

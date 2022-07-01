@@ -246,7 +246,7 @@ int minDeletions(string s) {
 }
 ```
 
-## 28 June | 1647. Minimum Deletions to Make Character Frequencies Unique
+## 29 June | 1647. Minimum Deletions to Make Character Frequencies Unique
 
 You are given an array of people, people, which are the attributes of some people in a queue (not necessarily in order). Each $people[i] = [h_i, ki]$ represents the $i_th$ person of height $h_i$ with exactly $k_i$ other people in front who have a height greater than or equal to $h_i$
 
