@@ -1,8 +1,6 @@
 ---
 title: "Sorting | Codemonk | Hackerearth"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Sheets, CodeMonk]
 tags: [sorting, codemonk, sheet, hackerearth]
 ---

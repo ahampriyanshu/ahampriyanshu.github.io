@@ -1,8 +1,6 @@
 ---
 title: "Generating sitemap with custom priority in Jekyll site"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Generating sitemap with custom priority in Jekyll site without any plugin
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]

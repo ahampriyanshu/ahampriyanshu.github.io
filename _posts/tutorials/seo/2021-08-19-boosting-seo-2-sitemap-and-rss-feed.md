@@ -1,8 +1,6 @@
 ---
 title: "Boosting SEO organically 2: Sitemap and RSS feed"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: "Boosting SEO organically 2: Sitemap and RSS feed"
 categories:
   - Tech

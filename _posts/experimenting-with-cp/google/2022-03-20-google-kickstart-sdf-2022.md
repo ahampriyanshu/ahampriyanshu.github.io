@@ -1,8 +1,6 @@
 ---
 title: "Google Kickstart 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Google]
 excerpt: C++ Solutions to Google Kickstart, 2022.
 tags: [live, contest, online, qualification, round, google, hashcode, A, B, C, D, round A, round B, round C, round D]

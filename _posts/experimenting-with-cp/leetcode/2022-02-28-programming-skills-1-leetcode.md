@@ -1,8 +1,6 @@
 ---
 title: "Programming Skills I | Study Plan | Leetcode"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Sheets, Leetcode]
 excerpt: C++ Solutions to Programming Skills I, Leetcode.
 tags: [leetcode, programming, skills, back, to, study, plan, easy]

@@ -1,8 +1,6 @@
 ---
 title: "InfyTQ Certification Round | Infosys | 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Infytq]
 tags: [live, contest, infosys, infytq, certification, round, hash, set, array, string]
 

@@ -1,8 +1,6 @@
 ---
 title: "Installing and using MermaidJS"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Installing mermaid in a Jekyll site and generating data structures through it.
 mermaid: true
 categories: [Tutorials]

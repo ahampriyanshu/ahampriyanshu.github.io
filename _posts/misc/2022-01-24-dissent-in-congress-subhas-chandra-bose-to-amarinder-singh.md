@@ -1,8 +1,6 @@
 ---
 title: "Apolitical: Dissent in the Congress, from Subhas Chandra Bose to Capt. Amarinder Singh"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: "Apolitical: Dissent in the Congress, from Subhas Chandra Bose to Capt. Amarinder Singh"
 categories:
   - Political

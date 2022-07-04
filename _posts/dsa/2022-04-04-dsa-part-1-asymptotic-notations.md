@@ -1,8 +1,6 @@
 ---
 title: "DSA Part 1: Introduction"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Asymptotic notation, big-oh time complexity, space complexity, complexity Graph, possible verdicts
 categories: 
   - DSA

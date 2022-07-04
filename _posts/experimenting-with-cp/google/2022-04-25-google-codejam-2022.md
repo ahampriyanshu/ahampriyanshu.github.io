@@ -1,8 +1,6 @@
 ---
 title: "Google Codejam 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Google]
 excerpt: C++ Solutions to Google Codejam, 2022.
 tags: [live, contest, online, qualification, 1B, round, google, codejam]

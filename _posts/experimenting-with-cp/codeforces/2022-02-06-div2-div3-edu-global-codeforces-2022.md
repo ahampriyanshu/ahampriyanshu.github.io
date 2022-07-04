@@ -1,11 +1,10 @@
 ---
 title: "Codeforces Contests 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
+math: true
 categories: [Contests, Codeforces]
-excerpt: All of my accepted submissions on Codeforces [2022]
-tags: [live, contest, codeforces, div2, div3, educational, global, round]
+excerpt: All of my accepted submissions on Codeforces, 2022
+tags: [live, contest, codeforces, solutions, c++, div2, div3, educational, global, round]
 ---
 
 ## February
@@ -571,5 +570,101 @@ int main()
             cout << "NO\n";
     }
     return 0;
+}
+```
+
+
+## July
+
+### Round #804 (Div. 2)
+
+#### A. The Third Three Number Problem
+
+You are given a positive integer n. Your task is to find any three integers $a$, $b$ and $c$ $(0 ≤a ,b, c ≤ 10^9)$ for which $(a \bigoplus b)+(b \bigoplus c)+(a \bigoplus c)=n$, or determine that there are no such integers.
+
+Here $a \bigoplus b$ denotes the bitwise XOR of $a$ and $b$. For example, $2 \bigoplus 4=6$ and $3 \bigoplus 1=2$.
+
+* [1699/A](https://codeforces.com/contest/1699/problem/A)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long int ll;
+ 
+void solve()
+{
+    ll n;
+    cin >> n;
+
+    if(n%2) {
+        cout << -1 << endl;
+        return;
+    }
+
+    ll a = n/2, b = 0, c = 0;
+    cout << a << " " << b << " "<< c << endl;
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        solve();
+       
+}
+```
+
+#### B. Almost Ternary Matrix
+
+You are given two **even** integers $n$ and $m$. Your task is to find any binary matrix $a$ with $n$ rows and $m$ columns where every cell $(i,j)$ has **exactly** two neighbours with a different value than $a_i,j$.
+
+Two cells in the matrix are considered neighbours if and only if they share a side. More formally, the neighbours of cell $(x,y)$ are: $(x−1,y), (x,y+1), (x+1,y) and (x,y−1)$.
+
+It can be proven that under the given constraints, an answer always exists.
+
+* [1699/B](https://codeforces.com/contest/1699/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long int ll;
+
+void solve()
+{
+    ll n, m;
+    cin >> n >> m;
+    bool zero = true;
+    string even = "1 0 ", odd = "0 1 ";
+    for (int i = 1; i <= n; i++)
+    {
+            for (int j = 1; j <= m/2; j++)
+                if(i%4 <= 1)
+                    if(j%2)
+                        cout << odd;
+                    else
+                        cout << even;
+                else
+                    if(j%2)
+                        cout << even;
+                    else
+                        cout << odd;
+            
+        cout << endl;
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll test;
+    for (cin >> test; test--;)
+        solve();
 }
 ```

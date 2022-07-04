@@ -1,8 +1,6 @@
 ---
 title: Vim Cheat Sheet
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Let's improve Vi Improved
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]

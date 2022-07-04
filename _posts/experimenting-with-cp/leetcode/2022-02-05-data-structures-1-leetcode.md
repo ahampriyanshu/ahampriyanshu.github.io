@@ -1,8 +1,6 @@
 ---
 title: "Data Structure I | Study Plan | Leetcode"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: C++ Solutions to Data Structure I of 2 Weeks Study Plan, Leetcode.
 categories: [Sheets, Leetcode]
 tags: [leetcode, data, structure, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]

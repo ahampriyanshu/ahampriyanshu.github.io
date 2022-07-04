@@ -1,8 +1,6 @@
 ---
 title: "Project Euler"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Python solutions to first 100 problems on Project Euler
 categories: [Sheets, Projectuler]
 tags: [live, sheets, project, euler, mathematics, primes]

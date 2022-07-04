@@ -1,8 +1,6 @@
 ---
 title: "June | 2022 | POTD GFG"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, GFG]
 excerpt: C++ Solutions to Problem Of The Day Geeks For Geeks, June 2022
 math: true

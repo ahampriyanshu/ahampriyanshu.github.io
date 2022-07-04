@@ -1,8 +1,6 @@
 ---
 title: "Git Cheat Sheet"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Installing and using LaTeX 
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]

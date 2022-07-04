@@ -1,8 +1,6 @@
 ---
 title: "Introductory Problems | CSES"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Sheets, Cses]
 tags: [introductory, problems, codemonk, sheet, cses]
 ---

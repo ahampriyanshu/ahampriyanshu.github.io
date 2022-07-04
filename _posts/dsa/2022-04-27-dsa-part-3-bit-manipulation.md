@@ -1,8 +1,6 @@
 ---
 title: "DSA Part 3: Bit Manipulation"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: binary numbers, msb, lsb, unsigned and signed 32-bits int, 2's complement, bitwise operators, some common bitwise operators
 math: true
 categories:
@@ -325,7 +323,7 @@ int setBits(int N) {
 }
 ```
 
-**Time Complexity:** $O(logn)$
+**Time Complexity:** $O(n)$
 
 #### Brian Kernighan’s Algorithm
 

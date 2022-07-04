@@ -1,8 +1,6 @@
 ---
 title: "BST | 450 DSA | Love Babbar"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Sheets, Lovebabbar]
 tags: [love, babbar, '450 dsa', sheet, binary, search, tree]
 ---

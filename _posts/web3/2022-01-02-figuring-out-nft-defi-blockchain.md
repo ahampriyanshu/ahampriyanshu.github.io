@@ -1,8 +1,6 @@
 ---
 title: "Figuring Out: NFT and DeFi"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: "Figuring out all buzz about these neo blockchain technologies. Evaluating their present and future(if they have one)."
 categories:
   - Tech

@@ -1,9 +1,7 @@
 ---
-title: Things to do after installing Manjaro Linux
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
-excerpt: Basic installation guide for fresh Manjaro
+title: Setting up Manjaro Linux
+author: ahampriyanshu
+excerpt: Things to do after installing Manjaro Linux
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
 image:
@@ -33,8 +31,6 @@ sudo pacman -S snapd
 ## Configuring git
 
 ```bash
-pacman -Sy git
-
 ssh-keygen -t ed25519 -C "ahampriyanshu@gmail.com"
 
 eval "$(ssh-agent -s)"
@@ -128,6 +124,4 @@ yay -S firefox
 yay -S telegram-desktop
 
 sudo pacman -Sy qbittorent
-
-wget -qO- https://dl.pstmn.io/download/latest/linux64d
 ```

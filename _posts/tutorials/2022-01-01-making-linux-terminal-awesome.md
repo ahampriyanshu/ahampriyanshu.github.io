@@ -1,9 +1,7 @@
 ---
 title: Making Linux Terminal Awesome
 excerpt: Themes and plugins to tweak your linux terminal for better productivity and a fancier look
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
 image:

@@ -1,8 +1,6 @@
 ---
 title: "June | 2022 | Leetcoding Challenge"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Leetcode]
 math: true
 excerpt: C++ Solutions to June Leetcoding Challenge, 2022

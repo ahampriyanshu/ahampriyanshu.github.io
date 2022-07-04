@@ -1,8 +1,6 @@
 ---
 title: "DSA Part 7: Searching & Sorting Algos"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket, Tim Sort
 categories:
   - DSA

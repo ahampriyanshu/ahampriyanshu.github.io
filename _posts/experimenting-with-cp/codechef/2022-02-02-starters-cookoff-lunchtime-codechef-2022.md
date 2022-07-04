@@ -1,8 +1,6 @@
 ---
 title: "Codechef Contests 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Codechef]
 excerpt: All of my accepted submissions on Codechef [2022]
 tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april, june]

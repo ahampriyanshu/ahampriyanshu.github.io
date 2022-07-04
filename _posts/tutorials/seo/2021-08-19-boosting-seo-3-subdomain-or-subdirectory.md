@@ -1,8 +1,6 @@
 ---
 title: "Boosting SEO organically 3: subdomain or subdirectory"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: "Boosting SEO organically 3: subdomain or subdirectory"
 categories:
   - Tech

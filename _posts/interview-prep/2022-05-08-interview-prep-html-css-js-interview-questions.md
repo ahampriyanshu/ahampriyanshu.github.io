@@ -1,8 +1,6 @@
 ---
 title: "Interview Prep: HTML, CSS & JS"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: All of the questions I have been asked so far
 categories:
   - 'inteview prep'

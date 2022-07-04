@@ -1,10 +1,8 @@
 ---
 title: "Striver 180 | takeUforward"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Sheets, TakeUforward]
-tags: [striver, tuf, ds, algo, takeUforward]
+tags: [striver, tuf, ds, algo, takeUforward, striver180, dsa180, '180']
 ---
 
 ## Day 1 | Arrays

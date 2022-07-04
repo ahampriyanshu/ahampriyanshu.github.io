@@ -1,8 +1,6 @@
 ---
 title: "Installing MathJax & Latex Cheat Sheet"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Installing MathJax & Guide to Mathematical symbols in LaTeX
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]

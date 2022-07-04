@@ -1,8 +1,6 @@
 ---
 title: "Google Hashcode 2022"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 categories: [Contests, Google]
 excerpt: C++ Solutions to Google Hashcode Online Qualification Round, 2022.
 tags: [live, contest, practice, round, google, hashcode, '2022', pizza]

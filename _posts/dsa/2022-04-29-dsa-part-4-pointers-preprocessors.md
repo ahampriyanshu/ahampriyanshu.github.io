@@ -1,8 +1,6 @@
 ---
 title: "DSA Part 4: Pointers & Preprocessors"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Pointers, pointer arithmetic, character array, double pointer, typecasting, reference variables, dynamic allocation,preprocessors, macros, define, const and global variables, inline functions
 categories:
   - DSA

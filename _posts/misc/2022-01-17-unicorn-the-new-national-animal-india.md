@@ -1,8 +1,6 @@
 ---
 title: "Unicorn: the new national animal of India"
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: "Yesterday PM declared 16th January as the National Start Up Day ..."
 categories:
   - Finance

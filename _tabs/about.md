@@ -15,7 +15,7 @@ I'm creating this website/blog series to get regular at cp(thus hopefully improv
 | Apr | 898 | 1627 | 1438 | 110
 | May | 898 | 1627 | 1438 | 152
 | Jun | 898 | 1627 | 1438 | 152
-| Jul |  |  |  |
+| Jul | 872  | 1525 | 1438 | 225
 | Aug |  |  |  |
 | Sept|  |  |  |
 | Oct |  |  |  |

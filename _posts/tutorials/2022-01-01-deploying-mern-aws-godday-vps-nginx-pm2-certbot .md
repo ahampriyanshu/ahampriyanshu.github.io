@@ -1,8 +1,6 @@
 ---
 title: Deploying MERN app on AWS with NGINX and PM2
-author:
-  name: Priyanshu Tiwari
-  link: https://links.ahampriyanshu.com/
+author: ahampriyanshu
 excerpt: Complete guide to deploy a mern app on aws/godaddy vps
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
