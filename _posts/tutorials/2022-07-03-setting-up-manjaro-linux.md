@@ -16,7 +16,7 @@ image:
 ```bash
 sudo pacman -Syu
 
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed base-devel git vim
 
 git clone https://aur.archlinux.org/yay-git.git
 
@@ -27,6 +27,53 @@ makepkg -sri
 sudo pacman -S snapd
 ```
 
+* Menu > Appearance >  Change Theme > Adwaita-dark
+
+* Menu > Keyboard > shortcuts > ``ctrl + alt + t = terminal`` 
+
+## Installing node 
+
+```bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+nvm install node
+```
+
+## Installing mongodb
+
+```
+sudo yay -S mongodb-bin
+
+sudo systemctl enable mongodb
+
+sudo systemctl start mongodb
+```
+
+## Installing postgres
+
+```
+sudo pacman -S postgresql
+
+initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
+
+sudo systemctl enable postgresql
+
+sudo systemctl start postgresql
+```
+
+## Installing docker
+
+```bash
+sudo pacman -S docker
+
+sudo systemctl enable docker
+
+sudo systemctl start docker
+
+sudo usermod -aG docker $USER
+
+docker login
+```
 
 ## Configuring git
 
@@ -43,7 +90,13 @@ git config --global user.name "ahampriyanshu"
 
 git config --global user.email "ahampriyanshu@gmail.com"
 
-git clone git@github.com:ahampriyanshu/ahampriyanshu.github.io.git
+npm i -g diff-so-fancy
+
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
+git config --global interactive.diffFilter "diff-so-fancy --patch"
+
+git config --global color.ui true
 ```
 
 ## Switching to zsh
@@ -61,67 +114,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-
-git config --global interactive.diffFilter "diff-so-fancy --patch"
-
-git config --global color.ui true
-
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-
-~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
 
-## Installing node 
+## Utilities
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+sudo pacman -Sy vlc qbittorent bat 
 
-nvm install node
-
-npm i -g diff-so-fancy
+yay -S google-chrome visual-studio-code brave telegram-desktop slack-desktop
 
 npm i -g nodemon
-```
-
-## Installing mongodb
-
-```
-sudo yay -S mongodb-bin
-
-sudo systemctl enable mongodb
-
-sudo systemctl start mongodb
-```
-
-## Installing Docker
-
-```bash
-sudo pacman -S docker
-
-sudo systemctl enable docker
-
-sudo systemctl start docker
-
-sudo usermod -aG docker $USER
-
-docker login
-```
-
-## Installing sdf
-
-```bash
-sudo pacman -Sy vlc
-
-sudo pacman -Sy bat 
-
-yay -S google-chrome
-
-yay -S visual-studio-code
-
-yay -S firefox
-
-yay -S telegram-desktop
-
-sudo pacman -Sy qbittorent
 ```
