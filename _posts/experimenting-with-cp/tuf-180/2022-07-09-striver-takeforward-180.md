@@ -1,6 +1,8 @@
 ---
 title: "Striver 180 | takeUforward"
 author: ahampriyanshu
+math: true
+excerpt: C++ Solutions to Striver's 180
 categories: [Sheets, TakeUforward]
 tags: [striver, tuf, ds, algo, takeUforward, striver180, dsa180, '180']
 ---

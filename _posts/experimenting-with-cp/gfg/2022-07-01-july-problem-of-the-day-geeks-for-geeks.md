@@ -199,3 +199,55 @@ Given a Binary Search Tree (BST) and a range l-h(inclusive), count the number of
     	return getCount(root->left, low, high);
     }
 ```
+
+## 06 July | Count BST nodes that lie in a given range
+
+Given a Binary Tree, print the diagonal traversal of the binary tree.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/diagonal-traversal-of-binary-tree/1#)
+
+```cpp
+vector<int> diagonal(Node *root)
+{
+    vector<int> ans;
+    queue<Node*> q;
+    q.push(root);
+    
+    while(!q.empty()){
+        Node* tmp = q.front();
+        q.pop();
+        while(tmp){
+            if(tmp->left) 
+                q.push(tmp->left);
+            ans.push_back(tmp->data);
+            tmp = tmp->right;
+        }
+    }
+    
+    return ans;
+}
+```
+
+## 07 July | Count BST nodes that lie in a given range
+
+2 players A and B take turns alternatively to play a game in which they have N numbers on a paper. In one turn, a player can replace one of the numbers by any of its factor (except for 1 & the number itself). The player who is unable to make a move looses the game. Find the winner of the game if A starts the game and both play optimally.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/brain-game1742/1#)
+
+```cpp
+bool brainGame(vector<int>nums) {
+    int dp[1005] = {0};
+    dp[1] = dp[2] = 0;
+    
+    for(int i = 3; i <= 1000; i++)
+        for(int j = 2; j * j <= i; j++)
+            if(i % j == 0)
+                dp[i] = max(dp[i], 1 + max(dp[i / j], dp[j]));
+    
+    int x = 0;
+    for(auto num: nums)
+        x = x xor dp[num];
+    
+    return x > 0;
+}
+```

@@ -16,7 +16,7 @@ image:
 ```bash
 sudo pacman -Syu
 
-sudo pacman -S --needed base-devel git vim
+sudo pacman -S --needed base-devel git vim noto-fonts-emoji
 
 git clone https://aur.archlinux.org/yay-git.git
 
@@ -27,7 +27,7 @@ makepkg -sri
 sudo pacman -S snapd
 ```
 
-* Menu > Appearance >  Change Theme > Adwaita-dark
+* Menu > Appearance >  Change Theme > ``adwaita-dark``
 
 * Menu > Keyboard > shortcuts > ``ctrl + alt + t = terminal`` 
 
@@ -41,7 +41,7 @@ nvm install node
 
 ## Installing mongodb
 
-```
+```bash
 sudo yay -S mongodb-bin
 
 sudo systemctl enable mongodb
@@ -51,7 +51,7 @@ sudo systemctl start mongodb
 
 ## Installing postgres
 
-```
+```bash
 sudo pacman -S postgresql
 
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'

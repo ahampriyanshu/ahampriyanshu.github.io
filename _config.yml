@@ -32,6 +32,9 @@ avatar: '/assets/avatar.jpg'
 
 toc: true
 
+pwa:
+  enabled: false
+
 comments:
   active: utterances
 
@@ -52,7 +55,7 @@ assets:
 
 google_analytics:
   id: 'G-VSNH6EH1RX'
-  # Google Analytics pageviews report settings
+  
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
