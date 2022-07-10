@@ -251,3 +251,65 @@ bool brainGame(vector<int>nums) {
     return x > 0;
 }
 ```
+
+## 09 July | Polynomial Addition
+
+Given two polynomial numbers represented by a linked list. The task is to complete the function **addPolynomial()** that adds these lists meaning adds the coefficients who have the same variable powers.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/polynomial-addition/1#)
+
+```cpp
+    Node* addPolynomial(Node *first, Node *second)
+    {
+        Node*head=new Node(0,0);
+        Node*temp=head;
+        
+        while(first && second){
+           if(first->pow > second->pow){
+               temp->next=first;
+               first=first->next;
+           }
+           else if(first->pow < second->pow){
+               temp->next=second;
+               second=second->next;
+           }
+           else{
+               first->coeff+=second->coeff;
+               temp->next=first;
+               first=first->next;
+               second=second->next;
+           }
+           temp=temp->next;
+        }
+        
+        temp->next = first ? first : second;
+        
+        return head->next;
+    }
+```
+
+## 10 July | Find all possible paths from top to bottom 
+
+Given a N x M grid. Find All possible paths from top left to bottom right.From each cell you can either move only to right or down.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/find-all-possible-paths-from-top-to-bottom/1#)
+
+```cpp
+    void solve(vector<vector<int>> & res,int x,int y,int n,int m,vector<vector<int>> &grid,vector<int> path){
+        if(x>=n || y>=m)return;
+         path.push_back(grid[x][y]);
+         
+        if(x==n-1 && y==m-1)
+            return res.push_back(path);
+        
+        solve(res,x+1,y,n,m,grid,path);
+        solve(res,x,y+1,n,m,grid,path);
+    }
+    
+    vector<vector<int>> findAllPossiblePaths(int n, int m, vector<vector<int>> &grid)
+    {
+        vector<vector<int>> res;
+        solve(res,0,0,n,m,grid,{});
+        return res;
+    }
+```
