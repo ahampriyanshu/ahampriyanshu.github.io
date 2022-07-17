@@ -336,6 +336,107 @@ Return the minimum cost of painting all the remaining houses in such a way that 
     }
 ```
 
+
+## 8 July | 
+
+Given strings s1, s2, and s3, find whether s3 is formed by an **interleaving** of s1 and s2.
+
+An **interleaving** of two strings s and t is a configuration where s and t are divided into n and m **non-empty** substrings respectively, such that:
+
+* s = s1 + s2 + ... + sn
+* t = t1 + t2 + ... + tm
+* |n - m| <= 1
+
+The **interleaving** is s1 + t1 + s2 + t2 + s3 + t3 + ... or t1 + s1 + t2 + s2 + t3 + s3 + ...
+
+**Note:** $a + b$ is the concatenation of strings a and b.
+
+* [Practice]()
+
+```cpp
+    bool isInterleave(string s1, string s2, string s3) {
+        vector<int>cur(s2.size()+1,0),prev(s2.size()+1,0);
+        if(s3.size()!=s1.size()+s2.size())
+            return false;
+        
+        for(int i=s1.size();i>=0;i--){
+            for(int j=s2.size();j>=0;j--){
+                int k=i+j;
+                if(i==s1.size()&&j==s2.size()){
+                    cur[j]=1;
+                }
+                else if(s3[k]==s2[j]&&s3[k]==s1[i]){
+                    cur[j]= prev[j]||cur[j+1];
+                }
+                else if(s1[i]==s3[k]){
+                    cur[j]= prev[j];
+                }
+                else if(s3[k]==s2[j]){
+                    cur[j]= cur[j+1];
+                }
+                else{
+                    cur[j]= false;
+                }  
+            }
+            prev=cur;
+        }
+        return cur[0];
+    }
+```
+
+
+## 9 July | 1473. Paint House III
+
+There is a row of m houses in a small city, each house must be painted with one of the n colors (labeled from 1 to n), some houses that have been painted last summer should not be painted again.
+
+A neighborhood is a maximal group of continuous houses that are painted with the same color.
+
+For example: $houses = [1,2,2,3,3,2,1,1]$ contains 5 neighborhoods $[{1}, {2,2}, {3,3}, {2}, {1,1}]$.
+Given an array houses, an m x n matrix cost and an integer target where:
+
+* $houses[i]$: is the color of the house i, and 0 if the house is not painted yet.
+* $cost[i][j]$: is the cost of paint the house i with the color j + 1.
+
+Return the minimum cost of painting all the remaining houses in such a way that there are exactly **target** neighborhoods. If it is not possible, return $-1$.
+
+* [Practice](https://leetcode.com/problems/paint-house-iii/)
+
+```cpp
+    int dp[101][101][21];
+    
+    int INF = 1000001;
+    
+    int dfs(vector<int>& houses, vector<vector<int>>& cost, int m, int n, int target, int idx, int nei, int last){
+        
+        if(idx == m)
+            return nei == target ? 0 : INF; 
+            
+        if(nei > target) return INF;
+        
+        if(dp[idx][nei][last] != -1)
+            return dp[idx][nei][last];
+        
+        if(houses[idx] == 0){
+            
+            int ans = INF;
+            
+            for(int col = 1; col<=n; col++)
+                ans = min(ans, cost[idx][col-1] + dfs(houses, cost, m, n, target, idx+1, col == last ? nei : nei + 1, col));
+            
+            return dp[idx][nei][last] = ans;
+        }
+            
+        return dp[idx][nei][last] = dfs(houses, cost, m, n, target, idx + 1, houses[idx] == last ? nei : nei + 1, houses[idx]);
+    }
+    
+    int minCost(vector<int>& houses, vector<vector<int>>& cost, int m, int n, int target) {
+        memset(dp, -1, sizeof dp);
+        
+        int ans = dfs(houses, cost, m, n, target, 0, 0, 0);
+        return ans < INF ? ans : -1; 
+    }
+```
+
 ## 10 July | 746. Min Cost Climbing Stairs
 
 You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
@@ -356,5 +457,227 @@ Return the minimum cost to reach the top of the floor.
             second=tmp;
         }
         return min(first,second);
+    }
+```
+
+## 11 July | 199. Binary Tree Right Side View
+
+Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+
+* [Practice](https://leetcode.com/problems/binary-tree-right-side-view/)
+
+```cpp
+    vector<int> rightSideView(TreeNode* root) {
+
+    vector<int> ans;
+    
+    if(!root) return ans;
+    
+    queue<TreeNode*> q;
+    
+    q.push(root);
+    
+    while(!q.empty()){
+        TreeNode* temp;
+        
+        int n=q.size();
+        
+        while(n--){
+            temp=q.front();
+            q.pop();
+            if(temp->left) q.push(temp->left);
+            if(temp->right) q.push(temp->right);
+        }
+        
+        ans.push_back(temp->val);
+    }
+    return ans;
+        
+    }
+```
+
+## 12 July | 473. Matchsticks to Square
+
+You are given an integer array matchsticks where matchsticks[i] is the length of the ith matchstick. You want to use all the matchsticks to make one square. You should not break any stick, but you can link them up, and each matchstick must be used exactly one time.
+
+Return true if you can make this square and false otherwise.
+
+* [Practice](https://leetcode.com/problems/matchsticks-to-square/)
+
+```cpp
+    bool dfs(vector<int>& matchsticks, vector<int>& sides, int index, int target){
+        if(index == -1){
+            return true;
+        }
+        for(int i = 0; i < 4; i++){
+            if(((sides[i] + matchsticks[index]) > target) or (i > 0 and sides[i] == sides[i - 1])){
+                continue;
+            }
+            sides[i] += matchsticks[index];
+            if(dfs(matchsticks, sides, index - 1, target)){
+                return true;
+            } 
+            sides[i] -= matchsticks[index];
+        }
+        return false;
+    }
+    
+    bool makesquare(vector<int>& matchsticks) {
+        int sum = 0;
+        for(int i : matchsticks){
+            sum += i;
+        }
+        if(sum%4 != 0 or matchsticks.size() < 3){
+            return false;
+        }
+        sort(matchsticks.begin(), matchsticks.end());
+        vector<int> sides(4, 0);
+        return dfs(matchsticks, sides, matchsticks.size() - 1, sum/4);
+    }
+```
+
+## 13 July | 102. Binary Tree Level Order Traversal
+
+Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+* [Practice](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+
+```cpp
+vector<vector<int>> levelOrder(TreeNode* root) {
+        
+        if(!root) return {};
+        
+        vector<vector<int>> answer;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int size=q.size();
+            vector<int> v;
+            while(size--)  
+            {
+                TreeNode* temp=q.front();
+                q.pop();
+                v.push_back(temp->val);
+                if(temp->left) q.push(temp->left);
+                if(temp->right) q.push(temp->right);
+            }
+            answer.push_back(v);
+        }
+        return answer;
+    }
+```
+
+## 14 July | 105. Construct Binary Tree from Preorder and Inorder Traversal
+
+Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+
+* [Practice](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+```cpp
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        map<int,int> mp;
+        for(int i=0;i<preorder.size();i++){
+            mp[inorder[i]]=i;
+        }
+        TreeNode* root = construct(preorder,0,preorder.size()-1,inorder,0,inorder.size()-1,mp);
+        return root;
+    }
+    TreeNode* construct(vector<int>&preorder, int preStart, int preEnd, vector<int> &inorder,int inStart, int inEnd, map<int,int> &mp){
+        if(preStart>preEnd || inStart>inEnd) return NULL;
+        TreeNode* root = new TreeNode(preorder[preStart]);
+        int inRoot = mp[root->val];
+        int numsLeft = inRoot-inStart;
+        
+        root->left = construct(preorder,preStart+1,preStart+numsLeft,inorder,inStart,inRoot-1,mp);
+        root->right = construct(preorder,preStart+numsLeft+1,preEnd,inorder,inRoot+1,inEnd,mp);
+        return root;
+    }
+```
+
+## 15 July | 695. Max Area of Island
+
+You are given an m x n binary matrix grid. An island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+The area of an island is the number of cells with a value 1 in the island.
+
+Return the maximum area of an island in grid. If there is no island, return 0.
+
+![loading](https://assets.leetcode.com/uploads/2021/05/01/maxarea1-grid.jpg)
+
+* [Practice](https://leetcode.com/problems/max-area-of-island/)
+
+```cpp
+    int utility(vector<vector<int>>& grid, int i, int j)
+    {
+        if(i<0 || i>=grid.size() || j<0 || j>=grid[0].size())
+            return 0;
+        if(grid[i][j]==0)
+            return 0;
+       
+        grid[i][j]=0;
+         
+            
+        return (1+ utility(grid, i+1, j) + utility(grid, i, j+1) + utility(grid, i-1, j) + utility(grid, i, j-1));
+    }
+    
+    
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = 0, x =0;
+        for(int i=0;i<n;i++)
+            for(int j=0;j<m;j++)
+            {
+                if(grid[i][j])
+                    x = utility(grid, i, j);
+                
+                ans = max(ans, x);
+            }
+        return ans;
+    }
+```
+
+## 15 July | 576. Out of Boundary Paths
+
+There is an $m x n$ grid with a ball. The ball is initially at the position $[startRow, startColumn]$. You are allowed to move the ball to one of the four adjacent cells in the grid (possibly out of the grid crossing the grid boundary). You can apply at most maxMove moves to the ball.
+
+Given the five integers $m$, $n$, $maxMove$, $startRow$, $startColumn$, return the number of paths to move the ball out of the grid boundary. Since the answer can be very large, return it modulo $10^9 + 7$.
+
+* [Practice](https://leetcode.com/problems/out-of-boundary-paths/)
+
+```cpp
+    int dx[4] = {0, 0, -1, 1};
+    int dy[4] = { -1, 1, 0, 0};
+    int dp[55][55][55];
+    long long M = 1e9 + 7;
+
+    bool isOut(int m, int n, int x, int y) {
+        return (x < 0 or x == m or y == n or y < 0 );
+    }
+    
+    int solve(int m, int n, int moves, int sr, int sc) {
+
+        if (isOut(m, n, sr, sc)) return 1;
+        if (moves == 0) return 0;
+
+        if (dp[sr][sc][moves] != -1) return dp[sr][sc][moves];
+
+        long long ways = 0;
+        for (int i = 0; i < 4; i++) {
+            int xx = sr + dx[i];
+            int yy = sc + dy[i];
+
+            ways += solve(m, n, moves - 1, xx, yy) % M;
+            ways %= M;
+        }
+
+        dp[sr][sc][moves] = ways % M;
+        return ways;
+    }
+    
+    int findPaths(int m, int n, int maxMove, int sr, int sc) {
+        memset(dp, -1, sizeof(dp));
+        return solve(m, n, maxMove, sr, sc);
     }
 ```

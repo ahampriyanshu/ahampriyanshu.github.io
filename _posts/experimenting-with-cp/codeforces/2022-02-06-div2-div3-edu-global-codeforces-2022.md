@@ -668,3 +668,233 @@ int main()
         solve();
 }
 ```
+
+### Round #806 (Div. 4)
+
+#### A. YES or YES ?
+
+There is a string 𝑠 of length 3, consisting of uppercase and lowercase English letters. Check if it is equal to "YES" (without quotes), where each letter can be in any case. For example, "yES", "Yes", "yes" are all allowable.
+
+* [Practice](https://codeforces.com/contest/1703/problem/A)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    string s;
+    cin >> s;
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+    if(s == "yes")
+    cout << "YES\n";
+    else
+    cout << "NO\n";
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve(); 
+    return 0;
+}
+```
+
+#### B. ICPC Balloon
+
+In an ICPC contest, balloons are distributed as follows:
+
+* Whenever a team solves a problem, that team gets a balloon.
+* The first team to solve a problem gets an additional balloon.
+
+A contest has 26 problems, labelled 𝖠, 𝖡, 𝖢, ..., 𝖹. You are given the order of solved problems in the contest, denoted as a string 𝑠, where the 𝑖-th character indicates that the problem 𝑠𝑖 has been solved by some team. No team will solve the same problem twice.
+Determine the total number of balloons that the teams recieved. Note that some problems may be solved by none of the teams.
+
+* [Practice](https://codeforces.com/contest/1703/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long ll;
+ 
+ll solve()
+{
+    ll n,ans = 0;
+    string s;
+    cin >> n >> s;
+    unordered_map<char, int> mp;
+ 
+    for(auto ch: s){
+        if(mp[ch])
+        ans++;
+        else{
+            ans += 2;
+            mp[ch]++;
+        }
+    }
+ 
+    return ans;
+}
+ 
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+ 
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl; 
+    return 0;
+}
+
+```
+
+#### C. Cypher
+
+Luca has a cypher made up of a sequence of 𝑛 wheels, each with a digit 𝑎𝑖 written on it. On the 𝑖-th wheel, he made 𝑏𝑖 moves. Each move is one of two types:
+
+up move (denoted by 𝚄): it increases the 𝑖-th digit by 1. After applying the up move on 9, it becomes 0.
+down move (denoted by 𝙳): it decreases the 𝑖-th digit by 1. After applying the down move on 0, it becomes 9.
+
+![loading](https://espresso.codeforces.com/9b0ef328d5e7fc3b82d7b2a05ae3e757d05c7c76.png)
+
+Example for 𝑛=4.
+
+Luca knows the final sequence of wheels and the moves for each wheel. Help him find the original sequence and crack the cypher.
+
+* [Practice](https://codeforces.com/contest/1703/problem/C)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll n, len;
+    string s;
+    cin >> n;
+    vector<ll> v(n);
+
+    for(ll i=0; i<n; i++)
+        cin >> v[i];
+    
+    for(ll i=0; i<n; i++){
+        cin >> len >> s;
+
+        ll cnt = 0;
+
+        for(char ch: s)
+        {
+            if(ch == 'U')
+            {
+                if(v[i] == 0)
+                v[i] = 9;
+                else
+                v[i]--;
+            }else{
+                if(v[i] == 9)
+                v[i] = 0;
+                else
+                v[i]++;
+            }
+        }
+        cout << v[i] << " ";
+
+    }
+
+    cout << endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve(); 
+    return 0;
+}
+```
+
+#### D. Double Strings
+
+You are given 𝑛 strings 𝑠1,𝑠2,…,𝑠𝑛 of length at most 8.
+
+For each string 𝑠𝑖, determine if there exist two strings 𝑠𝑗 and 𝑠𝑘 such that 𝑠𝑖=𝑠𝑗+𝑠𝑘. That is, 𝑠𝑖 is the concatenation of 𝑠𝑗 and 𝑠𝑘. Note that 𝑗 can be equal to 𝑘.
+
+Recall that the concatenation of strings 𝑠 and 𝑡 is 𝑠+𝑡=𝑠1𝑠2…𝑠𝑝𝑡1𝑡2…𝑡𝑞, where 𝑝 and 𝑞 are the lengths of strings 𝑠 and 𝑡 respectively. For example, concatenation of "code" and "forces" is "codeforces".
+
+* [Practice](https://codeforces.com/contest/1703/problem/D)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+string solve()
+{
+    ll n;
+    string str, ans = "";
+    cin >> n;
+    unordered_map<string, int> mp;
+    vector<string> v(n);
+
+    for(ll i=0; i<n; i++){
+        cin >> str;
+        v[i] = str;
+        mp[str]++;
+    }
+
+    for(auto s:v){
+        
+        ll len = s.size();
+
+        bool isFix = false;
+
+        if(len > 1){
+            for(ll i=1; i<len; i++){
+                string a = s.substr(0, i);
+                string b = s.substr(i, len);
+                if(mp[a] && mp[b])
+                isFix = true;
+            }
+        }
+
+        if(isFix)
+                ans += '1';
+                else
+                ans += '0';
+    }
+    return ans;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl; 
+    return 0;
+}
+```
