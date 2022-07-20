@@ -980,3 +980,280 @@ int main()
     return 0;
 }
 ```
+
+### Starters 4
+
+#### End Sorted
+
+Chef considers a permutation $P$ of ${1,2,3,…,N}$ End Sorted if and only if P1=1 and PN=N.
+
+Chef is given a permutation $P$.
+
+In one operation Chef can choose any index i (1≤i≤N−1) and swap Pi and Pi+1. Determine the minimum number of operations required by Chef to make the permutation P End Sorted.
+
+**Note:** An array $P$ is said to be a permutation of ${1,2,3,…,N}$ if $P$ contains each element of ${1,2,3,…,N}$ exactly once.
+
+* [Practice](https://www.codechef.com/START47C/problems/ENDSORTED)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll n, e, i_0 = 0, i_n = 0;
+    cin >> n;
+
+    for(ll i=1; i<=n; i++){
+
+        cin >> e;
+
+        if(e == 1) i_0 = i;
+        if(e == n) i_n = i;
+
+    }
+
+    ll ans = i_0 - 1 + n - i_n;
+    if(i_n < i_0)
+        ans--;
+
+    return ans;    
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### Construct N 
+
+You are given an integer $N$. Find if it is possible to represent $N$ as the sum of several(possibly zero) 2's and several(possibly zero) 7's.
+
+Formally, find if there exist two integers $X$,$Y$ $(X,Y≥0)$ such that $2⋅X+7⋅Y=N$.
+
+* [Practice](https://www.codechef.com/START47C/problems/CONN)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+bool solve()
+{
+    ll n;
+    cin >> n;
+
+    if(n == 1 or n==3 or n== 5)
+        return false;
+    
+    if(n%2 == 0 || n%7 == 0)
+        return true;
+
+    ll s = n%7, t = n%2, z = n%10;
+
+    if(s%2 == 0 || t%7 == 0)
+        return true;
+
+    if((n-7)%2 == 0 || (n-2)%7 == 0)
+        return true;
+
+    return false;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        if(solve())
+        cout << "YES\n";
+        else
+        cout << "NO\n"; 
+    return 0;
+}
+```
+
+#### Minimum Coins
+
+There are only 2 type of denominations in Chefland:
+
+* Coins worth 1 rupee each
+* Notes worth 10 rupees each
+
+Chef wants to pay his friend exactly $X$ rupees. What is the minimum number of coins Chef needs to pay exactly X rupees?
+
+* [Practice](https://www.codechef.com/START47C/problems/MINCOINSREQ)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll n;
+    cin >> n;
+    return n%10;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl; 
+    return 0;
+}
+```
+
+### Starters 48
+
+#### Buy Lamps
+
+An electronics shop sells red and blue lamps. A red lamp costs $X$ rupees and a blue lamp costs $Y$ rupees.
+
+Chef is going to buy **exactly** $N$ lamps from this shop. Find the minimum amount of money Chef needs to pay such that at least K of the lamps bought are red.
+
+* [Practice](https://www.codechef.com/START48C/problems/BUYLAMP)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+  ll n, k, x, y;
+  cin >> n >> k >> x >> y;
+
+  if(n == k) return n*x;
+
+  return (k*x) + ((n-k) * min(x,y));
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### Fill The Grid
+
+You have a grid with N rows and M columns. You have two types of tiles — one of dimensions $2×2$ and the other of dimensions $1×1$. You want to cover the grid using these two types of tiles in such a way that:
+2×2
+* Each cell of the grid is covered by exactly one tile; and
+* The number of $1×1$ tiles used is minimized.
+
+Find the minimum number of $1×1$ tiles you have to use to fill the grid.
+
+* [Practice](https://www.codechef.com/START48C/problems/GRIDBL)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+  ll n , m;
+  cin >> n >> m;
+  if(n%2==0&&m%2==0) return 0;
+  if(n%2==0) return n;
+  if(m%2==0) return m;
+  return n+m-1;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### Make Palindrome 2
+
+ou are given a binary string $S$ of length $N$. You want to obtain a palindrome from $S$ by applying the following operation at most $⌊N2⌋$ times:
+
+* Choose an index $i(1≤i≤|S|)$, delete the character $S_i$ from S and concatenate the remaining parts of the string. Here $|S|$ denotes the current length of string $S$.
+For example, if $S$ = $11010$, then applying the operation on index $i=2$ makes $S=1010$.
+
+Note that after each operation, the length of the string $S$ decreases by one.
+
+Find **any palindrome** you can obtain after the operations. It can be proved that it is always possible to obtain a palindrome from S under the given constraints.
+
+* [Practice](https://www.codechef.com/START48C/problems/MAKEPAL2)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+string solve()
+{
+  ll n, one(0), zero(0);
+  string s;
+  cin >> n >> s;
+
+  for(char ch:s)
+    if(ch == '0') zero++;
+    else one++;
+
+  string ans(zero < one ? one : zero, zero < one ? '1' : '0');
+
+  return ans;
+  
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test, sol;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```

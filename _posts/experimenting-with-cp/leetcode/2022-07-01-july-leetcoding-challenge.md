@@ -638,7 +638,7 @@ Return the maximum area of an island in grid. If there is no island, return 0.
     }
 ```
 
-## 15 July | 576. Out of Boundary Paths
+## 16 July | 576. Out of Boundary Paths
 
 There is an $m x n$ grid with a ball. The ball is initially at the position $[startRow, startColumn]$. You are allowed to move the ball to one of the four adjacent cells in the grid (possibly out of the grid crossing the grid boundary). You can apply at most maxMove moves to the ball.
 
@@ -679,5 +679,60 @@ Given the five integers $m$, $n$, $maxMove$, $startRow$, $startColumn$, return t
     int findPaths(int m, int n, int maxMove, int sr, int sc) {
         memset(dp, -1, sizeof(dp));
         return solve(m, n, maxMove, sr, sc);
+    }
+```
+
+
+## 19 July | 118. Pascal's Triangle
+
+Given an integer numRows, return the first numRows of Pascal's triangle.
+
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
+
+* [Practice](https://leetcode.com/problems/pascals-triangle/)
+
+```cpp
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> ans;
+        for(int i = 0; i<numRows; ++i)
+        {
+            vector<int> row(i+1, 1);
+            for(int j = 1; j<i; ++j)
+                row[j] = ans[i-1][j] + ans[i-1][j-1];
+            ans.push_back(row);
+        }
+        return ans;
+    }
+```
+
+## 20 July | 792. Number of Matching Subsequences
+
+Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s.
+
+A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+
+* [Practice](https://leetcode.com/problems/number-of-matching-subsequences/)
+
+```cpp
+bool hasMatches(string &curr, string &s) {
+        int pos = 1;
+        int i = s.find(curr[0]);
+        if (i == -1)
+            return false;
+        while (pos < curr.length()) {
+            i = s.find(curr[pos], i + 1);
+            if (i == -1)
+                return false;
+            pos++;
+        }
+        return true;
+    }
+    
+    int numMatchingSubseq(string s, vector<string>& words) {
+        int count = 0;
+        for (string str : words)
+            if (hasMatches(str, s))
+                count++;
+        return count;
     }
 ```

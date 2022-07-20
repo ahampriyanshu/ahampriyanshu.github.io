@@ -27,9 +27,33 @@ makepkg -sri
 sudo pacman -S snapd
 ```
 
+### Gnome
+
+```
+sudo pacman -S gnome-tweaks
+```
+
+Enable gnome-extensions and install
+
+- [Gnome Clipboard](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
+- [Net speed Simplified ](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
+- [Bluetooth battery indicator ](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
+
+- Settings > Appearance > Style > Dark
+
+- Settings > Keyboard > Shortcuts > Custom Shortcuts
+  - ``ctrl`` + ``alt`` + ``t`` -> ``gnome-terminal``
+  - ``ctrl`` + ``alt`` + ``t`` -> ``google-chrome-stable``
+  - ``ctrl`` + ``alt`` + ``t`` -> ``nautilus``
+
+### KDE
+
 * Menu > Appearance >  Change Theme > ``adwaita-dark``
 
-* Menu > Keyboard > shortcuts > ``ctrl + alt + t = terminal`` 
+- Settings > Keyboard > Shortcuts >
+  - ``ctrl`` + ``alt`` + ``t`` -> ``terminal``
+  - ``ctrl`` + ``alt`` + ``t`` -> ``google-chrome-stable``
+  - ``ctrl`` + ``alt`` + ``t`` -> ``dolphin``
 
 ## Installing node 
 
@@ -85,18 +109,14 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
 cat ~/.ssh/id_ed25519.pub
+```
 
+[Add the new shh key](https://github.com/settings/ssh/new)
+
+```
 git config --global user.name "ahampriyanshu"
 
 git config --global user.email "ahampriyanshu@gmail.com"
-
-npm i -g diff-so-fancy
-
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-
-git config --global interactive.diffFilter "diff-so-fancy --patch"
-
-git config --global color.ui true
 ```
 
 ## Switching to zsh
@@ -120,9 +140,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ## Utilities
 
 ```bash
-sudo pacman -Sy vlc qbittorent bat 
+sudo pacman -S vlc qbittorrent bat
 
 yay -S google-chrome visual-studio-code brave telegram-desktop slack-desktop
 
-npm i -g nodemon
+npm i -g nodemon youtube-dl
 ```
