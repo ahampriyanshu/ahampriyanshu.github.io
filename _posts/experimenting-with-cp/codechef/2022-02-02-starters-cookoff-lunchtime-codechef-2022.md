@@ -677,7 +677,6 @@ int main()
 }
 ```
 
-
 #### C. How Many Maximums 
 
 From an array A containing N integers, you construct a binary string S of length (N−1) as follows. For all 1≤i<N:

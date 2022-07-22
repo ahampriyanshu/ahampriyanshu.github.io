@@ -313,3 +313,248 @@ Given a N x M grid. Find All possible paths from top left to bottom right.From e
         return res;
     }
 ```
+
+## 11 July | Reaching the heights
+
+The teacher gives a mental ability question to Raju. The question is as follows:-
+
+Raju is in an elevator. Given by his teacher is an array of size N which denotes the number of floors and has a 1 based indexing. The elevator starts from the ground and moves up and down, $X$ and $Y$ floors respectively. There is a code used in the elevator according to which it moves up $X$ floors given at odd indexes of the array and moves down Y floors given at even indexes of the array. He is asked to go to the highest floor possible. Help him to sort the array such that he reaches the highest floor after traversing the whole array from starting till the end, without skipping any index.
+
+He always prefers to move more number of floors up and less number of floors down. Once he gets into the elevator, the elevator should not reach the ground again, if it does return $-1$.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/reaching-the-heights1921/1)
+
+```cpp
+vector<int> reaching_height(int n, int a[]) {
+   sort(a,a+n,greater<int>());
+   vector<int> v;
+   int k=n-1;
+   int i=0,res=0;
+   
+   while(i<=k){
+       v.push_back(a[i++]);
+       v.push_back(a[k--]);
+   }
+   
+   for(int i=0;i<n;i++){
+       if(i%2==0) res+=v[i];
+       else res-=v[i];
+       if(res==0)return {-1};
+   }
+   
+   if(res>0){
+       if(n%2==1)v.pop_back();
+   }
+   
+   return v;
+}
+```
+
+## 12 July | Shortest Uncommon Subsequence
+
+Given two strings S and T, find length of the shortest subsequence in S which is not a subsequence in T. If no such subsequence is possible, return -1. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. A string of length n has 2^n different possible subsequences.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/shortest-uncommon-subsequence5746/1)
+
+```cpp
+int dp[500][500];
+  int helper(string& S,string& T,int i,int j){
+      if(i>=S.size()) return 500;
+      if(j>=T.size()) return 1;
+      if(dp[i][j] !=-1) return dp[i][j];
+      int k=j;
+      for(;k<T.size();k++){
+          if(S[i]==T[k])break;
+      }
+      if(k==T.size())return 1;
+      return dp[i][j] = min(helper(S,T,i+1,j),1+helper(S,T,i+1,k+1));
+  }
+    int shortestUnSub(string S, string T) {
+        memset(dp,-1,sizeof(dp));
+        int res =helper(S,T,0,0);
+        if(res>=500) return -1;
+        return res;
+    }
+```
+
+## 14 July | BST to greater sum tree
+
+Given a BST, transform it into greater sum tree where each node contains sum of all nodes greater than that node.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/bst-to-greater-sum-tree/1)
+
+```cpp
+    int tmp,sum = 0;
+    void transformTree(struct Node *root)
+    {
+        if(root==NULL) return;
+        
+        transformTree(root->right);
+        tmp = root->data;
+        root->data = sum;
+        sum += tmp;
+        transformTree(root->left);
+    }
+```
+
+## 15 July | Min sum formed by digits
+
+Given an array of digits (values are from 0 to 9), find the minimum possible sum of two numbers formed from digits of the array. All digits of given array must be used to form the two numbers.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/min-sum-formed-by-digits3551/1)
+
+```cpp
+    long long int minSum(int arr[], int n)
+    {
+        sort(arr, arr+n);
+        
+        long long int odd_fact, even_fact, even, odd;
+        
+        odd = even = 0;
+        
+        for(int i=0; i<n; i++)
+            if(i%2)
+                odd = odd*10 + arr[i];
+            else
+                even = even*10 + arr[i];
+        
+        return even + odd;
+    }
+```
+
+## 19 July | Count Smaller elements
+
+Given an array Arr of size $N$ containing positive integers. Count number of smaller elements on right side of each array.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/count-smaller-elements2214/1)
+
+```cpp
+ int solve(Node*& root,int val,int total){
+     if(root==NULL){
+         root=new Node(val,0);
+         return total;
+     }
+     if(root->val<val){
+         return root->count+solve(root->right,val,total+1);
+     }
+     else {
+         root->count++;
+         return solve(root->left,val,total);
+    }
+}
+
+vector<int> constructLowerArray(int *arr, int n) {
+    vector<int> ans(n);
+    Node* root=NULL;
+    for(int i=n-1;i>=0;i--){
+        ans[i]=solve(root,arr[i],0);
+    }
+    return ans;
+}
+```
+
+## 20 July | Form a palindrome
+
+Given a string, find the minimum number of characters to be inserted to convert it to palindrome.
+**For Example:**
+ab: Number of insertions required is 1. **b**ab or aba
+aa: Number of insertions required is 0. aa
+abcd: Number of insertions required is 3. **dcb**abcd
+
+* [Practice](https://practice.geeksforgeeks.org/problems/form-a-palindrome1455/1)
+
+```cpp
+    int countMin(string s){
+       string a = s;
+       reverse(a.begin(),a.end());
+       int n = s.size();
+       
+       vector<vector<int>> dp(n+1, vector<int> (n+1,0));
+       
+       for(int i = 1; i <= n; i++) {
+           for(int j = 1; j <= n; j++) {
+               if(s[i-1] == a[j-1])
+                   dp[i][j] = dp[i-1][j-1] + 1;
+               else 
+                   dp[i][j] = max(dp[i][j-1],dp[i-1][j]);
+           }
+       }
+       
+       return n - dp[n][n];
+    }
+```
+
+## 21 July | Get min at pop
+
+You are given an array $A$ of size $N$. You need to first push the elements of the array into a stack and then print minimum in the stack at each pop.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/get-min-at-pop/1)
+
+```cpp
+stack<int> _push(int arr[],int n)
+{
+   int mn=arr[0];
+   stack<int>s;
+   s.push(arr[0]);
+   for(int i=1;i<n;i++)
+   {
+       if(arr[i]<mn)
+            mn=arr[i];
+        s.push(mn);
+   }
+   return s;
+}
+
+void _getMinAtPop(stack<int>s)
+{
+    while(!s.empty())
+    {
+        cout<< s.top() <<" ";
+        s.pop();
+    }
+}   
+```
+
+## 22 July | Number of provinces
+
+Given an **undirected** graph with V vertices. We say two vertices u and v belong to a single province if there is a path from u to v or v to u. Your task is to find the number of provinces.
+
+**Note:** A province is a group of **directly** or **indirectly** connected cities and no other cities outside of the group.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/number-of-provinces/1)
+
+```cpp
+    void dfs(map<int, vector<int>>&mp, vector<int>&vis, int i) {
+        vis[i] = 1;
+        for(auto it:mp[i]) {
+            if(vis[it] == 0)
+                dfs(mp, vis, it);
+        }
+    }
+    
+    int numProvinces(vector<vector<int>> adj, int V) {
+
+        int row = adj.size();
+        int cdol = adj[0].size();
+        map<int, vector<int>>mp;
+
+        for(int i=0; i<V; i++) {
+            for(int j=0; j<V; j++) {
+                if(i == j) continue;
+                if(adj[i][j]==1)mp[i+1].push_back(j+1);
+            }
+        }
+
+        vector<int>vis(V+1, 0);
+        int count = 0;
+        for(int i=1; i<= V; i++) {
+            if(!vis[i]) {
+                count++;
+                dfs(mp, vis, i);
+            }
+        }
+
+        return count;
+    }
+```
+

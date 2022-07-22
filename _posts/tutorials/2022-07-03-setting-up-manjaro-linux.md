@@ -3,7 +3,7 @@ title: Setting up Manjaro Linux
 author: ahampriyanshu
 excerpt: Things to do after installing Manjaro Linux
 categories: [Tutorials]
-tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
+tags: [priyanshu, tiwari, ahampriyanshu, manjaro, linux, tutorials]
 image:
   src: /images/tutorials/manjaro.png
   width: 1000
@@ -16,7 +16,7 @@ image:
 ```bash
 sudo pacman -Syu
 
-sudo pacman -S --needed base-devel git vim noto-fonts-emoji
+sudo pacman -S --needed base-devel git vim noto-fonts-emoji python-pip
 
 git clone https://aur.archlinux.org/yay-git.git
 
@@ -29,8 +29,18 @@ sudo pacman -S snapd
 
 ### Gnome
 
+> Change the scaling factor, if using small screen with small pixel resolution.
+{: .prompt-tip }
+
 ```
-sudo pacman -S gnome-tweaks
+sudo pacman -S gnome-tweaks gvfs-mtp
+```
+
+> To enable Media Transfer Protocol (To enable Media Transfer Protocol (This may help if you have trouble connecting your Android device)
+{: .prompt-tip }
+
+```
+sudo pacman -S gvfs-mtp
 ```
 
 Enable gnome-extensions and install
@@ -61,6 +71,22 @@ Enable gnome-extensions and install
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 nvm install node
+```
+
+### To use legacy versions of node
+
+* For a session
+
+```bash
+nvm install v1X.XX.X
+nvm use v1X.XX.X
+```
+
+* Changing the default node version
+
+```bash
+nvm deactivate node
+nvm activate v1X.XX.X
 ```
 
 ## Installing mongodb
@@ -124,9 +150,9 @@ git config --global user.email "ahampriyanshu@gmail.com"
 ```bash
 sudo pacman -S zsh
 
-chsh -s `which zsh`
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+chsh -s `which zsh`
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
@@ -140,9 +166,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ## Utilities
 
 ```bash
-sudo pacman -S vlc qbittorrent bat
+sudo pacman -S vlc qbittorrent
 
-yay -S google-chrome visual-studio-code brave telegram-desktop slack-desktop
+yay -S google-chrome visual-studio-code telegram-desktop slack-desktop
 
-npm i -g nodemon youtube-dl
+npm i -g nodemon
+
+pip3 install youtube-dl orange3
 ```
