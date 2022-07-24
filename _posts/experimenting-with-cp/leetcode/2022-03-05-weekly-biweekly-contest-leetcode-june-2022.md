@@ -255,3 +255,83 @@ Implement the SmallestInfiniteSet class:
         mp[num]++;
     }
 ```
+
+### Biweekly Contest 83
+
+#### 2347. Best Poker Hand
+
+You are given an integer array ranks and a character array suits. You have 5 cards where the ith card has a rank of $ranks[i]$ and a suit of $suits[i]$.
+
+The following are the types of poker hands you can make from best to worst:
+
+* ``"Flush"``: Five cards of the same suit.
+* ``"Three of a Kind"``: Three cards of the same rank.
+* ``"Pair"``: Two cards of the same rank.
+* ``"High Card"``: Any single card.
+
+Return a string representing the best type of poker hand you can make with the given cards.
+
+_Note that the return values are case-sensitive._
+
+* [Practice](https://leetcode.com/problems/best-poker-hand/)
+
+```cpp
+    string bestHand(vector<int>& ranks, vector<char>& suits) {
+        
+        unordered_map<int, int> rank;
+        unordered_map<char, int> suit;
+        
+        for(auto r:ranks)
+            rank[r]++;
+        
+        for(auto s:suits)
+            suit[s]++;
+        
+        int bestRank = INT_MIN, bestSuit = INT_MIN;
+        
+        for(auto r: rank)
+            bestRank = max(bestRank, r.second);
+        
+        for(auto s:suit)
+            bestSuit = max(bestSuit, s.second);
+        
+        
+        if(bestSuit == 5) return "Flush";
+        
+        if(bestRank > 2) return "Three of a Kind";
+        
+        if(bestRank == 2) return "Pair";
+        
+        return "High Card";
+        
+    }
+```
+
+#### 2348. Number of Zero-Filled Subarrays
+
+Given an integer array nums, return the number of subarrays filled with 0.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+* [Practice](https://leetcode.com/problems/number-of-zero-filled-subarrays/)
+
+```cpp
+    long long zeroFilledSubarray(vector<int>& nums) {
+        
+        long long zero(0), ans(0), i=0, n = nums.size();
+        
+        while(i<n){
+            if(nums[i] == 0)
+                zero++;
+            else{
+                ans += zero*(zero+1)/2; 
+                zero = 0;
+            }
+            i++;
+        }
+        
+        if(zero) ans += zero*(zero+1)/2; 
+        
+        return ans;
+    }
+```

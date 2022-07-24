@@ -18,13 +18,7 @@ image:
 
 brew update
 
-brew install git vim go
-```
-
-## Installing python
-
-```bash
-brew install python
+brew install git vim go python
 
 curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
 
@@ -35,6 +29,10 @@ sudo python get-pip.py
 
 ```bash
 brew install nvm
+
+nvm install node
+
+npm i yarn -g
 ```
 
 ### To use legacy versions of node
@@ -80,7 +78,7 @@ ssh-keygen -t ed25519 -C "ahampriyanshu@gmail.com"
 
 eval "$(ssh-agent -s)"
 
-touch ~/.ssh/config
+vim ~/.ssh/config
 ```
 
 Paste the following
