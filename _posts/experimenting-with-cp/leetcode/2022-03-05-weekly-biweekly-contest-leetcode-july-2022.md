@@ -185,3 +185,80 @@ A subarray is a contiguous non-empty sequence of elements within an array.
         return ans;
     }
 ```
+
+## Weekly Contest 303
+
+### 2351. First Letter to Appear Twice
+
+Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+
+**Note:**
+
+* A letter a appears twice before another letter b if the second occurrence of a is before the second occurrence of b.
+* s will contain at least one letter that appears twic
+
+* [Practice](https://leetcode.com/problems/count-asterisks/)
+
+```cpp
+    char repeatedCharacter(string s) {
+        
+        vector<int> index(26, -1);
+        vector<int> dist(26, 101);
+        char ans;
+        int idx, mini = 101;
+        
+        for(int i=0; i<s.size(); i++){
+            idx = s[i] - 'a';
+            if(index[idx] == -1)
+                index[idx] = i;
+            else if (dist[idx] == 101)
+                dist[idx] = i;
+        }
+        
+        for(int i=0; i<26; i++){
+            // cout << i << " -> " << dist[i] << endl;
+            if(dist[i] < mini){
+                mini = dist[i];
+                ans = i + 'a';
+            }
+        }
+        
+        return ans;
+        
+    }
+```
+
+### 2352. Equal Row and Column Pairs
+
+Given a ``0-indexed`` $n x n$ integer matrix grid, return the number of pairs $(R_i, C_j)$ such that row $R_i$ and column $C_j$ are equal.
+
+A row and column pair is considered equal if they contain the same elements in the same order (i.e. an equal array).
+
+* [Practice](https://leetcode.com/contest/weekly-contest-303)
+
+```cpp
+    char repeatedCharacter(string s) {
+        
+        vector<int> index(26, -1);
+        vector<int> dist(26, 101);
+        char ans;
+        int idx, mini = 101;
+        
+        for(int i=0; i<s.size(); i++){
+            idx = s[i] - 'a';
+            if(index[idx] == -1)
+                index[idx] = i;
+            else if (dist[idx] == 101)
+                dist[idx] = i;
+        }
+        
+        for(int i=0; i<26; i++)
+            if(dist[i] < mini){
+                mini = dist[i];
+                ans = i + 'a';
+            }
+        
+        return ans;
+        
+    }
+```

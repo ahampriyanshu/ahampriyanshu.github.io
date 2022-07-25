@@ -7,7 +7,6 @@ excerpt: C++ Solutions to July Leetcoding Challenge, 2022
 tags: [leetcode, leetcoding, challenge, july, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-
 ## 01 July | 1710. Maximum Units on a Truck
 
 You are assigned to put some amount of boxes onto one truck. You are given a 2D array boxTypes, where $boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBox-i]$:
@@ -682,7 +681,6 @@ Given the five integers $m$, $n$, $maxMove$, $startRow$, $startColumn$, return t
     }
 ```
 
-
 ## 19 July | 118. Pascal's Triangle
 
 Given an integer numRows, return the first numRows of Pascal's triangle.
@@ -734,5 +732,183 @@ bool hasMatches(string &curr, string &s) {
             if (hasMatches(str, s))
                 count++;
         return count;
+    }
+```
+
+## 21 July | 86. Partition List
+
+Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+
+You should preserve the original relative order of the nodes in each of the two partitions.
+
+* [Practice](https://leetcode.com/problems/partition-list)
+
+```cpp
+    ListNode* partition(ListNode* head, int x) {
+        
+        if(!head or !head->next) return head;
+        
+        ListNode *left = new ListNode(0), *start = left, *center = new ListNode(0), *middle = center;
+        
+        while(head and head->val != x){
+            if(head->val < x){
+            left->next = new ListNode(head->val);
+            left = left->next;
+            }else{
+            center->next = new ListNode(head->val);
+            center = center->next;
+            }
+            head = head->next;
+        }
+        
+        if(!head){
+            if(middle->next)
+            left->next = middle->next;
+            return start->next;
+        }
+        
+        ListNode *right = head, *end = right;
+        
+        head = head->next;
+        
+        while(head){
+            if(head->val < x){
+            left->next = new ListNode(head->val);
+            left = left->next;
+            }else{
+            right->next = new ListNode(head->val);
+            right = right->next;
+            }
+            head = head->next;
+        }
+        
+        right->next = NULL;
+        
+        if(middle->next){
+            left->next = middle->next;
+            center->next = end;
+        } else left->next = end;
+        
+        
+        return start->next;
+    }
+```
+
+## 22 July | 92. Reverse Linked List II
+
+Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+
+* [Practice](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+```cpp
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        
+        ListNode *sentinel = new ListNode(0), *prev = sentinel, *curr, *next;
+        int i = 0;
+        sentinel->next = head;
+        
+        while (i++ < left - 1)
+            prev = prev->next;
+        
+        curr = prev->next;
+        
+        for (i = 0; i < right - left; i++){
+            next = prev->next;
+            prev->next = curr->next;
+            curr->next = curr->next->next;
+            prev->next->next = next;
+        }
+        
+        return sentinel->next;
+    }
+```
+
+## 24 July | 240. Search a 2D Matrix II
+
+Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+
+* Integers in each row are sorted in ascending from left to right.
+* Integers in each column are sorted in ascending from top to bottom.
+
+
+* [Practice](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+
+```cpp
+    bool searchMatrix(vector<vector<int>>& mat, int target) {
+        
+        int m = mat.size(), n = mat[0].size(), i = m - 1, j = 0;
+        
+        while (i>=0 && j<n){
+            if (mat[i][j] == target) return true;
+            if (mat[i][j] < target) j++;
+            else i--;
+        }
+        
+        return false;
+        
+    }
+```
+
+## 25 July | 240. Search a 2D Matrix II
+
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return $[-1, -1]$.
+
+You must write an algorithm with $O(log n)$ runtime complexity.
+
+* [Practice](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+### Binary Search
+
+```cpp
+    vector<int> searchRange(vector<int>& nums, int target) {
+
+        int first = -1, last = -1, l(0), r(nums.size()-1);
+                                           
+        while(l<=r){
+            int mid = l + (r - l)/2;
+            if(nums[mid] == target)
+                first =  mid;
+            if(nums[mid] >= target)
+                r = mid - 1;
+            else
+                l = mid + 1;
+        }
+        
+        l = 0, r = nums.size()-1;
+        while(l<=r){
+            int mid = l + (r - l)/2;
+            if(nums[mid] == target)
+                last =  mid;
+            if(nums[mid] > target)
+                r = mid -1;
+            else
+                l = mid + 1;
+        }
+        
+        return {first, last};
+        
+    }
+```
+
+### STL
+
+```cpp
+vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int>ans;
+        vector<int>::iterator it, lower, upper;
+        it = find(nums.begin(), nums.end(), target);
+        if(it != nums.end()){
+            lower = lower_bound(nums.begin(), nums.end(), target);
+            upper = upper_bound(nums.begin(), nums.end(), target);
+            ans.push_back(lower - nums.begin());
+            ans.push_back(upper - nums.begin() - 1);
+        }
+        else{
+            ans.push_back(-1);
+            ans.push_back(-1);
+        }
+        return ans;
     }
 ```

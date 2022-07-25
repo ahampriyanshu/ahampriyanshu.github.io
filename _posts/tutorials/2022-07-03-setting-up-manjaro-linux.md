@@ -45,8 +45,14 @@ Enable gnome-extensions and install
 
 - Settings > Keyboard > Shortcuts > Custom Shortcuts
   - ``ctrl`` + ``alt`` + ``t`` -> ``gnome-terminal``
-  - ``ctrl`` + ``alt`` + ``t`` -> ``google-chrome-stable``
-  - ``ctrl`` + ``alt`` + ``t`` -> ``nautilus``
+  - ``ctrl`` + ``alt`` + ``c`` -> ``google-chrome-stable``
+  - ``ctrl`` + ``alt`` + ``f`` -> ``nautilus``
+
+> To prevent grouping of chrome/vscode/xyz windows together
+{: .prompt-tip }
+
+- Settings > Keyboard > Shortcuts > Switch Windows > Alt + Tab
+
 
 ### KDE
 
@@ -54,8 +60,8 @@ Enable gnome-extensions and install
 
 - Settings > Keyboard > Shortcuts >
   - ``ctrl`` + ``alt`` + ``t`` -> ``terminal``
-  - ``ctrl`` + ``alt`` + ``t`` -> ``google-chrome-stable``
-  - ``ctrl`` + ``alt`` + ``t`` -> ``dolphin``
+  - ``ctrl`` + ``alt`` + ``c`` -> ``google-chrome-stable``
+  - ``ctrl`` + ``alt`` + ``f`` -> ``dolphin``
 
 ## Installing yay 
 ```bash
@@ -84,7 +90,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 nvm install node
 
-npm i yarn -g
+npm i -g yarn nodemon
 ```
 
 ### To use legacy versions of node
@@ -177,12 +183,17 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
 
+Add these to plugins list in ``~/.zshrc``:
+```
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting pip colorize
+```
+
 ## Utilities
 
 ```bash
 sudo pacman -S vlc qbittorrent
 
-yay -S google-chrome visual-studio-code telegram-desktop slack-desktop
+yay -S google-chrome visual-studio-code-bin telegram-desktop slack-desktop
 
 npm i -g nodemon
 

@@ -596,3 +596,41 @@ You have to tell what is the maximum level you can reach up to under the constra
        }
 ```
 
+## 24 July | Distance from the Source (Bellman-Ford Algorithm)
+
+Given a Binary Tree, find the maximum sum path from a leaf to root.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/maximum-sum-leaf-to-root-path/1)
+
+```cpp
+    int maxPathSum(Node* root)
+    {
+        if(!root) return 0;
+        
+        int left = maxPathSum(root->left);
+        int right = maxPathSum(root->right);
+        
+        return max(root->data+left, root->data+right);
+    }
+```
+
+
+## 25 July | Distance from the Source (Bellman-Ford Algorithm)
+
+Given a weighted, directed and connected graph of V vertices and E edges, Find the shortest distance of all the vertex's from the source vertex S.
+Note: The Graph doesn't contain any negative weight cycle.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1)
+
+```cpp
+    vector <int> bellman_ford(int V, vector<vector<int>> adj, int S) {
+        vector<int>dis(V, 1e8);
+        dis[S]=0;
+        for(int j=0; j<V; j++){
+            for(auto i:adj)
+                dis[i[1]]=min(dis[i[1]], dis[i[0]]+i[2]);
+        }
+        return dis;
+    }
+```
+
