@@ -47,8 +47,7 @@ nvm use v1X.XX.X
 * Changing the default node version
 
 ```bash
-nvm deactivate node
-nvm activate v1X.XX.X
+nvm default alias v1X.XX.X
 ```
 
 ## Installing postgres

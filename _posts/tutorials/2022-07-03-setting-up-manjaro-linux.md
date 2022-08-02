@@ -105,14 +105,13 @@ nvm use v1X.XX.X
 * Changing the default node version
 
 ```bash
-nvm deactivate node
-nvm activate v1X.XX.X
+nvm default alias v1X.XX.X
 ```
 
 ## Installing mongodb
 
 ```bash
-sudo yay -S mongodb-bin
+yay -S mongodb-bin
 
 sudo systemctl enable mongodb
 
@@ -185,7 +184,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 Add these to plugins list in ``~/.zshrc``:
 ```
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting pip colorize
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting pip colorize)
 ```
 
 ## Utilities

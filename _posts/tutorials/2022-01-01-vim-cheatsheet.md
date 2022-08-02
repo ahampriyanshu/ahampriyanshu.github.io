@@ -3,7 +3,7 @@ title: Vim Cheat Sheet
 author: ahampriyanshu
 excerpt: Let's improve Vi Improved
 categories: [Tutorials]
-tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
+tags: [priyanshu, tiwari, ahampriyanshu, tutorials, vim]
 image:
   src: /images/tutorials/vim.png
   width: 1000

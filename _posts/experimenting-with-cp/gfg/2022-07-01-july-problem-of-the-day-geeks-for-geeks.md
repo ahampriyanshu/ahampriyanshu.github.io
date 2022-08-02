@@ -34,12 +34,6 @@ int FindNthTerm(long long int n) {
 }
 ```
 
-### O(logn)
-
-```cpp
-
-```
-
 ## 02 July | Count the paths 
 
 Given a directed acyclic graph(DAG) with n nodes labeled from $0$ to $n-1$. Given edges, s and d ,count the number of ways to reach from s to d.There is a directed Edge from vertex $edges[i][0]$ to the vertex $edges[i][1]$.
@@ -614,7 +608,6 @@ Given a Binary Tree, find the maximum sum path from a leaf to root.
     }
 ```
 
-
 ## 25 July | Distance from the Source (Bellman-Ford Algorithm)
 
 Given a weighted, directed and connected graph of V vertices and E edges, Find the shortest distance of all the vertex's from the source vertex S.
@@ -634,3 +627,47 @@ Note: The Graph doesn't contain any negative weight cycle.
     }
 ```
 
+
+## 26 July | Length of longest palindrome in linked list
+
+Given a linked list, the task is to complete the function $maxPalindrome()$ which returns an integer denoting  the length of the longest palindrome list that exist in the given linked list
+
+* [Practice](https://practice.geeksforgeeks.org/problems/length-of-longest-palindrome-in-linked-list/1)
+
+```cpp
+int count (Node *first, Node *second) 
+{
+    Node *a = first;
+    Node *b = second;
+    
+    int cnt = 0;
+    
+    while(a && b ){
+        if(a->data == b->data){
+            a = a->next;
+            b = b->next;
+            cnt++;
+        }
+        else break;
+    }return cnt;
+}
+
+int maxPalindrome(Node *head)
+{
+    Node *curr = head;
+    Node *prev = NULL;
+
+    int ans = 0;
+    
+    while(curr){
+        Node *next = curr->next;
+        curr->next = prev;
+        
+        ans = max(ans, 2*count(prev, next)+1);
+        ans = max(ans, 2*count(curr, next));
+        
+        prev = curr;
+        curr = next;
+    }return ans;
+}
+```

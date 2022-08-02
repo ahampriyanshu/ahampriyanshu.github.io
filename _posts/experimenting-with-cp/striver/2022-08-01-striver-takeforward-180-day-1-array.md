@@ -17,17 +17,17 @@ Find the duplicate in an array of N+1 integers.
 
 Just apply mergesort
 
-**Time Complexity:** $ O(nlogn) $
+Time Complexity: $ O(nlogn) $
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 #### Better 
 
 Count the occurences of 0,1,2 in first transversal and update the array in the second.
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 
@@ -37,9 +37,9 @@ Count the occurences of 0,1,2 in first transversal and update the array in the s
 
 Use three variable pointing to and 
 
-**Time Complexity:** $ O(n) $
+Time Complexity: $ O(n) $
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution {
@@ -74,17 +74,17 @@ Sort an array of 0’s 1’s 2’s without using extra space or sorting algo
 
 Just apply mergesort
 
-**Time Complexity:** $ O(nlogn) $
+Time Complexity: $ O(nlogn) $
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 #### Better 
 
 Count the occurences of **0**,**1**,**2** in first transversal and update the array in the second.
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution
@@ -132,9 +132,9 @@ public:
 
 Use three variable pointing to and 
 
-**Time Complexity:** $ O(n) $
+Time Complexity: $ O(n) $
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution {
@@ -170,17 +170,17 @@ Find the repeating and the missing number.
 
 Apply mergesort and then find the missing and repeating value.
 
-**Time Complexity:** $ O(nlogn) $
+Time Complexity: $ O(nlogn) $
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 #### Better 
 
 Use a hash array or hash map to count the occurrences of numbers.Index with values '2' and '0' will give the repeating and missing numbers respectively.
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 ```cpp
 class Solution
@@ -219,9 +219,9 @@ public:
 
 Use three variable pointing to and 
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution{
@@ -249,9 +249,9 @@ public:
 
 Use three variable pointing to and 
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution{
@@ -265,15 +265,16 @@ public:
 
 ### Problem 4
 
+
 * [Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/)
 
 #### Worst 
 
 Swap all the smaller numbers from the second array and then sort both the resultant arrays.
 
-**Time Complexity:** $ O(nlogn) $
+Time Complexity: $ O(nlogn) $
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 ```cpp
 class Solution{
@@ -302,9 +303,9 @@ class Solution{
 
 Use **inserstion sort**.
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(n) $
+Auxiliary Space: $ O(n) $
 
 ```cpp
 class Solution
@@ -343,9 +344,9 @@ public:
 
 Use three variable pointing to and 
 
-**Time Complexity:** $ O(n) $ 
+Time Complexity: $ O(n) $ 
 
-**Auxiliary Space:** $ O(1) $
+Auxiliary Space: $ O(1) $
 
 ```cpp
 class Solution{
@@ -359,11 +360,24 @@ public:
 
 ### 5. Maximum Subarray
 
-Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+Given an integer array arr, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum and print the subarray.
 
 A subarray is a contiguous part of an array.
 
 * [Practice](https://leetcode.com/problems/maximum-subarray)
+
+#### Naive
+* [Practice](https://leetcode.com/problems/maximum-subarray)
+> Use two loops to get generate all the subarrays and then store the sum of a subarray in a variable. Return the max value.
+{: .prompt-warning }
+
+**Time Complexity:** $ O(n^2) $
+**Auxiliary Space:** $ O(1) $
+
+### Optimal
+
+> Implement Kadane Algorithm. Declare two variables: local sum and maximum sum. Iterate the array, adding the elements to the local sum. Update ans when ans is greater than sum.
+{: .prompt-tip }
 
 ```cpp
 class Solution {
@@ -380,6 +394,9 @@ public:
     }
 };
 ```
+
+**Time Complexity:** $ O(n) $
+**Auxiliary Space:** $ O(1) $
 
 ### 6. Stocks Sell or Buy
 
