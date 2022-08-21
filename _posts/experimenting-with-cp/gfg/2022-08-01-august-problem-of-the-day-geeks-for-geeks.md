@@ -7,7 +7,7 @@ math: true
 tags: [gfg, geeksforgeeks, geeks, for, potd, problem, of, the, day, august, ds, array, tree, trie, string, stacks, queue, linked list]
 ---
 
-## 01 July | Egg Dropping Puzzle
+## 01 | Egg Dropping Puzzle
 
 You are given N identical eggs and you have access to a K-floored building from $1$ to $K$.
 
@@ -50,7 +50,7 @@ Return the minimum number of moves that you need to determine with certainty wha
     }
 ```
 
-## 02 July | Delete nodes greater than k
+## 02 | Delete nodes greater than k
 
 Given a BST and a value k, the task is to delete the nodes having values greater than or equal to k.
 
@@ -73,337 +73,442 @@ Given a BST and a value k, the task is to delete the nodes having values greater
     }
 ```
 
-## 03 July | 
+## 03 | Preorder to BST
+
+Given an array arr[] of N nodes representing preorder traversal of some BST. You have to build the exact BST from it's given preorder traversal. 
+In Pre-Order traversal, the root node is visited before the left child and right child nodes.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/preorder-to-postorder4423/1)
+
+```cpp
+   Node* post_order(int pre[], int size)
+   {
+       int preorderIdx = 0;
+       Node* root = constructBST(pre, &preorderIdx, pre[0], INT_MIN, INT_MAX, size);
+       return root;
+   }
+   
+   Node* constructBST(int pre[], int *preorderIdx, int key, int min, int max, int size)
+   {
+       if(*preorderIdx >= size)
+       {
+           return NULL;
+       }
+       Node* root = NULL;
+       if(key>min && key<max)
+       {
+           root = newNode(key);
+           *preorderIdx +=1;
+           if(*preorderIdx<size)
+           {
+               root->left = constructBST(pre, preorderIdx, pre[*preorderIdx], min, key, size);
+           }
+           
+           if(*preorderIdx<size)
+           {
+               root->right = constructBST(pre, preorderIdx, pre[*preorderIdx], key, max, size);
+           }
+       }
+       
+       return root;
+   }
+```
+
+## 04 | Complete Binary Tree
+
+Given a Binary Tree, write a function to check whether the given Binary Tree is Complete Binary Tree or not. A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes should be as much close to left as possible.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/complete-binary-tree/1)
+
+```cpp
+    bool isCompleteBT(Node* root){
+        
+        queue<Node*> q;
+        bool missing=false;
+        q.push(root);
+        
+        while(!q.empty()){
+            Node *temp=q.front();
+            q.pop();
+            if(!temp->left)
+                missing=true;
+            else 
+                if(missing) return false;
+                else  q.push(temp->left);   
+            if(!temp->right)
+                missing=true;
+            else 
+                if(missing) return false;
+                else q.push(temp->right);
+        }
+        return true;
+    }
+```
+
+## 05 | X Total Shapes
+
+Given  a grid of n*m consisting of O's and X's. The task is to find the number of 'X' total shapes.
+
+**Note:** ``X`` shape consists of one or more adjacent X's (diagonals not included).
+
+* [Practice](https://practice.geeksforgeeks.org/problems/x-total-shapes3617/1)
+
+```cpp
+    void dfs(vector<vector<char>>& g, int i,int j){
+      
+    if(i<0 || i>= g.size() || j<0 || j>=g[0].size() || g[i][j]=='O')
+        return;
+    
+    g[i][j] = 'O';
+    dfs(g,i,j-1);
+    dfs(g,i,j+1);
+    dfs(g,i-1,j);
+    dfs(g,i+1,j);
+    
+   }
+   
+   int xShape(vector<vector<char>>& grid) 
+   {
+       // Code here
+       int count = 0;
+       for(int i=0; i<grid.size(); i++){
+           for(int j=0; j<grid[0].size(); j++){
+               if(grid[i][j] == 'X'){
+                   count++;
+                   dfs(grid,i,j);
+               }
+           }
+       }
+       return count;
+   }
+```
+
+## 06 | QuickSort on Doubly Linked List
+
+Sort the given doubly linked list of size N using quicksort. Just complete the partition function using the quicksort technique.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/quicksort-on-doubly-linked-list/1)
+
+```cpp
+    Node* partition(Node *l, Node *h){
+        Node* i = l;
+        while(l != h){
+            if(l->data <= h->data){
+                swap(i->data,l->data);
+                i = i->next;
+            }
+            l = l->next;
+        }
+        swap(i->data, h->data);
+        return i;
+    }
+```
+
+## 07 | Exceptionally odd
+
+Given an array of N positive integers where all numbers occur even number of times except one number which occurs odd number of times. Find the exceptional number.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/find-the-odd-occurence4820/1)
+
+```cpp
+    int getOddOccurrence(int arr[], int n) {
+        int ans = arr[0];
+        
+        for(int i=1; i<n; i++)
+            ans ^= arr[i];
+            
+        return ans;
+    
+    }
+```
+
+## 08 | Josephus problem
+
+Given the total number of persons n and a number k which indicates that k-1 persons are skipped and kth person is killed in circle in a fixed direction.
+
+The task is to choose the safe place in the circle so that when you perform these operations starting from 1st place in the circle, you are the last one remaining and survive.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/josephus-problem/1)
+
+```cpp
+    int josephus(int n, int k)
+    {
+    if (n == 1)
+        return n;
+    return (josephus(n - 1, k) + k - 1) % n + 1;
+    }
+```
+
+## 09 | Nine Divisors
+
+Find the count of numbers less than equal to N having exactly 9 divisors.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/nine-divisors3751/1)
+
+```cpp
+    long long int nineDivisors(long long int N){
+        int sN = sqrt(N);
+        vector<bool> prime(sN+1,true);
+        for(int i=2;i<=sqrt(sN)+1;i++){
+            if(prime[i])
+            for(int j=i*i;j<=sN;j+=i){
+                 prime[j]=0;
+            }
+        }
+        vector<int> primes;
+        for(int i=2;i<=sN;i++){
+            if(prime[i])    primes.push_back(i);
+        }
+        
+        int primesSize = primes.size();
+        int ans=0;
+        for(int i=0;i<primesSize;i++){
+            long long notExceed  = sqrt(N)/primes[i];
+            ans += (upper_bound(primes.begin(),primes.begin()+i,notExceed) - primes.begin());
+        }
+        for(int i=0;i<primesSize;i++){
+            long long sq = primes[i]*primes[i];
+            if(sq*sq*sq*sq <= N) ans++;
+            else break;
+        }
+        return ans;
+    }
+```
+
+## 10 | M-Coloring Problem
+
+Given an undirected graph and an integer M. The task is to determine if the graph can be colored with at most M colors such that no two adjacent vertices of the graph are colored with the same color. Here coloring of a graph means the assignment of colors to all vertices. Print 1 if it is possible to colour vertices and 0 otherwise.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1)
+
+```cpp
+    bool isValid(bool g[101][101], int n,vector<int> &color,int in,int c)
+    {
+        int i;
+        
+        for(i=0;i<n;i++)
+        {
+            if(i!=in && g[in][i]==1 && color[i]==c)
+            return 0;
+        }
+        
+        return 1;
+    }
+    
+    bool dfs(bool g[101][101], int m, int n,vector<int> &color,int in)
+    {
+        if(in==n || color[in]!=-1)
+        return 1;
+        
+        int i,j;
+        
+        for(i=0;i<m;i++)
+        {
+            color[in]=i;
+            
+            if(isValid(g,n,color,in,i) && dfs(g,m,n,color,in+1))
+            return 1;
+            
+            color[in]=-1;
+        }
+        
+        return 0;
+    }
+```
+
+## 11 | Pots of Gold Game
+
+Two players X and Y are playing a game in which there are pots of gold arranged in a line, each containing some gold coins. They get alternating turns in which the player can pick a pot from one of the ends of the line. The winner is the player who has a higher number of coins at the end. The objective is to maximize the number of coins collected by X, assuming Y also plays optimally.
+
+Return the maximum coins X could get while playing the game. Initially, X starts the game.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/pots-of-gold-game/1)
+
+```cpp
+int solve(int i,int j,vector<int>a,int dp[505][505])
+   {
+       if(i==j) return a[i];
+       if(i>j) return 0;
+       if(dp[i][j]!=-1) return dp[i][j];
+       return dp[i][j]=max(a[i]+min(solve(i+2,j,a,dp),solve(i+1,j-1,a,dp)),a[j]+min(solve(i+1,j-1,a,dp),solve(i,j-2,a,dp)));
+   }
+   int maxCoins(vector<int>&A,int n)
+   {
+    //Write your code here
+    int dp[505][505];
+    memset(dp,-1,sizeof(dp));
+    return solve(0,n-1,A,dp); 
+   }
+```
+
+## 12 | Case-specific Sorting of Strings
+
+Given a string S consisting of only uppercase and lowercase characters. The task is to sort uppercase and lowercase letters separately such that if the ith place in the original string had an Uppercase character then it should not have a lowercase character after being sorted and vice versa.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/1)
+
+```cpp
+    string caseSort(string str, int n)
+    {
+        string s1="";
+        string s2="";
+        string sn = str;
+        sort(str.begin(),str.end());
+        int i=0;
+        while(i<n)
+            if(str[i]<=90) s1 += str[i++];
+            else s2 += str[i++];
+        
+        i=0;
+        int j=0,k=0;
+        while(i<n)
+            if(sn[i]>=97)
+                sn[i++] = s2[j++];
+            else
+                sn[i++] = s1[k++];
+            
+        
+        return sn;
+    }
+```
+
+## 13 | Max length chain
+
+You are given N pairs of numbers. In every pair, the first number is always smaller than the second number. A pair (c, d) can follow another pair (a, b) if b < c. Chain of pairs can be formed in this fashion. You have to find the longest chain which can be formed from the given set of pairs. 
+
+* [Practice](https://practice.geeksforgeeks.org/problems/max-length-chain/1)
+
+```cpp
+    int maxChainLen(struct val p[],int n){
+    
+    vector<pair<int,int> > v;
+        
+    for(int i=0;i<n;i++)
+        v.push_back({p[i].first,p[i].second});
+        
+    sort(v.begin(),v.end());
+    int num = v.size();
+    int c= 1;
+    int prev = v[0].second;
+        for(int i=1;i<num;i++)
+        {
+            if(prev<v[i].first)
+            {
+                prev = max(v[i].second,prev);
+                c++;
+            }
+            else
+            {
+                prev = min(v[i].second,prev);
+            }
+        }
+        return c;
+    }
+```
+
+## 21 | Game with nos
+
+You are given an array arr[], you have to re-construct an array arr[]. The values in arr[] are obtained by doing Xor of consecutive elements in the array.
+
+* [Practice](https://practice.geeksforgeeks.org/problems/game-with-nos3123/1)
+
+```cpp
+int* game_with_number(int arr[], int n)
+{
+    int i = 0;
+    
+    while(i<n-1)
+        arr[i] = arr[i++]^arr[i];
+    
+    return arr;
+}
+```
+
+## 22 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 04 July | 
+## 23 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 05 July | 
+## 24 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 06 July | 
+## 25 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 07 July | 
+## 26 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 08 July | 
+## 27 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 09 July | 
+## 28 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 10 July | 
+## 29 | 
 
 
 
 * [Practice]()
-
-### 
 
 ```cpp
 
 ```
 
-## 11 July | 
+## 30 | 
 
 
 
 * [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 12 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 13 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 14 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 15 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 16 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 17 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 18 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 19 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 20 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 21 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 22 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 23 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 24 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 25 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 26 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 27 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 28 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 29 July | 
-
-
-
-* [Practice]()
-
-### 
-
-```cpp
-
-```
-
-## 30 July | 
-
-
-
-* [Practice]()
-
-### 
 
 ```cpp
 
