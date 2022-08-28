@@ -95,27 +95,17 @@ $\rightarrow S_n = \frac{n(2a + (n-1)*d)}{2}$
 
 a, $a.r^{1}$,  $a.r^{2}$, $a.r^{3}$, ... $r^{n-1}$
 
-Nth term $\rightarrow$
+Nth term $\rightarrow$ $T_{n} = a*r^{n-1}$
 
-$T_{n} = a*r^{n-1}$
+Sum till N terms $\rightarrow$ $S_{n} = a*(r^{n} - 1)/ r-1$
 
-Sum till N terms $\rightarrow$
-
-$S_{n} = a*(r^{n} - 1)/ r-1$
-
-Sum of infinite terms $\rightarrow$
-
-$S_{\infty} = \frac{a}{1-r}$
+Sum of infinite terms $\rightarrow$ $S_{\infty} = \frac{a}{1-r}$
 
 ### Harmonic Progression
 
-Harmonic progression (or harmonic sequence) is a progression formed by taking the reciprocals of an arithmetic progression.
+Harmonic progression (or harmonic sequence) is a progression formed by taking the reciprocals of an arithmetic progression. $\rightarrow \frac{1}{5}, \frac{1}{10}, \frac{1}{15}, \ldots$
 
-$\rightarrow \frac{1}{5}, \frac{1}{10}, \frac{1}{15}, \ldots$
-
-Nth term $\rightarrow$
-
-$T_{n} = \frac{1}{a + (n-1) \cdot d}$
+Nth term $\rightarrow$ $T_{n} = \frac{1}{a + (n-1) \cdot d}$
 
 ## Average
 
@@ -637,7 +627,7 @@ $\rightarrow lcm(a,b) = \frac{a\times b}{gcd(a,b)}$
 
 ```cpp
 bool isPrime(int n)
-{=
+{
     if (n <= 1)
         return false;
   

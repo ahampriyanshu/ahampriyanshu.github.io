@@ -2,6 +2,7 @@
 title: "Interview Prep: HTML, CSS & JS"
 author: ahampriyanshu
 excerpt: All of the questions I have been asked so far
+math: true
 categories:
   - 'inteview prep'
 tags:

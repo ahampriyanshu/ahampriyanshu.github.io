@@ -2,6 +2,7 @@
 title: "Interview Prep: React"
 author: ahampriyanshu
 excerpt: All of the questions I have been asked so far
+math: true
 categories:
   - 'inteview prep'
 tags:
@@ -26,7 +27,7 @@ tags:
 * Props in react.
 * MVC vs MVT.
 * Functional components vs Class components.
-* What is a pure component in react and can functional component be pure ?
+* What is a pure component in react and can functional componcomponentent be pure ?
 * How to avoid prop drilling ?
 * Pass data form parent->child and child->parent.
 * Styling a react component.

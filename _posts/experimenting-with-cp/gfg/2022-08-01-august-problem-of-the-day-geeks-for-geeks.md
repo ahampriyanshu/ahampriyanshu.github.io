@@ -424,64 +424,76 @@ int* game_with_number(int arr[], int n)
 }
 ```
 
-## 22 | 
-
-
-
-* [Practice]()
-
-```cpp
-
-```
-
-## 23 | 
-
-
-
-* [Practice]()
-
-```cpp
-
-```
-
-## 24 | 
-
-
-
-* [Practice]()
-
-```cpp
-
-```
-
-## 25 | 
-
-
-
-* [Practice]()
-
-```cpp
-
-```
-
-## 26 | 
-
-
-
-* [Practice]()
-
-```cpp
-
-```
-
 ## 27 | 
 
+Given an unsorted array Arr of N positive and negative numbers. Your task is to create an array of alternate positive and negative numbers without changing the relative order of positive and negative numbers.
 
+**Note:** Array should start with positive number.
 
-* [Practice]()
+* [Practice](https://practice.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1)
+
+### Stack
 
 ```cpp
+	void rearrange(int arr[], int n) {
+	    
+	    int i = 0;
+	    queue<int> pos, neg;
+	    
+	    for(; i<n; i++)
+	        if(arr[i]<0)
+	            neg.push(arr[i]);
+	        else
+	            pos.push(arr[i]);
+	   
+	    if(pos.empty() || neg.empty()) return;
 
+       	bool fillPos = true;
+	    i = 0;
+	   
+	    while(!pos.empty() and !neg.empty()){
+	       if(fillPos){
+	           arr[i++] = pos.front();
+	           pos.pop();
+	       }else{
+	           arr[i++] = neg.front();
+	           neg.pop();
+	       }
+	       fillPos = !fillPos;
+	    }
+	   
+	    while(!pos.empty()){
+	       arr[i++] = pos.front();
+	           pos.pop();
+	    }
+	   
+	    while(!neg.empty()){
+	       arr[i++] = neg.front();
+	           neg.pop();
+	    }
+}
+```
+
+### Vector
+
+```cpp
+void rearrange(int arr[], int n) {
+
+    vector<int> pos, neg;
+
+    for(int i=0;i<n;i++)
+        if(arr[i]<0) neg.push_back(arr[i]);
+        else pos.push_back(arr[i]);
+
+    int i=0,j=0,k=0;
+
+    while(i<pos.size() || j<neg.size())
+        if(i<pos.size())
+            arr[k++]=pos[i++];
+        
+        if(j<neg.size())
+            arr[k++]=neg[j++];
+}
 ```
 
 ## 28 | 
@@ -505,6 +517,16 @@ int* game_with_number(int arr[], int n)
 ```
 
 ## 30 | 
+
+
+
+* [Practice]()
+
+```cpp
+
+```
+
+## 31 | 
 
 
 

@@ -2,13 +2,14 @@
 title: "Interview Prep: DevOps"
 author: ahampriyanshu
 excerpt: All of the questions I have been asked so far
+math: true
 categories:
   - 'inteview prep'
 tags:
   - 'devops'
   - 'interview questions'
 ---
-'
+
 * Explain HEAD.
 * Explain tags.
 * Explain staging area.
