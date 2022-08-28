@@ -3,7 +3,7 @@ title: "Installing MathJax & Latex Cheat Sheet"
 author: ahampriyanshu
 excerpt: Installing MathJax & Guide to Mathematical symbols in LaTeX
 categories: [Tutorials]
-tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
+tags: [priyanshu, tiwari, ahampriyanshu, tutorials, Cheat, Sheet]
 math: true
 image:
   src: /images/tutorials/latex.png

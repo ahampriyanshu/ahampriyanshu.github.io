@@ -1,5 +1,5 @@
 ---
-title: "Day 8 Greedy | Striver 180 | takeUforward"
+title: "Greedy | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180

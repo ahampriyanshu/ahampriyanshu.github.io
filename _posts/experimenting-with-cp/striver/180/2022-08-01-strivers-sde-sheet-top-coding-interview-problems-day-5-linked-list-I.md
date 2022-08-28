@@ -1,5 +1,5 @@
 ---
-title: "Day 5 Linked List | Striver 180 | takeUforward"
+title: "Linked List I | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180

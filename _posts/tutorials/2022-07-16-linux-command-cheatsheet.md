@@ -3,7 +3,7 @@ title: Vim Cheat Sheet
 author: ahampriyanshu
 excerpt: Some Linux commands to make your life less miserable.
 categories: [Tutorials]
-tags: [priyanshu, tiwari, ahampriyanshu, tutorials, linux. commands]
+tags: [priyanshu, tiwari, ahampriyanshu, tutorials, linux. commands, Cheat, Sheet]
 image:
   src: /images/tutorials/vim.png
   width: 1000

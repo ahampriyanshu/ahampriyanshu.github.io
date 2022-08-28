@@ -1,5 +1,5 @@
 ---
-title: "Day 1 Array | Striver 180 | takeUforward"
+title: "Array I | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180

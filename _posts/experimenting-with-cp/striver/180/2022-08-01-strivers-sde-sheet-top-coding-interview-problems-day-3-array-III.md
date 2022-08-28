@@ -1,10 +1,10 @@
 ---
-title: "Day 2 Array | Striver 180 | takeUforward"
+title: "Array III | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180
 categories: [Sheets, TakeUforward]
-tags: [striver, tuf, ds, algo, takeUforward, striver180, dsa180, '180', array, day, '2']
+tags: [striver, sde, sheet, algo, ds, takeUforward, striver180, dsa180, '180', array, day, '2']
 ---
 
 ## Problem 1

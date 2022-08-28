@@ -1,5 +1,5 @@
 ---
-title: "Day 11 Binary Search | Striver 180 | takeUforward"
+title: "Heap | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180

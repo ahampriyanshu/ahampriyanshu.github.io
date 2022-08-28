@@ -1,5 +1,5 @@
 ---
-title: "Day 21 Binary Search Tree II | Striver 180 | takeUforward"
+title: "Binary Search Tree II | Striver’s SDE Sheet"
 author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180
