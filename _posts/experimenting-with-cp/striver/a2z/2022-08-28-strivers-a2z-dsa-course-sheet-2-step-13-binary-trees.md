@@ -332,3 +332,64 @@ For this problem, a height-balanced binary tree is defined as:
 **Time Complexity:** $ O(n) $
 
 **Auxiliary Space:** $ O(n) $
+
+### Balanced Binary Tree
+
+Given a binary tree, determine if it is height-balanced.
+
+For this problem, a height-balanced binary tree is defined as:
+
+> a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+
+<a href="https://leetcode.com/problems/diameter-of-binary-tree/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
+
+#### Recursive
+
+> This question can be broken down as to into three simple steps. First, calculate the height of left and right nodes, check for absolute difference and do the same for both the child subtrees.
+{: .prompt-tip }
+
+```cpp
+    int maxdiadepth = 0;
+    
+    int dfs(TreeNode* root){        
+        if(root == NULL) return 0;
+        
+        int leftdepth = dfs(root->left);
+        int rightdepth = dfs(root->right);
+        
+        if(leftdepth + rightdepth > maxdiadepth) maxdiadepth = leftdepth + rightdepth;
+        return max(leftdepth +1, rightdepth + 1);     
+    }
+    
+    int diameterOfBinaryTree(TreeNode* root) {        
+        dfs(root);
+        
+        return maxdiadepth;
+    }
+```
+
+**Time Complexity:** $ O(n^2) $
+
+**Auxiliary Space:** $ O(n) $
+
+#### Iterative
+
+> It is similar to the previous approach but instead of returning the actual height of the child node, we just return -1 to mark that subtree as unbalanced. Thus we visit each node only once.
+{: .prompt-tip }
+
+```cpp
+    int dfs(TreeNode* root) {
+
+        if (!root) return 0;
+        int left = dfs(root->left), right = dfs(root->right);   
+        return (left == -1 || right == -1 || abs(left-right) > 1) ? -1 : max(left, right)+1;
+    }
+    
+    bool isBalanced(TreeNode* root) {
+        return dfs(root) != -1;
+    }
+```
+
+**Time Complexity:** $ O(n) $
+
+**Auxiliary Space:** $ O(n) $

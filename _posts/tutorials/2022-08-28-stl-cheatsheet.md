@@ -1,14 +1,38 @@
 ---
-title: C++ STL Cheat Sheet
+title: STL Cheat Sheet
 author: ahampriyanshu
 excerpt: The ultimate guide to Standard Template Library (STL) from C++ 11 onwards
+math: true
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, C++, STL, Cheat, Sheet]
 ---
 
-## Container
+## pair
 
-### Vector
+* utility container
+* Used to store two data object in a single container
+
+```cpp
+#include <iostream>
+using namespace std
+
+int main(){
+  pair<int, int> p1;
+  pair<int, int> p2(303, 52);
+  pair<int, char> p3(1, 'a');
+  pair<int, int> p4(p3);
+  pair<int, int> p5 = {2, 'b'};
+  pair<int, int> p6 = make_pair('A', 1);
+}
+```
+
+**Input/Output**
+
+```cpp
+cout << p.first << " " << p.second;
+```
+
+## vector
 
 * Linear data structure
 * Contigous in memory
@@ -27,14 +51,15 @@ int main(){
 
   vector<int> v1;
   vector<int> v2 {1,2,3};
-  vector<int> v3 = v2;
-  vector<int> v4(10);
-  vector<int> v4(10, -1);
+  vector<int> v3(v2);
+  vector<int> v4 = v3;
+  vector<int> v5(10);
+  vector<int> v6(10, -1);
 
 }
 ```
 
-**IO**
+**Input/Output**
 
 ```cpp
 for(int i=0; i<n; i++)
@@ -105,7 +130,7 @@ reverse(v.begin(), v.end(), greater<int>());
 ```cpp
 int* maxi =  *max_element(v.begin(), v.end());
 int* mini =  *min_element(v.begin(), v.end());
-cout << mini << " " << maxi << endl;
+cout << *mini << " " << *maxi << endl;
 ```
 
 **Upper/Lower Bound**
@@ -125,7 +150,7 @@ cout << (lower - v.begin() + 1) << " " << (upper - v.begin() + 1);
 ```cpp
 // Intialization
 vector<vector<int>> v1( n , vector<int> (m));
-vector<vector<int>> vecv2( n , vector<int> (m, -1)); 
+vector<vector<int>> v2( n , vector<int> (m, -1)); 
 
 for(int i = 0; i < n; i++){
     for(int j = 0; j < m; j++)
@@ -150,6 +175,7 @@ bool comp(const vector<int>& v1, const vector<int>& v2){
 
 sort(vec.begin(), vec.end(), comp);
 ```
+
 | | |
 | -- | -- |
 | v.size() | Returns the size current size |
@@ -160,11 +186,12 @@ sort(vec.begin(), vec.end(), comp);
 | v.front() | Accessing the first element |
 | v.back() | Accessing the last element |
 | v.push_back(data) | Inserts at the end |
+| v.emplace_back(data) | Inserts at the end but bit more efficiently |
 | v.insert(pos_itr, data) | Inserts at specified position |
 | v.fill(data) | Fill the whole vector with 'data' |
 | for (auto e : v) | Looping through the vector |
 
-### Array
+## array
 
 * Linear data structure
 * Contigous in memory
@@ -197,12 +224,34 @@ int main(){
 | a.fill(data) | Fill the whole array with 'data' |
 | for (auto e : a) | Looping through the array |
 
-### Queue
+## list
 
-### Deque
+* Doubly Linked List
 
-### Map
+## string
 
-### Set
+* 
+
+## queue
+
+* Linear data structure.
+
+## deque
+
+## Map
+
+* Implemented via balanced binary tree.
+
+## unordered_map
+
+* Implemented via hash table
+
+## set
+
+* Implemented via balanced binary tree.
+
+## unordered_set
+
+* Implemented via hash table
 
 ## Algorithms

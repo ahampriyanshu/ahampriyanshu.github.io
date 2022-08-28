@@ -424,7 +424,7 @@ int* game_with_number(int arr[], int n)
 }
 ```
 
-## 27 | 
+## 27 | Rearrange Negative and Positive
 
 Given an unsorted array Arr of N positive and negative numbers. Your task is to create an array of alternate positive and negative numbers without changing the relative order of positive and negative numbers.
 
@@ -496,24 +496,77 @@ void rearrange(int arr[], int n) {
 }
 ```
 
-## 28 | 
+## 28 | Binary Tree to DLL
 
+Given a Binary Tree (BT), convert it to a Doubly Linked List(DLL) In-Place. The left and right pointers in nodes are to be used as previous and next pointers respectively in converted DLL. The order of nodes in DLL must be same as Inorder of the given Binary Tree. The first node of Inorder traversal (leftmost node in BT) must be the head node of the DLL.
 
-
-* [Practice]()
+* [Practice](https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1)
 
 ```cpp
-
+    void solve(Node* root, Node* &head, Node* &pre){
+    
+    if(!root) return ;
+         
+    solve(root->left, head, pre);
+    
+    if(!pre) 
+        head = root;
+    else{
+        pre->right = root;
+        root->left = pre;
+    }
+    
+    pre = root;
+    
+    
+    solve(root->right, head, pre);
+  
+    }
+    
+    Node * bToDLL(Node *root)
+    {   
+        Node* head = NULL, pre = NULL;
+        solve(root, head, pre);
+        return head;
+    }
 ```
 
-## 29 | 
+## 29 | Next Right Node
 
+Given a Binary tree and a key in the binary tree, find the node right to the given key. If there is no node on right side, then return a node with value -1.
 
-
-* [Practice]()
+* [Practice](https://practice.geeksforgeeks.org/problems/next-right-node/1)
 
 ```cpp
-
+    Node *nextRight(Node *root, int key)
+    {
+        if(!root) return root;
+        
+        queue<Node*> q;
+        
+        q.push(root);
+        
+        while(!q.empty()){
+            
+            int n = q.size();
+            
+            while(n--){
+            Node *curr = q.front();
+            q.pop();
+            
+            if(curr->data == key){
+                if(n>0)
+                return q.front();
+                return new Node(-1);
+            }
+            
+            if(curr->left) q.push(curr->left);
+            if(curr->right) q.push(curr->right);
+            }
+        }
+        
+        return new Node(-1);
+    }
 ```
 
 ## 30 | 
