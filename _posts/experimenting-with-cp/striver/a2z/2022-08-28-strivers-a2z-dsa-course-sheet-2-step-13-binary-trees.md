@@ -48,7 +48,7 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 
 #### Iterative
 
-> Basic logic is exact similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
+> Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
 {: .prompt-tip }
 
 ```cpp
@@ -121,7 +121,7 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 
 #### Iterative
 
-> Basic logic is exact similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure. Another important thing to note is we will first push right node and then the left node. It is due to the LIFO nature of stack.
+> Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure. Another important thing to note is we will first push right node and then the left node. It is due to the LIFO nature of stack.
 {: .prompt-tip }
 
 ```cpp
@@ -200,7 +200,7 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
 
 #### Iterative
 
-> Basic logic is exact similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
+> Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
 {: .prompt-tip }
 
 ```cpp
@@ -358,7 +358,7 @@ For this problem, a height-balanced binary tree is defined as:
         int rightdepth = dfs(root->right);
         
         if(leftdepth + rightdepth > maxdiadepth) maxdiadepth = leftdepth + rightdepth;
-        return max(leftdepth +1, rightdepth + 1);     
+        return max(leftdepth, rightdepth) + 1;     
     }
     
     int diameterOfBinaryTree(TreeNode* root) {        
@@ -387,6 +387,75 @@ For this problem, a height-balanced binary tree is defined as:
     
     bool isBalanced(TreeNode* root) {
         return dfs(root) != -1;
+    }
+```
+
+**Time Complexity:** $ O(n) $
+
+**Auxiliary Space:** $ O(n) $
+
+### Check if two trees are identical or not
+
+Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+
+<a href="https://leetcode.com/problems/diameter-of-binary-tree/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
+
+#### Recursive
+
+> Return true if both p and q are null. Then check if either of them is null or not. Lastly, return false, if they differ in value. Apply the same for left and right child node.
+{: .prompt-tip }
+
+```cpp
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(!p and !q) return true;
+        if(!p or !q) return false;
+        if(p->val != q->val) return false;
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+    }
+```
+
+**Time Complexity:** $ O(n^2) $
+
+**Auxiliary Space:** $ O(n) $
+
+#### Iterative
+
+> It is similar to the previous approach but instead of returning the actual height of the child node, we just return -1 to mark that subtree as unbalanced. Thus we visit each node only once.
+{: .prompt-tip }
+
+```cpp
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        
+		queue<TreeNode*> qu;
+        
+        TreeNode *n1, *n2;
+
+		qu.push(p);
+		qu.push(q);
+
+		while(qu.size() != 0){
+			
+            n1 = qu.front();
+			qu.pop();
+			n2 = qu.front();
+			qu.pop();
+
+            
+			if(!n1 && !n2) continue;
+			if(!n1 || !n2) return false;
+			if(n1->val != n2->val) return false;
+
+			qu.push(n1->left);
+			qu.push(n2->left);
+			qu.push(n1->right);
+			qu.push(n2->right);
+
+		}
+		
+		return true;
+        
     }
 ```
 
