@@ -4,7 +4,22 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-## Sheets
+## Tech
+
+### Books
+
+* [97 Things Every Programmer Should Know](https://97-things-every-x-should-know.gitbook.io/97-things-every-programmer-should-know/)
+
+### YT Channels
+
+* [Gaurav Sen](https://www.youtube.com/c/GauravSensei)
+* [Tanmay Pratap](https://www.youtube.com/c/TanayPratap)
+* [Dev Ed](https://www.youtube.com/c/DevEd)
+* [Take U Forward](https://www.youtube.com/c/takeUforward)
+
+### CP/DSA
+
+#### Sheets
 
 * [TakeUforward](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 * [a2oj](https://a2oj.com/)
@@ -16,15 +31,8 @@ order: 5
 * [WorkAtTech](https://workat.tech/problem-solving/lists/six-month-dsa-practice-sheet/practice)
 * [InterviewBit](https://www.interviewbit.com/)
 
-## Articles
+#### Articles
 
 * [Passing by Reference vs Passing by Pointer in C++](https://hackr.io/blog/pass-by-reference-vs-pass-by-pointer)
 * [Come on, forget the binary search pattern/template! Try to understand it!](https://leetcode.com/problems/search-insert-position/discuss/249092/Come-on-forget-the-binary-search-patterntemplate!-Try-understand-it!)
 * [A Beautiful Technique for Some XOR Related Problems](https://codeforces.com/blog/entry/68953)
-
-## YT Channels
-
-* [Gaurav Sen](https://www.youtube.com/c/GauravSensei)
-* [Tanmay Pratap](https://www.youtube.com/c/TanayPratap)
-* [Dev Ed](https://www.youtube.com/c/DevEd)
-* [Take U Forward](https://www.youtube.com/c/takeUforward)

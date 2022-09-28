@@ -87,24 +87,93 @@ You are given two arrays A and B of equal length N. Your task is to pair each el
     }
 ```
 
-## 06 | Minimum Sum of Absolute Differences of Pairs
+## 25 | Queries on a Matrix
 
-You are given two arrays A and B of unique elements of size N. Check if one array is a stack permutation of the other array or not.
-Stack permutation means that one array can be created from another array using a stack and stack operations.
+You are given a matrix of dimension n*n. All the cells are initially, zero. You are given Q queries, which contains 4 integers a b c d where (a,b) is the TOP LEFT cell and (c,d) is the Bottom Right cell of a submatrix. Now, all the cells of this submatrix have to be incremented by one. After all the Q queries have been performed. Your task is to find the final resulting Matrix.
+**Note:** Zero-Based Indexing is used for cells of the matrix. 
+
+<a href="https://practice.geeksforgeeks.org/problems/queries-on-a-matrix0443/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+
+```cpp
+    vector<vector<int>> solveQueries(int n, vector<vector<int>> Queries) {
+
+        vector<vector<int>> mat (n, vector<int>(n, 0));
+
+        for(vector<int> query: Queries){
+
+            int a = query[0], b = query[1], c = query[2], d = query[3];
+
+            for(int i = a; i <= c; i++)
+
+                for(int j = b; j <= d; j++)
+
+                    mat[i][j]++;
+
+        }
+
+        return mat; 
+    }
+```
+
+## 26 | Tom and Jerry
+
+Tom and Jerry being bored in this pandemic, decides to play a game. Given an integer N. On each player's turn, that player makes a move by subtracting a divisor of current N (which is less than N) from current N, thus forming a new N for the next turn. The player who does not have any divisor left to subtract loses the game.
+
+The game begins with Tom playing the first move. Both Tom and Jerry play optimally. The task is to determine who wins the game. Return 1 if Tom wins, else return 0.
 
 <a href="https://practice.geeksforgeeks.org/problems/stack-permutations/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
 ```cpp
-    int isStackPermutation(int N,vector<int> &A,vector<int> &B){
-        stack<int> st;
-        int i(0), j(0);
+    int numsGame(int N) {
+        return 1-N%2;
+    }
+```
+
+## 27 | Minimum Cost of ropes
+
+There are given N ropes of different lengths, we need to connect these ropes into one rope. The cost to connect two ropes is equal to sum of their lengths. The task is to connect the ropes with minimum cost. Given N size array arr[] contains the lengths of the ropes. 
+
+<a href="https://practice.geeksforgeeks.org/problems/stack-permutations/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+
+```cpp
+    long long minCost(long long arr[], long long n) {
+    
+    priority_queue<long long, vector<long long>, greater<long long>> pq;
+      
+    for(int i = 0;i<n;i++)
+        pq.push(arr[i]);
+      
+    long long ans = 0;
+    while(!pq.empty()){
+        long long top = pq.top();
+        pq.pop();
+         
+        if(pq.empty()) break;
+        long long top2 = pq.top();
+        pq.pop();
+        ans += (top+top2);
+        pq.push(top+top2);
+      }
+      return ans;
+    }
+```
+
+## 28 | Fitting The Array
+
+Geek is playing an array game. He is weak in the concepts of arrays. Geek is given two arrays arr[ ] and brr[ ] of the same size n. The array arr[ ] will be said to fit in array brr[ ] if by arranging the elements of both arrays, there exists a solution such that i'th element of arr[ ] is less than or equal to i'th element of brr[ ], for each i, 0 <= i < n. Help Geek find if the given array arr[ ] will fit in array brr[ ] or not.
+
+<a href="https://practice.geeksforgeeks.org/problems/fitting-the-array1514/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+
+```cpp
+    bool isFit(int arr[], int brr[], int n){
         
-        while(i<N){
-            st.push(A[i++]);
-            while(!st.empty() and B[j]==st.top() and j++ < N)
-                st.pop();
-        }
-        
-        return i == j;
+        sort(arr,arr+n);
+        sort(brr,brr+n);    
+
+        for(int i=0;i<n;i++)
+            if(arr[i]>brr[i])
+                return false;
+
+        return true;
     }
 ```
