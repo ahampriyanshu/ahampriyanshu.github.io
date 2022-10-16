@@ -3,16 +3,30 @@ title: "March | 2022 | Leetcoding Challenge"
 author: ahampriyanshu
 categories: [Contests, Leetcode]
 excerpt: C++ Solutions to March Leetcoding Challenge, 2022.
-tags: [leetcode, leetcoding, challenge, march, ds, array, tree, trie, string, stacks, queue, linked list]
+tags:
+  [
+    leetcode,
+    leetcoding,
+    challenge,
+    march,
+    ds,
+    array,
+    tree,
+    trie,
+    string,
+    stacks,
+    queue,
+    linked list,
+  ]
 ---
 
 ## Week 1
 
 ### 1 March | 338. Counting Bits
 
-Given an integer n, return an array ans of length ``n + 1`` such that for each ``i (0 <= i <= n), ans[i]`` is the number of 1's in the binary representation of i.
+Given an integer n, return an array ans of length `n + 1` such that for each `i (0 <= i <= n), ans[i]` is the number of 1's in the binary representation of i.
 
-* [Practice](https://leetcode.com/problems/counting-bits/)
+- [Practice](https://leetcode.com/problems/counting-bits/)
 
 #### Bruteforce
 
@@ -27,13 +41,13 @@ public:
         }
         return ans;
     }
-    
+
     vector<int> countBits(int n) {
         vector<int> ans;
-        
+
         for(int i=0; i<=n; i++)
             ans.push_back(getSum(i));
-        
+
         return ans;
     }
 };
@@ -48,7 +62,7 @@ public:
         vector<int> res(num);
         res.push_back(0);  // for num=0
         if(num==0) return res;
-        
+
         for(int i=1;i<=num;i++){
             if(i%2==0){
                 res[i]=res[i/2];
@@ -79,13 +93,13 @@ public:
 };
 ```
 
-### 2 March |  392. Is Subsequence
+### 2 March | 392. Is Subsequence
 
 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 
 A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
 
-* [Practice](https://leetcode.com/problems/is-subsequence/)
+- [Practice](https://leetcode.com/problems/is-subsequence/)
 
 ```cpp
 class Solution {
@@ -104,12 +118,12 @@ public:
 
 An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
 
-* For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
-Given an integer array nums, return the number of arithmetic subarrays of nums.
+- For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
+  Given an integer array nums, return the number of arithmetic subarrays of nums.
 
 A subarray is a contiguous subsequence of the array.
 
-* [Practice](https://leetcode.com/problems/arithmetic-slices/)
+- [Practice](https://leetcode.com/problems/arithmetic-slices/)
 
 ```cpp
 class Solution {
@@ -133,15 +147,15 @@ public:
 };
 ```
 
-### 5 March |  740. Delete and Earn
+### 5 March | 740. Delete and Earn
 
 You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:
 
-* Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.
+- Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.
 
 Return the maximum number of points you can earn by applying the above operation some number of times.
 
-* [Practice](https://leetcode.com/problems/delete-and-earn/)
+- [Practice](https://leetcode.com/problems/delete-and-earn/)
 
 ```cpp
 class Solution {
@@ -150,15 +164,15 @@ public:
     int n = 10001;
     vector<int> sum(n, 0);
     vector<int> dp(n, 0);
-    
+
     for(auto num: nums)
         sum[num] += num;
-    
+
     dp[0] = 0;
     dp[1] = sum[1];
     for(int i=2; i<n; i++)
         dp[i] = max(dp[i-2] + sum[i], dp[i-1]);
-    
+
     return dp[n-1];
 }
 };
@@ -174,14 +188,14 @@ Merge the two lists in a one sorted list. The list should be made by splicing to
 
 Return the head of the merged linked list.
 
-* [Practice](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [Practice](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 ```cpp
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         ListNode head(INT_MIN), *tail = &head;
-        
+
         while (l1 && l2) {
             if (l1->val < l2->val) {
                 tail->next = l1;
@@ -203,21 +217,21 @@ public:
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
-There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. 
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to.
 
 Note that pos is not passed as a parameter.
 
 Return true if there is a cycle in the linked list. Otherwise, return false.
 
-* [Practice](https://leetcode.com/problems/linked-list-cycle/)
+- [Practice](https://leetcode.com/problems/linked-list-cycle/)
 
 ```cpp
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-    
+
     ListNode *slow = head, *fast = head;
-    
+
     while(fast && fast->next){
         slow=slow->next;
         fast=fast->next->next;
@@ -233,7 +247,8 @@ public:
 Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
 
 ![Loading image](https://assets.leetcode.com/uploads/2021/01/04/linkedlist1.jpg)
-* [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+
+- [Practice](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 
 ```cpp
 class Solution {
@@ -241,7 +256,7 @@ public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode* temp = new ListNode(0,head);
         ListNode* prev = temp;
-        
+
         while(head){
             if(head->next && head->val==head->next->val){
                 while(head->next && head->val==head->next->val)
@@ -263,7 +278,8 @@ You are given two non-empty linked lists representing two non-negative integers.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
 ![Loading image](https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg)
-* [Practice](https://leetcode.com/problems/add-two-numbers/)
+
+- [Practice](https://leetcode.com/problems/add-two-numbers/)
 
 ```cpp
 class Solution {
@@ -273,31 +289,31 @@ public:
         int digit, carry = 0;
         ListNode *head = new ListNode(0);
         ListNode *node = head;
-        
+
         while (l1 || l2)
         {
             digit = carry;
-            
+
             if (l1){
                 digit += l1->val;
                 l1 = l1->next;
             }
-             
+
             if (l2){
                 digit += l2->val;
                 l2 = l2->next;
             }
-             
+
             carry = digit / 10;
             digit = digit % 10;
             node->next = new ListNode(digit);
             node = node->next;
         }
-        
+
         if (carry) node->next = new ListNode(carry);
 
         return head->next;
-        
+
     }
 };
 ```
@@ -308,36 +324,36 @@ Given the head of a linked list, rotate the list to the right by k places.
 
 ![Loading image](https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg)
 
-* [Practice](https://leetcode.com/problems/rotate-list/)
+- [Practice](https://leetcode.com/problems/rotate-list/)
 
 ```cpp
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
-        
+
         if(!head) return head;
-        
+
         vector<int> vec;
         ListNode *curr= head;
         while(head){
             vec.push_back(head->val);
             head = head->next;
         }
-        
+
         int n = vec.size();
         k %= n;
         reverse(vec.begin(), vec.end());
         reverse(vec.begin(), vec.begin()+k);
         reverse(vec.begin()+k, vec.end());
-        
+
         ListNode * ans = new ListNode(vec[0]);
         ListNode * new_head = ans;
-        
+
         for(int i=1; i<n; i++){
             ans -> next = new ListNode(vec[i]);
             ans = ans -> next;
         }
-        
+
         return new_head;
     }
 };
@@ -352,15 +368,15 @@ public:
         if (head == NULL || head->next == NULL || k == 0) return head;
         int len = 1;
         ListNode *tail = head;
-        
+
         while (tail->next)
             tail = tail->next, len++;
-        
+
         tail->next = head;
         k %= len;
         for (int i = 0; i < len - k; i++)
             tail = tail->next;
-            
+
         head = tail->next;
         tail->next = NULL;
         return head;
@@ -386,29 +402,29 @@ Your code will only be given the head of the original linked list.
 
 ![Loading image](https://assets.leetcode.com/uploads/2019/12/18/e1.png)
 
-* [Practice](https://leetcode.com/problems/copy-list-with-random-pointer/)
+- [Practice](https://leetcode.com/problems/copy-list-with-random-pointer/)
 
 ```cpp
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
-        
+
         unordered_map<Node*, Node*> mp;
         Node * ptr = head;
-        
+
         while (ptr) {
             mp[ptr] =new Node(ptr->val);
             ptr = ptr->next;
         }
-        
+
         ptr = head;
-        
+
         while (ptr) {
             mp[ptr]->next = mp[ptr->next];
             mp[ptr]->random = mp[ptr->random];
             ptr = ptr->next;
         }
-        
+
         return mp[head];
     }
 };
@@ -423,15 +439,15 @@ public:
         if (head == NULL || head->next == NULL || k == 0) return head;
         int len = 1;
         ListNode *tail = head;
-        
+
         while (tail->next)
             tail = tail->next, len++;
-        
+
         tail->next = head;
         k %= len;
         for (int i = 0; i < len - k; i++)
             tail = tail->next;
-            
+
         head = tail->next;
         tail->next = NULL;
         return head;
@@ -450,7 +466,7 @@ An input string is valid if:
 1. Open brackets must be closed by the same type of brackets.
 1. Open brackets must be closed in the correct order.
 
-* [Practice](https://leetcode.com/problems/valid-parentheses/)
+- [Practice](https://leetcode.com/problems/valid-parentheses/)
 
 ```cpp
 class Solution {
@@ -467,9 +483,9 @@ public:
             st.push(']');
         else if( st.empty() || st.top() != i)
             return false;
-        else st.pop();      
+        else st.pop();
     }
-    return st.empty();            
+    return st.empty();
     }
 };
 ```
@@ -482,13 +498,13 @@ In a Unix-style file system, a period '.' refers to the current directory, a dou
 
 The canonical path should have the following format:
 
-* The path starts with a single slash '/'.
-* Any two directories are separated by a single slash '/'.
-* The path does not end with a trailing '/'.
-* The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
-Return the simplified canonical path.
+- The path starts with a single slash '/'.
+- Any two directories are separated by a single slash '/'.
+- The path does not end with a trailing '/'.
+- The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
+  Return the simplified canonical path.
 
-* [Practice](https://leetcode.com/problems/valid-parentheses/)
+- [Practice](https://leetcode.com/problems/valid-parentheses/)
 
 ```cpp
 class Solution {
@@ -536,7 +552,7 @@ An input string is valid if:
 1. Open brackets must be closed by the same type of brackets.
 1. Open brackets must be closed in the correct order.
 
-* [Practice](https://leetcode.com/problems/valid-parentheses/)
+- [Practice](https://leetcode.com/problems/valid-parentheses/)
 
 ```cpp
 class Solution {
@@ -585,7 +601,7 @@ public:
     string minRemoveToMakeValid(string s) {
         stack<int> box;
         int n = s.length();
-        
+
         for(int i=0; i<n; i++) {
             if(s[i] == ')'){
                 if(!box.empty() && s[box.top()] == '(')
@@ -597,25 +613,24 @@ public:
             }
             else if(s[i] == '(')
                 box.push(i);
-            
+
         }
-        
+
         while(!box.empty()) {
             s.erase(box.top(),1);
             box.pop();
         }
-        
+
         return s;
     }
 };
 ```
 
-
 ### 16 March | 20. Valid Parentheses
 
 Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 
-* [Practice](https://leetcode.com/problems/validate-stack-sequences/)
+- [Practice](https://leetcode.com/problems/validate-stack-sequences/)
 
 ```cpp
 class Solution {
@@ -633,7 +648,7 @@ public:
                   return true;
                }
             }
-     return false;          
+     return false;
    }
 };
 ```
@@ -644,11 +659,11 @@ Given a balanced parentheses string s, return the score of the string.
 
 The score of a balanced parentheses string is based on the following rule:
 
-* "()" has score 1.
-* AB has score A + B, where A and B are balanced parentheses strings.
-* (A) has score 2 * A, where A is a balanced parentheses string.
+- "()" has score 1.
+- AB has score A + B, where A and B are balanced parentheses strings.
+- (A) has score 2 \* A, where A is a balanced parentheses string.
 
-* [Practice](https://leetcode.com/problems/score-of-parentheses/)
+- [Practice](https://leetcode.com/problems/score-of-parentheses/)
 
 ```cpp
 class Solution {
@@ -656,7 +671,7 @@ public:
     int scoreOfParentheses(string s) {
         int ans(0), cnt(0);
         char prev = '(';
-        
+
         for (const char &ch: s) {
             if (ch == '(')
                 cnt++;
@@ -665,10 +680,10 @@ public:
                 if (prev == '(')
                     ans += pow(2, cnt);
             }
-            
+
             prev = ch;
         }
-        
+
         return ans;
     }
 };
@@ -678,21 +693,21 @@ public:
 
 Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 
-* [Practice](https://leetcode.com/problems/remove-duplicate-letters/)
+- [Practice](https://leetcode.com/problems/remove-duplicate-letters/)
 
 ```cpp
 class Solution {
 public:
     string removeDuplicateLetters(string s) {
-        
+
         int n = s.length();
         string ans="";
         vector<int> count(26,0);
         vector<int> visited(26,0);
-        
+
         for(int i=0;i<n;i++)
             count[s[i]-'a']++;
-        
+
         for(int i=0;i<n;i++){
             count[s[i]-'a']--;
 
@@ -711,20 +726,19 @@ public:
 };
 ```
 
-
 ### 19 March | 895. Maximum Frequency Stack
 
 Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 
 Implement the FreqStack class:
 
-* FreqStack() constructs an empty frequency stack.
-* void push(int val) pushes an integer val onto the top of the stack.
-* int pop() removes and returns the most frequent element in the stack.
+- FreqStack() constructs an empty frequency stack.
+- void push(int val) pushes an integer val onto the top of the stack.
+- int pop() removes and returns the most frequent element in the stack.
 
 If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
 
-* [Practice](https://leetcode.com/problems/maximum-frequency-stack/)
+- [Practice](https://leetcode.com/problems/maximum-frequency-stack/)
 
 ```cpp
 class FreqStack {
@@ -732,25 +746,25 @@ public:
     unordered_map<int,int> frequency;
     unordered_map<int,stack<int>> group_stack;
     int max_frequency=0;
-    
+
     FreqStack() {
     }
-    
+
     void push(int val) {
         frequency[val]++;
         max_frequency=max(max_frequency,frequency[val]);
         group_stack[frequency[val]].push(val);
     }
-    
+
     int pop() {
-        
+
         int ans=group_stack[max_frequency].top();
         group_stack[max_frequency].pop();
         frequency[ans]--;
-        
+
         if(!group_stack[max_frequency].size())
             max_frequency--;
-        
+
         return ans;
     }
 };
@@ -766,7 +780,7 @@ Return the minimum number of rotations so that all the values in tops are the sa
 
 If it cannot be done, return -1.
 
-* [Practice](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
+- [Practice](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
 
 ```cpp
 class Solution {
@@ -774,7 +788,7 @@ public:
     int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
         int n = tops.size(), ans = INT_MAX;
         vector<int> faceA(7), faceB(7), same(7);
-        
+
         for(int i = 0; i < n; ++i)
         {
             ++faceA[tops[i]];
@@ -782,12 +796,12 @@ public:
             if(tops[i] == bottoms[i])
                 ++same[tops[i]];
         }
-        
+
         for(int i = 1; i<=6; ++i)
             if(faceA[i] + faceB[i] - same[i] == n)
                 ans = min(ans , min(faceA[i],faceB[i]) - same[i]);
-        
-        return ans == INT_MAX ? -1 : ans;   
+
+        return ans == INT_MAX ? -1 : ans;
     }
 };
 ```
@@ -802,7 +816,7 @@ Note that the partition is done so that after concatenating all the parts in ord
 
 Return a list of integers representing the size of these parts.
 
-* [Practice](https://leetcode.com/problems/partition-labels/)
+- [Practice](https://leetcode.com/problems/partition-labels/)
 
 ```cpp
 class Solution {
@@ -810,7 +824,7 @@ public:
     int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
         int n = tops.size(), ans = INT_MAX;
         vector<int> faceA(7), faceB(7), same(7);
-        
+
         for(int i = 0; i < n; ++i)
         {
             ++faceA[tops[i]];
@@ -818,12 +832,12 @@ public:
             if(tops[i] == bottoms[i])
                 ++same[tops[i]];
         }
-        
+
         for(int i = 1; i<=6; ++i)
             if(faceA[i] + faceB[i] - same[i] == n)
                 ans = min(ans , min(faceA[i],faceB[i]) - same[i]);
-        
-        return ans == INT_MAX ? -1 : ans;   
+
+        return ans == INT_MAX ? -1 : ans;
     }
 };
 ```
@@ -838,7 +852,7 @@ You are given two integers n and k. Return the lexicographically smallest string
 
 Note that a string x is lexicographically smaller than string y if x comes before y in dictionary order, that is, either x is a prefix of y, or if i is the first position such that x[i] != y[i], then x[i] comes before y[i] in alphabetic order.
 
-* [Practice](https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/)
+- [Practice](https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/)
 
 ```cpp
 class Solution {
@@ -857,7 +871,7 @@ public:
             }
             end--;
         }
-        
+
         return ans;
     }
 };
@@ -871,7 +885,7 @@ multiply the number on display by 2, or
 subtract 1 from the number on display.
 Given two integers startValue and target, return the minimum number of operations needed to display target on the calculator.
 
-* [Practice](https://leetcode.com/problems/broken-calculator/)
+- [Practice](https://leetcode.com/problems/broken-calculator/)
 
 ```cpp
 class Solution {
@@ -887,7 +901,7 @@ public:
         }
         return ans + startValue - target;
     }
-    
+
 };
 ```
 
@@ -897,7 +911,7 @@ You are given an array people where people[i] is the weight of the ith person, a
 
 Return the minimum number of boats to carry every given person.
 
-* [Practice](https://leetcode.com/problems/boats-to-save-people/submissions/)
+- [Practice](https://leetcode.com/problems/boats-to-save-people/submissions/)
 
 ```cpp
 class Solution {
@@ -915,10 +929,10 @@ public:
         }
 
         return ans;
-        
+
     }
 };
-``` 
+```
 
 ### 25 March | 1029. Two City Scheduling
 
@@ -926,7 +940,7 @@ A company is planning to interview 2n people. Given the array costs where costs[
 
 Return the minimum cost to fly every person to a city such that exactly n people arrive in each city.
 
-* [Practice](https://leetcode.com/problems/two-city-scheduling/)
+- [Practice](https://leetcode.com/problems/two-city-scheduling/)
 
 ```cpp
 class Solution {
@@ -935,23 +949,23 @@ public:
     {
         return p1.first < p2.first;
     }
-    
+
     int twoCitySchedCost(vector<vector<int>>& costs) {
         int n = costs.size();
         int ans = 0;
         vector<pair<int,pair<int,int>>> v;
-        
+
         for(int i=0;i<n;i++)
             v.push_back({costs[i][0] - costs[i][1],make_pair(costs[i][0], costs[i][1])});
-        
+
         sort(v.begin(), v.end(), comp);
-        
+
         for(int i=0;i<n/2;i++)
             ans += v[i].second.first;
-        
+
         for(int i=n/2;i<n;i++)
-            ans += v[i].second.second; 
-        
+            ans += v[i].second.second;
+
         return ans;
     }
 };
@@ -963,7 +977,7 @@ Given an array of integers nums which is sorted in ascending order, and an integ
 
 You must write an algorithm with O(log n) runtime complexity.
 
-* [Practice](https://leetcode.com/problems/binary-search/)
+- [Practice](https://leetcode.com/problems/binary-search/)
 
 ```cpp
 class Solution {
@@ -987,12 +1001,12 @@ You are given an m x n binary matrix mat of 1's (representing soldiers) and 0's 
 
 A row i is **weaker** than a row j if one of the following is true:
 
-* The number of soldiers in row i is less than the number of soldiers in row j.
-* Both rows have the same number of soldiers and i < j.
+- The number of soldiers in row i is less than the number of soldiers in row j.
+- Both rows have the same number of soldiers and i < j.
 
-Return the indices of the ``k`` **weakest** rows in the matrix ordered from weakest to strongest.
+Return the indices of the `k` **weakest** rows in the matrix ordered from weakest to strongest.
 
-* [Practice](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)
+- [Practice](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)
 
 ```cpp
 class Solution {
@@ -1007,7 +1021,7 @@ public:
                 sum += mat[i][j];
             mp[sum].push_back(i);
         }
-        
+
         for(auto e:mp)
             for(auto ee:e.second){
                 ans.push_back(ee);
@@ -1047,10 +1061,10 @@ class Solution {
         }
         return l;
     }
-    
+
 public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
-        
+
         priority_queue<pair<int,int>, vector<pair<int,int>>,CompareHeapElements> max_heap;
         for(int i=0;i<mat.size();++i){
             max_heap.push({calculateSoldierCount(mat[i]),i});
@@ -1058,13 +1072,13 @@ public:
                 max_heap.pop();
             }
         }
-        
+
         vector<int>ans;
         while(max_heap.size()){
             ans.push_back(max_heap.top().second);
             max_heap.pop();
         }
-		
+
         reverse(ans.begin(), ans.end());
         return ans;
     }
@@ -1077,13 +1091,13 @@ public:
 
 There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
 
-Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is ``[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`` (0-indexed). For example, ``[0,1,2,4,4,4,5,6,6,7]`` might be rotated at pivot index 5 and become ``[4,5,6,6,7,0,1,2,4,4]``.
+Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]` (0-indexed). For example, `[0,1,2,4,4,4,5,6,6,7]` might be rotated at pivot index 5 and become `[4,5,6,6,7,0,1,2,4,4]`.
 
 Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
 
 You must decrease the overall operation steps as much as possible.
 
-* [Practice](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+- [Practice](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 ```cpp
 class Solution {
@@ -1105,7 +1119,7 @@ There is only one repeated number in nums, return this repeated number.
 
 You must solve the problem without modifying the array nums and uses only constant extra space.
 
-* [Practice](https://leetcode.com/problems/find-the-duplicate-number/)
+- [Practice](https://leetcode.com/problems/find-the-duplicate-number/)
 
 #### Brute
 
@@ -1124,7 +1138,7 @@ int findDuplicate(vector<int>& nums) {
 ```cpp
 int findDuplicate(vector<int>& nums){
      unordered_set<int> s;
-     
+
      for(int i=0; i<nums.size(); i++){
          if(s.find(nums[i])!=s.end()){
              return nums[i];
@@ -1141,11 +1155,11 @@ int findDuplicate(vector<int>& nums){
 int indexSolution(vector<int>& nums) {
         for(int i = 0; i < nums.size(); i++) {
             int index = abs(nums[i]) - 1;
-            
+
             nums[index] *= -1;
             if(nums[index] > 0)
                 return abs(nums[i]);
-        }    
+        }
         return -1;
     }
 ```
@@ -1158,20 +1172,20 @@ public:
     int findDuplicate(vector<int>& nums) {
         int slow = nums[0];
         int fast = nums[0];
-        
+
         do
         {
             slow = nums[slow];
             fast = nums[nums[fast]];
         }while(slow != fast);
-        
+
         fast = nums[0];
         while(slow != fast)
         {
             slow = nums[slow];
             fast = nums[fast];
         }
-        
+
         return slow;
     }
 };
@@ -1181,10 +1195,10 @@ public:
 
 Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
 
-* Integers in each row are sorted from left to right.
-* The first integer of each row is greater than the last integer of the previous row.
+- Integers in each row are sorted from left to right.
+- The first integer of each row is greater than the last integer of the previous row.
 
-* [Practice](https://leetcode.com/problems/search-a-2d-matrix/)
+- [Practice](https://leetcode.com/problems/search-a-2d-matrix/)
 
 #### Brute
 
@@ -1197,11 +1211,11 @@ public:
         {
             int m = matrix[i].size();
             if(target >= matrix[i][0] and target <= matrix[i][m-1])
-            { 
+            {
             for(int j=0; j<m; j++)
                 if( matrix[i][j] == target)
                     return true;
-            return false; 
+            return false;
             }
         }
         return false;
@@ -1209,14 +1223,13 @@ public:
 };
 ```
 
-
 #### 31 March | 410. Split Array Largest Sum
 
 Given an array nums which consists of non-negative integers and an integer m, you can split the array into m non-empty continuous subarrays.
 
 Write an algorithm to minimize the largest sum among these m subarrays.
 
-* [Practice](https://leetcode.com/problems/split-array-largest-sum/)
+- [Practice](https://leetcode.com/problems/split-array-largest-sum/)
 
 #### Brute
 
@@ -1227,23 +1240,23 @@ int splitArray(vector<int>& nums, int m) {
         if(nums.empty() || m==0) return 0;
         size_t left = 0, right = 0;
         for(size_t n : nums) {
-            left = max(left, n); 
-            right += n; 
+            left = max(left, n);
+            right += n;
         }
         if(m == nums.size()) return left;
-        if(m == 1) return right; 
+        if(m == 1) return right;
         while(left < right) {
-            
+
             size_t mid = (left + right) / 2;
             size_t curr_bagsize = 0, curr_m = 1;
             for(auto n : nums) {
-                if(curr_bagsize + n > mid) { 
-                    
-                    curr_m++; 
+                if(curr_bagsize + n > mid) {
+
+                    curr_m++;
                     curr_bagsize = 0;
                 }
                 curr_bagsize += n;
-            } 
+            }
             if(curr_m > m)
                 left = mid + 1;
             else right = mid;

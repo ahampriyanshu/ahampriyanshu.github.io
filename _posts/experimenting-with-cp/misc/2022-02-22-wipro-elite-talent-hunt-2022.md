@@ -4,7 +4,7 @@ author: ahampriyanshu
 excerpt: All of the submissions for Elite NLTH, February 2022.
 categories: [Contests, Wipro]
 tags: [live, contest, wipro, national, talent, hunt, hash, set, array, string]
---- 
+---
 
 All the submissions are posted once the examination was already over.
 {: .prompt-warning }
@@ -22,7 +22,7 @@ typedef long long int ll ;
 
 int main()
 {
-   ll n,x,y ; 
+   ll n,x,y ;
    cin >> n >> x >> y ;
    ll sum=0 ;
    for(ll i=1 ; i<=n ; i++)
@@ -77,7 +77,7 @@ int main()
    for(auto e:str)
        if(e==ch)
            count++ ;
-   
+
    cout << count << endl ;
    return 0 ;
 }
@@ -118,7 +118,7 @@ int main()
 
    for(ll i=0 ; i< n ; i++, a+=d)
        cout << a << " " ;
-   
+
    return 0 ;
 }
 ```

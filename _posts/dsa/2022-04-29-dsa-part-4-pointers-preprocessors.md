@@ -5,27 +5,27 @@ excerpt: Pointers, pointer arithmetic, character array, double pointer, typecast
 categories:
   - DSA
 tags:
-  - 'data structures and algorithms'
-  - 'Pointers'
-  - 'pointer arithmetic'
-  - 'double pointer'
-  - 'typecasting'
-  - 'reference variables'
-  - 'dynamic allocation'
-  - 'macros'
-  - 'define'
-  - 'typedef'
+  - "data structures and algorithms"
+  - "Pointers"
+  - "pointer arithmetic"
+  - "double pointer"
+  - "typecasting"
+  - "reference variables"
+  - "dynamic allocation"
+  - "macros"
+  - "define"
+  - "typedef"
 ---
 
 ## Pointers
 
 ### Need for pointers
 
-* To store the address of some variables from the symbol table.
-* This address can be retrieved using **&** and is stored in hexadecimal form. Eg : ``0x7ffc40fe4b94``
-* We can declare a pointer using ``data_type * name``
-* We state the data_type while declaring pointers to make the de-referencing process much easier.
-* Usually 8 bytes but can also be 4 bytes in 32-bit systems.
+- To store the address of some variables from the symbol table.
+- This address can be retrieved using **&** and is stored in hexadecimal form. Eg : `0x7ffc40fe4b94`
+- We can declare a pointer using `data_type * name`
+- We state the data_type while declaring pointers to make the de-referencing process much easier.
+- Usually 8 bytes but can also be 4 bytes in 32-bit systems.
 
 ```cpp
 #include<bits/stdc++.h>
@@ -53,7 +53,7 @@ int main(){
 }
 ```
 
-**Note:** Do not try to access or modify uninitialized pointers as they can point to any segment of the memory. To prevent this we usually initialize pointers with either some valid variable's address or _NULL_. 
+**Note:** Do not try to access or modify uninitialized pointers as they can point to any segment of the memory. To prevent this we usually initialize pointers with either some valid variable's address or _NULL_.
 {: .prompt-tip }
 
 ```cpp
@@ -62,12 +62,11 @@ cout << *p << endl;
 (*p)++;
 ```
 
-
 ### Pointer arithmetic
 
-* We can use normal arithmetic on pointers too.
-* With each decrement/increment, the pointer now shifts to x data_type bytes and starts pointing to the new location(variable).
-* This comes in handy while dealing with an array.
+- We can use normal arithmetic on pointers too.
+- With each decrement/increment, the pointer now shifts to x data_type bytes and starts pointing to the new location(variable).
+- This comes in handy while dealing with an array.
 
 ```cpp
 #include<bits/stdc++.h>
@@ -104,32 +103,32 @@ int main(){
     cout << a[0] << endl;
     cout << *(a+2) << endl;
     cout << a[2] << endl;
-    
+
     a = a+3;
 }
 ```
 
-* In th above code **arr** is a pointer that contains the address to the intial block of 4*5=20 bytes.
-* In other words : ``arr = &arr[0]`` and ``*arr = arr[0]``
-* So,
-    a[0] = *(a)
-    a[1] = *(a+1)
-    .
-    .
-    .
-    **a[i] = *(a+i)**
+- In th above code **arr** is a pointer that contains the address to the intial block of 4\*5=20 bytes.
+- In other words : `arr = &arr[0]` and `*arr = arr[0]`
+- So,
+  a[0] = _(a)
+  a[1] = _(a+1)
+  .
+  .
+  .
+  **a[i] = \*(a+i)**
 
 Hence we can also use
 {: .prompt-tip }
 
-``a[i] == i[a]`` as ``*(a+i) == *(i+a)``
+`a[i] == i[a]` as `*(a+i) == *(i+a)`
 
 #### Differences b/w array and pointer
 
 1. The basic difference is that the pointer allocates the memory of 8byte when initialized but the arr is nothing but the address of the first of n blocks.
-1. The ``sizeof()`` of operator on an integer pointer with always give 8(or 4) bytes but **sizeof(arr) = sizeof(int)xn**
+1. The `sizeof()` of operator on an integer pointer with always give 8(or 4) bytes but **sizeof(arr) = sizeof(int)xn**
 1. p and &p are two different things but arr and &arr will give the same output as arr is nothing but the address of the first block.
-1. We can never do `` arr = arr + 3 `` as once array can't be reassigned.
+1. We can never do `arr = arr + 3` as once array can't be reassigned.
 
 ### Characters Pointers
 
@@ -152,7 +151,7 @@ int main(){
     char* pd = &d;
 
     cout << d << endl;
-    cout << pd << endl;    
+    cout << pd << endl;
 }
 ```
 
@@ -166,19 +165,19 @@ a
 ad1|��
 ```
 
-* As we can see that character arrays and pointers behave a bit differently, this is because of how cout is implemented for char arrays and pointers in c++.
-* Instead of printing the address of the 0th index, the content of the array is printed.
+- As we can see that character arrays and pointers behave a bit differently, this is because of how cout is implemented for char arrays and pointers in c++.
+- Instead of printing the address of the 0th index, the content of the array is printed.
 
 char s1[] = "abc";
 
-char* s2 = "abc";
+char\* s2 = "abc";
 
 While executing the above code, the compiler will first create a temporary space of the string literal and then copy those values to the memory block provided to s1. But s2 points towards the same temporary which can be very dangerous and hence should be avoided.
 {: .prompt-warning }
 
 ### Pointers and functions
 
-* Array is always passed as a pointer to a function in c++.
+- Array is always passed as a pointer to a function in c++.
 
 ```cpp
 void print(int* p){
@@ -199,11 +198,11 @@ int main(){
     int *p= &i;
 
     print(p);
-    increment1(p);   
+    increment1(p);
     print(p);
 
     print(p);
-    increment2(p);   
+    increment2(p);
     print(p);
 }
 ```
@@ -390,8 +389,8 @@ j = i; ❌
 
 ## Dynamic Allocation
 
-* Stack $\rightarrow$ Static Memmory Allocation
-* Heap $\rightarrow$ Dynamic Memmory Allocation
+- Stack $\rightarrow$ Static Memmory Allocation
+- Heap $\rightarrow$ Dynamic Memmory Allocation
 
 ```cpp
 // data_type * name = new data type
@@ -402,8 +401,8 @@ delete p;
 
 This command consumes 12 bytes $\rightarrow$
 
-* 4 bytes in the heap for allocating an integer.
-* 8 bytes in the stack for storing the address of the integer allocated in the heap;
+- 4 bytes in the heap for allocating an integer.
+- 8 bytes in the stack for storing the address of the integer allocated in the heap;
 
 ```cpp
 int main(){
@@ -484,12 +483,12 @@ int main(){
 
 #### Predefined macros
 
-| Macro | Usage |
-| -- | -- |
-| __LINE__ | Current line number in the source code |
-| __FILE__ | Filename of the source code |
-| __DATE__ | MM DD YY of the time when the program was compiled |
-| __TIME__ | HH:MM:SS of the time when the program was compiled |
+| Macro    | Usage                                              |
+| -------- | -------------------------------------------------- |
+| **LINE** | Current line number in the source code             |
+| **FILE** | Filename of the source code                        |
+| **DATE** | MM DD YY of the time when the program was compiled |
+| **TIME** | HH:MM:SS of the time when the program was compiled |
 
 #### Header files
 
@@ -582,7 +581,7 @@ int main(){
 }
 ```
 
-**Note**: Usually, the compiler supports 1 to 3 sets of instructions as ``inline`` func, more than that is treated as a normal func only.
+**Note**: Usually, the compiler supports 1 to 3 sets of instructions as `inline` func, more than that is treated as a normal func only.
 {: .prompt-warning }
 
 ## Default Arguments
@@ -625,7 +624,7 @@ j++; ❌
 const int i = 10;
 const int& j = i; ✅
 
-const int i = 10; 
+const int i = 10;
 int& j = i; ❌
 
 const int i = 10;

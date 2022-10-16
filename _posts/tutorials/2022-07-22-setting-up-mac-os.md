@@ -25,7 +25,7 @@ curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
 sudo python get-pip.py
 ```
 
-## Installing node 
+## Installing node
 
 ```bash
 brew install nvm
@@ -37,14 +37,14 @@ npm i yarn -g
 
 ### To use legacy versions of node
 
-* For a session
+- For a session
 
 ```bash
 nvm install v1X.XX.X
 nvm use v1X.XX.X
 ```
 
-* Changing the default node version
+- Changing the default node version
 
 ```bash
 nvm default alias v1X.XX.X

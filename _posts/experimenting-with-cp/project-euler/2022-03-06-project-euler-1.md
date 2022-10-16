@@ -4,14 +4,12 @@ author: ahampriyanshu
 excerpt: Python solutions to first 100 problems on Project Euler
 categories: [Sheets, Projectuler]
 tags: [live, sheets, project, euler, mathematics, primes]
-
 ---
 
 ### 1. Multiples of 3 and 5
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
-
 
 #### Input Format
 
@@ -21,25 +19,28 @@ First line contains T that denotes the number of test cases. This is followed by
 
 For each test case, print an integer that denotes the sum of all the multiples of 3 or 5 below N.
 
-* Sample Input 0
+- Sample Input 0
+
 ```
 2
 10
 100
 ```
-* Sample Output 0
+
+- Sample Output 0
+
 ```
 23
 2318
 ```
 
 ```python
-for _ in range(int(input())):   
+for _ in range(int(input())):
     n =int(input())
     n -= 1
-    a= n//3                   
+    a= n//3
     b= n//5
-    c= n//15 
+    c= n//15
     print((3*a*(a+1) + 5*b*(b+1) - 15*c*(c+1))>>1)
 ```
 
@@ -59,13 +60,16 @@ First line contains T that denotes the number of test cases. This is followed by
 
 For each test case, print an integer that denotes the sum of all the multiples of 3 or 5 below N.
 
-* Sample Input 0
+- Sample Input 0
+
 ```
 2
 10
 100
 ```
-* Sample Output 0
+
+- Sample Output 0
+
 ```
 10
 44
@@ -96,12 +100,15 @@ First line contains **T** , the number of test cases. This is followed by **T** 
 For each test case, display the largest prime factor of N .
 
 Sample Input
+
 ```
 2
 10
 17
 ```
+
 Sample Output
+
 ```
 5
 17
@@ -113,12 +120,12 @@ for _ in range(int(input())):      ## looping for number of test cases
     fact = 2                       ## supposing two as the smallest factorial
     is_prime = 2                   ## Taking two as the smallest prime
     while fact * fact <= num :     ## Factor is always <= the sqrt of that number
-        while num  % fact == 0:    
+        while num  % fact == 0:
             is_prime = fact
-            num  //= fact    
+            num  //= fact
         fact += 1                  ## Incrementing the factorial by 1
-    if num > is_prime:             ## If the number is itself prime           
-        is_prime = num 
+    if num > is_prime:             ## If the number is itself prime
+        is_prime = num
     print(is_prime)
 ```
 
@@ -163,16 +170,17 @@ for _ in range(int(input())):
 
 ### 5. Smallest multiple
 
-What is the smallest positive number that is evenly divisible(divisible with no remainder) by all of the numbers from  to ?
+What is the smallest positive number that is evenly divisible(divisible with no remainder) by all of the numbers from to ?
 
 #### Input Format
 
-First line contains  that denotes the number of test cases. This is followed by  lines, each containing an integer.
+First line contains that denotes the number of test cases. This is followed by lines, each containing an integer.
 
 ```
 1 <= Test Cases <= 10
 1 <= Input <= 40
 ```
+
 #### Output Format
 
 Print the required answer for each test case.
@@ -184,28 +192,31 @@ Sample Input
 3
 10
 ```
+
 Sample Output
+
 ```
 6
 2520
 ```
 
 ```python
-from math import gcd                                                            
-from functools import reduce  
-                                                  
+from math import gcd
+from functools import reduce
+
 for _ in range(int(input())):
-    print(reduce(lambda x,y: x*y//gcd(x,y), range(1,int(input())+1))) 
+    print(reduce(lambda x,y: x*y//gcd(x,y), range(1,int(input())+1)))
 ```
 
 ### 6. Sum square difference
+
 The sum of the squares of the first ten natural numbers is,
 
-``12 + 22 + ... + 102 = 385``
+`12 + 22 + ... + 102 = 385`
 
 The square of the sum of the first ten natural numbers is,
 
-``(1 + 2 + ... + 10)2 = 552 = 3025``
+`(1 + 2 + ... + 10)2 = 552 = 3025`
 
 Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
 
@@ -251,6 +262,7 @@ ProjectEuler+ Problem Statement
 The Project Euler problem is equivalent to the ProjectEuler+ challenge with T = 1 and N = 10001.
 
 #### Sample Input
+
 ```
 2
 3
@@ -258,6 +270,7 @@ The Project Euler problem is equivalent to the ProjectEuler+ challenge with T = 
 ```
 
 #### Sample Output
+
 ```
 5
 13

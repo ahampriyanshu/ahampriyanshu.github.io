@@ -4,7 +4,19 @@ author: ahampriyanshu
 math: true
 categories: [Contests, Codeforces]
 excerpt: All of my accepted submissions on Codeforces, 2022
-tags: [live, contest, codeforces, solutions, c++, div2, div3, educational, global, round]
+tags:
+  [
+    live,
+    contest,
+    codeforces,
+    solutions,
+    c++,
+    div2,
+    div3,
+    educational,
+    global,
+    round,
+  ]
 ---
 
 ## February
@@ -21,15 +33,14 @@ How many different strings can you get as a result of performing exactly k opera
 
 In this statement we denoted the concatenation of strings s and t as s+t. In other words, s+t=s1s2...snt1t2...tm, where n and m are the lengths of strings s and t respectively.
 
-
-* [1634/A](https://codeforces.com/contest/1634/problem/A)
+- [1634/A](https://codeforces.com/contest/1634/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 int solve()
 {
     ll n, k, ans(0);
@@ -42,7 +53,7 @@ int solve()
     return 2;
     return 1;
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -60,37 +71,37 @@ Your friends Alice and Bob practice fortune telling.
 
 Fortune telling is performed as follows. There is a well-known array a of n non-negative integers indexed from 1 to n. The tellee starts with some non-negative number d and performs one of the two operations for each i=1,2,…,n, in the increasing order of i. The possible operations are:
 
-* replace their current number d with d+ai
-* replace their current number d with d⊕ai (hereinafter ⊕ denotes the bitwise XOR operation)
-> Notice that the chosen operation may be different for different i and for different tellees.
+- replace their current number d with d+ai
+- replace their current number d with d⊕ai (hereinafter ⊕ denotes the bitwise XOR operation)
+  > Notice that the chosen operation may be different for different i and for different tellees.
 
 One time, Alice decided to start with d=x and Bob started with d=x+3. Each of them performed fortune telling and got a particular number in the end. Notice that the friends chose operations independently of each other, that is, they could apply different operations for the same i.
 
 You learnt that either Alice or Bob ended up with number y in the end, but you don't know whose of the two it was. Given the numbers Alice and Bob started with and y, find out who (Alice or Bob) could get the number y after performing the operations. It is guaranteed that on the jury tests, exactly one of your friends could have actually gotten that number.
 
-* [1634/B](https://codeforces.com/contest/1634/problem/B)
+- [1634/B](https://codeforces.com/contest/1634/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 bool isAlice = false;
- 
+
 void recur(ll index, ll sum, ll y, ll N, vector<ll> &vec)
 {
     if(isAlice) return;
- 
+
     if(index == N){
         if(sum == y) isAlice  = true;
         return;
     }
-        
+
     recur(index+1, sum + vec[index], y, N, vec);
     recur(index+1, sum ^ vec[index], y, N, vec);
 }
- 
+
 void solve()
 {
     isAlice = false;
@@ -107,7 +118,7 @@ void solve()
     if(isAlice) cout << "Alice\n";
     else cout << "Bob\n";
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -182,9 +193,9 @@ Determine whether it can be sorted in non-decreasing order using this operation 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 bool solve()
 {
     ll n;
@@ -204,9 +215,9 @@ bool solve()
             else {
                 swap(arr[j], arr[j+1]);
                 sortMore = true;
-            } 
+            }
         }
-        
+
      }
      if (!sortMore)
         return true;
@@ -227,25 +238,24 @@ int main()
 }
 ```
 
-
 ### Round #772 (Div. 2)
 
 #### A. Min Or Sum
 
 You are given an array a of size n.
 
-* You can perform the following operation on the array:
+- You can perform the following operation on the array:
 
-* Choose two different integers i,j (1 ≤ i < j ≤ n), replace ai with x and aj with y. In order not to break the array, ai|aj=x|y must be held, where | denotes the bitwise OR operation. Notice that x and y are non-negative integers.
+- Choose two different integers i,j (1 ≤ i < j ≤ n), replace ai with x and aj with y. In order not to break the array, ai|aj=x|y must be held, where | denotes the bitwise OR operation. Notice that x and y are non-negative integers.
 
 Please output the minimum sum of the array you can get after using the operation above any number of times.
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 void solve()
 {
     ll n, ele, ans(0);
@@ -253,12 +263,12 @@ void solve()
     for (ll i = 0; i < n; i++)
     {
         cin >> ele;
-        ans |= ele; 
+        ans |= ele;
     }
     cout << ans << endl;
- 
+
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -283,9 +293,9 @@ An element ai is a local maximum if it is strictly larger than both of its neigh
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 void solve()
 {
     ll n, ans(0);
@@ -293,14 +303,14 @@ void solve()
     ll arr[n];
     for (ll i = 0; i < n; i++)
         cin >> arr[i];
- 
+
     if (n == 2)
     {
         cout << 0 << endl
              << arr[0] << " " << arr[1] << endl;
         return;
     }
- 
+
     for (ll i = 1; i < n - 1; i++)
     {
         if (arr[i] > arr[i + 1] && arr[i] > arr[i - 1])
@@ -312,13 +322,13 @@ void solve()
             ans++;
         }
     }
- 
+
     cout << ans << endl;
     for (ll i = 0; i < n; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -332,27 +342,26 @@ int main()
 
 ## March
 
-
 ### Round #755 (Div. 2)
 
 #### A. Game
 
 You are playing a very popular computer game. The next level consists of n consecutive locations, numbered from 1 to n, each of them containing either land or water. It is known that the first and last locations contain land, and for completing the level you have to move from the first location to the last. Also, if you become inside a location with water, you will die, so you can only move between locations with land.
 
-You can jump between adjacent locations for free, as well as **no more than once** jump from any location with land *i* to any location with land **i+x**, spending x coins (x≥0).
+You can jump between adjacent locations for free, as well as **no more than once** jump from any location with land _i_ to any location with land **i+x**, spending x coins (x≥0).
 
 Your task is to spend the minimum possible number of coins to move from the first location to the last one.
 
 Note that this is always possible since both the first and last locations are the land locations.
 
-* [1649/A](https://codeforces.com/contest/1649/problem/A)
+- [1649/A](https://codeforces.com/contest/1649/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 ll solve()
 {
     ll n, ans(0);
@@ -360,27 +369,27 @@ ll solve()
     ll arr[n];
     for (ll i = 0; i < n; i++)
         cin >> arr[i];
-    
+
     if(n == 2) return 0;
- 
+
     ll start(1), end(n-2);
- 
+
     while(arr[start]){
         start++;
         if(start == n-1)
         return 0;
     }
- 
+
     while(arr[end]){
         end--;
         if(end == 1)
         return 2;
     }
- 
+
     return end - start + 2;
- 
+
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -394,19 +403,18 @@ int main()
 
 ## April
 
-
 ### April Fools Day Contest 2022
 
 #### A. Game
 
 ![loading](https://espresso.codeforces.com/fbe5755ad6373642cf347efaf5896410a028f4fb.png)
 
-* [1663/A](https://codeforces.com/contest/1663/problem/A)
+- [1663/A](https://codeforces.com/contest/1663/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 int main(){
 cout << "red panda" << endl;
 }
@@ -416,24 +424,24 @@ cout << "red panda" << endl;
 
 Aenar has an array a consisting of n integers.
 
-* [1663/A](https://codeforces.com/contest/1663/problem/C)
+- [1663/A](https://codeforces.com/contest/1663/problem/C)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 int main(){
- 
+
 int n, ele, sum = 0;
 cin >> n;
- 
+
 for(int i=0; i<n; i++){
     cin >> ele;
     sum += ele;
 }
- 
+
 cout << sum << endl;
- 
+
 }
 ```
 
@@ -452,7 +460,7 @@ The pedestal consists of 3 platforms for 2-nd, 1-st and 3-rd places respectively
 Example pedestal of n=11 blocks: second place height equals 4 blocks, first place height equals 5 blocks, third place height equals 2 blocks.
 Among all possible pedestals of n blocks, deduce one such that the platform height for the 1-st place minimum as possible. If there are several of them, output any of them.
 
-* [1690/A](https://codeforces.com/contest/1690/problem/A)
+- [1690/A](https://codeforces.com/contest/1690/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -504,18 +512,18 @@ int main()
 
 Kristina has two arrays a and b, each containing n non-negative integers. She can perform the following operation on array a any number of times:
 
-* apply a decrement to each non-zero element of the array, that is, replace the value of each element ai such that ai>0 with the value ai−1 (1≤i≤n). If ai was 0, its value does not change.
+- apply a decrement to each non-zero element of the array, that is, replace the value of each element ai such that ai>0 with the value ai−1 (1≤i≤n). If ai was 0, its value does not change.
 
 Determine whether Kristina can get an array b from an array a in some number of operations (probably zero). In other words, can she make ai=bi after some number of operations for each 1≤i≤n?
 
 For example, let n=4, a=[3,5,4,1] and b=[1,3,2,0]. In this case, she can apply the operation twice:
 
-* after the first application of the operation she gets a=[2,4,3,0];
-* after the second use of the operation she gets a=[1,3,2,0].
+- after the first application of the operation she gets a=[2,4,3,0];
+- after the second use of the operation she gets a=[1,3,2,0].
 
 Thus, in two operations, she can get an array b from an array a.
 
-* [1690/B](https://codeforces.com/contest/1690/problem/B)
+- [1690/B](https://codeforces.com/contest/1690/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -573,7 +581,6 @@ int main()
 }
 ```
 
-
 ## July
 
 ### Round #804 (Div. 2)
@@ -584,14 +591,14 @@ You are given a positive integer n. Your task is to find any three integers $a$,
 
 Here $a \bigoplus b$ denotes the bitwise XOR of $a$ and $b$. For example, $2 \bigoplus 4=6$ and $3 \bigoplus 1=2$.
 
-* [1699/A](https://codeforces.com/contest/1699/problem/A)
+- [1699/A](https://codeforces.com/contest/1699/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 void solve()
 {
     ll n;
@@ -605,7 +612,7 @@ void solve()
     ll a = n/2, b = 0, c = 0;
     cout << a << " " << b << " "<< c << endl;
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -614,7 +621,7 @@ int main()
     ll test;
     for (cin >> test; test--;)
         solve();
-       
+
 }
 ```
 
@@ -626,7 +633,7 @@ Two cells in the matrix are considered neighbours if and only if they share a si
 
 It can be proven that under the given constraints, an answer always exists.
 
-* [1699/B](https://codeforces.com/contest/1699/problem/B)
+- [1699/B](https://codeforces.com/contest/1699/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -653,7 +660,7 @@ void solve()
                         cout << even;
                     else
                         cout << odd;
-            
+
         cout << endl;
     }
 }
@@ -675,7 +682,7 @@ int main()
 
 There is a string 𝑠 of length 3, consisting of uppercase and lowercase English letters. Check if it is equal to "YES" (without quotes), where each letter can be in any case. For example, "yES", "Yes", "yes" are all allowable.
 
-* [Practice](https://codeforces.com/contest/1703/problem/A)
+- [Practice](https://codeforces.com/contest/1703/problem/A)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -703,7 +710,7 @@ int main()
     cin >> test;
 
     for (ll t = 0; t < test; ++t)
-        solve(); 
+        solve();
     return 0;
 }
 ```
@@ -712,27 +719,27 @@ int main()
 
 In an ICPC contest, balloons are distributed as follows:
 
-* Whenever a team solves a problem, that team gets a balloon.
-* The first team to solve a problem gets an additional balloon.
+- Whenever a team solves a problem, that team gets a balloon.
+- The first team to solve a problem gets an additional balloon.
 
 A contest has 26 problems, labelled 𝖠, 𝖡, 𝖢, ..., 𝖹. You are given the order of solved problems in the contest, denoted as a string 𝑠, where the 𝑖-th character indicates that the problem 𝑠𝑖 has been solved by some team. No team will solve the same problem twice.
 Determine the total number of balloons that the teams recieved. Note that some problems may be solved by none of the teams.
 
-* [Practice](https://codeforces.com/contest/1703/problem/B)
+- [Practice](https://codeforces.com/contest/1703/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long ll;
- 
+
 ll solve()
 {
     ll n,ans = 0;
     string s;
     cin >> n >> s;
     unordered_map<char, int> mp;
- 
+
     for(auto ch: s){
         if(mp[ch])
         ans++;
@@ -741,10 +748,10 @@ ll solve()
             mp[ch]++;
         }
     }
- 
+
     return ans;
 }
- 
+
 int main()
 {
     ios::sync_with_stdio(0);
@@ -752,9 +759,9 @@ int main()
     cout.tie(0);
     ll test;
     cin >> test;
- 
+
     for (ll t = 0; t < test; ++t)
-        cout << solve() << endl; 
+        cout << solve() << endl;
     return 0;
 }
 
@@ -773,7 +780,7 @@ Example for 𝑛=4.
 
 Luca knows the final sequence of wheels and the moves for each wheel. Help him find the original sequence and crack the cypher.
 
-* [Practice](https://codeforces.com/contest/1703/problem/C)
+- [Practice](https://codeforces.com/contest/1703/problem/C)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -790,7 +797,7 @@ void solve()
 
     for(ll i=0; i<n; i++)
         cin >> v[i];
-    
+
     for(ll i=0; i<n; i++){
         cin >> len >> s;
 
@@ -827,7 +834,7 @@ int main()
     cin >> test;
 
     for (ll t = 0; t < test; ++t)
-        solve(); 
+        solve();
     return 0;
 }
 ```
@@ -840,7 +847,7 @@ For each string 𝑠𝑖, determine if there exist two strings 𝑠𝑗 and 𝑠
 
 Recall that the concatenation of strings 𝑠 and 𝑡 is 𝑠+𝑡=𝑠1𝑠2…𝑠𝑝𝑡1𝑡2…𝑡𝑞, where 𝑝 and 𝑞 are the lengths of strings 𝑠 and 𝑡 respectively. For example, concatenation of "code" and "forces" is "codeforces".
 
-* [Practice](https://codeforces.com/contest/1703/problem/D)
+- [Practice](https://codeforces.com/contest/1703/problem/D)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -863,7 +870,7 @@ string solve()
     }
 
     for(auto s:v){
-        
+
         ll len = s.size();
 
         bool isFix = false;
@@ -894,7 +901,217 @@ int main()
     cin >> test;
 
     for (ll t = 0; t < test; ++t)
-        cout << solve() << endl; 
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+## October
+
+### Round #828 (Div. 3)
+
+#### A. Number Replacement
+
+An integer array 𝑎1,𝑎2,…,𝑎𝑛 is being transformed into an array of lowercase English letters using the following prodecure:
+
+While there is at least one number in the array:
+
+- Choose any number 𝑥 from the array 𝑎, and any letter of the English alphabet 𝑦.
+- Replace all occurrences of number 𝑥 with the letter 𝑦.
+
+For example, if we initially had an array 𝑎=[2,3,2,4,1], then we could transform it the following way:
+
+- Choose the number 2 and the letter c. After that 𝑎=[𝑐,3,𝑐,4,1].
+- Choose the number 3 and the letter a. After that 𝑎=[𝑐,𝑎,𝑐,4,1].
+- Choose the number 4 and the letter t. After that 𝑎=[𝑐,𝑎,𝑐,𝑡,1].
+- Choose the number 1 and the letter a. After that 𝑎=[𝑐,𝑎,𝑐,𝑡,𝑎].
+
+After the transformation all letters are united into a string, in our example we get the string "cacta".
+
+Having the array 𝑎 and the string 𝑠 determine if the string 𝑠 could be got from the array 𝑎 after the described transformation?
+
+- [1744/A](https://codeforces.com/contest/1744/problem/A)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    ll n,q, t, x, i, odd_sum(0), odd_count(0), even_sum(0), even_count(0);
+    cin >> n >> q;
+    vector<ll> v(n);
+    for(i=0; i<n; i++)
+        cin >> v[i];
+
+    for(i=0; i<n; i++){
+
+        if(v[i]%2 != 0){
+            odd_count++;
+            odd_sum += v[i];
+        }else{
+            even_count++;
+            even_sum += v[i];
+        }
+    }
+
+    while(q--){
+        cin >> t >> x;
+
+        if(t == 1 and odd_count >0){
+            odd_sum += (x * odd_count);
+            if(x%2) {
+                even_count += odd_count;
+                odd_count = 0;
+            }
+        }else if(t ==0  && even_count > 0){
+            even_sum += (x * even_count);
+            if(x%2) {
+                odd_count += even_count;
+                even_count = 0;
+            }
+        }
+        cout << even_sum + odd_sum << endl;
+    }
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve();
+    return 0;
+}
+```
+
+#### B. Even-Odd Increments
+
+You are given 𝑛 of integers 𝑎1,𝑎2,…,𝑎𝑛. Process 𝑞 queries of two types:
+
+- query of the form "0 𝑥𝑗": add the value 𝑥𝑗 to all even elements of the array 𝑎,
+- query of the form "1 𝑥𝑗": add the value 𝑥𝑗 to all odd elements of the array 𝑎.
+
+Note that when processing the query, we look specifically at the odd/even value of 𝑎𝑖, not its index.
+
+After processing each query, print the sum of the elements of the array 𝑎.
+
+Please note that the answer for some test cases won't fit into 32-bit integer type, so you should use at least 64-bit integer type in your programming language (like long long for C++).
+
+- [1744/B](https://codeforces.com/contest/1744/problem/B)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef long long ll;
+
+bool solve()
+{
+    ll n;
+    cin >> n;
+    string s;
+    vector<ll> v(n);
+    for(ll i=0; i<n; i++)
+        cin >> v[i];
+    cin >> s;
+
+    for(ll i=0; i<n; i++){
+        ll curr = v[i];
+        for(ll j=i+1; j<n; j++)
+            if(v[j] == curr && s[i] != s[j])
+                return false;
+
+    }
+
+    return true;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        if(solve())
+        cout << "YES\n";
+        else
+        cout << "NO\n";
+    return 0;
+}
+```
+
+#### C. Traffic Light
+
+You find yourself on an unusual crossroad with a weird traffic light. That traffic light has three possible colors: red (r), yellow (y), green (g). It is known that the traffic light repeats its colors every 𝑛 seconds and at the 𝑖-th second the color 𝑠𝑖 is on.
+
+That way, the order of the colors is described by a string. For example, if 𝑠="rggry", then the traffic light works as the following: red-green-green-red-yellow-red-green-green-red-yellow- ... and so on.
+
+More formally, you are given a string 𝑠1,𝑠2,…,𝑠𝑛 of length 𝑛. At the first second the color 𝑠1 is on, at the second — 𝑠2, ..., at the 𝑛-th second the color 𝑠𝑛 is on, at the 𝑛+1-st second the color 𝑠1 is on and so on.
+
+You need to cross the road and that can only be done when the green color is on.
+
+You know which color is on the traffic light at the moment, but you don't know the current moment of time. You need to find the minimum amount of time in which you are guaranteed to cross the road.
+
+You can assume that you cross the road immediately.
+
+For example, with 𝑠="rggry" and the current color r there are two options: either the green color will be on after 1 second, or after 3. That way, the answer is equal to 3 — that is the number of seconds that we are guaranteed to cross the road, if the current color is r.
+
+- [1744/C](https://codeforces.com/contest/1744/problem/C)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll n, ans = 0, st;
+    char c;
+    string s;
+    cin >> n >> c >> s;
+    s += s;
+    bool ch = true;
+    for (ll i = 0; i < s.size(); i++)
+    {
+        if (s[i] == c && ch)
+        {
+            st = i;
+            ch = false;
+        }
+        if (s[i] == 'g' && !ch)
+        {
+            ans = max(ans, i - st);
+            ch = true;
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
     return 0;
 }
 ```

@@ -3,7 +3,19 @@ title: "Codechef Contests 2022"
 author: ahampriyanshu
 categories: [Contests, Codechef]
 excerpt: All of my accepted submissions on Codechef [2022]
-tags: [live, contest, codechef, starters, cookoff, lunchtime, february, march, april, june]
+tags:
+  [
+    live,
+    contest,
+    codechef,
+    starters,
+    cookoff,
+    lunchtime,
+    february,
+    march,
+    april,
+    june,
+  ]
 math: true
 ---
 
@@ -11,7 +23,7 @@ math: true
 
 ### CodeChef Starters 24
 
-#### Badminton Serves 
+#### Badminton Serves
 
 Chef is playing badminton today. The service rules of this singles game of badminton are as follows:
 
@@ -21,7 +33,7 @@ Chef is playing badminton today. The service rules of this singles game of badmi
 
 Given the number of points P obtained by Chef at the end of the game, please determine how many times Chef served from the right side of the court.
 
-* [BADMINTON](https://www.codechef.com/START24C/problems/BADMINTON)
+- [BADMINTON](https://www.codechef.com/START24C/problems/BADMINTON)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -37,7 +49,7 @@ void solve()
 
 int main()
 {
-    ios_base::sync_with_stdio(false);   
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll test;
@@ -46,7 +58,7 @@ int main()
 }
 ```
 
-#### Avoid Contact 
+#### Avoid Contact
 
 A hostel has N rooms in a straight line. It has to accommodate X people. Unfortunately, out of these X people, Y of them are infected with chickenpox. Due to safety norms, the following precaution must be taken:
 
@@ -56,7 +68,7 @@ For example, if room 4 has a chickenpox-infected person, then nobody should occu
 
 What's the minimum value of N for which all the people can be accommodated in the hostel, following the above condition?
 
-* [AVOIDCONTACT](https://www.codechef.com/START24C/problems/AVOIDCONTACT)
+- [AVOIDCONTACT](https://www.codechef.com/START24C/problems/AVOIDCONTACT)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -73,7 +85,7 @@ void solve()
 
 int main()
 {
-    ios_base::sync_with_stdio(false);   
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll test;
@@ -90,7 +102,7 @@ Chef, being the party leader, can hack at most one EVM so that his party wins. O
 
 A party must secure strictly more than half of the total number of votes cast in order to be considered the winner. Can Chef achieve his objective of winning by hacking at most one EVM?
 
-* [EVMHACK](https://www.codechef.com/START24C/problems/EVMHACK)
+- [EVMHACK](https://www.codechef.com/START24C/problems/EVMHACK)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -110,7 +122,7 @@ void solve()
 
 int main()
 {
-    ios_base::sync_with_stdio(false);   
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll test;
@@ -133,7 +145,7 @@ Here, ∣ denotes the bitwise OR operator and & denotes the bitwise AND operator
 
 It can be shown that a solution always exists for inputs satisfying the given constraints.
 
-* [ORANDCON](https://www.codechef.com/START24C/problems/ORANDCON)
+- [ORANDCON](https://www.codechef.com/START24C/problems/ORANDCON)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -148,14 +160,14 @@ void solve()
     while(c < INT_MAX){
         if(( (a|b) & (b|c) & (c|a)) == x)
             break;
-        c++;    
+        c++;
     }
     cout << a <<" "<< b <<" "<< c <<"\n";
 }
 
 int main()
 {
-    ios_base::sync_with_stdio(false);   
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll test;
@@ -172,7 +184,7 @@ You are given a string S of length N (consisting of lowercase Latin letters only
 
 If there are multiple rearrangements of the string which are anti-palindromic, print any of them.
 
-* [ANTI_PAL](https://www.codechef.com/START24C/problems/ANTI_PAL)
+- [ANTI_PAL](https://www.codechef.com/START24C/problems/ANTI_PAL)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -185,7 +197,7 @@ bool cmp(pair<char, ll>& a,
 {
     return a.second < b.second;
 }
-  
+
 
 void solve()
 {
@@ -200,15 +212,15 @@ void solve()
         return;
     }
 
-    
+
     for (auto& ch : str) {
         mp[ch]++;
     }
-  
+
     for (auto& e : mp) {
         vec.push_back(e);
     }
-  
+
     sort(vec.begin(), vec.end(), cmp);
 
     ll len = vec.size();
@@ -217,7 +229,7 @@ void solve()
         cout << "NO\n";
         return;
     }
-  
+
     for(ll i = 0; i <len; i++ ){
         string tmp ="";
         ll times = vec[i].second;
@@ -228,18 +240,18 @@ void solve()
     }
     len = ans.length();
 
-    for (ll start = 0, end = len/2 -1; start < end; start++, end--) 
+    for (ll start = 0, end = len/2 -1; start < end; start++, end--)
         swap(ans[start], ans[end]);
-    
+
 
 
     cout << "YES\n" <<  ans << endl;
-    
+
 }
 
 int main()
 {
-    ios_base::sync_with_stdio(false);   
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll test;
@@ -269,7 +281,7 @@ For example, if there are 3 tasks, Chef can do one of the following:
 
 Find the minimum time in which all the tasks can be executed.
 
-* [PLPROCESS](https://www.codechef.com/LTIME105B/problems/PLPROCESS)
+- [PLPROCESS](https://www.codechef.com/LTIME105B/problems/PLPROCESS)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -308,7 +320,7 @@ ll solve()
     }
 
     }
-    
+
     return max(p1, p2);
 
 }
@@ -334,7 +346,7 @@ You are given an integer D. Find four points (P1,P2,P3,P4) with integer coordina
 
 - The absolute value of both X and Y coordinates of all points is at most 109.
 - The manhattan distance between any pair of points is D . More formally, d(Pi,Pj)=D for all 1 ≤ i < j ≤ 4.
-If such set of points do not exist, print -1. If there are multiple solutions, you may print any.
+  If such set of points do not exist, print -1. If there are multiple solutions, you may print any.
 
 * [DISTCON](https://www.codechef.com/LTIME105B/problems/DISTCON)
 
@@ -350,7 +362,7 @@ void solve()
     cin >> d;
 
     if(d%2){
-        cout << -1 << endl; 
+        cout << -1 << endl;
         return;
     }
 
@@ -376,13 +388,13 @@ int main()
 
 #### A. Digit Sum Parities
 
-For a positive integer M, MoEngage defines ``digitSum(M)`` as the sum of digits of the number M (when written in decimal).
+For a positive integer M, MoEngage defines `digitSum(M)` as the sum of digits of the number M (when written in decimal).
 
-For example, ``digitSum(1023)``=1+0+2+3=6.
+For example, `digitSum(1023)`=1+0+2+3=6.
 
 Given a positive integer N, find the smallest integer X strictly greater than N such that:
 
-- ``digitSum(N)`` and ``digitSum(X)`` have different parity, i.e. one of them is odd and the other is even.
+- `digitSum(N)` and `digitSum(X)` have different parity, i.e. one of them is odd and the other is even.
 
 * [DIGSMPAR](https://www.codechef.com/COOK140B/problems/DIGSMPAR)
 
@@ -438,7 +450,7 @@ MoEngage has a bundle of N sticks. The ith stick has a length Li meters.
 
 Find the minimum number of sticks (of any length) you need to add to the bundle such that you can construct some rectangles where each stick of the bundle belongs to exactly one rectangle and each side of a rectangle should be formed with exactly one stick.
 
-* [RECSTI](https://www.codechef.com/COOK140B/problems/RECSTI)
+- [RECSTI](https://www.codechef.com/COOK140B/problems/RECSTI)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -492,7 +504,7 @@ Chef can then continue applying this operation on the smaller sticks he obtains,
 
 Can Chef obtain a stick of length exactly X by doing this?
 
-* [BREAKSTICK](https://www.codechef.com/START41B/problems/BREAKSTICK)
+- [BREAKSTICK](https://www.codechef.com/START41B/problems/BREAKSTICK)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -510,7 +522,7 @@ void solve()
         return;
     }
     cout << "YES" << endl;
-        
+
 }
 
 int main()
@@ -534,13 +546,13 @@ You are given two integers L and R(L+3≤R). Output any four distinct integers b
 
 More formally, output any four integers a1,a2,a3,a4 such that:
 
-* a1⊕a2⊕a3⊕a4=0
-* L≤a1,a2,a3,a4≤R
-* ai=aj if and only if i=j
+- a1⊕a2⊕a3⊕a4=0
+- L≤a1,a2,a3,a4≤R
+- ai=aj if and only if i=j
 
 If more than one such quadruple exists, you may output any of them. If no such quadruple exists, print −1 instead.
 
-* [SIMPLE_XOR](https://www.codechef.com/START41B/problems/SIMPLE_XOR)
+- [SIMPLE_XOR](https://www.codechef.com/START41B/problems/SIMPLE_XOR)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -587,7 +599,7 @@ In one operation, Chef can choose any index i (1≤i≤N) and multiply the eleme
 
 Find the minimum number of operations required to make the sum of the array equal to 0. Output -1 if the sum of the array cannot be made 0.
 
-* [MINFLIPS](https://www.codechef.com/START42C/problems/MINFLIPS)
+- [MINFLIPS](https://www.codechef.com/START42C/problems/MINFLIPS)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -627,21 +639,21 @@ int main()
 }
 ```
 
-#### B. Divisible by 3 
+#### B. Divisible by 3
 
 Stack likes the number 3 a lot.
 
 He has two non-negative integers A and B.
 In one operation, Stack can do either of the following:
 
-* A:=|A−B| (change A to |A−B|)
-* B:=|A−B| (change B to |A−B|)
+- A:=|A−B| (change A to |A−B|)
+- B:=|A−B| (change B to |A−B|)
 
 **Note: ** that |X| denotes absolute value of X. For example |−7|=7 and |4|=4.
 
 Find the minimum number of operations after which at least one integer out of A and B becomes divisible by 3.
 
-* [MODULO3](https://www.codechef.com/START42C/problems/MODULO3)
+- [MODULO3](https://www.codechef.com/START42C/problems/MODULO3)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -677,16 +689,16 @@ int main()
 }
 ```
 
-#### C. How Many Maximums 
+#### C. How Many Maximums
 
 From an array A containing N integers, you construct a binary string S of length (N−1) as follows. For all 1≤i<N:
 
-* If Ai<Ai+1, then Si=0.
-* If Ai>Ai+1, then Si=1.
+- If Ai<Ai+1, then Si=0.
+- If Ai>Ai+1, then Si=1.
 
 Given the string S, determine the count of indices i (1≤i≤N) such that it is possible for Ai to be the maximum element of the array A.
 
-* [HOWMANYMAX](https://www.codechef.com/START42C/problems/HOWMANYMAX)
+- [HOWMANYMAX](https://www.codechef.com/START42C/problems/HOWMANYMAX)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -729,14 +741,14 @@ int main()
 }
 ```
 
-#### D. Minimum or Maximum 
+#### D. Minimum or Maximum
 
 From a hidden array A of length N, Stack constructs an array B of length N such that:
 
 For all i (1≤i≤N), Bi=max(A1,A2,…,Ai) or Bi=min(A1,A2,…,Ai).
 For the given array B of length N, Stack wants you to check whether a possible array A exists or not.
 
-* [MINORMAX](https://www.codechef.com/START42C/problems/MINORMAX)
+- [MINORMAX](https://www.codechef.com/START42C/problems/MINORMAX)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -783,20 +795,20 @@ int main()
 
 While playing chess, Chef noticed that it is generally advantageous for him if his knight attacks two or more of his opponent's pieces simultaneously. To practice this skill, Chef decided to perform the following exercise:
 
-* Take an empty 8 \times 88×8 chessboard, and any two white pieces.
+- Take an empty 8 \times 88×8 chessboard, and any two white pieces.
 
-* Choose two distinct cells $ (X_1, Y_1), (X_2, Y_2) $ and place the pieces on those cells (the cell at the intersection of the ii-th row and jj-th column is denoted (i, j)(i,j)).
+- Choose two distinct cells $ (X_1, Y_1), (X_2, Y_2) $ and place the pieces on those cells (the cell at the intersection of the ii-th row and jj-th column is denoted (i, j)(i,j)).
 
-* Check if there exists an empty cell where he can place a black knight in such a way that the knight attacks both the white pieces simultaneously.
+- Check if there exists an empty cell where he can place a black knight in such a way that the knight attacks both the white pieces simultaneously.
 
 Given the position of the two white pieces $ (X_1, Y_1), (X_2, Y_2) $, print 'YES' if there exists an empty cell where he can place a black knight in such a way that the knight attacks both the white pieces simultaneously, otherwise print NO.
 
 For reference, a knight attacks a piece placed in a cell that is:
 
-* One square horizontally and two squares vertically away from it, or
-* One square vertically and two squares horizontally away from it
+- One square horizontally and two squares vertically away from it, or
+- One square vertically and two squares horizontally away from it
 
-* [Practice](https://www.codechef.com/submit/KNIGHTATTACK?tab=statement)
+- [Practice](https://www.codechef.com/submit/KNIGHTATTACK?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -867,7 +879,7 @@ Alice jogs everyday to keep herself fit and active. She noticed that she burns $
 
 What is the total number of calories that Alice burns after jogging for $N$ kilometers? The answer can be very large, so report it modulo $10^9 + 7$.
 
-* [Practice](https://www.codechef.com/submit/JOGGING?tab=statement)
+- [Practice](https://www.codechef.com/submit/JOGGING?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -884,7 +896,7 @@ ll myPow(ll x, ll y)
 
     if (y % 2 == 0)
         return (myPow(x, y / 2) * myPow(x, y / 2)) % MOD;
-    
+
     return (x * myPow(x, y / 2) * myPow(x, y / 2) % MOD);
 }
 
@@ -899,7 +911,7 @@ void solve()
     ll y = myPow(2, n);
 
     cout << (x * y) % MOD << endl;
-    
+
 }
 
 int main()
@@ -920,12 +932,12 @@ int main()
 
 A bracket sequence SS is called dense if one of the following is true:
 
-* SS is empty.
-* S = (X)S=(X) where XX is dense.
+- SS is empty.
+- S = (X)S=(X) where XX is dense.
 
 You are given a bracket sequence SS. What is the **minimum** number of brackets you must remove to make it dense?
 
-* [Practice](https://www.codechef.com/submit/DENSE?tab=statement)
+- [Practice](https://www.codechef.com/submit/DENSE?tab=statement)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -963,7 +975,7 @@ void solve()
         }
 
         cout << ans << endl;
-    
+
 }
 
 int main()
@@ -992,7 +1004,7 @@ In one operation Chef can choose any index i (1≤i≤N−1) and swap Pi and Pi+
 
 **Note:** An array $P$ is said to be a permutation of ${1,2,3,…,N}$ if $P$ contains each element of ${1,2,3,…,N}$ exactly once.
 
-* [Practice](https://www.codechef.com/START47C/problems/ENDSORTED)
+- [Practice](https://www.codechef.com/START47C/problems/ENDSORTED)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1018,7 +1030,7 @@ ll solve()
     if(i_n < i_0)
         ans--;
 
-    return ans;    
+    return ans;
 
 }
 
@@ -1036,13 +1048,13 @@ int main()
 }
 ```
 
-#### Construct N 
+#### Construct N
 
 You are given an integer $N$. Find if it is possible to represent $N$ as the sum of several(possibly zero) 2's and several(possibly zero) 7's.
 
 Formally, find if there exist two integers $X$,$Y$ $(X,Y≥0)$ such that $2⋅X+7⋅Y=N$.
 
-* [Practice](https://www.codechef.com/START47C/problems/CONN)
+- [Practice](https://www.codechef.com/START47C/problems/CONN)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1057,7 +1069,7 @@ bool solve()
 
     if(n == 1 or n==3 or n== 5)
         return false;
-    
+
     if(n%2 == 0 || n%7 == 0)
         return true;
 
@@ -1084,7 +1096,7 @@ int main()
         if(solve())
         cout << "YES\n";
         else
-        cout << "NO\n"; 
+        cout << "NO\n";
     return 0;
 }
 ```
@@ -1093,12 +1105,12 @@ int main()
 
 There are only 2 type of denominations in Chefland:
 
-* Coins worth 1 rupee each
-* Notes worth 10 rupees each
+- Coins worth 1 rupee each
+- Notes worth 10 rupees each
 
 Chef wants to pay his friend exactly $X$ rupees. What is the minimum number of coins Chef needs to pay exactly X rupees?
 
-* [Practice](https://www.codechef.com/START47C/problems/MINCOINSREQ)
+- [Practice](https://www.codechef.com/START47C/problems/MINCOINSREQ)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1122,7 +1134,7 @@ int main()
     cin >> test;
 
     for (ll t = 0; t < test; ++t)
-        cout << solve() << endl; 
+        cout << solve() << endl;
     return 0;
 }
 ```
@@ -1135,7 +1147,7 @@ An electronics shop sells red and blue lamps. A red lamp costs $X$ rupees and a 
 
 Chef is going to buy **exactly** $N$ lamps from this shop. Find the minimum amount of money Chef needs to pay such that at least K of the lamps bought are red.
 
-* [Practice](https://www.codechef.com/START48C/problems/BUYLAMP)
+- [Practice](https://www.codechef.com/START48C/problems/BUYLAMP)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1171,12 +1183,13 @@ int main()
 
 You have a grid with N rows and M columns. You have two types of tiles — one of dimensions $2×2$ and the other of dimensions $1×1$. You want to cover the grid using these two types of tiles in such a way that:
 2×2
-* Each cell of the grid is covered by exactly one tile; and
-* The number of $1×1$ tiles used is minimized.
+
+- Each cell of the grid is covered by exactly one tile; and
+- The number of $1×1$ tiles used is minimized.
 
 Find the minimum number of $1×1$ tiles you have to use to fill the grid.
 
-* [Practice](https://www.codechef.com/START48C/problems/GRIDBL)
+- [Practice](https://www.codechef.com/START48C/problems/GRIDBL)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1212,14 +1225,14 @@ int main()
 
 ou are given a binary string $S$ of length $N$. You want to obtain a palindrome from $S$ by applying the following operation at most $⌊N2⌋$ times:
 
-* Choose an index $i(1≤i≤|S|)$, delete the character $S_i$ from S and concatenate the remaining parts of the string. Here $|S|$ denotes the current length of string $S$.
-For example, if $S$ = $11010$, then applying the operation on index $i=2$ makes $S=1010$.
+- Choose an index $i(1≤i≤|S|)$, delete the character $S_i$ from S and concatenate the remaining parts of the string. Here $|S|$ denotes the current length of string $S$.
+  For example, if $S$ = $11010$, then applying the operation on index $i=2$ makes $S=1010$.
 
 Note that after each operation, the length of the string $S$ decreases by one.
 
 Find **any palindrome** you can obtain after the operations. It can be proved that it is always possible to obtain a palindrome from S under the given constraints.
 
-* [Practice](https://www.codechef.com/START48C/problems/MAKEPAL2)
+- [Practice](https://www.codechef.com/START48C/problems/MAKEPAL2)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1240,7 +1253,7 @@ string solve()
   string ans(zero < one ? one : zero, zero < one ? '1' : '0');
 
   return ans;
-  
+
 }
 
 int main()

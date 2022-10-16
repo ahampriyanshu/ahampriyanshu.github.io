@@ -4,7 +4,27 @@ author: ahampriyanshu
 categories: [Contests, GFG]
 excerpt: C++ Solutions to Problem Of The Day Geeks For Geeks, September 2022
 math: true
-tags: [gfg, geeksforgeeks, geeks, for, potd, problem, of, the, day, september, ds, array, tree, trie, string, stacks, queue, linked list]
+tags:
+  [
+    gfg,
+    geeksforgeeks,
+    geeks,
+    for,
+    potd,
+    problem,
+    of,
+    the,
+    day,
+    september,
+    ds,
+    array,
+    tree,
+    trie,
+    string,
+    stacks,
+    queue,
+    linked list,
+  ]
 ---
 
 ## 02 | Minimum Cost to cut a board into squares
@@ -17,11 +37,11 @@ A board of length $M$ and width $N$ is given. The task is to break this board in
     int minimumCostOfBreaking(vector<int> X, vector<int> Y, int M, int N){
     sort(X.rbegin(), X.rend());
     sort(Y.rbegin(), Y.rend());
-    
+
     int x_pos = 0, y_pos = 0;
     int h = 1, v = 1;
     int ans = 0;
-    
+
     while(x_pos != X.size() && y_pos != Y.size()){
         if(X[x_pos] >= Y[y_pos]){
             ans += X[x_pos++] * v;
@@ -31,14 +51,14 @@ A board of length $M$ and width $N$ is given. The task is to break this board in
             v++;
         }
     }
-    
+
     while(x_pos != X.size()) {
         ans += X[x_pos++] * v;
     }
     while(y_pos != Y.size()) {
         ans += Y[y_pos++] * h;
     }
-    
+
     return ans;
     }
 ```
@@ -51,17 +71,17 @@ Given an array $arr[]$ of $N$ integers. Find the contiguous sub-array(containing
 
 ```cpp
   int smallestSumSubarray(vector<int>& a){
-      
+
       int sum = INT_MAX, local = 0;
 
       for(auto e: a){
           local += e;
-          
+
           sum = min(sum, local);
                    if(local >= 0)
           local = 0;
       }
-      
+
       return sum;
   }
 ```
@@ -89,8 +109,8 @@ You are given two arrays A and B of equal length N. Your task is to pair each el
 
 ## 25 | Queries on a Matrix
 
-You are given a matrix of dimension n*n. All the cells are initially, zero. You are given Q queries, which contains 4 integers a b c d where (a,b) is the TOP LEFT cell and (c,d) is the Bottom Right cell of a submatrix. Now, all the cells of this submatrix have to be incremented by one. After all the Q queries have been performed. Your task is to find the final resulting Matrix.
-**Note:** Zero-Based Indexing is used for cells of the matrix. 
+You are given a matrix of dimension n\*n. All the cells are initially, zero. You are given Q queries, which contains 4 integers a b c d where (a,b) is the TOP LEFT cell and (c,d) is the Bottom Right cell of a submatrix. Now, all the cells of this submatrix have to be incremented by one. After all the Q queries have been performed. Your task is to find the final resulting Matrix.
+**Note:** Zero-Based Indexing is used for cells of the matrix.
 
 <a href="https://practice.geeksforgeeks.org/problems/queries-on-a-matrix0443/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
@@ -111,7 +131,7 @@ You are given a matrix of dimension n*n. All the cells are initially, zero. You 
 
         }
 
-        return mat; 
+        return mat;
     }
 ```
 
@@ -131,23 +151,23 @@ The game begins with Tom playing the first move. Both Tom and Jerry play optimal
 
 ## 27 | Minimum Cost of ropes
 
-There are given N ropes of different lengths, we need to connect these ropes into one rope. The cost to connect two ropes is equal to sum of their lengths. The task is to connect the ropes with minimum cost. Given N size array arr[] contains the lengths of the ropes. 
+There are given N ropes of different lengths, we need to connect these ropes into one rope. The cost to connect two ropes is equal to sum of their lengths. The task is to connect the ropes with minimum cost. Given N size array arr[] contains the lengths of the ropes.
 
 <a href="https://practice.geeksforgeeks.org/problems/stack-permutations/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
 ```cpp
     long long minCost(long long arr[], long long n) {
-    
+
     priority_queue<long long, vector<long long>, greater<long long>> pq;
-      
+
     for(int i = 0;i<n;i++)
         pq.push(arr[i]);
-      
+
     long long ans = 0;
     while(!pq.empty()){
         long long top = pq.top();
         pq.pop();
-         
+
         if(pq.empty()) break;
         long long top2 = pq.top();
         pq.pop();
@@ -166,9 +186,9 @@ Geek is playing an array game. He is weak in the concepts of arrays. Geek is giv
 
 ```cpp
     bool isFit(int arr[], int brr[], int n){
-        
+
         sort(arr,arr+n);
-        sort(brr,brr+n);    
+        sort(brr,brr+n);
 
         for(int i=0;i<n;i++)
             if(arr[i]>brr[i])

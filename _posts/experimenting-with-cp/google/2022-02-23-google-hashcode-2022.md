@@ -3,7 +3,7 @@ title: "Google Hashcode 2022"
 author: ahampriyanshu
 categories: [Contests, Google]
 excerpt: C++ Solutions to Google Hashcode Online Qualification Round, 2022.
-tags: [live, contest, practice, round, google, hashcode, '2022', pizza]
+tags: [live, contest, practice, round, google, hashcode, "2022", pizza]
 ---
 
 ## Practice Round
@@ -24,12 +24,11 @@ Each client is OK with additional ingredients they neither like or dislike being
 ### Input
 
 - The first line contains one integer 1≤C≤105 - the number of potential clients.
-- The following 2×C lines describe the clients’ preferences in the following format:
-    - First line contains integer 1≤L≤5, followed by L names of ingredients a client likes, delimited by spaces.
-    - Second line contains integer 0≤D≤5, followed by D names of ingredients a client dislikes, delimited by spaces.
-Each ingredient name consists of between 1 and 15 ASCII characters. Each character is one of the lowercase letters (a-z) or a digit (0-9).
+- The following 2×C lines describe the clients’ preferences in the following format: - First line contains integer 1≤L≤5, followed by L names of ingredients a client likes, delimited by spaces. - Second line contains integer 0≤D≤5, followed by D names of ingredients a client dislikes, delimited by spaces.
+  Each ingredient name consists of between 1 and 15 ASCII characters. Each character is one of the lowercase letters (a-z) or a digit (0-9).
 
 ### Input Data
+
 save_alt Full input (zipped)
 save_alt A - An example
 save_alt B - Basic
@@ -38,13 +37,15 @@ save_alt D - Difficult
 save_alt E - Elaborate
 
 ### Submission
+
 The submission should consist of one line consisting of a single number 0≤N followed by a list of N ingredients to put on the only pizza available in the pizzeria, separated by spaces. The list of ingredients should contain only the ingredients mentioned by at least one client, without duplicates.
 
 ### Scoring
+
 A solution scores one point for each client that will come to your pizzeria. A client will come to your pizzeria if all the ingredients they like are on the pizza and none of the ingredients they dislike are on the pizza.
 
-
 ### Sample Input
+
 ```
 3
 2 cheese peppers
@@ -56,15 +57,16 @@ A solution scores one point for each client that will come to your pizzeria. A c
 ```
 
 ### Sample Output
+
 ```
 4 cheese mushrooms tomatoes peppers
 ```
 
 In the Sample Input there are 3 potential clients:
 
-* The first client likes 2 ingredients, cheese and peppers, and does not dislike anything.
-* The second client likes only basil and dislikes only pineapple.
-* The third client likes mushrooms and tomatoes and dislikes only basil
+- The first client likes 2 ingredients, cheese and peppers, and does not dislike anything.
+- The second client likes only basil and dislikes only pineapple.
+- The third client likes mushrooms and tomatoes and dislikes only basil
 
 The picture below shows the preferences of 3 potential clients.0
 
@@ -74,9 +76,9 @@ In this particular Sample Output, we choose to use 4 ingredients in the pizza: c
 
 ![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1hIGoQsQtyiDWcxGYxVj78Z1bgX7BQGLk8hbT52jElrlhFJ_z578iJOm4zPjOBcSXeTl-6eQ/pizza-sample-output.png)
 
-* The first client likes the pizza because it contains both cheese and peppers, which they like.
-* The second client does not like the pizza: it does not contain basil which they like.
-* The third client likes the pizza because it contains mushrooms and tomatoes, which they like, and does not contain basil which they do not like.
+- The first client likes the pizza because it contains both cheese and peppers, which they like.
+- The second client does not like the pizza: it does not contain basil which they like.
+- The third client likes the pizza because it contains mushrooms and tomatoes, which they like, and does not contain basil which they do not like.
 
 This means a submission of this output would score 2 points for this case, because two clients (the first and third ones) would like this pizza.
 
@@ -151,7 +153,7 @@ int main(int argc, char *argv[])
 #### Bash script
 
 ```bash
-g++ sol.cpp 
+g++ sol.cpp
 ./a.out a.txt out_a.txt
 g++ sol.cpp
 ./a.out b.txt out_b.txt
@@ -176,7 +178,7 @@ void simulator(unordered_set<string> selected)
     for (int i = 0; i < total_selected; i++)
     {
         flag = true;
-        
+
         for (int j = 0; j < like[i].size(), flag; j++)
             if (selected.find(like[i][j]) == selected.end())
                 flag = false;
@@ -193,7 +195,7 @@ void simulator(unordered_set<string> selected)
 }
 ```
 
-## Qualification Round 
+## Qualification Round
 
 ### Introduction
 
@@ -207,31 +209,31 @@ There are N contributors. Each contributor has a name and one or more skills at 
 
 For example, three contributors could have the following skills:
 
-* Anna: Python level 3
-* Bob: C++ level 3
-* Maria: HTML level 4, CSS level 6
+- Anna: Python level 3
+- Bob: C++ level 3
+- Maria: HTML level 4, CSS level 6
 
 ![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U2WsFcv1tbJR9W7C9ieiIzyOTZT5pL1XI7nQCqp-BLEmgbSpO52Zvor3hAbPcNf/contributors.png)
 
 Three contributors and their skills, as described in the example above.
 
 #### Projects
+
 There are M projects. Each project is described by:
 
-* its name
-* the duration of the project in days (how long it takes to complete a project once it is started)
-* the score awarded for completing the project
-* the “best before” time in days – if the project last day of work is strictly before the indicated day, it earns the full score. If it’s late (that is, the project is still worked on during or after its "best before day"), it gets one point less for each day it is late, but no less than zero points. See also the example in the "Assignments" section below.
-* a list of roles for contributors working on the project
+- its name
+- the duration of the project in days (how long it takes to complete a project once it is started)
+- the score awarded for completing the project
+- the “best before” time in days – if the project last day of work is strictly before the indicated day, it earns the full score. If it’s late (that is, the project is still worked on during or after its "best before day"), it gets one point less for each day it is late, but no less than zero points. See also the example in the "Assignments" section below.
+- a list of roles for contributors working on the project
 
 Each project has one or more roles that need to be filled by contributors. Each role requires one skill at a specific level, and can be filled by a single contributor. Each contributor can fill **at most one role** on a single project.
 
 For example, a project called "WebServer" could have the following roles:
 
-* Role 0 requiring Python level 3
-* Role 1 requiring HTML level 1
-* Role 2 requiring CSS level 5
-
+- Role 0 requiring Python level 3
+- Role 1 requiring HTML level 1
+- Role 2 requiring CSS level 5
 
 ![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U2WsFcv1tbJR9W7C9ieiIzyOTZT5pL1XI7nQCqp-BLEmgbSpO52Zvor3hAbPcNf/contributors.png)
 
@@ -241,8 +243,8 @@ The 3 roles that need to be filled for project WebServer, as described in the ex
 
 A contributor can be assigned to a project for a specific role (at most one role in a single project), if they either:
 
-* have the skill at the required level or higher; or
-* have the skill at exactly one level below the required level, **only if another contributor on the same project (assigned to another role), has this skill at the required level or higher.** In this case, the contributor will be mentored by their colleague :)
+- have the skill at the required level or higher; or
+- have the skill at exactly one level below the required level, **only if another contributor on the same project (assigned to another role), has this skill at the required level or higher.** In this case, the contributor will be mentored by their colleague :)
 
 One contributor can mentor multiple people at once, including for the same skill. A contributor can mentor and be mentored by other contributors at the same time.
 
@@ -263,13 +265,14 @@ Role 2 (requires CSS level 5) is assigned to Maria (HTML level 4, CSS level 6)
 ☑️ Maria has a higher level than the one required for CSS.
 ☑️ Maria can mentor Bob on HTML since she has HTML level 4.
 
-
 ### Assignments
+
 Each contributor can start working on day 0 and can be working on at most one project at the same time. Once the work on a project starts, its contributors will be working on it the number of days equal to its duration and then become available to work on other projects.
 
 For example, if the project WebServer has duration of 7 days and starts on day 0, the contributors assigned to it will be working on it during: day 0, day 1, day 2, day 3, day 4, day 5 and day 6. On day 7 the project is already completed. Contributors assigned to it can work on another project on day 7.
 
 ### Learning
+
 Completing a project is a learning opportunity, especially for the contributors working on the edge of their existing abilities! When each project is completed:
 
 contributors working in roles where the required skill level was equal or higher than their current level improve their skill level by one level
@@ -289,38 +292,40 @@ Maria improves neither the CSS skill (because Maria’s CSS is already at a leve
 - [Full input zipped](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1lpQUmopAbOuMBI6wtQAYkP2t0iSwi7bH00mY1btqaeTo5XLQT8j5P1e42Qw/input_data.zip?dl=1)
 
 ### File format
+
 Each input data set is provided in a plain text file. The file contains only ASCII characters with lines ending with a single '\n' character (also called “UNIX-style” line endings). When multiple strings and numbers are given in one line, they are separated by a single space between each two elements.
 
 The first line of the data set contains:
 
-* an integer C (1 ≤ C≤ 105) – the number of contributors,
-* an integer P (1 ≤ P ≤ 105) – the number of projects.
+- an integer C (1 ≤ C≤ 105) – the number of contributors,
+- an integer P (1 ≤ P ≤ 105) – the number of projects.
 
 This is followed by C sections describing individual contributors. Each contributor is described by the following lines:
 
 - the first line contains:
-    - the contributor's name (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, or numbers 0-9),
-    - an integer N (1≤ N ≤ 100) - the number of skills of the contributor.
+  - the contributor's name (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, or numbers 0-9),
+  - an integer N (1≤ N ≤ 100) - the number of skills of the contributor.
 - the next N lines describe individual skills of the contributor. Each such line contains:
-    - the name of the skill (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, numbers 0-9, dashes '-' or pluses '+'),
-    - an integer Li (1≤ Li ≤ 10) - skill level.
+  - the name of the skill (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, numbers 0-9, dashes '-' or pluses '+'),
+  - an integer Li (1≤ Li ≤ 10) - skill level.
 
 This is followed by P sections describing individual projects. Each project is described by the following lines:
 
 - the first line contains:
-    - the name of the project (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z or numbers 0-9),
-    - an integer Di (1 ≤Di ≤ 105) – the number of days it takes to complete the project,
-    - an integer Si (1 ≤ Si ≤ 105) – the score awarded for project’s completion,
-    - an integer Bi (1 ≤ Bi ≤ 105) – the “best before” day for the project,
-    - an integer Ri (1 ≤ Ri ≤ 100) – the number of roles in the project.
+
+  - the name of the project (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z or numbers 0-9),
+  - an integer Di (1 ≤Di ≤ 105) – the number of days it takes to complete the project,
+  - an integer Si (1 ≤ Si ≤ 105) – the score awarded for project’s completion,
+  - an integer Bi (1 ≤ Bi ≤ 105) – the “best before” day for the project,
+  - an integer Ri (1 ≤ Ri ≤ 100) – the number of roles in the project.
 
 - the next Ri lines describe the skills in the project:
-    - a string Xk – the name of the skill (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, numbers 0-9, dashes '-' or pluses '+'),
-    - an integer Lk (1≤Lk≤100) – the required skill level.
+  - a string Xk – the name of the skill (ASCII string of at most 20 characters, all of which are lowercase or uppercase English alphabet letters a-z and A-Z, numbers 0-9, dashes '-' or pluses '+'),
+  - an integer Lk (1≤Lk≤100) – the required skill level.
 
 #### Example
 
-Input file	Description
+Input file Description
 
 ```
 3 3
@@ -343,24 +348,25 @@ HTML 3
 
 3 contributors, 3 projects
 contributor Anna
- has C++ skill at level 2
+has C++ skill at level 2
 contributor Bob
- has HTML skill at level 5
- has CSS skill at level 5
+has HTML skill at level 5
+has CSS skill at level 5
 contributor Maria
- has skill Python at level 3
+has skill Python at level 3
 project Logging needs 1 contributor
- that needs to have C++ at level ≥ 3 (2 with mentoring)
+that needs to have C++ at level ≥ 3 (2 with mentoring)
 project WebServer needs 2 contributors
- first contributor needs to have HTML at level ≥ 3 (2 with mentoring)
- second contributor needs to have C++ at level ≥ 2 (1 with mentoring)
+first contributor needs to have HTML at level ≥ 3 (2 with mentoring)
+second contributor needs to have C++ at level ≥ 2 (1 with mentoring)
 project WebChat needs 2 contributors
- first contributor needs to have Python at level ≥ 3 (2 with mentoring)
- second contributor needs to have HTML at level ≥ 3 (2 with mentoring)
+first contributor needs to have Python at level ≥ 3 (2 with mentoring)
+second contributor needs to have HTML at level ≥ 3 (2 with mentoring)
 Three contributors and their skills, as described in the input above.
 The 3 projects that are described in the input.
 
 ### Submissions
+
 The submission file should be a plaintext file containing only ASCII characters.
 
 File format
@@ -374,7 +380,8 @@ A single line containing the name of the project (as it appears in the input fil
 A single line containing the names of the contributors assigned to each of the project roles, separated by single spaces and listed in the same order as the roles appear in the input file.
 
 #### Example
-Submission file	Description
+
+Submission file Description
 
 ```
 3
@@ -394,8 +401,8 @@ Maria → first role, Bob → second role
 ```
 
 ### Scoring
-Each contributor can only work on one project at a time. If one contributor is assigned to multiple projects, the contributor will work on them in the same order as they appear in the submission file. Each project starts immediately on the first day on which all the assigned contributors are available.
 
+Each contributor can only work on one project at a time. If one contributor is assigned to multiple projects, the contributor will work on them in the same order as they appear in the submission file. Each project starts immediately on the first day on which all the assigned contributors are available.
 
 ![loading image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U132mLZ0SjTIyxlnbvApx5K_5wyCiODuxfq8Inqm9zWkhZS_i_wH9K4a0s/schedule.png)
 
@@ -407,7 +414,6 @@ Each project that is completed successfully receives its assigned score, as defi
 The total score is the sum of scores for all correctly completed projects.
 
 The example submission results in this timeline:
-
 
 **Day 0 to day 6:** Bob and Anna are working on project WebServer (they both have the skills required).
 
@@ -653,7 +659,7 @@ int main(int argc, char **argv)
 #### Bash script
 
 ```bash
-g++ sol.cpp 
+g++ sol.cpp
 ./a.out a.txt out_a.txt
 g++ sol.cpp
 ./a.out b.txt out_b.txt

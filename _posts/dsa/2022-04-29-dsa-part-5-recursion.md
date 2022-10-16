@@ -6,28 +6,28 @@ mermaid: true
 categories:
   - DSA
 tags:
-  - 'recursion'
-  - 'tail recursion'
-  - 'is_sorted()'
-  - 'fibonacci series'
-  - 'subset'
-  - 'powerset'
+  - "recursion"
+  - "tail recursion"
+  - "is_sorted()"
+  - "fibonacci series"
+  - "subset"
+  - "powerset"
   - josephus'
-  - 'tower of hanoi'
-  - 'check palindrome'
+  - "tower of hanoi"
+  - "check palindrome"
 ---
 
 ## Recursion
 
-Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow if the base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction). 
+Recursion is a process of a function calling itself. It can cause segmentation fault/stack overflow if the base case is implemented poorly. It is based on **PMI**(Principle of Mathematical Induction).
 
 A program/algo based on a recursive approach is memory-consuming but easier(and sometimes more natural, i.e. DFS, BFS, MergeSort) to implement when compared to the iterative solution.
 
 ### Tail Recursion
 
-When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are as the compiler replaces the recursive call with the ``GOTO`` statement. Hence, no extra memory is needed to store the previous function in the stack.
+When the last step in a recursive function is the recursive call itself. These kinds of recursive functions are as the compiler replaces the recursive call with the `GOTO` statement. Hence, no extra memory is needed to store the previous function in the stack.
 
-* No-Tail recursion
+- No-Tail recursion
 
 ```cpp
 int fact(int n)
@@ -40,7 +40,7 @@ int fact(int n)
 
 **Auxiliary Space:** $O(n)$
 
-* Tail recursion
+- Tail recursion
 
 ```cpp
 int fact(int n, int k)
@@ -55,9 +55,9 @@ int fact(int n, int k)
 
 ### Tail vs Non-Tail
 
-| Tail | Non-Tail |
-| -- | -- |
-| Quick Sort | Merge Sort |
+| Tail                        | Non-Tail            |
+| --------------------------- | ------------------- |
+| Quick Sort                  | Merge Sort          |
 | Inorder, Preorder Traversal | Postorder Traversal |
 
 ## Problems
@@ -93,13 +93,13 @@ Implement pow(x, n), which calculates x raised to the power n (i.e., x<sup>n</su
 
 ```cpp
 double myPow(double x, int n) {
-  
+
   if(n==0) return 1.0;
       double y = myPow(x, n/2);
-      
+
   if(n % 2 == 0)
       return y*y;
-  return n < 0 ? (y*y)/x : x*y*y; 
+  return n < 0 ? (y*y)/x : x*y*y;
 }
 ```
 
@@ -247,11 +247,11 @@ Given an array of length N and an integer x, you need to find and return the las
 ```cpp
 int lastIndex(int input[], int size, int x){
     if(size == 0) return -1;
-    int ans = lastIndex(input+1, size-1, x);    
+    int ans = lastIndex(input+1, size-1, x);
     if(ans == -1)
         if(input[0] != x) return -1;
         else return 0;
-    return ans + 1; 
+    return ans + 1;
 }
 ```
 
@@ -275,20 +275,20 @@ int indexes(int input[], int size, int x, int output[]){
 
 The tower of Hanoi is a famous puzzle where we have three rods and N disks. The objective of the puzzle is to move the entire stack to another rod. You are given the number of discs N. Initially, these discs are in rod 1. You need to print all the steps of the discs movement so that all the discs reach the 3rd rod.
 
-* [Practice](https://practice.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1/)
+- [Practice](https://practice.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1/)
 
 ```cpp
 long long toh(int N, int from, int to, int aux) {
 
         long long count=0;
         if(N==0) return 0;
-       
+
         count += toh(N-1 , from , aux , to);
         cout<<"move disk "<<N<<" from rod "<<from<<" to rod "<<to<<endl;
         count += toh(N-1 , aux, to , from);
-        
+
          return ++count;
-         
+
     }
 ```
 
@@ -298,12 +298,12 @@ Given a string, write a recursive function that checks if the given string is a 
 
 ```cpp
 bool isPalindrome(string s, int i){
-        
+
     if(i > s.size()/2)
        return true ;
 
     return s[i] == s[s.size()-i-1] && isPalindrome(s, i+1) ;
-    
+
 }
 ```
 
@@ -311,7 +311,7 @@ bool isPalindrome(string s, int i){
 
 Given a list arr of N integers, print sums of all subsets in it.
 
-* [Practice](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
+- [Practice](https://practice.geeksforgeeks.org/problems/subset-sums2234/1#)
 
 ```cpp
 class Solution
@@ -337,13 +337,13 @@ public:
 };
 ```
 
-**Time Complexity:** $O(2^n)$ 
+**Time Complexity:** $O(2^n)$
 
 ### Josephus Problem
 
 N people are standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom. Given the total number of person n and a number k which indicates that k-1 persons are skipped and the kth person is killed in the circle. The task is to choose the place in the initial circle so that you are the last one remaining and so survive.
 
-* [Practice](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)
+- [Practice](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)
 
 ```cpp
 int josephus(int n, int k)
@@ -354,13 +354,13 @@ int josephus(int n, int k)
 }
 ```
 
-**Time Complexity:** $O(n)$ 
+**Time Complexity:** $O(n)$
 
 ### Generate powerset
 
-Given a set represented as a string, write a recursive code to print all subsets of it. The subsets can be printed in any order. 
+Given a set represented as a string, write a recursive code to print all subsets of it. The subsets can be printed in any order.
 
-* [Practice](https://www.geeksforgeeks.org/recursive-program-to-generate-power-set/)
+- [Practice](https://www.geeksforgeeks.org/recursive-program-to-generate-power-set/)
 
 <div class="mermaid">
 graph TD;
@@ -387,13 +387,13 @@ void powerset(string str, string curr = "", int index = 0,)
         cout << curr << " ";
         return;
     }
-        
+
     powerset(str,curr,index+1,);
     powerset(str, curr + s[i], sum,index+1,);
 }
 ```
 
-**Time Complexity:** $O(2^n)$ 
+**Time Complexity:** $O(2^n)$
 
 ### LCS
 
@@ -402,23 +402,23 @@ You are given two strings, find the longest common sequece.
 ```cpp
     int longestCommonSubstr (string S1, string S2, int n, int m)
     {
-    if(n == 0 || m == 0) 
+    if(n == 0 || m == 0)
         return 0;
-        
-    if(S1[n-1] == S2[m-1]) 
+
+    if(S1[n-1] == S2[m-1])
         return 1 + longestCommonSubstr(S1, S2, n-1, m-1);
-    
+
     return max(longestCommonSubstr(S1, S2, n, m-1), longestCommonSubstr(S1, S2, n-1, m));
     }
 ```
 
-**Time Complexity:** $O(2^n)$ 
+**Time Complexity:** $O(2^n)$
 
 ### All permutation
 
-A permutation also called an “arrangement number” or “order,” is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has n! permutation. 
+A permutation also called an “arrangement number” or “order,” is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has n! permutation.
 
-* [Practice](https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/)
+- [Practice](https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/)
 
 <div class="mermaid">
 graph TD;
@@ -435,23 +435,23 @@ graph TD;
 
 ```cpp
 void find_permutation(string s, int i=0){
-		    
+
 	if(i == s.length()-1){
 		cout << s << " ";
         return;
 	}
-		        
+
 	for(int j=i; j<s.length(); j++){
 		swap(s[i], s[j]);
-		find_permutation(s, i+1); 
+		find_permutation(s, i+1);
 		swap(s[i], s[j]);
 	}
 }
 ```
 
-### Calculate lenght of the string 
+### Calculate lenght of the string
 
-Given a string calculate length of the string using recursion. 
+Given a string calculate length of the string using recursion.
 
 ```cpp
 int length(string str)
@@ -474,11 +474,10 @@ void length(string str, char c1, char c2)
 dffddf
 if(str[0] == '\0')
     return 0;
-if(str[0] == c1) str[0] = c2;    
+if(str[0] == c1) str[0] = c2;
 return length(str + 1, c1, c2);
-``` 
+```
 
 **Time Complexity:** $O(n)$
 
 **Auxiliary Space:** $O(1)$
-

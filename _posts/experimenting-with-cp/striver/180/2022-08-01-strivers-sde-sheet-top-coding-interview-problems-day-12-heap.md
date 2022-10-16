@@ -4,15 +4,29 @@ author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180
 categories: [Sheets, TakeUforward]
-tags: [striver, tuf, ds, algo, takeUforward, striver180, dsa180, '180', Linked, List, day, '2']
+tags:
+  [
+    striver,
+    tuf,
+    ds,
+    algo,
+    takeUforward,
+    striver180,
+    dsa180,
+    "180",
+    Linked,
+    List,
+    day,
+    "2",
+  ]
 ---
 
 ## Problem 1: Nth Root Of M
 
 You are given two positive integers N and M. You have to find the Nth root of M i.e. M^(1/N).
 
-* [Code Studio](https://www.codingninjas.com/codestudio/problems/1062679)
-* [GFG](https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1/#)
+- [Code Studio](https://www.codingninjas.com/codestudio/problems/1062679)
+- [GFG](https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1/#)
 
 ### Worst
 
@@ -22,7 +36,7 @@ Import math library and use built-in methods.
 
 Apply binary search.
 
-**Time Complexity:** $ O(n*log(m*(d^10))) $ 
+**Time Complexity:** $ O(n*log(m*(d^10))) $
 
 **Auxiliary Space:** $ O(1) $
 
@@ -78,11 +92,11 @@ int main() {
 } // } Driver Code Ends
 ```
 
-### Optimal 
+### Optimal
 
 Apply [Newton-Raphson Method](https://brilliant.org/wiki/newton-raphson-method/)
 
-**Time Complexity:** $ O(log(M) * log(N)) $ 
+**Time Complexity:** $ O(log(M) \* log(N)) $
 
 **Auxiliary Space:** $ O(1) $
 

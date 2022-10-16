@@ -2,366 +2,306 @@
 title: " "
 author: ahampriyanshu
 categories: [Contests, GFG]
-excerpt: C++ Solutions to 
+excerpt: C++ Solutions to
 math: true
 tags: [ds, array, tree, string, stacks, queue, linked list]
 ---
 
-## 01 July | 
+## 01 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 02 July | 
+## 02 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 03 July | 
+## 03 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 04 July | 
+## 04 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 05 July | 
+## 05 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 06 July | 
+## 06 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 07 July | 
+## 07 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 08 July | 
+## 08 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 09 July | 
+## 09 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 10 July | 
+## 10 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 11 July | 
+## 11 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 12 July | 
+## 12 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 13 July | 
+## 13 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 14 July | 
+## 14 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 15 July | 
+## 15 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 16 July | 
+## 16 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 17 July | 
+## 17 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 18 July | 
+## 18 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 19 July | 
+## 19 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 20 July | 
+## 20 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 21 July | 
+## 21 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 22 July | 
+## 22 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 23 July | 
+## 23 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 24 July | 
+## 24 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 25 July | 
+## 25 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 26 July | 
+## 26 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 27 July | 
+## 27 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 28 July | 
+## 28 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 29 July | 
+## 29 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 
 ```
 
-## 30 July | 
+## 30 July |
 
+- [Practice]()
 
-
-* [Practice]()
-
-### 
+###
 
 ```cpp
 

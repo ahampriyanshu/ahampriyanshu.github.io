@@ -17,17 +17,17 @@ Return the number of $'*'$ in s, excluding the $'*'$ between each pair of $'|'$.
 
 Note that each $'|'$ will belong to exactly one pair.
 
-* [Practice](https://leetcode.com/problems/count-asterisks/)
+- [Practice](https://leetcode.com/problems/count-asterisks/)
 
 ```cpp
-int countAsterisks(string s) {  
-    int ans(0), bars(0);        
+int countAsterisks(string s) {
+    int ans(0), bars(0);
     for(char ch:s){
         if(ch == '|')
             bars++;
         if(ch == '*' and bars%2 == 0)
             ans++;
-        }        
-    return ans; 
+        }
+    return ans;
 }
 ```

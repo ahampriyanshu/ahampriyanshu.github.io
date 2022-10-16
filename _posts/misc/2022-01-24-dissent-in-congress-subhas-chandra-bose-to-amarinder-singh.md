@@ -7,7 +7,7 @@ categories:
 tags:
   - GOP
   - Apolitical
-  - 'Indian National Congress'
+  - "Indian National Congress"
 ---
 
 Apolitical: Dissent in the Congress, from Subhas Chandra Bose to Capt. Amarinder Singh

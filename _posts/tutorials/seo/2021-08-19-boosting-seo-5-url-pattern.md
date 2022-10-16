@@ -5,11 +5,11 @@ excerpt: "Boosting SEO organically 5: URL pattern"
 categories:
   - Tech
 tags:
-  - 'google search console'
+  - "google search console"
   - tech
-  - 'google analytics'
-  - 'google tag manager'
-  - 'seo'
+  - "google analytics"
+  - "google tag manager"
+  - "seo"
 ---
 
 Once ...

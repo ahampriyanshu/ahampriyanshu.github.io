@@ -5,7 +5,7 @@ excerpt: "Yesterday PM declared 16th January as the National Start Up Day ..."
 categories:
   - Finance
 tags:
-  - 'start ups'
+  - "start ups"
   - finance
 ---
 

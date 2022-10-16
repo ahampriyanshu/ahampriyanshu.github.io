@@ -4,7 +4,24 @@ author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver’s A2Z DSA Course/Sheet
 categories: [Sheets, TakeUforward]
-tags: [striver, tuf, ds, algo, takeUforward, new, dsa, course, sheet, solution, a2z, binary, trees, step, '13']
+tags:
+  [
+    striver,
+    tuf,
+    ds,
+    algo,
+    takeUforward,
+    new,
+    dsa,
+    course,
+    sheet,
+    solution,
+    a2z,
+    binary,
+    trees,
+    step,
+    "13",
+  ]
 ---
 
 ## Step 13.1
@@ -18,26 +35,26 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 #### Recursive
 
 > Inorder traversal is Left -> Root -> Right. So, we will call dfs recursively on the left node, push the value and do the same for the right child node.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     void dfs(TreeNode* root, vector<int> &ans){
         if(!root) return;
-        
+
         dfs(root->left, ans);
-        
+
         ans.push_back(root->val);
-        
+
         dfs(root->right, ans);
-        
+
     }
-    
+
     vector<int> inorderTraversal(TreeNode* root) {
-        
+
         vector<int> ans;
-        
+
         dfs(root, ans);
-        
+
         return ans;
     }
 ```
@@ -49,7 +66,7 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 #### Iterative
 
 > Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     vector<int> inorderTraversal(TreeNode* root) {
@@ -76,10 +93,10 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 
 #### Morris traversal
 
-> 
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
+
 ```
 
 **Time Complexity:** $ O(n) $
@@ -95,20 +112,20 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 #### Recursive
 
 > Preorder traversal is Root -> Left -> Right. So, we will push the value and call dfs recursively on the left node and the right child node.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     void dfs(TreeNode* root, vector<int> &ans){
-       
+
         if(!root) return;
         ans.push_back(root->val);
         dfs(root->left, ans);
         dfs(root->right, ans);
-        
+
     }
-    
+
     vector<int> preorderTraversal(TreeNode* root) {
-        
+
         vector<int> ans;
         dfs(root, ans);
         return ans;
@@ -122,18 +139,18 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 #### Iterative
 
 > Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure. Another important thing to note is we will first push right node and then the left node. It is due to the LIFO nature of stack.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     vector<int> preorderTraversal(TreeNode* root) {
-        
+
         if(!root) return {};
-        
+
         vector<int> ans;
         stack<TreeNode*> st;
         TreeNode* curr;
         st.push(root);
-        
+
         while(!st.empty()){
             curr = st.top();
             st.pop();
@@ -141,8 +158,8 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
             if (curr->right) st.push(curr->right);
             if (curr->left) st.push(curr->left);
         }
-        
-        
+
+
         return ans;
     }
 ```
@@ -153,10 +170,10 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 
 #### Morris traversal
 
-> 
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
+
 ```
 
 **Time Complexity:** $ O(n) $
@@ -172,7 +189,7 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
 #### Recursive
 
 > Postorder traversal is Left -> Right -> Root. So, we will call dfs recursively on the left node, the right child node and then push the value,
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     void dfs(TreeNode* root, vector<int> &ans){
@@ -181,15 +198,15 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
         dfs(root->left, ans);
         dfs(root->right, ans);
         ans.push_back(root->val);
-        
+
     }
-    
+
     vector<int> postorderTraversal(TreeNode* root) {
-        
+
         vector<int> ans;
-        
+
         dfs(root, ans);
-        
+
         return ans;
     }
 ```
@@ -201,19 +218,19 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
 #### Iterative
 
 > Core logic is exactly similar to the previous approach but in this method instead of calling a recursive helper function we will use stack data structure.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     vector<int> postorderTraversal(TreeNode* root) {
-        
+
         if(!root) return {};
-        
+
         vector<int> ans;
         stack<TreeNode*> s;
         TreeNode* last = NULL;
-        
+
         while(root || !s.empty()){
-			if(root){				
+			if(root){
 				s.push(root);
 				root = root->left;
 			}
@@ -228,7 +245,7 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
 				else root = root->right;
 			}
 		}
-        
+
         return ans;
     }
 ```
@@ -239,10 +256,10 @@ Given the root of a binary tree, return the Postorder traversal of its nodes' va
 
 #### Morris traversal
 
-> 
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
+
 ```
 
 **Time Complexity:** $ O(n) $
@@ -264,7 +281,7 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 #### DFS
 
 > Depth or height of the tree is number of node in path from root node to farthest leaf node. It can be assumed as the maximum height among left or right subtree incremented by 1.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     int maxDepth(TreeNode* root) {
@@ -290,20 +307,20 @@ For this problem, a height-balanced binary tree is defined as:
 #### Top Down
 
 > This question can be broken down as to into three simple steps. First, calculate the height of left and right nodes, check for absolute difference and do the same for both the child subtrees.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     int dfs(TreeNode* root){
         if(!root) return 0;
         return 1 + max(dfs(root->left), dfs(root->right));
     }
-    
+
     bool isBalanced(TreeNode* root) {
 
         if(!root) return true;
         int left = dfs(root->left), right = dfs(root->right);
         return abs(left-right) <= 1 && isBalanced(root->left) && isBalanced(root->right);
-    
+
     }
 ```
 
@@ -314,16 +331,16 @@ For this problem, a height-balanced binary tree is defined as:
 #### Bottom Up
 
 > It is similar to the previous approach but instead of returning the actual height of the child node, we just return -1 to mark that subtree as unbalanced. Thus we visit each node only once.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     int dfs(TreeNode* root) {
 
         if (!root) return 0;
-        int left = dfs(root->left), right = dfs(root->right);   
+        int left = dfs(root->left), right = dfs(root->right);
         return (left == -1 || right == -1 || abs(left-right) > 1) ? -1 : max(left, right)+1;
     }
-    
+
     bool isBalanced(TreeNode* root) {
         return dfs(root) != -1;
     }
@@ -346,24 +363,24 @@ For this problem, a height-balanced binary tree is defined as:
 #### Recursive
 
 > This question can be broken down as to into three simple steps. First, calculate the height of left and right nodes, check for absolute difference and do the same for both the child subtrees.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     int maxdiadepth = 0;
-    
-    int dfs(TreeNode* root){        
+
+    int dfs(TreeNode* root){
         if(root == NULL) return 0;
-        
+
         int leftdepth = dfs(root->left);
         int rightdepth = dfs(root->right);
-        
+
         if(leftdepth + rightdepth > maxdiadepth) maxdiadepth = leftdepth + rightdepth;
-        return max(leftdepth, rightdepth) + 1;     
+        return max(leftdepth, rightdepth) + 1;
     }
-    
-    int diameterOfBinaryTree(TreeNode* root) {        
+
+    int diameterOfBinaryTree(TreeNode* root) {
         dfs(root);
-        
+
         return maxdiadepth;
     }
 ```
@@ -375,16 +392,16 @@ For this problem, a height-balanced binary tree is defined as:
 #### Iterative
 
 > It is similar to the previous approach but instead of returning the actual height of the child node, we just return -1 to mark that subtree as unbalanced. Thus we visit each node only once.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     int dfs(TreeNode* root) {
 
         if (!root) return 0;
-        int left = dfs(root->left), right = dfs(root->right);   
+        int left = dfs(root->left), right = dfs(root->right);
         return (left == -1 || right == -1 || abs(left-right) > 1) ? -1 : max(left, right)+1;
     }
-    
+
     bool isBalanced(TreeNode* root) {
         return dfs(root) != -1;
     }
@@ -405,7 +422,7 @@ Two binary trees are considered the same if they are structurally identical, and
 #### Recursive
 
 > Return true if both p and q are null. Then check if either of them is null or not. Lastly, return false, if they differ in value. Apply the same for left and right child node.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     bool isSameTree(TreeNode* p, TreeNode* q) {
@@ -423,26 +440,26 @@ Two binary trees are considered the same if they are structurally identical, and
 #### Iterative
 
 > It is similar to the previous approach but instead of returning the actual height of the child node, we just return -1 to mark that subtree as unbalanced. Thus we visit each node only once.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```cpp
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        
+
 		queue<TreeNode*> qu;
-        
+
         TreeNode *n1, *n2;
 
 		qu.push(p);
 		qu.push(q);
 
 		while(qu.size() != 0){
-			
+
             n1 = qu.front();
 			qu.pop();
 			n2 = qu.front();
 			qu.pop();
 
-            
+
 			if(!n1 && !n2) continue;
 			if(!n1 || !n2) return false;
 			if(n1->val != n2->val) return false;
@@ -453,9 +470,9 @@ Two binary trees are considered the same if they are structurally identical, and
 			qu.push(n2->right);
 
 		}
-		
+
 		return true;
-        
+
     }
 ```
 

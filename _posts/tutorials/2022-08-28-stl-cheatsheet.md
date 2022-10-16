@@ -9,8 +9,8 @@ tags: [priyanshu, tiwari, ahampriyanshu, C++, STL, Cheat, Sheet]
 
 ## pair
 
-* utility container
-* Used to store two data object in a single container
+- utility container
+- Used to store two data object in a single container
 
 ```cpp
 #include <iostream>
@@ -34,12 +34,12 @@ cout << p.first << " " << p.second;
 
 ## vector
 
-* Linear data structure
-* Contigous in memory
-* Dynamic in size
-* Random access
-* Fast traversal
-* Insertion and deletion at rear node
+- Linear data structure
+- Contigous in memory
+- Dynamic in size
+- Random access
+- Fast traversal
+- Insertion and deletion at rear node
 
 **Initialization**
 
@@ -74,7 +74,7 @@ for(int i=0; i<n; i++){
 }
 
 for(auto e: v)
-  cout << e << " "; 
+  cout << e << " ";
 ```
 
 **Access/Insertion/Deletion**
@@ -135,8 +135,8 @@ cout << *mini << " " << *maxi << endl;
 
 **Upper/Lower Bound**
 
-* Upper : Just greater then x
-* Lower : Not less than x
+- Upper : Just greater then x
+- Lower : Not less than x
 
 ```cpp
 vector<int>::iterator lower, upper;
@@ -150,7 +150,7 @@ cout << (lower - v.begin() + 1) << " " << (upper - v.begin() + 1);
 ```cpp
 // Intialization
 vector<vector<int>> v1( n , vector<int> (m));
-vector<vector<int>> v2( n , vector<int> (m, -1)); 
+vector<vector<int>> v2( n , vector<int> (m, -1));
 
 for(int i = 0; i < n; i++){
     for(int j = 0; j < m; j++)
@@ -176,28 +176,28 @@ bool comp(const vector<int>& v1, const vector<int>& v2){
 sort(vec.begin(), vec.end(), comp);
 ```
 
-| | |
-| -- | -- |
-| v.size() | Returns the size current size |
-| v.max_size() | Returns the size maximum possible size |
-| v.empty() | Returns true if vector is empty |
-| v[i] | Accessing $i_{th}$ element (unsafe: Can cause segmentation errors) |
-| v.at() | Accessing $i_{th}$ element (safe: throws exception when out-of-bound) |
-| v.front() | Accessing the first element |
-| v.back() | Accessing the last element |
-| v.push_back(data) | Inserts at the end |
-| v.emplace_back(data) | Inserts at the end but bit more efficiently |
-| v.insert(pos_itr, data) | Inserts at specified position |
-| v.fill(data) | Fill the whole vector with 'data' |
-| for (auto e : v) | Looping through the vector |
+|                         |                                                                       |
+| ----------------------- | --------------------------------------------------------------------- |
+| v.size()                | Returns the size current size                                         |
+| v.max_size()            | Returns the size maximum possible size                                |
+| v.empty()               | Returns true if vector is empty                                       |
+| v[i]                    | Accessing $i_{th}$ element (unsafe: Can cause segmentation errors)    |
+| v.at()                  | Accessing $i_{th}$ element (safe: throws exception when out-of-bound) |
+| v.front()               | Accessing the first element                                           |
+| v.back()                | Accessing the last element                                            |
+| v.push_back(data)       | Inserts at the end                                                    |
+| v.emplace_back(data)    | Inserts at the end but bit more efficiently                           |
+| v.insert(pos_itr, data) | Inserts at specified position                                         |
+| v.fill(data)            | Fill the whole vector with 'data'                                     |
+| for (auto e : v)        | Looping through the vector                                            |
 
 ## array
 
-* Linear data structure
-* Contigous in memory
-* Fixed in size
-* Random access
-* Fast traversal
+- Linear data structure
+- Contigous in memory
+- Fixed in size
+- Random access
+- Fast traversal
 
 ```cpp
 #include <array>
@@ -212,46 +212,46 @@ int main(){
 }
 ```
 
-| | |
-| -- | -- |
-| a.size() | Returns the size current size |
-| a.max_size() | Returns the size maximum possible size |
-| a.empty() | Returns true if array is empty |
-| a[i] | Accessing $i_{th}$ element (unsafe: Can cause segmentation errors) |
-| a.at() | Accessing $i_{th}$ element (safe: throws exception when out-of-bound) |
-| a.front() | Accessing the first element |
-| a.back() | Accessing the last element |
-| a.fill(data) | Fill the whole array with 'data' |
-| for (auto e : a) | Looping through the array |
+|                  |                                                                       |
+| ---------------- | --------------------------------------------------------------------- |
+| a.size()         | Returns the size current size                                         |
+| a.max_size()     | Returns the size maximum possible size                                |
+| a.empty()        | Returns true if array is empty                                        |
+| a[i]             | Accessing $i_{th}$ element (unsafe: Can cause segmentation errors)    |
+| a.at()           | Accessing $i_{th}$ element (safe: throws exception when out-of-bound) |
+| a.front()        | Accessing the first element                                           |
+| a.back()         | Accessing the last element                                            |
+| a.fill(data)     | Fill the whole array with 'data'                                      |
+| for (auto e : a) | Looping through the array                                             |
 
 ## list
 
-* Doubly Linked List
+- Doubly Linked List
 
 ## string
 
-* 
+-
 
 ## queue
 
-* Linear data structure.
+- Linear data structure.
 
 ## deque
 
 ## Map
 
-* Implemented via balanced binary tree.
+- Implemented via balanced binary tree.
 
 ## unordered_map
 
-* Implemented via hash table
+- Implemented via hash table
 
 ## set
 
-* Implemented via balanced binary tree.
+- Implemented via balanced binary tree.
 
 ## unordered_set
 
-* Implemented via hash table
+- Implemented via hash table
 
 ## Algorithms

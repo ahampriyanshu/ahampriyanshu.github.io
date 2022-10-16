@@ -12,7 +12,7 @@ tags: [leetcode, Contests, challenge, July, june, weekly, biweekly]
 
 Given an integer array nums that does not contain any zeros, find the largest positive integer k such that -k also exists in the array.
 
-Return the positive integer k. If there is no such integer, return``-1``.
+Return the positive integer k. If there is no such integer, return`-1`.
 
 <a href="https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
 
@@ -21,9 +21,9 @@ Return the positive integer k. If there is no such integer, return``-1``.
 ```cpp
     int findMaxK(vector<int>& nums) {
         unordered_map<int, int> mp;
-        
+
         int ans = INT_MIN, key;
-        
+
         for(auto e: nums){
             if(mp[-e]){
                 key = e > 0 ? e : -e;
@@ -31,9 +31,9 @@ Return the positive integer k. If there is no such integer, return``-1``.
             }
             mp[e]++;
         }
-        
+
         return ans == INT_MIN ? -1 : ans;
-        
+
     }
 ```
 
@@ -42,15 +42,15 @@ Return the positive integer k. If there is no such integer, return``-1``.
 ```cpp
     int findMaxK(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-        
+
         int l = 0, r = nums.size() - 1;
-        
+
         while(l < r){
             if(nums[l]*-1 == nums[r])
                 return nums[r];
             else if (nums[l]*-1 < nums[r])
                 r--;
-            else 
+            else
                 l++;
         }
 
@@ -68,7 +68,6 @@ Return the number of **distinct** integers in the final array.
 
 <a href="https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
 
-
 ```cpp
     int rev_num(int n){
         int rev = 0;
@@ -78,7 +77,7 @@ Return the number of **distinct** integers in the final array.
         }
         return rev;
     }
-    
+
     int countDistinctIntegers(vector<int>& nums) {
         unordered_map<int, int> mp;
         for(auto e: nums) {
@@ -91,29 +90,28 @@ Return the number of **distinct** integers in the final array.
 
 ### 2443. Sum of Number and Its Reverse
 
-Given a non-negative integer num, return ``true`` if num can be expressed as the sum of any non-negative integer and its reverse, or ``false`` otherwise.
+Given a non-negative integer num, return `true` if num can be expressed as the sum of any non-negative integer and its reverse, or `false` otherwise.
 
 <a href="https://leetcode.com/problems/sum-of-number-and-its-reverse/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
-
 
 ```cpp
     int rev(int n){
         int rev = 0;
-        while(n){ 
+        while(n){
         rev = (rev*10) + (n%10);
         n /= 10;
         }
         return rev;
     }
-    
+
     bool sumOfNumberAndReverse(int num) {
-        
+
         if((num%11 == 0 && num < 100) || (num%2 == 0 && num < 20)) return true;
 
         for(int i=1; i<=num/2; i++)
             if(i + rev(i) == num)
                 return true;
-        
+
         return false;
     }
 ```

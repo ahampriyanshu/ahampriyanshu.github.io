@@ -12,7 +12,7 @@ tags: [leetcode, programming, skills, back, to, study, plan, easy]
 
 Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive)
 
-* [Practice](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
+- [Practice](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
 
 ```cpp
 class Solution {
@@ -29,7 +29,7 @@ You are given an array of unique integers salary where salary[i] is the salary o
 
 Return the average salary of employees excluding the minimum and maximum salary. Answers within 10-5 of the actual answer will be accepted.
 
-* [Practice](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/)
+- [Practice](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/)
 
 ```cpp
 class Solution {
@@ -42,7 +42,7 @@ public:
             mini = min(e, mini);
             maxi = max(e, maxi);
         }
-        
+
         ans = ans - mini - maxi;
         ans = ans / (salary.size() - 2);
         return ans;
@@ -118,7 +118,7 @@ public:
 
 Given an integer number n, return the difference between the product of its digits and the sum of its digits.
 
-* [Practice](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/submissions/)
+- [Practice](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/submissions/)
 
 ```cpp
 class Solution {
@@ -142,7 +142,7 @@ public:
 
 Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.
 
-* [Practice](https://leetcode.com/problems/largest-perimeter-triangle/)
+- [Practice](https://leetcode.com/problems/largest-perimeter-triangle/)
 
 ```cpp
 class Solution {
@@ -150,11 +150,11 @@ public:
     int largestPerimeter(vector<int>& nums) {
         int  len(nums.size());
         sort(nums.begin(), nums.end(), greater<int>());
-        
+
         for(int i=0; i<len-2; i++)
-            if(nums[i] < nums[i+1] + nums[i+2] ) 
+            if(nums[i] < nums[i+1] + nums[i+2] )
                 return nums[i] + nums[i+1] + nums[i+2];
-        
+
         return 0;
     }
 };
@@ -168,7 +168,7 @@ Return the index (0-indexed) of the valid point with the smallest Manhattan dist
 
 The Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).
 
-* [Practice](https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/)
+- [Practice](https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/)
 
 ```cpp
 class Solution {
@@ -190,7 +190,6 @@ public:
 };
 ```
 
-
 ## Day 4 | Loop
 
 ### 1502. Can Make Arithmetic Progression From Sequence
@@ -199,20 +198,20 @@ A sequence of numbers is called an arithmetic progression if the difference betw
 
 Given an array of numbers arr, return true if the array can be rearranged to form an arithmetic progression. Otherwise, return false.
 
-* [Practice](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/)
+- [Practice](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/)
 
 ```cpp
 class Solution {
 public:
     bool canMakeArithmeticProgression(vector<int>& arr) {
         sort(arr.begin(), arr.end());
-        
+
         int n = arr.size();
-        
+
         if(n  == 2) return true;
         int diff = arr[1] - arr[0];
-        
-        
+
+
         for(int i = 1; i<n-1; i++)
             if(arr[i+1] - arr[i] != diff)
                 return false;
@@ -228,20 +227,20 @@ class Solution {
 public:
     bool canMakeArithmeticProgression(vector<int>& arr) {
         sort(arr.begin(), arr.end());
-        
+
         int n = arr.size();
-        
+
         if(n  == 2) return true;
         int pos, mini = INT_MAX, maxi = INT_MIN;
-        
+
         for (int e : arr) {
             mini = min(mini, e);
             maxi = max(maxi, e);
         }
-        
+
         if ((maxi - mini) % (n - 1)) return false;
         int d = (maxi - mini) / (n - 1);
-            
+
         int i = 0;
         while (i < n) {
             if (arr[i] == mini + i * d) i++;
@@ -253,7 +252,7 @@ public:
             }
         }
         return true;
-        
+
     }
 };
 ```
@@ -264,13 +263,13 @@ Write an algorithm to determine if a number n is happy.
 
 A **happy number** is a number defined by the following process:
 
-* Starting with any positive integer, replace the number by the sum of the squares of its digits.
-* Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-* Those numbers for which this process ends in 1 are happy.
+- Starting with any positive integer, replace the number by the sum of the squares of its digits.
+- Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+- Those numbers for which this process ends in 1 are happy.
 
-Return ``true`` if n is a **happy number**, and ``false`` if not.
+Return `true` if n is a **happy number**, and `false` if not.
 
-* [Practice](https://leetcode.com/problems/happy-number/)
+- [Practice](https://leetcode.com/problems/happy-number/)
 
 ```cpp
 class Solution {
@@ -280,20 +279,20 @@ public:
         unordered_map<int, int> ump;
         ump[n]++;
         while(1){
-            
+
             while(num){
             ans += num % 10 * num % 10;
             num /= 10;
             }
-            
+
             if(ans == 1) return true;
             if(ump[ans]) break;
             ump[ans]++;
             num = ans;
             ans = 0;
-            
+
         }
-     return false;   
+     return false;
     }
 };
 ```
@@ -306,13 +305,13 @@ public:
     int next(int n)
     {
         int sum = 0;
-        
+
         while(n)
         {
             sum += pow(n % 10,2);
             n = n / 10;
         }
-        
+
         return sum;
     }
 
@@ -320,13 +319,13 @@ public:
     bool isHappy(int n) {
         int slow = next(n);
         int fast = next(next(n));
-        
+
         while(slow != fast)
         {
             slow = next(slow);
             fast = next(next(fast));
         }
-        
+
         return fast == 1 ;
     }
 };
@@ -340,13 +339,13 @@ public:
     int next(int n)
     {
         int sum = 0;
-        
+
         while(n)
         {
             sum += pow(n % 10,2);
             n = n / 10;
         }
-        
+
         return sum;
     }
 
@@ -356,7 +355,7 @@ public:
         int fast = next(n);
         int cnt = 1;
         int lim = 2;
-        
+
         while(slow != fast)
         {
             if(cnt == lim)
@@ -367,10 +366,10 @@ public:
             }
             else
                 cnt ++;
-        
+
             fast = next(fast);
         }
-        
+
         return fast == 1 ;
     }
 };
@@ -382,7 +381,7 @@ You are given two strings s1 and s2 of equal length. A string swap is an operati
 
 Return true if it is possible to make both strings equal by performing at most one string swap on exactly one of the strings. Otherwise, return false.
 
-* [Practice](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/)
+- [Practice](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/)
 
 ```cpp
 class Solution {
@@ -397,7 +396,6 @@ public:
 };
 ```
 
-
 ## Day 6 | Array
 
 ### 283. Move Zeroes
@@ -406,19 +404,19 @@ Given an integer array nums, move all 0's to the end of it while maintaining the
 
 **Note :** that you must do this in-place without making a copy of the array.
 
-* [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
+- [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
 
 ```cpp
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
         int curr=0, end=0, n(nums.size());
-        
+
         while(curr < n)
             if(nums[curr] == 0) curr++;
             else nums[end++] = nums[curr++];
-        
-        
+
+
         while(end <n)
             nums[end++] = 0;
     }

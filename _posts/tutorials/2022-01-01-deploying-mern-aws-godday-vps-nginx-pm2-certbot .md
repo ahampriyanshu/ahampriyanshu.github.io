@@ -16,9 +16,9 @@ image:
 ```bash
 Updating the system
 
-sudo apt update -y 
+sudo apt update -y
 
-sudo apt upgrade -y 
+sudo apt upgrade -y
 ```
 
 ## Dependencies
@@ -54,7 +54,6 @@ sudo ufw allow 'Nginx Full'
 
 sudo ufw allow 'OpenSSH'
 ```
-
 
 ### MongoDB
 
@@ -116,4 +115,4 @@ sudo certbot renew --dry-run
 
 ## Using PM2 to run multiple cluster in production mode
 
-## 
+##

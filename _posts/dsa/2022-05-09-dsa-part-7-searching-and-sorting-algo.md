@@ -5,12 +5,12 @@ excerpt: Merge, Quick, Radix, Bubble, Heap, Shell, Bucket, Tim Sort
 categories:
   - DSA
 tags:
-  - 'data structures and algorithms'
-  - 'c++'
-  - 'merge'
-  - 'quick'
-  - 'bubble'
-  - 'sort'
+  - "data structures and algorithms"
+  - "c++"
+  - "merge"
+  - "quick"
+  - "bubble"
+  - "sort"
 ---
 
 ## Sorting Algo
@@ -36,16 +36,16 @@ void merge(int arr[], int start, int end) {
 
 	int i = start, j = start + (end-start)/2, k = 0;
 
-	while(i < mid && j <= end) 
+	while(i < mid && j <= end)
 		if(arr[i] <= arr[j])
 			temp[k++] = arr[i++];
 		else
 			temp[k++] = arr[j++];
 
-	while(i < mid) 
+	while(i < mid)
 		temp[k++] = arr[i++];
 
-	while(j <= end) 
+	while(j <= end)
 		temp[k++] = arr[j++];
 
 	for(i = start; i <= end; i++)
@@ -55,7 +55,7 @@ void merge(int arr[], int start, int end) {
 
 void mergeSort(int *arr, int start, int end) {
 
-	if(start >= end) return; 
+	if(start >= end) return;
 
     int mid = start + (end-start)/2;
     mergeSort(arr, start, mid);
@@ -65,12 +65,12 @@ void mergeSort(int *arr, int start, int end) {
 }
 ```
 
-| | |
-| -- | -- |
-| Worst-case time complexity | $O(n \cdot log n)$ |
-| Best-case time complexity | $\Omega (n \cdot log n)$ |
-| Average time complexity | $\Theta (n \cdot log n)$ |
-| Worst-case space complexity | $O(n \cdot log n)$ |
+|                             |                          |
+| --------------------------- | ------------------------ |
+| Worst-case time complexity  | $O(n \cdot log n)$       |
+| Best-case time complexity   | $\Omega (n \cdot log n)$ |
+| Average time complexity     | $\Theta (n \cdot log n)$ |
+| Worst-case space complexity | $O(n \cdot log n)$       |
 
 ## Problems
 
@@ -78,7 +78,7 @@ void mergeSort(int *arr, int start, int end) {
 
 Given an array of length ‘N’, where each element denotes the position of a stall. Now you have ‘N’ stalls and an integer ‘K’ which denotes the number of cows that are aggressive. To prevent the cows from hurting each other, you need to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible. Return the largest minimum distance.
 
-* [Practice](https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559)
+- [Practice](https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559)
 
 ```cpp
 bool isPossible(vector<int> &stalls, int k, int mid){
@@ -98,7 +98,7 @@ bool isPossible(vector<int> &stalls, int k, int mid){
 int aggressiveCows(vector<int> &stalls, int k)
 {
     sort(stalls.begin(), stalls.end());
-    
+
     int start = 0;
     int maxi=-1;
     for(int i =0; i<stalls.size(); i++){
@@ -107,7 +107,7 @@ int aggressiveCows(vector<int> &stalls, int k)
     int end = maxi;
     int ans = -1;
     int mid  = start+(end-start)/2;
-    
+
     while(start<=end){
         if(isPossible(stalls,k,mid)){
             ans = mid;
@@ -122,13 +122,13 @@ int aggressiveCows(vector<int> &stalls, int k)
 }
 ```
 
-### Variation 
+### Variation
 
 We say that two integers x and y have a variation of at least K, if x − y ≥ K (the absolute value of their difference is at least K). Given a sequence of N integers a1,a2,...,aN and K, the total variation count is the number of pairs of elements in the sequence with variation at least K.
 
 Your task is to write a program that takes a sequence and the value K as input and computes the total variation count.
 
-* [Practice](https://www.codechef.com/ZCOPRAC/problems/ZCO15002)
+- [Practice](https://www.codechef.com/ZCOPRAC/problems/ZCO15002)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -140,40 +140,40 @@ int main() {
 	int arr[n];
 	for (int i=0; i<n; i++)
 	    cin >> arr[i];
-	    
+
 	  sort(arr, arr+n);
 	  int i=0, j = 1, ans = 0;
-	  
+
 	  while(j<n){
 	      if(arr[j] - arr[i] >= k){
 	          ans += (n-j);
 	          i++;
 	      } else j++;
 	  }
-	  
+
 	  cout << ans << endl;
 	return 0;
 }
 ```
 
-### Count Inversions 
+### Count Inversions
 
-For an array, inversion count indicates how far (or close) the array is from being sorted. If array is already sorted then the inversion count is 0. If an array is sorted in the reverse order then the inversion count is the maximum. 
+For an array, inversion count indicates how far (or close) the array is from being sorted. If array is already sorted then the inversion count is 0. If an array is sorted in the reverse order then the inversion count is the maximum.
 
 Formally, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j.
 
-* [Practice](https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1)
+- [Practice](https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1)
 
 ```cpp
 class Solution{
   public:
-  
+
     long long merge(long long arr[], long long start, long long mid, long long end) {
 
     long long inversions = 0, i = start, j = mid, k = 0;
 	long long temp[end - start + 1];
 
-	while(i < mid && j <= end){ 
+	while(i < mid && j <= end){
 		if(arr[i] <= arr[j])
 			temp[k++] = arr[i++];
 		else {
@@ -182,27 +182,27 @@ class Solution{
 		}
 	}
 
-	while(i < mid) 
+	while(i < mid)
 		temp[k++] = arr[i++];
 
-	while(j <= end) 
+	while(j <= end)
 		temp[k++] = arr[j++];
 
 	for(i = start; i <= end; i++)
 		arr[i] = temp[i - start];
-		
+
 	return inversions;
 }
 
-    
+
     long long merge_sort(long long A[], long long left, long long right){
-        
+
         if(left >= right) return 0;
 
         long long mid = left + (right-left)/2;
         return merge_sort(A, left, mid) + merge_sort(A, mid+1, right) +  merge(A, left, mid+1, right);
     }
-    
+
     long long int inversionCount(long long A[], long long N)
     {
         return merge_sort(A, 0, N-1);
@@ -211,7 +211,7 @@ class Solution{
 };
 ```
 
-### Chef Restaurant 
+### Chef Restaurant
 
 Chef is a cook and he has recently opened a restaurant.
 
@@ -221,12 +221,12 @@ M people (numbered 1 through M) are planning to eat at the restaurant; let's den
 
 For each person, calculate how long they have to wait (possibly 0 time), or determine that they will wait forever for the restaurant to open.
 
-* [Practice](https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559)
+- [Practice](https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559)
 
 ```cpp
     #include <bits/stdc++.h>
     using namespace std;
-    
+
     int main() {
     	int t;
     	cin >> t;
@@ -234,15 +234,15 @@ For each person, calculate how long they have to wait (possibly 0 time), or dete
     	    int n, m;
     	    cin >> n >> m;
     	    vector<pair<int, int>> intervals;
-    	    
+
     	    for (int i =0; i<n; i++) {
     	        int start, end;
     	        cin >> start >> end;
     	        intervals.push_back(make_pair(start, end));
     	    }
-    	    
+
     	    sort(intervals.begin(), intervals.end());
-    	    
+
     	    while(m--){
     	        int curr;
     	        cin >> curr;
@@ -275,30 +275,30 @@ long long merge(long long arr[], long long start, long long mid, long long end) 
     long long ans = 0, i = start, j = mid, k = 0;
 	long long temp[end - start + 1];
 
-	while(i < mid && j <= end){ 
+	while(i < mid && j <= end){
 		if(arr[i] <= arr[j]){
 			ans += arr[i]*(end-j+1)
 			temp[k++] = arr[i++];
 		}
-		else 
+		else
 			temp[k++] = arr[j++];
 	}
 
-	while(i < mid) 
+	while(i < mid)
 		temp[k++] = arr[i++];
 
-	while(j <= end) 
+	while(j <= end)
 		temp[k++] = arr[j++];
 
 	for(i = start; i <= end; i++)
 		arr[i] = temp[i - start];
-		
+
 	return inversions;
 }
 
-    
+
 long long merge_sort(long long A[], long long left, long long right){
-        
+
     if(left >= right) return 0;
 
     long long mid = left + (right-left)/2;
@@ -321,11 +321,12 @@ int t;
 }
 ```
 
-###  Distribute Candies
+### Distribute Candies
 
 Shaky has N (1<=N<=50000) candy boxes each of them contains a non-zero number of candies (between 1 and 1000000000). Shaky want to distibute these candies among his K (1<=K<=1000000000) IIIT-Delhi students. He want to distibute them in a way such that:
-* All students get equal number of candies.
-* All the candies which a student get must be from a single box only.
+
+- All students get equal number of candies.
+- All the candies which a student get must be from a single box only.
 
 As he want to make all of them happy so he want to give as many candies as possible. Help Shaky in finding out what is the maximum number of candies which a student can get.
 
@@ -345,10 +346,10 @@ int main() {
 		cin>>arr[i];
         max = max(max, arr[i]);
     }
-     
+
 	long long start=0,end=max,mid;
 	while(start<=end)
-	{     
+	{
 		s=0;
 	  	mid=start+(end-start)/2;
 	   	for(int i=0;i<n;i++)
@@ -357,7 +358,7 @@ int main() {
 			ans=mid;
 	     	start=mid+1;
 	 	}
-	 	else 
+	 	else
 	    	end=mid-1;
 	}
 	cout<<ans<<endl;
@@ -406,13 +407,13 @@ int arr[n];
      if(ans == -1)
         cout<<0<<" "<<r<<endl;
      else
-     cout<<ans+1<<" "<<r-arr[ans]<<endl; 
+     cout<<ans+1<<" "<<r-arr[ans]<<endl;
     }
 	return 0;
 }
 ```
 
-###  Taj Mahal Entry
+### Taj Mahal Entry
 
 Taj Mahal is one of the seven wonders of the world. Aahad loves to travel places and wants to visit Taj Mahal. He visited Agra to view Taj Mahal. There is a ticketing system at Taj Mahal. There are total ‘n’ windows which provide the tickets to get entry into Taj Mahal. There are ‘Ai’ people already present at each window to get the tickets. Each window gives ticket to one person in one minute. Initially, Aahad stands in front of the first window. After each minute, if he didn’t get the ticket, he moves on to the next window to get the ticket. If he is at window 1, he will move to 2. If at 2nd, he will move to 3rd. If he is at last window, he will move to 1st again and so on. Find the window number at which he will get the ticket.
 
@@ -436,7 +437,7 @@ int main()
      if(t<0)
          t=0;
         arr[i]=(t*n)+i;
-       
+
      }
     long long min=arr[0];
     long int m=0;
@@ -447,7 +448,7 @@ int main()
         min=arr[i];
         m=i;
     }}
-    
+
         cout<<m+1;
 	return 0;
 }

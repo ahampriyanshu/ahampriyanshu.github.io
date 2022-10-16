@@ -4,12 +4,26 @@ author: ahampriyanshu
 math: true
 excerpt: C++ Solutions to Striver's 180
 categories: [Sheets, TakeUforward]
-tags: [striver, sde, sheet, algo, ds, takeUforward, striver180, dsa180, '180', array, day, '2']
+tags:
+  [
+    striver,
+    sde,
+    sheet,
+    algo,
+    ds,
+    takeUforward,
+    striver180,
+    dsa180,
+    "180",
+    array,
+    day,
+    "2",
+  ]
 ---
 
 ## Problem 1
 
-* [Leetcode](https://leetcode.com/problems/set-matrix-zeroes/)
+- [Leetcode](https://leetcode.com/problems/set-matrix-zeroes/)
 
 ### Brute
 
@@ -18,9 +32,9 @@ This question has been updated on leetcode with newer constraints : _-2^31 <= ma
 ```cpp
 class Solution {
 public:
-    
+
     void nullify(vector<vector<int>>& matrix, int a, int b, int r, int c){
-        
+
         for (int i = 0; i < a; i++)
         {
             matrix[i][c] = 0;
@@ -31,9 +45,9 @@ public:
             matrix[r][i] = 0;
         }
     }
-    
+
     void setZeroes(vector<vector<int>>& matrix) {
-        
+
         int m = matrix.size();
         int n = matrix[0].size();
         vector<pair<int, int>> indexes;
@@ -55,12 +69,12 @@ public:
         {
             nullify(matrix, m, n, e.first, e.second);
         }
-        
+
     }
 };
 ```
 
-### Optimal 
+### Optimal
 
 ```cpp
 class Solution {
@@ -89,17 +103,17 @@ public:
 
 ## Problem 5
 
-* [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 ### Brute
 
 This question has been updated on leetcode with newer constraints : _-2^31 <= matrix[i][j] <= 2^31 - 1_. Hence, we will have to use some extra space.
 
-### Optimal 
+### Optimal
 
-* In this approach, we will iterate over the array and store the minimun value & the maximum profit in seperate variables.
+- In this approach, we will iterate over the array and store the minimun value & the maximum profit in seperate variables.
 
-**Time Complexity:** $ O(n) $ 
+**Time Complexity:** $ O(n) $
 
 **Auxiliary Space:** $ O(1) $
 

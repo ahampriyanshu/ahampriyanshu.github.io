@@ -3,20 +3,61 @@ title: "Array | 6 Months DSA Sheet | Work@Tech"
 author: ahampriyanshu
 excerpt: C++ Solutions to six month DSA Sheets, Work@Tech
 categories: [Sheets, DSA]
-tags: [work, at, tech, dsa, sheet, six, month, vector, array, string, Accenture, Cisco, Dell, Grofers, Juniper Networks, MAQ Software , Veritas, Goldman Sachs, Juniper Networks, LinkedIn, Microsoft, Snapdeal, Synopsys, Zoho, Amazon, VMware, Meta, Amazon, D. E. Shaw, Facebook, Goldman Sachs, Google, Ola, PayPal, PayU, Samsung, Teradata, Visa, Yahoo]
+tags:
+  [
+    work,
+    at,
+    tech,
+    dsa,
+    sheet,
+    six,
+    month,
+    vector,
+    array,
+    string,
+    Accenture,
+    Cisco,
+    Dell,
+    Grofers,
+    Juniper Networks,
+    MAQ Software,
+    Veritas,
+    Goldman Sachs,
+    Juniper Networks,
+    LinkedIn,
+    Microsoft,
+    Snapdeal,
+    Synopsys,
+    Zoho,
+    Amazon,
+    VMware,
+    Meta,
+    Amazon,
+    D. E. Shaw,
+    Facebook,
+    Goldman Sachs,
+    Google,
+    Ola,
+    PayPal,
+    PayU,
+    Samsung,
+    Teradata,
+    Visa,
+    Yahoo,
+  ]
 ---
 
 ### Cumulative Sum
 
 The cumulative sum of an array at index i is defined as the sum of all elements of the array from index 0 to index i.
 
-* [Practice](https://workat.tech/problem-solving/practice/cumulative-sum)
+- [Practice](https://workat.tech/problem-solving/practice/cumulative-sum)
 
 ```cpp
 vector<int> getCumulativeSum(vector<int> &arr) {
     int n(arr.size());
     vector<int> ans(n);
-    for (int i = 1; i < n; i++) 
+    for (int i = 1; i < n; i++)
        ans[i] += ans[i - 1];
     return ans;
 }
@@ -26,14 +67,14 @@ vector<int> getCumulativeSum(vector<int> &arr) {
 
 The cumulative sum of an array at index i is defined as the sum of all elements of the array from index 0 to index i.
 
-* [Practice](https://workat.tech/problem-solving/practice/positive-cumulative-sum)
+- [Practice](https://workat.tech/problem-solving/practice/positive-cumulative-sum)
 
 ```cpp
 vector<int> getPositiveCumulativeSum(vector<int> &arr) {
 	int n(arr.size());
     vector<int> ans, sum(n);
 	if(arr[0] > 0) ans.push_back(arr[0]);
-    for (int i = 1; i < n; i++){ 
+    for (int i = 1; i < n; i++){
         arr[i] += arr[i - 1];
 		if(arr[i] > 0) ans.push_back(arr[i]);
 	}
@@ -45,7 +86,7 @@ vector<int> getPositiveCumulativeSum(vector<int> &arr) {
 
 For an array of integers nums, an identical twin is defined as pair (i, j) where nums[i] is equal to nums[j] and i < j.
 
-* [Practice](https://workat.tech/problem-solving/practice/identical-twins)
+- [Practice](https://workat.tech/problem-solving/practice/identical-twins)
 
 #### Constant Space
 
@@ -66,10 +107,10 @@ int getIdenticalTwinsCount(vector<int> &arr) {
    unordered_map<int, int> freq;
    int ans = 0;
 
-   for (auto x: arr) 
+   for (auto x: arr)
       freq[x]++;
-   
-   for (auto x: freq) 
+
+   for (auto x: freq)
       ans += (x.second * (x.second - 1) / 2);
 
     return ans;
@@ -80,7 +121,7 @@ int getIdenticalTwinsCount(vector<int> &arr) {
 
 Given an array of integers, find the elements which have an even number of digits.
 
-* [Practice](https://workat.tech/problem-solving/practice/even-number-of-digits)
+- [Practice](https://workat.tech/problem-solving/practice/even-number-of-digits)
 
 ```cpp
 vector<int> getEvenDigitNumbers(vector<int> &arr) {
@@ -123,7 +164,7 @@ vector<int> getEvenDigitNumbers(vector<int> &arr) {
 
 Given an array, sort it using insertion sort.
 
-* [Practice](https://workat.tech/problem-solving/practice/implement-insertion-sort)
+- [Practice](https://workat.tech/problem-solving/practice/implement-insertion-sort)
 
 ```cpp
 void insertionSort(vector<int> &arr) {
@@ -132,7 +173,7 @@ void insertionSort(vector<int> &arr) {
     {
         key = arr[i];
         j = i - 1;
-		
+
         while (j >= 0 && arr[j] > key)
         {
             arr[j + 1] = arr[j];
@@ -149,23 +190,23 @@ Given two sorted arrays **A** and **B**, find the merged sorted array **C** by m
 
 ```cpp
 vector<int> mergeSortedArrays(vector<int> &A, vector<int> B) {
-    
+
 	int i(0), j(0), k(0), n(A.size()), m(B.size());
 	vector<int> C(n+m);
-	
+
 	while(i<n && j<m){
 		if(A[i] <= B[j])
 			C[k++] = A[i++];
 		else
 			C[k++] = B[j++];
 	}
-	
+
 	while(i<n)
 		C[k++] = A[i++];
-	
+
 	while(j<m)
 		C[k++] = B[j++];
-	
+
 	return C;
 }
 ```
@@ -176,25 +217,25 @@ Consider an array that is divided into two parts and both of the parts are sorte
 
 > Expected Time Complexity: **O(n)** where n denotes the size of the array.
 
-* [Practice](https://workat.tech/problem-solving/practice/merge-sorted-subarrays/editorial)
+- [Practice](https://workat.tech/problem-solving/practice/merge-sorted-subarrays/editorial)
 
 ```cpp
 void merge(vector<int> &arr, int endIndex) {
 	int i(0), j(endIndex+1), k(0), n(arr.size());
 	vector<int> C(n);
-	
+
 	while(i<=endIndex && j<n)
 		if(arr[i] <= arr[j])
 			C[k++] = arr[i++];
 		else
 			C[k++] = arr[j++];
-	
+
 	while(i<=endIndex)
 		C[k++] = arr[i++];
-	
+
 	while(j<n)
 		C[k++] = arr[j++];
-	
+
 	arr = C;
 }
 ```
@@ -203,7 +244,7 @@ void merge(vector<int> &arr, int endIndex) {
 
 Given an array of numbers, return an array that contains the squares of all the numbers in non-decreasing order.
 
-* [Practice](https://workat.tech/problem-solving/practice/square-sorted-array)
+- [Practice](https://workat.tech/problem-solving/practice/square-sorted-array)
 
 ```cpp
 vector<int> getSquareSortedArray(vector<int> &arr) {
@@ -219,7 +260,7 @@ vector<int> getSquareSortedArray(vector<int> &arr) {
 
 Given an array **A**, find the maximum number of consecutive **1s** in the array.
 
-* [Practice](https://workat.tech/problem-solving/practice/max-consecutive-ones)
+- [Practice](https://workat.tech/problem-solving/practice/max-consecutive-ones)
 
 ```cpp
 int getMaxConsecutiveOnes(vector<int> &A) {
@@ -242,7 +283,7 @@ An Arithmetic progression (AP) or arithmetic sequence is a sequence of numbers s
 
 Given an unsorted array, find if it can be reordered to form an arithmetic sequence.
 
-* [Practice](https://workat.tech/problem-solving/practice/arithmetic-sequence)
+- [Practice](https://workat.tech/problem-solving/practice/arithmetic-sequence)
 
 ```cpp
 bool isArithmeticSequence(vector<int> &arr) {
@@ -253,15 +294,15 @@ bool isArithmeticSequence(vector<int> &arr) {
 		if(e<mini) mini = e;
 		ump[e]++;
 	}
-	
+
 	int d = (maxi - mini) / (n - 1);
-	
+
 	while(maxi > mini){
 		if(!ump[maxi])
 			return false;
 		maxi -= d;
 	}
-	
+
 	return true;
 }
 ```
@@ -270,7 +311,7 @@ bool isArithmeticSequence(vector<int> &arr) {
 
 A subarray is a part of an array including one or more contiguous/adjacent elements.
 
-* [Practice](https://workat.tech/problem-solving/practice/largest-contiguous)
+- [Practice](https://workat.tech/problem-solving/practice/largest-contiguous)
 
 ```cpp
 int largestContiguousSum(vector <int> &arr){
@@ -292,13 +333,13 @@ The triangle below is known as Pascal’s triangle.
 
 In this triangle, the value at a position is equal to the sum of values of the 2 elements just above it.
 
-* [Practice](https://workat.tech/problem-solving/practice/pascals-triangle)
+- [Practice](https://workat.tech/problem-solving/practice/pascals-triangle)
 
 ```cpp
 vector<int> pascalTriangleRow(int row) {
 	int N = row-1, prev = 1;
 	vector<int> ans = {1};
-    
+
     for (int i = 1; i <= N; i++) {
         prev = (prev * (N - i + 1)) / i;
 		ans.push_back(prev);
@@ -311,7 +352,7 @@ vector<int> pascalTriangleRow(int row) {
 
 Given a sorted array and a number key, return whether the key is present in the array or not.
 
-* [Practice](https://workat.tech/problem-solving/practice/contains-element)
+- [Practice](https://workat.tech/problem-solving/practice/contains-element)
 
 ```cpp
 bool containsElement(vector<int> &arr, int key) {
@@ -332,8 +373,8 @@ Given a sorted array and a number key, find the index of the first and last occu
 
 If the key is not present, return [-1, -1].
 
-* [Practice](https://workat.tech/problem-solving/practice/search-range)
-* [GFG](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#)
+- [Practice](https://workat.tech/problem-solving/practice/search-range)
+- [GFG](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#)
 
 #### Linear
 
@@ -357,7 +398,7 @@ vector<int> searchRange(vector<int> &arr, int target) {
 ```cpp
         bool isPresent = binary_search(arr.begin(),arr.end(),x);
         if(!isPresent) return {-1};
-        
+
         int lb = lower_bound(arr.begin(),arr.end(),x)-arr.begin();
         int ub = upper_bound(arr.begin(),arr.end(),x)-arr.begin()-1;
         return {lb,ub};s
@@ -368,7 +409,7 @@ vector<int> searchRange(vector<int> &arr, int target) {
 ```cpp
 class Solution {
   public:
-  
+
     int firstOccurence(vector<int> &arr, int n, int x)
     {
         int start = 0;
@@ -381,17 +422,17 @@ class Solution {
             {
                 result = mid;
                 end = mid-1;
-            }    
-            
+            }
+
             if(x > arr[mid])
                 start = mid+1;
             else
                 end = mid-1;
         }
-        
+
         return result;
     }
-    
+
     int lastOccurence(vector<int> &arr, int n, int x)
     {
         int start = 0;
@@ -404,14 +445,14 @@ class Solution {
             {
                 result = mid;
                 start = mid+1;
-            }    
-            
+            }
+
             if(x >= arr[mid])
                 start = mid+1;
             else
                 end = mid-1;
         }
-        
+
         return result;
     }
     vector<int> firstAndLast(vector<int> &arr, int n, int x) {
@@ -426,7 +467,7 @@ class Solution {
 
 Given a sorted array of integers, find the number of negative numbers.
 
-* [Practice](https://workat.tech/problem-solving/practice/negative-numbers-in-sorted-array)
+- [Practice](https://workat.tech/problem-solving/practice/negative-numbers-in-sorted-array)
 
 ```cpp
 int getNegativeNumbersCount(vector<int> &arr) {
@@ -446,7 +487,7 @@ Given a sorted array and a number key, find the smallest array element which is 
 
 If the key is greater than or equal to the largest element then return the key itself.
 
-* [Practice](https://workat.tech/problem-solving/practice/next-greater-element-in-sorted-array)
+- [Practice](https://workat.tech/problem-solving/practice/next-greater-element-in-sorted-array)
 
 ```cpp
 int getNextGreaterElement(vector<int> &arr, int key) {
@@ -464,12 +505,12 @@ int getNextGreaterElement(vector<int> &arr, int key) {
 
 Given an array and a number k, remove all occurrences of k from the array (in-place). Return the number of elements 'remainingSize' left after removing k. There can be anything beyond the first 'remainingSize' elements. It will be ignored.
 
-* [Practice](https://workat.tech/problem-solving/practice/remove-occurences)
+- [Practice](https://workat.tech/problem-solving/practice/remove-occurences)
 
 ```cpp
 int removeOccurences(vector<int> &A, int k) {
 	int j(0), n(A.size());
-	for (int i = 0; i < n; i++) 
+	for (int i = 0; i < n; i++)
 		if (A[i] != k)
 			A[j++] = A[i];
 	return j;
@@ -480,7 +521,7 @@ int removeOccurences(vector<int> &A, int k) {
 
 Given a sorted array, check if there exist two numbers whose sum is zero.
 
-* [Practice](https://workat.tech/problem-solving/practice/two-sum-sorted)
+- [Practice](https://workat.tech/problem-solving/practice/two-sum-sorted)
 
 #### STL
 
@@ -504,13 +545,13 @@ bool hasTwoSumZero(vector<int> A) {
 	int left = 0, right = n - 1;
 	while(left < right)
 
-		if(A[left] + A[right] == 0) 
+		if(A[left] + A[right] == 0)
 			return true;
-		else if(A[left] + A[right] > 0) 
+		else if(A[left] + A[right] > 0)
 			right--;
-		else 
+		else
 			left++;
-		
+
 	return false;
 }
 ```
@@ -521,17 +562,17 @@ Given a positive integer num, write a function that returns true if num is a per
 
 **Note:** Do not use the in-built methods to calculate square root or power.
 
-* [Practice](https://workat.tech/problem-solving/practice/is-perfect-square)
+- [Practice](https://workat.tech/problem-solving/practice/is-perfect-square)
 
 ```cpp
 bool isPerfectSquare(int num) {
     int ans = 1;
-	
+
 	while(ans*ans <= num){
 		if(ans*ans == num) return true;
 		ans++;
 	}
-	
+
 	return false;
 }
 ```
@@ -540,9 +581,9 @@ bool isPerfectSquare(int num) {
 
 ```cpp
 bool isPerfectSquare(int x)
-{ 
+{
     long long left = 1, right = x;
-   
+
     while (left <= right)
     {
         long long mid = left +  (right-left) / 2;

@@ -3,7 +3,24 @@ title: "Google Kickstart 2022"
 author: ahampriyanshu
 categories: [Contests, Google]
 excerpt: C++ Solutions to Google Kickstart, 2022.
-tags: [live, contest, online, qualification, round, google, hashcode, A, B, C, D, round A, round B, round C, round D]
+tags:
+  [
+    live,
+    contest,
+    online,
+    qualification,
+    round,
+    google,
+    hashcode,
+    A,
+    B,
+    C,
+    D,
+    round A,
+    round B,
+    round C,
+    round D,
+  ]
 ---
 
 ## Round A
@@ -44,7 +61,7 @@ ll solve()
 
     for(char e:correct)
         cmp[e]++;
-    
+
     for(char e:typed)
         tmp[e]++;
 
@@ -127,7 +144,7 @@ void solve()
     for(;insert_index < n; insert_index++)
         if (str[insert_index] - '0' > insert_number)
             break;
-    
+
     char ans = insert_number + '0';
 
     for (int i = 0; i < insert_index; i++)
@@ -167,11 +184,11 @@ int main()
 
 A company named Gooli has issued a new policy that their employees account passwords must contain:
 
-* At least 7 characters.
-* At least one uppercase English alphabet letter.
-* At least one lowercase English alphabet letter.
-* At least one digit.
-* At least one special character. There are four special characters: #, @, *, and &.
+- At least 7 characters.
+- At least one uppercase English alphabet letter.
+- At least one lowercase English alphabet letter.
+- At least one digit.
+- At least one special character. There are four special characters: #, @, \*, and &.
 
 The company has asked all the employees to change their passwords if the above requirements are not satisfied. Charles, an employee at Gooli, really likes his old password. In case his old password does not satisfy the above requirements, Charles will fix it by appending letters, digits, and special characters. Can you help Charles to find the shortest possible new password that satisfies his company's requirements?
 
@@ -198,7 +215,7 @@ void solve()
     ll si;
     string pass;
     cin >> si >> pass;
-    
+
     bool upper, lower, special, digit;
     upper = lower = special = digit = false;
 
@@ -230,7 +247,7 @@ int main()
     cin >> test;
 
     for (ll t = 0; t < test; ++t)
-    {   
+    {
         cout << "Case #" << (t + 1) << ": ";
         solve();
     }
@@ -258,7 +275,7 @@ The only line of each test case contains an integer **N** representing the numbe
 
 #### Output
 
-For each test case, output one line containing ``Case #x: y``, where $x$ is the test case number (starting from 1) and y is the maximum achievable score by the bot given that John is playing optimally.
+For each test case, output one line containing `Case #x: y`, where $x$ is the test case number (starting from 1) and y is the maximum achievable score by the bot given that John is playing optimally.
 
 #### Solution
 
@@ -271,8 +288,8 @@ typedef long long ll;
 ll solve()
 {
     ll n;
-    cin >> n;  
-    n--;  
+    cin >> n;
+    n--;
     return (n/5)+1;
 }
 
@@ -308,7 +325,7 @@ The first line of the input gives the number of test cases, T. T test cases foll
 
 #### Output
 
-For each test case, output one line containing ``Case #x: M1 M2 M3 … MN`` where $x$ is the test case number (starting from 1), and $M_i$ is the maximum possible rating of the $i_{th}$ student's mentor or $−1$ if there are no suitable mentors for that student..
+For each test case, output one line containing `Case #x: M1 M2 M3 … MN` where $x$ is the test case number (starting from 1), and $M_i$ is the maximum possible rating of the $i_{th}$ student's mentor or $−1$ if there are no suitable mentors for that student..
 
 #### Solution
 
@@ -324,21 +341,21 @@ void solve()
     cin>>n;
     vector<int>v;
     int a[n],b[n];
-    
+
     for(int i=0;i<n;i++){
         cin>>a[i];
         v.push_back(i);
         b[i]=a[i];
     }
-    
+
     sort(b,b+n);
-    
+
     for(int i=0;i<n;i++){
         int k=upper_bound(b,b+n,a[i]*2)-b-1;
-        
+
         if(k>=0 && b[k]==a[i])
             k--;
-            
+
         if(k<0)
             cout<<"-1 ";
         else

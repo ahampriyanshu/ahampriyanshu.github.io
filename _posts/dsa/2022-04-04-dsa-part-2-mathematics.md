@@ -6,11 +6,11 @@ math: true
 categories:
   - DSA
 tags:
-  - 'data structures and algorithms'
+  - "data structures and algorithms"
   - cpp
-  - 'number theory'
+  - "number theory"
   - trignomety
-  - 'test of divisibility'
+  - "test of divisibility"
   - ap
   - gp
   - gcd
@@ -26,38 +26,38 @@ tags:
 
 ### Types of number
 
-| Type | Value |
-| -- | -- |
-| Natural Numbers	| $N=1,2,3,4, \ldots$ |
-| Prime Number | $P=2,3,5,7,11,13,17, \ldots$ |
-| Composite Number | $4,6,8,9,10,12, \ldots$ | 
-| Whole Numbers	| $W=0,1,2,3,4, \ldots$ |
-| Integers| $Z= \ldots,−3,−2,−1,0,1,2,3, \ldots$ |
-| Rational Numbers | $Q= \frac{1}{2} ,0.33333 \ldots,52,1110, \ldots$ |
-| Irrational Numbers | $F= \ldots ,π, \sqrt{2} ,0.121221222 \ldots$ | 
-| Real Numbers | $R= \ldots ,−3,−1,0, \frac{1}{5},1.1, \sqrt{2} ,2,3,π, \ldots$ |
-| Complex Number | $C= \ldots ,−3+2i,0,1+3i, \ldots$|
+| Type               | Value                                                          |
+| ------------------ | -------------------------------------------------------------- |
+| Natural Numbers    | $N=1,2,3,4, \ldots$                                            |
+| Prime Number       | $P=2,3,5,7,11,13,17, \ldots$                                   |
+| Composite Number   | $4,6,8,9,10,12, \ldots$                                        |
+| Whole Numbers      | $W=0,1,2,3,4, \ldots$                                          |
+| Integers           | $Z= \ldots,−3,−2,−1,0,1,2,3, \ldots$                           |
+| Rational Numbers   | $Q= \frac{1}{2} ,0.33333 \ldots,52,1110, \ldots$               |
+| Irrational Numbers | $F= \ldots ,π, \sqrt{2} ,0.121221222 \ldots$                   |
+| Real Numbers       | $R= \ldots ,−3,−1,0, \frac{1}{5},1.1, \sqrt{2} ,2,3,π, \ldots$ |
+| Complex Number     | $C= \ldots ,−3+2i,0,1+3i, \ldots$                              |
 
 ### Types of number system
 
 Number system consists values from **0** to **N-1**
 
-| Number System | Value |
-| -- | -- |
-| Binary | 0 and 1 |
-| Octal | 0 to 7 |
-| Decimal | 0 to 9 |
-| HexaDecimal | 0 to 9 and A to F |
+| Number System | Value             |
+| ------------- | ----------------- |
+| Binary        | 0 and 1           |
+| Octal         | 0 to 7            |
+| Decimal       | 0 to 9            |
+| HexaDecimal   | 0 to 9 and A to F |
 
 ## Number Series
 
-| Series | Formula |
-| -- | -- |
-| Sum of first n numbers | $ \frac{n  \cdot (n+1)}{2} $ |
-| Squares of first n numbers | $ \frac{n  \cdot (n+1) \cdot (2n+1)}{6} $ |
-| Cube of first n numbers | $ (\frac{n  \cdot (n+1)}{2})^2 $ |
-| Sum of first n even numbers | $ n \cdot (n+1) $ |
-| Sum of first n odd numbers | $ n^2 $ |
+| Series                      | Formula                                  |
+| --------------------------- | ---------------------------------------- |
+| Sum of first n numbers      | $ \frac{n \cdot (n+1)}{2} $              |
+| Squares of first n numbers  | $ \frac{n \cdot (n+1) \cdot (2n+1)}{6} $ |
+| Cube of first n numbers     | $ (\frac{n \cdot (n+1)}{2})^2 $          |
+| Sum of first n even numbers | $ n \cdot (n+1) $                        |
+| Sum of first n odd numbers  | $ n^2 $                                  |
 
 ## Number Sequences
 
@@ -65,15 +65,15 @@ Number system consists values from **0** to **N-1**
 
 $2, 4, 6, 8, \ldots$
 
-$\rightarrow a_{1} = a + 0.d $
+$\rightarrow a\_{1} = a + 0.d $
 
-$\rightarrow a_{2} = a + 1.d $
+$\rightarrow a\_{2} = a + 1.d $
 
-$\rightarrow a_{3} = a + 2.d $
+$\rightarrow a\_{3} = a + 2.d $
 
 $ \vdots $
 
-$\rightarrow T_{n} = a + (n-1) \cdot d $
+$\rightarrow T\_{n} = a + (n-1) \cdot d $
 
 We know that
 
@@ -93,7 +93,7 @@ $\rightarrow S_n = \frac{n(2a + (n-1)*d)}{2}$
 
 2, 4, 16, 32, 64 ......
 
-a, $a.r^{1}$,  $a.r^{2}$, $a.r^{3}$, ... $r^{n-1}$
+a, $a.r^{1}$, $a.r^{2}$, $a.r^{3}$, ... $r^{n-1}$
 
 Nth term $\rightarrow$ $T_{n} = a*r^{n-1}$
 
@@ -123,11 +123,11 @@ $\rightarrow mean = \frac{a_{1} + a_{2} + a_{3} + ....  + a_{n}}{n}$
 
 #### Types of Mean
 
-| Number | Test |
-| -- | -- |
-| Arithmetic Mean(AM) | $\frac{a+b}{2}$|
-| Geometric Mean(GM) | $\sqrt{ab}$|
-| Harmonic Mean(HM) | $ (2ab) \cdot (a+b) $|
+| Number              | Test                  |
+| ------------------- | --------------------- |
+| Arithmetic Mean(AM) | $\frac{a+b}{2}$       |
+| Geometric Mean(GM)  | $\sqrt{ab}$           |
+| Harmonic Mean(HM)   | $ (2ab) \cdot (a+b) $ |
 
 $\rightarrow GM^2 = AM \times GM $
 
@@ -145,7 +145,7 @@ $\rightarrow 3 Median = 2 Mean + Mode $
 
 ## Quadratic formula
 
-Roots of quad eq. 
+Roots of quad eq.
 
 $ax^{2} + by + c = 0$
 
@@ -153,13 +153,13 @@ $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
 
 $D = b^{2} - 4ac$
 
-* D < 0 : Imaginary roots
-* D = 0 : Two equal roots
-* D > 0 : Two distinct roots
+- D < 0 : Imaginary roots
+- D = 0 : Two equal roots
+- D > 0 : Two distinct roots
 
 ### Prime numbers
 
-2,3,5,7,11, .... 
+2,3,5,7,11, ....
 
 All the numbers having exactly two factors.
 
@@ -169,18 +169,18 @@ Can be represented as **6n+1** or **6n-1**, except 2 and 3.
 
 ## Test Of Divisibility
 
-| Number | Test |
-| -- | -- |
-| 2 | Last one digit is divisible by 2 (Unit digist is 0, 2, 4, 6, 8) |
-| 3 | Sum is divisble by 3 |
-| 4 | Last two digit is divisible by 4 |
-| 5 | Unit digit is either 0 or 5 |
-| 6 | Divisible by both 2 and 3 |
-| 7 | Difference between twice the unit digit of the given number and the remaining part is divisible by 7 |
-| 8 | Last three digit is divisible by 8 |
-| 9 | Sum is divisble by 9 |
-| 10 | Unit digit is 0|
-| 11 | Difference between sum of digits at odd places and even places is either 0 or is divisible by 11 |
+| Number | Test                                                                                                 |
+| ------ | ---------------------------------------------------------------------------------------------------- |
+| 2      | Last one digit is divisible by 2 (Unit digist is 0, 2, 4, 6, 8)                                      |
+| 3      | Sum is divisble by 3                                                                                 |
+| 4      | Last two digit is divisible by 4                                                                     |
+| 5      | Unit digit is either 0 or 5                                                                          |
+| 6      | Divisible by both 2 and 3                                                                            |
+| 7      | Difference between twice the unit digit of the given number and the remaining part is divisible by 7 |
+| 8      | Last three digit is divisible by 8                                                                   |
+| 9      | Sum is divisble by 9                                                                                 |
+| 10     | Unit digit is 0                                                                                      |
+| 11     | Difference between sum of digits at odd places and even places is either 0 or is divisible by 11     |
 
 ## HCF and LCM
 
@@ -297,7 +297,7 @@ $Radian = \frac{\pi}{180} \times θ$
 <figure class="align-center">
   <img src="{{ '/images/dsa/2-2.png' | absolute_url }}" alt="loading">
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Applications_of_Right_Triangle_Trigonometry_Figure_1.svg">Wikimedia</a></figcaption>
-</figure> 
+</figure>
 
 ### Trignometric Ratios
 
@@ -312,7 +312,6 @@ $ sec θ = \frac{Hypotenuse}{Base} $
 $ cosec θ = \frac{Hypotenuse}{Perpendicular} $
 
 $ cot θ = \frac{Base}{Perpendicular} $
-
 
 ### Fundamental Trignometric identities
 
@@ -330,14 +329,14 @@ $tan θ = \frac{1}{cot θ} $
 
 ### Trigonometry Table
 
-| Angle	| 0°, 0 | 30°, π/6 | 45°, π/4 | 60°, π/3 | 90°, π/2 |
-| -- | -- | -- | -- | -- | -- |  
-| $sin θ$ |	0 |	1/2 |	1/√2 |	√3/2 |	1 |
-| $cos θ$ |	1 |	√3/2 | 1/√2 |	1/2 |	0 |
-| $tan θ$ |	0 |	1/√3 |	1 |	√3 |	∞ |
-| $cot θ$ |	∞ |	√3 |	1	| 1/√3 |	0 |
-| $sec θ$ |	1 |	2/√3 |	√2 |	2 |	∞ |
-| $cosec θ$ |	∞ |	2	| √2 | 2/√3 |	1 |
+| Angle     | 0°, 0 | 30°, π/6 | 45°, π/4 | 60°, π/3 | 90°, π/2 |
+| --------- | ----- | -------- | -------- | -------- | -------- |
+| $sin θ$   | 0     | 1/2      | 1/√2     | √3/2     | 1        |
+| $cos θ$   | 1     | √3/2     | 1/√2     | 1/2      | 0        |
+| $tan θ$   | 0     | 1/√3     | 1        | √3       | ∞        |
+| $cot θ$   | ∞     | √3       | 1        | 1/√3     | 0        |
+| $sec θ$   | 1     | 2/√3     | √2       | 2        | ∞        |
+| $cosec θ$ | ∞     | 2        | √2       | 2/√3     | 1        |
 
 ### Periodicity Identities
 
@@ -394,7 +393,7 @@ Fourth Quadrant:
 
 ## Logarithm
 
-Logarithm is the inverse function to exponentiation. 
+Logarithm is the inverse function to exponentiation.
 
 $ \log_a{b} = c \implies a^c = b $
 
@@ -402,9 +401,9 @@ $ \log_2{8} = 3 \implies 2^3 = 8 $
 
 ### Types of logs
 
-* Common log $\rightarrow$  base 10 $\rightarrow log_10{x} $
-* Natural log $\rightarrow$  base e $\rightarrow log_e{x}$ or $ lnx $
-* Binary log $\rightarrow$  base 2 $\rightarrow log_2{x} $
+- Common log $\rightarrow$ base 10 $\rightarrow log_10{x} $
+- Natural log $\rightarrow$ base e $\rightarrow log_e{x}$ or $ lnx $
+- Binary log $\rightarrow$ base 2 $\rightarrow log_2{x} $
 
 ### Laws of logarithms
 
@@ -434,8 +433,8 @@ $\log_{a^n}b^n = \log_ab$
 
 $\frac{\log_cb}{\log_ca} = \log_ab$
 
-* $log_a{1} = 0$
-* $log_aa = 1$
+- $log_a{1} = 0$
+- $log_aa = 1$
 
 ## Problems
 
@@ -478,7 +477,7 @@ count(n){
 bool isPal(int n){
   int rev = 0;
   int tmp = n;
-  
+
   while(tmp){
     int ones = tmp % 10;
     rev = rev * 10 + ones;
@@ -583,12 +582,12 @@ int gcd(int a, int b, int *x, int *y)
         *y = 1;
         return b;
     }
- 
+
     int res = gcd(b%a, a, &x1, &y1);
- 
+
     *x = y1 - (b/a) * x1;
     *y = x1;
- 
+
     return res;
 }
 ```
@@ -611,7 +610,7 @@ int gcd(int a, int b){
 }
 ```
 
-**Time Complexity:** O(a*b - max(a,b))
+**Time Complexity:** O(a\*b - max(a,b))
 
 #### Efficient Approach
 
@@ -630,11 +629,11 @@ bool isPrime(int n)
 {
     if (n <= 1)
         return false;
-  
+
     for (int i = 2; i < n; i++)
         if (n % i == 0)
             return false;
-  
+
     return true;
 }
 ```
@@ -648,11 +647,11 @@ bool isPrime(int n)
 {
     if (n <= 1)
         return false;
-  
+
     for (int i = 2; i*i <= n; i++)
         if (n % i == 0)
             return false;
-  
+
     return true;
 }
 ```
@@ -668,14 +667,14 @@ bool isPrime(int n)
         return false;
     if (n <= 3)
         return true;
-        
+
     if (n % 2 == 0 || n % 3 == 0)
         return false;
-  
+
     for (int i = 5; i * i <= n; i = i + 6)
         if (n % i == 0 || n % (i + 2) == 0)
             return false;
-  
+
     return true;
 }
 ```
@@ -691,14 +690,14 @@ bool isPrime(int n)
         return false;
     if (n <= 3)
         return true;
-        
+
     if (n % 2 == 0 || n % 3 == 0)
         return false;
-  
+
     for (int i = 5; i * i <= n; i = i + 6)
         if (n % i == 0 || n % (i + 2) == 0)
             return false;
-  
+
     return true;
 }
 
@@ -710,14 +709,14 @@ void primeFactors(int n)
       if(isPrime(i))
 
       int x = i;
-        
+
       while (n % x == 0)
       {
       cout << i << " ";
       x = x*i;
       }
     }
- 
+
 }
 ```
 
@@ -738,7 +737,7 @@ void primeFactors(int n)
             n = n/i;
         }
     }
- 
+
     if (n > 1)
         cout << n << " ";
 }
@@ -823,7 +822,7 @@ void manipulated_seive(int n)
 
   vector<bool> isPrime(n+1, true);
 
- 
+
   for (int i=2; i*i<=n ; i++)
   {
     if (isprime[i])
@@ -832,7 +831,7 @@ void manipulated_seive(int n)
       for(int j=i*i; j<=n; j+= i)
         isPrime[j] = false;
     }
-  }   
+  }
 }
 ```
 
@@ -842,7 +841,7 @@ void manipulated_seive(int n)
 
 #### Naive
 
-FOR(1->n) : x = x*x;
+FOR(1->n) : x = x\*x;
 
 **Time Complexity:** O(n)
 
@@ -852,10 +851,10 @@ FOR(1->n) : x = x*x;
 double myPow(double x, int n) {
         if(n==0) return 1.0;
         double y = myPow(x, n/2);
-        
+
         if(n % 2 == 0)
             return y*y;
-        else return n < 0 ? (y*y)/x : x*y*y; 
+        else return n < 0 ? (y*y)/x : x*y*y;
 }
 ```
 
@@ -872,7 +871,7 @@ double myPow(long long int x, long long int n) {
 
     if(n&1)
     res = res * x;
-    
+
     x *= x;
     n = n >> 1;
   }

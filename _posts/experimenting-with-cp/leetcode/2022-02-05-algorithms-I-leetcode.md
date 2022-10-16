@@ -3,7 +3,23 @@ title: "Algorithm I | Study Plan | Leetcode"
 author: ahampriyanshu
 categories: [Sheets, Leetcode]
 excerpt: C++ Solutions to Algorithm I of 2 weeks study plan, Leetcode.
-tags: [leetcode, algorithms, back, to, study, plan, ds, array, tree, trie, string, stacks, queue, linked list]
+tags:
+  [
+    leetcode,
+    algorithms,
+    back,
+    to,
+    study,
+    plan,
+    ds,
+    array,
+    tree,
+    trie,
+    string,
+    stacks,
+    queue,
+    linked list,
+  ]
 ---
 
 ### Day 1 | Binary Search
@@ -14,7 +30,7 @@ Given an array of integers nums which is sorted in ascending order, and an integ
 
 You must write an algorithm with O(log n) runtime complexity.
 
-* [Practice](https://leetcode.com/problems/binary-search/)
+- [Practice](https://leetcode.com/problems/binary-search/)
 
 ```cpp
 class Solution {
@@ -44,7 +60,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 
 You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
-* [Practice](https://leetcode.com/problems/first-bad-version/)
+- [Practice](https://leetcode.com/problems/first-bad-version/)
 
 ```cpp
 class Solution {
@@ -96,13 +112,13 @@ public:
         if(len == 1 || k == 0) return;
         if(k>len) k = k%len;
         int start = len-k;
-        
+
         for(int i = start; i<len; i++)
             ans.push_back(nums[i]);
-        
+
         for(int i = 0; i<start; i++)
             ans.push_back(nums[i]);
-        
+
         nums = ans;
     }
 };
@@ -130,19 +146,19 @@ Given an integer array nums, move all 0's to the end of it while maintaining the
 
 **Note :** that you must do this in-place without making a copy of the array.
 
-* [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
+- [Practice](https://leetcode.com/problems/move-zeroes/submissions/)
 
 ```cpp
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
         int curr=0, end=0, n(nums.size());
-        
+
         while(curr < n)
             if(nums[curr] == 0) curr++;
             else nums[end++] = nums[curr++];
-        
-        
+
+
         while(end <n)
             nums[end++] = 0;
     }
@@ -157,7 +173,7 @@ Write a function that reverses a string. The input string is given as an array o
 
 You must do this by modifying the input array in-place with O(1) extra memory.
 
-* [Practice](https://leetcode.com/problems/reverse-string/)
+- [Practice](https://leetcode.com/problems/reverse-string/)
 
 ```cpp
 class Solution {
@@ -174,7 +190,7 @@ public:
 
 Given a string **s**, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
-* [Practice](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
+- [Practice](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
 
 ```cpp
 class Solution {
@@ -201,7 +217,7 @@ Given the head of a singly linked list, return the middle node of the linked lis
 
 If there are two middle nodes, return the second middle node.
 
-* [Practice](https://leetcode.com/problems/middle-of-the-linked-list/)
+- [Practice](https://leetcode.com/problems/middle-of-the-linked-list/)
 
 ```cpp
 class Solution {

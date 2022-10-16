@@ -29,14 +29,16 @@ sudo zypper install zsh   [ OpenSUSE ]
 
 ### [Oh My Zsh](https://ohmyz.sh/)
 
-> Oh My Zsh is an open-source and community-driven framework for managing Zsh configuration. It comes bundled with thousands of helpful functions,  plugins, themes, and much more.
+> Oh My Zsh is an open-source and community-driven framework for managing Zsh configuration. It comes bundled with thousands of helpful functions, plugins, themes, and much more.
 
-Using curl 
+Using curl
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Using wget
+
 ```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -47,15 +49,15 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 > Nerd Fonts is a project to create patched fonts. Nerd Fonts takes popular programming fonts and patches them with a large number of glyphs (icons).
 
-* Download [hack](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf) font 
-* Install it by double clicking on the ``.tff`` file. You can also use any other font but make sure it supports all the icons and glyphs required by **powerlevel10k**.
-* Select ``Hack Font`` as the default font.
+- Download [hack](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf) font
+- Install it by double clicking on the `.tff` file. You can also use any other font but make sure it supports all the icons and glyphs required by **powerlevel10k**.
+- Select `Hack Font` as the default font.
 
 ![3](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/3.png)
 
 ### [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
-> Powerlevel10k is a theme for Zsh.  It changes normal shell commands to colorful commands and emphasizes speed, flexibility, and out-of-the-box experience.
+> Powerlevel10k is a theme for Zsh. It changes normal shell commands to colorful commands and emphasizes speed, flexibility, and out-of-the-box experience.
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -64,11 +66,13 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 ![1](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/1.gif)
 
 An installation prompt will begin by default, but if it doesn’t run.
+
 ```bash
 p10k configure
 ```
 
-Change the default theme to ``ZSH_THEME="powerlevel10k/powerlevel10k"`` inside ``~/.zshrc ``.Commit the changes by running 
+Change the default theme to `ZSH_THEME="powerlevel10k/powerlevel10k"` inside `~/.zshrc `.Commit the changes by running
+
 ```bash
 source ~/.zshrc
 ```
@@ -83,7 +87,8 @@ source ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-Add ``zsh-autocomplete`` to the list of plugins inside ~/.zshrc ``plugins=( [plugins...])``.Commit the changes by running 
+Add `zsh-autocomplete` to the list of plugins inside ~/.zshrc `plugins=( [plugins...])`.Commit the changes by running
+
 ```bash
 source ~/.zshrc
 ```
@@ -98,7 +103,8 @@ source ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-Add ``zsh-syntax-highlighting`` to the list of plugins inside ~/.zshrc ``plugins=( [plugins...])``.Commit the changes by running 
+Add `zsh-syntax-highlighting` to the list of plugins inside ~/.zshrc `plugins=( [plugins...])`.Commit the changes by running
+
 ```bash
 source ~/.zshrc
 ```
@@ -116,6 +122,7 @@ npm i -g diff-so-fancy
 ![4](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/4.png)
 
 Integrate diff-so-fancy with git.
+
 ```bash
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
@@ -123,7 +130,7 @@ git config --global interactive.diffFilter "diff-so-fancy --patch"
 
 git config --global color.ui true
 ```
- 
+
 Now, simply use the git diff command to view recent changes.
 
 ```
@@ -162,36 +169,39 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 ![5](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/5.gif)
 
-Use ``ctrl + t`` to navigate through the file system.
+Use `ctrl + t` to navigate through the file system.
 ![6](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/6.gif)
 
-Use ``ctrl + r`` to navigate through older commands.
+Use `ctrl + r` to navigate through older commands.
 ![7](https://github.com/ahampriyanshu/making-linux-terminal-awesome/raw/metadata/7.gif)
 
 ## If you use VS Code
 
-Paste this into ``setting.json`` to render all the glyphs-icons in the integrated-terminal.
+Paste this into `setting.json` to render all the glyphs-icons in the integrated-terminal.
 
 ```json
 {
-"terminal.integrated.fontFamily": "Hack Nerd Font",
-"terminal.integrated.shell.osx": "/bin/zsh",
-"terminal.integrated.rendererType": "canvas",
-"terminal.integrated.lineHeight": 1.3,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.rendererType": "canvas",
+  "terminal.integrated.lineHeight": 1.3
 }
 ```
- 
-## To use ``bash`` again
 
-For a single session 
+## To use `bash` again
+
+For a single session
+
 ```bash
 bash
 ```
 
-To make bash the default terminal 
+To make bash the default terminal
+
 ```bash
-chsh -s $(which bash) 
+chsh -s $(which bash)
 ```
 
 ## Copyright Guidelines
+
 I will also soon be publishing this article on [GeeksforGeeks](https://www.geeksforgeeks.org/)

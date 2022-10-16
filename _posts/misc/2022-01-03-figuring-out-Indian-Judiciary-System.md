@@ -6,7 +6,7 @@ categories:
   - Misc
 tags:
   - ipc
-  - 'Indian Judiciary System'
+  - "Indian Judiciary System"
 ---
 
 Figuring Out Part: Indian Judiciary System

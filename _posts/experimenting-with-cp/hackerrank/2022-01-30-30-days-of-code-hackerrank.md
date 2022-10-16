@@ -1,17 +1,18 @@
 ---
-title: " 30 Days of Code | Hackerrank" 
+title: " 30 Days of Code | Hackerrank"
 author: ahampriyanshu
 excerpt: Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python and Swift.
 categories: [Sheets, Hackerrank]
 math: true
-tags: [hackerrank, '30 days of code', 'c++', 'cpp', 'c', 'js', 'java', 'python']
+tags: [hackerrank, "30 days of code", "c++", "cpp", "c", "js", "java", "python"]
 ---
 
 ### Day 00 Hello World
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-hello-world/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-hello-world/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 
@@ -26,6 +27,7 @@ int main()
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -42,6 +44,7 @@ int main()
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -52,7 +55,7 @@ public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String inputString = scan.nextLine();
-		scan.close(); 
+		scan.close();
 		System.out.println("Hello, World.");
         System.out.println(inputString);
 	}
@@ -60,33 +63,36 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 function processData(inputString) {
-    console.log("Hello, World.\n" + inputString);
+  console.log("Hello, World.\n" + inputString);
 }
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-    _input += input;
+  _input += input;
 });
 
 process.stdin.on("end", function () {
-    processData(_input);
+  processData(_input);
 });
 ```
 
 #### Python
+
 ```python
 print('Hello, World.\n' + input())
 ```
 
 ### Day 01 Data Types
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-data-types/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-data-types/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <iomanip>
@@ -113,6 +119,7 @@ int main()
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -134,6 +141,7 @@ int main()
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -142,7 +150,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-	
+
     public static void main(String[] args) {
         int i = 4;
         double d = 4.0;
@@ -164,45 +172,47 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
+process.stdin.on("data", function (data) {
+  input_stdin += data;
 });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();
+process.stdin.on("end", function () {
+  input_stdin_array = input_stdin.split("\n");
+  main();
 });
 
 // Reads complete line from STDIN
 function readLine() {
-    return input_stdin_array[input_currentline++];
+  return input_stdin_array[input_currentline++];
 }
 
 function main() {
-    var i = 4
-    var d = 4.0
-    var s = "HackerRank "
-    var i1;
-    var d1;
-    var s1;
-    i1 = parseInt(readLine());
-    d1 = parseFloat(readLine());
-    s1 = readLine();
-    console.log(i + i1);
-    console.log((d + d1).toFixed(1));
-    console.log(s + s1);
+  var i = 4;
+  var d = 4.0;
+  var s = "HackerRank ";
+  var i1;
+  var d1;
+  var s1;
+  i1 = parseInt(readLine());
+  d1 = parseFloat(readLine());
+  s1 = readLine();
+  console.log(i + i1);
+  console.log((d + d1).toFixed(1));
+  console.log(s + s1);
 }
 ```
 
 #### Python
+
 ```python
 i = 4
 d = 4.0
@@ -214,9 +224,10 @@ print(s + input())
 
 ### Day 02 Operators
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-operators/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-operators/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -277,6 +288,7 @@ string rtrim(const string &str)
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -451,6 +463,7 @@ int parse_int(char *str)
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -500,50 +513,57 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function solve(meal_cost, tip_percent, tax_percent) {
-    console.log(Math.round(meal_cost + meal_cost * tip_percent / 100 + meal_cost * tax_percent / 100));
-
+  console.log(
+    Math.round(
+      meal_cost +
+        (meal_cost * tip_percent) / 100 +
+        (meal_cost * tax_percent) / 100
+    )
+  );
 }
 
 function main() {
-    const meal_cost = parseFloat(readLine().trim());
+  const meal_cost = parseFloat(readLine().trim());
 
-    const tip_percent = parseInt(readLine().trim(), 10);
+  const tip_percent = parseInt(readLine().trim(), 10);
 
-    const tax_percent = parseInt(readLine().trim(), 10);
+  const tax_percent = parseInt(readLine().trim(), 10);
 
-    solve(meal_cost, tip_percent, tax_percent);
+  solve(meal_cost, tip_percent, tax_percent);
 }
 ```
 
 ### Day 03 Conditional Statements
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-conditional-statements/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-conditional-statements/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -591,6 +611,7 @@ string rtrim(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -742,6 +763,7 @@ int parse_int(char *str)
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -772,38 +794,39 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function (inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function () {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function main() {
-    const N = parseInt(readLine().trim(), 10);
-    if (N % 2 == 0 && (N < 6 || N > 20))
-        process.stdout.write("Not ")
-    process.stdout.write("Weird")
+  const N = parseInt(readLine().trim(), 10);
+  if (N % 2 == 0 && (N < 6 || N > 20)) process.stdout.write("Not ");
+  process.stdout.write("Weird");
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 
@@ -824,9 +847,10 @@ if __name__ == '__main__':
 
 ### Day 04 Class vs. Instance
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-class-vs-instance/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-class-vs-instance/problem)
 
 #### CPP
+
 ```cpp
 using namespace std;
 #include <iostream>
@@ -895,20 +919,20 @@ int main()
 }
 ```
 
-
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
 
 public class Person {
-    private int age;	
-  
+    private int age;
+
 	public Person(int initialAge) {
   		if (initialAge < 0)
         {
         System.out.println("Age is not valid, setting age to 0.");
-        age = 0; 
+        age = 0;
         }
         else
         age = initialAge;
@@ -918,7 +942,7 @@ public class Person {
         if (age < 13)
         {
             System.out.println("You are young.");
-        } else 
+        } else
         if ( age >= 13 && age < 18)
         {
             System.out.println("You are a teenager.");
@@ -936,6 +960,7 @@ public class Person {
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
 process.stdin.setEncoding('ascii');
@@ -950,7 +975,7 @@ process.stdin.on('data', function (data) {
 
 process.stdin.on('end', function () {
     input_stdin_array = input_stdin.split("\n");
-    main();    
+    main();
 });
 
 function readLine() {
@@ -958,7 +983,7 @@ function readLine() {
 }
 
 function Person(initialAge){
-        if (initialAge < 0){  
+        if (initialAge < 0){
             age = 0
             console.log("Age is not valid, setting age to 0.")
         }
@@ -983,6 +1008,7 @@ function main() {
 ```
 
 #### Python
+
 ```python
 class Person:
     def __init__(self, initialAge):
@@ -1017,9 +1043,10 @@ for i in range(0, t):
 
 ### Day 05 Loops
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-loops/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-loops/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1066,6 +1093,7 @@ string rtrim(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -1196,6 +1224,7 @@ int parse_int(char* str) {
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -1225,39 +1254,38 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
-
-
 function main() {
-    const n = parseInt(readLine().trim(), 10);
-    for(let i = 1; i<11; i++)
-    console.log(n +" x "+i+" = " + i*n)
+  const n = parseInt(readLine().trim(), 10);
+  for (let i = 1; i < 11; i++) console.log(n + " x " + i + " = " + i * n);
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 
@@ -1277,9 +1305,10 @@ if __name__ == '__main__':
 
 ### Day 06 Let’s Review
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-review-loop/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-review-loop/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -1302,12 +1331,13 @@ int main() {
         for(int i = 1; i<str.size(); i += 2)
         cout << str[i];
         cout << endl;
-    }   
+    }
     return 0;
 }
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -1327,12 +1357,13 @@ int main() {
         for(int i = 1; i<strlen(str); i += 2)
         printf("%c",str[i]);
         printf("\n");
-    }  
+    }
     return 0;
 }
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -1348,11 +1379,11 @@ public class Solution {
             String string = sc.nextLine();
             char[] charArray = string.toCharArray();
 
-            for (int j = 0; j < charArray.length; j += 2) 
+            for (int j = 0; j < charArray.length; j += 2)
             System.out.print(charArray[j]);
             System.out.print(" ");
 
-            for (int j = 1; j < charArray.length; j += 2) 
+            for (int j = 1; j < charArray.length; j += 2)
             System.out.print(charArray[j]);
             System.out.println();
         }
@@ -1363,34 +1394,34 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 function processData(input) {
-    input = input.split('\n')
-    for(let i=1;i<=input[0];i++){
-        var str = input[i].split('');
-        
-        for(x=0;x<str.length;x+=2)
-        process.stdout.write(str[x])
-        process.stdout.write(" ")
-        for(x=1;x<str.length;x+=2)
-        process.stdout.write(str[x])
-        console.log(' ')
-    }
-} 
+  input = input.split("\n");
+  for (let i = 1; i <= input[0]; i++) {
+    var str = input[i].split("");
+
+    for (x = 0; x < str.length; x += 2) process.stdout.write(str[x]);
+    process.stdout.write(" ");
+    for (x = 1; x < str.length; x += 2) process.stdout.write(str[x]);
+    console.log(" ");
+  }
+}
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-    _input += input;
+  _input += input;
 });
 
 process.stdin.on("end", function () {
-   processData(_input);
+  processData(_input);
 });
 ```
 
 #### Python
+
 ```python
 for i in range(int(input())):
     s = input()
@@ -1399,9 +1430,10 @@ for i in range(int(input())):
 
 ### Day 07 Arrays
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-arrays/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-arrays/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1431,7 +1463,7 @@ int main()
         int arr_item = stoi(arr_temp[i]);
         arr[i] = arr_item;
     }
-    
+
     for(auto it = arr.rbegin(); it != arr.rend(); it++){
     std::cout << *it << " ";
     }
@@ -1480,6 +1512,7 @@ vector<string> split(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -1514,10 +1547,10 @@ int main()
 
         *(arr + i) = arr_item;
     }
-    
-    for (int i = n -1; i >=0 ; i--) 
+
+    for (int i = n -1; i >=0 ; i--)
         printf("%d ",arr[i]);
-    
+
 
     return 0;
 }
@@ -1644,6 +1677,7 @@ int parse_int(char* str) {
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -1664,8 +1698,8 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());
-        
-        
+
+
         List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt).collect(toList());
 
         for (int i = n - 1 ;  i >= 0; i--) {
@@ -1678,40 +1712,43 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function main() {
-    const n = parseInt(readLine().trim(), 10);
+  const n = parseInt(readLine().trim(), 10);
 
-    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
-            for (let i = n - 1 ;  i >= 0; i--) 
-           process.stdout.write(arr[i] + " ")
-        
+  const arr = readLine()
+    .replace(/\s+$/g, "")
+    .split(" ")
+    .map((arrTemp) => parseInt(arrTemp, 10));
+  for (let i = n - 1; i >= 0; i--) process.stdout.write(arr[i] + " ");
 }
 ```
 
 #### Python
+
 ```python
 input()
 arr = str(input()).split(" ")
@@ -1720,9 +1757,10 @@ print(" ".join(map(str, arr[::-1])))
 
 ### Day 08 Dictionaries and Maps
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -1740,7 +1778,7 @@ int main() {
     string name;
     for(int i=0; i<n; i++){
         cin >> name;
-        if (!pb[name]) 
+        if (!pb[name])
         cin >> pb[name];
     }
     for(int i=0; i<n; i++){
@@ -1750,12 +1788,13 @@ int main() {
         else
         cout << "Not found" << endl;
     }
-    
+
     return 0;
 }
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -1765,15 +1804,15 @@ public class Solution {
     public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        
-        Map<String,Integer> pb = new HashMap<String,Integer>(); 
-        
+
+        Map<String,Integer> pb = new HashMap<String,Integer>();
+
         for(int i = 0; i < n; i++)
             pb.put(in.next(), in.nextInt());
-        
+
         while(in.hasNext()){
             String name = in.next();
-            if (pb.containsKey(name))                
+            if (pb.containsKey(name))
             System.out.println(name + "=" + pb.get(name) );
             else
             System.out.println("Not found");
@@ -1784,38 +1823,37 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 function processData(input) {
-    input = input.split('\n');
-    let pb = {};
+  input = input.split("\n");
+  let pb = {};
 
-    for(i=1;i<=parseInt(input[0]);i++) {
-        let entry =input[i].split(' ')
-        pb[entry[0]] = entry[1]
-    }
+  for (i = 1; i <= parseInt(input[0]); i++) {
+    let entry = input[i].split(" ");
+    pb[entry[0]] = entry[1];
+  }
 
-    for(i=(parseInt(input[0])+1); i<input.length; i++){
-        if(pb[input[i]]) 
-            console.log(input[i] + "=" + pb[input[i]])
-        else
-            console.log("Not found")
-            
-    }
-} 
+  for (i = parseInt(input[0]) + 1; i < input.length; i++) {
+    if (pb[input[i]]) console.log(input[i] + "=" + pb[input[i]]);
+    else console.log("Not found");
+  }
+}
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-    _input += input;
+  _input += input;
 });
 
 process.stdin.on("end", function () {
-   processData(_input);
+  processData(_input);
 });
 ```
 
 #### Python
+
 ```python
 import sys
 pb = {}
@@ -1832,12 +1870,12 @@ while query:
     query = sys.stdin.readline().strip()
 ```
 
-
 ### Day 09 Recursion 3
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-recursion/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-recursion/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -1901,11 +1939,13 @@ string rtrim(const string &str) {
 ```
 
 #### C
+
 ```c
 
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -1955,29 +1995,30 @@ public class Solution {
 ```
 
 #### Javascript
-```javascript
-'use strict';
 
-const fs = require('fs');
+```javascript
+"use strict";
+
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 /*
@@ -1988,25 +2029,25 @@ function readLine() {
  */
 
 function factorial(n) {
-    if (n == 1)
-    return 1;
-    return n * factorial(n-1);
+  if (n == 1) return 1;
+  return n * factorial(n - 1);
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const n = parseInt(readLine().trim(), 10);
+  const n = parseInt(readLine().trim(), 10);
 
-    const result = factorial(n);
+  const result = factorial(n);
 
-    ws.write(result + '\n');
+  ws.write(result + "\n");
 
-    ws.end();
+  ws.end();
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 
@@ -2040,12 +2081,12 @@ if __name__ == '__main__':
     fptr.close()
 ```
 
-
 ### Day 10 Binary Numbers
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -2063,13 +2104,13 @@ int main()
 
     int n = stoi(ltrim(rtrim(n_temp)));
     int ans = 0, series = 0;
-    
+
     while(n>0)
     {
-        if (n%2 == 1)         
+        if (n%2 == 1)
             series++;
         else
-            series = 0;   
+            series = 0;
         ans = max(ans, series);
         n = n/2;
     }
@@ -2101,6 +2142,7 @@ string rtrim(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -2125,13 +2167,13 @@ int main()
 {
     int n = parse_int(ltrim(rtrim(readline())));
     int ans = 0, series = 0;
-    
+
     while(n>0)
     {
-        if (n%2 == 1)         
+        if (n%2 == 1)
             series++;
         else
-            series = 0;   
+            series = 0;
         ans = MAX(ans, series);
         n = n/2;
     }
@@ -2240,6 +2282,7 @@ int parse_int(char* str) {
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -2263,10 +2306,10 @@ public class Solution {
         int ans = 0, series = 0;
         while(n>0)
         {
-            if (n%2 == 1)         
+            if (n%2 == 1)
                 series++;
             else
-                series = 0;   
+                series = 0;
             ans = Math.max(ans, series);
             n = n/2;
         }
@@ -2277,49 +2320,48 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
-
 function main() {
-    var n = parseInt(readLine().trim(), 10);
-    var ans = 0, series = 0;
-    
-    while(n>0)
-    {
-        if (n%2 == 1)
-            series++
-        else
-            series = 0
-            
-        ans = Math.max(ans, series)
-        n = parseInt(n/2)
-    }
-    console.log(ans);
+  var n = parseInt(readLine().trim(), 10);
+  var ans = 0,
+    series = 0;
+
+  while (n > 0) {
+    if (n % 2 == 1) series++;
+    else series = 0;
+
+    ans = Math.max(ans, series);
+    n = parseInt(n / 2);
+  }
+  console.log(ans);
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 
@@ -2334,23 +2376,24 @@ if __name__ == '__main__':
     n = int(input().strip())
     ans = 0
     series = 0
-    
+
     while n>0 :
         if n%2 == 1 :
             series += 1
         else :
-            series = 0 
+            series = 0
         ans = max(ans, series)
         n = n //2
-    
+
     print(ans)
 ```
 
 ### Day 11 2D Arrays
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-2d-arrays/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-2d-arrays/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -2381,9 +2424,9 @@ int main()
             arr[i][j] = arr_row_item;
         }
     }
-    
+
     int ans = INT_MIN ;
-    
+
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++)
         ans = max(ans, arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1]        [j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]);
@@ -2432,6 +2475,7 @@ vector<string> split(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -2469,9 +2513,9 @@ int main()
             *(*(arr + i) + j) = arr_item;
         }
     }
-    
+
     int ans = INT_MIN ;
-    
+
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++)
         ans = MAX(ans, arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] +                   arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]);
@@ -2603,6 +2647,7 @@ int parse_int(char* str) {
 ```
 
 #### Java
+
 ```java
 import java.util.Scanner;
 
@@ -2616,62 +2661,74 @@ public class Solution {
                 arr[i][j] = sc.nextInt();
             }
         }
-        
+
         int ans = Integer.MIN_VALUE;
         for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++)
-        ans = Math.max(ans, arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + 
+        ans = Math.max(ans, arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] +
         arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]);
     }
         System.out.println(ans);
         sc.close();
     }
-    
+
 }
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function main() {
   var arr = Array(6);
-  var i,j;
+  var i, j;
   for (i = 0; i < 6; i++) {
-    arr[i] = readLine().split(' ');
+    arr[i] = readLine().split(" ");
     arr[i] = arr[i].map(Number);
   }
 
   var ans = -64;
   for (i = 0; i < 4; i++) {
-    for (j = 0; j < 4; j++)
-    {ans = Math.max(ans, arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] +                   arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2])}
+    for (j = 0; j < 4; j++) {
+      ans = Math.max(
+        ans,
+        arr[i][j] +
+          arr[i][j + 1] +
+          arr[i][j + 2] +
+          arr[i + 1][j + 1] +
+          arr[i + 2][j] +
+          arr[i + 2][j + 1] +
+          arr[i + 2][j + 2]
+      );
+    }
   }
-  console.log(ans)
+  console.log(ans);
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 
@@ -2697,9 +2754,10 @@ if __name__ == '__main__':
 
 ### Day 12 Inheritance
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-inheritance/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-inheritance/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -2719,9 +2777,9 @@ class Person{
 			this->id = identification;
 		}
 		void printPerson(){
-			cout<< "Name: "<< lastName << ", "<< firstName <<"\nID: "<< id << "\n"; 
+			cout<< "Name: "<< lastName << ", "<< firstName <<"\nID: "<< id << "\n";
 		}
-	
+
 };
 
 class Student :  public Person{
@@ -2769,6 +2827,7 @@ int main() {
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 
@@ -2776,30 +2835,30 @@ class Person {
     protected String firstName;
     protected String lastName;
     protected int idNumber;
-    
+
     Person(String firstName, String lastName, int identification){
         this.firstName = firstName;
         this.lastName = lastName;
         this.idNumber = identification;
     }
-    
+
     public void printPerson(){
         System.out.println("Name: " + lastName + ", " + firstName + "\nID: " + idNumber);
     }
-     
+
 }
 
 class Student extends Person{
     private int[] scores;
-   
-    Student(String firstName, String lastName, int identification, int[] scores){ 
+
+    Student(String firstName, String lastName, int identification, int[] scores){
         super(firstName,lastName,identification);
-        this.scores = scores; 
+        this.scores = scores;
     }
 
-    
+
     public char calculate (){
-        
+
         int total = 0, n = scores.length;
         for (int i = 0; i < n; i++) {
             total += scores[i];
@@ -2826,7 +2885,7 @@ class Solution {
             testScores[i] = scan.nextInt();
         }
         scan.close();
-        
+
         Student s = new Student(firstName, lastName, id, testScores);
         s.printPerson();
         System.out.println("Grade: " + s.calculate() );
@@ -2835,74 +2894,85 @@ class Solution {
 ```
 
 #### Javascript
-```javascript
-'use strict';
 
-var _input = '';
+```javascript
+"use strict";
+
+var _input = "";
 var _index = 0;
-process.stdin.on('data', (data) => { _input += data; });
-process.stdin.on('end', () => {
-    _input = _input.split(new RegExp('[ \n]+'));
-    main();    
+process.stdin.on("data", (data) => {
+  _input += data;
 });
-function read() { return _input[_index++]; }
+process.stdin.on("end", () => {
+  _input = _input.split(new RegExp("[ \n]+"));
+  main();
+});
+function read() {
+  return _input[_index++];
+}
 
 /**** Ignore above this line. ****/
 
 class Person {
-    constructor(firstName, lastName, identification) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.idNumber = identification;
-    }
-    
-    printPerson() {
-        console.log(
-            "Name: " + this.lastName + ", " + this.firstName 
-            + "\nID: " + this.idNumber
-        )
-    }
+  constructor(firstName, lastName, identification) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.idNumber = identification;
+  }
+
+  printPerson() {
+    console.log(
+      "Name: " +
+        this.lastName +
+        ", " +
+        this.firstName +
+        "\nID: " +
+        this.idNumber
+    );
+  }
 }
 
 class Student extends Person {
-    
   constructor(firstName, lastName, identification, testScores) {
-    super(firstName, lastName, identification)
-    this.testScores = testScores
-    }
-  
-   calculate() {
+    super(firstName, lastName, identification);
+    this.testScores = testScores;
+  }
+
+  calculate() {
     var total = 0;
-    this.testScores.forEach(score => { total += score })
-    var avg = (total / this.testScores.length);
-    if (avg > 89) return 'O';
-    if (avg > 79) return 'E';
-    if (avg > 69) return 'A';
-    if (avg > 54) return 'P';
-    if (avg > 39) return 'D';
-    return 'T';
-   }
+    this.testScores.forEach((score) => {
+      total += score;
+    });
+    var avg = total / this.testScores.length;
+    if (avg > 89) return "O";
+    if (avg > 79) return "E";
+    if (avg > 69) return "A";
+    if (avg > 54) return "P";
+    if (avg > 39) return "D";
+    return "T";
+  }
 }
 
 function main() {
-    let firstName = read()
-    let lastName = read()
-    let id = +read()
-    let numScores = +read()
-    let testScores = new Array(numScores)
-    
-    for (var i = 0; i < numScores; i++) {
-        testScores[i] = +read()  
-    }
+  let firstName = read();
+  let lastName = read();
+  let id = +read();
+  let numScores = +read();
+  let testScores = new Array(numScores);
 
-    let s = new Student(firstName, lastName, id, testScores)
-    s.printPerson()
-    s.calculate()
-    console.log('Grade: ' + s.calculate())
+  for (var i = 0; i < numScores; i++) {
+    testScores[i] = +read();
+  }
+
+  let s = new Student(firstName, lastName, id, testScores);
+  s.printPerson();
+  s.calculate();
+  console.log("Grade: " + s.calculate());
 }
 ```
 
 #### Python
+
 ```python
 class Person:
 	def __init__(self, firstName, lastName, idNumber):
@@ -2936,9 +3006,10 @@ line = input().split()
 
 ### Day 13 Abstract Classes
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-abstract-classes/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-abstract-classes/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -2969,7 +3040,7 @@ class MyBook : public Book{
     }
     void display(){
         cout << "Title: " << title << "\nAuthor: " << author << "\nPrice: " << price << endl;
-    } 
+    }
 };
 
 int main() {
@@ -2985,29 +3056,30 @@ int main() {
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 
 class Book {
     protected String title;
     protected String author;
-    
+
     Book(String title, String author){
         this.title = title;
         this.author = author;
     }
-     
+
 }
 
 class MyBook extends Book{
-    
+
     private int price;
-    
-    MyBook(String title, String author, int price){ 
+
+    MyBook(String title, String author, int price){
         super(title,author);
-        this.price = price; 
+        this.price = price;
     }
-    
+
     public void display(){
         System.out.println("Title: " + title + "\nAuthor: " + author + "\nPrice: " + price);
     }
@@ -3016,12 +3088,12 @@ class MyBook extends Book{
 public class Solution {
 
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
         String title = sc.nextLine();
         String author = sc.nextLine();
         int price = sc.nextInt();
-        
+
         MyBook mb = new MyBook(title, author, price);
         mb.display();
     }
@@ -3029,56 +3101,64 @@ public class Solution {
 ```
 
 #### Javascript
-```javascript
-'use strict';
 
-var _input = '';
+```javascript
+"use strict";
+
+var _input = "";
 var _index = 0;
-process.stdin.on('data', (data) => { _input += data; });
-process.stdin.on('end', () => {
-    _input = _input.split(new RegExp('\n'));
-    main();    
+process.stdin.on("data", (data) => {
+  _input += data;
 });
-function readLine() { return _input[_index++]; }
+process.stdin.on("end", () => {
+  _input = _input.split(new RegExp("\n"));
+  main();
+});
+function readLine() {
+  return _input[_index++];
+}
 
 /**** Ignore above this line. ****/
 
 class Book {
-    constructor(title, author) {
-        if (this.constructor === Book) {
-            throw new TypeError('Do not attempt to directly instantiate an abstract class.'); 
-        }
-        else {
-            this.title = title;
-            this.author = author;
-        }
+  constructor(title, author) {
+    if (this.constructor === Book) {
+      throw new TypeError(
+        "Do not attempt to directly instantiate an abstract class."
+      );
+    } else {
+      this.title = title;
+      this.author = author;
     }
-    
-    display() {
-        console.log('Implement the \'display\' method!')
-    }
+  }
+
+  display() {
+    console.log("Implement the 'display' method!");
+  }
 }
 
-class MyBook extends Book{
-    
-    constructor(title, author,price) {
-    super(title,author)
-    this.price = price
-    }
-    
-    display() {
-        process.stdout.write(`Title: ${this.title}\nAuthor: ${this.author}\nPrice: ${this.price}`)
-    }
+class MyBook extends Book {
+  constructor(title, author, price) {
+    super(title, author);
+    this.price = price;
+  }
+
+  display() {
+    process.stdout.write(
+      `Title: ${this.title}\nAuthor: ${this.author}\nPrice: ${this.price}`
+    );
+  }
 }
 ```
 
 #### Python
+
 ```python
 from abc import ABCMeta, abstractmethod
 class Book(object, metaclass=ABCMeta):
     def __init__(self,title,author):
         self.title=title
-        self.author=author   
+        self.author=author
     @abstractmethod
     def display(): pass
 
@@ -3086,7 +3166,7 @@ class MyBook(Book):
     def __init__(self,title,author,price):
         super().__init__(title,author)
         self.price = price
-        
+
     def display(self):
         print("Title:",title,"\nAuthor:",author,"\nPrice:",price)
 
@@ -3099,9 +3179,10 @@ new_novel.display()
 
 ### Day 14 Scope
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-scope/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-scope/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -3114,13 +3195,13 @@ using namespace std;
 class Difference {
     private:
     vector<int> elements;
-  
+
   	public:
   	int maximumDifference;
     Difference(vector<int> elements){
         this->elements = elements;
     }
-    
+
     void computeDifference(){
     int min_ele = 101, max_ele = -1;
     for(int i=0; i<(int)elements.size(); i++){
@@ -3135,39 +3216,39 @@ class Difference {
 int main() {
     int N;
     cin >> N;
-    
+
     vector<int> a;
-    
+
     for (int i = 0; i < N; i++) {
         int e;
         cin >> e;
-        
+
         a.push_back(e);
     }
-    
+
     Difference d(a);
-    
+
     d.computeDifference();
-    
+
     cout << d.maximumDifference;
-    
+
     return 0;
 }
 ```
 
-
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
 
 class Difference{
     private int[] elements;
-   
-    Difference(int[] elements){ 
-        this.elements = elements; 
+
+    Difference(int[] elements){
+        this.elements = elements;
     }
-    
+
     public void maximumDifference;
     int computeDifference(){
     int min_ele = 101, max_ele = -1;
@@ -3197,6 +3278,7 @@ public class Solution {
 ```
 
 #### Python
+
 ```python
 class Difference:
     def __init__(self, a):
@@ -3225,13 +3307,14 @@ print(d.maximumDifference)
 
 ### Day 15 Linked List
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <cstddef>
-using namespace std;	
+using namespace std;
 class Node
 {
     public:
@@ -3271,16 +3354,17 @@ int main()
     while(T-->0){
         cin>>data;
         head=mylist.insert(head,data);
-    }	
+    }
 	mylist.display(head);
-		
+
 }
 ```
 
 #### C
+
 ```c
 #include <stdlib.h>
-#include <stdio.h>	
+#include <stdio.h>
 typedef struct Node
 {
     int data;
@@ -3310,18 +3394,19 @@ int main()
 {
 	int T,data;
     scanf("%d",&T);
-    Node *head=NULL;	
+    Node *head=NULL;
     while(T-->0){
         scanf("%d",&data);
         head=insert(head,data);
     }
   display(head);
-		
+
 }
 
 ```
 
 #### Java
+
 ```java
 import java.util.Scanner;
 
@@ -3370,72 +3455,73 @@ class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
+process.stdin.on("data", function (data) {
+  input_stdin += data;
 });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
+process.stdin.on("end", function () {
+  input_stdin_array = input_stdin.split("\n");
+  main();
 });
 function readLine() {
-    return input_stdin_array[input_currentline++];
+  return input_stdin_array[input_currentline++];
 }
-function Node(data){
-    this.data=data;
-    this.next=null;
+function Node(data) {
+  this.data = data;
+  this.next = null;
 }
-function Solution(){
-
-this.insert=function(head,data){ 
-    if(head == null) return new Node(data)
+function Solution() {
+  this.insert = function (head, data) {
+    if (head == null) return new Node(data);
     var curr = head;
-    while(curr.next != null) curr = curr.next;
+    while (curr.next != null) curr = curr.next;
     curr.next = new Node(data);
     return head;
-};
+  };
 
-	this.display=function(head){
-        var start=head;
-            while(start){
-                process.stdout.write(start.data+" ");
-                start=start.next;
-            }
-    };
-}
-function main(){
-    var T=parseInt(readLine());
-    var head=null;
-    var mylist=new Solution();
-    for(i=0;i<T;i++){
-        var data=parseInt(readLine());
-        head=mylist.insert(head,data);
+  this.display = function (head) {
+    var start = head;
+    while (start) {
+      process.stdout.write(start.data + " ");
+      start = start.next;
     }
-    mylist.display(head);
-}		
+  };
+}
+function main() {
+  var T = parseInt(readLine());
+  var head = null;
+  var mylist = new Solution();
+  for (i = 0; i < T; i++) {
+    var data = parseInt(readLine());
+    head = mylist.insert(head, data);
+  }
+  mylist.display(head);
+}
 ```
 
 #### Python
+
 ```python
 class Node:
     def __init__(self,data):
         self.data = data
-        self.next = None 
-class Solution: 
+        self.next = None
+class Solution:
     def display(self,head):
         current = head
         while current:
             print(current.data,end=' ')
             current = current.next
-    def insert(self,head,data): 
+    def insert(self,head,data):
         if head is None: head = Node(data)
         else:
             curr = head
@@ -3449,15 +3535,16 @@ T=int(input())
 head=None
 for i in range(T):
     data=int(input())
-    head=mylist.insert(head,data)    
-mylist.display(head); 	  
+    head=mylist.insert(head,data)
+mylist.display(head);
 ```
 
 ### Day 16 Exceptions
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -3477,6 +3564,7 @@ int main()
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -3507,41 +3595,42 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function main() {
   var S = readLine();
   try {
     isNaN(S) ? null.throw : console.log(parseInt(S));
-  } catch(err) {
+  } catch (err) {
     console.log("Bad String");
   }
 }
-
 ```
 
 #### Python
+
 ```python
 try: print(int(input()))
 except: print("Bad String")
@@ -3549,9 +3638,10 @@ except: print("Bad String")
 
 ### Day 17 More Exceptions
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-more-exceptions/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-more-exceptions/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <iostream>
@@ -3559,7 +3649,7 @@ except: print("Bad String")
 #include <stdexcept>
 using namespace std;
 class Calculator{
-    public: 
+    public:
     int power(int base,int power){
     if (base < 0 || power< 0) throw  invalid_argument("n and p should be non-negative");
     return pow(base,power);
@@ -3575,18 +3665,19 @@ int main()
       if(scanf("%d %d",&n,&p)==2){
          try{
                int ans=myCalculator.power(n,p);
-               cout<<ans<<endl; 
+               cout<<ans<<endl;
          }
          catch(exception& e){
              cout<<e.what()<<endl;
          }
       }
     }
-    
+
 }
 ```
 
 #### Java
+
 ```java
 import java.util.Scanner;
 
@@ -3608,7 +3699,7 @@ class Solution {
             int p = sc.nextInt();
             Calculator myCalculator = new Calculator();
             try {
-                int ans = 
+                int ans =
                 System.out.println(myCalculator.power(n, p););
 
             } catch (Exception e) {
@@ -3621,52 +3712,51 @@ class Solution {
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
+process.stdin.on("data", function (data) {
+  input_stdin += data;
 });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
+process.stdin.on("end", function () {
+  input_stdin_array = input_stdin.split("\n");
+  main();
 });
 function readLine() {
-    return input_stdin_array[input_currentline++];
+  return input_stdin_array[input_currentline++];
 }
-class Calculator{
-
-    power(base, pow){
-        if (base <0 || pow <0) throw "n and p should be non-negative"
-        return Math.pow(base,pow)
-    }
+class Calculator {
+  power(base, pow) {
+    if (base < 0 || pow < 0) throw "n and p should be non-negative";
+    return Math.pow(base, pow);
+  }
 }
-function main(){
-    var myCalculator=new Calculator();
-    var T=parseInt(readLine());
-    while(T-->0){
-        var num = (readLine().split(" "));
-        try{
-            var n=parseInt(num[0]);
-            var p=parseInt(num[1]);
-            var ans=myCalculator.power(n,p);
-            console.log(ans);
-        }
-        catch(e){
-            console.log(e);
-        }
-
+function main() {
+  var myCalculator = new Calculator();
+  var T = parseInt(readLine());
+  while (T-- > 0) {
+    var num = readLine().split(" ");
+    try {
+      var n = parseInt(num[0]);
+      var p = parseInt(num[1]);
+      var ans = myCalculator.power(n, p);
+      console.log(ans);
+    } catch (e) {
+      console.log(e);
     }
+  }
 }
 ```
 
 #### Python
+
 ```python
 class Calculator:
 
@@ -3682,14 +3772,15 @@ for i in range(T):
         ans=myCalculator.power(n,p)
         print(ans)
     except Exception as e:
-        print(e)   
+        print(e)
 ```
 
 ### Day 18 Queues and Stacks
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-queues-stacks/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-queues-stacks/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -3703,13 +3794,13 @@ public:
     void pushCharacter(char ch) {
         st.push(ch);
     }
-    
+
     char popCharacter() {
         char ch = st.top();
         st.pop();
         return ch;
     }
-    
+
     void enqueueCharacter(char ch) {
         qu.push(ch);
     }
@@ -3725,41 +3816,42 @@ int main() {
     // read the string s.
     string s;
     getline(cin, s);
-    
+
   	// create the Solution class object p.
     Solution obj;
-    
+
     // push/enqueue all the characters of string s to stack.
     for (int i = 0; i < s.length(); i++) {
         obj.pushCharacter(s[i]);
         obj.enqueueCharacter(s[i]);
     }
-    
+
     bool isPalindrome = true;
-    
+
     // pop the top character from stack.
     // dequeue the first character from queue.
     // compare both the characters.
     for (int i = 0; i < s.length() / 2; i++) {
         if (obj.popCharacter() != obj.dequeueCharacter()) {
             isPalindrome = false;
-            
+
             break;
         }
     }
-    
+
     // finally print whether string s is palindrome or not.
     if (isPalindrome) {
         cout << "The word, " << s << ", is a palindrome.";
     } else {
         cout << "The word, " << s << ", is not a palindrome.";
     }
-    
+
     return 0;
 }
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 import java.util.Scanner;
@@ -3805,74 +3897,74 @@ public class Solution {
             }
         }
     if (isPalindrome) System.out.println("The word, " + input + ", is a palindrome.");
-    else System.out.println("The word, " + input + ", is not a palindrome.");    
-    
+    else System.out.println("The word, " + input + ", is not a palindrome.");
+
     }
 }
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
+process.stdin.on("data", function (data) {
+  input_stdin += data;
 });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
+process.stdin.on("end", function () {
+  input_stdin_array = input_stdin.split("\n");
+  main();
 });
 function readLine() {
-    return input_stdin_array[input_currentline++];
+  return input_stdin_array[input_currentline++];
 }
 function Solution() {
-  this.stack = []
-  this.queue = []
-  this.pushCharacter = this.stack.push
-  this.popCharacter = this.stack.pop
-  this.enqueueCharacter = this.queue.push
-  this.dequeueCharacter = this.queue.shift
+  this.stack = [];
+  this.queue = [];
+  this.pushCharacter = this.stack.push;
+  this.popCharacter = this.stack.pop;
+  this.enqueueCharacter = this.queue.push;
+  this.dequeueCharacter = this.queue.shift;
 }
-function main(){
-    // read the string s
-    var s=readLine();
-    var len=s.length;
-    // create the Solution class object p
-    var obj=new Solution();
-    //push/enqueue all the characters of string s to stack
-    for(var i=0;i<len;i++){
-        obj.pushCharacter(s.charAt(i));
-        obj.enqueueCharacter(s.charAt(i));
-    }
-  
-    var isPalindrome=true;
-    /*
+function main() {
+  // read the string s
+  var s = readLine();
+  var len = s.length;
+  // create the Solution class object p
+  var obj = new Solution();
+  //push/enqueue all the characters of string s to stack
+  for (var i = 0; i < len; i++) {
+    obj.pushCharacter(s.charAt(i));
+    obj.enqueueCharacter(s.charAt(i));
+  }
+
+  var isPalindrome = true;
+  /*
     pop the top character from stack
     dequeue the first character from queue
     compare both the characters*/
 
-    for(var i=0;i<len/2;i++){
-        if(obj.popCharacter()!=obj.dequeueCharacter()){
-            isPalindrome=false;
-          	break;
-        }
+  for (var i = 0; i < len / 2; i++) {
+    if (obj.popCharacter() != obj.dequeueCharacter()) {
+      isPalindrome = false;
+      break;
     }
-    //finally print whether string s is palindrome or not
+  }
+  //finally print whether string s is palindrome or not
 
-    if(isPalindrome)
-        console.log("The word, "+s+", is a palindrome.");    
-    else
-        console.log("The word, "+s+", is not a palindrome.");
+  if (isPalindrome) console.log("The word, " + s + ", is a palindrome.");
+  else console.log("The word, " + s + ", is not a palindrome.");
 }
 ```
 
 #### Python
+
 ```python
 import sys
 from collections import deque
@@ -3881,28 +3973,28 @@ class Solution:
     def __init__(self):
         self.s = deque()
         self.q = deque()
-    def pushCharacter(self, char): self.s.append(char)  
-    def popCharacter(self): return(self.s.pop())   
+    def pushCharacter(self, char): self.s.append(char)
+    def popCharacter(self): return(self.s.pop())
     def enqueueCharacter(self, char): self.q.append(char)
     def dequeueCharacter(self): return(self.q.popleft())
 
 ## read the string s
 s=input()
 #Create the Solution class object
-obj=Solution()   
+obj=Solution()
 
 l=len(s)
 ## push/enqueue all the characters of string s to stack
 for i in range(l):
     obj.pushCharacter(s[i])
     obj.enqueueCharacter(s[i])
-    
+
 isPalindrome=True
 '''
 pop the top character from stack
 dequeue the first character from queue
 compare both the characters
-''' 
+'''
 for i in range(l // 2):
     if obj.popCharacter()!=obj.dequeueCharacter():
         isPalindrome=False
@@ -3911,14 +4003,15 @@ for i in range(l // 2):
 if isPalindrome:
     print("The word, "+s+", is a palindrome.")
 else:
-    print("The word, "+s+", is not a palindrome.")    
+    print("The word, "+s+", is not a palindrome.")
 ```
 
 ### Day 19 Interfaces
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-interfaces/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-interfaces/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -3936,14 +4029,14 @@ public:
     int divisorSum(int n) {
     int ans = 0;
     for(int i=1; i<=n; i++)
-    if (n%i==0) ans += i;    
+    if (n%i==0) ans += i;
     return ans;
     }
 };
 int main(){
     int n;
     cin >> n;
-    AdvancedArithmetic *myCalculator = new Calculator(); 
+    AdvancedArithmetic *myCalculator = new Calculator();
     int sum = myCalculator->divisorSum(n);
     cout << "I implemented: AdvancedArithmetic\n" << sum;
     return 0;
@@ -3951,6 +4044,7 @@ int main(){
 ```
 
 #### Java
+
 ```java
 import java.util.Scanner;
 
@@ -3963,7 +4057,7 @@ class Calculator implements AdvancedArithmetic {
     public int divisorSum(int n) {
     int ans = 0;
     for(int i=1; i<=n; i++)
-    if (n%i==0) ans += i;    
+    if (n%i==0) ans += i;
     return ans;
     }
 }
@@ -3982,6 +4076,7 @@ class Solution {
 ```
 
 #### Python
+
 ```python
 class AdvancedArithmetic(object):
     def divisorSum(n):
@@ -3990,7 +4085,7 @@ class AdvancedArithmetic(object):
 class Calculator(AdvancedArithmetic):
     def divisorSum(self, n):
         ans = 0
-        for i in range(1, n + 1): 
+        for i in range(1, n + 1):
             if n%i == 0: ans += i
         return ans
 
@@ -3999,15 +4094,15 @@ n = int(input())
 my_calculator = Calculator()
 s = my_calculator.divisorSum(n)
 print("I implemented: " + type(my_calculator).__bases__[0].__name__)
-print(s) 
+print(s)
 ```
-
 
 ### Day 20 Sorting
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-sorting/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-sorting/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -4030,29 +4125,29 @@ int main()
     vector<string> a_temp = split(rtrim(a_temp_temp));
 
     vector<int> a(n);
- 
+
     for (int i = 0; i < n; i++) {
         int a_item = stoi(a_temp[i]);
 
         a[i] = a_item;
     }
-    
+
     int numberOfSwaps =0;
     for (int i = 0; i < n; i++) {
-    
+
     for (int j = 0; j < n - 1; j++) {
         if (a[j] > a[j + 1]) {
             swap(a[j], a[j + 1]);
             numberOfSwaps++;
         }
     }
-    
+
     if (numberOfSwaps == 0) {
         break;
     }
 }
 
-    cout << "Array is sorted in " << numberOfSwaps <<" swaps.\n" << "First Element: " 
+    cout << "Array is sorted in " << numberOfSwaps <<" swaps.\n" << "First Element: "
     << a[0] << "\nLast Element: " << a[n-1];
 
     // Write your code here
@@ -4101,6 +4196,7 @@ vector<string> split(const string &str) {
 ```
 
 #### C
+
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -4111,7 +4207,7 @@ vector<string> split(const string &str) {
 #include <stdbool.h>
 
 int main() {
-    int n; 
+    int n;
 
     scanf("%d", &n);
 
@@ -4120,7 +4216,7 @@ int main() {
     for(int a_i = 0; a_i < n; a_i++){
        scanf("%d", &a[a_i]);
     }
-    
+
     int numberOfSwaps = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - 1; j++) {
@@ -4140,6 +4236,7 @@ int main() {
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -4167,14 +4264,14 @@ public class Solution {
 
     int numberOfSwaps =0;
     for (int i = 0; i < n; i++) {
-    
+
     for (int j = 0; j < n - 1; j++) {
         if (a.get(j) > a.get(j+1)) {
-            Collections.swap(a, j, j+1);  
+            Collections.swap(a, j, j+1);
             numberOfSwaps++;
         }
     }
-    
+
     if (numberOfSwaps == 0) {
         break;
     }
@@ -4188,53 +4285,60 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
-
-
 function main() {
-    const n = parseInt(readLine().trim(), 10);
+  const n = parseInt(readLine().trim(), 10);
 
-    const a = readLine().replace(/\s+$/g, '').split(' ').map(aTemp => parseInt(aTemp, 10));
+  const a = readLine()
+    .replace(/\s+$/g, "")
+    .split(" ")
+    .map((aTemp) => parseInt(aTemp, 10));
 
-    let numberOfSwaps = 0;
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n - 1; j++) {
-            if (a[j] > a[j + 1]) {
-                let temp = a[j + 1];
-                a[j + 1] = a[j];
-                a[j] = temp;
-                numberOfSwaps++;
-            }
-        }
-        if (numberOfSwaps == 0) break;
+  let numberOfSwaps = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - 1; j++) {
+      if (a[j] > a[j + 1]) {
+        let temp = a[j + 1];
+        a[j + 1] = a[j];
+        a[j] = temp;
+        numberOfSwaps++;
+      }
     }
-    console.log(`Array is sorted in ${numberOfSwaps} swaps.\nFirst Element: ${a[0]}\nLast Element: ${a[n-1]}\n`)
+    if (numberOfSwaps == 0) break;
+  }
+  console.log(
+    `Array is sorted in ${numberOfSwaps} swaps.\nFirst Element: ${
+      a[0]
+    }\nLast Element: ${a[n - 1]}\n`
+  );
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 import math
@@ -4254,7 +4358,7 @@ if __name__ == '__main__':
                 temp = a[j + 1]
                 a[j + 1] = a[j]
                 a[j] = temp
-                numberOfSwaps += 1        
+                numberOfSwaps += 1
         if numberOfSwaps == 0 : break
 
 print("Array is sorted in {} swaps.\nFirst Element: {}\nLast Element: {}\n".format(numberOfSwaps,a[0],a[n-1]))
@@ -4262,9 +4366,10 @@ print("Array is sorted in {} swaps.\nFirst Element: {}\nLast Element: {}\n".form
 
 ### Day 21 Generics
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-generics/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-generics/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -4279,7 +4384,7 @@ for(auto& e : arr) cout << e << endl;
 
 int main() {
 	int n;
-	
+
 	cin >> n;
 	vector<int> int_vector(n);
 	for (int i = 0; i < n; i++) {
@@ -4287,7 +4392,7 @@ int main() {
 		cin >> value;
 		int_vector[i] = value;
 	}
-	
+
 	cin >> n;
 	vector<string> string_vector(n);
 	for (int i = 0; i < n; i++) {
@@ -4304,6 +4409,7 @@ int main() {
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 
@@ -4316,7 +4422,7 @@ public static < E > void printArray( E[] inputArray ) {
 }
 
 public class Generics {
-    
+
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -4330,7 +4436,7 @@ public class Generics {
         for (int i = 0; i < n; i++) {
             stringArray[i] = scanner.next();
         }
-        
+
         Printer<Integer> intPrinter = new Printer<Integer>();
         Printer<String> stringPrinter = new Printer<String>();
         intPrinter.printArray( intArray  );
@@ -4338,20 +4444,21 @@ public class Generics {
         if(Printer.class.getDeclaredMethods().length > 1){
             System.out.println("The Printer class should only have 1 method named printArray.");
         }
-    } 
+    }
 }
 ```
 
-### Day 22 Binary Search Trees 
+### Day 22 Binary Search Trees
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-binary-search-trees/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-binary-search-trees/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <cstddef>
 
-using namespace std;	
+using namespace std;
 
 class Node{
     public:
@@ -4411,6 +4518,7 @@ int main() {
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -4439,13 +4547,13 @@ Node* insert(Node* root,int data){
         Node* cur;
         if(data<=root->data){
             cur=insert(root->left,data);
-            root->left=cur;                
+            root->left=cur;
         }
         else{
             cur=insert(root->right,data);
             root->right=cur;
         }
-        
+
     }
     return root;
 }
@@ -4460,11 +4568,12 @@ int main(){
     int height=getHeight(root);
     printf("%d",height);
     return 0;
-    
+
 }
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 import java.io.*;
@@ -4478,7 +4587,7 @@ class Node{
 }
 
 class Solution{
-    
+
     public static int getHeight(Node root){
     if(root==null) return -1;
     return 1+Math.max(getHeight(root.left),getHeight(root.right));
@@ -4511,76 +4620,78 @@ class Solution{
             }
             int height=getHeight(root);
             System.out.println(height);
-        }   
+        }
 }
 ```
 
 #### Javascript
+
 ```javascript
 // Start of function Node
 function Node(data) {
-    this.data = data;
-    this.left = null;
-    this.right = null;
-}; // End of function Node
+  this.data = data;
+  this.left = null;
+  this.right = null;
+} // End of function Node
 
 // Start of function BinarySearchTree
 function BinarySearchTree() {
-    this.insert = function(root, data) {
-        if (root === null) {
-            this.root = new Node(data);
-            
-            return this.root;
-        }
-        
-        if (data <= root.data) {
-            if (root.left) {
-                this.insert(root.left, data);
-            } else {
-                root.left = new Node(data);
-            }
-        } else {
-            if (root.right) {
-                this.insert(root.right, data);
-            } else {
-                root.right = new Node(data);
-            }
-        }
-        
-        return this.root;
-    };
-    
-    // Start of function getHeight
-    this.getHeight = function(root) {
-    if(root==null) return -1
-    return 1+Math.max(this.getHeight(root.left),this.getHeight(root.right))
-    }; // End of function getHeight
-}; // End of function BinarySearchTree
+  this.insert = function (root, data) {
+    if (root === null) {
+      this.root = new Node(data);
+
+      return this.root;
+    }
+
+    if (data <= root.data) {
+      if (root.left) {
+        this.insert(root.left, data);
+      } else {
+        root.left = new Node(data);
+      }
+    } else {
+      if (root.right) {
+        this.insert(root.right, data);
+      } else {
+        root.right = new Node(data);
+      }
+    }
+
+    return this.root;
+  };
+
+  // Start of function getHeight
+  this.getHeight = function (root) {
+    if (root == null) return -1;
+    return 1 + Math.max(this.getHeight(root.left), this.getHeight(root.right));
+  }; // End of function getHeight
+} // End of function BinarySearchTree
 
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var _input = "";
 
-process.stdin.on('data', function (data) {
-    _input += data;
+process.stdin.on("data", function (data) {
+  _input += data;
 });
 
-process.stdin.on('end', function () {
-    var tree = new BinarySearchTree();
-    var root = null;
-    
-    var values = _input.split('\n').map(Number);
-    
-    for (var i = 1; i < values.length; i++) {
-        root = tree.insert(root, values[i]);
-    }
-    
-    console.log(tree.getHeight(root));
+process.stdin.on("end", function () {
+  var tree = new BinarySearchTree();
+  var root = null;
+
+  var values = _input.split("\n").map(Number);
+
+  for (var i = 1; i < values.length; i++) {
+    root = tree.insert(root, values[i]);
+  }
+
+  console.log(tree.getHeight(root));
 });
 ```
 
 #### Python
+
 ```python
 class Node:
     def __init__(self,data):
@@ -4598,7 +4709,7 @@ class Solution:
                 cur=self.insert(root.right,data)
                 root.right=cur
         return root
-    
+
     def getHeight(self,root):
         if root==None: return -1;
         return 1+max(self.getHeight(root.left),self.getHeight(root.right));
@@ -4610,14 +4721,15 @@ for i in range(T):
     data=int(input())
     root=myTree.insert(root,data)
 height=myTree.getHeight(root)
-print(height)       
+print(height)
 ```
 
 ### Day 23 BST Level-Order Traversal
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-binary-trees/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-binary-trees/problem)
 
 #### CPP
+
 ```cpp
 #include <iostream>
 #include <cstddef>
@@ -4625,7 +4737,7 @@ print(height)
 #include <string>
 #include <cstdlib>
 
-using namespace std;	
+using namespace std;
 class Node{
     public:
         int data;
@@ -4650,18 +4762,18 @@ class Solution{
                 else{
                    cur=insert(root->right,data);
                    root->right=cur;
-                 }           
+                 }
            return root;
            }
         }
-    
+
 	void levelOrder(Node * root){
-        
+
     if (root == NULL)  return;
 
     queue<Node *> q;
     q.push(root);
- 
+
     while (!q.empty())
     {
         Node *node = q.front();
@@ -4689,6 +4801,7 @@ int main(){
 ```
 
 #### C
+
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -4713,17 +4826,17 @@ if(root==NULL) return 0;
 return 1+max(getHeight(root->left),getHeight(root->right));
 }
 
-void print(struct Node* root, int level){ 
-    if (root == NULL)  return; 
-    if (level == 1) {printf("%d ", root->data); return;} 
-    print(root->left, level-1); 
-    print(root->right, level-1); 
+void print(struct Node* root, int level){
+    if (root == NULL)  return;
+    if (level == 1) {printf("%d ", root->data); return;}
+    print(root->left, level-1);
+    print(root->right, level-1);
 }
-  
-void levelOrder( struct Node *root) 
+
+void levelOrder( struct Node *root)
 {
-    int h = getHeight(root); 
-    for (int i=1; i<=h; i++) print(root, i); 
+    int h = getHeight(root);
+    for (int i=1; i<=h; i++) print(root, i);
 }
 
 Node* insert(Node* root,int data){
@@ -4733,13 +4846,13 @@ Node* insert(Node* root,int data){
         Node* cur;
         if(data<=root->data){
             cur=insert(root->left,data);
-            root->left=cur;                
+            root->left=cur;
         }
         else{
             cur=insert(root->right,data);
             root->right=cur;
         }
-        
+
     }
     return root;
 }
@@ -4753,11 +4866,12 @@ int main(){
     }
     levelOrder(root);
     return 0;
-    
+
 }
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -4771,7 +4885,7 @@ class Node{
 }
 class Solution{
 	static void levelOrder(Node root){
-        
+
         if (root == null) return;
         Queue<Node> q = new LinkedList<>();
         q.add(root);
@@ -4810,83 +4924,84 @@ class Solution{
                 root=insert(root,data);
             }
             levelOrder(root);
-        }	
+        }
 }
 ```
 
 #### Javascript
+
 ```javascript
 // Start of function Node
 function Node(data) {
-    this.data = data;
-    this.left = null;
-    this.right = null;
-}; // End of function Node
+  this.data = data;
+  this.left = null;
+  this.right = null;
+} // End of function Node
 
 // Start of function BinarySearchTree
 function BinarySearchTree() {
-    this.insert = function(root, data) {
-        if (root === null) {
-            this.root = new Node(data);
-            
-            return this.root;
-        }
-        
-        if (data <= root.data) {
-            if (root.left) {
-                this.insert(root.left, data);
-            } else {
-                root.left = new Node(data);
-            }
-        } else {
-            if (root.right) {
-                this.insert(root.right, data);
-            } else {
-                root.right = new Node(data);
-            }
-        }
-        
-        return this.root;
-    };
-    
-    // Start of function levelOrder
-    this.levelOrder = function(root) {
-    if (this.root == null) return
-      let q = [root];
-      while (q.length > 0) {
-        let node = q.shift();
-        process.stdout.write(node.data + " ");
-        if (node.left)  q.push(node.left)
-        if (node.right) q.push(node.right)
+  this.insert = function (root, data) {
+    if (root === null) {
+      this.root = new Node(data);
+
+      return this.root;
+    }
+
+    if (data <= root.data) {
+      if (root.left) {
+        this.insert(root.left, data);
+      } else {
+        root.left = new Node(data);
       }
-      
-	}; // End of function levelOrder
-}; // End of function BinarySearchTree
+    } else {
+      if (root.right) {
+        this.insert(root.right, data);
+      } else {
+        root.right = new Node(data);
+      }
+    }
+
+    return this.root;
+  };
+
+  // Start of function levelOrder
+  this.levelOrder = function (root) {
+    if (this.root == null) return;
+    let q = [root];
+    while (q.length > 0) {
+      let node = q.shift();
+      process.stdout.write(node.data + " ");
+      if (node.left) q.push(node.left);
+      if (node.right) q.push(node.right);
+    }
+  }; // End of function levelOrder
+} // End of function BinarySearchTree
 
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var _input = "";
 
-process.stdin.on('data', function (data) {
-    _input += data;
+process.stdin.on("data", function (data) {
+  _input += data;
 });
 
-process.stdin.on('end', function () {
-    var tree = new BinarySearchTree();
-    var root = null;
-    
-    var values = _input.split('\n').map(Number);
-    
-    for (var i = 1; i < values.length; i++) {
-        root = tree.insert(root, values[i]);
-    }
-    
-    tree.levelOrder(root);
+process.stdin.on("end", function () {
+  var tree = new BinarySearchTree();
+  var root = null;
+
+  var values = _input.split("\n").map(Number);
+
+  for (var i = 1; i < values.length; i++) {
+    root = tree.insert(root, values[i]);
+  }
+
+  tree.levelOrder(root);
 });
 ```
 
 #### Python
+
 ```python
 import sys
 
@@ -4906,7 +5021,7 @@ class Solution:
                 cur=self.insert(root.right,data)
                 root.right=cur
         return root
-        
+
     def levelOrder(self,root):
         from collections import deque
         if root is None: return
@@ -4929,9 +5044,10 @@ myTree.levelOrder(root)
 
 ### Day 24 More Linked Lists
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list-deletion/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-linked-list-deletion/problem)
 
 #### CPP
+
 ```cpp
 #include <cstddef>
 #include <cmath>
@@ -4939,7 +5055,7 @@ myTree.levelOrder(root)
 #include <vector>
 #include <iostream>
 #include <algorithm>
-using namespace std;	
+using namespace std;
 class Node
 {
     public:
@@ -4965,7 +5081,7 @@ Node* removeDuplicates(Node *head){
           {
                Node* p=new Node(data);
                if(head==NULL){
-                   head=p;  
+                   head=p;
 
                }
                else if(head->next==NULL){
@@ -4977,12 +5093,12 @@ Node* removeDuplicates(Node *head){
                    while(start->next!=NULL){
                        start=start->next;
                    }
-                   start->next=p;   
+                   start->next=p;
 
                }
                     return head;
-                
-            
+
+
           }
           void display(Node *head)
           {
@@ -4994,7 +5110,7 @@ Node* removeDuplicates(Node *head){
                     }
            }
 };
-			
+
 int main()
 {
 	Node* head=NULL;
@@ -5004,15 +5120,16 @@ int main()
     while(T-->0){
         cin>>data;
         head=mylist.insert(head,data);
-    }	
+    }
     head=mylist.removeDuplicates(head);
 
 	mylist.display(head);
-		
+
 }
 ```
 
 #### C
+
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -5041,24 +5158,24 @@ Node* insert(Node *head,int data)
 {
   Node *p = (Node*)malloc(sizeof(Node));
   p->data = data;
-  p->next=NULL;   
-  
+  p->next=NULL;
+
   if(head==NULL){
-   head=p;  
-  
+   head=p;
+
   }
   else if(head->next==NULL)
   {
       head->next=p;
-      
+
   }
   else{
   Node *start=head;
   while(start->next!=NULL)
     start=start->next;
-  
-  start->next=p;   
-  
+
+  start->next=p;
+
   }
       return head;
 }
@@ -5075,18 +5192,19 @@ int main()
 {
 	int T,data;
     scanf("%d",&T);
-    Node *head=NULL;	
+    Node *head=NULL;
     while(T-->0){
         scanf("%d",&data);
         head=insert(head,data);
     }
     head=removeDuplicates(head);
 	display(head);
-		
+
 }
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -5097,7 +5215,7 @@ class Node{
         data=d;
         next=null;
     }
-	
+
 }
 class Solution
 {
@@ -5114,7 +5232,7 @@ class Solution
 
     public static  Node insert(Node head,int data)
     {
-        Node p=new Node(data);			
+        Node p=new Node(data);
         if(head==null)
             head=p;
         else if(head.next==null)
@@ -5155,89 +5273,88 @@ class Solution
 ```
 
 #### Javascript
+
 ```javascript
 process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.setEncoding("ascii");
 
 var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
+process.stdin.on("data", function (data) {
+  input_stdin += data;
 });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
+process.stdin.on("end", function () {
+  input_stdin_array = input_stdin.split("\n");
+  main();
 });
 function readLine() {
-    return input_stdin_array[input_currentline++];
+  return input_stdin_array[input_currentline++];
 }
-function Node(data){
-    this.data=data;
-    this.next=null;
+function Node(data) {
+  this.data = data;
+  this.next = null;
 }
-function Solution(){
-
-    this.removeDuplicates=function(head){
+function Solution() {
+  this.removeDuplicates = function (head) {
     if (head == null || head.next == null) return head;
-    var curr = head
-    while (curr.next != null )
-        {if (curr.data == curr.next.data) curr.next = curr.next.next;
-        else curr = curr.next;}
+    var curr = head;
+    while (curr.next != null) {
+      if (curr.data == curr.next.data) curr.next = curr.next.next;
+      else curr = curr.next;
+    }
     return head;
+  };
+
+  this.insert = function (head, data) {
+    var p = new Node(data);
+    if (head == null) {
+      head = p;
+    } else if (head.next == null) {
+      head.next = p;
+    } else {
+      var start = head;
+      while (start.next != null) {
+        start = start.next;
+      }
+      start.next = p;
     }
+    return head;
+  };
 
-	this.insert=function(head,data){
-        var p=new Node(data);
-        if(head==null){
-            head=p;
-        }
-        else if(head.next==null){
-            head.next=p;
-        }
-        else{
-            var start=head;
-            while(start.next!=null){
-                start=start.next;
-            }
-            start.next=p;
-        }
-        return head;
-        
-    };
-
-	this.display=function(head){
-        var start=head;
-            while(start){
-                process.stdout.write(start.data+" ");
-                start=start.next;
-            }
-    };
+  this.display = function (head) {
+    var start = head;
+    while (start) {
+      process.stdout.write(start.data + " ");
+      start = start.next;
+    }
+  };
 }
-function main(){
-    var T=parseInt(readLine());
-    var head=null;
-    var mylist=new Solution();
-    for(i=0;i<T;i++){
-        var data=parseInt(readLine());
-        head=mylist.insert(head,data);
-    }
-    head=mylist.removeDuplicates(head);
-    mylist.display(head);
-}		
+function main() {
+  var T = parseInt(readLine());
+  var head = null;
+  var mylist = new Solution();
+  for (i = 0; i < T; i++) {
+    var data = parseInt(readLine());
+    head = mylist.insert(head, data);
+  }
+  head = mylist.removeDuplicates(head);
+  mylist.display(head);
+}
 ```
 
 #### Python
+
 ```python
 class Node:
     def __init__(self,data):
         self.data = data
-        self.next = None 
-class Solution: 
+        self.next = None
+class Solution:
     def insert(self,head,data):
-            p = Node(data)           
+            p = Node(data)
             if head==None:
                 head=p
             elif head.next==None:
@@ -5247,7 +5364,7 @@ class Solution:
                 while(start.next!=None):
                     start=start.next
                 start.next=p
-            return head  
+            return head
     def display(self,head):
         current = head
         while current:
@@ -5267,16 +5384,17 @@ T=int(input())
 head=None
 for i in range(T):
     data=int(input())
-    head=mylist.insert(head,data)    
+    head=mylist.insert(head,data)
 head=mylist.removeDuplicates(head)
-mylist.display(head); 
+mylist.display(head);
 ```
 
 ### Day 25 Running Time and Complexity
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -5287,7 +5405,7 @@ using namespace std;
 
 bool ifPrime(int number){
     if (number == 1) return false;
-    for (int i=2; i*i <= number; i++) if (number % i == 0) return false; 
+    for (int i=2; i*i <= number; i++) if (number % i == 0) return false;
     return true;
 }
 
@@ -5296,14 +5414,15 @@ int main() {
     cin >> n;
     while(n--){
         cin >> num;
-        if (ifPrime(num)) cout << "Prime\n"; 
+        if (ifPrime(num)) cout << "Prime\n";
         else cout << "Not prime\n";
-    }  
+    }
     return 0;
 }
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -5313,7 +5432,7 @@ int main() {
 
 bool ifPrime(int number){
     if (number == 1) return false;
-    for (int i=2; i*i <= number; i++) if (number % i == 0) return false; 
+    for (int i=2; i*i <= number; i++) if (number % i == 0) return false;
     return true;
 }
 
@@ -5322,15 +5441,16 @@ int main() {
     scanf("%d", &n);
     while(n--){
         scanf("%d", &num);
-        if (ifPrime(num)) printf("Prime\n"); 
+        if (ifPrime(num)) printf("Prime\n");
         else printf("Not prime\n");
-    }  
+    }
     return 0;
 }
 
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -5339,10 +5459,10 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    
+
     public static boolean ifPrime(int number){
     if (number == 1) return false;
-    for (int i=2; i*i <= number; i++) if (number % i == 0) return false; 
+    for (int i=2; i*i <= number; i++) if (number % i == 0) return false;
     return true;
 }
 
@@ -5351,49 +5471,51 @@ public class Solution {
     int n = scan.nextInt();
     while(n-->0){
         int num = scan.nextInt();
-        if (ifPrime(num)) System.out.printf("Prime\n"); 
+        if (ifPrime(num)) System.out.printf("Prime\n");
         else System.out.printf("Not prime\n");
-    }  
+    }
     scan.close();
     }
 }
 ```
 
 #### Javascript
+
 ```javascript
-function ifPrime(number){
-    if (number == 1) return false;
-    for (let i=2; i*i <= number; i++) if (number % i == 0) return false; 
-    return true;
+function ifPrime(number) {
+  if (number == 1) return false;
+  for (let i = 2; i * i <= number; i++) if (number % i == 0) return false;
+  return true;
 }
 
 function processData(input) {
-    let n = input.split("\n")
-    for(let t = 1; t<n.length ; t++ ){
-        if (ifPrime(n[t])) console.log("Prime"); 
-        else console.log("Not prime");
-    }
-} 
+  let n = input.split("\n");
+  for (let t = 1; t < n.length; t++) {
+    if (ifPrime(n[t])) console.log("Prime");
+    else console.log("Not prime");
+  }
+}
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-    _input += input;
+  _input += input;
 });
 
 process.stdin.on("end", function () {
-   processData(_input);
+  processData(_input);
 });
 ```
 
 #### Python
+
 ```python
 import math
 
 def ifPrime(number):
     if number == 1: return False
-    for i in range(2, int(math.sqrt(number)) + 1): 
+    for i in range(2, int(math.sqrt(number)) + 1):
         if number % i == 0: return False
     return True
 
@@ -5404,9 +5526,10 @@ for _ in range(int(input())):
 
 ### Day 26 Nested Logic
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-nested-logic/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-nested-logic/problem)
 
 #### CPP
+
 ```cpp
 #include <cmath>
 #include <cstdio>
@@ -5419,19 +5542,20 @@ using namespace std;
 int main() {
     int d1,d2,m1,m2,y1,y2,ans = 0;
     cin >> d1 >> m1 >> y1 >> d2 >> m2 >> y2;
-    
+
     if (y1 > y2) ans = 10000;
     else if (y1 == y2) {
     if (m1 > m2) ans = 500 * (m1 - m2);
-    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);      
-    } 
-    
+    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);
+    }
+
     cout << ans << endl;
     return 0;
 }
 ```
 
 #### C
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -5441,19 +5565,20 @@ int main() {
 int main() {
     int d1,d2,m1,m2,y1,y2,ans = 0;
     scanf("%d%d%d%d%d%d", &d1,  &m1,  &y1,  &d2,  &m2,  &y2);
-    
+
     if (y1 > y2) ans = 10000;
     else if (y1 == y2) {
     if (m1 > m2) ans = 500 * (m1 - m2);
-    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);      
-    } 
-    
+    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);
+    }
+
     printf("%d", ans);
     return 0;
 }
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -5475,42 +5600,44 @@ public class Solution {
     if (y1 > y2) ans = 10000;
     else if (y1 == y2) {
     if (m1 > m2) ans = 500 * (m1 - m2);
-    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);      
+    else if (m1 == m2 &&d1 > d2) ans = 15 * (d1 - d2);
     }
     System.out.println(ans);
-    scan.close(); 
+    scan.close();
     }
 }
 ```
 
 #### Javascript
+
 ```javascript
 function processData(input) {
-    let data = input.split("\n");
-    let ret = data[0].split(" ");
-    let due = data[1].split(" ");
-    let ans = 0;
-    if (ret[2] > due[2]) ans = 10000;
-    else if (ret[2] == due[2]) {
+  let data = input.split("\n");
+  let ret = data[0].split(" ");
+  let due = data[1].split(" ");
+  let ans = 0;
+  if (ret[2] > due[2]) ans = 10000;
+  else if (ret[2] == due[2]) {
     if (ret[1] > due[1]) ans = 500 * (ret[1] - due[1]);
-    else if (ret[1] == due[1] && ret[0] > due[0]) ans = 15 * (ret[0] - due[0]);      
-    }
-    console.log(ans);
-} 
+    else if (ret[1] == due[1] && ret[0] > due[0]) ans = 15 * (ret[0] - due[0]);
+  }
+  console.log(ans);
+}
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-    _input += input;
+  _input += input;
 });
 
 process.stdin.on("end", function () {
-   processData(_input);
+  processData(_input);
 });
 ```
 
 #### Python
+
 ```python
 (d1, m1, y1) = [int(x.strip()) for x in input().split()]
 (d2, m2, y2) = [int(x.strip()) for x in input().split()]
@@ -5519,15 +5646,16 @@ ans = 0
 if y1 > y2: ans = 10000
 elif y1 == y2:
     if m1 > m2: ans = 500 * (m1 - m2)
-    elif m1 == m2 and d1 > d2: ans = 15 * (d1 - d2)  
+    elif m1 == m2 and d1 > d2: ans = 15 * (d1 - d2)
 print(ans)
 ```
 
 ### Day 27 Testing
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-testing/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-testing/problem)
 
 #### CPP
+
 ```cpp
 #include <algorithm>
 #include <iostream>
@@ -5625,6 +5753,7 @@ int main() {
 ```
 
 #### Java
+
 ```java
 import java.util.*;
 
@@ -5642,7 +5771,7 @@ public class Solution {
         }
         return min_idx;
     }
-    
+
     static class TestDataEmptyArray {
         public static int[] get_array() {
             return new int[]{};
@@ -5669,7 +5798,7 @@ public class Solution {
         }
     }
 
-    
+
 	public static void TestWithEmptyArray() {
         try {
             int[] seq = TestDataEmptyArray.get_array();
@@ -5730,6 +5859,7 @@ public class Solution {
 ```
 
 #### Python
+
 ```python
 def minimum_index(seq):
     if len(seq) == 0:
@@ -5762,8 +5892,8 @@ class TestDataExactlyTwoDifferentMinimums():
     @staticmethod
     def get_expected_result():
         return 1
-        
-        
+
+
 
 def TestWithEmptyArray():
     try:
@@ -5805,9 +5935,10 @@ print("OK")
 
 ### Day 28 RegEx, Patterns, and Intro to Databases
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-regex-patterns/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-regex-patterns/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -5827,13 +5958,14 @@ int main()
     list.push_back(name);
     }
 
-    sort(list.begin(), list.end());   
+    sort(list.begin(), list.end());
     for(auto& user : list) cout << user << endl;
     return 0;
 }
 ```
 
 #### C
+
 ```c
 #include <math.h>
 #include <stdio.h>
@@ -5847,9 +5979,9 @@ int cmp(const void *a, const void *b) {
     const char *s1 = *(const char **)a, *s2 = *(const char **)b;
     return strcmp(s1, s2);
 }
-    
+
 int main(){
-    int n, size = 0; 
+    int n, size = 0;
     scanf("%d",&n);
     char *list[30];
     for(int i = 0; i < n; i++){
@@ -5865,6 +5997,7 @@ int main(){
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -5873,7 +6006,7 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        
+
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         String regexPattern = "@gmail.com";
@@ -5882,7 +6015,7 @@ public class Solution {
         for(int i = 0; i < N; i++){
             String firstName = in.next();
             Matcher m = p.matcher(in.next());
-            if (m.find()) list.add(firstName); 
+            if (m.find()) list.add(firstName);
         }
         in.close();
         Collections.sort(list);
@@ -5894,45 +6027,49 @@ public class Solution {
 ```
 
 #### Javascript
+
 ```javascript
-'use strict';
+"use strict";
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function main() {
-    let N = parseInt(readLine());
-    let patt = new RegExp("@gmail.com");
-    let list = [];
-    for(let i = 0;i < N; i++){
-        let input = readLine().split(' ');
-        let name  = input[0];
-        let email = input[1];
-        if(patt.test(email)) list.push(name)
-    }
-    
-    list.sort().forEach(function(name){console.log(name)});
+  let N = parseInt(readLine());
+  let patt = new RegExp("@gmail.com");
+  let list = [];
+  for (let i = 0; i < N; i++) {
+    let input = readLine().split(" ");
+    let name = input[0];
+    let email = input[1];
+    if (patt.test(email)) list.push(name);
+  }
+
+  list.sort().forEach(function (name) {
+    console.log(name);
+  });
 }
 ```
 
 #### Python
+
 ```python
 #!/bin/python3
 import sys
@@ -5944,7 +6081,7 @@ pattern = re.compile('@gmail.com$')
 for _ in range(int(input())):
     name,email = input().strip().split(' ')
     if pattern.search(email): list.append(name)
-    
+
 list.sort()
 for user in list:
     print(user)
@@ -5952,9 +6089,10 @@ for user in list:
 
 ### Day 29 Bitwise AND
 
-* [Problem Statement](https://www.hackerrank.com/challenges/30-bitwise-and/problem)
+- [Problem Statement](https://www.hackerrank.com/challenges/30-bitwise-and/problem)
 
 #### CPP
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -5965,7 +6103,7 @@ int main()
     int t;
     cin >> t;
     int n, k;
-    
+
     while(t--)
     {
         cin >> n >> k;
@@ -5989,6 +6127,7 @@ int main()
 ```
 
 #### C
+
 ```c
 #include <assert.h>
 #include <ctype.h>
@@ -6168,6 +6307,7 @@ int parse_int(char* str) {
 ```
 
 #### Java
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -6214,58 +6354,60 @@ public class Solution {
 ```
 
 #### Javascript
-```javascript
-'use strict';
 
-const fs = require('fs');
+```javascript
+"use strict";
+
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 function bitwiseAnd(N, K) {
-    if ((K | (K - 1)) > N ) return (K - 2);
-    return K - 1;
+  if ((K | (K - 1)) > N) return K - 2;
+  return K - 1;
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const t = parseInt(readLine().trim(), 10);
+  const t = parseInt(readLine().trim(), 10);
 
-    for (let tItr = 0; tItr < t; tItr++) {
-        const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
+  for (let tItr = 0; tItr < t; tItr++) {
+    const firstMultipleInput = readLine().replace(/\s+$/g, "").split(" ");
 
-        const count = parseInt(firstMultipleInput[0], 10);
+    const count = parseInt(firstMultipleInput[0], 10);
 
-        const lim = parseInt(firstMultipleInput[1], 10);
+    const lim = parseInt(firstMultipleInput[1], 10);
 
-        const res = bitwiseAnd(count, lim);
+    const res = bitwiseAnd(count, lim);
 
-        ws.write(res + '\n');
-    }
+    ws.write(res + "\n");
+  }
 
-    ws.end();
+  ws.end();
 }
 ```
 
 #### Python
+
 ```python
 for i in range(int(input())):
     n, k = [int(x) for x in input().split()]

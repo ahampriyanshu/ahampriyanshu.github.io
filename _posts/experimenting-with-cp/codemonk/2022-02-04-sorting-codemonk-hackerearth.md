@@ -31,9 +31,9 @@ int main()
 		cin >> str;
 		vec.push_back(str);
 	}
-	
+
 	for(int i=0; i<vec.size(); i++){
-		int ans = 0; 
+		int ans = 0;
 		for(int j=0; j<i;j++)
 		if(vec[i] > vec[j]) ans++;
 		cout << ans << endl;

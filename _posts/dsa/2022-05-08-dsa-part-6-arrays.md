@@ -1,32 +1,32 @@
 ---
 title: "DSA Part 6: Arrays"
 author: ahampriyanshu
-excerpt: Static and dynamic arrays, vectors in STL, trapping rainwater, window sliding, prefix sum 
+excerpt: Static and dynamic arrays, vectors in STL, trapping rainwater, window sliding, prefix sum
 mermaid: true
 categories:
   - DSA
 tags:
-  - 'arrays'
+  - "arrays"
 ---
 
 Array is a continuos block of memory. We use an 'index' to access $i^{th}$ element of the array. In most of the programming languages indexing start from 0.
 
 ## Time complexity
 
-| Operation | T.C. |
-| -- | -- |
-| Access | $O(1)$ |
-| Search | $O(n)$ |
+| Operation | T.C.   |
+| --------- | ------ |
+| Access    | $O(1)$ |
+| Search    | $O(n)$ |
 | Insertion | $O(n)$ |
-| Deletion | $O(n)$ |
+| Deletion  | $O(n)$ |
 
 ## Dynamic Arrays
 
 Automatically double up in size once the limit is exhausted.
 
-* **Vector** - C++
-* **ArrayList** - Java
-* **List** - Python
+- **Vector** - C++
+- **ArrayList** - Java
+- **List** - Python
 
 Avereage T.C. for insertion at end is $O(1)$.
 
@@ -38,23 +38,23 @@ Given an array of integers, write a program that efficiently finds the largest e
 
 ```cpp
 int index(int arr[]){
-  
+
   int res = 0;
   for(int i=1; i<n; i++)
     if(arr[i] > arr[res])
       res = i;
-    
+
   return res;
 }
 ```
 
 ## Second Largest element
 
-Given an array of integers, write a program that efficiently finds the second largest element present in the array. 
+Given an array of integers, write a program that efficiently finds the second largest element present in the array.
 
 ```cpp
 int index(int arr[], int n){
-  
+
   int res = -1, largest = 0;
   for(int i=1; i<n; i++)
     if(arr[i] > arr[largest])
@@ -64,8 +64,8 @@ int index(int arr[], int n){
     }
     else if(arr[i] < arr[largest])
       if(res == -1 || arr[i] > arr[res])
-        res = i; 
-    
+        res = i;
+
   return res;
 }
 ```
@@ -78,9 +78,9 @@ Implement is_sorted() for array of integers.
 bool is_sorted(int a[], int size){
 
     if(size == 0 || size == 1) return true;
-      
+
     for(int i=1; i<size; i++)
-      if(a[i] < a[i-1]) 
+      if(a[i] < a[i-1])
         return false;
     return true;
 }
@@ -90,16 +90,16 @@ bool is_sorted(int a[], int size){
 
 Given a sorted array arr[] of size N, delete all the duplicates elements from arr[].
 
-* [Practice](https://www.geeksforgeeks.org/remove-duplicates-sorted-array/)
+- [Practice](https://www.geeksforgeeks.org/remove-duplicates-sorted-array/)
 
 ```cpp
 int remove_duplicate(int arr[],int n){
     int index = 1;
-        
+
     for(int i=1; i<n; i++)
       if(arr[i] != arr[i-1])
         arr[index++] = arr[i];
-              
+
     return index;
 }
 ```
@@ -108,7 +108,7 @@ int remove_duplicate(int arr[],int n){
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
-* [Practice](https://leetcode.com/problems/rotate-array/)
+- [Practice](https://leetcode.com/problems/rotate-array/)
 
 ```cpp
   void rotate(vector<int>& nums, int k) {
@@ -118,4 +118,3 @@ Given an array, rotate the array to the right by k steps, where k is non-negativ
       reverse(nums.begin()+k, nums.end());
   }
 ```
-

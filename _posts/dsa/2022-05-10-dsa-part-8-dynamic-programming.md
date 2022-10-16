@@ -5,11 +5,11 @@ excerpt: What is dynamic programming, top down and bottom up approach, lcs, lis
 categories:
   - DSA
 tags:
-  - 'recursion'
-  - 'tail recursion'
-  - 'is_sorted()'
-  - 'fibonacci series'
-  - 'subset'
+  - "recursion"
+  - "tail recursion"
+  - "is_sorted()"
+  - "fibonacci series"
+  - "subset"
 ---
 
 > Dynamic Programming is an optimization over plain recursion. In this, we re-use the solutions of subproblems for overlapping subproblems
@@ -45,7 +45,7 @@ int fib(int n){
 
   for(int i=2; i<=n; i++)
     f[i] = f[i-i] + f[i-2];
-  
+
   return f[n];
 
 }
@@ -53,40 +53,37 @@ int fib(int n){
 
 ## Applications
 
-| Utitlity | Algorithm |
-| :-- | :-- |
-| Git Diff | LCS |
-| Close Search | Edit distance |
-| Shortest Path | Bellman Ford, Floyd Warshall |
-| Resource  Allocation | 0-1 knapsack |
-
+| Utitlity            | Algorithm                    |
+| :------------------ | :--------------------------- |
+| Git Diff            | LCS                          |
+| Close Search        | Edit distance                |
+| Shortest Path       | Bellman Ford, Floyd Warshall |
+| Resource Allocation | 0-1 knapsack                 |
 
 ## Problem
 
 ### Longest Common Subsequences
 
-
 Given two sequences, find the length of longest subsequence present in both of them.
 
-* [Practice](https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1#)
+- [Practice](https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1#)
 
-- Naive
-
+* Naive
 
 ```cpp
     int longestCommonSubstr (string S1, string S2, int n, int m)
     {
-    if(n == 0 || m == 0) 
+    if(n == 0 || m == 0)
         return 0;
-        
-    if(S1[n-1] == S2[m-1]) 
+
+    if(S1[n-1] == S2[m-1])
         return 1 + longestCommonSubstr(S1, S2, n-1, m-1);
-    
+
     return max(longestCommonSubstr(S1, S2, n, m-1), longestCommonSubstr(S1, S2, n-1, m));
     }
 ```
 
-**Time Complexity:** $O(2^n)$ 
+**Time Complexity:** $O(2^n)$
 
 - Memoization
 
@@ -96,20 +93,20 @@ int lcs( string s1, string s2, int m, int n, vector<vector<int> >& dp){
   if(dp[m][n] != -1)
     return dp[m][n];
 
-  if(m == 0 || n == 0) 
+  if(m == 0 || n == 0)
     return 0;
-    
+
   if (s1[m-1] == s2[n-1])
     return dp[m][n] = 1 + lcs(s1, s2, m-1, n-1);
-    
+
   return dp[m][n] = max(lcs(s1, s2, m-1, n), lcs(s1, s2, m, n-1));
-  
+
 }
 ```
 
-**Time Complexity:** $O(m \times n)$ 
+**Time Complexity:** $O(m \times n)$
 
-**Auxiliary Space:** $O(m \times n)$ 
+**Auxiliary Space:** $O(m \times n)$
 
 - Tabulation
 
@@ -117,7 +114,7 @@ int lcs( string s1, string s2, int m, int n, vector<vector<int> >& dp){
 int lcs(int m, int n, string X, string Y)
 {
   int L[m+1][n+1];
-        
+
   for (int i=0; i<=m; i++)
     for (int j=0; j<=n; j++)
       {
@@ -132,28 +129,28 @@ int lcs(int m, int n, string X, string Y)
 }
 ```
 
-**Time Complexity:** $O(m \times n)$ 
+**Time Complexity:** $O(m \times n)$
 
-**Auxiliary Space:** $O(m \times n)$ 
+**Auxiliary Space:** $O(m \times n)$
 
 - Space Optimized
 
 ```cpp
 int lcs(int m, int n, string X, string Y)
 {
- 
+
     int L[2][n + 1];
- 
+
     bool index;
- 
+
     for (int i = 0; i <= m; i++)
     {
         index = i & 1;
 
         for (int j = 0; j <= n; j++)
-        
+
             if (i == 0 || j == 0)
-                L[index][j] = 0; 
+                L[index][j] = 0;
             else if (X[i-1] == Y[j-1])
                  L[index][j] = L[1 - index][j - 1] + 1;
             else
@@ -164,9 +161,9 @@ int lcs(int m, int n, string X, string Y)
 }
 ```
 
-**Time Complexity:** $O(m \times n)$ 
+**Time Complexity:** $O(m \times n)$
 
-**Auxiliary Space:** $O(n)$ 
+**Auxiliary Space:** $O(n)$
 
 ### Coin Change
 
@@ -176,12 +173,12 @@ Given a value N, find the number of ways to make change for N cents, if we have 
 
 ```cpp
     long long int count(int S[], int m, int n) {
-        
+
     long long int i, j,x,y,table[n + 1][m];
-    
+
     for (i = 0; i < m; i++)
         table[0][i] = 1;
- 
+
     for (i = 1; i < n + 1; i++)
     {
         for (j = 0; j < m; j++)
@@ -196,5 +193,3 @@ Given a value N, find the number of ways to make change for N cents, if we have 
 ```
 
 - Optimal
-
-

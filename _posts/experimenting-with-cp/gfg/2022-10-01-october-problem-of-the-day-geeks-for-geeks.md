@@ -34,7 +34,7 @@ Given a boolean 2D matrix grid of size $n /times m$. You have to find the number
 <a href="https://practice.geeksforgeeks.org/problems/number-of-distinct-islands/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
 ```cpp
-    vector<vector<int>> dirs = {{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
+    vector<vector<int>> dirs = {{0, -1}, {-1, 0}, {0, 1}, {1, 0/\}\}/;
 
     void dfs(vector<vector<int>>& grid, int x0, int y0, int i, int j, vector<pair<int, int>>& v) {
         int rows = grid.size(), cols = grid[0].size();
@@ -77,7 +77,7 @@ If the path is not possible between source cell and destination cell, then retur
 
 **Note:** You can move into an adjacent cell if that adjacent cell is filled with element 1. Two cells are adjacent if they share a side. In other words, you can move in one of the four directions, Up, Down, Left and Right.
 
-<a href=""><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+<a href="https://practice.geeksforgeeks.org/problems/move-last-element-to-front-of-a-linked-list/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
 ```cpp
 int vis[501][501];
@@ -118,5 +118,28 @@ int vis[501][501];
             dist++;
         }
         return -1;
+    }
+```
+
+## 16 | Move Last Element to Front of a Linked List
+
+You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.
+
+<a href="https://practice.geeksforgeeks.org/problems/move-last-element-to-front-of-a-linked-list/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+
+```cpp
+    ListNode *moveToFront(ListNode *head){
+
+    if(!head || !head->next) return head;
+
+     ListNode *curr=head;
+
+      while(curr->next->next!=NULL){
+        curr= curr->next;
+
+      ListNode *res= curr->next;
+      res->next = head;
+      curr->next = NULL;
+      return res;
     }
 ```

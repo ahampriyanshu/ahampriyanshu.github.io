@@ -18,7 +18,7 @@ Example Punched Card.
 
 ![loading_image](https://codejam.googleapis.com/dashboard/get_file/AQj_6U1czYfn54qiD2aqETqCx884cVUzIDuxEgv_7KFfDN5b8VWc1JFa-nVRTY2r_KjyYVaL1w/punched_card.png)
 
-The ASCII art of a punched card they want to draw is similar to an R×C matrix without the top-left cell. That means, it has (R⋅C)−1 cells in total. Each cell is drawn in ASCII art as a period ``(.)`` surrounded by dashes ``(-)`` above and below, pipes ``(|)`` to the left and right, and plus signs ``(+)`` for each corner. Adjacent cells share the common characters in the border. Periods ``(.)`` are used to align the cells in the top row.
+The ASCII art of a punched card they want to draw is similar to an R×C matrix without the top-left cell. That means, it has (R⋅C)−1 cells in total. Each cell is drawn in ASCII art as a period `(.)` surrounded by dashes `(-)` above and below, pipes `(|)` to the left and right, and plus signs `(+)` for each corner. Adjacent cells share the common characters in the border. Periods `(.)` are used to align the cells in the top row.
 
 For example, the following is a punched card with R=3 rows and C=4 columns:
 
@@ -148,7 +148,7 @@ void solve()
     ll arr[3][4];
 
     ll mn[4];
-    
+
     for(ll i=0; i<n; i++)
         for(ll j=0; j<m; j++)
             cin >> arr[i][j];
@@ -209,7 +209,7 @@ In this problem, we start with a collection of N dice. The i-th die is a dSi, th
 
 #### Input
 
-The first line of the input gives the number of test cases, T. T test cases follow. Each test case is described in two lines. The first line of a test case contains a single integer N, the number of dice in the game. The second line contains **N** integers`` S1,S2,…,SN,`` each representing the number of sides of a different die.
+The first line of the input gives the number of test cases, T. T test cases follow. Each test case is described in two lines. The first line of a test case contains a single integer N, the number of dice in the game. The second line contains **N** integers` S1,S2,…,SN,` each representing the number of sides of a different die.
 
 #### Output
 
@@ -302,11 +302,11 @@ ll solve()
 
     for(ll i=0; i<n; i++)
         cin >> vec[i];
-    
+
     ll i=0, j = n-1, ans = 0, curr = -1, prev = -1;
 
     while(i <= j){
-        
+
         if(vec[i] <= vec[j])
             curr = vec[i++];
         else

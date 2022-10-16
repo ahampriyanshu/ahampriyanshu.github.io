@@ -75,7 +75,7 @@ sitemap_omit: true
 {%endraw%}
 ```
 
-3. Now, for front-matter use 
+3. Now, for front-matter use
 
 ```yml
 sitemap_omit: boolean
@@ -84,7 +84,7 @@ sitemap:
   changefreq: 'daily' or 'weekly' or 'monthly' or 'yearly'
 ```
 
-4. Atlast, add new default scope in the _config.yml file to exclude all the js/css assets.
+4. Atlast, add new default scope in the \_config.yml file to exclude all the js/css assets.
 
 ```yml
 - scope:

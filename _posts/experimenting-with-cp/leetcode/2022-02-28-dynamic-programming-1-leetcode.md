@@ -19,7 +19,7 @@ F(n) = F(n - 1) + F(n - 2), for n > 1.
 
 Given n, calculate F(n).
 
-* [Practice](https://leetcode.com/problems/fibonacci-number/)
+- [Practice](https://leetcode.com/problems/fibonacci-number/)
 
 #### Recursion
 
@@ -27,17 +27,17 @@ Given n, calculate F(n).
 class Solution {
 public:
     int fib(int n) {
-        
+
         if(!n) return 0;
         if(n == 1 or n == 2) return 1;
-        
+
         vector<int> dp(n);
-        
+
         dp[0] = dp[1] = 1;
-        
+
         for(int i=2; i<n; i++)
             dp[i] = dp[i-1] + dp[i-2];
-        
+
     return dp[n-1];
     }
 };
@@ -88,13 +88,13 @@ int fib(int n) {
 
 ### 1491. Average Salary Excluding the Minimum and Maximum Salary
 
-The Tribonacci sequence Tn is defined as follows: 
+The Tribonacci sequence Tn is defined as follows:
 
-``T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.``
+`T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.`
 
 Given n, return the value of Tn.
 
-* [Practice](https://leetcode.com/problems/n-th-tribonacci-number/discuss/1575588/C%2B%2B-Easy-Solution-or-DP-or-100-Faster)
+- [Practice](https://leetcode.com/problems/n-th-tribonacci-number/discuss/1575588/C%2B%2B-Easy-Solution-or-DP-or-100-Faster)
 
 #### Recursion
 
@@ -104,7 +104,7 @@ public:
     int tribonacci(int n) {
         if(n<2)return n;
         if(n==2)return 1;
-        
+
         return tribonacci(n-1)+tribonacci(n-2)+tribonacci(n-3);
     }
 };
@@ -132,7 +132,7 @@ You are climbing a staircase. It takes n steps to reach the top.
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
-* [Practice](https://leetcode.com/problems/climbing-stairs/)
+- [Practice](https://leetcode.com/problems/climbing-stairs/)
 
 #### Recursion
 
@@ -156,7 +156,7 @@ public:
     dp[0] = 1, dp[1] = 2;
     for(int i = 2; i < n; i++)
         dp[i] = dp[i-1] + dp[i-2];
-        
+
     return dp[n-1];
     }
 };
@@ -170,7 +170,7 @@ You can either start from the step with index 0, or the step with index 1.
 
 Return the minimum cost to reach the top of the floor.
 
-* [Practice](https://leetcode.com/problems/min-cost-climbing-stairs/)
+- [Practice](https://leetcode.com/problems/min-cost-climbing-stairs/)
 
 ```cpp
 class Solution {

@@ -22,14 +22,14 @@ sudo pacman -S --needed base-devel git vim noto-fonts-emoji python-pip
 ### Gnome
 
 > Change the scaling factor, if using small screen with small pixel resolution.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```
 sudo pacman -S gnome-tweaks
 ```
 
 > To enable Media Transfer Protocol (This may help if you have trouble connecting your Android device)
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ```
 sudo pacman -S gvfs-mtp
@@ -44,26 +44,26 @@ Enable gnome-extensions and install
 - Settings > Appearance > Style > Dark
 
 - Settings > Keyboard > Shortcuts > Custom Shortcuts
-  - ``ctrl`` + ``alt`` + ``t`` -> ``gnome-terminal``
-  - ``ctrl`` + ``alt`` + ``c`` -> ``google-chrome-stable``
-  - ``ctrl`` + ``alt`` + ``f`` -> ``nautilus``
+  - `ctrl` + `alt` + `t` -> `gnome-terminal`
+  - `ctrl` + `alt` + `c` -> `google-chrome-stable`
+  - `ctrl` + `alt` + `f` -> `nautilus`
 
 > To prevent grouping of chrome/vscode/xyz windows together
-{: .prompt-tip }
+> {: .prompt-tip }
 
 - Settings > Keyboard > Shortcuts > Switch Windows > Alt + Tab
 
-
 ### KDE
 
-* Menu > Appearance >  Change Theme > ``adwaita-dark``
+- Menu > Appearance > Change Theme > `adwaita-dark`
 
-- Settings > Keyboard > Shortcuts >
-  - ``ctrl`` + ``alt`` + ``t`` -> ``terminal``
-  - ``ctrl`` + ``alt`` + ``c`` -> ``google-chrome-stable``
-  - ``ctrl`` + ``alt`` + ``f`` -> ``dolphin``
+* Settings > Keyboard > Shortcuts >
+  - `ctrl` + `alt` + `t` -> `terminal`
+  - `ctrl` + `alt` + `c` -> `google-chrome-stable`
+  - `ctrl` + `alt` + `f` -> `dolphin`
 
-## Installing yay 
+## Installing yay
+
 ```bash
 git clone https://aur.archlinux.org/yay-git.git
 
@@ -73,6 +73,7 @@ makepkg -sri
 ```
 
 ## Installing snap
+
 ```bash
 sudo pacman -S snapd
 
@@ -83,7 +84,7 @@ sudo systemctl start --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
-## Installing node 
+## Installing node
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -95,14 +96,14 @@ npm i -g yarn nodemon
 
 ### To use legacy versions of node
 
-* For a session
+- For a session
 
 ```bash
 nvm install v1X.XX.X
 nvm use v1X.XX.X
 ```
 
-* Changing the default node version
+- Changing the default node version
 
 ```bash
 nvm default alias v1X.XX.X
@@ -182,7 +183,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
 
-Add these to plugins list in ``~/.zshrc``:
+Add these to plugins list in `~/.zshrc`:
+
 ```
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting pip colorize)
 ```

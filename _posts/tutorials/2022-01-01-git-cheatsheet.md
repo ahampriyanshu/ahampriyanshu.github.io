@@ -1,7 +1,7 @@
 ---
 title: "Git Cheat Sheet"
 author: ahampriyanshu
-excerpt: Installing and using LaTeX 
+excerpt: Installing and using LaTeX
 categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
 image:
@@ -71,7 +71,5 @@ ssh-add ~/.ssh/id_ed25519
 
 cat ~/.ssh/id_ed25519.pub
 ```
-
-
 
 ### Adding gpg key

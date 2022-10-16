@@ -16,7 +16,7 @@ Let's describe the process more precisely. Let's say that the positions in the q
 
 You've got the initial position of the children, at the initial moment of time. Determine the way the queue is going to look after t seconds.
 
-* [266B](http://codeforces.com/problemset/problem/266/B)
+- [266B](http://codeforces.com/problemset/problem/266/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -40,7 +40,7 @@ void solve()
             }
             i++;
         }
-        
+
     }
     cout << str << endl;
 }
@@ -62,7 +62,7 @@ Xenia has recently moved into the ringroad house number 1. As a result, she's go
 
 Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin, cout streams or the %I64d specifier.
 
-* [339B](http://codeforces.com/problemset/problem/339/B)
+- [339B](http://codeforces.com/problemset/problem/339/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -81,7 +81,7 @@ void solve()
         {
             if (curr < prev) ans += n - prev + curr;
             else if (curr > prev) ans += curr - prev;
-        }    
+        }
         else ans += curr - 1;
         prev = curr;
     }
@@ -105,7 +105,7 @@ The game has (m + 1) players and n types of soldiers in total. Players «Cal
 
 Fedor is the (m + 1)-th player of the game. He assume that two players can become friends if their armies differ in at most k types of soldiers (in other words, binary representations of the corresponding numbers differ in at most k bits). Help Fedor and count how many players can become his friends.
 
-* [467B](https://codeforces.com/problemset/problem/467/B)
+- [467B](https://codeforces.com/problemset/problem/467/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -150,7 +150,7 @@ n participants of the competition were split into m teams in some manner so that
 
 Your task is to write a program that will find the minimum and the maximum number of pairs of friends that could have formed by the end of the competition.
 
-* [478B](https://codeforces.com/problemset/problem/467/B)
+- [478B](https://codeforces.com/problemset/problem/467/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -172,21 +172,21 @@ int main()
 }
 ```
 
-#### 5 Vanya and Lanterns 
+#### 5 Vanya and Lanterns
 
 Vanya walks late at night along a straight street of length l, lit by n lanterns. Consider the coordinate system with the beginning of the street corresponding to the point 0, and its end corresponding to the point l. Then the i-th lantern is at the point ai. The lantern lights all points of the street that are at the distance of at most d from it, where d is some positive number, common for all lanterns.
 
 Vanya wonders: what is the minimum light radius d should the lanterns have to light the whole street?
 
-* [492B](https://codeforces.com/problemset/problem/492/B)
+- [492B](https://codeforces.com/problemset/problem/492/B)
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
- 
+
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -205,13 +205,13 @@ int main()
 
     if(vec[0] != 0)
     f = vec[0];
-    
+
     if(vec[n-1] != l)
     e = l - vec[n-1];
 
     for(ll i=0; i<n-1; i++)
         diff = max(diff, vec[i+1] - vec[i]);
-    
+
     ans = max({ans, diff/2, e, f});
     cout.precision(10);
     cout << fixed << ans << endl;
@@ -224,7 +224,7 @@ Being a programmer, you like arrays a lot. For your birthday, your friends have 
 
 Unfortunately, the size of a is too small. You want a bigger array! Your friends agree to give you a bigger array, but only if you are able to answer the following question correctly: is it possible to sort the array a (in increasing order) by reversing **exactly one** segment of a? See definitions of segment and reversing in the notes.
 
-* [451B](https://codeforces.com/contest/451/problem/B)
+- [451B](https://codeforces.com/contest/451/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -292,7 +292,7 @@ You can write down every word the professor says in either the first language or
 
 You are given the text of the lecture the professor is going to read. Find out how the lecture will be recorded in your notes.
 
-* [499B](https://codeforces.com/contest/499/problem/B)
+- [499B](https://codeforces.com/contest/499/problem/B)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -336,7 +336,7 @@ We know that prime numbers are positive integers that have exactly two distinct 
 
 You are given an array of n positive integers. For each of them determine whether it is Т-prime or not.
 
-* [230B](https://codeforces.com/contest/230/problem/B)
+- [230B](https://codeforces.com/contest/230/problem/B)
 
 ```cpp
 #include <cstdio>
@@ -344,22 +344,22 @@ You are given an array of n positive integers. For each of them determine whethe
 #include <set>
 #include <iostream>
 using namespace std;
- 
+
 set <long long> tprimes;
- 
+
 bool isPrime(int n) {
     for (int i = 2; i * i <= n; ++ i)
-        if (n % i == 0) 
+        if (n % i == 0)
             return false;
     return true;
 }
- 
+
 int main() {
     tprimes.insert(4);
     for (int i = 3; i <= 1000000; i += 2) {
-        if (isPrime(i)) 
+        if (isPrime(i))
             tprimes.insert((long long)i * i);
-        
+
     }
     int n;
     scanf("%d", &n);

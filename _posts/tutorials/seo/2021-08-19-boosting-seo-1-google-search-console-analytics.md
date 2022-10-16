@@ -5,11 +5,11 @@ excerpt: "Boosting SEO organically 1: Google Search Console, Analytics and Bing 
 categories:
   - Tech
 tags:
-  - 'google search console'
+  - "google search console"
   - tech
-  - 'google analytics'
-  - 'google tag manager'
-  - 'seo'
+  - "google analytics"
+  - "google tag manager"
+  - "seo"
 ---
 
 Boosting SEO organically 1: Google Search Console, Analytics and Bing Webmaster

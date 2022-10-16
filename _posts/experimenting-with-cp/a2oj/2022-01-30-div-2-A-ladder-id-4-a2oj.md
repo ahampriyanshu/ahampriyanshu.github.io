@@ -470,7 +470,7 @@ int main()
             ans++;
     }
     cout << ans << endl;
-}   
+}
 ```
 
 #### 20 Helpful Maths
@@ -504,9 +504,9 @@ int main()
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long int ll;
- 
+
 int main()
 {
    ios_base::sync_with_stdio(false);
