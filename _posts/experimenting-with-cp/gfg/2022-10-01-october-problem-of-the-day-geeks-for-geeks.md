@@ -34,8 +34,6 @@ Given a boolean 2D matrix grid of size $n /times m$. You have to find the number
 <a href="https://practice.geeksforgeeks.org/problems/number-of-distinct-islands/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
 
 ```cpp
-    vector<vector<int>> dirs = {{0, -1}, {-1, 0}, {0, 1}, {1, 0/\}\}/;
-
     void dfs(vector<vector<int>>& grid, int x0, int y0, int i, int j, vector<pair<int, int>>& v) {
         int rows = grid.size(), cols = grid[0].size();
 
@@ -141,5 +139,25 @@ You are given the head of a Linked List. You have to move the last element to th
       res->next = head;
       curr->next = NULL;
       return res;
+    }
+```
+
+## 17 | Replace every element with the least greater element on its right
+
+Given an array `arr[]` of `N` integers and replace every element with the least greater element on its right side in the array. If there are no greater elements on the right side, replace it with `-1`.
+
+<a href="https://practice.geeksforgeeks.org/problems/replace-every-element-with-the-least-greater-element-on-its-right/1"><img src="https://img.shields.io/badge/GFG-black?style=for-the-badge&logo=geeksforgeeks&logoColor=35914c" /></a>
+
+```cpp
+    vector<int> findLeastGreater(vector<int>& v, int n) {
+        set<int> s;
+        vector<int> ans(n);
+        for(int i = n-1;i>=0;i--){
+            auto it = s.upper_bound(v[i]);
+            if(it==s.end()) ans[i] = -1;
+            else ans[i] = *it;
+            s.insert(v[i]);
+        }
+        return ans;
     }
 ```
