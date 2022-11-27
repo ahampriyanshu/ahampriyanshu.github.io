@@ -2,7 +2,7 @@
 title: "Introductory Problems | CSES"
 author: ahampriyanshu
 categories: [Sheets, Cses]
-tags: [introductory, problems, codemonk, sheet, cses]
+tags: [introductory, sheets, cses]
 ---
 
 ### Weird Algorithm
