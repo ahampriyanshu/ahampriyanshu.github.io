@@ -1115,3 +1115,225 @@ int main()
     return 0;
 }
 ```
+
+## October
+
+### Round #835 (Div. 4)
+#### A. Medium Number
+
+Given three distinct integers 𝑎, 𝑏, and 𝑐, find the medium number between all of them.
+
+The medium number is the number that is neither the minimum nor the maximum of the given three numbers.
+
+For example, the median of 5,2,6 is 5, since the minimum is 2 and the maximum is 6.
+
+- [1760/A](https://codeforces.com/contest/1760/problem/A)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+ll solve()
+{
+    ll arr[3];
+    cin >> arr[0] >> arr[1] >> arr[2];
+    sort(arr, arr+3);
+    return arr[1];
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### B. Atilla's Favorite Problem
+
+In order to write a string, Atilla needs to first learn all letters that are contained in the string.
+
+Atilla needs to write a message which can be represented as a string 𝑠. He asks you what is the minimum alphabet size required so that one can write this message.
+
+The alphabet of size 𝑥 (1≤𝑥≤26) contains only the first 𝑥 Latin letters. For example an alphabet of size 4 contains only the characters 𝚊, 𝚋, 𝚌 and 𝚍.
+
+- [1760/B](https://codeforces.com/contest/1760/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+int solve()
+{
+    int n , ans = -1;
+    string s;
+    cin >> n >> s;
+    for(char ch: s)
+        ans = max(ans, ch - '0');
+
+    return ans - 48;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### C. Advantage
+
+There are 𝑛 participants in a competition, participant 𝑖 having a strength of 𝑠𝑖.
+
+Every participant wonders how much of an advantage they have over the other best participant. In other words, each participant 𝑖 wants to know the difference between 𝑠𝑖 and 𝑠𝑗, where 𝑗 is the strongest participant in the competition, not counting 𝑖 (a difference can be negative).
+
+So, they ask you for your help! For each 𝑖 (1≤𝑖≤𝑛) output the difference between 𝑠𝑖 and the maximum strength of any participant other than participant 𝑖.
+
+- [1760/C](https://codeforces.com/contest/1760/problem/C)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+	ll n;
+	cin >> n;
+	vector<ll> v(n);
+	for(ll i=0; i<n; i++)
+		cin >> v[i];
+		
+	vector<ll> vv = v;
+		
+	sort(v.begin(), v.end());
+	
+	ll first = v[n-1], second = v[n-2];
+	
+	for(ll i=0; i<n; i++){
+		if(vv[i] < first)
+			cout << vv[i] - first << " ";
+		else 
+			cout << first - second << " ";
+			
+	}
+	cout << endl;
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+
+    for (ll t = 0; t < test; ++t)
+        solve(); 
+    return 0;
+}
+```
+
+
+### Round #836 (Div. 2)
+#### A. SSeeeeiinngg DDoouubbllee
+
+A palindrome is a string that reads the same backward as forward. For example, the strings 𝚣, 𝚊𝚊𝚊, 𝚊𝚋𝚊, and 𝚊𝚋𝚌𝚌𝚋𝚊 are palindromes, but 𝚌𝚘𝚍𝚎𝚏𝚘𝚛𝚌𝚎𝚜 and 𝚊𝚋 are not.
+
+The double of a string 𝑠 is obtained by writing each character twice. For example, the double of 𝚜𝚎𝚎𝚒𝚗𝚐 is 𝚜𝚜𝚎𝚎𝚎𝚎𝚒𝚒𝚗𝚗𝚐𝚐.
+
+Given a string 𝑠, rearrange its double to form a palindrome. Output the rearranged string. It can be proven that such a rearrangement always exists.
+
+- [1758/A](https://codeforces.com/contest/1758/problem/A)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long ll;
+ 
+string solve()
+{
+	string s;
+	cin >> s;
+	sort(s.begin(), s.end());
+	string t = s;
+	reverse(s.begin(), s.end());
+    return t + s;
+}
+ 
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+ 
+    for (ll t = 0; t < test; ++t)
+        cout << solve() << endl;
+    return 0;
+}
+```
+
+#### B. XOR = Average
+
+You are given an integer 𝑛. Find a sequence of 𝑛 integers 𝑎1,𝑎2,…,𝑎𝑛 such that 1≤𝑎𝑖≤109 for all 𝑖 and
+
+$𝑎_1⊕𝑎_2⊕ ... ⊕𝑎_𝑛 = 𝑎_1+𝑎_2+⋯+𝑎_𝑛 / 𝑛$
+
+where ⊕ represents the bitwise XOR.
+
+It can be proven that there exists a sequence of integers that satisfies all the conditions above.
+
+- [1758/B](https://codeforces.com/contest/1758/problem/B)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+typedef long long ll;
+ 
+void solve()
+{
+	ll n;
+	cin >> n;
+	cout << "1 ";
+	ll e = n%2 ? 1 : n+1;
+	for(int i=1; i<n; i++)
+		cout << e << " ";
+	cout << endl;
+}
+ 
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll test;
+    cin >> test;
+ 
+    for (ll t = 0; t < test; ++t)
+        solve();
+    return 0;
+}
+```

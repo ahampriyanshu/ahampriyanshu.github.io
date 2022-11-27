@@ -3,7 +3,7 @@ title: "Weekly and Biweekly Contests | March | Leetcode"
 author: ahampriyanshu
 categories: [Contests, Leetcode]
 excerpt: All of my accepted submissions on Leetcode , March 2022.
-tags: [leetcode, Contests, challenge, march, june, weekly, biweekly]
+tags: [leetcode, Contests, challenge, march, weekly, biweekly]
 ---
 
 ## Biweekly Contest 73

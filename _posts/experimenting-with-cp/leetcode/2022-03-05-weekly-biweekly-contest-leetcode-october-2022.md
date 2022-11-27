@@ -1,9 +1,9 @@
 ---
-title: "Weekly and Biweekly Contests | July | Leetcode"
+title: "Weekly and Biweekly Contests | October | Leetcode"
 author: ahampriyanshu
 categories: [Contests, Leetcode]
-excerpt: All of my accepted submissions on Leetcode , July 2022.
-tags: [leetcode, Contests, challenge, July, june, weekly, biweekly]
+excerpt: All of my accepted submissions on Leetcode , October 2022.
+tags: [leetcode, Contests, challenge, October, weekly, biweekly]
 ---
 
 ## Weekly Contest 315
