@@ -8,7 +8,7 @@ tags:
   [
     striver,
     sde,
-    sheet,
+    sheets,
     algo,
     ds,
     takeUforward,

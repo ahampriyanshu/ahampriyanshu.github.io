@@ -14,7 +14,7 @@ tags:
     new,
     dsa,
     course,
-    sheet,
+    sheets,
     solution,
     a2z,
     binary,

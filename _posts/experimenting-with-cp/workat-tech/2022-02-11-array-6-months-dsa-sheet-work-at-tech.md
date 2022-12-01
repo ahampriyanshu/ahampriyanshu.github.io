@@ -9,7 +9,7 @@ tags:
     at,
     tech,
     dsa,
-    sheet,
+    sheets,
     six,
     month,
     vector,

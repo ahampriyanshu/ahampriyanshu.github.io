@@ -2,7 +2,7 @@
 title: "Matrix | 450 DSA | Love Babbar"
 author: ahampriyanshu
 categories: [Sheets, Lovebabbar]
-tags: [love, babbar, "450 dsa", sheet, matrix]
+tags: [love, babbar, "450 dsa", sheets, matrix]
 ---
 
 #### Search a node in BST

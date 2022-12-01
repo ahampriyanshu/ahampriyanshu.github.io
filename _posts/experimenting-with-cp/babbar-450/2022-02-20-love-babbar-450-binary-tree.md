@@ -2,7 +2,7 @@
 title: "Binary Tree | 450 DSA | Love Babbar"
 author: ahampriyanshu
 categories: [Sheets, Lovebabbar]
-tags: [love, babbar, "450 dsa", sheet, tree]
+tags: [love, babbar, "450 dsa", sheets, tree]
 ---
 
 ### Level order traversal

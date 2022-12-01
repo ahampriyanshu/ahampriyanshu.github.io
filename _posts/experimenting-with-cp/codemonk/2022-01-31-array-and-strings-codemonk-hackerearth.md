@@ -2,7 +2,7 @@
 title: "Arrays & Strings | Codemonk | Hackerearth"
 author: ahampriyanshu
 categories: [Sheets, CodeMonk]
-tags: [arrays, strings, codemonk, sheet, hackerearth]
+tags: [arrays, strings, codemonk, sheets, hackerearth]
 ---
 
 An array is a sequential collection of variables of same data type. It stores data elements in a continuous memory location. A string is a sequence of characters.

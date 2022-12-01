@@ -2,7 +2,7 @@
 title: "String | 450 DSA | Love Babbar"
 author: ahampriyanshu
 categories: [Sheets, Lovebabbar]
-tags: [love, babbar, "450 dsa", sheet, string]
+tags: [love, babbar, "450 dsa", sheets, string]
 ---
 
 ### Problem 1: Reverse a string

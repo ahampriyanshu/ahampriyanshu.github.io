@@ -1,6 +1,6 @@
 ---
 title: Resume
-icon: fa fa-file-text
+icon: fas fa-file-text
 order: 5
 ---
 

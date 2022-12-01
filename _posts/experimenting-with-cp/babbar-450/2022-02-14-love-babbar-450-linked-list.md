@@ -2,7 +2,7 @@
 title: "Linked List | 450 DSA | Love Babbar"
 author: ahampriyanshu
 categories: [Sheets, Lovebabbar]
-tags: [love, babbar, "450 dsa", sheet, string]
+tags: [love, babbar, "450 dsa", sheets, string]
 ---
 
 ### Reverse a string
