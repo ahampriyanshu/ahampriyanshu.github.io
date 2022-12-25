@@ -138,7 +138,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1em 0;
-  line-height: 2.5em;
 }
 
 header .main {
@@ -163,24 +162,7 @@ h6::before { color: var(--maincolor); content: '###### '; }
 
 /* Footer */
 footer {
-  display: flex;
-  align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
-  padding: 2rem 0rem;
-  margin-top: 2rem;
-}
-.soc {
-  display: flex;
-  align-items: center;
-  border-bottom: none;
-}
-.border {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  border: 1px solid;
-}
-.footer-info {
-  padding: var(--footer-padding);
+  margin-top: 1em;
 }
 
 /* Common */

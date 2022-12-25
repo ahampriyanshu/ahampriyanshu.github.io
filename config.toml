@@ -1,0 +1,53 @@
+baseURL = "https://ahampriyanshu.com/"
+languageCode = "en-us"
+title = "Ahampriyanshu"
+theme = "archie"
+copyright = "© Athul"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+paginate = 4
+
+[params]
+favicon = "https://img.icons8.com/officel/16/000000/chevron-right.png"
+og_image = "https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"
+# mode = "auto"
+mode = "toggle"
+useCDN = true
+subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+description = "Archie is a Minimal and Clean theme for Hugo"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/athul/archie"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://github.com/athulcajay/"
+
+[[params.social]]
+name = "GitLab"
+icon = "gitlab"
+url = "https://gitlab.com/athul/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
