@@ -33,6 +33,7 @@ Create a new `.md` file in the *content/posts* folder
 ```yml
 ---
 title: Title of the post
+date: 2020-12-25
 description:
 date:
 tldr: (optional)

@@ -5,8 +5,7 @@ Hello and welcome to my blog.
 ## Attribution
 
 - [GitHub Pages](https://pages.github.com/)
-- [Jekyll](https://jekyllrb.com/)
-- [Chirpy Theme](https://github.com/cotes2020/jekyll-theme-chirpy)
+- [Hugo](https://gohugo.io/)
 
 ## Some Links
 

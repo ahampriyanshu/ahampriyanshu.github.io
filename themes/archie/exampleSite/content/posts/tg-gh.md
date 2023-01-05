@@ -1,6 +1,7 @@
 ---
 title: Telegram Bot for  GitHub Actions
 date: "2020-04-01"
+date: 2020-12-25
 description: Make a Telegram bot with Node.js and use it with GitHub Actions for sending notifications to you about the repo.
 tldr: Making GitHub Actions with Js Code
 ---
@@ -208,41 +209,53 @@ This will create a `dist` folder with and `index.js` file which contains the com
 For making this Js file a valid action, we need to add an `action.yml` file. The action.yml for this action is like this
 ```yml
 name: 'Action Name'
+date: 2020-12-25
 description: 'Action Descreption'
 author: '<author name>'
 inputs: 
   chat:
-    description: 'Chat to send: chat id or @channel_name'
+    date: 2020-12-25
+description: 'Chat to send: chat id or @channel_name'
     required: true
   token:
-    description: 'Telegram Bot token'
+    date: 2020-12-25
+description: 'Telegram Bot token'
     required: true
   status:
-    description: 'Job status'
+    date: 2020-12-25
+description: 'Job status'
     required: true
   iu_title: 
-    description: 'Issue Title'
+    date: 2020-12-25
+description: 'Issue Title'
     default: ${{ github.event.issue.title }}
   iu_num:
-    description: 'Issue Number'
+    date: 2020-12-25
+description: 'Issue Number'
     default: ${{ github.event.issue.number }}
   iu_actor: 
-    description: 'Issue Triggerer'
+    date: 2020-12-25
+description: 'Issue Triggerer'
     default: ${{ github.event.issue.user.login }}
   iu_com:
-    description: 'Issue Comment'
+    date: 2020-12-25
+description: 'Issue Comment'
     default: ${{github.event.comment.body}}
   pr_state:
-    description: 'State of the PR'
+    date: 2020-12-25
+description: 'State of the PR'
     default: ${{ github.event.action }}
   pr_num:
-    description: 'PR Number'
+    date: 2020-12-25
+description: 'PR Number'
     default: ${{ github.event.number }}
   pr_title:
-    description: 'Title of the PR'
+    date: 2020-12-25
+description: 'Title of the PR'
     default: ${{ github.event.pull_request.title }}
   pr_body:
-    description: 'Body/Contents of the PR'
+    date: 2020-12-25
+description: 'Body/Contents of the PR'
     default: ${{ github.event.pull_request.body }}
 runs:
   using: "node12"
