@@ -60,7 +60,7 @@ google_analytics:
     proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path: # the local PV cache data, friendly to visitors from GFW region
 
-paginate: 20
+paginate: 12
 
 # ------------ The following options are not recommended to be modified ------------------
 
