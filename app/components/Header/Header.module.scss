@@ -1,8 +1,34 @@
+$sidebar-width: var(--sidebar-width);
+$header-height: var(--header-height);
+
 .container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: transparent;
-  height: 64px;
+  height: $header-height;
+  display: flex;
+}
+
+.logo_container {
+  width: $sidebar-width;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  button {
+    width: 48x;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    padding: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+.search_bar_container {
+  flex-grow: 1;
 }

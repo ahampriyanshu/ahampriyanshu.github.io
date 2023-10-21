@@ -1,15 +1,15 @@
-@import '../abstracts/utils';
+@import 'styles/abstracts/variables';
+@import 'styles/abstracts/utils';
 
-.sidebar_container {
-  margin-top: 64px;
+.sidebar_wrapper {
+  margin-top: $header-height;
   display: flex;
-  height: calc(100vh - 64px);
+  height: calc(100vh - $header-height);
   width: 100vw;
 }
 
 .content_container {
   flex-grow: 1;
-  color: #202124;
   background-color: #fff;
   border-radius: 16px;
   margin-right: 16px;

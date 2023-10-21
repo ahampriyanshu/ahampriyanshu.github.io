@@ -3,9 +3,12 @@
 @import 'abstracts/global';
 
 :root {
-  --text-color: rgb(0, 0, 0);
+  --text-color: rgba(32, 33, 36, 1);
   --background-color: rgb(246, 248, 252);
   --content-box-bg-color: rgb(255, 255, 255);
+
+  --sidebar-width: 256px;
+  --header-height: 64px;
 }
 
 body {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './styles/global.scss';
+import styles from './layout.module.scss';
 import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
 
@@ -26,9 +27,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={roboto.className}>
         <Header />
-        <div className='sidebar_container'>
+        <div className={styles.sidebar_wrapper}>
           <Sidebar />
-          <div className='content_container'>{children}</div>
+          <div className={styles.content_container}>{children}</div>
         </div>
       </body>
     </html>

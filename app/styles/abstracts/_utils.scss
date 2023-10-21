@@ -5,3 +5,12 @@
     display: none; /* Chrome, Safari, Opera */
   }
 }
+
+.border {
+  &-circle {
+    border-radius: 50%;
+  }
+  &-ellipse {
+    border-radius: 9999px;
+  }
+}

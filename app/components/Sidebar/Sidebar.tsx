@@ -1,5 +1,11 @@
-import styles from './Sidebar.module.scss';
+import styles from './sidebar.module.scss';
 
 export function Sidebar() {
-  return <div className={styles.container}></div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.compose_btn}>
+        <button>Compose</button>
+      </div>
+    </div>
+  );
 }

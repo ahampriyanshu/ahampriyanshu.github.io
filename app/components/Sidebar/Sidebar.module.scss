@@ -4,4 +4,62 @@
   width: $sidebar-width;
   height: 100%;
   background-color: transparent;
+  transition-duration: 0.15s;
+  transition-property: background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.compose_btn {
+  margin: 8px 0 16px 0;
+  padding: 0 0 0 8px;
+
+  button {
+    user-select: none;
+    -webkit-transition:
+      box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+      box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    color: #001d35;
+    height: 56px;
+    padding: 0 24px 0 0;
+    min-width: 96px;
+
+    align-items: center;
+    background-color: rgb(194, 231, 255);
+
+    display: flex;
+    font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial,
+      sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 56px;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin-right: 0px;
+    outline-color: rgb(0, 29, 53);
+    outline-style: none;
+    outline-width: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 24px;
+    padding-top: 0px;
+    text-align: center;
+    text-shadow: none;
+    text-transform: none;
+    text-wrap: nowrap;
+    transition-behavior: normal, normal;
+
+    &:hover {
+      box-shadow:
+        rgba(60, 64, 67, 0.19) 0px 1px 2.62497px 0px,
+        rgba(60, 64, 67, 0.094) 0px 2.87492px 6.12488px 2.24995px;
+    }
+  }
 }
