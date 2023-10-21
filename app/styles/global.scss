@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'vendor/global';
 
 :root {
   --foreground-rgb: 0, 0, 0;

@@ -23,7 +23,7 @@ yarn type-check ||
     false;
 )
 
-echo '✅ All checks passed successfully'
+echo '🚀 All checks passed successfully'
 echo '🔨 Starting the build process'
 
 yarn build ||
@@ -32,4 +32,4 @@ yarn build ||
     false;
 )
 
-echo '✨ Build completed successfully. Committing the changes'
+echo '🚀 Build completed successfully. Committing the changes'
