@@ -6,30 +6,30 @@ echo '🏗️👷 Running the required checks'
 yarn format ||
 (
     yarn format:fix
-    echo '❌❌ Prettier check failed. Please try committing again!';
+    echo '❌ Prettier check failed. Please try committing again!';
     false;
 )
 
 yarn lint ||
 (
     yarn lint:fix
-    echo '❌❌ ESLint check failed. Please make the required changes listed above, add the changes, and try committing again!';
+    echo '❌ ESLint check failed. Please make the required changes listed above, add the changes, and try committing again!';
     false; 
 )
 
 yarn type-check ||
 (
-    echo '❌❌ Type check failed. Please make the required changes listed above, add the changes, and try committing again!';
+    echo '❌ Type check failed. Please make the required changes listed above, add the changes, and try committing again!';
     false;
 )
 
-echo '🔨🔨 Starting the build process 🔨🔨'
+echo '✅ All checks passed successfully'
+echo '🔨 Starting the build process'
 
 yarn build ||
 (
-    echo '❌❌ Build failed!';
+    echo '❌ Build failed!';
     false;
 )
 
-# If everything passes... Now we can commit
-echo '✅✅ All checks passed successfully. Committing now! ✅✅'
+echo '✨ Build completed successfully. Committing the changes'
