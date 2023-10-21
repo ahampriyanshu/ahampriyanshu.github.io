@@ -1,0 +1,18 @@
+@import '../abstracts/utils';
+
+.sidebar_container {
+  margin-top: 64px;
+  display: flex;
+  height: calc(100vh - 64px);
+  width: 100vw;
+}
+
+.content_container {
+  flex-grow: 1;
+  color: #202124;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  @extend .hide-scrollbars;
+}

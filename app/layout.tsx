@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './styles/global.scss';
+import { Header } from './components/Header/Header';
+import { Sidebar } from './components/Sidebar/Sidebar';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Header />
+        <div className='sidebar_container'>
+          <Sidebar />
+          <div className='content_container'>{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
