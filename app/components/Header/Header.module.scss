@@ -31,4 +31,20 @@ $header-height: var(--header-height);
 
 .search_bar_container {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 16px;
+
+  input {
+    background-clip: border-box;
+    background-color: rgb(234, 241, 251);
+    border: none;
+    border-radius: 24px;
+    font-size: 13px;
+    line-height: 27px;
+    width: 60%;
+    max-width: 720px;
+    min-height: 48px;
+  }
 }

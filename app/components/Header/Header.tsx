@@ -10,7 +10,15 @@ export function Header() {
         <h1>Priyanshu</h1>
       </div>
 
-      <div className={styles.search_bar_container}></div>
+      <div className={styles.search_bar_container}>
+        <input type='text' placeholder='Search' />
+
+        <div>
+          <button className='btn-icon'>
+            <HamburgerMenu />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
