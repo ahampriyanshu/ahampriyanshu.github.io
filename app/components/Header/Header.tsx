@@ -1,12 +1,21 @@
+'use client';
+import { memo, useContext } from 'react';
 import styles from './header.module.scss';
-import { HamburgerMenu } from '@/app/icons';
-export function Header() {
+import { HamburgerMenu, IconBtn } from '@/app/components/Icons/Icons';
+import { AppContext } from '@/app/AppContext';
+
+function Header() {
+  const { dispatch } = useContext(AppContext);
+  const toggleSidebar = () => {
+    dispatch({ type: 'TOGGLE_SIDEBAR' });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.logo_container}>
-        <button className='btn-icon'>
+        <IconBtn onClick={toggleSidebar}>
           <HamburgerMenu />
-        </button>
+        </IconBtn>
         <h1>Priyanshu</h1>
       </div>
 
@@ -14,11 +23,13 @@ export function Header() {
         <input type='text' placeholder='Search' />
 
         <div>
-          <button className='btn-icon'>
+          <IconBtn>
             <HamburgerMenu />
-          </button>
+          </IconBtn>
         </div>
       </div>
     </div>
   );
 }
+
+export default memo(Header);

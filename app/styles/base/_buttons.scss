@@ -1,16 +1,1 @@
-.btn-icon {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  display: inline-block;
 
-  &:hover {
-    background-color: rgba(60, 64, 67, 0.1);
-  }
-  &:disabled {
-    cursor: not-allowed;
-  }
-  &:focus {
-    outline: none;
-  }
-}

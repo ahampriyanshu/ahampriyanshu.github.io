@@ -9,6 +9,7 @@ $header-height: var(--header-height);
   background-color: transparent;
   height: $header-height;
   display: flex;
+  padding: 0 8px;
 }
 
 .logo_container {
@@ -16,17 +17,6 @@ $header-height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
-  button {
-    width: 48x;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 4px;
-    padding: 12px;
-    overflow: hidden;
-    vertical-align: middle;
-  }
 }
 
 .search_bar_container {

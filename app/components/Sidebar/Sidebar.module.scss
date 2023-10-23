@@ -5,8 +5,8 @@
   height: 100%;
   background-color: transparent;
   transition-duration: 0.15s;
-  transition-property: background-color, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: width;
+  transition-timing-function: ease-in-out;
   user-select: none;
 }
 
@@ -18,15 +18,14 @@
   button {
     -webkit-transition:
       box-shadow 0.08s linear,
-      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     transition:
       box-shadow 0.08s linear,
-      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-border-radius: 16px;
     border-radius: 16px;
     color: #001d35;
     height: 56px;
-    // padding: 0 24px 0 0;
     width: 144px;
     background-color: rgb(194, 231, 255);
 
@@ -45,6 +44,7 @@
     outline-color: rgb(0, 29, 53);
     outline-style: none;
     box-shadow: rgba(0, 0, 0, 0) 0px 1px 2px;
+
     div {
       display: flex;
       justify-content: center;
@@ -56,6 +56,31 @@
       box-shadow:
         rgba(60, 64, 67, 0.19) 0px 1px 2.62497px 0px,
         rgba(60, 64, 67, 0.094) 0px 2.87492px 6.12488px 2.24995px;
+    }
+  }
+}
+
+.container.collapsed {
+  width: 72px;
+  .compose_btn {
+    width: 56px;
+    button {
+      width: 56px;
+      span {
+        width: 0px;
+      }
+    }
+  }
+  &:hover {
+    width: $sidebar-width;
+    .compose_btn {
+      width: 144px;
+      button {
+        width: 144px;
+        span {
+          width: 50px;
+        }
+      }
     }
   }
 }

@@ -1,22 +1,41 @@
+'use client';
+import { memo, useContext } from 'react';
 import styles from './sidebar.module.scss';
 import Image from 'next/image';
+import { AppContext } from '@/app/AppContext';
 
-export function Sidebar() {
+function Sidebar() {
+  const { state } = useContext(AppContext);
+
+  const isSideBarOpen = state?.isSideBarOpen || false;
+
+  console.log(isSideBarOpen);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.compose_btn}>
+    <div
+      className={`${styles.container} ${
+        isSideBarOpen ? styles.active : styles.collapsed
+      }`}
+    >
+      <div
+        className={`${styles.compose_btn} ${
+          isSideBarOpen ? styles.active : styles.collapsed
+        }`}
+      >
         <button>
           <div>
             <Image
               src='/icons/edit.png'
               alt='edit icon'
-              width={20}
-              height={20}
+              width={24}
+              height={24}
             />
           </div>
-          Compose
+          <span>Compose</span>
         </button>
       </div>
     </div>
   );
 }
+
+export default memo(Sidebar);
