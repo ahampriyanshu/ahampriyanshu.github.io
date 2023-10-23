@@ -1,7 +1,8 @@
 {
   "name": "homesite",
-  "version": "0.1.0",
-  "private": true,
+  "version": "7.0.0",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +13,11 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "type-check": "tsc --pretty --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "git push --no-verify"
+    }
   },
   "dependencies": {
     "next": "13.5.6",

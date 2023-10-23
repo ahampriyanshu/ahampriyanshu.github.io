@@ -17,11 +17,7 @@ function Sidebar() {
         isSideBarOpen ? styles.active : styles.collapsed
       }`}
     >
-      <div
-        className={`${styles.compose_btn} ${
-          isSideBarOpen ? styles.active : styles.collapsed
-        }`}
-      >
+      <div className={styles.compose_btn}>
         <button>
           <div>
             <Image

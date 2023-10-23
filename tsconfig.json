@@ -21,6 +21,7 @@
     "sourceMap": true,
     "strict": true,
     "incremental": true,
+    "baseUrl": "./",
     "plugins": [
       {
         "name": "next"
