@@ -26,12 +26,12 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <div
-      className='Tooltip-Wrapper'
+      className='tooltip-wrapper'
       onMouseEnter={showTip}
       onMouseLeave={hideTip}
     >
       {children}
-      {active && <div className={`tooltip-tip ${direction}`}>{content}</div>}
+      {active && <div className={`tooltip-body ${direction}`}>{content}</div>}
     </div>
   );
 };

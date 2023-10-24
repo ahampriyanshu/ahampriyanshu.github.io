@@ -12,8 +12,8 @@ import {
 } from '@/app/components/Icons/Icons';
 import { AppContext } from '@/app/AppContext';
 import Image from 'next/image';
-import { user } from '@/app/config/meta.data';
 import Tooltip from '../Tooltip/Tooltip';
+import { site } from '@/app/config';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -27,7 +27,7 @@ function Header() {
         <IconBtn onClick={toggleSidebar}>
           <HamburgerMenu />
         </IconBtn>
-        <h1>{user.firstName}</h1>
+        <h1>{site.title}</h1>
       </div>
 
       <div className={styles.header_profile_container}>

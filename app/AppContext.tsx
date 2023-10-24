@@ -1,37 +1,26 @@
 'use client';
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, ReactNode } from 'react';
+import { ACTION_TYPE, initialState } from './constants/ui.constants';
+import { Action, AppState } from '@/types';
 
-interface AppState {
-  isSideBarOpen: boolean;
-  headerTitle: string;
-}
-
-export const initialState: AppState = {
-  isSideBarOpen: true,
-  headerTitle: '',
-};
-
-type Action =
-  | { type: 'TOGGLE_SIDEBAR' }
-  | { type: 'SET_HEADER_TITLE'; payload: string };
-
-export function appReducer(state: AppState, action: Action): AppState {
+function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
-    case 'TOGGLE_SIDEBAR':
+    case ACTION_TYPE.TOGGLE_SIDEBAR:
       return {
         ...state,
         isSideBarOpen: !state.isSideBarOpen,
       };
-    case 'SET_HEADER_TITLE':
+    case ACTION_TYPE.SET_SEARCH_PARAM:
       return {
         ...state,
-        headerTitle: action.payload,
+        searchParam: action.payload,
       };
     default:
       return state;
   }
 }
 
+// Create a context to share the state and dispatch function
 export const AppContext = createContext<{
   state: AppState;
   dispatch: React.Dispatch<Action>;
@@ -40,15 +29,14 @@ export const AppContext = createContext<{
   dispatch: () => null,
 });
 
-export default function AppProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
+
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}
     </AppContext.Provider>
   );
 }
+
+export default AppProvider;
