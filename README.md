@@ -2,7 +2,7 @@
 
 Gmail styled portfolio theme for folks impersonating as Software Developers.
 
-![hugle hugo theme](https://img.shields.io/github/license/ahampriyanshu/ahampriyanshu.github.io)
+![Rig](https://img.shields.io/github/license/ahampriyanshu/ahampriyanshu.github.io)
 ![Tag version](https://img.shields.io/github/v/tag/ahampriyanshu/ahampriyanshu.github.io)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ahampriyanshu/ahampriyanshu.github.io/main)
 
