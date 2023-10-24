@@ -1,6 +1,4 @@
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
-name: Deploy Next to Gh Pages
+name: Continuous Deployment
 
 on:
   # Runs on pushes targeting the default branch
