@@ -1,40 +1,23 @@
-# Check the code for formatting issues with Prettier: https://prettier.io/
+name: Deploy Next to Gh Pages
 
-name: Code formatting
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['main']
 
-on: [pull_request]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  prettier:
+  # Build job
+  build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: ['20']
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Fetch Private Actions
-        uses: actions/checkout@v2
-        with:
-          repository: interviewstreet/actions
-          ssh-key: ${{ secrets.ACTIONS_SSH_KEY }}
-          path: .actions
-
-      - name: Fetch master branch
-        run: git fetch origin master:master
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: yarn install --immutable --immutable-cache
-        env:
-          CI: true
-
-      - name: Evaluate code formatting
-        run: yarn run format:check
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.3
