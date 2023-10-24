@@ -7,7 +7,7 @@ const generateRandomData = (count: any) => {
     {
       selected: false,
       starred: false,
-      sender: 'This is a very long name',
+      sender: 'This is a very long name and it should be truncated',
       message: 'Hello, world!',
       time: '3:00 PM',
     },
@@ -39,7 +39,7 @@ const DataTable = () => {
   const data = generateRandomData(10); // Replace 10 with the desired number of rows
 
   return (
-    <table className={styles.data_table}>
+    <table className={styles.table}>
       <tbody>
         {data.map((item, index) => (
           <tr key={index}>
