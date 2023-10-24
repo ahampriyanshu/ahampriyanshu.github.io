@@ -1,5 +1,5 @@
 'use client';
-import { memo, useContext, useState } from 'react';
+import { memo, useContext } from 'react';
 import styles from './header.module.scss';
 import {
   Filters,
@@ -12,6 +12,8 @@ import {
 } from '@/app/components/Icons/Icons';
 import { AppContext } from '@/app/AppContext';
 import Image from 'next/image';
+import { user } from '@/app/config/meta.data';
+import Tooltip from '../Tooltip/Tooltip';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -25,7 +27,7 @@ function Header() {
         <IconBtn onClick={toggleSidebar}>
           <HamburgerMenu />
         </IconBtn>
-        <h1>Priyanshu</h1>
+        <h1>{user.firstName}</h1>
       </div>
 
       <div className={styles.header_profile_container}>
@@ -40,7 +42,6 @@ function Header() {
           >
             <Search />
           </IconBtn>
-
           <IconBtn
             disabled
             style={{
@@ -72,10 +73,11 @@ function Header() {
           <IconBtn padding='6px'>
             <GridMenu />
           </IconBtn>
-
-          <IconBtn padding='6px'>
-            <Image src='/logo.png' alt='logo' width={28} height={28} />
-          </IconBtn>
+          <Tooltip content="Hello, I'm a tooltip" direction='bottom'>
+            <IconBtn padding='6px'>
+              <Image src='/logo.png' alt='logo' width={28} height={28} />
+            </IconBtn>
+          </Tooltip>
         </div>
       </div>
     </div>
