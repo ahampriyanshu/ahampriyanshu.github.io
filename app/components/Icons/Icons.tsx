@@ -59,7 +59,10 @@ const Search = ({ height = 24, width = 24 }) => (
     width={height}
     height={width}
   >
-    <path d='m20.49 19-5.73-5.73C15.53 12.2 16 10.91 16 9.5A6.5 6.5 0 1 0 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z' fill={ICON_COLOR_DARK} />
+    <path
+      d='m20.49 19-5.73-5.73C15.53 12.2 16 10.91 16 9.5A6.5 6.5 0 1 0 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z'
+      fill={ICON_COLOR_DARK}
+    />
     <path fill='none' d='M0 0h24v24H0V0z' />
   </svg>
 );
@@ -71,7 +74,10 @@ const Filters = ({ height = 24, width = 24 }) => (
     width={height}
     height={width}
   >
-    <path d='M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z' fill={ICON_COLOR_DARK} />
+    <path
+      d='M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z'
+      fill={ICON_COLOR_DARK}
+    />
   </svg>
 );
 
