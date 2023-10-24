@@ -1,5 +1,5 @@
 'use client';
-import { memo, useContext } from 'react';
+import { memo, useContext, useState } from 'react';
 import styles from './header.module.scss';
 import {
   Filters,

@@ -39,4 +39,3 @@ jobs:
         with:
           main-branch: 'main'
           file-extension: 'ts|tsx|js|jsx|md|mdx|scss|css|json'
-              
