@@ -9,8 +9,6 @@ function Sidebar() {
 
   const isSideBarOpen = state?.isSideBarOpen || false;
 
-  console.log(isSideBarOpen);
-
   return (
     <div
       className={`${styles.container} ${

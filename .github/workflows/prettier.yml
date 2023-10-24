@@ -1,0 +1,40 @@
+# Check the code for formatting issues with Prettier: https://prettier.io/
+
+name: Code formatting
+
+on: [pull_request]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['20']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch Private Actions
+        uses: actions/checkout@v2
+        with:
+          repository: interviewstreet/actions
+          ssh-key: ${{ secrets.ACTIONS_SSH_KEY }}
+          path: .actions
+
+      - name: Fetch master branch
+        run: git fetch origin master:master
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+        env:
+          CI: true
+
+      - name: Evaluate code formatting
+        run: yarn run format:check
