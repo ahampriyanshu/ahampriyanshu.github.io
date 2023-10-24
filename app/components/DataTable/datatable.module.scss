@@ -1,0 +1,46 @@
+.data_table {
+  width: 100%;
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 0;
+
+  tr {
+    border-bottom: 1px solid grey;
+    color: #202124;
+    vertical-align: middle;
+  }
+
+  tr:hover {
+    transition: box-shadow 0.15s linear;
+    -webkit-box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+    box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+    cursor: pointer;
+  }
+
+  td {
+    border: none;
+    padding: 10px 0;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .icon_cell {
+    width: 80;
+  }
+
+  .name_cell {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .msg_cell {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

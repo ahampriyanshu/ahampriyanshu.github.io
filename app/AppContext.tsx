@@ -13,14 +13,13 @@ function appReducer(state: AppState, action: Action): AppState {
     case ACTION_TYPE.SET_SEARCH_PARAM:
       return {
         ...state,
-        searchParam: action.payload,
+        searchParam: action.payload || '',
       };
     default:
       return state;
   }
 }
 
-// Create a context to share the state and dispatch function
 export const AppContext = createContext<{
   state: AppState;
   dispatch: React.Dispatch<Action>;

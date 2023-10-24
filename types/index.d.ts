@@ -6,8 +6,8 @@ export type TooltipProps = {
 };
 
 export type Action =
-  | { type: 'TOGGLE_SIDEBAR' }
-  | { type: 'SET_SEARCH_PARAM'; payload?: string };
+  | { type: 'TOGGLE_SIDEBAR'; payload?: never }
+  | { type: 'SET_SEARCH_PARAM'; payload: string };
 
 export type AppState = {
   isSideBarOpen: boolean;

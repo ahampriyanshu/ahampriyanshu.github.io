@@ -1,3 +1,5 @@
+import DataTable from './components/DataTable/DataTable';
+
 export default function Home() {
-  return <main></main>;
+  return <DataTable />;
 }

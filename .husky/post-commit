@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo '🗑️ Removing auto-generated build'
+echo -e "🗑️\xA0Removing temp build files"
 
 rm -r ./dist || 
 (
