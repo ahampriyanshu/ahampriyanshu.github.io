@@ -1,4 +1,5 @@
 # Rig
+
 Gmail styled portfolio theme for folks impersonating as Software Developers.
 
 ![hugle hugo theme](https://img.shields.io/github/license/ahampriyanshu/ahampriyanshu.github.io)
@@ -14,6 +15,7 @@ Gmail styled portfolio theme for folks impersonating as Software Developers.
 - [x] SEO support
 
 ## Setup
+
 ```bash
 brew install git node
 git clone rig https://github.com/ahampriyanshu/ahampriyanshu.github.io.git

@@ -1,18 +1,18 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo '🚚 Pushing the changes to remote repository'
-
-git push -u origin ||
-(
-    echo '😵 Push failed. Please pull or rebase from the origin repository and then try committing again!';
-    false;
-)
-
 echo '🗑️ Removing auto-generated build'
 
 rm -r ./dist || 
 (
     echo '🔐 Failed to remove the required directory. Please update ownership permissions and then retry!';
+    false;
+)
+
+echo '🚚 Pushing the changes to remote repository'
+
+git push -u origin ||
+(
+    echo '😵 Push failed. Please pull or rebase from the origin repository and then try committing again!';
     false;
 )

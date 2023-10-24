@@ -19,6 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn --immutable --immutable-cache
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -39,3 +47,6 @@ jobs:
         with:
           main-branch: 'main'
           file-extension: 'ts|tsx|js|jsx|md|mdx|scss|css|json'
+
+      - name: Type Check
+        run: yarn run type-check
