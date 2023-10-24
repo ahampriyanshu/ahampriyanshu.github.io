@@ -34,17 +34,20 @@ function Header() {
             style={{
               position: 'absolute',
               left: 0,
-              top: 0,
+              top: 6,
+              padding: 6,
             }}
           >
             <Search />
           </IconBtn>
 
           <IconBtn
+            disabled
             style={{
               position: 'absolute',
-              right: 0,
-              top: 0,
+              right: '-96px',
+              top: 6,
+              padding: 6,
             }}
           >
             <Filters />
@@ -53,8 +56,8 @@ function Header() {
           <input
             type='text'
             className={styles.search_input}
-            placeholder='Search'
-          />
+            placeholder='Search mail'
+          ></input>
         </div>
 
         <div className={styles.logo_container}>

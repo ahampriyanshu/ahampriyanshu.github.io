@@ -27,21 +27,24 @@ $header-height: var(--header-height);
   margin-right: 16px;
 
   .search_bar_container {
+    margin-left: -8px;
     position: relative;
     width: 100%;
+    max-width: 624px;
+    min-width: 118px;
 
     .search_input {
-      color: #5f6368;
+      width: 100%;
+      color: rgb(0, 29, 53);
       font-size: 16px;
       background-clip: border-box;
       background-color: rgb(234, 241, 251);
       border: none;
       border-radius: 24px;
       line-height: 27px;
-      width: 60%;
-      max-width: 720px;
       min-height: 48px;
       padding-left: 48px;
+      padding-right: 48px;
       -webkit-transition:
         box-shadow 0.5s linear,
         background-color 0.5s linear;
@@ -56,16 +59,17 @@ $header-height: var(--header-height);
         border: 1px solid transparent;
         -webkit-box-shadow:
           0 1px 1px 0 rgba(65, 69, 73, 0.3),
-          0 1px 3px 1px rgba(65, 69, 73, 0.15);
+          0 1px 2px 1px rgba(65, 69, 73, 0.15);
         box-shadow:
           0 1px 1px 0 rgba(65, 69, 73, 0.3),
-          0 1px 3px 1px rgba(65, 69, 73, 0.15);
+          0 1px 2px 1px rgba(65, 69, 73, 0.15);
       }
 
       &::placeholder {
         color: #5f6368;
         font-size: 16px;
         line-height: 27px;
+        font-weight: 500;
       }
     }
   }

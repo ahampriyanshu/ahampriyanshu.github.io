@@ -5,6 +5,6 @@ echo '🚚 Pushing the changes to remote'
 
 git push -u origin ||
 (
-    echo '❌ Push Failed. Please pull or rebase from origin and then try committing again!';
+    echo '😵 Push Failed. Please pull or rebase from origin and then try committing again!';
     false;
 )

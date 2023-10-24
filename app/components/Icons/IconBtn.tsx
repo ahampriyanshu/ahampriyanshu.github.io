@@ -8,15 +8,18 @@ const IconBtn = ({
   children,
   style,
   onClick,
+  disabled = false,
 }: {
   height?: number;
   width?: number;
   padding?: string;
   children: React.ReactNode;
+  disabled?: boolean;
   onClick?: () => void;
   style?: React.CSSProperties;
 }) => (
   <button
+    disabled={disabled}
     onClick={onClick}
     className={styles.button}
     style={{ padding, ...style }}
