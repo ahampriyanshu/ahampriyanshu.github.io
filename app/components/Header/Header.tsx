@@ -24,9 +24,12 @@ function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
-        <IconBtn onClick={toggleSidebar}>
-          <HamburgerMenu />
-        </IconBtn>
+        <Tooltip content='Main Menu'>
+          <IconBtn onClick={toggleSidebar}>
+            <HamburgerMenu />
+          </IconBtn>
+        </Tooltip>
+
         <h1>{site.title}</h1>
       </div>
 
@@ -62,18 +65,25 @@ function Header() {
         </div>
 
         <div className={styles.logo_container}>
-          <IconBtn padding='6px'>
-            <QuestionMark />
-          </IconBtn>
+          <Tooltip content='Support'>
+            <IconBtn padding='6px'>
+              <QuestionMark />
+            </IconBtn>
+          </Tooltip>
 
-          <IconBtn padding='6px'>
-            <Settings />
-          </IconBtn>
+          <Tooltip content='Settings'>
+            <IconBtn padding='6px'>
+              <Settings />
+            </IconBtn>
+          </Tooltip>
 
-          <IconBtn padding='6px'>
-            <GridMenu />
-          </IconBtn>
-          <Tooltip content="Hello, I'm a tooltip" direction='bottom'>
+          <Tooltip content='Apps'>
+            <IconBtn padding='6px'>
+              <GridMenu />
+            </IconBtn>
+          </Tooltip>
+
+          <Tooltip content='Account'>
             <IconBtn padding='6px'>
               <Image src='/logo.png' alt='logo' width={28} height={28} />
             </IconBtn>

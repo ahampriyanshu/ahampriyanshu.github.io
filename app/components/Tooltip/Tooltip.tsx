@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const Tooltip: React.FC<TooltipProps> = ({
   content,
-  direction = 'top',
+  direction = 'bottom',
   delay = 400,
   children,
 }: TooltipProps) => {

@@ -15,24 +15,11 @@
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
   font-family: sans-serif;
-  line-height: 1;
   z-index: 100;
   white-space: nowrap;
-}
-
-/* CSS border triangles */
-.tooltip-body::before {
-  content: ' ';
-  left: 50%;
-  border: solid transparent;
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-width: var(--tooltip-arrow-size);
-  margin-left: calc(var(--tooltip-arrow-size) * -1);
 }
 
 /* Absolute positioning */
@@ -53,7 +40,7 @@
 }
 /* CSS border triangles */
 .tooltip-body.right::before {
-  left: calc(var(--tooltip-arrow-size) * -1);
+  left: calc(var(--tooltip-padding) * -1);
   top: 50%;
   transform: translateX(0) translateY(-50%);
   border-right-color: var(--tooltip-background-color);
@@ -79,7 +66,7 @@
 /* CSS border triangles */
 .tooltip-body.left::before {
   left: auto;
-  right: calc(var(--tooltip-arrow-size) * -2);
+  right: calc(var(--tooltip-padding) * -2);
   top: 50%;
   transform: translateX(0) translateY(-50%);
   border-left-color: var(--tooltip-background-color);
