@@ -6,7 +6,7 @@ import { emailsData } from '@/app/data';
 
 const EmailList = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.emails_container}>
       {emailsData.map((item, index) => (
         <div key={index} className={styles.row}>
           <div className={styles.icon_cell}>
