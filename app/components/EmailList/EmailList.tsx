@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from './DataTable.module.scss';
+import styles from './email-list.module.scss';
 
 const generateRandomData = (count: any) => {
   return [
@@ -35,7 +35,7 @@ const generateRandomData = (count: any) => {
   ];
 };
 
-const DataTable = () => {
+const EmailList = () => {
   const data = generateRandomData(10); // Replace 10 with the desired number of rows
 
   return (
@@ -56,4 +56,4 @@ const DataTable = () => {
   );
 };
 
-export default DataTable;
+export default EmailList;

@@ -1,12 +1,13 @@
 /**
  * @type {import('next').NextConfig}
  */
+
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   swcMinify: true,
-  // basePath: '',
-  output: 'export',
-  distDir: 'dist',
-  images: { unoptimized: true },
+  output: isProd ? 'export' : undefined,
+  distDir: isProd ? 'build' : '.next',
 };
 
 module.exports = nextConfig;

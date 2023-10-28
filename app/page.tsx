@@ -1,5 +1,5 @@
-import DataTable from './components/DataTable/DataTable';
+import EmailList from './components/EmailList/EmailList';
 
 export default function Home() {
-  return <DataTable />;
+  return <EmailList />;
 }
