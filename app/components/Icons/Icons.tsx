@@ -110,6 +110,20 @@ const Favourite = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
+const ListMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    viewBox='0 0 24 24'
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M3 2h18v2H3zm0 18h18v2H3zm0-6h18v2H3zm0-6h18v2H3z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
 export {
   HamburgerMenu,
   QuestionMark,
@@ -119,4 +133,5 @@ export {
   Filters,
   IconBtn,
   Favourite,
+  ListMenu,
 };

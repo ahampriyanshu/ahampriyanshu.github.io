@@ -32,4 +32,4 @@ yarn build ||
     false;
 )
 
-echo '📦 Build completed successfully. Committing the changes'
+echo '📦 Build completed. Committing the changes'
