@@ -1,58 +1,29 @@
 'use client';
 import React from 'react';
 import styles from './email-list.module.scss';
-
-const generateRandomData = (count: any) => {
-  return [
-    {
-      selected: false,
-      starred: false,
-      sender: 'This is a very long name and it should be truncated',
-      message: 'Hello, world!',
-      time: '3:00 PM',
-    },
-    {
-      selected: false,
-      starred: false,
-      sender: 'Jane Doe',
-      message: 'Hello, world!',
-      time: '3:00 PM',
-    },
-    {
-      selected: false,
-      starred: false,
-      sender: 'John Smith',
-      message: 'Hello, world!',
-      time: '3:00 PM',
-    },
-    {
-      selected: false,
-      starred: false,
-      sender: 'Jane Smith',
-      message: 'Hello, world!',
-      time: '3:00 PM',
-    },
-  ];
-};
+import { Favourite } from '../Icons/Icons';
+import { emailsData } from '@/app/data';
 
 const EmailList = () => {
-  const data = generateRandomData(10); // Replace 10 with the desired number of rows
-
   return (
-    <table className={styles.table}>
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td className={styles.icon_cell}>Select</td>
-            <td className={styles.name_cell}>{item.sender}</td>
-            <td className={styles.msg_cell}>
-              <div>{item.message}</div>
-              <div>{item.time}</div>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className={styles.container}>
+      {emailsData.map((item, index) => (
+        <div key={index} className={styles.row}>
+          <div className={styles.icon_cell}>
+            <Favourite
+              width={20}
+              height={20}
+              strokeColor='rgba(100, 121, 143, 0.5)'
+            />
+          </div>
+          <div className={styles.name_cell}>{item.sender}</div>
+          <div className={styles.msg_cell}>
+            <div>{item.message}</div>
+            <div>{item.time}</div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
