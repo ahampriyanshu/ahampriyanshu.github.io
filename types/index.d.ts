@@ -5,10 +5,15 @@ export type TooltipProps = {
   children: ReactElement;
 };
 
-export type Action = { type: string; payload?: string };
+export type Action =
+  | { type: 'TOGGLE_SIDEBAR'; payload?: never }
+  | { type: 'TOGGLE_SPLIT_VIEW'; payload?: never }
+  | { type: 'SET_SEARCH_PARAM'; payload: string }
+  | { type: 'SET_SELECTED_MAIL'; payload: string };
 
 export type AppState = {
   isSideBarOpen: boolean;
   isSplitViewActive: boolean;
   searchParam: string;
+  selectedMail: string;
 };

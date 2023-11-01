@@ -174,6 +174,25 @@ const ArrowDropDown = ({
   </svg>
 );
 
+const Inbox = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'
+      fill={strokeColor}
+    />
+    <path d='M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z' fill={strokeColor} />
+  </svg>
+);
+
 export {
   HamburgerMenu,
   QuestionMark,
@@ -189,4 +208,6 @@ export {
   Refresh,
   ViewMore,
   ArrowDropDown,
+  Inbox,
+  Time,
 };

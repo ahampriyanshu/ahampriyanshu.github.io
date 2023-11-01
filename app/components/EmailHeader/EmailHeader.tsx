@@ -16,7 +16,7 @@ import { ACTION_TYPE } from '@/app/constants/ui.constants';
 const EmailHeader = () => {
   const { state, dispatch } = useContext(AppContext);
   const toggleSplitView = () => {
-    dispatch({ type: ACTION_TYPE.TOGGLE_SPLIT_VIEW });
+    dispatch({ type: 'TOGGLE_SPLIT_VIEW' });
   };
   const isSplitViewActive = state?.isSplitViewActive || false;
 

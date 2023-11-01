@@ -1,3 +1,3 @@
-import { emails } from './emails';
+import { emails } from './inbox';
 
-export { emails as emailsData };
+export { emails as inboxEmails };

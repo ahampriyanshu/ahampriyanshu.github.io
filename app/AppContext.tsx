@@ -15,10 +15,15 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         isSplitViewActive: !state.isSplitViewActive,
       };
-    case ACTION_TYPE.SET_SEARCH_PARAM:
+    case 'SET_SEARCH_PARAM':
       return {
         ...state,
         searchParam: action.payload || '',
+      };
+    case 'SET_SELECTED_MAIL':
+      return {
+        ...state,
+        selectedMail: action.payload || 1,
       };
     default:
       return state;

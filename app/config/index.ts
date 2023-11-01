@@ -1,4 +1,4 @@
 import { meta } from './site.config';
 import { user } from './user.config';
-
-export { meta as site, user };
+import { links } from './sidebar.config';
+export { meta as site, user, links };

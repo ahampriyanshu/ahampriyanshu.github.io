@@ -3,7 +3,7 @@ import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
 
-const EmailItem = ({ item }) => {
+const EmailItem = ({ item }: { item: any }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = () => {
