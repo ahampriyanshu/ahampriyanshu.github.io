@@ -31,6 +31,10 @@
 .icon_cell {
   margin-right: 10px;
   margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .name_cell {
@@ -51,5 +55,44 @@
   span {
     font-weight: 400;
     color: #5f6368;
+  }
+}
+
+.checkboxLabel {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkboxCustom {
+  width: 12px; /* Adjust size as needed */
+  height: 12px; /* Adjust size as needed */
+  border: 1.5px solid #5f6368; /* Grey square border */
+  border-radius: 1px;
+  display: block;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 3.5px; /* Width of the checkmark */
+    height: 6.5px; /* Height of the checkmark */
+    border: solid #5f6368; /* Grey color tick */
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1.5px; /* Adjust the position of the checkmark */
+    left: 5px; /* Adjust the position of the checkmark */
+
+    transition: 0.2s;
+  }
+
+  input.checked {
+    outline: 2px solid yellow;
   }
 }
