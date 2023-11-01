@@ -1,8 +1,11 @@
 .emails_container {
-  display: flex;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
   flex-direction: column;
   color: #202124;
   overflow-y: auto;
+  user-select: none;
 
   .email_content {
     width: 100%;
@@ -34,6 +37,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
   max-width: 168px;
   width: 168px;
 }
@@ -43,4 +47,9 @@
   display: flex;
   justify-content: space-between;
   margin-right: 26px;
+
+  span {
+    font-weight: 400;
+    color: #5f6368;
+  }
 }

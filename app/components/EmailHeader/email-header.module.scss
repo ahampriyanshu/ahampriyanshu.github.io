@@ -21,5 +21,11 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 16px;
+
+    .pagination {
+      -webkit-font-smoothing: auto;
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
   }
 }

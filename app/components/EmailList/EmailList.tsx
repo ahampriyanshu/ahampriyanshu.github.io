@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { emailsData } from '@/app/data';
+import { formatTime } from '@/app/utils/date';
 
 const EmailList = () => {
   return (
@@ -18,8 +19,11 @@ const EmailList = () => {
           </div>
           <div className={styles.name_cell}>{item.sender}</div>
           <div className={styles.msg_cell}>
-            <div>{item.message}</div>
-            <div>{item.time}</div>
+            <div>
+              {' '}
+              {item.subject} <span> - {item.summary}</span>{' '}
+            </div>
+            <div>{formatTime(item.time)}</div>
           </div>
         </div>
       ))}

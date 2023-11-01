@@ -164,6 +164,16 @@ const ViewMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
+const ArrowDropDown = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path d='m7 10 5 5 5-5z' fill={strokeColor} />
+  </svg>
+);
+
 export {
   HamburgerMenu,
   QuestionMark,
@@ -178,4 +188,5 @@ export {
   ChevronRight,
   Refresh,
   ViewMore,
+  ArrowDropDown,
 };

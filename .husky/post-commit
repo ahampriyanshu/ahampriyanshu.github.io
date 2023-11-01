@@ -3,7 +3,7 @@
 
 echo "🗑️ Removing temp build files"
 
-rm -r .next build || 
+rm -r build || 
 (
     echo '🔐 Failed to remove the required directory. Please update ownership permissions and then retry!';
     false;
