@@ -1,15 +1,14 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import localFont from 'next/font/local';
 import './styles/global.scss';
 import styles from './layout.module.scss';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import AppProvider from './AppContext';
-// const inter = Inter({ subsets: ['latin'] });
 
-const roboto = Roboto({
-  weight: ['400', '700'],
-  subsets: ['latin'],
+const productSans = localFont({
+  src: '../public/fonts/ProductSans.woff2',
+  variable: '--font-calsans',
   display: 'swap',
 });
 
@@ -26,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={roboto.className}>
+      <body className={productSans.className}>
         <AppProvider>
           <Header />
           <div className={styles.sidebar_wrapper}>

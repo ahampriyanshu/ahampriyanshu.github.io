@@ -1,5 +1,5 @@
 export const meta = {
-  title: 'ahampriyanshu',
+  title: 'Priyanshu',
   author: 'Priyanshu Tiwari',
   header: 'Priyanshu',
   description:
