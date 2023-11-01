@@ -4,7 +4,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development next dev",
+    "dev": "rm -rf .next && NODE_ENV=development next dev",
     "build": "NODE_ENV=production next build",
     "start": "next start",
     "prepare": "husky install",

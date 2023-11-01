@@ -124,6 +124,46 @@ const ListMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
+const ChevronLeft = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const ChevronRight = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Refresh = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const ViewMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
 export {
   HamburgerMenu,
   QuestionMark,
@@ -134,4 +174,8 @@ export {
   IconBtn,
   Favourite,
   ListMenu,
+  ChevronLeft,
+  ChevronRight,
+  Refresh,
+  ViewMore,
 };

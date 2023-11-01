@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <>
       <EmailHeader />
-      <>Primary</>
-      <EmailList />;
+      <EmailList />
     </>
   );
 }

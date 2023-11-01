@@ -8,7 +8,7 @@ const EmailList = () => {
   return (
     <div className={styles.emails_container}>
       {emailsData.map((item, index) => (
-        <div key={index} className={styles.row}>
+        <div key={index} className={styles.email_content}>
           <div className={styles.icon_cell}>
             <Favourite
               width={20}
