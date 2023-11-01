@@ -10,6 +10,11 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         isSideBarOpen: !state.isSideBarOpen,
       };
+    case ACTION_TYPE.TOGGLE_SPLIT_VIEW:
+      return {
+        ...state,
+        isSplitViewActive: !state.isSplitViewActive,
+      };
     case ACTION_TYPE.SET_SEARCH_PARAM:
       return {
         ...state,
