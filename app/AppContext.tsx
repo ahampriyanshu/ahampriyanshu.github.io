@@ -23,7 +23,7 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'SET_SELECTED_MAIL':
       return {
         ...state,
-        selectedMail: action.payload || 1,
+        selectedMail: action.payload || 'inbox',
       };
     default:
       return state;

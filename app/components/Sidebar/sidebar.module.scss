@@ -8,6 +8,15 @@
   transition-property: width;
   transition-timing-function: ease-in-out;
   user-select: none;
+
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    // max-width: $sidebar-width;
+    background-color: white;
+  }
 }
 
 .compose_btn {
@@ -119,6 +128,7 @@
     .content {
       display: flex;
       align-items: center;
+      letter-spacing: 0.7px;
       justify-content: space-between;
       text-overflow: ellipsis;
       padding-right: 26px;
@@ -138,9 +148,8 @@
 
     &.active {
       background-color: #d3e3fd;
-      .count {
-        font-weight: 600;
-      }
+
+      font-weight: 600;
     }
   }
 }

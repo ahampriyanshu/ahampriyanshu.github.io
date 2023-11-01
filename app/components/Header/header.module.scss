@@ -17,6 +17,10 @@ $header-height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .header_profile_container {
@@ -25,6 +29,11 @@ $header-height: var(--header-height);
   align-items: center;
   justify-content: space-between;
   margin-right: 16px;
+
+  @media (max-width: 767px) {
+    width: 100vw;
+    margin-right: 0;
+  }
 
   .search_bar_container {
     margin-left: -8px;
@@ -78,5 +87,9 @@ $header-height: var(--header-height);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }

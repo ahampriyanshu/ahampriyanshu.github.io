@@ -55,9 +55,9 @@ function Sidebar() {
                     ? link.type + '-active'
                     : link.type
                 }.png`}
-                alt={`${link.icon} icon`}
-                width={24}
-                height={24}
+                alt={`${link.type} icon`}
+                width={20}
+                height={20}
               />
               <div className={styles.title}>{link.type}</div>
             </div>
