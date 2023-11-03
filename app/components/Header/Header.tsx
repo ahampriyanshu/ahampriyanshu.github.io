@@ -30,7 +30,10 @@ function Header() {
           </IconBtn>
         </Tooltip>
 
-        <h1>{site.title}</h1>
+        <div className='flex-row-center'>
+          <Image src='/logo.png' alt='logo' width={32} height={32} />
+          <h1>{site.title}</h1>
+        </div>
       </div>
 
       <div className={styles.header_profile_container}>
@@ -85,7 +88,7 @@ function Header() {
 
           <Tooltip content='Account'>
             <IconBtn padding='6px'>
-              <Image src='/logo.png' alt='logo' width={28} height={28} />
+              <Image src='/avatar.png' alt='logo' width={28} height={28} />
             </IconBtn>
           </Tooltip>
         </div>

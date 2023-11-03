@@ -18,6 +18,16 @@ $header-height: var(--header-height);
   align-items: center;
   justify-content: flex-start;
 
+  h1 {
+    display: inline;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    // line-height: 1.25;
+    color: rgb(68, 71, 70);
+    letter-spacing: 0.5px;
+  }
+
   @media (max-width: 767px) {
     display: none;
   }

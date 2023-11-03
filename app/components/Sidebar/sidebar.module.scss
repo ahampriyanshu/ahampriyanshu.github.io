@@ -102,8 +102,6 @@
   font-size: 0.875rem;
   -webkit-overflow-scrolling: touch;
   color: #202124;
-  // padding-inline: 12px;
-  // padding: 0 12px 0 26px;
   padding-right: 12px;
 
   .link {
@@ -148,7 +146,6 @@
 
     &.active {
       background-color: #d3e3fd;
-
       font-weight: 600;
     }
   }
