@@ -115,7 +115,6 @@
       background-color: rgba(60, 64, 67, 0.1);
       cursor: pointer;
     }
-
     white-space: nowrap;
     line-height: 20px;
     transition:
@@ -131,7 +130,7 @@
       text-overflow: ellipsis;
       padding-right: 26px;
       box-shadow: inset 0 0 0 1px transparent;
-
+      font-weight: 600;
       .title {
         text-transform: capitalize;
       }
@@ -144,9 +143,25 @@
       }
     }
 
+    &.others {
+      .content {
+        .title {
+          font-weight: 400;
+        }
+      }
+
+      .count {
+        display: none;
+      }
+    }
+
     &.active {
       background-color: #d3e3fd;
-      font-weight: 600;
+      .content {
+        .title {
+          font-weight: 600;
+        }
+      }
     }
   }
 }

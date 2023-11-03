@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IconBtn } from './IconBtn';
-import { ICON_COLOR, ICON_COLOR_DARK } from '@/app/constants/colors.constants';
+import { ICON_COLOR, ICON_COLOR_DARK } from '@/app/constants/ui.constants';
 
 const HamburgerMenu = ({
   height = 24,

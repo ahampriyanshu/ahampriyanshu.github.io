@@ -20,10 +20,10 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         searchParam: action.payload || '',
       };
-    case 'SET_SELECTED_MAIL':
+    case 'SET_FILTER_PARAM':
       return {
         ...state,
-        selectedMail: action.payload || 'inbox',
+        filterParam: action.payload || 'inbox',
       };
     default:
       return state;

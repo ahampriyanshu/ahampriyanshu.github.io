@@ -8,11 +8,11 @@ import { links } from '@/app/config';
 function Sidebar() {
   const { state, dispatch } = useContext(AppContext);
 
-  const setSelectedMail = (mailType: string) => {
-    dispatch({ type: 'SET_SELECTED_MAIL', payload: mailType });
+  const setFilterParam = (mailType: string) => {
+    dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
   };
   const isSideBarOpen = state?.isSideBarOpen || false;
-  const selectedMailType = state?.selectedMail || 'inbox';
+  const selectedFilterParam = state?.filterParam || 'inbox';
 
   return (
     <div
@@ -39,9 +39,14 @@ function Sidebar() {
           <div
             key={index}
             className={`${styles.link} ${
-              link.type === selectedMailType ? styles.active : ''
+              link.type === selectedFilterParam ? styles.active : ''
+            }
+            ${
+              link.type !== 'inbox' && link.type !== 'draft'
+                ? styles.others
+                : ''
             } `}
-            onClick={() => setSelectedMail(link.type)}
+            onClick={() => setFilterParam(link.type)}
           >
             <div
               style={{
@@ -51,7 +56,7 @@ function Sidebar() {
             >
               <Image
                 src={`/icons/${
-                  link.type === selectedMailType
+                  link.type === selectedFilterParam
                     ? link.type + '-active'
                     : link.type
                 }.png`}

@@ -1,6 +1,6 @@
 'use client';
 import React, { useContext } from 'react';
-import styles from './inbox-selector.module.scss';
+import styles from './inbox-mails.module.scss';
 import { AppContext } from '@/app/AppContext';
 import {
   Inbox,
@@ -10,25 +10,25 @@ import {
   Social,
   SocialFilled,
 } from '../Icons/Icons';
-import { INBOX_FILTER_ACTIVE_COLOR } from '@/app/constants/colors.constants';
+import { INBOX_FILTER_ACTIVE_COLOR } from '@/app/constants/ui.constants';
 
-export const InboxSelector = () => {
+export const InboxMails = () => {
   const { state, dispatch } = useContext(AppContext);
 
-  const setSelectedMail = (mailType: string) => {
-    dispatch({ type: 'SET_SELECTED_MAIL', payload: mailType });
+  const setFilterParam = (mailType: string) => {
+    dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
   };
-  const selectedMailType = state?.selectedMail || 'inbox';
+  const selectedFilterParam = state?.filterParam || 'inbox';
 
   return (
     <div className={styles.filters}>
       <div
         className={`${styles.filter} ${
-          'inbox' === selectedMailType ? styles.active : ''
+          'inbox' === selectedFilterParam ? styles.active : ''
         } `}
-        onClick={() => setSelectedMail('inbox')}
+        onClick={() => setFilterParam('inbox')}
       >
-        {'inbox' === selectedMailType ? (
+        {'inbox' === selectedFilterParam ? (
           <InboxFilled
             height={18}
             width={18}
@@ -41,16 +41,18 @@ export const InboxSelector = () => {
         <div className={styles.title}>primary</div>
 
         <div
-          className={'inbox' === selectedMailType ? styles.underline : 'none'}
+          className={
+            'inbox' === selectedFilterParam ? styles.underline : 'none'
+          }
         ></div>
       </div>
       <div
         className={`${styles.filter} ${
-          'promotions' === selectedMailType ? styles.active : ''
+          'promotions' === selectedFilterParam ? styles.active : ''
         } `}
-        onClick={() => setSelectedMail('promotions')}
+        onClick={() => setFilterParam('promotions')}
       >
-        {'promotions' === selectedMailType ? (
+        {'promotions' === selectedFilterParam ? (
           <SellFilled
             height={18}
             width={18}
@@ -63,17 +65,17 @@ export const InboxSelector = () => {
         <div className={styles.title}>promotions</div>
         <div
           className={
-            'promotions' === selectedMailType ? styles.underline : 'none'
+            'promotions' === selectedFilterParam ? styles.underline : 'none'
           }
         ></div>
       </div>{' '}
       <div
         className={`${styles.filter} ${
-          'social' === selectedMailType ? styles.active : ''
+          'social' === selectedFilterParam ? styles.active : ''
         } `}
-        onClick={() => setSelectedMail('social')}
+        onClick={() => setFilterParam('social')}
       >
-        {'social' === selectedMailType ? (
+        {'social' === selectedFilterParam ? (
           <SocialFilled
             height={18}
             width={18}
@@ -85,7 +87,9 @@ export const InboxSelector = () => {
 
         <div className={styles.title}>social</div>
         <div
-          className={'social' === selectedMailType ? styles.underline : 'none'}
+          className={
+            'social' === selectedFilterParam ? styles.underline : 'none'
+          }
         ></div>
       </div>
     </div>
