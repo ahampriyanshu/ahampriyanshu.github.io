@@ -22,11 +22,12 @@ export const links = [
   {
     id: 5,
     type: 'draft',
-    count: 2,
+    count: 0,
   },
   {
     id: 6,
     type: 'more',
-    count: 2,
+    count: 0,
+    isDisabled: true,
   },
 ];

@@ -115,6 +115,7 @@
       background-color: rgba(60, 64, 67, 0.1);
       cursor: pointer;
     }
+
     white-space: nowrap;
     line-height: 20px;
     transition:
@@ -160,6 +161,15 @@
       .content {
         .title {
           font-weight: 600;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      .content {
+        .title {
+          color: #202124;
         }
       }
     }

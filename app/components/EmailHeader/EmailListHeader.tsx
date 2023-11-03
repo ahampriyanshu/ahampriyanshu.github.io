@@ -1,6 +1,6 @@
 'use client';
 import React, { useContext } from 'react';
-import styles from './email-header.module.scss';
+import styles from './email-list-header.module.scss';
 import Image from 'next/image';
 import {
   ArrowDropDown,
@@ -11,9 +11,8 @@ import {
   ViewMore,
 } from '../Icons/Icons';
 import { AppContext } from '@/app/AppContext';
-import { ACTION_TYPE } from '@/app/constants/ui.constants';
 
-const EmailHeader = () => {
+export const EmailListHeader = () => {
   const { state, dispatch } = useContext(AppContext);
   const toggleSplitView = () => {
     dispatch({ type: 'TOGGLE_SPLIT_VIEW' });
@@ -81,5 +80,3 @@ const EmailHeader = () => {
     </div>
   );
 };
-
-export default EmailHeader;

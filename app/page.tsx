@@ -1,13 +1,11 @@
-import EmailHeader from './components/EmailHeader/EmailHeader';
-import EmailList from './components/EmailList/EmailList';
+import { EmailListHeader } from './components/EmailHeader/EmailListHeader';
 import { InboxMails } from './components/InboxMails/InboxMails';
 
 export default function Home() {
   return (
     <>
-      <EmailHeader />
+      <EmailListHeader />
       <InboxMails />
-      <EmailList />
     </>
   );
 }

@@ -1,4 +1,6 @@
-export const emails = [
+import { EmailAttributes } from '@/types';
+
+export const emails: EmailAttributes[] = [
   {
     selected: false,
     fav: false,
@@ -10,26 +12,32 @@ export const emails = [
     time: '2023-01-01T10:00:00',
     priority: 1,
     read: false,
+    type: 'inbox',
+    tag: 'social',
   },
   {
     selected: false,
     fav: false,
-    sender: 'John Doe',
-    subject: 'Meeting Reminder',
-    body: 'Hi, just a reminder that we have a meeting tomorrow at 10:00 AM.',
+    sender: 'Priyanshu (via Google.',
+    subject: 'Item shared with you: ‘Vaibhav-Resume.pdf’',
+    summary: 'Priyanshu shared an item Resume (ahampriyanshu@gmail.com) ',
     time: '2021-10-31T10:00:00',
     priority: 2,
     read: false,
+    type: 'inbox',
+    tag: 'inbox',
   },
   {
     selected: false,
     fav: false,
     sender: 'Jane Doe',
-    subject: 'Vacation Plans',
+    subject: 'Top DSA Coder Boss Expert Pvt Ltd',
     body: 'Hey, I wanted to discuss our vacation plans for next month. Can we meet tomorrow?',
     time: '2022-01-02T15:30:00',
     priority: 3,
     read: false,
+    type: 'inbox',
+    tag: 'promotions',
   },
   {
     selected: false,
@@ -40,6 +48,8 @@ export const emails = [
     time: '2022-01-03T09:45:00',
     priority: 4,
     read: true,
+    type: 'inbox',
+    tag: 'inbox',
   },
   {
     selected: false,
@@ -50,5 +60,7 @@ export const emails = [
     time: '2022-01-04T14:00:00',
     priority: 5,
     read: true,
+    type: 'inbox',
+    tag: 'inbox',
   },
 ];

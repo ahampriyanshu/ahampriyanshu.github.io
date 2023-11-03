@@ -36,8 +36,9 @@ function Sidebar() {
 
       <div className={styles.links}>
         {links.map((link, index) => (
-          <div
+          <button
             key={index}
+            disabled={link?.isDisabled}
             className={`${styles.link} ${
               link.type === selectedFilterParam ? styles.active : ''
             }
@@ -74,7 +75,7 @@ function Sidebar() {
             >
               {link.count}
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>

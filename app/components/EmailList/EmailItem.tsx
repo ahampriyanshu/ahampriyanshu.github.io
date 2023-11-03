@@ -3,7 +3,7 @@ import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
 
-const EmailItem = ({ item }: { item: any }) => {
+export const EmailItem = ({ email }: { email: any }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = () => {
@@ -27,15 +27,13 @@ const EmailItem = ({ item }: { item: any }) => {
           strokeColor='rgba(100, 121, 143, 0.5)'
         />
       </div>
-      <div className={styles.name_cell}>{item.sender}</div>
+      <div className={styles.name_cell}>{email.sender}</div>
       <div className={styles.msg_cell}>
         <div>
-          {item.subject} <span> - {item.summary}</span>
+          {email.subject} <span> - {email.summary}</span>
         </div>
-        <div>{formatTime(item.time)}</div>
+        <div>{formatTime(email.time)}</div>
       </div>
     </div>
   );
 };
-
-export default EmailItem;

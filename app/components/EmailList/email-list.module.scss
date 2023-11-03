@@ -5,8 +5,7 @@
   flex-direction: column;
   color: #202124;
   overflow-y: auto;
-  user-select: none;
-
+  border-top: 1px solid rgba(100, 121, 143, 0.122);
   .email_content {
     width: 100%;
     display: flex;
@@ -25,6 +24,15 @@
         0 1px 3px 1px rgba(60, 64, 67, 0.15);
       z-index: 2;
     }
+  }
+
+  .no_emails {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 1px solid rgba(100, 121, 143, 0.122);
   }
 }
 

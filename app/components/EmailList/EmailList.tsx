@@ -1,19 +1,34 @@
 'use client';
 import React from 'react';
 import styles from './email-list.module.scss';
-import { Favourite } from '../Icons/Icons';
-import { inboxEmails } from '@/app/data';
-import { formatTime } from '@/app/utils/date';
-import EmailItem from './EmailItem';
+import { EmailAttributes, EmailTag, EmailType } from '@/types';
+import { EmailItem } from './EmailItem';
 
-const EmailList = () => {
+type EmailListProps = {
+  emails: EmailAttributes[];
+  selectedTag: EmailTag;
+  typeFilter: EmailType;
+};
+
+export const EmailList = ({
+  emails,
+  selectedTag,
+  typeFilter,
+}: EmailListProps) => {
+  const filterEmails = emails.filter(
+    (email) =>
+      email.type === typeFilter && (!selectedTag || email.tag === selectedTag)
+  );
+
   return (
     <div className={styles.emails_container}>
-      {inboxEmails.map((item, index) => (
-        <EmailItem key={index} item={item} />
-      ))}
+      {filterEmails.length > 0 ? (
+        filterEmails.map((email, index) => (
+          <EmailItem key={index} email={email} />
+        ))
+      ) : (
+        <div className={styles.no_emails}>No chat messages</div>
+      )}
     </div>
   );
 };
-
-export default EmailList;
