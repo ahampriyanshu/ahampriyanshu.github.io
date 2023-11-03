@@ -175,6 +175,20 @@ const ArrowDropDown = ({
 );
 
 const Inbox = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-120H640q-30 38-71.5 59T480-240q-47 0-88.5-21T320-320H200v120Zm280-120q38 0 69-22t43-58h168v-360H200v360h168q12 36 43 58t69 22ZM200-200h560-560Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const InboxFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   <svg viewBox='0 0 24 24' width={height} height={width}>
     <path
       d='M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z'
@@ -190,6 +204,46 @@ const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
       fill={strokeColor}
     />
     <path d='M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z' fill={strokeColor} />
+  </svg>
+);
+
+const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 -960 960 960' width={height} height={width}>
+    <path
+      d='M570-104q-23 23-57 23t-57-23L104-456q-11-11-17.5-26T80-514v-286q0-33 23.5-56.5T160-880h286q17 0 32 6.5t26 17.5l352 353q23 23 23 56.5T856-390L570-104Zm-57-56 286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640ZM160-800Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const SellFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='m21.41 11.41-8.83-8.83c-.37-.37-.88-.58-1.41-.58H4c-1.1 0-2 .9-2 2v7.17c0 .53.21 1.04.59 1.41l8.83 8.83c.78.78 2.05.78 2.83 0l7.17-7.17c.78-.78.78-2.04-.01-2.83zM6.5 8C5.67 8 5 7.33 5 6.5S5.67 5 6.5 5 8 5.67 8 6.5 7.33 8 6.5 8z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Social = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 -960 960 960' width={height} height={width}>
+    <path
+      d='M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const SocialFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg viewBox='0 0 24 24' width={height} height={width}>
+    <path
+      d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'
+      fill={strokeColor}
+    />
   </svg>
 );
 
@@ -209,5 +263,10 @@ export {
   ViewMore,
   ArrowDropDown,
   Inbox,
+  InboxFilled,
   Time,
+  Social,
+  SocialFilled,
+  Sell,
+  SellFilled,
 };

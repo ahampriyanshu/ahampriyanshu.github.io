@@ -1,9 +1,56 @@
-.container {
+.filters {
   width: 100%;
+
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  .filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 252px;
+    height: 100%;
+
+    .underline {
+      position: absolute;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      bottom: 0;
+      display: block;
+      height: 3px;
+      left: 0;
+      margin: 0 8px;
+      right: 0;
+      background-color: #0b57d0;
+    }
+
+    .title {
+      font-size: 0.875rem;
+      letter-spacing: 0.5px;
+      color: #444746;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: capitalize;
+    }
+
+    svg {
+      margin-inline: 16px;
+    }
+
+    &.active {
+      .title {
+        color: #0b57d0;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(60, 64, 67, 0.05);
+    }
+  }
 
   @media (max-width: 480px) {
     display: none;

@@ -12,7 +12,7 @@ function Sidebar() {
     dispatch({ type: 'SET_SELECTED_MAIL', payload: mailType });
   };
   const isSideBarOpen = state?.isSideBarOpen || false;
-  const selectedMailType = state?.selectedMail || 1;
+  const selectedMailType = state?.selectedMail || 'inbox';
 
   return (
     <div
