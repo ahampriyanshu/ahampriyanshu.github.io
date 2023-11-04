@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
+import Image from 'next/image';
 
 export const EmailItem = ({ email }: { email: any }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -29,9 +30,23 @@ export const EmailItem = ({ email }: { email: any }) => {
       </div>
       <div className={styles.name_cell}>{email.sender}</div>
       <div className={styles.msg_cell}>
-        <div>
-          {email.subject} <span> - {email.summary}</span>
+        <div className={styles.msg_content}>
+          <div>
+            {email.subject} <span> - {email.summary}</span>
+          </div>
+          {email.file ? (
+            <div className={styles.file}>
+              <Image
+                src={`/icons/${email.file.type}.png`}
+                alt={`${email.file.type} icon`}
+                width={16}
+                height={16}
+              />
+              {email.file.name}
+            </div>
+          ) : null}
         </div>
+
         <div>{formatTime(email.time)}</div>
       </div>
     </div>

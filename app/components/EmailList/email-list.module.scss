@@ -9,7 +9,7 @@
   .email_content {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     padding: 10px 0;
     z-index: 1;
@@ -63,6 +63,39 @@
   span {
     font-weight: 400;
     color: #5f6368;
+  }
+
+  .msg_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .file {
+    box-shadow: inset 0 0 0 1px rgba(100, 121, 143, 0.302);
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #5f6368;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 12px;
+    margin-right: 8px;
+    max-width: 160px;
+    min-width: 64px;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: rgba(100, 121, 143, 0.05);
+      cursor: pointer;
+    }
   }
 }
 

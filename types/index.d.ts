@@ -5,6 +5,15 @@ export type TooltipProps = {
   children: ReactElement;
 };
 
+export type EmailTag = 'inbox' | 'social' | 'promotions';
+export type EmailType =
+  | 'inbox'
+  | 'sent'
+  | 'draft'
+  | 'sent'
+  | 'snoozed'
+  | 'starred';
+
 export type Action =
   | { type: 'TOGGLE_SIDEBAR'; payload?: never }
   | { type: 'TOGGLE_SPLIT_VIEW'; payload?: never }
@@ -18,14 +27,6 @@ export type AppState = {
   filterParam: EmailType;
 };
 
-export type EmailTag = 'inbox' | 'social' | 'promotions';
-export type EmailType =
-  | 'inbox'
-  | 'sent'
-  | 'draft'
-  | 'sent'
-  | 'snoozed'
-  | 'starred';
 export type EmailAttributes = {
   selected: boolean;
   fav: boolean;
@@ -33,6 +34,11 @@ export type EmailAttributes = {
   subject: string;
   summary?: string;
   body?: string;
+  file?: {
+    name: string;
+    size: string;
+    type: string;
+  };
   time: string;
   priority: number;
   read: boolean;
