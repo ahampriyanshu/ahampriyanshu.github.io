@@ -24,4 +24,5 @@ body {
   width: 100vw;
   overflow: hidden;
   @extend .hide-scrollbars;
+  user-select: none;
 }
