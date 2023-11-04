@@ -38,11 +38,11 @@ export const EmailViewHeader = () => {
       </div>
       <div className={styles.details_container}>
         <IconBtn padding='6px'>
-          <ChevronLeft height={20} width={20} />
+          <ChevronLeft height={20} width={20} strokeColor='#b8b8b8' />
         </IconBtn>
 
         <IconBtn padding='6px'>
-          <ChevronRight height={20} width={20} />{' '}
+          <ChevronRight height={20} width={20} strokeColor='#b8b8b8' />{' '}
         </IconBtn>
       </div>
     </div>
