@@ -4,7 +4,16 @@ import styles from './sidebar.module.scss';
 import Image from 'next/image';
 import { AppContext } from '@/app/AppContext';
 import { primaryLinks, secondaryLinks } from '@/app/config';
-import { ExpandLess, ExpandMore } from '../Icons/Icons';
+import {
+  Alert,
+  AlertFilled,
+  ExpandLess,
+  ExpandMore,
+  Fallback,
+  Trash,
+  TrashFilled,
+} from '../Icons/Icons';
+import { IconMap } from '@/types';
 
 function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,6 +24,17 @@ function Sidebar() {
   };
   const isSideBarOpen = state?.isSideBarOpen || false;
   const selectedFilterParam = state?.filterParam || 'inbox';
+
+  const iconMap: IconMap = {
+    spam: {
+      outlined: <Alert height={20} width={20} />,
+      filled: <AlertFilled height={20} width={20} />,
+    },
+    bin: {
+      outlined: <Trash height={20} width={20} />,
+      filled: <TrashFilled height={20} width={20} />,
+    },
+  };
 
   return (
     <div
@@ -90,7 +110,7 @@ function Sidebar() {
             className={styles.content}
           >
             {isExpanded ? (
-              <ExpandLess height={20} width={20} strokeColor={'#202124'} />
+              <ExpandLess height={20} width={20} />
             ) : (
               <ExpandMore width={20} height={20} />
             )}
@@ -118,16 +138,9 @@ function Sidebar() {
                   }}
                   className={styles.content}
                 >
-                  <Image
-                    src={`/icons/${
-                      link.type === selectedFilterParam
-                        ? link.type + '-active'
-                        : link.type
-                    }.png`}
-                    alt={`${link.type} icon`}
-                    width={20}
-                    height={20}
-                  />
+                  {iconMap?.[link.type]?.[
+                    link.type === selectedFilterParam ? 'filled' : 'outlined'
+                  ] || <Fallback width={24} height={24} />}
                   <div className={styles.title}>{link.type}</div>
                 </div>
                 <div

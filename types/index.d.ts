@@ -45,3 +45,9 @@ export type EmailAttributes = {
   type: EmailType;
   tag: EmailTag;
 };
+
+type IconMap = {
+  [key: string]: {
+    [key: string]: JSX.Element;
+  };
+};

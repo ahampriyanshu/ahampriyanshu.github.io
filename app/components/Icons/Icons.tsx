@@ -7,7 +7,12 @@ const HamburgerMenu = ({
   width = 24,
   strokeColor = ICON_COLOR,
 }) => (
-  <svg viewBox='0 0 24 24' width={width} height={height}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={width}
+    height={height}
+  >
     <path
       d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'
       fill={strokeColor}
@@ -125,7 +130,12 @@ const ListMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const ChevronLeft = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z'
       fill={strokeColor}
@@ -138,7 +148,12 @@ const ChevronRight = ({
   width = 24,
   strokeColor = ICON_COLOR,
 }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'
       fill={strokeColor}
@@ -147,7 +162,12 @@ const ChevronRight = ({
 );
 
 const Refresh = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z'
       fill={strokeColor}
@@ -156,7 +176,12 @@ const Refresh = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const ViewMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z'
       fill={strokeColor}
@@ -169,7 +194,12 @@ const ArrowDropDown = ({
   width = 24,
   strokeColor = ICON_COLOR,
 }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path d='m7 10 5 5 5-5z' fill={strokeColor} />
   </svg>
 );
@@ -189,7 +219,12 @@ const Inbox = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const InboxFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z'
       fill={strokeColor}
@@ -198,7 +233,12 @@ const InboxFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'
       fill={strokeColor}
@@ -208,7 +248,12 @@ const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 -960 960 960' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
     <path
       d='M570-104q-23 23-57 23t-57-23L104-456q-11-11-17.5-26T80-514v-286q0-33 23.5-56.5T160-880h286q17 0 32 6.5t26 17.5l352 353q23 23 23 56.5T856-390L570-104Zm-57-56 286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640ZM160-800Z'
       fill={strokeColor}
@@ -217,7 +262,12 @@ const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const SellFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='m21.41 11.41-8.83-8.83c-.37-.37-.88-.58-1.41-.58H4c-1.1 0-2 .9-2 2v7.17c0 .53.21 1.04.59 1.41l8.83 8.83c.78.78 2.05.78 2.83 0l7.17-7.17c.78-.78.78-2.04-.01-2.83zM6.5 8C5.67 8 5 7.33 5 6.5S5.67 5 6.5 5 8 5.67 8 6.5 7.33 8 6.5 8z'
       fill={strokeColor}
@@ -226,7 +276,12 @@ const SellFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const Social = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 -960 960 960' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
     <path
       d='M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z'
       fill={strokeColor}
@@ -239,7 +294,12 @@ const SocialFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
 }) => (
-  <svg viewBox='0 0 24 24' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
     <path
       d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'
       fill={strokeColor}
@@ -248,7 +308,12 @@ const SocialFilled = ({
 );
 
 const ExpandMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 -960 960 960' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
     <path
       d='M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z'
       fill={strokeColor}
@@ -257,9 +322,85 @@ const ExpandMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
 );
 
 const ExpandLess = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
-  <svg viewBox='0 -960 960 960' width={height} height={width}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
     <path
       d='m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const TrashFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Trash = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5-1-1h-5l-1 1H5v2h14V4z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Alert = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM19 14.9 14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1v5.8z'
+      fill={strokeColor}
+    />
+    <path d='M11 7h2v6h-2zm0 8h2v2h-2z' fill={strokeColor} />
+  </svg>
+);
+
+const AlertFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const Fallback = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 412L346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-112 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z'
       fill={strokeColor}
     />
   </svg>
@@ -289,4 +430,9 @@ export {
   SellFilled,
   ExpandMore,
   ExpandLess,
+  Trash,
+  TrashFilled,
+  Alert,
+  AlertFilled,
+  Fallback,
 };
