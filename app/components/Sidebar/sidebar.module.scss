@@ -7,7 +7,6 @@
   transition-duration: 0.15s;
   transition-property: width;
   transition-timing-function: ease-in-out;
-  user-select: none;
 
   @media (max-width: 767px) {
     position: fixed;
@@ -22,7 +21,6 @@
 .compose_btn {
   margin: 8px 0 16px 0;
   padding: 0 0 0 8px;
-  user-select: none;
 
   button {
     -webkit-transition:
@@ -136,7 +134,8 @@
         text-transform: capitalize;
       }
 
-      img {
+      img,
+      svg {
         margin-right: 18px;
       }
       .count {

@@ -20,7 +20,8 @@ export const emails: EmailAttributes[] = [
     fav: false,
     sender: 'Priyanshu (via Google.',
     subject: 'Item shared with you: ‘Resume.pdf’',
-    summary: 'Priyanshu shared an item Resume (ahampriyanshu@gmail.com) ',
+    summary:
+      "Priyanshu shared an item Priyanshu (ahampriyanshu@gmail.com) has shared the following item: Vaibhav-Resume.pdf Open If you don't want to receive files from this person, block the sender from Drive",
     file: {
       name: 'Resume.pdf',
       size: '1.2 MB',

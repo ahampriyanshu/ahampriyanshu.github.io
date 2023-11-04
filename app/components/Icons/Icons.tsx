@@ -247,6 +247,24 @@ const SocialFilled = ({
   </svg>
 );
 
+const ExpandMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 -960 960 960' width={height} height={width}>
+    <path
+      d='M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+const ExpandLess = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg viewBox='0 -960 960 960' width={height} height={width}>
+    <path
+      d='m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
 export {
   HamburgerMenu,
   QuestionMark,
@@ -269,4 +287,6 @@ export {
   SocialFilled,
   Sell,
   SellFilled,
+  ExpandMore,
+  ExpandLess,
 };

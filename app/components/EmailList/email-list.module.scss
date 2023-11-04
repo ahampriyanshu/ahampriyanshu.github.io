@@ -52,6 +52,7 @@
   letter-spacing: 0.75px;
   max-width: 168px;
   width: 168px;
+  padding-right: 32px;
 }
 
 .msg_cell {
@@ -59,6 +60,7 @@
   display: flex;
   justify-content: space-between;
   margin-right: 26px;
+  line-height: 20px;
 
   span {
     font-weight: 400;
@@ -70,6 +72,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 50vw;
+    text-overflow: ellipsis;
+    letter-spacing: 0.25px;
   }
 
   .file {
@@ -131,9 +141,5 @@
     left: 5px; /* Adjust the position of the checkmark */
 
     transition: 0.2s;
-  }
-
-  input.checked {
-    outline: 2px solid yellow;
   }
 }

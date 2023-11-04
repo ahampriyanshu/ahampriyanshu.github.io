@@ -1,4 +1,4 @@
-export const links = [
+export const primaryLinks = [
   {
     id: 1,
     type: 'inbox',
@@ -24,10 +24,17 @@ export const links = [
     type: 'draft',
     count: 0,
   },
+];
+
+export const secondaryLinks = [
   {
-    id: 6,
-    type: 'more',
-    count: 0,
-    isDisabled: true,
+    id: 1,
+    type: 'spam',
+    count: 2,
+  },
+  {
+    id: 2,
+    type: 'bin',
+    count: 2,
   },
 ];
