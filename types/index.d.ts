@@ -28,6 +28,7 @@ export type AppState = {
 };
 
 export type EmailAttributes = {
+  id?: string;
   selected: boolean;
   fav: boolean;
   sender: string;

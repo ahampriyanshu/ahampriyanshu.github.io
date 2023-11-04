@@ -12,7 +12,7 @@ import {
 } from '../Icons/Icons';
 import { INBOX_FILTER_ACTIVE_COLOR } from '@/app/constants/ui.constants';
 import { EmailList } from '../EmailList/EmailList';
-import { emails } from '@/app/data/inbox';
+import { emails } from '@/app/data/inbox.data';
 import { EmailTag } from '@/types';
 
 export const InboxMails = () => {
@@ -92,11 +92,7 @@ export const InboxMails = () => {
         </div>
       ) : null}
 
-      <EmailList
-        emails={emails}
-        selectedTag={selectedTag}
-        typeFilter={typeFilter}
-      />
+      <EmailList selectedTag={selectedTag} typeFilter={typeFilter} />
     </div>
   );
 };

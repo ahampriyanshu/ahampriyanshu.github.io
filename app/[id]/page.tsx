@@ -1,17 +1,16 @@
-'use client';
+import { EmailViewHeader } from '../components/EmailHeader/EmailViewHeader';
+import { Content } from './content';
 
-import { EmailListHeader } from '../components/EmailHeader/EmailListHeader';
-import { InboxMails } from '../components/InboxMails/InboxMails';
-import { usePathname } from 'next/navigation';
+export async function generateStaticParams() {
+  return [{ id: 'linkedin' }, { id: 'irony' }, { id: '3' }];
+}
 
-export default function Mail() {
-  const pathname = usePathname();
-
-  console.log('pathname ====> ', pathname);
+export default function Mail({ params }: { params: { id: string } }) {
+  const { id } = params;
   return (
     <>
-      <EmailListHeader />
-      <InboxMails />
+      <EmailViewHeader />
+      <Content id={id} />
     </>
   );
 }

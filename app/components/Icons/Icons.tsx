@@ -2,7 +2,27 @@ import * as React from 'react';
 import { IconBtn } from './IconBtn';
 import { ICON_COLOR, ICON_COLOR_DARK } from '@/app/constants/ui.constants';
 
-const HamburgerMenu = ({
+export { IconBtn, ICON_COLOR, ICON_COLOR_DARK };
+
+export const Fallback = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 412L346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-112 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const HamburgerMenu = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -20,7 +40,7 @@ const HamburgerMenu = ({
   </svg>
 );
 
-const QuestionMark = ({
+export const QuestionMark = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -39,7 +59,11 @@ const QuestionMark = ({
   </svg>
 );
 
-const Settings = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Settings = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
@@ -54,7 +78,11 @@ const Settings = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const GridMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const GridMenu = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
@@ -68,7 +96,11 @@ const GridMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Search = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Search = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
@@ -83,7 +115,7 @@ const Search = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Filters = ({
+export const Filters = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR_DARK,
@@ -101,7 +133,11 @@ const Filters = ({
   </svg>
 );
 
-const Favourite = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Favourite = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
@@ -115,7 +151,11 @@ const Favourite = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ListMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const ListMenu = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
@@ -129,7 +169,11 @@ const ListMenu = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ChevronLeft = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const ChevronLeft = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -143,7 +187,7 @@ const ChevronLeft = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ChevronRight = ({
+export const ChevronRight = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -161,7 +205,11 @@ const ChevronRight = ({
   </svg>
 );
 
-const Refresh = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Refresh = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -175,7 +223,11 @@ const Refresh = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ViewMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const ViewMore = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -189,7 +241,7 @@ const ViewMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ArrowDropDown = ({
+export const ArrowDropDown = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -204,7 +256,11 @@ const ArrowDropDown = ({
   </svg>
 );
 
-const Inbox = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Inbox = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -218,7 +274,11 @@ const Inbox = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const InboxFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const InboxFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -232,7 +292,7 @@ const InboxFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -247,7 +307,7 @@ const Time = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -261,7 +321,11 @@ const Sell = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const SellFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const SellFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -275,7 +339,11 @@ const SellFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Social = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Social = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -289,7 +357,7 @@ const Social = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const SocialFilled = ({
+export const SocialFilled = ({
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -307,7 +375,11 @@ const SocialFilled = ({
   </svg>
 );
 
-const ExpandMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const ExpandMore = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -321,7 +393,11 @@ const ExpandMore = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const ExpandLess = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const ExpandLess = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -335,7 +411,11 @@ const ExpandLess = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const TrashFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const TrashFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -349,7 +429,11 @@ const TrashFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Trash = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Trash = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -363,7 +447,11 @@ const Trash = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Alert = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Alert = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -378,7 +466,11 @@ const Alert = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const AlertFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const AlertFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -392,7 +484,11 @@ const AlertFilled = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
   </svg>
 );
 
-const Fallback = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+export const Archive = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 -960 960 960'
@@ -400,39 +496,36 @@ const Fallback = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
     height={width}
   >
     <path
-      d='M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 412L346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-112 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z'
+      d='m480-240 160-160-56-56-64 64v-168h-80v168l-64-64-56 56 160 160ZM200-640v440h560v-440H200Zm0 520q-33 0-56.5-23.5T120-200v-499q0-14 4.5-27t13.5-24l50-61q11-14 27.5-21.5T250-840h460q18 0 34.5 7.5T772-811l50 61q9 11 13.5 24t4.5 27v499q0 33-23.5 56.5T760-120H200Zm16-600h528l-34-40H250l-34 40Zm264 300Z'
       fill={strokeColor}
     />
   </svg>
 );
 
-export {
-  HamburgerMenu,
-  QuestionMark,
-  Settings,
-  GridMenu,
-  Search,
-  Filters,
-  IconBtn,
-  Favourite,
-  ListMenu,
-  ChevronLeft,
-  ChevronRight,
-  Refresh,
-  ViewMore,
-  ArrowDropDown,
-  Inbox,
-  InboxFilled,
-  Time,
-  Social,
-  SocialFilled,
-  Sell,
-  SellFilled,
-  ExpandMore,
-  ExpandLess,
-  Trash,
-  TrashFilled,
-  Alert,
-  AlertFilled,
-  Fallback,
-};
+export const Bin = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 -960 960 960'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const Back = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={height}
+    height={width}
+  >
+    <path
+      d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'
+      fill={strokeColor}
+    />
+  </svg>
+);

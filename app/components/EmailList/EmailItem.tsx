@@ -3,15 +3,19 @@ import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export const EmailItem = ({ email }: { email: any }) => {
   const [isChecked, setIsChecked] = useState(false);
-
+  const router = useRouter();
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className={styles.email_content}>
+    <div
+      onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
+      className={styles.email_content}
+    >
       <div className={styles.icon_cell}>
         <label className={styles.checkboxLabel}>
           <input

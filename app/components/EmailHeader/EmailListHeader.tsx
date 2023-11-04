@@ -1,6 +1,6 @@
 'use client';
 import React, { useContext } from 'react';
-import styles from './email-list-header.module.scss';
+import styles from './email-header.module.scss';
 import Image from 'next/image';
 import {
   ArrowDropDown,

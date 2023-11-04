@@ -2,6 +2,7 @@ import { EmailAttributes } from '@/types';
 
 export const emails: EmailAttributes[] = [
   {
+    id: 'linkedin',
     selected: false,
     fav: false,
     sender: 'Priyanshu Tiwari',
@@ -36,7 +37,7 @@ export const emails: EmailAttributes[] = [
   {
     selected: false,
     fav: false,
-    sender: 'Jane Doe',
+    sender: 'Irony Kapoor',
     subject: 'Top DSA Coder Boss Expert Pvt Ltd',
     body: 'Hey, I wanted to discuss our vacation plans for next month. Can we meet tomorrow?',
     time: '2022-01-02T15:30:00',
