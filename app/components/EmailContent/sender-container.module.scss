@@ -13,6 +13,7 @@
   }
 
   .options {
+    padding-right: 16px;
     padding-top: 16px;
     display: flex;
     align-items: flex-start;
@@ -66,6 +67,25 @@
     }
   }
 
-  .options {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .time {
+      font-size: 0.75rem;
+      letter-spacing: normal;
+      color: #5e5e5e;
+      display: block;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
+}
+
+.fallback {
+  img {
+    background-color: #cccccc;
+    border-radius: 50%;
   }
 }

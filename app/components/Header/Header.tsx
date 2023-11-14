@@ -14,13 +14,14 @@ import { AppContext } from '@/app/AppContext';
 import Image from 'next/image';
 import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
+import { useRouter } from 'next/navigation';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
   const toggleSidebar = () => {
     dispatch({ type: 'TOGGLE_SIDEBAR' });
   };
-
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
@@ -30,7 +31,7 @@ function Header() {
           </IconBtn>
         </Tooltip>
 
-        <div className='flex-row-center'>
+        <div onClick={() => router.push('/')} className='flex-row-center hover'>
           <Image src='/logo.png' alt='logo' width={32} height={32} />
           <h1>{site.title}</h1>
         </div>

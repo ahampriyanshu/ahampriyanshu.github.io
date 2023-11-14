@@ -22,12 +22,12 @@ export const emails: EmailAttributes[] = [
     tag: 'social',
   },
   {
+    id: 'drive',
     selected: false,
     fav: false,
     sender: {
-      name: 'Priyanshu (via Google.',
-      logo: 'linkedin.png',
-      email: 'invitations@linkedin.com',
+      name: 'Priyanshu (via Google Drive)',
+      email: 'drive-shares-dm-noreply@google.com',
     },
     subject: 'Item shared with you: ‘Resume.pdf’',
     summary:

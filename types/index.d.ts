@@ -33,7 +33,7 @@ export type EmailAttributes = {
   fav: boolean;
   sender: {
     name: string;
-    logo: string;
+    logo?: string;
     email: string;
   };
   subject: string;

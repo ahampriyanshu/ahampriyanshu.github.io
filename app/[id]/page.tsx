@@ -2,7 +2,7 @@ import { EmailContent } from '../components/EmailContent/EmailContent';
 import { EmailViewHeader } from '../components/EmailHeader/EmailViewHeader';
 
 export async function generateStaticParams() {
-  return [{ id: 'linkedin' }];
+  return [{ id: 'linkedin' }, { id: 'drive' }];
 }
 
 export default function Mail({ params }: { params: { id: string } }) {
