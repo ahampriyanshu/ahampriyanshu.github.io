@@ -5,7 +5,7 @@ export const emails: EmailAttributes[] = [
     id: 'linkedin',
     selected: false,
     fav: false,
-    sender: 'Priyanshu Tiwari',
+
     subject: 'I want to connect',
     summary:
       "join your LinkedIn network. Hi there, I'd like to join your professional network.",
@@ -13,13 +13,22 @@ export const emails: EmailAttributes[] = [
     time: '2023-01-01T10:00:00',
     priority: 1,
     read: false,
+    sender: {
+      name: 'Priyanshu Tiwari',
+      logo: 'linkedin.png',
+      email: 'invitations@linkedin.com',
+    },
     type: 'inbox',
     tag: 'social',
   },
   {
     selected: false,
     fav: false,
-    sender: 'Priyanshu (via Google.',
+    sender: {
+      name: 'Priyanshu (via Google.',
+      logo: 'linkedin.png',
+      email: 'invitations@linkedin.com',
+    },
     subject: 'Item shared with you: ‘Resume.pdf’',
     summary:
       "Priyanshu shared an item Priyanshu (ahampriyanshu@gmail.com) has shared the following item: Vaibhav-Resume.pdf Open If you don't want to receive files from this person, block the sender from Drive",
@@ -37,7 +46,11 @@ export const emails: EmailAttributes[] = [
   {
     selected: false,
     fav: false,
-    sender: 'Irony Kapoor',
+    sender: {
+      name: 'Priyanshu (via Google.',
+      logo: 'linkedin.png',
+      email: 'invitations@linkedin.com',
+    },
     subject: 'Top DSA Coder Boss Expert Pvt Ltd',
     body: 'Hey, I wanted to discuss our vacation plans for next month. Can we meet tomorrow?',
     time: '2022-01-02T15:30:00',
@@ -49,7 +62,11 @@ export const emails: EmailAttributes[] = [
   {
     selected: false,
     fav: false,
-    sender: 'John Smith',
+    sender: {
+      name: 'Priyanshu (via Google.',
+      logo: 'linkedin.png',
+      email: 'invitations@linkedin.com',
+    },
     subject: 'Project Update',
     body: 'Hello, just wanted to give you an update on the project. Everything is going smoothly.',
     time: '2022-01-03T09:45:00',
@@ -61,7 +78,11 @@ export const emails: EmailAttributes[] = [
   {
     selected: false,
     fav: false,
-    sender: 'Jane Smith',
+    sender: {
+      name: 'Priyanshu (via Google.',
+      logo: 'linkedin.png',
+      email: 'invitations@linkedin.com',
+    },
     subject: 'Important Announcement',
     body: 'Hi, I have an important announcement to make. Please attend the meeting tomorrow.',
     time: '2022-01-04T14:00:00',

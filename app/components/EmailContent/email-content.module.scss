@@ -1,10 +1,9 @@
 .container {
   display: flex;
-  padding: 20px 16px 8px 72px;
+  flex-direction: column;
 
   .subject {
-    // border: 1px solid red;
-    width: 100%;
+    padding: 20px 16px 8px 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;

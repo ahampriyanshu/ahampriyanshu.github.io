@@ -4,8 +4,9 @@ import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { EmailAttributes } from '@/types';
 
-export const EmailItem = ({ email }: { email: any }) => {
+export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
   const router = useRouter();
   const toggleCheckbox = () => {
@@ -32,7 +33,7 @@ export const EmailItem = ({ email }: { email: any }) => {
           strokeColor='rgba(100, 121, 143, 0.5)'
         />
       </div>
-      <div className={styles.name_cell}>{email.sender}</div>
+      <div className={styles.name_cell}>{email.sender.name}</div>
       <div className={styles.msg_cell}>
         <div className={styles.msg_content}>
           <div>

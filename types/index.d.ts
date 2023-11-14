@@ -31,7 +31,11 @@ export type EmailAttributes = {
   id?: string;
   selected: boolean;
   fav: boolean;
-  sender: string;
+  sender: {
+    name: string;
+    logo: string;
+    email: string;
+  };
   subject: string;
   summary?: string;
   body?: string;
