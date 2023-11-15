@@ -13,7 +13,7 @@ export const SubjectContainer = ({
     <div className={styles.subject}>
       <div className={styles.text_content}>
         <div className={styles.title}>{contentData?.subject}</div>
-        <span className={styles.tag}>{contentData?.tag}</span>
+        <div className={styles.tag}>{contentData?.tag}</div>
       </div>
       <div className={styles.icon_content}>
         <IconBtn padding='8px'>

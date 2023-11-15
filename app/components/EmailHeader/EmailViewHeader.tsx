@@ -23,18 +23,20 @@ export const EmailViewHeader = () => {
             <Back height={20} width={20} />
           </IconBtn>
         </div>
-        <IconBtn padding='6px'>
-          <Archive height={20} width={20} />
-        </IconBtn>
-        <IconBtn padding='6px'>
-          <Bin height={20} width={20} />
-        </IconBtn>
-        <IconBtn padding='6px'>
-          <Alert height={20} width={20} />
-        </IconBtn>
-        <IconBtn padding='6px'>
-          <ViewMore height={20} width={20} />
-        </IconBtn>
+        <div className='flex'>
+          <IconBtn padding='6px'>
+            <Archive height={20} width={20} />
+          </IconBtn>
+          <IconBtn padding='6px'>
+            <Bin height={20} width={20} />
+          </IconBtn>
+          <IconBtn padding='6px'>
+            <Alert height={20} width={20} />
+          </IconBtn>
+          <IconBtn padding='6px'>
+            <ViewMore height={20} width={20} />
+          </IconBtn>
+        </div>
       </div>
       <div className={styles.details_container}>
         <IconBtn padding='6px'>

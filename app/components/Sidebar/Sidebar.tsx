@@ -14,12 +14,15 @@ import {
   TrashFilled,
 } from '../Icons/Icons';
 import { IconMap } from '@/types';
+import { useRouter } from 'next/navigation';
 
 function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { state, dispatch } = useContext(AppContext);
+  const router = useRouter();
 
   const setFilterParam = (mailType: string) => {
+    router.push('/');
     dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
   };
   const isSideBarOpen = state?.isSideBarOpen || false;

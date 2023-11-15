@@ -22,18 +22,15 @@
       }
 
       .tag {
-        flex-wrap: wrap;
         font-size: 0.75rem;
-        letter-spacing: normal;
         cursor: pointer;
         line-height: 18px;
         background-color: #e8f0fe;
-        background-color: #ddd;
         color: #666;
         border-radius: 4px;
-        display: inline-block;
         padding: 0 4px 0 4px;
         text-decoration: capitalize;
+        vertical-align: middle;
       }
     }
 
