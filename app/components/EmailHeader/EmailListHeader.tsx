@@ -73,7 +73,7 @@ export const EmailListHeader = () => {
               padding: '6px 1px',
             }}
           >
-            <ArrowDropDown height={20} width={20} />{' '}
+            <ArrowDropDown height={20} width={20} />
           </IconBtn>
         </div>
       </div>

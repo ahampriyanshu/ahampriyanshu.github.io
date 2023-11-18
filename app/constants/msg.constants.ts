@@ -1,0 +1,2 @@
+export const FAIR_USAGE =
+  'This is a non-commercial and open-source project, purely for educational purposes. This project does not intend to infringe on any intellectual property rights, and all efforts have been made to respect and attribute the original creators appropriately. If you are the copyright holder of the original design and have concerns about something, please contact ahampriyanshu@gmail.com for prompt resolution.';

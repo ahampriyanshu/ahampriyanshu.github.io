@@ -15,6 +15,7 @@ import Image from 'next/image';
 import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
+import { openInNewTab } from '@/app/utils/common';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -88,8 +89,21 @@ function Header() {
           </Tooltip>
 
           <Tooltip content='Account'>
-            <IconBtn padding='6px'>
-              <Image src='/avatar.png' alt='logo' width={28} height={28} />
+            <IconBtn
+              onClick={() =>
+                openInNewTab('https://www.youtube.com/watch?v=pIKlq1r6gdY')
+              }
+              padding='6px'
+            >
+              <Image
+                style={{
+                  borderRadius: '50%',
+                }}
+                src='/norm.png'
+                alt='logo'
+                width={30}
+                height={30}
+              />
             </IconBtn>
           </Tooltip>
         </div>

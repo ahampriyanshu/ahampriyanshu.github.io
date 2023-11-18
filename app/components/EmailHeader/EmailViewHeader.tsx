@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext } from 'react';
+import React from 'react';
 import styles from './email-header.module.scss';
 import {
   Alert,
@@ -16,7 +16,7 @@ import { useRouter } from 'next/navigation';
 export const EmailViewHeader = () => {
   const router = useRouter();
   return (
-    <div className={`${styles.container}`}>
+    <div className={styles.container}>
       <div className={styles.select_container}>
         <div className={styles.back_btn}>
           <IconBtn padding='6px' onClick={() => router.back()}>
@@ -44,7 +44,7 @@ export const EmailViewHeader = () => {
         </IconBtn>
 
         <IconBtn padding='6px'>
-          <ChevronRight height={20} width={20} strokeColor='#b8b8b8' />{' '}
+          <ChevronRight height={20} width={20} strokeColor='#b8b8b8' />
         </IconBtn>
       </div>
     </div>
