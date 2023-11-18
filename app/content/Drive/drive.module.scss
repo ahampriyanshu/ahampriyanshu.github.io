@@ -1,0 +1,58 @@
+.container {
+  margin-left: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    max-width: 700px;
+    padding: 32px;
+
+    .header {
+      margin-bottom: 32px;
+      font-style: normal;
+      font-size: 28px;
+      line-height: 36px;
+      color: #3c4043;
+    }
+
+    .sub_header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+
+      span {
+        font-size: 16px;
+        line-height: 24px;
+        color: #202124;
+        letter-spacing: 0.1px;
+        overflow-wrap: break-word;
+      }
+    }
+
+    .cta_btn {
+      padding: 0 24px;
+      // font:
+      border: none;
+      border-radius: 18px;
+      box-sizing: border-box;
+      display: inline-block;
+      letter-spacing: 0.25px;
+      min-height: 36px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #1a73e8;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

@@ -6,8 +6,9 @@ import { SubjectContainer } from './SubjectContainer';
 import { SenderContainer } from './SenderContainer';
 import { EmailAttributes } from '@/types';
 import { NavigationContainer } from './NavigationContainer';
+import { MailContent } from './MailContent';
 
-export function EmailContent({ id }: { id: string }) {
+export function MailContainer({ id }: { id: string }) {
   const contentData = emails.find(
     (email) => email?.id === id
   ) as EmailAttributes;
@@ -20,7 +21,7 @@ export function EmailContent({ id }: { id: string }) {
     <div className={styles.container}>
       <SubjectContainer contentData={contentData} />
       <SenderContainer contentData={contentData} />
-
+      <MailContent id={id} />
       <NavigationContainer />
     </div>
   );
