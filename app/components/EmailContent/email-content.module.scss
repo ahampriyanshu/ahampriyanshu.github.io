@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
 
   .subject {
     padding: 20px 16px 8px 72px;

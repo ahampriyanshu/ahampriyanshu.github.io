@@ -16,7 +16,7 @@ import { useRouter } from 'next/navigation';
 export const EmailViewHeader = () => {
   const router = useRouter();
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <div className={styles.select_container}>
         <div className={styles.back_btn}>
           <IconBtn padding='6px' onClick={() => router.back()}>

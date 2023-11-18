@@ -1,20 +1,27 @@
+.rounded-border {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
 .container {
-  margin-left: 72px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
+  margin: auto;
+  max-width: 630px;
+  min-width: 280px;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
 
   .content {
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    word-wrap: break-word;
-    word-break: break-word;
-    text-align: left;
-    width: 90%;
-    margin: auto;
-    max-width: 700px;
-    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 100%;
+    padding: 4.5%;
+
+    @extend .rounded-border;
 
     .header {
       margin-bottom: 32px;
@@ -41,7 +48,7 @@
 
     .cta_btn {
       padding: 0 24px;
-      // font:
+      margin-block: 16px;
       border: none;
       border-radius: 18px;
       box-sizing: border-box;
@@ -54,5 +61,54 @@
       color: #fff;
       cursor: pointer;
     }
+
+    .unsubscribe {
+      font-size: 12px;
+      color: #5f6368;
+
+      span {
+        color: #1a73e8;
+        cursor: not-allowed;
+      }
+    }
+
+    .preview {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 100%;
+      padding: 20px;
+      width: 405px;
+      box-sizing: border-box;
+      gap: 18px;
+      @extend .rounded-border;
+
+      .file {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        span {
+          color: #3c4043;
+          font: 500 14px/18px;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .thumbnail {
+        background-image: url('/content/drive.png');
+        background-size: cover;
+        width: 361px;
+        height: 240px;
+        background-position: top;
+        background-repeat: no-repeat;
+        @extend .rounded-border;
+      }
+    }
+  }
+
+  .credits {
+    display: flex;
   }
 }

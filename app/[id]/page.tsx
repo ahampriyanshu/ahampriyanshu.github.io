@@ -1,4 +1,4 @@
-import { MailContainer } from '../components/MailView/MailContainer';
+import { MailContainer } from '../components/EmailContent/MailContainer';
 import { EmailViewHeader } from '../components/EmailHeader/EmailViewHeader';
 
 export async function generateStaticParams() {
@@ -8,9 +8,9 @@ export async function generateStaticParams() {
 export default function Mail({ params }: { params: { id: string } }) {
   const { id } = params;
   return (
-    <>
+    <div className='h-100 w-100'>
       <EmailViewHeader />
       <MailContainer id={id} />
-    </>
+    </div>
   );
 }
