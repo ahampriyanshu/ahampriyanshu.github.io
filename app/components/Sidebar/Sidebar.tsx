@@ -20,13 +20,13 @@ function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { state, dispatch } = useContext(AppContext);
   const router = useRouter();
+  const isSideBarOpen = state?.isSideBarOpen || false;
+  const selectedFilterParam = state?.filterParam || 'inbox';
 
   const setFilterParam = (mailType: string) => {
     router.push('/');
     dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
   };
-  const isSideBarOpen = state?.isSideBarOpen || false;
-  const selectedFilterParam = state?.filterParam || 'inbox';
 
   const iconMap: IconMap = {
     spam: {

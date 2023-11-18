@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { SubjectContainer } from './SubjectContainer';
 import { SenderContainer } from './SenderContainer';
 import { EmailAttributes } from '@/types';
+import { NavigationContainer } from './NavigationContainer';
 
 export function EmailContent({ id }: { id: string }) {
   const contentData = emails.find(
@@ -19,6 +20,8 @@ export function EmailContent({ id }: { id: string }) {
     <div className={styles.container}>
       <SubjectContainer contentData={contentData} />
       <SenderContainer contentData={contentData} />
+
+      <NavigationContainer />
     </div>
   );
 }

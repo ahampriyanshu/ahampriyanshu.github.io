@@ -1,0 +1,32 @@
+.container {
+  margin-left: 72px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #747775;
+    box-shadow: none;
+    border-radius: 18px;
+    height: 36px;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    color: #444746;
+    font-weight: 500;
+    height: 36px;
+    outline: none;
+    padding: 0 16px;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    min-width: 104px;
+    line-height: 20px;
+
+    &:hover {
+      background-color: rgba(32, 33, 36, 0.059);
+      cursor: pointer;
+    }
+  }
+}
