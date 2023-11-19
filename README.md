@@ -2,7 +2,7 @@
 
 <p align="center">
 <img width="64" height="64" src="./public/logo.png" /><br>
-<span>Gmail styled portfolio theme in NextJS</span>  
+<span>Gmail styled portfolio app in NextJS.</span>  
 </p>
 
 ![Zmail](https://img.shields.io/github/license/ahampriyanshu/zmail)
@@ -13,10 +13,6 @@
 
 ## Features
 
-- Responsive
-- Google Analytics
-- SEO support
-- Dark Mode
 - Node v20
 - React v18
 - Next v13.5 (App Router with server and client Components)
