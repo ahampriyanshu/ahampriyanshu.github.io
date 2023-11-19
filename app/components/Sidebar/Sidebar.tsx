@@ -57,7 +57,7 @@ function Sidebar() {
       outlined: <Clock strokeColor='#202124' height={20} width={20} />,
       filled: <ClockFilled strokeColor='#202124' height={20} width={20} />,
     },
-    send: {
+    sent: {
       outlined: <Send strokeColor='#202124' height={20} width={20} />,
       filled: <SendFilled strokeColor='#202124' height={20} width={20} />,
     },
@@ -109,12 +109,11 @@ function Sidebar() {
             key={index}
             className={`${styles.link} ${
               link.type === selectedFilterParam ? styles.active : ''
-            }
-                ${
-                  link.type !== 'inbox' && link.type !== 'draft'
-                    ? styles.others
-                    : ''
-                } `}
+            } ${
+              link.type !== 'inbox' && link.type !== 'draft'
+                ? styles.others
+                : ''
+            } `}
             onClick={() => setFilterParam(link.type)}
           >
             <div className={styles.icon}>
@@ -129,103 +128,49 @@ function Sidebar() {
             </div>
           </div>
         ))}
-        {/* {primaryLinks.map((link, index) => (
-          <button
-            key={index}
-            className={`${styles.link} ${
-              link.type === selectedFilterParam ? styles.active : ''
-            }
-            ${
-              link.type !== 'inbox' && link.type !== 'draft'
-                ? styles.others
-                : ''
-            } `}
-            onClick={() => setFilterParam(link.type)}
-          >
-            <div
-              style={{
-                marginLeft: '22px',
-              }}
-              className={styles.content}
-            >
-              <Image
-                src={`/icons/${
-                  link.type === selectedFilterParam
-                    ? link.type + '-active'
-                    : link.type
-                }.png`}
-                alt={`${link.type} icon`}
-                width={20}
-                height={20}
-              />
-              <div className={styles.title}>{link.type}</div>
-            </div>
-            <div
-              style={{
-                marginRight: '16px',
-              }}
-              className={styles.count}
-            >
-              {link.count}
-            </div>
-          </button>
-        ))}
 
         <button
-          className={`${styles.link} ${styles.others}`}
+          className={styles.expand_btn}
           onClick={() => setIsExpanded((prev) => !prev)}
         >
-          <div
-            style={{
-              marginLeft: '22px',
-            }}
-            className={styles.content}
-          >
+          <div className={styles.expand_icon}>
             {isExpanded ? (
               <ExpandLess height={20} width={20} />
             ) : (
               <ExpandMore width={20} height={20} />
             )}
-            <div className={styles.title}>{isExpanded ? 'Less' : 'More'}</div>
+          </div>
+          <div className={styles.expand_text}>
+            {isExpanded ? 'Less' : 'More'}
           </div>
         </button>
 
         {isExpanded
           ? secondaryLinks.map((link, index) => (
-              <button
+              <div
                 key={index}
                 className={`${styles.link} ${
                   link.type === selectedFilterParam ? styles.active : ''
-                }
-                ${
+                } ${
                   link.type !== 'inbox' && link.type !== 'draft'
                     ? styles.others
                     : ''
                 } `}
                 onClick={() => setFilterParam(link.type)}
               >
-                <div
-                  style={{
-                    marginLeft: '22px',
-                  }}
-                  className={styles.content}
-                >
+                <div className={styles.icon}>
                   {iconMap?.[link.type]?.[
                     link.type === selectedFilterParam ? 'filled' : 'outlined'
                   ] || <Fallback width={24} height={24} />}
+                </div>
+
+                <div className={styles.text}>
                   <div className={styles.title}>{link.type}</div>
+                  <div className={styles.count}>{link.count}</div>
                 </div>
-                <div
-                  style={{
-                    marginRight: '16px',
-                  }}
-                  className={styles.count}
-                >
-                  {link.count}
-                </div>
-              </button>
+              </div>
             ))
-          : null} */}
+          : null}
       </div>
     </div>
   );
