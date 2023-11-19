@@ -16,7 +16,7 @@ export const primaryLinks = [
   },
   {
     id: 4,
-    type: 'sent',
+    type: 'send',
     count: 2,
   },
   {

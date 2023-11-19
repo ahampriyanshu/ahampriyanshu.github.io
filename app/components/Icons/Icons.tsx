@@ -655,3 +655,137 @@ export const History = ({
     />
   </svg>
 );
+
+export const Draft = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 -960 960 960'
+  >
+    <path
+      d='M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const DraftFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path
+      d='M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const Send = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 -960 960 960'
+  >
+    <path
+      d='M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const SendFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path d='M2.01 21 23 12 2.01 3 2 10l15 2-15 2z' fill={strokeColor} />
+  </svg>
+);
+
+export const Clock = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path
+      d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'
+      fill={strokeColor}
+    />
+    <path d='M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z' fill={strokeColor} />
+  </svg>
+);
+
+export const ClockFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path
+      d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const StarFilled = ({
+  height = 24,
+  width = 24,
+  strokeColor = ICON_COLOR,
+}) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path
+      d='M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'
+      fill={strokeColor}
+    />
+  </svg>
+);
+
+export const Star = ({ height = 24, width = 24, strokeColor = ICON_COLOR }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={height}
+    height={width}
+    viewBox='0 0 24 24'
+  >
+    <path
+      d='m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z'
+      fill={strokeColor}
+    />
+  </svg>
+);
