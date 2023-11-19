@@ -16,6 +16,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
+import { EASTER_EGGS } from '@/app/data/links.data';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -90,9 +91,7 @@ function Header() {
 
           <Tooltip content='Account'>
             <IconBtn
-              onClick={() =>
-                openInNewTab('https://www.youtube.com/watch?v=pIKlq1r6gdY')
-              }
+              onClick={() => openInNewTab(EASTER_EGGS.HEADER.ACCOUNT)}
               padding='6px'
             >
               <Image
