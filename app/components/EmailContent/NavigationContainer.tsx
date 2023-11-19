@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { Forward, Reply, Return } from '../Icons/Icons';
+import { Forward, Reply } from '../Icons/Icons';
 import styles from './navigation-container.module.scss';
 
 export const NavigationContainer = () => {

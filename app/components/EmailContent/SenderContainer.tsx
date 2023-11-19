@@ -4,7 +4,7 @@ import styles from './sender-container.module.scss';
 import { EmailAttributes } from '@/types';
 import Image from 'next/image';
 import { IconBtn } from '../Icons/IconBtn';
-import { Favourite, Return, ViewMore } from '../Icons/Icons';
+import { ArrowDropDown, Favourite, Return, ViewMore } from '../Icons/Icons';
 
 export const SenderContainer = ({
   contentData,
@@ -34,7 +34,9 @@ export const SenderContainer = ({
             >{`<${contentData.sender.email}>`}</span>
             <span className={styles.unsubscribe}>Unsubscribe</span>
           </div>
-          <div className={styles.to_me}>to me</div>
+          <div className={styles.to_me}>
+            to me <ArrowDropDown height={20} width={20} />
+          </div>
         </div>
         <div className={styles.content}>
           <span className={styles.time} title='2 Nov 2023, 15:56'>

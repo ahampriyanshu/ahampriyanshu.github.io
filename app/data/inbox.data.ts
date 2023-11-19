@@ -43,20 +43,4 @@ export const emails: EmailAttributes[] = [
     type: 'inbox',
     tag: 'inbox',
   },
-  {
-    selected: false,
-    fav: false,
-    sender: {
-      name: 'Priyanshu (via Google.',
-      logo: 'linkedin.png',
-      email: 'invitations@linkedin.com',
-    },
-    subject: 'Top DSA Coder Boss Expert Pvt Ltd',
-    body: 'Hey, I wanted to discuss our vacation plans for next month. Can we meet tomorrow?',
-    time: '2022-01-02T15:30:00',
-    priority: 3,
-    read: false,
-    type: 'inbox',
-    tag: 'promotions',
-  },
 ];

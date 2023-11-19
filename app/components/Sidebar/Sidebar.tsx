@@ -28,6 +28,11 @@ function Sidebar() {
     dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
   };
 
+  const sendNewMail = () => {
+    window.location.href =
+      'mailto:ahampriyanshu@gmail.com?subject=Hi%20priyanshu';
+  };
+
   const iconMap: IconMap = {
     spam: {
       outlined: <Alert height={20} width={20} />,
@@ -45,8 +50,12 @@ function Sidebar() {
         isSideBarOpen ? styles.active : styles.collapsed
       }`}
     >
-      <div className={styles.compose_btn}>
-        <button>
+      <div
+        className={`${styles.compose_btn} ${
+          isSideBarOpen ? styles.active : styles.collapsed
+        }`}
+      >
+        <button onClick={sendNewMail}>
           <div>
             <Image
               src='/icons/edit.png'
@@ -75,7 +84,7 @@ function Sidebar() {
           >
             <div
               style={{
-                marginLeft: '26px',
+                marginLeft: '22px',
               }}
               className={styles.content}
             >
@@ -108,7 +117,7 @@ function Sidebar() {
         >
           <div
             style={{
-              marginLeft: '26px',
+              marginLeft: '22px',
             }}
             className={styles.content}
           >
@@ -137,7 +146,7 @@ function Sidebar() {
               >
                 <div
                   style={{
-                    marginLeft: '26px',
+                    marginLeft: '22px',
                   }}
                   className={styles.content}
                 >
