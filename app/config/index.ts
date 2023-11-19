@@ -1,4 +1,4 @@
 import { meta } from './site.config';
-import { user } from './user.config';
+import { USER } from './user.config';
 import { primaryLinks, secondaryLinks } from './sidebar.config';
-export { meta as site, user, primaryLinks, secondaryLinks };
+export { meta as site, USER as user, primaryLinks, secondaryLinks };

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styles from './linkedin.module.scss';
 import { FAIR_USAGE } from '@/app/constants/msg.constants';
-import { History, Person } from '@/app/components/Icons/Icons';
 import { openInNewTab } from '@/app/utils/common';
+import { USER } from '@/app/config/user.config';
 
 export const LinkedIn = () => {
   return (
@@ -11,14 +11,14 @@ export const LinkedIn = () => {
         <div className={styles.card}>
           <div className={styles.banner}>
             <Image
-              src={`/content/li_banner.png`}
-              alt={`linkedin banner`}
+              src='/content/li_banner.png'
+              alt='linkedin banner'
               width={92}
               height={30}
             />
             <Image
-              src={`/content/li_profile.png`}
-              alt={`linkedin profile`}
+              src='/content/profile.png'
+              alt='linkedin profile'
               width={32}
               height={32}
               style={{
@@ -28,8 +28,8 @@ export const LinkedIn = () => {
           </div>
           <div className={styles.profile}>
             <Image
-              src={`/content/li_profile.png`}
-              alt={`linkedin profile`}
+              src='/content/li_profile.png'
+              alt='linkedin profile'
               width={64}
               height={64}
               style={{
@@ -41,6 +41,61 @@ export const LinkedIn = () => {
           </div>
 
           <hr />
+
+          <div className={styles.btns}>
+            <button onClick={() => openInNewTab(USER.LINKEDIN)}>Accept</button>
+            <button onClick={() => openInNewTab(USER.LINKEDIN)}>
+              View Profile
+            </button>
+          </div>
+
+          <div className={styles.header}>More people you may know</div>
+          <div>
+            <div className={styles.recommended}>
+              <div className={styles.info}>
+                <div className={styles.img}>
+                  <Image
+                    src='/content/profile.png'
+                    alt='linkedin profile'
+                    width={48}
+                    height={48}
+                    style={{
+                      borderRadius: '50%',
+                    }}
+                  />
+                </div>
+                <div className={styles.text}>
+                  <p>Lauri Törni</p>
+                  <span>
+                    Global expert in tactical oopsies, Specializing in
+                    unconventional career choices
+                  </span>
+                </div>
+              </div>
+              <button>View Profile</button>
+            </div>
+          </div>
+        </div>
+        <div className={styles.footer}>
+          <p>Never miss an update with the LinkedIn app</p>
+          <div className={styles.imgs}>
+            <Image
+              src='/content/li_app.png'
+              alt='app store link'
+              width={120}
+              height={40}
+              style={{
+                marginInlineEnd: '16px',
+              }}
+            />
+
+            <Image
+              src='/content/li_play.png'
+              alt='play store link'
+              width={120}
+              height={40}
+            />
+          </div>
         </div>
         <div className={styles.credits}>{FAIR_USAGE}</div>
       </div>

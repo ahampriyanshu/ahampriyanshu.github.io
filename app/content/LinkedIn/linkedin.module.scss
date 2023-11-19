@@ -1,6 +1,7 @@
 .container {
   margin-left: 72px;
   margin-right: 24px;
+  margin-bottom: 72px;
   color: #333;
 
   .content {
@@ -12,10 +13,12 @@
     background-color: #f3f2f0;
     padding: 0px;
     padding-top: 8px;
+    padding-bottom: 16px;
 
     .card {
       width: 100%;
       max-width: 464px;
+      padding-bottom: 16px;
       background-color: #fff;
       padding: 24px;
 
@@ -56,6 +59,97 @@
         margin-top: 16px;
         margin-bottom: 16px;
       }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding-top: 16px;
+        padding-bottom: 24px;
+
+        button {
+          border-radius: 24px;
+          padding-block: 12px;
+          padding-inline: 24px;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration-line: none;
+          background-color: #0a66c2;
+          color: #ffffff;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #0a66c2;
+          line-height: 1.25;
+        }
+
+        button:last-child {
+          background-color: rgba(0, 0, 0, 0);
+          color: #0a66c2;
+        }
+      }
+      .header {
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.25;
+        color: #282828;
+        padding-bottom: 16px;
+      }
+
+      .recommended {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+
+        .info {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 8px;
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            word-break: break-word;
+            max-width: 280px;
+            line-height: 1.25;
+            color: #282828;
+
+            p {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+
+        button {
+          border-radius: 24px;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          padding-left: 16px;
+          padding-right: 16px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration-line: none;
+          background-color: rgba(0, 0, 0, 0);
+          color: rgba(0, 0, 0, 0.75);
+          line-height: 1.25;
+          border: 1px solid #424242;
+          cursor: pointer;
+        }
+      }
     }
     .credits {
       width: 100%;
@@ -65,5 +159,24 @@
       margin-top: 16px;
       border-top: 1px solid #dadce0;
     }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    font-size: 1.5em;
+    margin-block: 0.83em;
+    margin-inline: 0px;
+  }
+
+  .imgs {
+    margin-bottom: 8px;
   }
 }
