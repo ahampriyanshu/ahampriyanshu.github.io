@@ -67,12 +67,18 @@ export const LinkedIn = () => {
                 <div className={styles.text}>
                   <p>Lauri Törni</p>
                   <span>
-                    Global expert in tactical oopsies, Specializing in
-                    unconventional career choices
+                    World War Veteran | Global expert in tactical oopsies |
+                    {`"Fourth time's the charm"`}
                   </span>
                 </div>
               </div>
-              <button>View Profile</button>
+              <button
+                onClick={() =>
+                  openInNewTab('https://en.wikipedia.org/wiki/Lauri_T%C3%B6rni')
+                }
+              >
+                View Profile
+              </button>
             </div>
           </div>
         </div>

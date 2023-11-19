@@ -17,6 +17,7 @@ import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
 import { EASTER_EGGS } from '@/app/data/links.data';
+import { APP_LINKS } from '@/app/config/site.config';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -52,7 +53,7 @@ function Header() {
             <Search />
           </IconBtn>
           <IconBtn
-            disabled
+            onClick={() => openInNewTab(EASTER_EGGS.HEADER.FILTER)}
             style={{
               position: 'absolute',
               right: '-96px',
@@ -72,19 +73,25 @@ function Header() {
 
         <div className={styles.logo_container}>
           <Tooltip content='Support'>
-            <IconBtn padding='6px'>
+            <IconBtn
+              onClick={() => openInNewTab(APP_LINKS.SUPPORT)}
+              padding='6px'
+            >
               <QuestionMark />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Settings'>
-            <IconBtn padding='6px'>
+            <IconBtn
+              onClick={() => openInNewTab(APP_LINKS.SETUP)}
+              padding='6px'
+            >
               <Settings />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Apps'>
-            <IconBtn padding='6px'>
+            <IconBtn onClick={() => openInNewTab(APP_LINKS.GIST)} padding='6px'>
               <GridMenu />
             </IconBtn>
           </Tooltip>
