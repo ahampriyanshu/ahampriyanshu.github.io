@@ -1,7 +1,7 @@
 # Zmail
 
 <p align="center">
-<img width="64" height="64" src="./public/logo.png" /><br>
+<img width="64" height="64" src="./public/zmail.png" /><br>
 <span>Gmail styled portfolio app in NextJS.</span>  
 </p>
 
@@ -9,18 +9,15 @@
 ![Size](https://img.shields.io/github/repo-size/ahampriyanshu/zmail)
 ![Open PRs](https://img.shields.io/github/issues-pr/ahampriyanshu/zmail)
 ![Issues](https://img.shields.io/github/issues/ahampriyanshu/zmail)
-![GitHub last commit](https://img.shields.io/github/last-commit/ahampriyanshu/zmail/main)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/ahampriyanshu/zmail/main)
 
 ## Features
 
-- Node v20
-- React v18
-- Next v13.5 (App Router with server and client Components)
-- TypeScript v5
-- Code Quality: Prettier, ESLint, Husky
-- CI/CD: GitHub Actions
-- Hosting: GitHub Pages
-- Icons: MUI
+- [Next](https://nextjs.org/) v13.5 (App Router with server and client Components)
+- Code Quality: [TypeScript](https://www.typescriptlang.org/), [Prettier](https://prettier.io/), [ESLint](https://eslint.org/), [Husky](https://typicode.github.io/husky/)
+- CI/CD: [GitHub Actions](https://github.com/features/actions)
+- Hosting: [GitHub Pages](https://pages.github.com/)
+- Icons: [Google Fonts](https://fonts.google.com/icons)
 
 ## Setup
 

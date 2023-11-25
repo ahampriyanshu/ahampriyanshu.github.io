@@ -1,0 +1,47 @@
+.container {
+  padding: 16px;
+  border-top: 1px solid rgba(100, 121, 143, 0.122);
+  .content {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.progressBar {
+  height: 6px;
+  width: 220px;
+  background-color: #dadce0;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .progress {
+    height: 100%;
+    border-radius: 8px;
+    background-color: #5f6368;
+  }
+}
+
+.text {
+  font-size: 12px;
+  letter-spacing: normal;
+  line-height: 20px;
+  color: rgb(102, 102, 102);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.derive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .space {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-top: 8px;
+  }
+}

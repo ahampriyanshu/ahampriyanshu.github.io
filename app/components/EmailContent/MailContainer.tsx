@@ -20,7 +20,7 @@ export function MailContainer({ id }: { id: string }) {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
-    const scrollTop = event.currentTarget.scrollTop;
+    const scrollTop = event?.currentTarget?.scrollTop;
     setScrollPosition(scrollTop);
   };
 

@@ -35,7 +35,7 @@ function Header() {
         </Tooltip>
 
         <div onClick={() => router.push('/')} className='flex-row-center hover'>
-          <Image src='/logo.png' alt='logo' width={32} height={32} />
+          <Image src='/zmail.png' alt='logo' width={32} height={32} />
           <h1>{site.title}</h1>
         </div>
       </div>
@@ -105,7 +105,7 @@ function Header() {
                 style={{
                   borderRadius: '50%',
                 }}
-                src='/norm.png'
+                src='/avatar.png'
                 alt='logo'
                 width={30}
                 height={30}

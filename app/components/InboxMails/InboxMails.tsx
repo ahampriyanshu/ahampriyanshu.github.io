@@ -12,7 +12,6 @@ import {
 } from '../Icons/Icons';
 import { INBOX_FILTER_ACTIVE_COLOR } from '@/app/constants/ui.constants';
 import { EmailList } from '../EmailList/EmailList';
-import { emails } from '@/app/data/inbox.data';
 import { EmailTag } from '@/types';
 
 export const InboxMails = () => {
@@ -20,7 +19,7 @@ export const InboxMails = () => {
   const { state } = useContext(AppContext);
   const typeFilter = state?.filterParam || 'inbox';
   return (
-    <div>
+    <div className='h-100'>
       {typeFilter === 'inbox' ? (
         <div className={styles.filters}>
           <div

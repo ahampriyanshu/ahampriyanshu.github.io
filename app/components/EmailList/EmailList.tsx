@@ -4,6 +4,7 @@ import styles from './email-list.module.scss';
 import { EmailTag, EmailType } from '@/types';
 import { EmailItem } from './EmailItem';
 import { emails } from '@/app/data/inbox.data';
+import Footer from '../Footer/Footer';
 
 type EmailListProps = {
   selectedTag: EmailTag;
@@ -18,13 +19,16 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
 
   return (
     <div className={styles.emails_container}>
-      {filterEmails.length > 0 ? (
-        filterEmails.map((email, index) => (
-          <EmailItem key={index} email={email} />
-        ))
-      ) : (
-        <div className={styles.no_emails}>No chat messages</div>
-      )}
+      <div>
+        {filterEmails.length > 0 ? (
+          filterEmails.map((email, index) => (
+            <EmailItem key={index} email={email} />
+          ))
+        ) : (
+          <div className={styles.no_emails}>No chat messages</div>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 };

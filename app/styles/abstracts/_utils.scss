@@ -256,3 +256,10 @@
     overflow-y: scroll;
   }
 }
+
+.underline {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
