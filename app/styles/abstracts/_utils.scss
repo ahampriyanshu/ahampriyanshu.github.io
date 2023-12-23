@@ -35,6 +35,14 @@
   flex-wrap: nowrap;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
 .flex-row-center {
   display: flex;
   flex-direction: row;

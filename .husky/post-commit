@@ -1,6 +1,14 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+echo '🚚 Pushing the changes to remote repository'
+
+git push -u origin ||
+(
+    echo '😵 Push failed. Please pull or rebase from the origin repository and then try committing again!';
+    false;
+)
+
 echo "🗑️ Removing temp build files"
 
 rm -r build || 
@@ -9,10 +17,4 @@ rm -r build ||
     false;
 )
 
-echo '🚚 Pushing the changes to remote repository'
-
-git push -u origin ||
-(
-    echo '😵 Push failed. Please pull or rebase from the origin repository and then try committing again!';
-    false;
-)
+echo '🎉 Done!'

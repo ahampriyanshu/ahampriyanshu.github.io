@@ -1,7 +1,12 @@
 'use client';
-import React, { createContext, useReducer, ReactNode } from 'react';
+import React, { createContext, useReducer, ReactNode, useEffect } from 'react';
 import { ACTION_TYPE, initialState } from './constants/ui.constants';
 import { Action, AppState } from '@/types';
+import {
+  createEmailInLocalStorage,
+  getEmailsFromLocalStorage,
+} from './utils/localStorage';
+import { inboxEmails } from './data';
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -40,6 +45,19 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
+
+  useEffect(() => {
+    if (!getEmailsFromLocalStorage().length) {
+      inboxEmails.forEach((email, index) => {
+        setTimeout(
+          () => {
+            createEmailInLocalStorage(email);
+          },
+          (index + 1) * 3000
+        );
+      });
+    }
+  }, []);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
