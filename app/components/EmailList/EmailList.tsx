@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './email-list.module.scss';
 import { EmailTag, EmailType } from '@/types';
 import { EmailItem } from './EmailItem';
-import { getEmailsFromLocalStorage } from '@/app/utils/localStorage';
+import { AppContext } from '@/app/AppContext';
 
 type EmailListProps = {
   selectedTag: EmailTag;
@@ -11,7 +11,9 @@ type EmailListProps = {
 };
 
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
-  const emailList = getEmailsFromLocalStorage();
+  const { state } = useContext(AppContext);
+
+  const emailList = state.emails || [];
 
   const filterEmails = emailList.filter(
     (email) =>

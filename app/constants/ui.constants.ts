@@ -9,6 +9,7 @@ export const ACTION_TYPE = {
   TOGGLE_SPLIT_VIEW: 'TOGGLE_SPLIT_VIEW',
   SET_SEARCH_PARAM: 'SET_SEARCH_PARAM',
   SET_FILTER_PARAM: 'SET_FILTER_PARAM',
+  PUSH_EMAIL: 'PUSH_EMAIL',
 };
 
 export const initialState: AppState = {
@@ -16,4 +17,5 @@ export const initialState: AppState = {
   isSplitViewActive: false,
   searchParam: '',
   filterParam: 'inbox',
+  emails: [],
 };

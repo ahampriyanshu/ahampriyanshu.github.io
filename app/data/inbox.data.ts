@@ -1,6 +1,6 @@
 import { EmailAttributes } from '@/types';
 
-export const emails: EmailAttributes[] = [
+export const defaultData: EmailAttributes[] = [
   {
     id: 'linkedin',
     selected: false,

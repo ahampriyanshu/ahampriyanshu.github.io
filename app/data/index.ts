@@ -1,3 +1,3 @@
-import { emails } from './inbox.data';
+import { defaultData } from './inbox.data';
 
-export { emails as inboxEmails };
+export { defaultData as emailList };

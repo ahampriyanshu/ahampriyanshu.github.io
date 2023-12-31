@@ -6,7 +6,7 @@ import {
   createEmailInLocalStorage,
   getEmailsFromLocalStorage,
 } from './utils/localStorage';
-import { inboxEmails } from './data';
+import { emailList } from './data';
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -30,6 +30,16 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         filterParam: action.payload || 'inbox',
       };
+    case 'PUSH_EMAIL':
+      return {
+        ...state,
+        emails: [...state.emails, action.payload],
+      };
+    case 'RESET_EMAILS':
+      return {
+        ...state,
+        emails: emailList,
+      };
     default:
       return state;
   }
@@ -45,17 +55,19 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
-
   useEffect(() => {
     if (!getEmailsFromLocalStorage().length) {
-      inboxEmails.forEach((email, index) => {
+      emailList.forEach((email, index) => {
         setTimeout(
           () => {
             createEmailInLocalStorage(email);
+            dispatch({ type: 'PUSH_EMAIL', payload: email });
           },
           (index + 1) * 3000
         );
       });
+    } else {
+      dispatch({ type: 'RESET_EMAILS' });
     }
   }, []);
 
