@@ -28,7 +28,7 @@ export const LinkedIn = () => {
           </div>
           <div className={styles.profile}>
             <Image
-              src='/content/li_profile.png'
+              src='/user.jpg'
               alt='linkedin profile'
               width={64}
               height={64}

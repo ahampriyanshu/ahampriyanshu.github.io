@@ -52,7 +52,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           ) : null}
         </div>
 
-        <div>{formatTime(email.time)}</div>
+        <div>{formatTime(email?.time || new Date())}</div>
       </div>
     </div>
   );

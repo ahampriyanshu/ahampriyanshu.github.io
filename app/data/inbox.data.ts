@@ -10,7 +10,6 @@ export const defaultData: EmailAttributes[] = [
     summary:
       "join your LinkedIn network. Hi there, I'd like to join your professional network.",
     body: 'Hi, just a reminder that we have a meeting tomorrow at 10:00 AM.',
-    time: '2023-01-01T10:00:00',
     priority: 1,
     read: false,
     sender: {
@@ -37,7 +36,6 @@ export const defaultData: EmailAttributes[] = [
       size: '1.2 MB',
       type: 'pdf',
     },
-    time: '2021-10-31T10:00:00',
     priority: 2,
     read: false,
     type: 'inbox',

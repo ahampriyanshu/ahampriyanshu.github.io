@@ -5,6 +5,11 @@ export type TooltipProps = {
   children: ReactElement;
 };
 
+export type ToastProps = {
+  message: string;
+  duration?: number;
+};
+
 export type EmailTag = 'inbox' | 'social' | 'promotions';
 export type EmailType =
   | 'inbox'
@@ -47,7 +52,7 @@ export type EmailAttributes = {
     size: string;
     type: string;
   };
-  time: string;
+  time?: Date;
   priority: number;
   read: boolean;
   type: EmailType;

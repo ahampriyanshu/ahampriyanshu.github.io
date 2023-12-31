@@ -6,8 +6,9 @@ import { OpenInNewTab } from '../Icons/Icons';
 
 function Footer() {
   const router = useRouter();
-
-  const currentValue = 60;
+  const maxValue = 15;
+  const currentValue = 3.7;
+  const usedPercentage = (currentValue / maxValue) * 100;
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -16,7 +17,7 @@ function Footer() {
             <div
               className={styles.progress}
               style={{
-                width: `${currentValue}%`,
+                width: `${usedPercentage}%`,
               }}
             ></div>
           </div>
@@ -24,7 +25,7 @@ function Footer() {
             onClick={() => router.push('https://resume.ahampriyanshu.com')}
             className={`flex justify-start align-center pt-1  ${styles.text}`}
           >
-            <span className='underline mr-2 cursor'>4.76 GB of 15 GB used</span>{' '}
+            <span className='underline mr-2 cursor'>{`${currentValue} GB of ${maxValue} GB used`}</span>{' '}
             <OpenInNewTab width={16} height={16} />
           </div>
         </div>

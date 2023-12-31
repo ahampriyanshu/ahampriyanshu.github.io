@@ -58,10 +58,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!getEmailsFromLocalStorage().length) {
       emailList.forEach((email, index) => {
+        const newMailData = {
+          ...email,
+          time: new Date(),
+        };
         setTimeout(
           () => {
-            createEmailInLocalStorage(email);
-            dispatch({ type: 'PUSH_EMAIL', payload: email });
+            createEmailInLocalStorage(newMailData);
+            dispatch({ type: 'PUSH_EMAIL', payload: newMailData });
           },
           (index + 1) * 3000
         );
