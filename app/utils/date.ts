@@ -1,4 +1,6 @@
-export function formatTime(dateString: Date): string {
+import { isServer } from './common';
+
+export function formatTime(dateString: string): string {
   const date = new Date(dateString);
   const currentDate = new Date();
   const timeDifference = date.getTime() - currentDate.getTime();

@@ -5,6 +5,8 @@ import { EmailAttributes } from '@/types';
 import Image from 'next/image';
 import { IconBtn } from '../Icons/IconBtn';
 import { ArrowDropDown, Favourite, Return, ViewMore } from '../Icons/Icons';
+import { formatTime } from '@/app/utils/date';
+import { getDate } from '@/app/utils/localStorage';
 
 export const SenderContainer = ({
   contentData,
@@ -28,10 +30,10 @@ export const SenderContainer = ({
       <div className={styles.options}>
         <div className={styles.sender_info}>
           <div className={styles.text_content}>
-            <span className={styles.title}>{contentData.sender.name}</span>
+            <span className={styles.title}>{contentData?.sender?.name}</span>
             <span
               className={styles.email}
-            >{`<${contentData.sender.email}>`}</span>
+            >{`<${contentData?.sender?.email}>`}</span>
             <span className={styles.unsubscribe}>Unsubscribe</span>
           </div>
           <div className={styles.to_me}>
@@ -39,9 +41,7 @@ export const SenderContainer = ({
           </div>
         </div>
         <div className={styles.content}>
-          <span className={styles.time} title='2 Nov 2023, 15:56'>
-            2 Nov 2023, 15:56 (12 days ago)
-          </span>
+          <span className={styles.time}>{formatTime(getDate())}</span>
           <IconBtn padding='8px'>
             <Favourite height={20} width={20} />
           </IconBtn>

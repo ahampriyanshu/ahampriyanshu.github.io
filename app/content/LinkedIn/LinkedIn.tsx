@@ -17,7 +17,7 @@ export const LinkedIn = () => {
               height={30}
             />
             <Image
-              src='/content/profile.png'
+              src='/content/avatar.png'
               alt='linkedin profile'
               width={32}
               height={32}
@@ -55,7 +55,7 @@ export const LinkedIn = () => {
               <div className={styles.info}>
                 <div className={styles.img}>
                   <Image
-                    src='/content/profile.png'
+                    src='/content/avatar.png'
                     alt='linkedin profile'
                     width={48}
                     height={48}

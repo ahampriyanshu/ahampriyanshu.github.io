@@ -1,17 +1,29 @@
 import { EmailAttributes } from '@/types';
-import { LOCAL_STORAGE_KEY } from '../constants/data.constants';
+import {
+  DATE_STORAGE_KEY,
+  EMAIL_STORAGE_KEY,
+} from '../constants/data.constants';
 import { isServer } from './common';
-// import { inboxEmails } from '../data';
+
+export const setDate = () => {
+  if (isServer) return;
+  localStorage.setItem(DATE_STORAGE_KEY, new Date().toISOString());
+};
+
+export const getDate = (): string => {
+  if (isServer) return '';
+  return localStorage.getItem(DATE_STORAGE_KEY) || '';
+};
 
 export const getEmailsFromLocalStorage = (): EmailAttributes[] => {
   if (isServer) return [] as EmailAttributes[];
-  const storedEmails = localStorage?.getItem(LOCAL_STORAGE_KEY);
+  const storedEmails = localStorage?.getItem(EMAIL_STORAGE_KEY);
   return storedEmails ? JSON.parse(storedEmails) : [];
 };
 
 export const setEmailsToLocalStorage = (emails: EmailAttributes[]) => {
   if (isServer) return;
-  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(emails));
+  localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emails));
 };
 
 export const updateEmailInLocalStorage = (updatedEmail: EmailAttributes) => {
@@ -23,7 +35,6 @@ export const updateEmailInLocalStorage = (updatedEmail: EmailAttributes) => {
 };
 
 export const createEmailInLocalStorage = (newEmail: EmailAttributes) => {
-  console.log(`data: ${newEmail} ${new Date().toLocaleTimeString()}}`);
   const storedEmails = getEmailsFromLocalStorage();
   const updatedEmails = [...storedEmails, newEmail];
   setEmailsToLocalStorage(updatedEmails);

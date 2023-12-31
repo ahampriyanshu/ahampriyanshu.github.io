@@ -5,6 +5,7 @@ import { Action, AppState } from '@/types';
 import {
   createEmailInLocalStorage,
   getEmailsFromLocalStorage,
+  setDate,
 } from './utils/localStorage';
 import { emailList } from './data';
 
@@ -55,17 +56,15 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
+
   useEffect(() => {
     if (!getEmailsFromLocalStorage().length) {
+      setDate();
       emailList.forEach((email, index) => {
-        const newMailData = {
-          ...email,
-          time: new Date(),
-        };
         setTimeout(
           () => {
-            createEmailInLocalStorage(newMailData);
-            dispatch({ type: 'PUSH_EMAIL', payload: newMailData });
+            createEmailInLocalStorage(email);
+            dispatch({ type: 'PUSH_EMAIL', payload: email });
           },
           (index + 1) * 3000
         );

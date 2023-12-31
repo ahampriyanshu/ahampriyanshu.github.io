@@ -12,9 +12,7 @@ type EmailListProps = {
 
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   const { state } = useContext(AppContext);
-
-  const emailList = state.emails || [];
-
+  const emailList = state?.emails || [];
   const filterEmails = emailList.filter(
     (email) =>
       email.type === typeFilter && (!selectedTag || email.tag === selectedTag)
@@ -22,15 +20,13 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
 
   return (
     <div className={styles.emails_container}>
-      <div>
-        {filterEmails.length > 0 ? (
-          filterEmails.map((email, index) => (
-            <EmailItem key={index} email={email} />
-          ))
-        ) : (
-          <div className={styles.no_emails}>No chat messages</div>
-        )}
-      </div>
+      {filterEmails.length > 0 ? (
+        filterEmails.map((email, index) => (
+          <EmailItem key={index} email={email} />
+        ))
+      ) : (
+        <div className={styles.no_emails}>No chat messages</div>
+      )}
     </div>
   );
 };

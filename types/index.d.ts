@@ -52,7 +52,6 @@ export type EmailAttributes = {
     size: string;
     type: string;
   };
-  time?: Date;
   priority: number;
   read: boolean;
   type: EmailType;

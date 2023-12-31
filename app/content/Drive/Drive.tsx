@@ -10,7 +10,15 @@ export const Drive = () => {
       <div className={styles.content}>
         <div className={styles.header}>Priyanshu shared an item</div>
         <div className={styles.sub_header}>
-          <Image src='/avatar.png' alt='logo' width={48} height={48} />
+          <Image
+            style={{
+              borderRadius: '50%',
+            }}
+            src='/user.jpg'
+            alt='logo'
+            width={48}
+            height={48}
+          />
           Priyanshu (ahampriyanshu@gmail.com) has shared the following item:
         </div>
         <div className={styles.preview}>

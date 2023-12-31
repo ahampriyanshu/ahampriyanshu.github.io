@@ -18,12 +18,10 @@ export const EmailListHeader = () => {
   const toggleSplitView = () => {
     dispatch({ type: 'TOGGLE_SPLIT_VIEW' });
   };
-
   const refreshEmails = () => {
     dispatch({ type: 'RESET_EMAILS' });
   };
   const isSplitViewActive = state?.isSplitViewActive || false;
-  console.log('rendering page');
   return (
     <div className={styles.container}>
       <div className={styles.select_container}>
@@ -48,7 +46,7 @@ export const EmailListHeader = () => {
           onClick={() => openInNewTab(EASTER_EGGS.HEADER.NEXT)}
           padding='6px'
         >
-          <ChevronRight height={20} width={20} />{' '}
+          <ChevronRight height={20} width={20} />
         </IconBtn>
 
         <div className='flex'>

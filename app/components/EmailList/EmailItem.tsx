@@ -1,10 +1,12 @@
+'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
 import { formatTime } from '@/app/utils/date';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
+import { getDate } from '@/app/utils/localStorage';
 
 export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -12,6 +14,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
+
   return (
     <div
       onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
@@ -52,7 +55,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           ) : null}
         </div>
 
-        <div>{formatTime(email?.time || new Date())}</div>
+        <div>{formatTime(getDate())}</div>
       </div>
     </div>
   );
