@@ -19,7 +19,7 @@ export const EmailListHeader = () => {
     dispatch({ type: 'TOGGLE_SPLIT_VIEW' });
   };
   const isSplitViewActive = state?.isSplitViewActive || false;
-
+  console.log('rendering page');
   return (
     <div className={styles.container}>
       <div className={styles.select_container}>

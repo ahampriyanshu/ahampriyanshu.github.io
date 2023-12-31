@@ -1,6 +1,7 @@
 import { EmailAttributes } from '@/types';
 import { LOCAL_STORAGE_KEY } from '../constants/data.constants';
 import { isServer } from './common';
+// import { inboxEmails } from '../data';
 
 export const getEmailsFromLocalStorage = (): EmailAttributes[] => {
   if (isServer) return [] as EmailAttributes[];
