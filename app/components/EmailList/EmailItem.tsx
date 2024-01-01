@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './email-list.module.scss';
 import { Favourite } from '../Icons/Icons';
-import { getAbsoluteTimeStamp } from '@/app/utils/date';
+import { getAbsoluteDate } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
 import { getInitialDate } from '@/app/utils/localStorage';
@@ -55,7 +55,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           ) : null}
         </div>
 
-        <div>{getAbsoluteTimeStamp(getInitialDate())}</div>
+        <div>{getAbsoluteDate(getInitialDate())}</div>
       </div>
     </div>
   );

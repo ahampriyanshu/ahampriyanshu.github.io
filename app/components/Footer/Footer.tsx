@@ -1,9 +1,9 @@
 'use client';
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 import styles from './footer.module.scss';
 import { useRouter } from 'next/navigation';
 import { OpenInNewTab } from '../Icons/Icons';
-import { getRelativeTimeStamp } from '@/app/utils/date';
+import { getRelativeTime } from '@/app/utils/date';
 import { getRecentDate } from '@/app/utils/localStorage';
 
 function Footer() {
@@ -11,6 +11,18 @@ function Footer() {
   const maxValue = 15;
   const currentValue = 3.7;
   const usedPercentage = (currentValue / maxValue) * 100;
+
+  const [date, setDate] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedDate = getRecentDate();
+      if (storedDate) {
+        setDate(storedDate);
+      }
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -38,11 +50,10 @@ function Footer() {
           <span className='underline'>Programme Policies</span>
         </div>
 
-        <div
-          className={styles.text}
-        >{`Last account activity: ${getRelativeTimeStamp(
-          getRecentDate()
-        )}`}</div>
+        <div className={styles.text}>
+          Last account activity:
+          {date ? ` ${getRelativeTime(date)}` : ' '}
+        </div>
       </div>
     </div>
   );

@@ -2,10 +2,26 @@
   padding: 16px;
   border-top: 1px solid rgba(100, 121, 143, 0.122);
   .content {
-    display: flex;
+    position: relative;
     height: 40px;
-    align-items: center;
-    justify-content: space-between;
+
+    > div:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    > div:nth-child(2) {
+      position: absolute;
+      top: 0;
+      right: 50%;
+    }
+
+    > div:nth-child(3) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+    }
   }
 }
 

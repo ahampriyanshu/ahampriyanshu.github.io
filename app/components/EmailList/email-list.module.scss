@@ -1,4 +1,5 @@
 .emails_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,10 +32,10 @@
   }
 
   .no_emails {
-    text-align: center;
     padding-block: 10px;
     padding-inline: 8px;
-    border-bottom: 1px solid rgba(100, 121, 143, 0.122);
+    font-size: 0.875rem;
+    font-weight: 400;
   }
 }
 

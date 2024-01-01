@@ -17,7 +17,9 @@ export type EmailType =
   | 'draft'
   | 'sent'
   | 'snoozed'
-  | 'starred';
+  | 'starred'
+  | 'spam'
+  | 'bin';
 
 export type Action =
   | { type: 'TOGGLE_SIDEBAR'; payload?: never }

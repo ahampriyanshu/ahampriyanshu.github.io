@@ -9,7 +9,7 @@ function padWithZero(num: number): string {
   return num < 10 ? `0${num}` : `${num}`;
 }
 
-export function getAbsoluteTimeStamp(inputDate: string): string {
+export function getAbsoluteDate(inputDate: string): string {
   if (isServer) {
     return '';
   }
@@ -30,7 +30,8 @@ export function getAbsoluteTimeStamp(inputDate: string): string {
     return `${hours}:${minutes}`;
   }
 }
-function getRelativeTimeString(timeDifference: number): string {
+
+export function getRelativeTimeString(timeDifference: number): string {
   const minutes = Math.floor(timeDifference / (1000 * 60));
   const hours = Math.floor(timeDifference / (1000 * 60 * 60));
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -50,7 +51,7 @@ function getRelativeTimeString(timeDifference: number): string {
   }
 }
 
-export function getRelativeTimeStamp(inputDate: string): string {
+export function getRelativeDate(inputDate: string): string {
   if (isServer) {
     return '';
   }
@@ -85,4 +86,15 @@ export function getRelativeTimeStamp(inputDate: string): string {
     const relativeTimeString = getRelativeTimeString(timeDifference);
     return `${formattedDate} (${relativeTimeString} ago)`;
   }
+}
+
+export function getRelativeTime(inputDate: string): string {
+  if (isServer) {
+    return '';
+  }
+
+  const date = new Date(inputDate);
+  const currentTime = new Date();
+  const timeDifference = currentTime.getTime() - date.getTime();
+  return `${getRelativeTimeString(timeDifference)} ago`;
 }

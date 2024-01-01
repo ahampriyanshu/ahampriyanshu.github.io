@@ -5,7 +5,7 @@ import { EmailAttributes } from '@/types';
 import Image from 'next/image';
 import { IconBtn } from '../Icons/IconBtn';
 import { ArrowDropDown, Favourite, Return, ViewMore } from '../Icons/Icons';
-import { getAbsoluteTimeStamp, getRelativeTimeStamp } from '@/app/utils/date';
+import { getAbsoluteDate, getRelativeDate } from '@/app/utils/date';
 import { getInitialDate } from '@/app/utils/localStorage';
 
 export const SenderContainer = ({
@@ -49,7 +49,7 @@ export const SenderContainer = ({
         </div>
         <div className={styles.content}>
           {date ? (
-            <span className={styles.time}>{getRelativeTimeStamp(date)}</span>
+            <span className={styles.time}>{getRelativeDate(date)}</span>
           ) : null}
           <IconBtn padding='8px'>
             <Favourite height={20} width={20} />

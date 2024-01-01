@@ -25,7 +25,9 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
           <EmailItem key={index} email={email} />
         ))
       ) : (
-        <div className={styles.no_emails}>No chat messages</div>
+        <div className={styles.no_emails}>{`No ${
+          typeFilter === 'bin' ? 'trashed' : typeFilter
+        } messages.`}</div>
       )}
     </div>
   );
