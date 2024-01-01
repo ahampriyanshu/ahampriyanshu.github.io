@@ -14,7 +14,7 @@ export const Drive = () => {
             style={{
               borderRadius: '50%',
             }}
-            src='/user.jpg'
+            src='/avatar.png'
             alt='logo'
             width={48}
             height={48}

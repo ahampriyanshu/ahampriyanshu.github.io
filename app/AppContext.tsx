@@ -1,5 +1,11 @@
 'use client';
-import React, { createContext, useReducer, ReactNode, useEffect } from 'react';
+import React, {
+  createContext,
+  useReducer,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { ACTION_TYPE, initialState } from './constants/ui.constants';
 import { Action, AppState } from '@/types';
 import {
@@ -9,6 +15,7 @@ import {
   setRecentDate,
 } from './utils/localStorage';
 import { emailList } from './data';
+import { Loader } from './components/Loader/Loader';
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -42,11 +49,6 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         emails: getEmailsFromLocalStorage(),
       };
-    case ACTION_TYPE.SET_IS_LOADED:
-      return {
-        ...state,
-        isLoaded: action.payload,
-      };
     default:
       return state;
   }
@@ -62,6 +64,7 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const storedEmails = getEmailsFromLocalStorage();
@@ -90,7 +93,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      {children}
+      {isLoading ? <Loader setIsLoading={setIsLoading} /> : children}
     </AppContext.Provider>
   );
 }

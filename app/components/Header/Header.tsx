@@ -105,7 +105,7 @@ function Header() {
                 style={{
                   borderRadius: '50%',
                 }}
-                src='/user.jpg'
+                src='/avatar.png'
                 alt='logo'
                 width={30}
                 height={30}
