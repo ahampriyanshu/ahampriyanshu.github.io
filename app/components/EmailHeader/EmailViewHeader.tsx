@@ -19,7 +19,7 @@ export const EmailViewHeader = () => {
     <div className={styles.container}>
       <div className={styles.select_container}>
         <div className={styles.back_btn}>
-          <IconBtn padding='6px' onClick={() => router.back()}>
+          <IconBtn padding='6px' onClick={() => router.push('/')}>
             <Back height={20} width={20} />
           </IconBtn>
         </div>

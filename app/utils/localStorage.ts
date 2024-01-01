@@ -1,9 +1,9 @@
 import { EmailAttributes } from '@/types';
+import { isServer } from './common';
 import {
   DATE_STORAGE_KEY,
   EMAIL_STORAGE_KEY,
-} from '../constants/data.constants';
-import { isServer } from './common';
+} from '../constants/common.constants';
 
 export const setDate = () => {
   if (isServer) return;
