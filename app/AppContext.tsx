@@ -5,7 +5,8 @@ import { Action, AppState } from '@/types';
 import {
   createEmailInLocalStorage,
   getEmailsFromLocalStorage,
-  setDate,
+  setInitialDate,
+  setRecentDate,
 } from './utils/localStorage';
 import { emailList } from './data';
 
@@ -39,7 +40,7 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'RESET_EMAILS':
       return {
         ...state,
-        emails: emailList,
+        emails: getEmailsFromLocalStorage(),
       };
     default:
       return state;
@@ -58,9 +59,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   useEffect(() => {
-    if (!getEmailsFromLocalStorage().length) {
-      setDate();
-      emailList.forEach((email, index) => {
+    const storedEmails = getEmailsFromLocalStorage();
+    const newEmails = emailList.filter(
+      (email) =>
+        !storedEmails.some((storedEmail) => storedEmail.id === email.id)
+    );
+    if (newEmails.length > 0) {
+      setInitialDate();
+      setRecentDate();
+
+      newEmails.forEach((email, index) => {
         setTimeout(
           () => {
             createEmailInLocalStorage(email);
@@ -71,7 +79,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       });
     } else {
       dispatch({ type: 'RESET_EMAILS' });
-      console.log('Emails already present in local storage');
     }
   }, []);
 

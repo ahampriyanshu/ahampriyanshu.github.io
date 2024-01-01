@@ -1,5 +1,6 @@
 export const EMAIL_STORAGE_KEY = 'emails';
-export const DATE_STORAGE_KEY = 'date';
+export const INITIAL_ACTIVITY_KEY = 'initial_activity';
+export const RECENT_ACTIVITY_KEY = 'recent_activity';
 
 export const monthNames = [
   'Jan',

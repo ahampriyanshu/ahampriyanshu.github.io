@@ -1,18 +1,29 @@
 import { EmailAttributes } from '@/types';
 import { isServer } from './common';
 import {
-  DATE_STORAGE_KEY,
+  INITIAL_ACTIVITY_KEY,
   EMAIL_STORAGE_KEY,
+  RECENT_ACTIVITY_KEY,
 } from '../constants/common.constants';
 
-export const setDate = () => {
+export const setInitialDate = () => {
   if (isServer) return;
-  localStorage.setItem(DATE_STORAGE_KEY, new Date().toISOString());
+  localStorage.setItem(INITIAL_ACTIVITY_KEY, new Date().toISOString());
 };
 
-export const getDate = (): string => {
+export const getInitialDate = (): string => {
   if (isServer) return '';
-  return localStorage.getItem(DATE_STORAGE_KEY) || '';
+  return localStorage.getItem(INITIAL_ACTIVITY_KEY) || '';
+};
+
+export const setRecentDate = () => {
+  if (isServer) return;
+  localStorage.setItem(RECENT_ACTIVITY_KEY, new Date().toISOString());
+};
+
+export const getRecentDate = (): string => {
+  if (isServer) return '';
+  return localStorage.getItem(RECENT_ACTIVITY_KEY) || '';
 };
 
 export const getEmailsFromLocalStorage = (): EmailAttributes[] => {

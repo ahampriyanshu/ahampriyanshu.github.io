@@ -21,7 +21,7 @@ export function getAbsoluteTimeStamp(inputDate: string): string {
 
   if (timeDifferenceInHours >= 24) {
     const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-indexed
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   } else {
@@ -54,33 +54,34 @@ export function getRelativeTimeStamp(inputDate: string): string {
   if (isServer) {
     return '';
   }
+
   const date = new Date(inputDate);
   const currentTime = new Date();
   const timeDifference = currentTime.getTime() - date.getTime();
 
   if (timeDifference < 0) {
     const formattedDate = `${
-      daysOfWeek[date.getUTCDay()]
-    }, ${date.getUTCDate()} ${getMonthName(
-      date.getUTCMonth()
-    )} ${date.getUTCFullYear()}, ${padWithZero(
-      date.getUTCHours()
-    )}:${padWithZero(date.getUTCMinutes())}`;
+      daysOfWeek[date.getDay()]
+    }, ${date.getDate()} ${getMonthName(
+      date.getMonth()
+    )} ${date.getFullYear()}, ${padWithZero(date.getHours())}:${padWithZero(
+      date.getMinutes()
+    )}`;
     return `${formattedDate}`;
   } else if (timeDifference < 24 * 60 * 60 * 1000) {
-    const formattedTime = `${padWithZero(date.getUTCHours())}:${padWithZero(
-      date.getUTCMinutes()
+    const formattedTime = `${padWithZero(date.getHours())}:${padWithZero(
+      date.getMinutes()
     )}`;
     const relativeTimeString = getRelativeTimeString(timeDifference);
     return `${formattedTime} (${relativeTimeString} ago)`;
   } else {
     const formattedDate = `${
-      daysOfWeek[date.getUTCDay()]
-    }, ${date.getUTCDate()} ${getMonthName(
-      date.getUTCMonth()
-    )} ${date.getUTCFullYear()}, ${padWithZero(
-      date.getUTCHours()
-    )}:${padWithZero(date.getUTCMinutes())}`;
+      daysOfWeek[date.getDay()]
+    }, ${date.getDate()} ${getMonthName(
+      date.getMonth()
+    )} ${date.getFullYear()}, ${padWithZero(date.getHours())}:${padWithZero(
+      date.getMinutes()
+    )}`;
     const relativeTimeString = getRelativeTimeString(timeDifference);
     return `${formattedDate} (${relativeTimeString} ago)`;
   }

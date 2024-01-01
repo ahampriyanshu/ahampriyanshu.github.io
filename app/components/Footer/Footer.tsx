@@ -3,6 +3,8 @@ import { memo } from 'react';
 import styles from './footer.module.scss';
 import { useRouter } from 'next/navigation';
 import { OpenInNewTab } from '../Icons/Icons';
+import { getRelativeTimeStamp } from '@/app/utils/date';
+import { getRecentDate } from '@/app/utils/localStorage';
 
 function Footer() {
   const router = useRouter();
@@ -36,7 +38,11 @@ function Footer() {
           <span className='underline'>Programme Policies</span>
         </div>
 
-        <div className={styles.text}>Last account activity: 24 minutes ago</div>
+        <div
+          className={styles.text}
+        >{`Last account activity: ${getRelativeTimeStamp(
+          getRecentDate()
+        )}`}</div>
       </div>
     </div>
   );

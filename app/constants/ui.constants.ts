@@ -18,5 +18,4 @@ export const initialState: AppState = {
   searchParam: '',
   filterParam: 'inbox',
   emails: [],
-  date: '',
 };

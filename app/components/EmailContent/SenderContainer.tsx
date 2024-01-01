@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { IconBtn } from '../Icons/IconBtn';
 import { ArrowDropDown, Favourite, Return, ViewMore } from '../Icons/Icons';
 import { getAbsoluteTimeStamp, getRelativeTimeStamp } from '@/app/utils/date';
-import { getDate } from '@/app/utils/localStorage';
+import { getInitialDate } from '@/app/utils/localStorage';
 
 export const SenderContainer = ({
   contentData,
@@ -16,7 +16,7 @@ export const SenderContainer = ({
   const [date, setDate] = React.useState<string>('');
 
   useEffect(() => {
-    setDate(getDate());
+    setDate(getInitialDate());
   }, [contentData.id]);
 
   const senderImg = contentData?.sender?.logo || '';

@@ -6,7 +6,7 @@ import { Favourite } from '../Icons/Icons';
 import { getAbsoluteTimeStamp } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
-import { getDate } from '@/app/utils/localStorage';
+import { getInitialDate } from '@/app/utils/localStorage';
 
 export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -55,7 +55,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           ) : null}
         </div>
 
-        <div>{getAbsoluteTimeStamp(getDate())}</div>
+        <div>{getAbsoluteTimeStamp(getInitialDate())}</div>
       </div>
     </div>
   );
