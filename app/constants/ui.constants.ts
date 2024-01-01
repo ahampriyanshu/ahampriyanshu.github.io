@@ -10,6 +10,7 @@ export const ACTION_TYPE = {
   SET_SEARCH_PARAM: 'SET_SEARCH_PARAM',
   SET_FILTER_PARAM: 'SET_FILTER_PARAM',
   PUSH_EMAIL: 'PUSH_EMAIL',
+  SET_IS_LOADED: 'SET_IS_LOADED',
 };
 
 export const initialState: AppState = {
@@ -18,4 +19,5 @@ export const initialState: AppState = {
   searchParam: '',
   filterParam: 'inbox',
   emails: [],
+  isLoaded: false,
 };

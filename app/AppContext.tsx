@@ -42,6 +42,11 @@ function appReducer(state: AppState, action: Action): AppState {
         ...state,
         emails: getEmailsFromLocalStorage(),
       };
+    case ACTION_TYPE.SET_IS_LOADED:
+      return {
+        ...state,
+        isLoaded: action.payload,
+      };
     default:
       return state;
   }
@@ -60,6 +65,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const storedEmails = getEmailsFromLocalStorage();
+    dispatch({ type: 'SET_IS_LOADED', payload: true });
     const newEmails = emailList.filter(
       (email) =>
         !storedEmails.some((storedEmail) => storedEmail.id === email.id)

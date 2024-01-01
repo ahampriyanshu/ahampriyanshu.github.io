@@ -27,6 +27,7 @@ export type Action =
   | { type: 'SET_SEARCH_PARAM'; payload: string }
   | { type: 'SET_FILTER_PARAM'; payload: typeFilter }
   | { type: 'PUSH_EMAIL'; payload: EmailAttributes }
+  | { type: 'SET_IS_LOADED'; payload: boolean }
   | { type: 'RESET_EMAILS'; payload?: never };
 
 export type AppState = {
@@ -35,6 +36,7 @@ export type AppState = {
   searchParam: string;
   filterParam: EmailType;
   emails: EmailAttributes[];
+  isLoaded: boolean;
 };
 
 export type EmailAttributes = {

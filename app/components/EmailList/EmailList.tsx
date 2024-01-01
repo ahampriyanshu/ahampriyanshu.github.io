@@ -12,16 +12,20 @@ type EmailListProps = {
 
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   const { state } = useContext(AppContext);
-  const emailList = state?.emails || [];
-  const filterEmails = emailList.filter(
+  const { emails = [], isLoaded = false } = state || {};
+  console.log('isLoaded', isLoaded);
+  // const emailList = state?.emails || [];
+  const filteredEmails = emails.filter(
     (email) =>
       email.type === typeFilter && (!selectedTag || email.tag === selectedTag)
   );
 
+  if (!isLoaded) return <></>;
+
   return (
     <div className={styles.emails_container}>
-      {filterEmails.length > 0 ? (
-        filterEmails.map((email, index) => (
+      {filteredEmails.length > 0 ? (
+        filteredEmails.map((email, index) => (
           <EmailItem key={index} email={email} />
         ))
       ) : (

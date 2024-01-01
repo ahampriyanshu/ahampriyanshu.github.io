@@ -32,6 +32,9 @@
   }
 
   .no_emails {
+    border-top: 3px solid white;
+    border-bottom: 1px solid rgba(100, 121, 143, 0.122);
+    text-align: center;
     padding-block: 10px;
     padding-inline: 8px;
     font-size: 0.875rem;
