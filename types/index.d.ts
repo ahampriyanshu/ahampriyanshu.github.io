@@ -24,7 +24,9 @@ export type Action =
   | { type: 'TOGGLE_SPLIT_VIEW'; payload?: never }
   | { type: 'SET_SEARCH_PARAM'; payload: string }
   | { type: 'SET_FILTER_PARAM'; payload: typeFilter }
+  | { type: 'SET_DATE'; payload: string }
   | { type: 'PUSH_EMAIL'; payload: EmailAttributes }
+  | { type: 'DELETE_EMAIL'; payload: string }
   | { type: 'RESET_EMAILS'; payload?: never };
 
 export type AppState = {
@@ -32,6 +34,7 @@ export type AppState = {
   isSplitViewActive: boolean;
   searchParam: string;
   filterParam: EmailType;
+  date: string;
   emails: EmailAttributes[];
 };
 

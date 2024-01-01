@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './sender-container.module.scss';
 import { EmailAttributes } from '@/types';
 import Image from 'next/image';
 import { IconBtn } from '../Icons/IconBtn';
 import { ArrowDropDown, Favourite, Return, ViewMore } from '../Icons/Icons';
-import { formatTime } from '@/app/utils/date';
+import { getAbsoluteTimeStamp, getRelativeTimeStamp } from '@/app/utils/date';
 import { getDate } from '@/app/utils/localStorage';
 
 export const SenderContainer = ({
@@ -13,7 +13,14 @@ export const SenderContainer = ({
 }: {
   contentData: EmailAttributes;
 }) => {
+  const [date, setDate] = React.useState<string>('');
+
+  useEffect(() => {
+    setDate(getDate());
+  }, [contentData.id]);
+
   const senderImg = contentData?.sender?.logo || '';
+
   return (
     <div className={styles.container}>
       <div
@@ -41,7 +48,9 @@ export const SenderContainer = ({
           </div>
         </div>
         <div className={styles.content}>
-          <span className={styles.time}>{formatTime(getDate())}</span>
+          {date ? (
+            <span className={styles.time}>{getRelativeTimeStamp(date)}</span>
+          ) : null}
           <IconBtn padding='8px'>
             <Favourite height={20} width={20} />
           </IconBtn>

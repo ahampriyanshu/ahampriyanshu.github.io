@@ -8,19 +8,17 @@ import { NavigationContainer } from './NavigationContainer';
 import { MailContent } from './MailContent';
 import { useContext, useState } from 'react';
 import { AppContext } from '@/app/AppContext';
+import { emailList } from '@/app/data';
 
 export function MailContainer({ id }: { id: string }) {
   const { state } = useContext(AppContext);
   const router = useRouter();
-  const emails = state?.emails || [];
-
-  console.log('emails', emails);
-  const contentData = emails.find(
+  const contentData = emailList.find(
     (email) => email?.id === id
   ) as EmailAttributes;
-  // if (!contentData) {
-  //   router.back();
-  // }
+  if (!contentData) {
+    router.back();
+  }
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {

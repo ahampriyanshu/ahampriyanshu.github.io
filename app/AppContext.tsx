@@ -71,6 +71,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       });
     } else {
       dispatch({ type: 'RESET_EMAILS' });
+      console.log('Emails already present in local storage');
     }
   }, []);
 
