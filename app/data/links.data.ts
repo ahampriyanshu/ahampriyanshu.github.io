@@ -1,8 +1,7 @@
-export const EASTER_EGGS = {
-  HEADER: {
-    ACCOUNT: 'https://www.youtube.com/watch?v=pIKlq1r6gdY',
-    FILTER: 'https://youtube.com/shorts/GiDDWXuW9-c?si=7tg7mwBPOLTzYVpR',
-    NEXT: 'https://youtu.be/PivpCKEiQOQ?si=VmEXJM_xAAf9iIZR',
-    PREVIOUS: 'https://www.youtube.com/watch?v=Z4Xa6kshFLA',
-  },
+export const GH_PROFILE = 'https://github.com/ahampriyanshu';
+
+export const HEADER = {
+  SUPPORT: 'https://github.com/ahampriyanshu/zmail/issues/new',
+  GIST: 'https://gist.github.com/ahampriyanshu/7c38b9370b8c1baf009f868ac775134e',
+  SETUP: 'https://github.com/ahampriyanshu/zmail#setup',
 };

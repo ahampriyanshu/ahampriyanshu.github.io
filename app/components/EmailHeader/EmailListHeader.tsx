@@ -10,8 +10,6 @@ import {
   ViewMore,
 } from '../Icons/Icons';
 import { AppContext } from '@/app/AppContext';
-import { openInNewTab } from '@/app/utils/common';
-import { EASTER_EGGS } from '@/app/data/links.data';
 
 export const EmailListHeader = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -35,17 +33,11 @@ export const EmailListHeader = () => {
       <div className={styles.details_container}>
         <div className={styles.pagination}>1-10 of 10</div>
 
-        <IconBtn
-          onClick={() => openInNewTab(EASTER_EGGS.HEADER.PREVIOUS)}
-          padding='6px'
-        >
+        <IconBtn disabled padding='6px'>
           <ChevronLeft height={20} width={20} />
         </IconBtn>
 
-        <IconBtn
-          onClick={() => openInNewTab(EASTER_EGGS.HEADER.NEXT)}
-          padding='6px'
-        >
+        <IconBtn disabled padding='6px'>
           <ChevronRight height={20} width={20} />
         </IconBtn>
 

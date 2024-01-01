@@ -49,7 +49,7 @@ export const LinkedIn = () => {
             </button>
           </div>
 
-          <div className={styles.header}>More people you may know</div>
+          <div className={styles.header}>Some people you may want to know</div>
           <div>
             <div className={styles.recommended}>
               <div className={styles.info}>
@@ -64,12 +64,14 @@ export const LinkedIn = () => {
                     }}
                   />
                 </div>
-                <div className={styles.text}>
+                <div
+                  style={{
+                    marginTop: '4px',
+                  }}
+                  className={styles.text}
+                >
                   <p>Lauri Törni</p>
-                  <span>
-                    World War Veteran | Global expert in tactical oopsies |
-                    {`"Fourth time's the charm"`}
-                  </span>
+                  <span>Global expert in tactical oopsies</span>
                 </div>
               </div>
               <button

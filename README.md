@@ -1,9 +1,6 @@
 # Zmail
 
-<p align="center">
-<img width="64" height="64" src="./public/zmail.png" /><br>
-<span>Gmail styled portfolio app in NextJS.</span>  
-</p>
+Gmail styled portfolio app in NextJS.
 
 ![Zmail](https://img.shields.io/github/license/ahampriyanshu/zmail)
 ![Size](https://img.shields.io/github/repo-size/ahampriyanshu/zmail)

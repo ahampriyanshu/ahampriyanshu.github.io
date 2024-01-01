@@ -37,7 +37,7 @@ function Footer() {
           </div>
           <div
             onClick={() => router.push('https://resume.ahampriyanshu.com')}
-            className={`flex justify-start align-center pt-1  ${styles.text}`}
+            className={`flex justify-start align-center pt-1 ${styles.text}`}
           >
             <span className='underline mr-2 cursor'>{`${currentValue} GB of ${maxValue} GB used`}</span>{' '}
             <OpenInNewTab width={16} height={16} />
@@ -51,8 +51,9 @@ function Footer() {
         </div>
 
         <div className={styles.text}>
-          Last account activity:
-          {date ? ` ${getRelativeTime(date)}` : ' '}
+          {date
+            ? `Last account activity: ${getRelativeTime(date)}`
+            : 'Last account activity: '}
         </div>
       </div>
     </div>

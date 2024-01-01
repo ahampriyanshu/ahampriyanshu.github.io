@@ -20,6 +20,10 @@
     box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
     transition: box-shadow 0.15s linear;
 
+    &[aria-checked='true'] {
+      background-color: #c2dbff;
+    }
+
     &:hover {
       box-shadow:
         inset 1px 0 0 #dadce0,
@@ -112,40 +116,5 @@
       background-color: rgba(100, 121, 143, 0.05);
       cursor: pointer;
     }
-  }
-}
-
-.checkboxLabel {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.checkboxInput {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkboxCustom {
-  width: 12px; /* Adjust size as needed */
-  height: 12px; /* Adjust size as needed */
-  border: 1.5px solid #5f6368; /* Grey square border */
-  border-radius: 1px;
-  display: block;
-
-  &:after {
-    content: '';
-    display: block;
-    width: 3.5px; /* Width of the checkmark */
-    height: 6.5px; /* Height of the checkmark */
-    border: solid #5f6368; /* Grey color tick */
-    border-width: 0 1.5px 1.5px 0;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 1.5px; /* Adjust the position of the checkmark */
-    left: 5px; /* Adjust the position of the checkmark */
-
-    transition: 0.2s;
   }
 }

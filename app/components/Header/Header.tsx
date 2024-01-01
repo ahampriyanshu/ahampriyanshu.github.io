@@ -16,8 +16,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
-import { EASTER_EGGS } from '@/app/data/links.data';
-import { APP_LINKS } from '@/app/config/site.config';
+import { GH_PROFILE, HEADER } from '@/app/data/links.data';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -53,7 +52,7 @@ function Header() {
             <Search />
           </IconBtn>
           <IconBtn
-            onClick={() => openInNewTab(EASTER_EGGS.HEADER.FILTER)}
+            disabled
             style={{
               position: 'absolute',
               right: '-96px',
@@ -73,34 +72,25 @@ function Header() {
 
         <div className={styles.logo_container}>
           <Tooltip content='Support'>
-            <IconBtn
-              onClick={() => openInNewTab(APP_LINKS.SUPPORT)}
-              padding='6px'
-            >
+            <IconBtn onClick={() => openInNewTab(HEADER.SUPPORT)} padding='6px'>
               <QuestionMark />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Settings'>
-            <IconBtn
-              onClick={() => openInNewTab(APP_LINKS.SETUP)}
-              padding='6px'
-            >
+            <IconBtn onClick={() => openInNewTab(HEADER.SETUP)} padding='6px'>
               <Settings />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Apps'>
-            <IconBtn onClick={() => openInNewTab(APP_LINKS.GIST)} padding='6px'>
+            <IconBtn onClick={() => openInNewTab(HEADER.GIST)} padding='6px'>
               <GridMenu />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Account'>
-            <IconBtn
-              onClick={() => openInNewTab(EASTER_EGGS.HEADER.ACCOUNT)}
-              padding='6px'
-            >
+            <IconBtn onClick={() => openInNewTab(GH_PROFILE)} padding='6px'>
               <Image
                 style={{
                   borderRadius: '50%',
