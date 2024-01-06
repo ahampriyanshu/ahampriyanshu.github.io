@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Loader.module.scss';
 import Image from 'next/image';
 
@@ -7,6 +7,16 @@ export function Loader({
 }: {
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [setIsLoading]);
+
   return (
     <div className={styles.loaderOverlay}>
       <div className={styles.loaderContent}>
@@ -16,10 +26,6 @@ export function Loader({
           width={128}
           height={128}
           className={styles.logo}
-          onAnimationEnd={() => {
-            console.log('animation ended');
-            setIsLoading(false);
-          }}
         />
       </div>
     </div>
