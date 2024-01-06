@@ -28,7 +28,11 @@ export type Action =
   | { type: 'SET_FILTER_PARAM'; payload: typeFilter }
   | { type: 'PUSH_EMAIL'; payload: EmailAttributes }
   | { type: 'SET_IS_LOADED'; payload: boolean }
-  | { type: 'RESET_EMAILS'; payload?: never };
+  | { type: 'RESET_EMAILS'; payload?: never }
+  | {
+      type: 'UPDATE_EMAIL';
+      payload: { emailId: string; data: Partial<EmailAttributes> };
+    };
 
 export type AppState = {
   isSideBarOpen: boolean;
@@ -40,9 +44,8 @@ export type AppState = {
 };
 
 export type EmailAttributes = {
-  id?: string;
+  id: string;
   selected: boolean;
-  fav: boolean;
   sender: {
     name: string;
     logo?: string;
@@ -60,6 +63,9 @@ export type EmailAttributes = {
   read: boolean;
   type: EmailType;
   tag: EmailTag;
+  isOpened?: boolean;
+  isFav?: boolean;
+  isDeleted?: boolean;
 };
 
 type IconMap = {

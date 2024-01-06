@@ -47,8 +47,14 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'RESET_EMAILS':
       return {
         ...state,
-        emails: getEmailsFromLocalStorage(),
+        emails: action?.payload || getEmailsFromLocalStorage(),
       };
+    case ACTION_TYPE.UPDATE_EMAIL: {
+      return {
+        ...state,
+        emails: action.payload,
+      };
+    }
     default:
       return state;
   }
@@ -80,8 +86,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
       newEmails.forEach((email, index) => {
         setTimeout(
           () => {
-            createEmailInLocalStorage(email);
-            dispatch({ type: 'PUSH_EMAIL', payload: email });
+            const data = {
+              ...email,
+              date: new Date().toISOString(),
+              isFav: false,
+              isOpened: false,
+              isDeleted: false,
+            };
+            createEmailInLocalStorage(data);
+            dispatch({ type: 'PUSH_EMAIL', payload: data });
           },
           (index + 1) * 3000
         );

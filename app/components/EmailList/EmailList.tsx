@@ -13,10 +13,12 @@ type EmailListProps = {
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   const { state } = useContext(AppContext);
   const { emails = [] } = state || {};
-  const filteredEmails = emails.filter(
-    (email) =>
-      email.type === typeFilter && (!selectedTag || email.tag === selectedTag)
-  );
+  console.log(state);
+  const filteredEmails =
+    emails?.filter(
+      (email) =>
+        email.type === typeFilter && (!selectedTag || email.tag === selectedTag)
+    ) || [];
 
   return (
     <div className={styles.emails_container}>

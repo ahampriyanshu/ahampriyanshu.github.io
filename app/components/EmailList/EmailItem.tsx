@@ -7,17 +7,26 @@ import { getAbsoluteDate } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
 import { getInitialDate } from '@/app/utils/localStorage';
+import useEmailActions from '@/app/hooks/useEmailActions';
 
 export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
+  const { toggleStarEmail } = useEmailActions();
 
   const toggleCheckbox = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    event.stopPropagation(); // Stop the event from propagating to the parent div
+    event.stopPropagation();
     setIsChecked(!isChecked);
+  };
+
+  const toggleFavourite = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    toggleStarEmail(email.id);
   };
 
   return (
@@ -26,6 +35,9 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
       aria-checked={isChecked}
       draggable={false}
       className={styles.email_content}
+      style={{
+        backgroundColor: email.isOpened ? '#f2f6fc' : '',
+      }}
       onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -42,11 +54,14 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
             height={20}
           />
         </div>
-        <Favourite
-          width={20}
-          height={20}
-          strokeColor='rgba(100, 121, 143, 0.5)'
-        />
+        <div onClick={toggleFavourite}>
+          <Favourite
+            key={email.id}
+            width={20}
+            height={20}
+            strokeColor={email.isFav ? 'red' : 'rgba(100, 121, 143, 0.5)'}
+          />
+        </div>
       </div>
       <div className={styles.name_cell}>{email.sender.name}</div>
       <div className={styles.msg_cell}>

@@ -4,8 +4,6 @@ export const defaultData: EmailAttributes[] = [
   {
     id: 'linkedin',
     selected: false,
-    fav: false,
-
     subject: 'I want to connect',
     summary:
       "join your LinkedIn network. Hi there, I'd like to join your professional network.",
@@ -23,7 +21,6 @@ export const defaultData: EmailAttributes[] = [
   {
     id: 'drive',
     selected: false,
-    fav: false,
     sender: {
       name: 'Priyanshu (via Google Drive)',
       email: 'drive-shares-dm-noreply@google.com',

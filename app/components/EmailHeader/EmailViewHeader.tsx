@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './email-header.module.scss';
 import {
   Alert,
@@ -12,9 +12,18 @@ import {
   ViewMore,
 } from '../Icons/Icons';
 import { useRouter } from 'next/navigation';
+import { AppContext } from '@/app/AppContext';
+import useEmailActions from '@/app/hooks/useEmailActions';
 
-export const EmailViewHeader = () => {
+export const EmailViewHeader = ({ id }: { id: string }) => {
+  const { dispatch } = useContext(AppContext);
+  const { updateEmailInLocalStorage } = useEmailActions();
   const router = useRouter();
+  updateEmailInLocalStorage(id, { isOpened: true });
+  // dispatch({
+  //   type: 'UPDATE_EMAIL',
+  //   payload: { emailId: id, data: { isOpened: true } },
+  // });
   return (
     <div className={styles.container}>
       <div className={styles.select_container}>

@@ -10,7 +10,7 @@ export default function Mail({ params }: { params: { id: string } }) {
 
   return (
     <div className='h-100 w-100'>
-      <EmailViewHeader />
+      <EmailViewHeader id={id} />
       <MailContainer id={id} />
     </div>
   );
