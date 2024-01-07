@@ -1,5 +1,6 @@
 import { MailContainer } from '../components/EmailContent/MailContainer';
 import { EmailViewHeader } from '../components/EmailHeader/EmailViewHeader';
+import { useEmailActions } from '../hooks/useEmailActions';
 
 export async function generateStaticParams() {
   return [{ id: 'linkedin' }, { id: 'drive' }];

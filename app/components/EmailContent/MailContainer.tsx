@@ -14,21 +14,25 @@ export function MailContainer({ id }: { id: string }) {
   const router = useRouter();
   const [scrollPosition, setScrollPosition] = useState(0);
   const { updateEmailArgs } = useEmailActions();
+
   const contentData = emailList.find(
     (email) => email?.id === id
   ) as EmailAttributes;
+
   if (!contentData) {
     router.back();
   }
-  // updateEmailInLocalStorage(id, { isOpened: true });
-  // useEffect(() => {
-  //
-  // }, [updateEmailInLocalStorage, id]);
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
     const scrollTop = event?.currentTarget?.scrollTop;
     setScrollPosition(scrollTop);
   };
+
+  // useEffect(() => {
+  //   if (contentData) {
+  //     updateEmailArgs(id, { isOpened: true });
+  //   }
+  // }, [id, contentData, updateEmailArgs]);
 
   return (
     <div

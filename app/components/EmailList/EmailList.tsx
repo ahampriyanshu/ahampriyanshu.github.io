@@ -16,8 +16,9 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   const filteredEmails = Array.isArray(emails)
     ? emails?.filter(
         (email) =>
-          email.type === typeFilter &&
-          (!selectedTag || email.tag === selectedTag)
+          (email.type === typeFilter &&
+            (!selectedTag || email.tag === selectedTag)) ||
+          (typeFilter === 'starred' && email.isFav)
       )
     : [];
 
