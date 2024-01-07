@@ -8,60 +8,29 @@ import {
   setRecentDate,
 } from '../utils/localStorage';
 
-const useEmailActions = () => {
-  const { state, dispatch } = useContext(AppContext);
+export const useEmailActions = () => {
+  const { dispatch } = useContext(AppContext);
 
   const setEmailsToLocalStorage = (emails: EmailAttributes[]) => {
     if (isServer) return;
     localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emails));
   };
 
-  const updateEmailInLocalStorage = (
-    emailId: string,
-    args: Partial<EmailAttributes>
-  ) => {
+  const updateEmailArgs = (emailId: string, data: Partial<EmailAttributes>) => {
     if (isServer) return;
-    const emails = getEmailsFromLocalStorage();
-    const updatedEmails = emails.map((email) =>
-      email.id === emailId ? { ...email, ...args } : email
+    const updatedEmails = getEmailsFromLocalStorage().map((email) =>
+      email.id === emailId ? { ...email, ...data } : email
     );
-    localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(updatedEmails));
-  };
-
-  const toggleDeleteEmail = (emailId: string) => {
-    const updatedEmails = state.emails.map((email) =>
-      email.id === emailId ? { ...email, isDeleted: !email.isDeleted } : email
-    );
+    dispatch({
+      type: 'UPDATE_EMAIL',
+      payload: { emailId, data },
+    });
     setEmailsToLocalStorage(updatedEmails);
     setRecentDate();
   };
 
-  const toggleStarEmail = (emailId: string) => {
-    const updatedEmails = state?.emails || [];
-
-    // updatedEmails.map((email) => {
-    //   return email.id === emailId ? { ...email, isFav: !email.isFav } : email;
-    // });
-
-    // setEmailsToLocalStorage(updatedEmails);
-    setRecentDate();
-    const foundEmail = updatedEmails.find((email) => email.id === emailId);
-    // if (foundEmail) {
-    //   dispatch({
-    //     type: 'UPDATE_EMAIL',
-    //     payload: state.emails.map((email) =>
-    //       email.id === emailId ? { ...email, isfav: !email.isFav } : email
-    //     ),
-    //   });
-    // }
-  };
-
   return {
     setEmailsToLocalStorage,
-    toggleDeleteEmail,
-    toggleStarEmail,
-    updateEmailInLocalStorage,
+    updateEmailArgs,
   };
 };
-
-export default useEmailActions;

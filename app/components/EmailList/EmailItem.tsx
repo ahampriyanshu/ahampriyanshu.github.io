@@ -2,18 +2,18 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './email-list.module.scss';
-import { Bin, Favourite } from '../Icons/Icons';
+import { Bin, Favourite, UnFavourite } from '../Icons/Icons';
 import { getAbsoluteDate } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
 import { getInitialDate } from '@/app/utils/localStorage';
-import useEmailActions from '@/app/hooks/useEmailActions';
+import { useEmailActions } from '@/app/hooks/useEmailActions';
 
 export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
-  const { toggleStarEmail } = useEmailActions();
+  const { updateEmailArgs } = useEmailActions();
 
   const toggleCheckbox = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -26,7 +26,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     event.stopPropagation();
-    toggleStarEmail(email.id);
+    updateEmailArgs(email.id, { isFav: !email.isFav });
   };
 
   return (
@@ -54,13 +54,23 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
             height={20}
           />
         </div>
+
         <div onClick={toggleFavourite}>
-          <Favourite
-            key={email.id}
-            width={20}
-            height={20}
-            strokeColor={email.isFav ? 'red' : 'rgba(100, 121, 143, 0.5)'}
-          />
+          {email.isFav ? (
+            <UnFavourite
+              key={email.id}
+              width={20}
+              height={20}
+              strokeColor='rgb(247,202,105)'
+            />
+          ) : (
+            <Favourite
+              key={email.id}
+              width={20}
+              height={20}
+              strokeColor='rgba(100, 121, 143, 0.5)'
+            />
+          )}
         </div>
       </div>
       <div className={styles.name_cell}>{email.sender.name}</div>

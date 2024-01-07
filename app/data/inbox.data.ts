@@ -9,7 +9,6 @@ export const defaultData: EmailAttributes[] = [
       "join your LinkedIn network. Hi there, I'd like to join your professional network.",
     body: 'Hi, just a reminder that we have a meeting tomorrow at 10:00 AM.',
     priority: 1,
-    read: false,
     sender: {
       name: 'Priyanshu Tiwari',
       logo: 'linkedin.png',
@@ -34,7 +33,6 @@ export const defaultData: EmailAttributes[] = [
       type: 'pdf',
     },
     priority: 2,
-    read: false,
     type: 'inbox',
     tag: 'inbox',
   },

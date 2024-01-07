@@ -52,7 +52,15 @@ function appReducer(state: AppState, action: Action): AppState {
     case ACTION_TYPE.UPDATE_EMAIL: {
       return {
         ...state,
-        emails: action.payload,
+        emails: state.emails.map((email) => {
+          if (email.id === action.payload.emailId) {
+            return {
+              ...email,
+              ...action.payload.data,
+            };
+          }
+          return email;
+        }),
       };
     }
     default:

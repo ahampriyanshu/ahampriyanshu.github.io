@@ -60,7 +60,6 @@ export type EmailAttributes = {
     type: string;
   };
   priority: number;
-  read: boolean;
   type: EmailType;
   tag: EmailTag;
   isOpened?: boolean;
