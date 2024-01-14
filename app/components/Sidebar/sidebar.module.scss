@@ -8,12 +8,13 @@
   transition-property: width;
   transition-timing-function: ease-in-out;
 
-  @media (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     position: fixed;
     top: 0;
     left: 0;
     width: 60%;
     background-color: white;
+    display: none;
   }
 }
 

@@ -22,6 +22,10 @@ $secondary-color: rgba(100, 121, 143, 0.122);
     box-shadow: inset 0 -1px 0 0 $secondary-color;
     transition: box-shadow 0.15s linear;
 
+    @media only screen and (max-width: 768px) {
+      flex-direction: row;
+    }
+
     &[aria-checked='true'] {
       background-color: #c2dbff;
     }
