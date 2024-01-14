@@ -1,15 +1,17 @@
+$primary-color: #202124;
+$secondary-color: rgba(100, 121, 143, 0.122);
+
 .emails_container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 0.875rem;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  color: #202124;
+  color: $primary-color;
   overflow-y: auto;
   padding-bottom: 80px;
-  border-top: 1px solid rgba(100, 121, 143, 0.122);
+  border-top: 1px solid $secondary-color;
+
   .email_content {
     width: 100%;
     display: flex;
@@ -17,7 +19,7 @@
     justify-content: flex-start;
     padding: 10px 0;
     z-index: 1;
-    box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+    box-shadow: inset 0 -1px 0 0 $secondary-color;
     transition: box-shadow 0.15s linear;
 
     &[aria-checked='true'] {
@@ -35,22 +37,21 @@
     }
   }
 
+  .date {
+    line-height: 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: $primary-color;
+  }
+
   .no_emails {
     border-top: 3px solid white;
-    border-bottom: 1px solid rgba(100, 121, 143, 0.122);
+    border-bottom: 1px solid $secondary-color;
     text-align: center;
     padding-block: 10px;
     padding-inline: 8px;
     font-size: 0.875rem;
     font-weight: 400;
-  }
-
-  .date {
-    line-height: 20px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    color: #202124;
   }
 }
 
@@ -67,7 +68,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  letter-spacing: 0.75px;
   max-width: 168px;
   width: 168px;
   padding-right: 32px;
@@ -80,7 +80,7 @@
   margin-right: 26px;
   line-height: 20px;
 
-  span {
+  .summary {
     font-weight: 400;
     color: #5f6368;
   }
@@ -101,7 +101,7 @@
   }
 
   .file {
-    box-shadow: inset 0 0 0 1px rgba(100, 121, 143, 0.302);
+    box-shadow: inset 0 0 0 1px $secondary-color;
     box-sizing: border-box;
     border-radius: 15px;
     color: #5f6368;

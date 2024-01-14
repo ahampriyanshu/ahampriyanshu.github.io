@@ -73,11 +73,24 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           )}
         </div>
       </div>
-      <div className={styles.name_cell}>{email.sender.name}</div>
+      <div
+        className={`${styles.name_cell} ${email.isOpened ? '' : 'font-bold'}`}
+      >
+        {email.sender.name}
+      </div>
       <div className={styles.msg_cell}>
         <div className={styles.msg_content}>
-          <div>
-            {email.subject} <span> - {email.summary}</span>
+          <div className={email.isOpened ? '' : 'font-bold'}>
+            {email.subject}
+            <span
+              style={{
+                letterSpacing: '0.1px',
+              }}
+              className={styles.summary}
+            >
+              {' '}
+              - {email.summary}
+            </span>
           </div>
           {email.file ? (
             <div className={styles.file}>
@@ -98,7 +111,9 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
               <Bin height={20} width={20} />
             </div>
           ) : (
-            <span className={styles.date}>
+            <span
+              className={`${styles.date} ${email.isOpened ? '' : 'font-bold'}`}
+            >
               {getAbsoluteDate(getInitialDate())}
             </span>
           )}

@@ -4,7 +4,7 @@ import styles from './footer.module.scss';
 import { useRouter } from 'next/navigation';
 import { OpenInNewTab } from '../Icons/Icons';
 import { getRelativeTime } from '@/app/utils/date';
-import { getRecentDate } from '@/app/utils/localStorage';
+import { getInitialDate } from '@/app/utils/localStorage';
 
 function Footer() {
   const router = useRouter();
@@ -16,7 +16,7 @@ function Footer() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const storedDate = getRecentDate();
+      const storedDate = getInitialDate();
       if (storedDate) {
         setDate(storedDate);
       }
