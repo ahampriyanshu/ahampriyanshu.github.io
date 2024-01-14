@@ -1,0 +1,23 @@
+.icon-btn {
+  position: relative;
+  display: inline-block;
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background-color: rgba(60, 64, 67, 0.1);
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: none;
+  }
+}

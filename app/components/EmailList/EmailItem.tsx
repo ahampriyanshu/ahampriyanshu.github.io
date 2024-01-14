@@ -46,7 +46,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
       tabIndex={0}
     >
       <div className={styles.icon_cell}>
-        <div onClick={toggleCheckbox}>
+        <div className='icon-btn' onClick={toggleCheckbox}>
           <Image
             src={`/icons/${isChecked ? 'checkbox-active' : 'checkbox'}.png`}
             alt={`${isChecked ? 'checkbox-active' : 'checkbox'} icon`}
@@ -55,7 +55,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           />
         </div>
 
-        <div onClick={toggleFavourite}>
+        <div className='icon-btn' onClick={toggleFavourite}>
           {email.isFav ? (
             <UnFavourite
               key={email.id}
