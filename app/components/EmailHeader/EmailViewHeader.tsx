@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import styles from './email-header.module.scss';
 import {
   Alert,
