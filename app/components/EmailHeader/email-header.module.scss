@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 767px) {
     display: none;
   }
 

@@ -16,4 +16,10 @@
   margin-bottom: 16px;
   overflow: hidden;
   @extend .hide-scrollbars;
+
+  @media only screen and (max-width: 767px) {
+    border-radius: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
 }

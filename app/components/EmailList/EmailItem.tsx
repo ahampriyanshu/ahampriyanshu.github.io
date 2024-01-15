@@ -36,7 +36,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
       draggable={false}
       className={styles.email_content}
       style={{
-        backgroundColor: email.isOpened ? '#f2f6fc' : '',
+        backgroundColor: email.isOpened ? styles.is_opened : '',
       }}
       onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
       onMouseEnter={() => setIsHovered(true)}
