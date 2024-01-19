@@ -6,10 +6,16 @@ $header-height: var(--header-height);
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   background-color: transparent;
+
   height: $header-height;
   display: flex;
   padding: 0 8px;
+
+  @media only screen and (max-width: 767px) {
+    padding: none;
+  }
 }
 
 .sidebar_toggle_container {
@@ -27,7 +33,7 @@ $header-height: var(--header-height);
     letter-spacing: 0.5px;
   }
 
-  @media (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     display: none;
   }
 }
@@ -39,9 +45,11 @@ $header-height: var(--header-height);
   justify-content: space-between;
   margin-right: 16px;
 
-  @media (max-width: 767px) {
-    width: 100vw;
-    margin-right: 0;
+  @media only screen and (max-width: 767px) {
+    flex-grow: 0;
+    width: 100%;
+    background-color: red;
+    margin-right: 0px;
   }
 
   .search_bar_container {
@@ -88,6 +96,17 @@ $header-height: var(--header-height);
         font-size: 16px;
         line-height: 27px;
         font-weight: 500;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 0px;
+      &:active,
+      &:focus-visible {
+        background: initial;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
       }
     }
   }

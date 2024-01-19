@@ -2,7 +2,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './email-list.module.scss';
-import { Bin, Favourite, UnFavourite } from '../Icons/Icons';
+import {
+  Archive,
+  Bin,
+  Favourite,
+  OpenedMail,
+  Time,
+  UnFavourite,
+} from '../Icons/Icons';
 import { getAbsoluteDate } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
@@ -34,10 +41,9 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
       role='checkbox'
       aria-checked={isChecked}
       draggable={false}
-      className={styles.email_content}
-      style={{
-        backgroundColor: email.isOpened ? styles.is_opened : '',
-      }}
+      className={`${styles.email_content} ${
+        email.isOpened ? styles.is_opened : ''
+      }`}
       onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -105,10 +111,33 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           ) : null}
         </div>
 
-        <div>
+        <div className={styles.options_container}>
           {isHovered ? (
-            <div className='flex'>
-              <Bin height={20} width={20} />
+            <div className={`${styles.options}`}>
+              <Archive
+                className='icon-btn'
+                height={18}
+                width={18}
+                strokeColor='rgba(0,0,0, 0.7)'
+              />
+              <Bin
+                className='icon-btn'
+                height={18}
+                width={18}
+                strokeColor='rgba(0,0,0, 0.7)'
+              />
+              <OpenedMail
+                className='icon-btn'
+                height={18}
+                width={18}
+                strokeColor='rgba(0,0,0, 0.7)'
+              />
+              <Time
+                className='icon-btn'
+                height={18}
+                width={18}
+                strokeColor='rgba(0,0,0, 0.7)'
+              />
             </div>
           ) : (
             <span

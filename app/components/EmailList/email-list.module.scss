@@ -1,3 +1,4 @@
+@import '../../styles/base/buttons';
 $primary-color: #202124;
 $secondary-color: rgba(100, 121, 143, 0.122);
 
@@ -44,6 +45,11 @@ $secondary-color: rgba(100, 121, 143, 0.122);
     @media only screen and (max-width: 768px) {
       flex-direction: row;
       box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+        cursor: unset;
+      }
     }
   }
 
@@ -141,5 +147,22 @@ $secondary-color: rgba(100, 121, 143, 0.122);
   background-color: #f2f6fc;
   @media only screen and (max-width: 768px) {
     background-color: white;
+  }
+}
+
+.options_container {
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    > * {
+      @extend .icon-btn;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 }
