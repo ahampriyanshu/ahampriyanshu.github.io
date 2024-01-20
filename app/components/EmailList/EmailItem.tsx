@@ -36,6 +36,14 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
     updateEmailArgs(email.id, { isFav: !email.isFav });
   };
 
+  const toggleOpened = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    console.log('toggleOpened');
+    updateEmailArgs(email.id, { isOpened: !email.isOpened });
+  };
+
   return (
     <div
       role='checkbox'
@@ -61,9 +69,10 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           />
         </div>
 
-        <div className='icon-btn' onClick={toggleFavourite}>
+        <div onClick={toggleFavourite}>
           {email.isFav ? (
             <UnFavourite
+              className='icon-btn'
               key={email.id}
               width={20}
               height={20}
@@ -71,6 +80,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
             />
           ) : (
             <Favourite
+              className='icon-btn'
               key={email.id}
               width={20}
               height={20}
@@ -115,24 +125,28 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
           {isHovered ? (
             <div className={`${styles.options}`}>
               <Archive
+                onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}
                 width={18}
                 strokeColor='rgba(0,0,0, 0.7)'
               />
               <Bin
+                onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}
                 width={18}
                 strokeColor='rgba(0,0,0, 0.7)'
               />
               <OpenedMail
+                onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}
                 width={18}
                 strokeColor='rgba(0,0,0, 0.7)'
               />
               <Time
+                onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}
                 width={18}

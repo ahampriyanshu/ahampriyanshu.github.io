@@ -9,7 +9,7 @@ export const Fallback = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -31,7 +31,7 @@ export const HamburgerMenu = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -53,7 +53,7 @@ export const QuestionMark = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -76,7 +76,7 @@ export const Settings = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -99,7 +99,7 @@ export const GridMenu = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -121,7 +121,7 @@ export const Search = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -144,7 +144,7 @@ export const Filters = ({
   width = 24,
   strokeColor = ICON_COLOR_DARK,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -166,7 +166,7 @@ export const Favourite = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -188,7 +188,7 @@ export const UnFavourite = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -210,7 +210,7 @@ export const ListMenu = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -232,7 +232,7 @@ export const ChevronLeft = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -254,7 +254,7 @@ export const ChevronRight = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -276,7 +276,7 @@ export const Refresh = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -298,7 +298,7 @@ export const ViewMore = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -320,7 +320,7 @@ export const ArrowDropDown = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -339,7 +339,7 @@ export const Inbox = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -361,7 +361,7 @@ export const InboxFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -383,7 +383,7 @@ export const Time = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -406,7 +406,7 @@ export const Sell = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -428,7 +428,7 @@ export const SellFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -450,7 +450,7 @@ export const Social = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -472,7 +472,7 @@ export const SocialFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -494,7 +494,7 @@ export const ExpandMore = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -516,7 +516,7 @@ export const ExpandLess = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -538,7 +538,7 @@ export const TrashFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -560,7 +560,7 @@ export const Trash = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -582,7 +582,7 @@ export const Alert = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -605,7 +605,7 @@ export const AlertFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -627,7 +627,7 @@ export const Archive = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -649,7 +649,7 @@ export const Bin = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -671,7 +671,7 @@ export const Back = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -693,7 +693,7 @@ export const OpenInNewTab = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -715,7 +715,7 @@ export const Print = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -737,7 +737,7 @@ export const Return = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -759,7 +759,7 @@ export const Reply = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -781,7 +781,7 @@ export const Forward = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -803,7 +803,7 @@ export const Person = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -825,7 +825,7 @@ export const History = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -847,7 +847,7 @@ export const Draft = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -869,7 +869,7 @@ export const DraftFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -891,7 +891,7 @@ export const Send = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -913,7 +913,7 @@ export const SendFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -932,7 +932,7 @@ export const Clock = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -955,7 +955,7 @@ export const ClockFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -977,7 +977,7 @@ export const StarFilled = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -999,7 +999,7 @@ export const Star = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
@@ -1021,7 +1021,7 @@ export const OpenedMail = ({
   width = 24,
   strokeColor = ICON_COLOR,
   className = '',
-  onClick = () => {},
+  onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
 }) => (
   <div className={className} onClick={onClick}>
     <svg
