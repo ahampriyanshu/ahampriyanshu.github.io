@@ -3,6 +3,7 @@ import { TooltipProps } from '@/types';
 import React, { useState } from 'react';
 
 const Tooltip: React.FC<TooltipProps> = ({
+  disabled = false,
   content,
   direction = 'bottom',
   delay = 400,
@@ -28,7 +29,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <div
-      className='tooltip-wrapper'
+      className={`tooltip-wrapper ${disabled ? 'tooltip-disabled' : ''}}`}
       onMouseEnter={showTip}
       onMouseLeave={hideTip}
     >

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconBtn } from './IconBtn';
 import { ICON_COLOR, ICON_COLOR_DARK } from '@/app/constants/ui.constants';
 import Tooltip from '../Tooltip/Tooltip';
-
+import styles from './icons.module.scss';
 export { IconBtn, ICON_COLOR, ICON_COLOR_DARK };
 
 const defaultIconProps = {
@@ -34,6 +34,7 @@ const Icon = ({
 );
 
 export const Fallback = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -42,7 +43,10 @@ export const Fallback = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -59,6 +63,7 @@ export const Fallback = ({
 );
 
 export const HamburgerMenu = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -67,7 +72,10 @@ export const HamburgerMenu = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -84,6 +92,7 @@ export const HamburgerMenu = ({
 );
 
 export const QuestionMark = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -92,7 +101,10 @@ export const QuestionMark = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -110,6 +122,7 @@ export const QuestionMark = ({
 );
 
 export const Settings = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -118,7 +131,10 @@ export const Settings = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -136,6 +152,7 @@ export const Settings = ({
 );
 
 export const GridMenu = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -144,7 +161,10 @@ export const GridMenu = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -161,6 +181,7 @@ export const GridMenu = ({
 );
 
 export const Search = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -169,7 +190,10 @@ export const Search = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -187,6 +211,7 @@ export const Search = ({
 );
 
 export const Filters = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR_DARK,
@@ -195,7 +220,10 @@ export const Filters = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -212,6 +240,7 @@ export const Filters = ({
 );
 
 export const Favourite = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -220,7 +249,10 @@ export const Favourite = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -237,6 +269,7 @@ export const Favourite = ({
 );
 
 export const UnFavourite = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -245,7 +278,10 @@ export const UnFavourite = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -262,6 +298,7 @@ export const UnFavourite = ({
 );
 
 export const ListMenu = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -270,7 +307,10 @@ export const ListMenu = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -287,6 +327,7 @@ export const ListMenu = ({
 );
 
 export const ChevronLeft = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -295,7 +336,10 @@ export const ChevronLeft = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -312,6 +356,7 @@ export const ChevronLeft = ({
 );
 
 export const ChevronRight = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -320,7 +365,10 @@ export const ChevronRight = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -337,6 +385,7 @@ export const ChevronRight = ({
 );
 
 export const Refresh = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -345,7 +394,10 @@ export const Refresh = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -362,6 +414,7 @@ export const Refresh = ({
 );
 
 export const ViewMore = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -370,7 +423,10 @@ export const ViewMore = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -387,6 +443,7 @@ export const ViewMore = ({
 );
 
 export const ArrowDropDown = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -395,7 +452,10 @@ export const ArrowDropDown = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -409,6 +469,7 @@ export const ArrowDropDown = ({
 );
 
 export const Inbox = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -417,7 +478,10 @@ export const Inbox = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -434,6 +498,7 @@ export const Inbox = ({
 );
 
 export const InboxFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -442,7 +507,10 @@ export const InboxFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -459,6 +527,7 @@ export const InboxFilled = ({
 );
 
 export const Time = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -467,7 +536,10 @@ export const Time = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -485,6 +557,7 @@ export const Time = ({
 );
 
 export const Sell = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -493,7 +566,10 @@ export const Sell = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -510,6 +586,7 @@ export const Sell = ({
 );
 
 export const SellFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -518,7 +595,10 @@ export const SellFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -535,6 +615,7 @@ export const SellFilled = ({
 );
 
 export const Social = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -543,7 +624,10 @@ export const Social = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -560,6 +644,7 @@ export const Social = ({
 );
 
 export const SocialFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -568,7 +653,10 @@ export const SocialFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -585,6 +673,7 @@ export const SocialFilled = ({
 );
 
 export const ExpandMore = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -593,7 +682,10 @@ export const ExpandMore = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -610,6 +702,7 @@ export const ExpandMore = ({
 );
 
 export const ExpandLess = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -618,7 +711,10 @@ export const ExpandLess = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -635,6 +731,7 @@ export const ExpandLess = ({
 );
 
 export const TrashFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -643,7 +740,10 @@ export const TrashFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -660,6 +760,7 @@ export const TrashFilled = ({
 );
 
 export const Trash = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -668,7 +769,10 @@ export const Trash = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -685,6 +789,7 @@ export const Trash = ({
 );
 
 export const Alert = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -693,7 +798,10 @@ export const Alert = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -711,6 +819,7 @@ export const Alert = ({
 );
 
 export const AlertFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -719,7 +828,10 @@ export const AlertFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -736,6 +848,7 @@ export const AlertFilled = ({
 );
 
 export const Archive = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -744,7 +857,10 @@ export const Archive = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -761,6 +877,7 @@ export const Archive = ({
 );
 
 export const Bin = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -769,7 +886,10 @@ export const Bin = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -786,6 +906,7 @@ export const Bin = ({
 );
 
 export const Back = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -794,7 +915,10 @@ export const Back = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
@@ -811,6 +935,7 @@ export const Back = ({
 );
 
 export const OpenInNewTab = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -819,7 +944,10 @@ export const OpenInNewTab = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -836,6 +964,7 @@ export const OpenInNewTab = ({
 );
 
 export const Print = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -844,7 +973,10 @@ export const Print = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 -960 960 960'
@@ -861,6 +993,7 @@ export const Print = ({
 );
 
 export const Return = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -869,7 +1002,10 @@ export const Return = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -886,6 +1022,7 @@ export const Return = ({
 );
 
 export const Reply = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -894,7 +1031,10 @@ export const Reply = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -911,6 +1051,7 @@ export const Reply = ({
 );
 
 export const Forward = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -919,7 +1060,10 @@ export const Forward = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -936,6 +1080,7 @@ export const Forward = ({
 );
 
 export const Person = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -944,7 +1089,10 @@ export const Person = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -961,6 +1109,7 @@ export const Person = ({
 );
 
 export const History = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -969,7 +1118,10 @@ export const History = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -986,6 +1138,7 @@ export const History = ({
 );
 
 export const Draft = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -994,7 +1147,10 @@ export const Draft = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1011,6 +1167,7 @@ export const Draft = ({
 );
 
 export const DraftFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1019,7 +1176,10 @@ export const DraftFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1036,6 +1196,7 @@ export const DraftFilled = ({
 );
 
 export const Send = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1044,7 +1205,10 @@ export const Send = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1061,6 +1225,7 @@ export const Send = ({
 );
 
 export const SendFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1069,7 +1234,10 @@ export const SendFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1083,6 +1251,7 @@ export const SendFilled = ({
 );
 
 export const Clock = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1091,7 +1260,10 @@ export const Clock = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1109,6 +1281,7 @@ export const Clock = ({
 );
 
 export const ClockFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1117,7 +1290,10 @@ export const ClockFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1134,6 +1310,7 @@ export const ClockFilled = ({
 );
 
 export const StarFilled = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1142,7 +1319,10 @@ export const StarFilled = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1159,6 +1339,7 @@ export const StarFilled = ({
 );
 
 export const Star = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1167,7 +1348,10 @@ export const Star = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1184,6 +1368,7 @@ export const Star = ({
 );
 
 export const ReadMail = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1192,7 +1377,10 @@ export const ReadMail = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}
@@ -1209,6 +1397,7 @@ export const ReadMail = ({
 );
 
 export const UnReadMail = ({
+  disabled = false,
   height = 24,
   width = 24,
   strokeColor = ICON_COLOR,
@@ -1217,7 +1406,10 @@ export const UnReadMail = ({
   title = '',
 }) => (
   <Tooltip content={title}>
-    <div className={className} onClick={onClick}>
+    <div
+      className={`${className} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+    >
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={height}

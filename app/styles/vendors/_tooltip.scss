@@ -1,12 +1,10 @@
 /* https://paladini.dev/posts/how-to-make-an-extremely-reusable-tooltip-component-with-react--and-nothing-else/ */
 
-/* Wrapping */
 .tooltip-wrapper {
   display: inline-block;
   position: relative;
 }
 
-/* Absolute positioning */
 .tooltip-body {
   position: absolute;
   border-radius: 4px;
@@ -22,23 +20,21 @@
   white-space: nowrap;
 }
 
-/* Absolute positioning */
 .tooltip-body.top {
   top: calc(var(--tooltip-margin) * -1);
 }
-/* CSS border triangles */
+
 .tooltip-body.top::before {
   top: 100%;
   border-top-color: var(--tooltip-background-color);
 }
 
-/* Absolute positioning */
 .tooltip-body.right {
   left: calc(100% + var(--tooltip-margin));
   top: 50%;
   transform: translateX(0) translateY(-50%);
 }
-/* CSS border triangles */
+
 .tooltip-body.right::before {
   left: calc(var(--tooltip-padding) * -1);
   top: 50%;
@@ -46,28 +42,31 @@
   border-right-color: var(--tooltip-background-color);
 }
 
-/* Absolute positioning */
 .tooltip-body.bottom {
   bottom: calc(var(--tooltip-margin) * -1);
 }
-/* CSS border triangles */
+
 .tooltip-body.bottom::before {
   bottom: 100%;
   border-bottom-color: var(--tooltip-background-color);
 }
 
-/* Absolute positioning */
 .tooltip-body.left {
   left: auto;
   right: calc(100% + var(--tooltip-margin));
   top: 50%;
   transform: translateX(0) translateY(-50%);
 }
-/* CSS border triangles */
+
 .tooltip-body.left::before {
   left: auto;
   right: calc(var(--tooltip-padding) * -2);
   top: 50%;
   transform: translateX(0) translateY(-50%);
   border-left-color: var(--tooltip-background-color);
+}
+
+.tooltip-disabled {
+  pointer-events: none;
+  cursor: not-allowed !important;
 }

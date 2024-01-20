@@ -165,6 +165,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
               </div>
 
               <Time
+                disabled
                 onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}

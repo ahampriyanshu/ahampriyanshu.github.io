@@ -98,8 +98,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
               ...email,
               date: new Date().toISOString(),
               isFav: false,
+              isActive: true,
               isOpened: false,
-              isDeleted: false,
             };
             createEmailInLocalStorage(data);
             dispatch({ type: 'PUSH_EMAIL', payload: data });
