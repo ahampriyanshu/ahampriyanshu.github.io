@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext } from 'react';
+import React, { use, useContext, useEffect } from 'react';
 import styles from './email-list.module.scss';
 import { EmailAttributes, EmailTag, EmailType } from '@/types';
 import { EmailItem } from './EmailItem';
@@ -30,14 +30,21 @@ const filterMails = (
 };
 
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
-  const { state } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const { emails = [] } = state || {};
   const filteredEmails = Array.isArray(emails)
     ? emails?.filter((email) => filterMails(email, typeFilter, selectedTag))
     : [];
+
+  useEffect(() => {
+    if (typeFilter !== 'inbox') {
+      dispatch({ type: 'SET_SEARCH_PARAM', payload: `in: ${typeFilter}` });
+    }
+  }, [typeFilter, dispatch]);
+
   return (
     <div className={styles.emails_container}>
-      {filteredEmails.length > 0 ? (
+      {filteredEmails?.length > 0 ? (
         filteredEmails.map((email, index) => (
           <EmailItem key={index} email={email} />
         ))

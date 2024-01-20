@@ -2,12 +2,10 @@
 import { memo, useContext } from 'react';
 import styles from './header.module.scss';
 import {
-  Filters,
   GridMenu,
   HamburgerMenu,
   IconBtn,
   QuestionMark,
-  Search,
   Settings,
 } from '@/app/components/Icons/Icons';
 import { AppContext } from '@/app/AppContext';
@@ -17,13 +15,15 @@ import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
 import { HEADER, LINKEDIN_PROFILE } from '@/app/data/links.data';
+import { Search } from '../Search/Search';
 
 function Header() {
+  const router = useRouter();
   const { dispatch } = useContext(AppContext);
   const toggleSidebar = () => {
     dispatch({ type: 'TOGGLE_SIDEBAR' });
   };
-  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
@@ -40,35 +40,7 @@ function Header() {
       </div>
 
       <div className={styles.header_profile_container}>
-        <div className={styles.search_bar_container}>
-          <IconBtn
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 6,
-              padding: 6,
-            }}
-          >
-            <Search />
-          </IconBtn>
-          <IconBtn
-            disabled
-            style={{
-              position: 'absolute',
-              right: '-96px',
-              top: 6,
-              padding: 6,
-            }}
-          >
-            <Filters />
-          </IconBtn>
-
-          <input
-            type='text'
-            className={styles.search_input}
-            placeholder='Search mail'
-          ></input>
-        </div>
+        <Search />
 
         <div className={styles.logo_container}>
           <Tooltip content='Support'>

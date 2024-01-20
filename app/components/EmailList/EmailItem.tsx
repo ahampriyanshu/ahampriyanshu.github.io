@@ -77,7 +77,6 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
         <div onClick={toggleFavourite}>
           {email.isFav ? (
             <UnFavourite
-              className='icon-btn'
               key={email.id}
               width={20}
               height={20}
@@ -85,7 +84,6 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
             />
           ) : (
             <Favourite
-              className='icon-btn'
               key={email.id}
               width={20}
               height={20}
@@ -130,34 +128,18 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
         <div className={styles.options_container}>
           {isHovered ? (
             <div className={`${styles.options}`}>
-              <Archive
-                onClick={(e) => toggleOpened(e)}
-                className='icon-btn'
-                height={18}
-                width={18}
-                strokeColor='rgba(0,0,0, 0.7)'
-              />
-              <Bin
-                onClick={(e) => deleteMail(e)}
-                className='icon-btn'
-                height={18}
-                width={18}
-                strokeColor='rgba(0,0,0, 0.7)'
-              />
+              <Archive height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
+              <Bin height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
 
               <div onClick={toggleOpened}>
                 {email.isOpened ? (
                   <UnReadMail
-                    title='Mark as unread'
-                    className='icon-btn'
                     height={18}
                     width={18}
                     strokeColor='rgba(0,0,0, 0.7)'
                   />
                 ) : (
                   <ReadMail
-                    title='Mark as read'
-                    className='icon-btn'
                     height={18}
                     width={18}
                     strokeColor='rgba(0,0,0, 0.7)'
@@ -165,13 +147,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
                 )}
               </div>
 
-              <Time
-                onClick={(e) => toggleOpened(e)}
-                className='icon-btn'
-                height={18}
-                width={18}
-                strokeColor='rgba(0,0,0, 0.5)'
-              />
+              <Time height={18} width={18} strokeColor='rgba(0,0,0, 0.5)' />
             </div>
           ) : (
             <span
