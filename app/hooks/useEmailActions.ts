@@ -1,5 +1,8 @@
 import { EmailAttributes } from '@/types';
-import { EMAIL_STORAGE_KEY } from '../constants/common.constants';
+import {
+  EMAIL_STORAGE_KEY,
+  SEARCH_HISTORY_STORAGE_KEY,
+} from '../constants/common.constants';
 import { isServer } from '../utils/common';
 import { useContext } from 'react';
 import { AppContext } from '../AppContext';
@@ -62,9 +65,30 @@ export const useEmailActions = () => {
     }
   };
 
+  const getSearchHistoryFromLocalStorage = () => {
+    if (isServer) return [];
+    const searchHistory = localStorage.getItem(SEARCH_HISTORY_STORAGE_KEY);
+    return searchHistory ? JSON.parse(searchHistory) : [];
+  };
+
+  const updateSearchHistory = (term: string) => {
+    if (isServer) return;
+    const searchHistory = getSearchHistoryFromLocalStorage();
+    const updatedHistory = [
+      term,
+      ...searchHistory.filter((item: string) => String(item) !== term),
+    ].slice(0, 10);
+    localStorage.setItem(
+      SEARCH_HISTORY_STORAGE_KEY,
+      JSON.stringify(updatedHistory)
+    );
+  };
+
   return {
     setEmailsToLocalStorage,
     updateEmailArgs,
     createDraftMail,
+    getSearchHistoryFromLocalStorage,
+    updateSearchHistory,
   };
 };

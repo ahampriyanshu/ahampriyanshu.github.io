@@ -37,7 +37,9 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
     : [];
 
   useEffect(() => {
-    if (typeFilter !== 'inbox') {
+    if (typeFilter === 'inbox') {
+      dispatch({ type: 'SET_SEARCH_PARAM', payload: '' });
+    } else {
       dispatch({ type: 'SET_SEARCH_PARAM', payload: `in: ${typeFilter}` });
     }
   }, [typeFilter, dispatch]);

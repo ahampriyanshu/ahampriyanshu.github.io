@@ -108,7 +108,6 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
               }}
               className={styles.summary}
             >
-              {' '}
               - {email.summary}
             </span>
           </div>
@@ -147,7 +146,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
                 )}
               </div>
 
-              <Time height={18} width={18} strokeColor='rgba(0,0,0, 0.5)' />
+              <Time height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
             </div>
           ) : (
             <span

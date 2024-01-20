@@ -16,7 +16,6 @@ import {
 } from './utils/localStorage';
 import { emailList } from './data';
 import { Loader } from './components/Loader/Loader';
-import { useEmailActions } from './hooks/useEmailActions';
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -80,7 +79,6 @@ export const AppContext = createContext<{
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
   const [isLoading, setIsLoading] = useState(true);
-  const { createDraftMail } = useEmailActions();
 
   useEffect(() => {
     console.log(`

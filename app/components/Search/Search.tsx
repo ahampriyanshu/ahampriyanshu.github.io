@@ -9,6 +9,10 @@ export function Search() {
   const { state, dispatch } = useContext(AppContext);
   const { searchParam = '' } = state || {};
 
+  const setFilterParam = (mailType: string) => {
+    dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
+  };
+
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'SET_SEARCH_PARAM', payload: e.target.value });
   };
