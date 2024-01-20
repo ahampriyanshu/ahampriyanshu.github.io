@@ -39,14 +39,14 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           # This part is also where you can pass other options, for example:
-          prettier_options: --check **/*.{ts,tsx,js,jsx,md,mdx,scss,css,json}
+          prettier_options: --check **/*.{ts,tsx,js,jsx,md,mdx,scss,css}
 
       - name: Lint Check
         uses: esrimo/gh-action-eslint-changeset@v1
         id: eslint-changeset
         with:
           main-branch: 'main'
-          file-extension: 'ts|tsx|js|jsx|md|mdx|scss|css|json'
+          file-extension: 'ts|tsx|js|jsx|md|mdx|scss|css'
 
       - name: Type Check
         run: yarn run type-check
