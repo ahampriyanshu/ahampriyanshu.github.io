@@ -16,7 +16,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
-import { GH_PROFILE, HEADER, LINKEDIN_PROFILE } from '@/app/data/links.data';
+import { HEADER, LINKEDIN_PROFILE } from '@/app/data/links.data';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
