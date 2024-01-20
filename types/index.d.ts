@@ -62,7 +62,7 @@ export type EmailAttributes = {
   };
   priority: number;
   type: EmailType;
-  tag: EmailTag;
+  tag?: EmailTag;
   isOpened?: boolean;
   isFav?: boolean;
   isActive?: boolean;

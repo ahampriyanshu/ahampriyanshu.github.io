@@ -34,6 +34,5 @@ export const defaultData: EmailAttributes[] = [
     },
     priority: 2,
     type: 'inbox',
-    tag: 'inbox',
   },
 ];

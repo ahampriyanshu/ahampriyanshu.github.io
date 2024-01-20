@@ -23,23 +23,22 @@ import {
   Trash,
   TrashFilled,
 } from '../Icons/Icons';
-import { EmailAttributes, EmailType, IconMap } from '@/types';
+import { EmailType, IconMap } from '@/types';
 import { useRouter } from 'next/navigation';
 import { MAIL_DATA } from '@/app/data/links.data';
-import { createEmailInLocalStorage } from '@/app/utils/localStorage';
+import { useEmailActions } from '@/app/hooks/useEmailActions';
 
 function Sidebar() {
   const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const { state, dispatch } = useContext(AppContext);
-
+  const { createDraftMail } = useEmailActions();
   const isSideBarOpen = state?.isSideBarOpen || false;
   const selectedFilterParam = state?.filterParam || 'inbox';
   const emails = state?.emails || [];
 
   const getActiveCount = (type: EmailType) => {
-    if (type === 'draft') return 0;
     const filteredEmails = emails?.filter(
       (email) => email.type === type && email.isActive
     );
@@ -57,25 +56,7 @@ function Sidebar() {
     }?subject=${encodeURIComponent(
       MAIL_DATA.SUBJECT
     )}&body=${encodeURIComponent(MAIL_DATA.BODY)}`;
-
-    const data: EmailAttributes = {
-      id: 'draft',
-      selected: false,
-      sender: {
-        name: MAIL_DATA.NAME,
-        email: MAIL_DATA.EMAIL,
-      },
-      subject: MAIL_DATA.SUBJECT,
-      summary: MAIL_DATA.BODY,
-      priority: 3,
-      type: 'draft',
-      tag: 'inbox',
-      isFav: false,
-      isActive: true,
-      isOpened: true,
-    };
-    createEmailInLocalStorage(data);
-    dispatch({ type: 'PUSH_EMAIL', payload: data });
+    createDraftMail(true);
   };
 
   const iconMap: IconMap = {
