@@ -15,7 +15,7 @@ import { EmailList } from '../EmailList/EmailList';
 import { EmailTag } from '@/types';
 
 export const InboxMails = () => {
-  const [selectedTag, setSelectedTag] = useState<EmailTag>('inbox');
+  const [selectedTag, setSelectedTag] = useState<EmailTag>('primary');
   const { state } = useContext(AppContext);
   const typeFilter = state?.filterParam || 'inbox';
   return (
@@ -24,11 +24,11 @@ export const InboxMails = () => {
         <div className={styles.filters}>
           <div
             className={`${styles.filter} ${
-              'inbox' === selectedTag ? styles.active : ''
+              'primary' === selectedTag ? styles.active : ''
             } `}
-            onClick={() => setSelectedTag('inbox')}
+            onClick={() => setSelectedTag('primary')}
           >
-            {'inbox' === selectedTag ? (
+            {'primary' === selectedTag ? (
               <InboxFilled
                 height={18}
                 width={18}
@@ -41,7 +41,7 @@ export const InboxMails = () => {
             <div className={styles.title}>primary</div>
 
             <div
-              className={'inbox' === selectedTag ? styles.underline : 'none'}
+              className={'primary' === selectedTag ? styles.underline : 'none'}
             ></div>
           </div>
           <div
@@ -91,7 +91,10 @@ export const InboxMails = () => {
         </div>
       ) : null}
 
-      <EmailList selectedTag={selectedTag} typeFilter={typeFilter} />
+      <EmailList
+        typeFilter={typeFilter}
+        selectedTag={typeFilter === 'inbox' ? selectedTag : null}
+      />
     </div>
   );
 };

@@ -11,7 +11,7 @@ export type ToastProps = {
   duration?: number;
 };
 
-export type EmailTag = 'inbox' | 'social' | 'promotions';
+export type EmailTag = 'primary' | 'social' | 'promotions';
 export type EmailType =
   | 'inbox'
   | 'sent'

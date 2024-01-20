@@ -15,7 +15,7 @@ export const defaultData: EmailAttributes[] = [
       email: 'invitations@linkedin.com',
     },
     type: 'inbox',
-    tag: 'inbox',
+    tag: 'primary',
   },
   {
     id: 'drive',
@@ -34,5 +34,6 @@ export const defaultData: EmailAttributes[] = [
     },
     priority: 2,
     type: 'inbox',
+    tag: 'primary',
   },
 ];

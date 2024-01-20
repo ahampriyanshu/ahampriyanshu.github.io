@@ -93,7 +93,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     `);
     const storedEmails = getEmailsFromLocalStorage();
     dispatch({ type: 'SET_IS_LOADED', payload: true });
-    createDraftMail();
+
     const newEmails = emailList.filter(
       (email) =>
         !storedEmails.some((storedEmail) => storedEmail.id === email.id)
