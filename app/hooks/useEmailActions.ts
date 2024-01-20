@@ -38,7 +38,6 @@ export const useEmailActions = () => {
     if (isServer) return;
     const email: EmailAttributes = {
       id: 'draft',
-      selected: false,
       sender: {
         name: MAIL_DATA.NAME,
         email: MAIL_DATA.EMAIL,

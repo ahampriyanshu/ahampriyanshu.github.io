@@ -1,20 +1,30 @@
 'use client';
-import { ChangeEvent, useContext } from 'react';
+import { ChangeEvent, KeyboardEvent, useContext, useState } from 'react';
 import styles from './search.module.scss';
 import { AppContext } from '@/app/AppContext';
 import { IconBtn } from '../Icons/IconBtn';
 import { Filters, SearchIcon } from '../Icons/Icons';
+import { useEmailActions } from '@/app/hooks/useEmailActions';
+import { emailList } from '@/app/data';
 
 export function Search() {
   const { state, dispatch } = useContext(AppContext);
   const { searchParam = '' } = state || {};
+  const { updateSearchHistory } = useEmailActions();
 
-  const setFilterParam = (mailType: string) => {
-    dispatch({ type: 'SET_FILTER_PARAM', payload: mailType });
-  };
-
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) =>
     dispatch({ type: 'SET_SEARCH_PARAM', payload: e.target.value });
+
+  const handleSearchKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      const [command, type] = searchParam.split(/(?<=in: )/);
+      updateSearchHistory(searchParam);
+      if (command === 'in: ') {
+        dispatch({ type: 'SET_FILTER_PARAM', payload: type });
+      } else {
+        dispatch({ type: 'SET_FILTER_PARAM', payload: 'search' });
+      }
+    }
   };
 
   return (
@@ -47,6 +57,7 @@ export function Search() {
         placeholder='Search mail'
         value={searchParam}
         onChange={handleSearchChange}
+        onKeyDown={handleSearchKeyDown}
       />
     </div>
   );

@@ -20,7 +20,8 @@ export type EmailType =
   | 'snoozed'
   | 'starred'
   | 'spam'
-  | 'bin';
+  | 'bin'
+  | 'search';
 
 export type Action =
   | { type: 'TOGGLE_SIDEBAR'; payload?: never }
@@ -46,7 +47,6 @@ export type AppState = {
 
 export type EmailAttributes = {
   id: string;
-  selected: boolean;
   sender: {
     name: string;
     logo?: string;
