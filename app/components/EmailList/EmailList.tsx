@@ -13,11 +13,11 @@ type EmailListProps = {
 const filterMails = (type: EmailType, email: EmailAttributes) => {
   switch (type) {
     case 'inbox':
-      return !email.isDeleted;
+      return email.isActive;
     case 'starred':
       return email.isFav;
     case 'bin':
-      return email.isDeleted;
+      return !email.isActive;
     default:
       return false;
   }
@@ -30,7 +30,7 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
     ? emails?.filter(
         (email) =>
           (email.type === typeFilter &&
-            !email.isDeleted &&
+            email.isActive &&
             (!selectedTag || email.tag === selectedTag)) ||
           filterMails(typeFilter, email)
       )

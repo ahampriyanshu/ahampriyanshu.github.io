@@ -46,7 +46,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
 
   const deleteMail = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
-    updateEmailArgs(email.id, { isDeleted: true });
+    updateEmailArgs(email.id, { isActive: false });
   };
 
   return (

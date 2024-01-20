@@ -37,40 +37,8 @@ export const setEmailsToLocalStorage = (emails: EmailAttributes[]) => {
   localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emails));
 };
 
-export const updateEmailInLocalStorage = (updatedEmail: EmailAttributes) => {
-  const storedEmails = getEmailsFromLocalStorage();
-  const updatedEmails = storedEmails.map((email) =>
-    email.id === updatedEmail.id ? updatedEmail : email
-  );
-  setEmailsToLocalStorage(updatedEmails);
-};
-
 export const createEmailInLocalStorage = (newEmail: EmailAttributes) => {
   const storedEmails = getEmailsFromLocalStorage();
   const updatedEmails = [...storedEmails, newEmail];
   setEmailsToLocalStorage(updatedEmails);
-};
-
-export const deleteEmailFromLocalStorage = (emailId: string) => {
-  const storedEmails = getEmailsFromLocalStorage();
-  const updatedEmails = storedEmails.filter((email) => email.id !== emailId);
-  setEmailsToLocalStorage(updatedEmails);
-};
-
-export const toggleDeleteEmail = (emailId: string) => {
-  const storedEmails = getEmailsFromLocalStorage();
-  const updatedEmails = storedEmails.map((email) =>
-    email.id === emailId ? { ...email, isDeleted: !email.isDeleted } : email
-  );
-  setEmailsToLocalStorage(updatedEmails);
-  setRecentDate();
-};
-
-export const toggleStarEmail = (emailId: string) => {
-  const storedEmails = getEmailsFromLocalStorage();
-  const updatedEmails = storedEmails.map((email) =>
-    email.id === emailId ? { ...email, isfav: !email.isFav } : email
-  );
-  setEmailsToLocalStorage(updatedEmails);
-  setRecentDate();
 };

@@ -33,6 +33,14 @@ function Sidebar() {
   const router = useRouter();
   const isSideBarOpen = state?.isSideBarOpen || false;
   const selectedFilterParam = state?.filterParam || 'inbox';
+  const emails = state?.emails || [];
+
+  const getActiveCount = () => {
+    const filteredEmails = emails?.filter(
+      (email) => email.type === 'inbox' && email.isActive
+    );
+    return filteredEmails?.length || 0;
+  };
 
   const setFilterParam = (mailType: string) => {
     router.push('/');
@@ -124,7 +132,9 @@ function Sidebar() {
 
             <div className={styles.text}>
               <div className={styles.title}>{link.type}</div>
-              <div className={styles.count}>{link.count}</div>
+              <div className={styles.count}>
+                {link?.isCountVisible ? getActiveCount() : null}
+              </div>
             </div>
           </div>
         ))}
@@ -166,7 +176,6 @@ function Sidebar() {
 
                 <div className={styles.text}>
                   <div className={styles.title}>{link.type}</div>
-                  <div className={styles.count}>{link.count}</div>
                 </div>
               </div>
             ))

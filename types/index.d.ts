@@ -64,7 +64,7 @@ export type EmailAttributes = {
   tag: EmailTag;
   isOpened?: boolean;
   isFav?: boolean;
-  isDeleted?: boolean;
+  isActive?: boolean;
 };
 
 type IconMap = {
