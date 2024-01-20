@@ -1,5 +1,23 @@
-.disabled {
-  pointer-events: none;
-  cursor: not-allowed !important;
-  display: none;
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0 4px;
+
+  &:hover,
+  &:active {
+    background-color: rgba(60, 64, 67, 0.1);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: none;
+  }
 }

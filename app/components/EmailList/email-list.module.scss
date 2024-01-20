@@ -87,6 +87,11 @@ $secondary-color: rgba(100, 121, 143, 0.122);
   max-width: 168px;
   width: 168px;
   padding-right: 32px;
+
+  span {
+    color: rgb(241, 20, 20);
+    font-weight: 400;
+  }
 }
 
 .msg_cell {

@@ -15,24 +15,15 @@ const filterMails = (
   type: EmailType,
   tag: EmailTag | null
 ) => {
-  // (email.type === typeFilter &&
-  //   email.isActive &&
-  //   (!tag || email.tag === tag)) ||
-  // filterMails(typeFilter, email)
-
-  if (type === 'bin') {
-    return !email.isActive;
-  }
-
-  if (type === 'draft') {
-    return email.isActive;
-  }
-
   switch (type) {
     case 'inbox':
-      return email.tag === tag;
+      return email.tag === tag && email.isActive;
     case 'starred':
       return email.isFav;
+    case 'draft':
+      return email.type === 'draft' && email.isActive;
+    case 'bin':
+      return !email.isActive;
     default:
       return false;
   }
@@ -44,7 +35,6 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   const filteredEmails = Array.isArray(emails)
     ? emails?.filter((email) => filterMails(email, typeFilter, selectedTag))
     : [];
-  console.log(selectedTag, typeFilter);
   return (
     <div className={styles.emails_container}>
       {filteredEmails.length > 0 ? (

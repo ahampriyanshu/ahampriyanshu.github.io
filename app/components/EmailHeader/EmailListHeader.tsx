@@ -10,20 +10,18 @@ import {
   ViewMore,
 } from '../Icons/Icons';
 import { AppContext } from '@/app/AppContext';
+import { resetApp } from '@/app/utils/common';
 
 export const EmailListHeader = () => {
   const { state, dispatch } = useContext(AppContext);
   const toggleSplitView = () => {
     dispatch({ type: 'TOGGLE_SPLIT_VIEW' });
   };
-  const refreshEmails = () => {
-    dispatch({ type: 'RESET_EMAILS' });
-  };
   const isSplitViewActive = state?.isSplitViewActive || false;
   return (
     <div className={styles.container}>
       <div className={styles.select_container}>
-        <IconBtn onClick={refreshEmails} padding='6px'>
+        <IconBtn onClick={resetApp} padding='6px'>
           <Refresh height={20} width={20} />
         </IconBtn>
         <IconBtn padding='6px'>

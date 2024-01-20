@@ -98,6 +98,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
         className={`${styles.name_cell} ${email.isOpened ? '' : 'font-bold'}`}
       >
         {email.sender.name}
+        {email.type === 'draft' ? <span> Draft</span> : null}
       </div>
       <div className={styles.msg_cell}>
         <div className={styles.msg_content}>
@@ -165,12 +166,11 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
               </div>
 
               <Time
-                disabled
                 onClick={(e) => toggleOpened(e)}
                 className='icon-btn'
                 height={18}
                 width={18}
-                strokeColor='rgba(0,0,0, 0.7)'
+                strokeColor='rgba(0,0,0, 0.5)'
               />
             </div>
           ) : (

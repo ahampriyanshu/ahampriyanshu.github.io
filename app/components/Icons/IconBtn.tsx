@@ -8,7 +8,6 @@ const IconBtn = ({
   children,
   style,
   onClick,
-  disabled = false,
 }: {
   height?: number;
   width?: number;
@@ -19,7 +18,6 @@ const IconBtn = ({
   style?: React.CSSProperties;
 }) => (
   <button
-    disabled={disabled}
     onClick={onClick}
     className={styles.button}
     style={{ padding, ...style }}

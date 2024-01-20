@@ -4,3 +4,9 @@ export const openInNewTab = (url: string) => {
 };
 
 export const isServer = typeof window === 'undefined';
+
+export const resetApp = () => {
+  if (isServer) return;
+  localStorage.clear();
+  window.location.reload();
+};
