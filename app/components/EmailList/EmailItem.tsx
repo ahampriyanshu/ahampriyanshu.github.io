@@ -16,6 +16,7 @@ import { useRouter } from 'next/navigation';
 import { EmailAttributes } from '@/types';
 import { getInitialDate } from '@/app/utils/localStorage';
 import { useEmailActions } from '@/app/hooks/useEmailActions';
+import { MAIL_DATA } from '@/app/data/links.data';
 
 export const EmailItem = ({ email }: { email: EmailAttributes }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -49,6 +50,22 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
     updateEmailArgs(email.id, { isActive: false });
   };
 
+  const doNothing = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event.stopPropagation();
+  };
+
+  const handleOnClick = () => {
+    if (email.type === 'draft') {
+      window.location.href = `mailto:${
+        MAIL_DATA.EMAIL
+      }?subject=${encodeURIComponent(
+        MAIL_DATA.SUBJECT
+      )}&body=${encodeURIComponent(MAIL_DATA.BODY)}`;
+    } else {
+      router.push(email.id || '/linkedin', { scroll: false });
+    }
+  };
+
   return (
     <div
       role='checkbox'
@@ -57,7 +74,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
       className={`${styles.email_content} ${
         email.isOpened ? styles.is_opened : ''
       }`}
-      onClick={() => router.push(email.id || '/linkedin', { scroll: false })}
+      onClick={handleOnClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
@@ -126,9 +143,18 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
 
         <div className={styles.options_container}>
           {isHovered ? (
-            <div className={`${styles.options}`}>
-              <Archive height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
-              <Bin height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
+            <div className={styles.options}>
+              <div onClick={doNothing}>
+                <Archive
+                  height={18}
+                  width={18}
+                  strokeColor='rgba(0,0,0, 0.7)'
+                />
+              </div>
+
+              <div onClick={deleteMail}>
+                <Bin height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
+              </div>
 
               <div onClick={toggleOpened}>
                 {email.isOpened ? (
@@ -146,7 +172,9 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
                 )}
               </div>
 
-              <Time height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
+              <div onClick={doNothing}>
+                <Time height={18} width={18} strokeColor='rgba(0,0,0, 0.7)' />
+              </div>
             </div>
           ) : (
             <span

@@ -5,15 +5,19 @@ import { AppContext } from '@/app/AppContext';
 import { IconBtn } from '../Icons/IconBtn';
 import { Filters, SearchIcon } from '../Icons/Icons';
 import { useEmailActions } from '@/app/hooks/useEmailActions';
-import { emailList } from '@/app/data';
 
 export function Search() {
   const { state, dispatch } = useContext(AppContext);
   const { searchParam = '' } = state || {};
   const { updateSearchHistory } = useEmailActions();
 
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) =>
-    dispatch({ type: 'SET_SEARCH_PARAM', payload: e.target.value });
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    dispatch({ type: 'SET_SEARCH_PARAM', payload: value });
+    if (value === '') {
+      dispatch({ type: 'SET_FILTER_PARAM', payload: 'inbox' });
+    }
+  };
 
   const handleSearchKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
