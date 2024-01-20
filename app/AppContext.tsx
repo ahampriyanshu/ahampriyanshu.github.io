@@ -81,6 +81,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log(`
+    ███████╗███╗   ███╗ █████╗ ██╗██╗     
+    ╚══███╔╝████╗ ████║██╔══██╗██║██║     
+      ███╔╝ ██╔████╔██║███████║██║██║     
+     ███╔╝  ██║╚██╔╝██║██╔══██║██║██║     
+    ███████╗██║ ╚═╝ ██║██║  ██║██║███████╗
+    ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+    `);
     const storedEmails = getEmailsFromLocalStorage();
     dispatch({ type: 'SET_IS_LOADED', payload: true });
     const newEmails = emailList.filter(

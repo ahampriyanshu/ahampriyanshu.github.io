@@ -16,7 +16,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
-import { GH_PROFILE, HEADER } from '@/app/data/links.data';
+import { GH_PROFILE, HEADER, LINKEDIN_PROFILE } from '@/app/data/links.data';
 
 function Header() {
   const { dispatch } = useContext(AppContext);
@@ -84,13 +84,16 @@ function Header() {
           </Tooltip>
 
           <Tooltip content='Apps'>
-            <IconBtn onClick={() => openInNewTab(HEADER.GIST)} padding='6px'>
+            <IconBtn onClick={() => openInNewTab(HEADER.APPS)} padding='6px'>
               <GridMenu />
             </IconBtn>
           </Tooltip>
 
           <Tooltip content='Account'>
-            <IconBtn onClick={() => openInNewTab(GH_PROFILE)} padding='6px'>
+            <IconBtn
+              onClick={() => openInNewTab(LINKEDIN_PROFILE)}
+              padding='6px'
+            >
               <Image
                 style={{
                   borderRadius: '50%',

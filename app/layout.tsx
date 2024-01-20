@@ -23,15 +23,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(`
-  ███████╗███╗   ███╗ █████╗ ██╗██╗     
-  ╚══███╔╝████╗ ████║██╔══██╗██║██║     
-    ███╔╝ ██╔████╔██║███████║██║██║     
-   ███╔╝  ██║╚██╔╝██║██╔══██║██║██║     
-  ███████╗██║ ╚═╝ ██║██║  ██║██║███████╗
-  ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
-  `);
-
   return (
     <html lang='en'>
       <body className={productSans.className}>

@@ -2,7 +2,6 @@
 
 .container {
   width: $sidebar-width;
-  min-width: $sidebar-width;
   height: 100%;
   background-color: transparent;
   transition-duration: 0.08s;
@@ -186,8 +185,6 @@
     }
 
     .expand_btn {
-      .expand_icon {
-      }
       .expand_text {
         display: none;
       }
