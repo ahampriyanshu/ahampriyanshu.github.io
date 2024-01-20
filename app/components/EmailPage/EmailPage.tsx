@@ -22,7 +22,7 @@ export const EmailPage = ({ id }: { id: string }) => {
     if (!emailDatum?.isOpened) {
       updateEmailArgs(id, { isOpened: true });
     }
-  }, [updateEmailArgs, id]);
+  }, [updateEmailArgs, id, router, state.emails]);
 
   return (
     <div className='h-100 w-100'>

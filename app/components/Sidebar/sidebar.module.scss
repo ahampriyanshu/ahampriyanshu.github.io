@@ -2,6 +2,7 @@
 
 .container {
   width: $sidebar-width;
+  min-width: $sidebar-width;
   height: 100%;
   background-color: transparent;
   transition-duration: 0.08s;

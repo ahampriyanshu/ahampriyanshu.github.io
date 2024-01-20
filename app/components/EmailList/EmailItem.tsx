@@ -6,9 +6,10 @@ import {
   Archive,
   Bin,
   Favourite,
-  OpenedMail,
+  ReadMail,
   Time,
   UnFavourite,
+  UnReadMail,
 } from '../Icons/Icons';
 import { getAbsoluteDate } from '@/app/utils/date';
 import { useRouter } from 'next/navigation';
@@ -40,8 +41,12 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     event.stopPropagation();
-    console.log('toggleOpened');
     updateEmailArgs(email.id, { isOpened: !email.isOpened });
+  };
+
+  const deleteMail = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event.stopPropagation();
+    updateEmailArgs(email.id, { isDeleted: true });
   };
 
   return (
@@ -132,19 +137,33 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
                 strokeColor='rgba(0,0,0, 0.7)'
               />
               <Bin
-                onClick={(e) => toggleOpened(e)}
+                onClick={(e) => deleteMail(e)}
                 className='icon-btn'
                 height={18}
                 width={18}
                 strokeColor='rgba(0,0,0, 0.7)'
               />
-              <OpenedMail
-                onClick={(e) => toggleOpened(e)}
-                className='icon-btn'
-                height={18}
-                width={18}
-                strokeColor='rgba(0,0,0, 0.7)'
-              />
+
+              <div onClick={toggleOpened}>
+                {email.isOpened ? (
+                  <UnReadMail
+                    title='Mark as unread'
+                    className='icon-btn'
+                    height={18}
+                    width={18}
+                    strokeColor='rgba(0,0,0, 0.7)'
+                  />
+                ) : (
+                  <ReadMail
+                    title='Mark as read'
+                    className='icon-btn'
+                    height={18}
+                    width={18}
+                    strokeColor='rgba(0,0,0, 0.7)'
+                  />
+                )}
+              </div>
+
               <Time
                 onClick={(e) => toggleOpened(e)}
                 className='icon-btn'

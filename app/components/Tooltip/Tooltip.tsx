@@ -24,6 +24,8 @@ const Tooltip: React.FC<TooltipProps> = ({
     setActive(false);
   };
 
+  if (!content) return <>{children}</>;
+
   return (
     <div
       className='tooltip-wrapper'

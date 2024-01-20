@@ -1,13 +1,26 @@
 'use client';
 import React, { useContext } from 'react';
 import styles from './email-list.module.scss';
-import { EmailTag, EmailType } from '@/types';
+import { EmailAttributes, EmailTag, EmailType } from '@/types';
 import { EmailItem } from './EmailItem';
 import { AppContext } from '@/app/AppContext';
 
 type EmailListProps = {
   selectedTag: EmailTag;
   typeFilter: EmailType;
+};
+
+const filterMails = (type: EmailType, email: EmailAttributes) => {
+  switch (type) {
+    case 'inbox':
+      return !email.isDeleted;
+    case 'starred':
+      return email.isFav;
+    case 'bin':
+      return email.isDeleted;
+    default:
+      return false;
+  }
 };
 
 export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
@@ -17,8 +30,9 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
     ? emails?.filter(
         (email) =>
           (email.type === typeFilter &&
+            !email.isDeleted &&
             (!selectedTag || email.tag === selectedTag)) ||
-          (typeFilter === 'starred' && email.isFav)
+          filterMails(typeFilter, email)
       )
     : [];
 
