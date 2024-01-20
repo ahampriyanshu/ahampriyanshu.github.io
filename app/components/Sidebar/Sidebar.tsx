@@ -23,7 +23,7 @@ import {
   Trash,
   TrashFilled,
 } from '../Icons/Icons';
-import { IconMap } from '@/types';
+import { EmailType, IconMap } from '@/types';
 import { useRouter } from 'next/navigation';
 
 function Sidebar() {
@@ -35,9 +35,10 @@ function Sidebar() {
   const selectedFilterParam = state?.filterParam || 'inbox';
   const emails = state?.emails || [];
 
-  const getActiveCount = () => {
+  const getActiveCount = (type: EmailType) => {
+    if (type === 'draft') return 0;
     const filteredEmails = emails?.filter(
-      (email) => email.type === 'inbox' && email.isActive
+      (email) => email.type === type && email.isActive
     );
     return filteredEmails?.length || 0;
   };
@@ -133,7 +134,9 @@ function Sidebar() {
             <div className={styles.text}>
               <div className={styles.title}>{link.type}</div>
               <div className={styles.count}>
-                {link?.isCountVisible ? getActiveCount() : null}
+                {link?.isCountVisible
+                  ? getActiveCount(link.type as EmailType)
+                  : null}
               </div>
             </div>
           </div>
