@@ -27,6 +27,7 @@ import { EmailType, IconMap } from '@/types';
 import { useRouter } from 'next/navigation';
 import { MAIL_DATA } from '@/app/data/links.data';
 import { useEmailActions } from '@/app/hooks/useEmailActions';
+import { PRODUCT_TOUR } from '@/app/constants/common.constants';
 
 function Sidebar() {
   const router = useRouter();
@@ -105,7 +106,7 @@ function Sidebar() {
           isSideBarOpen || isHovered ? styles.active : styles.collapsed
         }`}
       >
-        <button onClick={sendNewMail}>
+        <button id={PRODUCT_TOUR.THIRD_STEP} onClick={sendNewMail}>
           <div>
             <Image
               src='/icons/edit.png'

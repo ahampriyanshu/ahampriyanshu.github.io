@@ -1,5 +1,5 @@
 'use client';
-import { ChangeEvent, KeyboardEvent, useContext, useState } from 'react';
+import { ChangeEvent, KeyboardEvent, useContext } from 'react';
 import styles from './search.module.scss';
 import { AppContext } from '@/app/AppContext';
 import { IconBtn } from '../Icons/IconBtn';

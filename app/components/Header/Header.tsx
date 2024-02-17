@@ -1,5 +1,5 @@
 'use client';
-import { memo, useContext, useState } from 'react';
+import { memo, useContext, useEffect, useState } from 'react';
 import styles from './header.module.scss';
 import {
   GridMenu,
@@ -17,6 +17,10 @@ import { openInNewTab } from '@/app/utils/common';
 import { HEADER } from '@/app/data/links.data';
 import { Search } from '../Search/Search';
 import Popover from '../Popover/Popover';
+import Shepherd from 'shepherd.js';
+import { offset } from '@floating-ui/dom';
+import 'shepherd.js/dist/css/shepherd.css';
+import { PRODUCT_TOUR } from '@/app/constants/common.constants';
 
 function Header() {
   const router = useRouter();
@@ -27,8 +31,126 @@ function Header() {
     dispatch({ type: 'TOGGLE_SIDEBAR' });
   };
 
+  const startProductTour = () => {
+    const tour = new Shepherd.Tour({
+      defaultStepOptions: {
+        modalOverlayOpeningRadius: 12,
+        classes: 'tour_tooltip',
+      },
+      exitOnEsc: false,
+      keyboardNavigation: true,
+      useModalOverlay: true,
+    });
+    tour.addSteps([
+      {
+        id: `${PRODUCT_TOUR.FIRST_STEP}`,
+        title: 'Welcome to Zmail',
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.FIRST_STEP}`, on: 'right' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.SECOND_STEP}`,
+        title: 'Welcome to Zmail',
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.SECOND_STEP}`, on: 'bottom' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.THIRD_STEP}`,
+        title: 'Welcome to Zmail',
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.THIRD_STEP}`, on: 'right' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.FOURTH_STEP}`,
+        title: 'Welcome to Zmail',
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.FOURTH_STEP}`, on: 'bottom' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.FIFTH_STEP}`,
+        title: 'Welcome to Zmail',
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.FIFTH_STEP}`, on: 'right' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.SIXTH_STEP}`,
+        title: `That's all for now!`,
+        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        attachTo: { element: `#${PRODUCT_TOUR.SIXTH_STEP}`, on: 'right' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+    ]);
+
+    tour.start();
+  };
+
   return (
-    <div className={styles.container}>
+    <div id={PRODUCT_TOUR.FOURTH_STEP} className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
         <Tooltip content='Main Menu'>
           <IconBtn onClick={toggleSidebar}>
@@ -51,7 +173,6 @@ function Header() {
               <IconBtn
                 onClick={() => {
                   setIsHelperOpen(!isHelperOpen);
-                  // openInNewTab(HEADER.SUPPORT);
                 }}
                 padding='6px'
               >
@@ -60,10 +181,11 @@ function Header() {
             </Tooltip>
             <Popover isOpen={isHelperOpen}>
               <div className={styles.popover_support_body}>
-                <div className={styles.popover_support_container}>
-                  <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
-                    Help
-                  </div>
+                <div
+                  id={PRODUCT_TOUR.SIXTH_STEP}
+                  className={styles.popover_support_container}
+                >
+                  <div onClick={startProductTour}>Help</div>
                   <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
                     Updates
                   </div>
@@ -82,7 +204,7 @@ function Header() {
             </IconBtn>
           </Tooltip>
 
-          <Tooltip content='Apps'>
+          <Tooltip id={PRODUCT_TOUR.FIFTH_STEP} content='Apps'>
             <IconBtn onClick={() => openInNewTab(HEADER.APPS)} padding='6px'>
               <GridMenu />
             </IconBtn>

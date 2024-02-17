@@ -1,4 +1,5 @@
 export type TooltipProps = {
+  id?: string;
   disabled?: boolean;
   content: ReactNode;
   direction?: 'top' | 'bottom' | 'left' | 'right';

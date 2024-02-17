@@ -4,4 +4,8 @@
   right: 0px;
   transform: translate(0%, 100%);
   z-index: 9999;
+
+  & > * {
+    z-index: 9999;
+  }
 }

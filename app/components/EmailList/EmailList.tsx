@@ -4,6 +4,7 @@ import styles from './email-list.module.scss';
 import { EmailAttributes, EmailTag, EmailType } from '@/types';
 import { EmailItem } from './EmailItem';
 import { AppContext } from '@/app/AppContext';
+import { PRODUCT_TOUR } from '@/app/constants/common.constants';
 
 type EmailListProps = {
   typeFilter: EmailType;
@@ -52,7 +53,7 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   }, [typeFilter, dispatch]);
 
   return (
-    <div className={styles.emails_container}>
+    <div id={PRODUCT_TOUR.SECOND_STEP} className={styles.emails_container}>
       {filteredEmails?.length > 0 ? (
         filteredEmails.map((email, index) => (
           <EmailItem key={index} email={email} />

@@ -3,11 +3,12 @@ import { TooltipProps } from '@/types';
 import React, { useState } from 'react';
 
 const Tooltip: React.FC<TooltipProps> = ({
-  disabled = false,
   content,
+  id = '',
+  disabled = false,
   direction = 'bottom',
   delay = 400,
-  children,
+  children = null,
 }: TooltipProps) => {
   let timeout: NodeJS.Timeout | undefined;
   const [active, setActive] = useState(false);
@@ -29,6 +30,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <div
+      id={id}
       className={`tooltip-wrapper ${disabled ? 'tooltip-disabled' : ''}}`}
       onMouseEnter={showTip}
       onMouseLeave={hideTip}
