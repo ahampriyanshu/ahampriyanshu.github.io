@@ -1,5 +1,5 @@
 'use client';
-import { memo, useContext } from 'react';
+import { memo, useContext, useState } from 'react';
 import styles from './header.module.scss';
 import {
   GridMenu,
@@ -14,12 +14,15 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
-import { HEADER, LINKEDIN_PROFILE } from '@/app/data/links.data';
+import { HEADER } from '@/app/data/links.data';
 import { Search } from '../Search/Search';
+import Popover from '../Popover/Popover';
 
 function Header() {
   const router = useRouter();
   const { dispatch } = useContext(AppContext);
+  const [isHelperOpen, setIsHelperOpen] = useState(false);
+
   const toggleSidebar = () => {
     dispatch({ type: 'TOGGLE_SIDEBAR' });
   };
@@ -43,11 +46,35 @@ function Header() {
         <Search />
 
         <div className={styles.logo_container}>
-          <Tooltip content='Support'>
-            <IconBtn onClick={() => openInNewTab(HEADER.SUPPORT)} padding='6px'>
-              <QuestionMark />
-            </IconBtn>
-          </Tooltip>
+          <div className={styles.popover_container}>
+            <Tooltip content='Support'>
+              <IconBtn
+                onClick={() => {
+                  setIsHelperOpen(!isHelperOpen);
+                  // openInNewTab(HEADER.SUPPORT);
+                }}
+                padding='6px'
+              >
+                <QuestionMark />
+              </IconBtn>
+            </Tooltip>
+            <Popover isOpen={isHelperOpen}>
+              <div className={styles.popover_support_body}>
+                <div className={styles.popover_support_container}>
+                  <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
+                    Help
+                  </div>
+                  <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
+                    Updates
+                  </div>
+                  <span className={styles.divider} />
+                  <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
+                    Send feedback to me
+                  </div>
+                </div>
+              </div>
+            </Popover>
+          </div>
 
           <Tooltip content='Settings'>
             <IconBtn onClick={() => openInNewTab(HEADER.SETUP)} padding='6px'>
@@ -62,10 +89,7 @@ function Header() {
           </Tooltip>
 
           <Tooltip content='Account'>
-            <IconBtn
-              onClick={() => openInNewTab(LINKEDIN_PROFILE)}
-              padding='6px'
-            >
+            <IconBtn onClick={() => openInNewTab(HEADER.ACCOUNT)} padding='6px'>
               <Image
                 style={{
                   borderRadius: '50%',

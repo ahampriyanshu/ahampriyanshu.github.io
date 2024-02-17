@@ -6,6 +6,11 @@ export type TooltipProps = {
   children: ReactElement;
 };
 
+export type PopoverProps = {
+  isOpen?: boolean;
+  children: ReactNode;
+};
+
 export type ToastProps = {
   message: string;
   duration?: number;
