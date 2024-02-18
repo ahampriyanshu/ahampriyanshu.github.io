@@ -231,11 +231,11 @@ function Header() {
             }
           />
 
-          <Tooltip content='Settings'>
+          {/* <Tooltip content='Settings'>
             <IconBtn onClick={() => openInNewTab(HEADER.SETUP)} padding='6px'>
               <Settings />
             </IconBtn>
-          </Tooltip>
+          </Tooltip> */}
 
           <Popover
             trigger={
@@ -260,6 +260,7 @@ function Header() {
                         width={36}
                         height={36}
                         className={styles.apps_icon_image}
+                        priority
                       />
                       <span className={styles.apps_icon_text}>
                         {value.title}

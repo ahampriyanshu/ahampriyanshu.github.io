@@ -1,6 +1,5 @@
 .popover-container {
   position: relative;
-  display: inline-block;
 }
 
 .popover-trigger {
@@ -12,7 +11,6 @@
   bottom: -12px;
   right: 0px;
   transform: translate(5%, 100%);
-  z-index: 999;
   min-width: 164px;
   width: max-content;
 }
