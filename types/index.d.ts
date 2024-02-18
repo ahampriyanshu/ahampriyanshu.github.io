@@ -8,8 +8,8 @@ export type TooltipProps = {
 };
 
 export type PopoverProps = {
-  isOpen?: boolean;
-  children: ReactNode;
+  trigger: React.ReactNode;
+  content: React.ReactNode;
 };
 
 export type ToastProps = {

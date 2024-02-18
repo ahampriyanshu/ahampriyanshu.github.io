@@ -1,11 +1,26 @@
-.popover {
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-trigger {
+  cursor: pointer;
+}
+
+.popover-content {
   position: absolute;
   bottom: -12px;
   right: 0px;
-  transform: translate(0%, 100%);
-  z-index: 9999;
-
-  & > * {
-    z-index: 9999;
-  }
+  transform: translate(-6px, 100%);
+  z-index: 999;
+  min-width: 164px;
+  width: max-content;
+  box-shadow:
+    0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  border-radius: 4px;
+  background-color: #fff;
+  outline: 1px solid transparent;
+  line-height: normal;
+  padding: 6px 0;
 }

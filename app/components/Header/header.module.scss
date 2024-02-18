@@ -123,6 +123,7 @@ $header-height: var(--header-height);
 
 .popover_container {
   position: relative;
+  z-index: 9999;
 }
 
 .popover_support_body {
@@ -136,6 +137,7 @@ $header-height: var(--header-height);
   padding: 6px 0;
   min-width: 164px;
   width: max-content;
+  z-index: 9999;
 }
 
 .popover_support_container {
@@ -145,6 +147,7 @@ $header-height: var(--header-height);
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  z-index: 9999;
 
   & > div {
     color: #202124;
@@ -157,6 +160,7 @@ $header-height: var(--header-height);
     padding-inline: 30px;
     padding-block: 4px;
     width: 100%;
+    z-index: 9999;
 
     &:hover {
       background-color: #eee;

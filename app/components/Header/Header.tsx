@@ -1,5 +1,5 @@
 'use client';
-import { memo, useContext, useEffect, useState } from 'react';
+import { memo, useContext, useState } from 'react';
 import styles from './header.module.scss';
 import {
   GridMenu,
@@ -53,6 +53,11 @@ function Header() {
         },
         buttons: [
           {
+            text: 'Skip',
+            classes: 'tour_button secondary_button',
+            action: tour.cancel,
+          },
+          {
             text: 'Next',
             classes: 'tour_button',
             action: tour.next,
@@ -69,6 +74,11 @@ function Header() {
           middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
         },
         buttons: [
+          {
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
           {
             text: 'Next',
             classes: 'tour_button',
@@ -87,6 +97,11 @@ function Header() {
         },
         buttons: [
           {
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
+          {
             text: 'Next',
             classes: 'tour_button',
             action: tour.next,
@@ -103,6 +118,11 @@ function Header() {
           middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
         },
         buttons: [
+          {
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
           {
             text: 'Next',
             classes: 'tour_button',
@@ -121,6 +141,11 @@ function Header() {
         },
         buttons: [
           {
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
+          {
             text: 'Next',
             classes: 'tour_button',
             action: tour.next,
@@ -138,9 +163,14 @@ function Header() {
         },
         buttons: [
           {
-            text: 'Next',
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
+          {
+            text: 'Done',
             classes: 'tour_button',
-            action: tour.next,
+            action: tour.complete,
           },
         ],
       },
@@ -148,6 +178,8 @@ function Header() {
 
     tour.start();
   };
+
+  // const { refs, floatingStyles } = useFloating();
 
   return (
     <div id={PRODUCT_TOUR.FOURTH_STEP} className={styles.container}>
@@ -168,8 +200,8 @@ function Header() {
         <Search />
 
         <div className={styles.logo_container}>
-          <div className={styles.popover_container}>
-            <Tooltip content='Support'>
+          <Popover
+            trigger={
               <IconBtn
                 onClick={() => {
                   setIsHelperOpen(!isHelperOpen);
@@ -178,25 +210,23 @@ function Header() {
               >
                 <QuestionMark />
               </IconBtn>
-            </Tooltip>
-            <Popover isOpen={isHelperOpen}>
-              <div className={styles.popover_support_body}>
-                <div
-                  id={PRODUCT_TOUR.SIXTH_STEP}
-                  className={styles.popover_support_container}
-                >
-                  <div onClick={startProductTour}>Help</div>
-                  <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
-                    Updates
-                  </div>
-                  <span className={styles.divider} />
-                  <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
-                    Send feedback to me
-                  </div>
+            }
+            content={
+              <div
+                id={PRODUCT_TOUR.SIXTH_STEP}
+                className={styles.popover_support_container}
+              >
+                <div onClick={startProductTour}>Help</div>
+                <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
+                  Updates
+                </div>
+                <span className={styles.divider} />
+                <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
+                  Send feedback to me
                 </div>
               </div>
-            </Popover>
-          </div>
+            }
+          />
 
           <Tooltip content='Settings'>
             <IconBtn onClick={() => openInNewTab(HEADER.SETUP)} padding='6px'>
