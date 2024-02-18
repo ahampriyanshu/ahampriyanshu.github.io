@@ -5,6 +5,7 @@ import { AppContext } from '@/app/AppContext';
 import { IconBtn } from '../Icons/IconBtn';
 import { Filters, SearchIcon } from '../Icons/Icons';
 import { useEmailActions } from '@/app/hooks/useEmailActions';
+import { PRODUCT_TOUR } from '@/app/constants/common.constants';
 
 export function Search() {
   const { state, dispatch } = useContext(AppContext);
@@ -56,6 +57,7 @@ export function Search() {
       </IconBtn>
 
       <input
+        id={PRODUCT_TOUR.FOURTH_STEP}
         type='text'
         className={styles.search_input}
         placeholder='Search mail'

@@ -53,10 +53,14 @@ export const EmailList = ({ selectedTag, typeFilter }: EmailListProps) => {
   }, [typeFilter, dispatch]);
 
   return (
-    <div id={PRODUCT_TOUR.SECOND_STEP} className={styles.emails_container}>
+    <div className={styles.emails_container}>
       {filteredEmails?.length > 0 ? (
         filteredEmails.map((email, index) => (
-          <EmailItem key={index} email={email} />
+          <EmailItem
+            id={index === 0 ? PRODUCT_TOUR.SECOND_STEP : ''}
+            key={index}
+            email={email}
+          />
         ))
       ) : (
         <div className={styles.no_emails}>

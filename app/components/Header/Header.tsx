@@ -6,7 +6,6 @@ import {
   HamburgerMenu,
   IconBtn,
   QuestionMark,
-  Settings,
 } from '@/app/components/Icons/Icons';
 import { AppContext } from '@/app/AppContext';
 import Image from 'next/image';
@@ -21,7 +20,6 @@ import Shepherd from 'shepherd.js';
 import { offset } from '@floating-ui/dom';
 import 'shepherd.js/dist/css/shepherd.css';
 import { PRODUCT_TOUR } from '@/app/constants/common.constants';
-import { title } from 'process';
 
 function Header() {
   const router = useRouter();
@@ -67,8 +65,8 @@ function Header() {
       },
       {
         id: `${PRODUCT_TOUR.SECOND_STEP}`,
-        title: 'Welcome to Zmail',
-        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        title: 'Explore with Lists',
+        text: "Effortlessly organize your tasks, projects, and more with our intuitive List component. Click 'Next' to discover how Zmail simplifies your workflow.",
         attachTo: { element: `#${PRODUCT_TOUR.SECOND_STEP}`, on: 'bottom' },
         canClickTarget: false,
         floatingUIOptions: {
@@ -89,8 +87,8 @@ function Header() {
       },
       {
         id: `${PRODUCT_TOUR.THIRD_STEP}`,
-        title: 'Welcome to Zmail',
-        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        title: 'Navigate with Ease',
+        text: "Discover the Sidebar feature, your gateway to smooth navigation. Access key sections of Zmail with just a click. Ready to dive in? Click 'Next'.",
         attachTo: { element: `#${PRODUCT_TOUR.THIRD_STEP}`, on: 'right' },
         canClickTarget: false,
         floatingUIOptions: {
@@ -111,10 +109,11 @@ function Header() {
       },
       {
         id: `${PRODUCT_TOUR.FOURTH_STEP}`,
-        title: 'Welcome to Zmail',
-        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        title: 'Find with Precision',
+        text: "Locate emails, projects, and more in seconds with Zmail's powerful Searchbar. Click 'Next' to experience the convenience of quick and accurate searches.",
         attachTo: { element: `#${PRODUCT_TOUR.FOURTH_STEP}`, on: 'bottom' },
         canClickTarget: false,
+        modalOverlayOpeningRadius: 8,
         floatingUIOptions: {
           middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
         },
@@ -133,8 +132,8 @@ function Header() {
       },
       {
         id: `${PRODUCT_TOUR.FIFTH_STEP}`,
-        title: 'Welcome to Zmail',
-        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
+        title: 'Start Fresh',
+        text: "Need a clean slate? Learn how to reset data effortlessly with Zmail. Click 'Next' to see how easy it is to refresh and reorganize your workspace.",
         attachTo: { element: `#${PRODUCT_TOUR.FIFTH_STEP}`, on: 'right' },
         canClickTarget: false,
         floatingUIOptions: {
@@ -155,9 +154,31 @@ function Header() {
       },
       {
         id: `${PRODUCT_TOUR.SIXTH_STEP}`,
-        title: `That's all for now!`,
-        text: 'Gmail styled portfolio app in NextJS. Click next to continue.',
-        attachTo: { element: `#${PRODUCT_TOUR.SIXTH_STEP}`, on: 'right' },
+        title: 'Stay Connected',
+        text: "Enable seamless connections with Zmail's collaboration features. Let's explore how Zmail fosters communication and collaboration. Click 'Next' to continue.",
+        attachTo: { element: `#${PRODUCT_TOUR.SIXTH_STEP}`, on: 'bottom' },
+        canClickTarget: false,
+        floatingUIOptions: {
+          middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
+        },
+        buttons: [
+          {
+            text: 'Back',
+            classes: 'tour_button secondary_button',
+            action: tour.back,
+          },
+          {
+            text: 'Next',
+            classes: 'tour_button',
+            action: tour.next,
+          },
+        ],
+      },
+      {
+        id: `${PRODUCT_TOUR.SEVENTH_STEP}`,
+        title: 'Thank You!',
+        text: "Congratulations! You've completed the Zmail Product Tour. We value your feedback. Please take a moment to share your thoughts in the feedback form. Thank you for choosing Zmail!",
+        attachTo: { element: `#${PRODUCT_TOUR.SEVENTH_STEP}`, on: 'left' },
         canClickTarget: false,
         floatingUIOptions: {
           middleware: [offset({ mainAxis: 24, crossAxis: 0 })],
@@ -176,12 +197,11 @@ function Header() {
         ],
       },
     ]);
-
     tour.start();
   };
 
   return (
-    <div id={PRODUCT_TOUR.FOURTH_STEP} className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
         <Tooltip content='Main Menu'>
           <IconBtn onClick={toggleSidebar}>
@@ -201,7 +221,7 @@ function Header() {
         <div className={styles.logo_container}>
           <Popover
             trigger={
-              <Tooltip content='Support'>
+              <Tooltip id={PRODUCT_TOUR.SEVENTH_STEP} content='Support'>
                 <IconBtn
                   onClick={() => {
                     setIsHelperOpen(!isHelperOpen);
@@ -213,10 +233,7 @@ function Header() {
               </Tooltip>
             }
             content={
-              <div
-                id={PRODUCT_TOUR.SIXTH_STEP}
-                className={styles.support_container}
-              >
+              <div className={styles.support_container}>
                 <div className={styles.support_body}>
                   <div onClick={startProductTour}>Help</div>
                   <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
@@ -231,15 +248,9 @@ function Header() {
             }
           />
 
-          {/* <Tooltip content='Settings'>
-            <IconBtn onClick={() => openInNewTab(HEADER.SETUP)} padding='6px'>
-              <Settings />
-            </IconBtn>
-          </Tooltip> */}
-
           <Popover
             trigger={
-              <Tooltip id={PRODUCT_TOUR.FIFTH_STEP} content='Apps'>
+              <Tooltip id={PRODUCT_TOUR.SIXTH_STEP} content='Apps'>
                 <IconBtn padding='6px'>
                   <GridMenu />
                 </IconBtn>

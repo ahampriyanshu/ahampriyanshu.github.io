@@ -11,6 +11,7 @@ import {
 } from '../Icons/Icons';
 import { AppContext } from '@/app/AppContext';
 import { resetApp } from '@/app/utils/common';
+import { PRODUCT_TOUR } from '@/app/constants/common.constants';
 
 export const EmailListHeader = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -21,7 +22,7 @@ export const EmailListHeader = () => {
   return (
     <div className={styles.container}>
       <div className={styles.select_container}>
-        <IconBtn onClick={resetApp} padding='6px'>
+        <IconBtn id={PRODUCT_TOUR.FIFTH_STEP} onClick={resetApp} padding='6px'>
           <Refresh height={20} width={20} />
         </IconBtn>
         <IconBtn padding='6px'>

@@ -18,7 +18,13 @@ import { getInitialDate } from '@/app/utils/localStorage';
 import { useEmailActions } from '@/app/hooks/useEmailActions';
 import { MAIL_DATA } from '@/app/data/links.data';
 
-export const EmailItem = ({ email }: { email: EmailAttributes }) => {
+export const EmailItem = ({
+  id,
+  email,
+}: {
+  id: string;
+  email: EmailAttributes;
+}) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
@@ -68,6 +74,7 @@ export const EmailItem = ({ email }: { email: EmailAttributes }) => {
 
   return (
     <div
+      id={id}
       role='checkbox'
       aria-checked={isChecked}
       draggable={false}

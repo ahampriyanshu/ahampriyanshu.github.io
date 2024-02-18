@@ -1,13 +1,12 @@
 'use client';
 import { memo, useEffect, useState } from 'react';
 import styles from './footer.module.scss';
-import { useRouter } from 'next/navigation';
 import { OpenInNewTab } from '../Icons/Icons';
 import { getRelativeTime } from '@/app/utils/date';
 import { getInitialDate } from '@/app/utils/localStorage';
+import { openInNewTab } from '@/app/utils/common';
 
 function Footer() {
-  const router = useRouter();
   const maxValue = 15;
   const currentValue = 3.7;
   const usedPercentage = (currentValue / maxValue) * 100;
@@ -36,7 +35,7 @@ function Footer() {
             ></div>
           </div>
           <div
-            onClick={() => router.push('https://resume.ahampriyanshu.com')}
+            onClick={() => openInNewTab('https://drive.google.com/drive/u/0/')}
             className={`flex justify-start align-center pt-1 ${styles.text}`}
           >
             <span className='underline mr-2 cursor'>{`${currentValue} GB of ${maxValue} GB used`}</span>{' '}

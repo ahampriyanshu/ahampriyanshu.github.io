@@ -10,6 +10,7 @@ export const PRODUCT_TOUR = {
   FOURTH_STEP: 'fourth-step',
   FIFTH_STEP: 'fifth-step',
   SIXTH_STEP: 'sixth-step',
+  SEVENTH_STEP: 'seventh-step',
 };
 
 export const monthNames = [

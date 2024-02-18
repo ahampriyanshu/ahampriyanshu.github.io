@@ -93,6 +93,7 @@ function Sidebar() {
 
   return (
     <div
+      id={PRODUCT_TOUR.THIRD_STEP}
       className={`${styles.container} ${
         isSideBarOpen || isHovered ? styles.active : styles.collapsed
       }`}
@@ -106,7 +107,7 @@ function Sidebar() {
           isSideBarOpen || isHovered ? styles.active : styles.collapsed
         }`}
       >
-        <button id={PRODUCT_TOUR.THIRD_STEP} onClick={sendNewMail}>
+        <button onClick={sendNewMail}>
           <div>
             <Image
               src='/icons/edit.png'
