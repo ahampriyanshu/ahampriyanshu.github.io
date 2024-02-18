@@ -1,5 +1,8 @@
 export const GH_PROFILE = 'https://github.com/ahampriyanshu';
 export const LINKEDIN_PROFILE = 'https://www.linkedin.com/in/ahampriyanshu';
+export const CF_PROFILE = 'https://codeforces.com/profile/ahampriyanshu';
+export const LC_PROFILE = 'https://leetcode.com/ahampriyanshu';
+export const HR_PROFILE = 'https://www.hackerrank.com/ahampriyanshu';
 
 export const HEADER = {
   SUPPORT: 'https://github.com/ahampriyanshu/ahampriyanshu.github.io',
@@ -9,6 +12,7 @@ export const HEADER = {
   FEEDBACK_FORM: 'https://qke8euxur5q.typeform.com/to/wMrmQrsQ',
   UPDATE_HISTORY:
     'https://github.com/ahampriyanshu/ahampriyanshu.github.io/commits/main',
+  WORKSPACE: 'https://workspace.google.com/marketplace?pann=ogb',
 };
 
 export const MAIL_DATA = {

@@ -179,8 +179,6 @@ function Header() {
     tour.start();
   };
 
-  // const { refs, floatingStyles } = useFloating();
-
   return (
     <div id={PRODUCT_TOUR.FOURTH_STEP} className={styles.container}>
       <div className={styles.sidebar_toggle_container}>
@@ -202,27 +200,31 @@ function Header() {
         <div className={styles.logo_container}>
           <Popover
             trigger={
-              <IconBtn
-                onClick={() => {
-                  setIsHelperOpen(!isHelperOpen);
-                }}
-                padding='6px'
-              >
-                <QuestionMark />
-              </IconBtn>
+              <Tooltip content='Support'>
+                <IconBtn
+                  onClick={() => {
+                    setIsHelperOpen(!isHelperOpen);
+                  }}
+                  padding='6px'
+                >
+                  <QuestionMark />
+                </IconBtn>
+              </Tooltip>
             }
             content={
               <div
                 id={PRODUCT_TOUR.SIXTH_STEP}
-                className={styles.popover_support_container}
+                className={styles.support_container}
               >
-                <div onClick={startProductTour}>Help</div>
-                <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
-                  Updates
-                </div>
-                <span className={styles.divider} />
-                <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
-                  Send feedback to me
+                <div className={styles.support_body}>
+                  <div onClick={startProductTour}>Help</div>
+                  <div onClick={() => openInNewTab(HEADER.UPDATE_HISTORY)}>
+                    Updates
+                  </div>
+                  <span className={styles.divider} />
+                  <div onClick={() => openInNewTab(HEADER.FEEDBACK_FORM)}>
+                    Send feedback to me
+                  </div>
                 </div>
               </div>
             }
@@ -234,11 +236,63 @@ function Header() {
             </IconBtn>
           </Tooltip>
 
-          <Tooltip id={PRODUCT_TOUR.FIFTH_STEP} content='Apps'>
-            <IconBtn onClick={() => openInNewTab(HEADER.APPS)} padding='6px'>
-              <GridMenu />
-            </IconBtn>
-          </Tooltip>
+          <Popover
+            trigger={
+              <Tooltip id={PRODUCT_TOUR.FIFTH_STEP} content='Apps'>
+                <IconBtn padding='6px'>
+                  <GridMenu />
+                </IconBtn>
+              </Tooltip>
+            }
+            content={
+              <div className={styles.apps_container}>
+                <div className={styles.apps_body}>
+                  <div
+                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
+                    className={styles.apps_icon}
+                  >
+                    <Image
+                      src='/user.jpg'
+                      alt='linkedin profile'
+                      width={48}
+                      height={48}
+                      className={styles.apps_icon_image}
+                    />
+                    <span className={styles.apps_icon_text}>LinkedIn</span>
+                  </div>
+
+                  <div
+                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
+                    className={styles.apps_icon}
+                  >
+                    <Image
+                      src='/user.jpg'
+                      alt='linkedin profile'
+                      width={48}
+                      height={48}
+                      className={styles.apps_icon_image}
+                    />
+                    <span className={styles.apps_icon_text}>LinkedIn</span>
+                  </div>
+
+                  <div
+                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
+                    className={styles.apps_icon}
+                  >
+                    <Image
+                      src='/user.jpg'
+                      alt='linkedin profile'
+                      width={48}
+                      height={48}
+                      className={styles.apps_icon_image}
+                    />
+                    <span className={styles.apps_icon_text}>LinkedIn</span>
+                  </div>
+                  <button>More from Google Workspace Marketplace</button>
+                </div>
+              </div>
+            }
+          />
 
           <Tooltip content='Account'>
             <IconBtn onClick={() => openInNewTab(HEADER.ACCOUNT)} padding='6px'>
