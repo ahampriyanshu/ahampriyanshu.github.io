@@ -1,8 +1,60 @@
-export const GH_PROFILE = 'https://github.com/ahampriyanshu';
-export const LINKEDIN_PROFILE = 'https://www.linkedin.com/in/ahampriyanshu';
-export const CF_PROFILE = 'https://codeforces.com/profile/ahampriyanshu';
-export const LC_PROFILE = 'https://leetcode.com/ahampriyanshu';
-export const HR_PROFILE = 'https://www.hackerrank.com/ahampriyanshu';
+export const GITHUB_PROFILE = 'https://github.com/ahampriyanshu';
+
+export type ProfileType = {
+  img: string;
+  title: string;
+  username: string;
+  link: string;
+};
+
+export type ProfileDataType = {
+  [key: string]: ProfileType;
+};
+
+export const PROFILE_DATA: ProfileDataType = {
+  github: {
+    img: '/icons/github.png',
+    title: 'GitHub',
+    username: 'ahampriyanshu',
+    link: 'https://github.com/ahampriyanshu',
+  },
+  linkedin: {
+    img: '/icons/linkedin.png',
+    title: 'LinkedIn',
+    username: 'ahampriyanshu',
+    link: 'https://www.linkedin.com/in/ahampriyanshu',
+  },
+  codeforces: {
+    img: '/icons/codeforces.svg',
+    title: 'Codeforces',
+    username: 'ahampriyanshu',
+    link: 'https://codeforces.com/profile/ahampriyanshu',
+  },
+  leetcode: {
+    img: '/icons/leetcode.png',
+    title: 'LeetCode',
+    username: 'ahampriyanshu',
+    link: 'https://leetcode.com/ahampriyanshu',
+  },
+  hackerrank: {
+    img: '/icons/hackerrank.png',
+    title: 'HackerRank',
+    username: 'ahampriyanshu',
+    link: 'https://www.hackerrank.com/ahampriyanshu',
+  },
+  kaggle: {
+    img: '/icons/kaggle.png',
+    title: 'Kaggle',
+    username: 'ahampriyanshu',
+    link: 'https://www.kaggle.com/ahampriyanshu',
+  },
+  telegram: {
+    img: '/icons/telegram.svg',
+    title: 'Telegram',
+    username: 'ahampriyanshu',
+    link: 'https://t.me/ahampriyanshu',
+  },
+};
 
 export const HEADER = {
   SUPPORT: 'https://github.com/ahampriyanshu/ahampriyanshu.github.io',

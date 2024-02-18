@@ -14,13 +14,14 @@ import Tooltip from '../Tooltip/Tooltip';
 import { site } from '@/app/config';
 import { useRouter } from 'next/navigation';
 import { openInNewTab } from '@/app/utils/common';
-import { HEADER } from '@/app/data/links.data';
+import { HEADER, PROFILE_DATA } from '@/app/data/links.data';
 import { Search } from '../Search/Search';
 import Popover from '../Popover/Popover';
 import Shepherd from 'shepherd.js';
 import { offset } from '@floating-ui/dom';
 import 'shepherd.js/dist/css/shepherd.css';
 import { PRODUCT_TOUR } from '@/app/constants/common.constants';
+import { title } from 'process';
 
 function Header() {
   const router = useRouter();
@@ -247,49 +248,26 @@ function Header() {
             content={
               <div className={styles.apps_container}>
                 <div className={styles.apps_body}>
-                  <div
-                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
-                    className={styles.apps_icon}
-                  >
-                    <Image
-                      src='/user.jpg'
-                      alt='linkedin profile'
-                      width={48}
-                      height={48}
-                      className={styles.apps_icon_image}
-                    />
-                    <span className={styles.apps_icon_text}>LinkedIn</span>
-                  </div>
-
-                  <div
-                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
-                    className={styles.apps_icon}
-                  >
-                    <Image
-                      src='/user.jpg'
-                      alt='linkedin profile'
-                      width={48}
-                      height={48}
-                      className={styles.apps_icon_image}
-                    />
-                    <span className={styles.apps_icon_text}>LinkedIn</span>
-                  </div>
-
-                  <div
-                    onClick={() => openInNewTab(HEADER.ACCOUNT)}
-                    className={styles.apps_icon}
-                  >
-                    <Image
-                      src='/user.jpg'
-                      alt='linkedin profile'
-                      width={48}
-                      height={48}
-                      className={styles.apps_icon_image}
-                    />
-                    <span className={styles.apps_icon_text}>LinkedIn</span>
-                  </div>
-                  <button>More from Google Workspace Marketplace</button>
+                  {Object.entries(PROFILE_DATA).map(([key, value]) => (
+                    <div
+                      key={key}
+                      onClick={() => openInNewTab(value.link)}
+                      className={styles.apps_icon}
+                    >
+                      <Image
+                        src={value.img}
+                        alt={value.title}
+                        width={36}
+                        height={36}
+                        className={styles.apps_icon_image}
+                      />
+                      <span className={styles.apps_icon_text}>
+                        {value.title}
+                      </span>
+                    </div>
+                  ))}
                 </div>
+                <button>More from Google Workspace Marketplace</button>
               </div>
             }
           />
