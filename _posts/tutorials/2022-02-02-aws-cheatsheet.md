@@ -6,19 +6,10 @@ categories: [Tutorials]
 tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
 ---
 
-## What is AWS ?
-
-> Amazon Web Services (AWS) is a subsidiary of Amazon.com that provides on-demand cloud computing platforms to individuals, companies, and governments, on a metered pay-as-you-go basis.
-
-### Installing AWS CLI
+## Installing AWS CLI
 
 ```bash
 pip install awscli
-```
-
-### Configuring AWS CLI
-
-```bash
 aws configure
 ```
 
