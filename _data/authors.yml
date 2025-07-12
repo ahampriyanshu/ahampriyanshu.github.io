@@ -1,0 +1,14 @@
+Priyanshu Tiwari:
+  name: Priyanshu Tiwari
+  picture: logo.png
+  twitter: "@ahampriyanshu"
+  links:
+    - title: Links
+      url: https://links.ahampriyanshu.com/
+      icon: fas fa-chrome
+    - title: Telegram
+      url: https://t.me/ahampriyanshu
+      icon: fab fa-telegram-plane
+    - title: Discord
+      url: https://discordapp.com/users/746095596175097916
+      icon: fab fa-discord

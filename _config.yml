@@ -1,0 +1,114 @@
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
+skin: "/assets/css/skins/default.css"
+locale: en-US
+title: "Priyanshu Tiwari"
+description: "Hello and welcome to my blog. I will try to write about tech and finance."
+baseurl: "/blog"
+url: "https://ahampriyanshu.com"
+logo: "/logo.png"
+date_format: "%B %-d, %Y"
+read_time: true
+words_per_minute: 60  
+mathjax:
+  enable: true
+  combo: "tex-svg" 
+  tags: "all"
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+google_analytics:
+disqus:
+  shortname:
+twitter:
+  username: "ahampriyanshu"
+
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
+permalink: /:title/
+markdown: kramdown
+feed:
+  path: feed.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 24
+paginate_path: /page:num/
+
+copyright: "Priyanshu Tiwari"
+
+# Search
+search_full_content: true # can have performance implications for large sites
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+  
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# Front Matter Defaults
+defaults:
+  # Posts defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
+# Site Author
+author:
+  name: Priyanshu Tiwari
+  picture: /logo.png
+  email:
+  twitter: ahampriyanshu
+  links:
+    - title: Twitter
+      url: https://twitter.com/ahampriyanshu
+      icon: fab fa-twitter-square
+    - title: Instagram
+      url: https://instagram.com/ahampriyanshu
+      icon: fab fa-instagram
+    - title: GitHub
+      url: https://github.com/ahampriyanshu
+      icon: fab fa-github-square
+
+# Footer Links
+footer_links:
+  - title: Links
+    url: https://ahampriyanshu.com
+    icon: fab fa-chrome
+  - title: Telegram
+    url: https://t.me/ahampriyanshu
+    icon: fab fa-telegram-plane
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/ahampriyanshu/
+    icon: fab fa-linkedin
+  - title: GitHub
+    url: https://github.com/ahampriyanshu
+    icon: fab fa-github
+  - title: Email
+    url: mailto:ahampriyanshu@gmail.com
+    icon: fas fa-envelope
+  - title: RSS
+    url: /feed.xml
+    icon: fas fa-rss

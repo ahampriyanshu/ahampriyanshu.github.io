@@ -1,0 +1,12 @@
+# Sample site navigation bar links
+
+- title: Home
+  url: /
+- title: Posts
+  url: /posts/
+- title: Search
+  url: /search/
+- title: Categories
+  url: /categories/
+- title: Tags
+  url: /tags/
