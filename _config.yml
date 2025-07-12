@@ -3,7 +3,7 @@ skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Priyanshu Tiwari"
 description: "Hello and welcome to my blog. I will try to write about tech and finance."
-baseurl: "/blog"
+baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
 date_format: "%B %-d, %Y"

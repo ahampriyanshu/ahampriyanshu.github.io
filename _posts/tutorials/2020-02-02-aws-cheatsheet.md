@@ -257,38 +257,38 @@ Identity and Access Management (IAM) is crucial for securing your AWS resources.
 aws iam list-users
 
 # Create new user
-aws iam create-user --user-name john-doe
+aws iam create-user --user-name louie-ck
 
 # Get user details
-aws iam get-user --user-name john-doe
+aws iam get-user --user-name louie-ck
 
 # Update user name
-aws iam update-user --user-name john-doe --new-user-name jane-doe
+aws iam update-user --user-name louie-ck --new-user-name jane-doe
 
 # Delete user
-aws iam delete-user --user-name john-doe
+aws iam delete-user --user-name louie-ck
 
 # Add user to group
-aws iam add-user-to-group --user-name john-doe --group-name developers
+aws iam add-user-to-group --user-name louie-ck --group-name developers
 
 # Remove user from group
-aws iam remove-user-from-group --user-name john-doe --group-name developers
+aws iam remove-user-from-group --user-name louie-ck --group-name developers
 ```
 
 ### Access Keys
 
 ```bash
 # List user's access keys
-aws iam list-access-keys --user-name john-doe
+aws iam list-access-keys --user-name louie-ck
 
 # Create access key for user
-aws iam create-access-key --user-name john-doe
+aws iam create-access-key --user-name louie-ck
 
 # Deactivate access key
-aws iam update-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --status Inactive --user-name john-doe
+aws iam update-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --status Inactive --user-name louie-ck
 
 # Delete access key
-aws iam delete-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --user-name john-doe
+aws iam delete-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --user-name louie-ck
 ```
 
 ### Groups
@@ -307,7 +307,7 @@ aws iam get-group --group-name developers
 aws iam delete-group --group-name developers
 
 # List groups for user
-aws iam get-groups-for-user --user-name john-doe
+aws iam get-groups-for-user --user-name louie-ck
 ```
 
 ### Policies
@@ -336,10 +336,10 @@ aws iam delete-policy --policy-arn arn:aws:iam::123456789012:policy/MyPolicy
 
 ```bash
 # Attach policy to user
-aws iam attach-user-policy --user-name john-doe --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
+aws iam attach-user-policy --user-name louie-ck --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
 
 # Detach policy from user
-aws iam detach-user-policy --user-name john-doe --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
+aws iam detach-user-policy --user-name louie-ck --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
 
 # Attach policy to group
 aws iam attach-group-policy --group-name developers --policy-arn arn:aws:iam::aws:policy/PowerUserAccess
@@ -352,7 +352,7 @@ aws iam attach-role-policy --role-name MyRole --policy-arn arn:aws:iam::aws:poli
 
 ```bash
 # List policies attached to user
-aws iam list-attached-user-policies --user-name john-doe
+aws iam list-attached-user-policies --user-name louie-ck
 
 # List policies attached to group
 aws iam list-attached-group-policies --group-name developers
@@ -361,7 +361,7 @@ aws iam list-attached-group-policies --group-name developers
 aws iam list-attached-role-policies --role-name MyRole
 
 # List inline policies for user
-aws iam list-user-policies --user-name john-doe
+aws iam list-user-policies --user-name louie-ck
 ```
 
 ### Roles
@@ -390,16 +390,16 @@ aws iam add-role-to-instance-profile --instance-profile-name MyProfile --role-na
 
 ```bash
 # Create login profile
-aws iam create-login-profile --user-name john-doe --password MyPassword123
+aws iam create-login-profile --user-name louie-ck --password MyPassword123
 
 # Get login profile
-aws iam get-login-profile --user-name john-doe
+aws iam get-login-profile --user-name louie-ck
 
 # Update password
-aws iam update-login-profile --user-name john-doe --password NewPassword123
+aws iam update-login-profile --user-name louie-ck --password NewPassword123
 
 # Delete login profile
-aws iam delete-login-profile --user-name john-doe
+aws iam delete-login-profile --user-name louie-ck
 
 # Get password policy
 aws iam get-account-password-policy
@@ -412,18 +412,18 @@ aws iam update-account-password-policy --minimum-password-length 12 --require-sy
 
 ```bash
 # List MFA devices for user
-aws iam list-mfa-devices --user-name john-doe
+aws iam list-mfa-devices --user-name louie-ck
 
 # Enable MFA device
-aws iam enable-mfa-device --user-name john-doe --serial-number arn:aws:iam::123456789012:mfa/john-doe --authentication-code-1 123456 --authentication-code-2 789012
+aws iam enable-mfa-device --user-name louie-ck --serial-number arn:aws:iam::123456789012:mfa/louie-ck --authentication-code-1 123456 --authentication-code-2 789012
 
 # Deactivate MFA device
-aws iam deactivate-mfa-device --user-name john-doe --serial-number arn:aws:iam::123456789012:mfa/john-doe
+aws iam deactivate-mfa-device --user-name louie-ck --serial-number arn:aws:iam::123456789012:mfa/louie-ck
 ```
 
 ---
 
-## Pro Tips and Best Practices
+## Best Practices
 
 ### 1. Use Profiles for Multiple Accounts
 ```bash

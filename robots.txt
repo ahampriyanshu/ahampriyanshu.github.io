@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://ahampriyanshu.com/blog/sitemap.xml
+Sitemap: https://ahampriyanshu.com/sitemap.xml
