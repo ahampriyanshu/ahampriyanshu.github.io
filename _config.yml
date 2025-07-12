@@ -2,7 +2,7 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Priyanshu Tiwari"
-description: "Hello and welcome to my blog. I will try to write about tech and finance."
+description: "Hello and welcome to my blog. A collection of tech & finance bits I’ll need later."
 baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
