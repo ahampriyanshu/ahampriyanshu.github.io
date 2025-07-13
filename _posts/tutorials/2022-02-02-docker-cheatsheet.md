@@ -434,31 +434,8 @@ docker volume prune
 
 ---
 
-## Troubleshooting
+## Debugging Commands
 
-### Common Issues
-
-```bash
-# Check container exit code
-docker inspect container-name --format='{{.State.ExitCode}}'
-
-# View container configuration
-docker inspect container-name
-
-# Check resource constraints
-docker stats container-name
-
-# View container processes
-docker exec container-name ps aux
-
-# Check network connectivity
-docker exec container-name ping google.com
-
-# View mounted volumes
-docker inspect container-name | grep -A 5 Mounts
-```
-
-### Debugging Commands
 
 ```bash
 # Run container with debugging
@@ -481,6 +458,18 @@ docker save my-app:latest > my-app.tar
 
 # Load image from tar
 docker load < my-app.tar
+
+# View container details
+docker inspect container-name
+
+# Check resource constraints
+docker stats container-name
+
+# View container processes
+docker exec container-name ps aux
+
+# Check network connectivity
+docker exec container-name ping google.com
 ```
 
 ### Performance Monitoring
