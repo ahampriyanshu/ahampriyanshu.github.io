@@ -3,7 +3,7 @@ title: "AWS Cheat Sheet"
 author: ahampriyanshu
 excerpt: Handy commands for AWS CLI
 categories: [Tutorials]
-tags: [priyanshu, tiwari, ahampriyanshu, tutorials]
+tags: [tutorials, aws, cli, devops]
 ---
 
 ## Installing AWS CLI
@@ -14,8 +14,6 @@ aws configure
 ```
 
 ## AWS S3 Commands
-
-Amazon S3 is one of the most frequently used AWS services. Here are the essential commands for managing buckets and objects.
 
 ### Bucket Operations
 
@@ -102,8 +100,6 @@ aws s3 presign s3://bucket-name/file.txt --expires-in 3600
 ---
 
 ## AWS EC2 Commands
-
-EC2 provides scalable computing capacity in the cloud. These commands help you manage instances, security groups, and related resources.
 
 ### Instance Management
 
@@ -238,8 +234,6 @@ aws ec2 associate-address --instance-id i-1234567890abcdef0 --allocation-id eipa
 ---
 
 ## AWS IAM Commands
-
-Identity and Access Management (IAM) is crucial for securing your AWS resources. These commands help you manage users, groups, roles, and policies.
 
 ### User Management
 
@@ -446,13 +440,13 @@ aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,Sta
 aws ec2 describe-instances --filters "Name=instance-state-name,Values=running" "Name=tag:Environment,Values=production"
 ```
 
-### 4. Safety First
+### Best Practices
+
 - Always use `--dry-run` when available to preview changes
 - Test commands in development environments first
-- Use IAM policies to restrict CLI access appropriately
 - Regularly rotate access keys
+- Automation and Scripting
 
-### 5. Automation and Scripting
 ```bash
 # Store frequently used commands as shell functions
 get_running_instances() {
