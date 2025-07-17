@@ -2,7 +2,7 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/dark.css"
 locale: en-US
 title: "Hi, I'm Priyanshu 👋"
-description: "These are my notes on programming, equity markets, and whatever else I'm figuring out."
+description: "These are my notes on programming, personal finance, and whatever else I'm figuring out."
 baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
