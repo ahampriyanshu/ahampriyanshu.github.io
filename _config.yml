@@ -1,14 +1,14 @@
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
-skin: "/assets/css/skins/default.css"
+skin: "/assets/css/skins/dark.css"
 locale: en-US
-title: "Priyanshu Tiwari"
-description: "Hello and welcome to my blog. A collection of tech & finance bits I’ll need later."
+title: "Hi, I'm Priyanshu 👋"
+description: "These are my notes on programming, equity markets, and whatever else I'm figuring out."
 baseurl: "/"
 url: "https://ahampriyanshu.com"
 logo: "/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
-words_per_minute: 60  
+words_per_minute: 140  
 mathjax:
   enable: true
   combo: "tex-svg" 

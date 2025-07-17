@@ -2,12 +2,12 @@
 title: " 30 Days of Code | Hackerrank"
 author: ahampriyanshu
 excerpt: Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python and Swift.
-categories: [Sheets, Hackerrank]
+categories: [Solutions, Hackerrank]
 mathjax:
   enable: true
   combo: "tex-svg"
   tags: "ams"
-tags: [hackerrank, "30 days of code", "c++", "cpp", "c", "js", "java", "python"]
+tags: [hackerrank, "30 days of code", "c++", "cpp", "c", "js", "java", "python", "solutions"]
 ---
 
 ### Day 00 Hello World
