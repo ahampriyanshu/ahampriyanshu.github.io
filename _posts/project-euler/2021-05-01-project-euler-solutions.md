@@ -1,5 +1,5 @@
 ---
-title: "Project Euler"
+title: "Project Euler Solutions"
 author: ahampriyanshu
 excerpt: Python solutions to first 100 problems on Project Euler
 categories: [Sheets, Projectuler]

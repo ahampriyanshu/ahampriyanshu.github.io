@@ -1,9 +1,8 @@
 ---
 title: "Experimenting with Machine Learning"
-author: ahampriyanshu
-categories: [Experiments]
-excerpt: A comprehensive journey through machine learning fundamentals, from basic algorithms to advanced neural networks and recommendation systems
-tags: [experiments, machine-learning, deep-learning, algorithms, data-science]
+categories: [Notes]
+excerpt: My experiments with machine learning
+tags: ['experiments', 'machine-learning', 'deep-learning', 'algorithms', 'data-science']
 ---
 
 Machine learning has transformed from an academic curiosity into the driving force behind modern technology. Over the past several weeks, I've been diving deep into this fascinating field, exploring everything from basic classification algorithms to sophisticated neural networks. This post chronicles my learning journey and serves as a comprehensive reference for machine learning fundamentals.
@@ -15,7 +14,7 @@ Machine learning has transformed from an academic curiosity into the driving for
 
 ---
 
-## 🤖 Machine Learning Fundamentals
+## Machine Learning Fundamentals
 
 ### Understanding Machine Learning Paradigms
 
@@ -104,7 +103,7 @@ print(f"Transposed shape: {transposed.shape}")
 
 ---
 
-## 📊 Supervised Learning Algorithms
+## Supervised Learning Algorithms
 
 ### Naive Bayes Classification
 
@@ -536,7 +535,7 @@ print(f"Support vectors per class: {n_support}")
 
 ---
 
-## 🔍 Unsupervised Learning
+## Unsupervised Learning
 
 ### K-Means Clustering
 
@@ -664,7 +663,7 @@ print(f"Explained variance per component: {explained_variance_ratio}")
 
 ---
 
-## 🧠 Deep Learning
+## Deep Learning
 
 ### Neural Network Fundamentals
 
@@ -899,7 +898,7 @@ def build_discriminator():
 
 ---
 
-## 🎯 Specialized Applications
+## Specialized Applications
 
 ### Recommendation Systems
 
@@ -1006,7 +1005,7 @@ top_candidates, scores = rank_candidates(query_emb, candidate_embs)
 
 ---
 
-## 🛠️ Tools and Frameworks
+## Tools and Frameworks
 
 ### Python Libraries
 
@@ -1024,7 +1023,7 @@ top_candidates, scores = rank_candidates(query_emb, candidate_embs)
 
 ---
 
-## 📚 Key Takeaways and Best Practices
+## Key Takeaways and Best Practices
 
 Machine learning success requires understanding both theoretical foundations and practical implementation considerations:
 
@@ -1039,8 +1038,3 @@ Machine learning success requires understanding both theoretical foundations and
 > **Remember**: The best model isn't always the most complex one. Success comes from understanding your data, choosing appropriate algorithms, and rigorously evaluating performance.
 
 The journey through machine learning continues evolving as new techniques emerge and existing methods improve. These fundamentals provide a solid foundation for tackling real-world machine learning challenges across diverse domains.
-
----
-
-*Happy learning! 🚀*
-

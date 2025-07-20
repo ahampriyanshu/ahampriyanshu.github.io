@@ -1,5 +1,5 @@
 ---
-title: "Codemonk | Hackerearth"
+title: "Codemonk | HackerEarth"
 author: ahampriyanshu
 categories: [Solutions, CodeMonk]
 tags: [sorting, array, codemonk, solutions, hackerearth]

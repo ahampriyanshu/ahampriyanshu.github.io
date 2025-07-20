@@ -1,5 +1,5 @@
 ---
-title: " 30 Days of Code | Hackerrank"
+title: " 30 Days of Code | HackerRank"
 author: ahampriyanshu
 excerpt: Solutions to HackerRank 30 Days Of Code from Day 00 to 09 in C, C++, JS, Java, Python and Swift.
 categories: [Solutions, Hackerrank]

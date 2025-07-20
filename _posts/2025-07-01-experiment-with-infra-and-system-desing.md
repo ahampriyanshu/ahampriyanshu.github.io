@@ -1,12 +1,15 @@
 ---
-title: "Experimenting with System Design and Infrastructure"
-author: ahampriyanshu
-categories: [Experiments]
-excerpt: A comprehensive exploration of system design concepts, from networking fundamentals to modern cloud infrastructure
-tags: [experiments, system-design, infrastructure, networking, databases, cloud]
+title: "Experimenting with Infra and System Design"
+categories: [Notes]
+excerpt: My experiments with cloud infrastructure, networking, system design and databases.
+tags: ['experiments', 'system-design', 'infrastructure', 'networking', 'databases', 'cloud']
 ---
 
-System design is the art and science of building scalable, reliable, and efficient distributed systems. Over the past fifteen days, I've been diving deep into this fascinating world, exploring everything from basic networking concepts to advanced infrastructure patterns. This post chronicles my learning journey and serves as a comprehensive reference for system design fundamentals.
+Thinking about shards, global load balancers, and fourteen layers of caching for your brand-new weekend side-project? Hold that thought! Odds are your app doesn’t need Netflix-level scale just yet. Remember: back in the mid-2000s Facebook was already flirting with **100 million** users without AWS, Docker, Kubernetes, micro-services, serverless Redis, or cloud functions in sight—just a scrappy PHP monolith glued to one very beefy MySQL box. The secret sauce wasn’t “infinite scale” buttons; it was **engineering curiosity**. They squeezed every byte of RAM out of Memcached—introducing UDP transport, fixing memory fragmentation, even patching the allocator—because every micro-optimisation saved real dollars when budget was tighter than latency.
+
+Fast-forward to today—spinning up five managed databases on AWS takes less time than brewing coffee, and it’s tempting to hide complexity behind yet another serverless layer. But the moral of the story hasn’t changed: build something people love first, then scale what actually hurts. Real users beat imaginary edge cases every single sprint.
+
+With that reality check out of the way, let’s dive into the fun stuff!
 
 ## Table of Contents
 {:.no_toc}
@@ -15,7 +18,7 @@ System design is the art and science of building scalable, reliable, and efficie
 
 ---
 
-## 🌐 Networking Fundamentals
+## Networking Fundamentals
 
 ### Client-Server Architecture
 
@@ -173,7 +176,7 @@ Content-Length: 1234
 
 ---
 
-## 💾 Storage Systems and Performance
+## Storage Systems and Performance
 
 ### Storage Hierarchy
 
@@ -216,7 +219,7 @@ Some databases operate entirely in memory for maximum speed, with users acceptin
 
 ---
 
-## 🚀 Availability and Reliability
+## Availability and Reliability
 
 ### Availability Metrics
 
@@ -240,7 +243,7 @@ Some databases operate entirely in memory for maximum speed, with users acceptin
 
 ---
 
-## 🏎️ Caching Strategies
+## Caching Strategies
 
 ### Caching Fundamentals
 
@@ -296,7 +299,7 @@ Popular CDN providers include Cloudflare and Google Cloud CDN, offering global i
 
 ---
 
-## ⚖️ Proxies and Load Balancing
+## Proxies and Load Balancing
 
 ### Proxy Types
 
@@ -334,7 +337,7 @@ class RoundRobinBalancer:
 
 ---
 
-## 🔐 Hashing and Consistent Hashing
+## Hashing and Consistent Hashing
 
 ### Hash Functions
 
@@ -390,7 +393,7 @@ class ConsistentHash:
 
 ---
 
-## 🗄️ Database Systems
+## Database Systems
 
 ### Relational Databases
 
@@ -508,7 +511,7 @@ RETURN DISTINCT fof.name
 
 ---
 
-## 🔄 Replication and Sharding
+## Replication and Sharding
 
 ### Replication Strategies
 
@@ -556,7 +559,7 @@ def get_geographic_shard(user_location):
 
 ---
 
-## 👥 Leader Election and Consensus
+## Leader Election and Consensus
 
 ### Distributed Coordination
 
@@ -570,7 +573,7 @@ Both **Etcd** and **ZooKeeper** provide leader election capabilities through the
 
 ---
 
-## 🌐 Peer-to-Peer Networks
+## Peer-to-Peer Networks
 
 ### Distributed Computing Models
 
@@ -582,7 +585,7 @@ This contrasts with the traditional **Client-Server Model** where clients reques
 
 ---
 
-## 📡 Communication Patterns
+## Communication Patterns
 
 ### Polling vs Streaming
 
@@ -627,7 +630,7 @@ cache:
 
 ---
 
-## 🛡️ Rate Limiting and Security
+## Rate Limiting and Security
 
 ### Rate Limiting Fundamentals
 
@@ -673,7 +676,7 @@ class TokenBucket:
 
 ---
 
-## 📊 Monitoring and Observability
+## Monitoring and Observability
 
 ### Observability Pillars
 
@@ -716,7 +719,7 @@ def process_order(order_id, user_id):
 
 ---
 
-## 📨 Messaging and Event-Driven Architecture
+## Messaging and Event-Driven Architecture
 
 ### Publish/Subscribe Pattern
 
@@ -749,7 +752,7 @@ def set_status_complete(order_id):
 
 ---
 
-## 🔧 MapReduce and Distributed Processing
+## MapReduce and Distributed Processing
 
 ### MapReduce Framework
 
@@ -787,7 +790,7 @@ These systems provide:
 
 ---
 
-## 🔐 Security and Encryption
+## Security and Encryption
 
 ### Encryption Methods
 
@@ -830,7 +833,7 @@ decrypted_data = cipher_suite.decrypt(encrypted_data)
 
 ---
 
-## 💻 Operating System Concepts
+## Operating System Concepts
 
 ### Process and Memory Management
 
@@ -932,7 +935,7 @@ def safe_increment():
 
 ---
 
-## 🐧 Linux System Administration
+## Linux System Administration
 
 ### Linux Filesystem Hierarchy
 
@@ -959,7 +962,7 @@ def safe_increment():
 
 ---
 
-## 🖥️ Virtualization and Containerization
+## Virtualization and Containerization
 
 ### Virtualization Fundamentals
 
@@ -1048,7 +1051,7 @@ spec:
 
 ---
 
-## 🚀 Putting It All Together
+## Putting It All Together
 
 This comprehensive exploration of system design concepts provides the foundation for building scalable, reliable distributed systems. Key principles to remember:
 
@@ -1060,9 +1063,5 @@ This comprehensive exploration of system design concepts provides the foundation
 6. **Monitor Everything**: Maintain visibility into system behavior and performance
 
 The journey of mastering system design involves continuous learning, practical experience, and adapting to new technologies and challenges. These fundamentals provide a solid foundation for tackling real-world distributed system challenges.
-
----
-
-*Happy building! 🚀*
 
 
