@@ -1,7 +1,7 @@
 ---
-title: "Introductory Problems | CSES"
+title: "CSES Solutions"
 author: ahampriyanshu
-categories: [Sheets, Cses]
+categories: [Solutions]
 tags: [introductory, sheets, cses]
 ---
 

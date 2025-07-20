@@ -1,5 +1,5 @@
 ---
-title: "Binary Trees | Striver’s A2Z DSA Course/Sheet"
+title: "DSA Part 9: Binary Manipulation"
 author: ahampriyanshu
 mathjax:
   enable: true
