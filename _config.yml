@@ -75,22 +75,7 @@ defaults:
     values:
       layout: post
       share: true
-# Site Author
-author:
-  name: Priyanshu Tiwari
-  picture: /logo.png
-  email:
-  twitter: ahampriyanshu
-  links:
-    - title: Twitter
-      url: https://twitter.com/ahampriyanshu
-      icon: fab fa-twitter-square
-    - title: Instagram
-      url: https://instagram.com/ahampriyanshu
-      icon: fab fa-instagram
-    - title: GitHub
-      url: https://github.com/ahampriyanshu
-      icon: fab fa-github-square
+
 
 # Footer Links
 footer_links:
