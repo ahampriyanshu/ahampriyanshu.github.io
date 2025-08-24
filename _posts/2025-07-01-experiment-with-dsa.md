@@ -1,18 +1,8 @@
 ---
 title: "Experimenting with DSA"
 excerpt: My experiments with data structures and algorithms.
-mermaid: true
-categories:
-  - Notes
-tags:
-  - "data-structures"
-  - "algorithms"
-  - "java"
-  - "coding-interviews"
-  - "leetcode"
-  - "hackerrank"
-  - "competitive-programming"
-  - "codeforces"
+categories: [Notes]
+tags: ['experiments', 'system-design', 'infrastructure', 'networking', 'databases', 'cloud']
 ---
 
 ## Data structures
@@ -25,6 +15,27 @@ Data structures can be categorized based on how data elements are organized and 
 - **Stacks**: LIFO (Last In First Out)
 - **Queues**: FIFO (First In First Out)
 
+<svg width="500" height="120" viewBox="0 0 500 120" style="background: white; border: 1px solid #ddd;">
+  <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold">Linear Data Structure (Array)</text>
+  <rect x="50" y="30" width="40" height="30" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <rect x="90" y="30" width="40" height="30" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <rect x="130" y="30" width="40" height="30" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <rect x="170" y="30" width="40" height="30" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <rect x="210" y="30" width="40" height="30" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  
+  <text x="65" y="50" font-family="Arial" font-size="12" text-anchor="middle">1</text>
+  <text x="105" y="50" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+  <text x="145" y="50" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+  <text x="185" y="50" font-family="Arial" font-size="12" text-anchor="middle">4</text>
+  <text x="225" y="50" font-family="Arial" font-size="12" text-anchor="middle">5</text>
+  
+  <text x="65" y="75" font-family="Arial" font-size="10" text-anchor="middle">0</text>
+  <text x="105" y="75" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="145" y="75" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="185" y="75" font-family="Arial" font-size="10" text-anchor="middle">3</text>
+  <text x="225" y="75" font-family="Arial" font-size="10" text-anchor="middle">4</text>
+</svg>
+
 ```java
 int[] linearArray = {1, 2, 3, 4, 5};
 ```
@@ -33,6 +44,30 @@ int[] linearArray = {1, 2, 3, 4, 5};
 - **Trees**: Hierarchical structure with root, branches, and leaves
 - **Graphs**: Nodes connected by edges in any pattern
 - **Hash Tables**: Key-value pairs with hash function mapping
+
+<svg width="500" height="200" viewBox="0 0 500 200" style="background: white; border: 1px solid #ddd;">
+  <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold">Non-Linear Data Structure (Binary Tree)</text>
+  
+  <circle cx="150" cy="50" r="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="150" y="55" font-family="Arial" font-size="12" text-anchor="middle">A</text>
+  
+  <circle cx="100" cy="110" r="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="100" y="115" font-family="Arial" font-size="12" text-anchor="middle">B</text>
+  
+  <circle cx="200" cy="110" r="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="200" y="115" font-family="Arial" font-size="12" text-anchor="middle">C</text>
+  
+  <circle cx="70" cy="170" r="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="70" y="175" font-family="Arial" font-size="12" text-anchor="middle">D</text>
+  
+  <circle cx="130" cy="170" r="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="130" y="175" font-family="Arial" font-size="12" text-anchor="middle">E</text>
+  
+  <line x1="135" y1="65" x2="115" y2="95" stroke="#666" stroke-width="2"/>
+  <line x1="165" y1="65" x2="185" y2="95" stroke="#666" stroke-width="2"/>
+  <line x1="85" y1="125" x2="85" y2="155" stroke="#666" stroke-width="2"/>
+  <line x1="115" y1="125" x2="115" y2="155" stroke="#666" stroke-width="2"/>
+</svg>
 
 ```java
 class TreeNode {
@@ -74,6 +109,34 @@ Collections.sort(list);                  // Sort
 - O(n): Linear - proportional to input size
 - O(n log n): Log-linear - efficient sorting
 - O(n²): Quadratic - avoid for large inputs
+
+<svg width="600" height="400" viewBox="0 0 600 400" style="background: white; border: 1px solid #ddd;">
+  <text x="300" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Big O Complexity Comparison</text>
+  
+  <line x1="50" y1="350" x2="550" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="350" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+  
+  <text x="300" y="380" font-family="Arial" font-size="12" text-anchor="middle">Input Size (n)</text>
+  <text x="30" y="200" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90 30 200)">Time</text>
+  
+  <path d="M 50 340 L 550 340" stroke="#4caf50" stroke-width="3" fill="none"/>
+  <text x="460" y="335" font-family="Arial" font-size="11" fill="#4caf50">O(1)</text>
+  
+  <path d="M 50 340 L 150 300 L 250 280 L 350 260 L 450 245 L 550 235" stroke="#2196f3" stroke-width="3" fill="none"/>
+  <text x="460" y="225" font-family="Arial" font-size="11" fill="#2196f3">O(log n)</text>
+  
+  <path d="M 50 340 L 550 60" stroke="#ff9800" stroke-width="3" fill="none"/>
+  <text x="460" y="80" font-family="Arial" font-size="11" fill="#ff9800">O(n)</text>
+  
+  <path d="M 50 340 L 150 320 L 250 280 L 350 220 L 450 140 L 550 60" stroke="#9c27b0" stroke-width="3" fill="none"/>
+  <text x="460" y="50" font-family="Arial" font-size="11" fill="#9c27b0">O(n log n)</text>
+  
+  <path d="M 50 340 Q 300 200 550 50" stroke="#f44336" stroke-width="3" fill="none"/>
+  <text x="520" y="70" font-family="Arial" font-size="11" fill="#f44336">O(n²)</text>
+  
+  <path d="M 50 340 Q 200 280 250 200 Q 300 120 350 80 Q 400 60 550 50" stroke="#e91e63" stroke-width="3" fill="none"/>
+  <text x="500" y="45" font-family="Arial" font-size="11" fill="#e91e63">O(2ⁿ)</text>
+</svg>
 
 ### Primitive Data Types
 
@@ -455,6 +518,59 @@ A **linked list** is a linear data structure where elements (nodes) are stored i
 
 #### Types of Linked Lists
 
+<svg width="700" height="300" viewBox="0 0 700 300" style="background: white; border: 1px solid #ddd;">
+  <text x="350" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Linked List Types</text>
+  
+  <text x="10" y="55" font-family="Arial" font-size="14" font-weight="bold">Singly Linked List</text>
+  <rect x="50" y="70" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <rect x="120" y="70" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <rect x="190" y="70" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <rect x="260" y="70" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  
+  <text x="80" y="95" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="150" y="95" font-family="Arial" font-size="12" text-anchor="middle">20</text>
+  <text x="220" y="95" font-family="Arial" font-size="12" text-anchor="middle">30</text>
+  <text x="290" y="95" font-family="Arial" font-size="12" text-anchor="middle">NULL</text>
+  
+  <path d="M 110 90 L 120 90" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 180 90 L 190 90" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 250 90 L 260 90" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="10" y="155" font-family="Arial" font-size="14" font-weight="bold">Doubly Linked List</text>
+  <rect x="50" y="170" width="60" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <rect x="120" y="170" width="60" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <rect x="190" y="170" width="60" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="5"/>
+  
+  <text x="80" y="195" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="150" y="195" font-family="Arial" font-size="12" text-anchor="middle">20</text>
+  <text x="220" y="195" font-family="Arial" font-size="12" text-anchor="middle">30</text>
+  
+  <path d="M 110 190 L 120 190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 120 200 L 110 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 180 190 L 190 190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 190 200 L 180 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="10" y="255" font-family="Arial" font-size="14" font-weight="bold">Circular Linked List</text>
+  <rect x="50" y="270" width="50" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <rect x="120" y="270" width="50" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <rect x="190" y="270" width="50" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  
+  <text x="75" y="290" font-family="Arial" font-size="11" text-anchor="middle">10</text>
+  <text x="145" y="290" font-family="Arial" font-size="11" text-anchor="middle">20</text>
+  <text x="215" y="290" font-family="Arial" font-size="11" text-anchor="middle">30</text>
+  
+  <path d="M 100 285 L 120 285" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 170 285 L 190 285" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 215 270 Q 280 250 280 285 Q 280 320 75 320 Q 50 320 50 300 L 50 285" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
+
 **1. Singly Linked List**
 ```java
 class ListNode {
@@ -810,6 +926,50 @@ listIter.add("NewItem");  // Only ListIterator supports add()
 
 A **stack** is a linear data structure that follows **LIFO** (Last In, First Out) principle. Elements are added and removed from the same end called the "top".
 
+<svg width="600" height="300" viewBox="0 0 600 300" style="background: white; border: 1px solid #ddd;">
+  <text x="300" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Stack Operations (LIFO)</text>
+  
+  <text x="150" y="60" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Push Operations</text>
+  <text x="450" y="60" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Pop Operations</text>
+  
+  <rect x="100" y="80" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="3"/>
+  <rect x="100" y="110" width="100" height="30" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="3"/>
+  <rect x="100" y="140" width="100" height="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="3"/>
+  <rect x="100" y="170" width="100" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="3"/>
+  
+  <text x="150" y="100" font-family="Arial" font-size="12" text-anchor="middle">30 (TOP)</text>
+  <text x="150" y="130" font-family="Arial" font-size="12" text-anchor="middle">20</text>
+  <text x="150" y="160" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="150" y="190" font-family="Arial" font-size="12" text-anchor="middle">5 (BOTTOM)</text>
+  
+  <path d="M 120 70 L 140 50 L 160 50 L 180 70" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <text x="150" y="45" font-family="Arial" font-size="11" text-anchor="middle" fill="#d32f2f">PUSH 30</text>
+  
+  <rect x="400" y="110" width="100" height="30" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="3"/>
+  <rect x="400" y="140" width="100" height="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="3"/>
+  <rect x="400" y="170" width="100" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="3"/>
+  
+  <text x="450" y="130" font-family="Arial" font-size="12" text-anchor="middle">20 (TOP)</text>
+  <text x="450" y="160" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="450" y="190" font-family="Arial" font-size="12" text-anchor="middle">5 (BOTTOM)</text>
+  
+  <path d="M 420 100 L 440 80 L 460 80 L 480 100" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <text x="450" y="75" font-family="Arial" font-size="11" text-anchor="middle" fill="#d32f2f">POP 30</text>
+  
+  <path d="M 250 150 L 350 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <text x="300" y="145" font-family="Arial" font-size="11" text-anchor="middle">After Pop</text>
+  
+  <text x="150" y="230" font-family="Arial" font-size="12" text-anchor="middle">push(30)</text>
+  <text x="450" y="230" font-family="Arial" font-size="12" text-anchor="middle">pop() returns 30</text>
+  
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" 
+     refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
+
 #### Stack Operations & Time Complexities
 
 | Operation | Time | Description |
@@ -1032,6 +1192,51 @@ public int factorialIterative(int n) {
 ### What is a queue? [Fifo, most common operations with time complexities, real world examples]
 
 A **queue** is a linear data structure that follows **FIFO** (First In, First Out) principle. Elements are added at the rear (enqueue) and removed from the front (dequeue).
+
+<svg width="700" height="250" viewBox="0 0 700 250" style="background: white; border: 1px solid #ddd;">
+  <text x="350" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Queue Operations (FIFO)</text>
+  
+  <text x="100" y="60" font-family="Arial" font-size="14" font-weight="bold">FRONT</text>
+  <text x="580" y="60" font-family="Arial" font-size="14" font-weight="bold">REAR</text>
+  
+  <rect x="150" y="80" width="80" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <rect x="250" y="80" width="80" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <rect x="350" y="80" width="80" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <rect x="450" y="80" width="80" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
+  
+  <text x="190" y="105" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="290" y="105" font-family="Arial" font-size="12" text-anchor="middle">20</text>
+  <text x="390" y="105" font-family="Arial" font-size="12" text-anchor="middle">30</text>
+  <text x="490" y="105" font-family="Arial" font-size="12" text-anchor="middle">40</text>
+  
+  <path d="M 80 100 L 130 100" stroke="#388e3c" stroke-width="3" marker-end="url(#arrowhead3)"/>
+  <text x="105" y="95" font-family="Arial" font-size="11" text-anchor="middle" fill="#388e3c">DEQUEUE</text>
+  
+  <path d="M 570 100 L 550 100" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrowhead3)"/>
+  <text x="575" y="95" font-family="Arial" font-size="11" text-anchor="middle" fill="#d32f2f">ENQUEUE</text>
+  
+  <rect x="150" y="160" width="80" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <rect x="250" y="160" width="80" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <rect x="350" y="160" width="80" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
+  <rect x="450" y="160" width="80" height="40" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  
+  <text x="190" y="185" font-family="Arial" font-size="12" text-anchor="middle">20</text>
+  <text x="290" y="185" font-family="Arial" font-size="12" text-anchor="middle">30</text>
+  <text x="390" y="185" font-family="Arial" font-size="12" text-anchor="middle">40</text>
+  <text x="490" y="185" font-family="Arial" font-size="12" text-anchor="middle">50</text>
+  
+  <text x="100" y="140" font-family="Arial" font-size="12" text-anchor="middle" fill="#388e3c">After dequeue(10)</text>
+  <text x="580" y="140" font-family="Arial" font-size="12" text-anchor="middle" fill="#d32f2f">enqueue(50)</text>
+  
+  <path d="M 350 130 L 350 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  
+  <defs>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="7" 
+     refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
 
 #### Queue Operations & Time Complexities
 
@@ -1569,6 +1774,77 @@ public class StackQueueConversion {
 
 A **hash table** (HashMap) is a data structure that maps keys to values using a **hash function**. It provides O(1) average time complexity for basic operations.
 
+<svg width="700" height="350" viewBox="0 0 700 350" style="background: white; border: 1px solid #ddd;">
+  <text x="350" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Hash Table with Collision Resolution</text>
+  
+  <text x="100" y="60" font-family="Arial" font-size="14" font-weight="bold">Separate Chaining</text>
+  <text x="450" y="60" font-family="Arial" font-size="14" font-weight="bold">Linear Probing</text>
+  
+  <rect x="50" y="80" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="50" y="110" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="50" y="140" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="50" y="170" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="50" y="200" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  
+  <text x="70" y="100" font-family="Arial" font-size="11" text-anchor="middle">0</text>
+  <text x="70" y="130" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="70" y="160" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="70" y="190" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="70" y="220" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  
+  <rect x="110" y="125" width="50" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1" rx="3"/>
+  <text x="135" y="138" font-family="Arial" font-size="10" text-anchor="middle">John</text>
+  <path d="M 160 135 L 175 135" stroke="#666" stroke-width="1" marker-end="url(#arrowhead4)"/>
+  
+  <rect x="180" y="125" width="50" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1" rx="3"/>
+  <text x="205" y="138" font-family="Arial" font-size="10" text-anchor="middle">Jane</text>
+  
+  <rect x="110" y="185" width="50" height="20" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="3"/>
+  <text x="135" y="198" font-family="Arial" font-size="10" text-anchor="middle">Bob</text>
+  
+  <rect x="400" y="80" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="400" y="110" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="400" y="140" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="400" y="170" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="400" y="200" width="40" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  
+  <text x="420" y="100" font-family="Arial" font-size="11" text-anchor="middle">0</text>
+  <text x="420" y="130" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="420" y="160" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="420" y="190" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="420" y="220" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  
+  <rect x="460" y="125" width="50" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1" rx="3"/>
+  <text x="485" y="138" font-family="Arial" font-size="10" text-anchor="middle">John</text>
+  
+  <rect x="460" y="155" width="50" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1" rx="3"/>
+  <text x="485" y="168" font-family="Arial" font-size="10" text-anchor="middle">Jane</text>
+  
+  <rect x="460" y="185" width="50" height="20" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="3"/>
+  <text x="485" y="198" font-family="Arial" font-size="10" text-anchor="middle">Bob</text>
+  
+  <text x="180" y="270" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Collisions stored in linked lists</text>
+  <text x="485" y="270" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Collisions resolved by probing</text>
+  
+  <path d="M 90 125 L 105 135" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <path d="M 90 185 L 105 195" stroke="#ffa000" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  
+  <text x="20" y="95" font-family="Arial" font-size="10" fill="#4caf50">h(John)=1</text>
+  <text x="15" y="125" font-family="Arial" font-size="10" fill="#4caf50">h(Jane)=1</text>
+  <text x="20" y="215" font-family="Arial" font-size="10" fill="#ffa000">h(Bob)=3</text>
+  
+  <text x="520" y="135" font-family="Arial" font-size="10" fill="#4caf50">h(John)=1</text>
+  <text x="520" y="165" font-family="Arial" font-size="10" fill="#f44336">h(Jane)=1→2</text>
+  <text x="520" y="195" font-family="Arial" font-size="10" fill="#ffa000">h(Bob)=3</text>
+  
+  <defs>
+    <marker id="arrowhead4" markerWidth="8" markerHeight="6" 
+     refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
+
 #### How Hashing Works
 
 ```java
@@ -1929,6 +2205,132 @@ Set<Integer> linkedSet = new LinkedHashSet<>();
 
 #### Disjoint Set (Union-Find)
 
+<svg width="800" height="350" viewBox="0 0 800 350" style="background: white; border: 1px solid #ddd;">
+  <text x="400" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Union-Find (Disjoint Set Union)</text>
+  
+  <!-- Initial state -->
+  <text x="150" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Initial State</text>
+  <circle cx="100" cy="80" r="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <circle cx="130" cy="80" r="15" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="160" cy="80" r="15" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="190" cy="80" r="15" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  <circle cx="220" cy="80" r="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  
+  <text x="100" y="86" font-family="Arial" font-size="11" text-anchor="middle">0</text>
+  <text x="130" y="86" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="160" y="86" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="190" y="86" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="220" y="86" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  
+  <text x="160" y="110" font-family="Arial" font-size="10" text-anchor="middle" fill="#666">Each element is its own parent</text>
+  
+  <!-- After Union(0,1) -->
+  <text x="400" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">After Union(0,1)</text>
+  <circle cx="380" cy="80" r="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <circle cx="380" cy="110" r="15" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="430" cy="80" r="15" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="460" cy="80" r="15" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  <circle cx="490" cy="80" r="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  
+  <text x="380" y="86" font-family="Arial" font-size="11" text-anchor="middle">0</text>
+  <text x="380" y="116" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="430" y="86" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="460" y="86" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="490" y="86" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  
+  <line x1="380" y1="95" x2="380" y2="95" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead8)"/>
+  <text x="430" y="110" font-family="Arial" font-size="10" text-anchor="middle" fill="#666">1 → 0</text>
+  
+  <!-- After Union(2,3) -->
+  <text x="650" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">After Union(2,3)</text>
+  <circle cx="600" cy="80" r="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <circle cx="600" cy="110" r="15" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="650" cy="80" r="15" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="650" cy="110" r="15" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  <circle cx="700" cy="80" r="15" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  
+  <text x="600" y="86" font-family="Arial" font-size="11" text-anchor="middle">0</text>
+  <text x="600" y="116" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="650" y="86" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="650" y="116" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="700" y="86" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  
+  <line x1="600" y1="95" x2="600" y2="95" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead8)"/>
+  <line x1="650" y1="95" x2="650" y2="95" stroke="#f57c00" stroke-width="2" marker-end="url(#arrowhead8)"/>
+  
+  <!-- Path Compression Example -->
+  <text x="200" y="180" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Path Compression</text>
+  <text x="200" y="200" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Before: Deep chain</text>
+  
+  <circle cx="150" cy="220" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <circle cx="180" cy="240" r="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="210" cy="260" r="12" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="240" cy="280" r="12" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  
+  <text x="150" y="225" font-family="Arial" font-size="9" text-anchor="middle">A</text>
+  <text x="180" y="245" font-family="Arial" font-size="9" text-anchor="middle">B</text>
+  <text x="210" y="265" font-family="Arial" font-size="9" text-anchor="middle">C</text>
+  <text x="240" y="285" font-family="Arial" font-size="9" text-anchor="middle">D</text>
+  
+  <line x1="155" y1="230" x2="175" y2="235" stroke="#666" stroke-width="1" marker-end="url(#arrowhead8)"/>
+  <line x1="185" y1="250" x2="205" y2="255" stroke="#666" stroke-width="1" marker-end="url(#arrowhead8)"/>
+  <line x1="215" y1="270" x2="235" y2="275" stroke="#666" stroke-width="1" marker-end="url(#arrowhead8)"/>
+  
+  <text x="400" y="200" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">After: Flattened</text>
+  
+  <circle cx="350" cy="220" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <circle cx="380" cy="220" r="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="410" cy="220" r="12" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="440" cy="240" r="12" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  
+  <text x="350" y="225" font-family="Arial" font-size="9" text-anchor="middle">A</text>
+  <text x="380" y="225" font-family="Arial" font-size="9" text-anchor="middle">B</text>
+  <text x="410" y="225" font-family="Arial" font-size="9" text-anchor="middle">C</text>
+  <text x="440" y="245" font-family="Arial" font-size="9" text-anchor="middle">D</text>
+  
+  <path d="M 350 210 Q 380 190 440 230" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead8)"/>
+  <path d="M 380 210 Q 400 190 440 230" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead8)"/>
+  <path d="M 410 210 Q 420 190 440 230" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead8)"/>
+  
+  <text x="395" y="185" font-family="Arial" font-size="9" text-anchor="middle" fill="#4caf50">All point to root</text>
+  
+  <!-- Union by Rank -->
+  <text x="600" y="180" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Union by Rank</text>
+  <text x="600" y="200" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Attach smaller tree under larger</text>
+  
+  <circle cx="550" cy="220" r="15" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="530" cy="250" r="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <circle cx="570" cy="250" r="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="550" y="226" font-family="Arial" font-size="10" text-anchor="middle">Root</text>
+  <text x="530" y="255" font-family="Arial" font-size="9" text-anchor="middle">A</text>
+  <text x="570" y="255" font-family="Arial" font-size="9" text-anchor="middle">B</text>
+  <text x="550" y="275" font-family="Arial" font-size="9" fill="#4caf50">Rank: 2</text>
+  
+  <line x1="545" y1="233" x2="535" y2="243" stroke="#666" stroke-width="1"/>
+  <line x1="555" y1="233" x2="565" y2="243" stroke="#666" stroke-width="1"/>
+  
+  <circle cx="680" cy="240" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="680" y="245" font-family="Arial" font-size="9" text-anchor="middle">C</text>
+  <text x="680" y="265" font-family="Arial" font-size="9" fill="#f44336">Rank: 1</text>
+  
+  <path d="M 662 240 Q 620 220 565 235" stroke="#2196f3" stroke-width="2" fill="none" marker-end="url(#arrowhead8)"/>
+  <text x="620" y="215" font-family="Arial" font-size="9" text-anchor="middle" fill="#2196f3">Union</text>
+  
+  <!-- Time Complexities -->
+  <rect x="50" y="300" width="700" height="40" fill="#f0f0f0" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="325" font-family="Arial" font-size="13" font-weight="bold">Time Complexities:</text>
+  <text x="200" y="325" font-family="Arial" font-size="11" fill="#4caf50">Find: O(α(n)) amortized</text>
+  <text x="350" y="325" font-family="Arial" font-size="11" fill="#2196f3">Union: O(α(n)) amortized</text>
+  <text x="500" y="325" font-family="Arial" font-size="11" fill="#666">α(n) ≈ 4 for practical purposes</text>
+  
+  <defs>
+    <marker id="arrowhead8" markerWidth="8" markerHeight="6" 
+     refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
+
 ```java
 class UnionFind {
     private int[] parent;
@@ -1990,6 +2392,129 @@ public static boolean hasCycle(int n, int[][] edges) {
 ### What is a graph? [edges, path, vertices, adjacency matrix, adjacency list,  how it differs from the tree, different types of graphs, and most common operations with time complexities, real world examples]
 
 ### Trees [root, node, leaf, edge, height, depth, siblings, subtree, preorder, postorder and inorder, bsf, dsf, different types of trees, redblack tree, trie, mst, threaded binary tree, expression tree,  and most common operations with time complexities, real world examples]
+
+<svg width="800" height="500" viewBox="0 0 800 500" style="background: white; border: 1px solid #ddd;">
+  <text x="400" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Binary Tree Traversals</text>
+  
+  <!-- Binary Tree Structure -->
+  <circle cx="400" cy="80" r="25" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="400" y="87" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+  
+  <circle cx="300" cy="140" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="300" y="147" font-family="Arial" font-size="14" text-anchor="middle">2</text>
+  
+  <circle cx="500" cy="140" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="500" y="147" font-family="Arial" font-size="14" text-anchor="middle">3</text>
+  
+  <circle cx="250" cy="200" r="25" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="250" y="207" font-family="Arial" font-size="14" text-anchor="middle">4</text>
+  
+  <circle cx="350" cy="200" r="25" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="350" y="207" font-family="Arial" font-size="14" text-anchor="middle">5</text>
+  
+  <circle cx="450" cy="200" r="25" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="450" y="207" font-family="Arial" font-size="14" text-anchor="middle">6</text>
+  
+  <circle cx="550" cy="200" r="25" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="550" y="207" font-family="Arial" font-size="14" text-anchor="middle">7</text>
+  
+  <!-- Tree connections -->
+  <line x1="380" y1="95" x2="320" y2="125" stroke="#666" stroke-width="2"/>
+  <line x1="420" y1="95" x2="480" y2="125" stroke="#666" stroke-width="2"/>
+  <line x1="285" y1="155" x2="265" y2="185" stroke="#666" stroke-width="2"/>
+  <line x1="315" y1="155" x2="335" y2="185" stroke="#666" stroke-width="2"/>
+  <line x1="485" y1="155" x2="465" y2="185" stroke="#666" stroke-width="2"/>
+  <line x1="515" y1="155" x2="535" y2="185" stroke="#666" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="400" y="55" font-family="Arial" font-size="12" text-anchor="middle" fill="#1976d2">ROOT</text>
+  <text x="50" y="147" font-family="Arial" font-size="12" text-anchor="middle" fill="#4caf50">Level 1</text>
+  <text x="50" y="207" font-family="Arial" font-size="12" text-anchor="middle" fill="#f57c00">Level 2 (Leaves)</text>
+  
+  <!-- Traversal Results -->
+  <rect x="50" y="280" width="700" height="180" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="305" font-family="Arial" font-size="14" font-weight="bold">Tree Traversal Methods</text>
+  
+  <!-- Pre-order -->
+  <text x="70" y="330" font-family="Arial" font-size="12" font-weight="bold" fill="#e91e63">Pre-order (Root → Left → Right):</text>
+  <rect x="280" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="310" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="340" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="370" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="400" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="430" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  <rect x="460" y="320" width="25" height="20" fill="#e91e63" opacity="0.3"/>
+  
+  <text x="292" y="334" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="322" y="334" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="352" y="334" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  <text x="382" y="334" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="412" y="334" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="442" y="334" font-family="Arial" font-size="11" text-anchor="middle">6</text>
+  <text x="472" y="334" font-family="Arial" font-size="11" text-anchor="middle">7</text>
+  <text x="520" y="334" font-family="Arial" font-size="11" fill="#666">1, 2, 4, 5, 3, 6, 7</text>
+  
+  <!-- In-order -->
+  <text x="70" y="360" font-family="Arial" font-size="12" font-weight="bold" fill="#2196f3">In-order (Left → Root → Right):</text>
+  <rect x="280" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="310" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="340" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="370" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="400" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="430" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  <rect x="460" y="350" width="25" height="20" fill="#2196f3" opacity="0.3"/>
+  
+  <text x="292" y="364" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  <text x="322" y="364" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="352" y="364" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="382" y="364" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="412" y="364" font-family="Arial" font-size="11" text-anchor="middle">6</text>
+  <text x="442" y="364" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="472" y="364" font-family="Arial" font-size="11" text-anchor="middle">7</text>
+  <text x="520" y="364" font-family="Arial" font-size="11" fill="#666">4, 2, 5, 1, 6, 3, 7</text>
+  
+  <!-- Post-order -->
+  <text x="70" y="390" font-family="Arial" font-size="12" font-weight="bold" fill="#4caf50">Post-order (Left → Right → Root):</text>
+  <rect x="280" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="310" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="340" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="370" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="400" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="430" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  <rect x="460" y="380" width="25" height="20" fill="#4caf50" opacity="0.3"/>
+  
+  <text x="292" y="394" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  <text x="322" y="394" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="352" y="394" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="382" y="394" font-family="Arial" font-size="11" text-anchor="middle">6</text>
+  <text x="412" y="394" font-family="Arial" font-size="11" text-anchor="middle">7</text>
+  <text x="442" y="394" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="472" y="394" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="520" y="394" font-family="Arial" font-size="11" fill="#666">4, 5, 2, 6, 7, 3, 1</text>
+  
+  <!-- Level-order (BFS) -->
+  <text x="70" y="420" font-family="Arial" font-size="12" font-weight="bold" fill="#ff9800">Level-order (BFS):</text>
+  <rect x="280" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="310" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="340" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="370" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="400" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="430" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  <rect x="460" y="410" width="25" height="20" fill="#ff9800" opacity="0.3"/>
+  
+  <text x="292" y="424" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="322" y="424" font-family="Arial" font-size="11" text-anchor="middle">2</text>
+  <text x="352" y="424" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="382" y="424" font-family="Arial" font-size="11" text-anchor="middle">4</text>
+  <text x="412" y="424" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="442" y="424" font-family="Arial" font-size="11" text-anchor="middle">6</text>
+  <text x="472" y="424" font-family="Arial" font-size="11" text-anchor="middle">7</text>
+  <text x="520" y="424" font-family="Arial" font-size="11" fill="#666">1, 2, 3, 4, 5, 6, 7</text>
+  
+  <!-- Time Complexities -->
+  <text x="70" y="450" font-family="Arial" font-size="12" font-weight="bold">Time Complexity:</text>
+  <text x="200" y="450" font-family="Arial" font-size="11" fill="#666">All traversals: O(n), Space: O(h) where h = height</text>
+</svg>
 
 ## Algorithms [asymptotic analysis, time complexity, space complexity, real world examples]
 
@@ -2062,6 +2587,64 @@ O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
 Best ←                                              → Worst
 ```
 
+#### Binary Search Visualization
+
+<svg width="700" height="280" viewBox="0 0 700 280" style="background: white; border: 1px solid #ddd;">
+  <text x="350" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Binary Search Algorithm</text>
+  <text x="350" y="45" font-family="Arial" font-size="12" text-anchor="middle">Searching for target = 7</text>
+  
+  <text x="50" y="75" font-family="Arial" font-size="12" font-weight="bold">Step 1:</text>
+  <rect x="120" y="60" width="30" height="25" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <rect x="150" y="60" width="30" height="25" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <rect x="180" y="60" width="30" height="25" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <rect x="210" y="60" width="30" height="25" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <rect x="240" y="60" width="30" height="25" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <rect x="270" y="60" width="30" height="25" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <rect x="300" y="60" width="30" height="25" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  
+  <text x="135" y="78" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="165" y="78" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="195" y="78" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="225" y="78" font-family="Arial" font-size="11" text-anchor="middle">7</text>
+  <text x="255" y="78" font-family="Arial" font-size="11" text-anchor="middle">9</text>
+  <text x="285" y="78" font-family="Arial" font-size="11" text-anchor="middle">11</text>
+  <text x="315" y="78" font-family="Arial" font-size="11" text-anchor="middle">13</text>
+  
+  <text x="135" y="105" font-family="Arial" font-size="10" text-anchor="middle" fill="#f44336">left</text>
+  <text x="225" y="105" font-family="Arial" font-size="10" text-anchor="middle" fill="#4caf50">mid</text>
+  <text x="315" y="105" font-family="Arial" font-size="10" text-anchor="middle" fill="#f44336">right</text>
+  <text x="400" y="78" font-family="Arial" font-size="11" fill="#666">mid=7, target=7 ✓ Found!</text>
+  
+  <text x="50" y="145" font-family="Arial" font-size="12" font-weight="bold">Step 2:</text>
+  <rect x="120" y="130" width="30" height="25" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <rect x="150" y="130" width="30" height="25" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <rect x="180" y="130" width="30" height="25" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <rect x="210" y="130" width="30" height="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <rect x="240" y="130" width="30" height="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="270" y="130" width="30" height="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="300" y="130" width="30" height="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <text x="135" y="148" font-family="Arial" font-size="11" text-anchor="middle">1</text>
+  <text x="165" y="148" font-family="Arial" font-size="11" text-anchor="middle">3</text>
+  <text x="195" y="148" font-family="Arial" font-size="11" text-anchor="middle">5</text>
+  <text x="225" y="148" font-family="Arial" font-size="11" text-anchor="middle" fill="#ff9800">7</text>
+  <text x="255" y="148" font-family="Arial" font-size="11" text-anchor="middle" color="#999">9</text>
+  <text x="285" y="148" font-family="Arial" font-size="11" text-anchor="middle" color="#999">11</text>
+  <text x="315" y="148" font-family="Arial" font-size="11" text-anchor="middle" color="#999">13</text>
+  
+  <text x="135" y="175" font-family="Arial" font-size="10" text-anchor="middle" fill="#f44336">left</text>
+  <text x="165" y="175" font-family="Arial" font-size="10" text-anchor="middle" fill="#4caf50">mid</text>
+  <text x="195" y="175" font-family="Arial" font-size="10" text-anchor="middle" fill="#f44336">right</text>
+  <text x="400" y="148" font-family="Arial" font-size="11" fill="#666">target > mid, search right half</text>
+  
+  <text x="50" y="220" font-family="Arial" font-size="14" font-weight="bold">Time Complexity:</text>
+  <text x="170" y="220" font-family="Arial" font-size="12" fill="#4caf50">O(log n)</text>
+  <text x="50" y="240" font-family="Arial" font-size="12" fill="#666">Each step eliminates half the search space</text>
+  
+  <path d="M 350 190 Q 400 200 450 210 Q 500 220 450 230 Q 400 240 350 250" stroke="#2196f3" stroke-width="2" fill="none"/>
+  <text x="400" y="225" font-family="Arial" font-size="11" text-anchor="middle" fill="#2196f3">Divide & Conquer</text>
+</svg>
+
 ### Space Complexity
 
 ```java
@@ -2128,6 +2711,139 @@ For recurrence: **T(n) = aT(n/b) + f(n)**
 ### Sorting algorithms [bubble sort, selection sort, insertion sort, merge sort, quick sort, heap sort, counting sort, radix sort, bucket sort, and most common operations with time complexities, real world examples]
 
 Sorting algorithms arrange elements in a specific order. Here are the most important ones for interviews:
+
+<svg width="800" height="400" viewBox="0 0 800 400" style="background: white; border: 1px solid #ddd;">
+  <text x="400" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Sorting Algorithm Visualizations</text>
+  
+  <!-- Bubble Sort -->
+  <text x="120" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Bubble Sort</text>
+  <text x="120" y="75" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">O(n²) - Adjacent swaps</text>
+  
+  <rect x="50" y="85" width="25" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="75" y="85" width="25" height="20" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="100" y="85" width="25" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <rect x="125" y="85" width="25" height="20" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <rect x="150" y="85" width="25" height="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  
+  <text x="62" y="99" font-family="Arial" font-size="10" text-anchor="middle">5</text>
+  <text x="87" y="99" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="112" y="99" font-family="Arial" font-size="10" text-anchor="middle">8</text>
+  <text x="137" y="99" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="162" y="99" font-family="Arial" font-size="10" text-anchor="middle">9</text>
+  
+  <path d="M 62 110 Q 75 120 87 110" stroke="#f44336" stroke-width="2" fill="none" marker-end="url(#arrowhead5)"/>
+  <text x="75" y="130" font-family="Arial" font-size="9" text-anchor="middle" fill="#f44336">Compare & Swap</text>
+  
+  <!-- Selection Sort -->
+  <text x="320" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Selection Sort</text>
+  <text x="320" y="75" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">O(n²) - Find minimum</text>
+  
+  <rect x="250" y="85" width="25" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <rect x="275" y="85" width="25" height="20" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="300" y="85" width="25" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <rect x="325" y="85" width="25" height="20" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <rect x="350" y="85" width="25" height="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  
+  <text x="262" y="99" font-family="Arial" font-size="10" text-anchor="middle">5</text>
+  <text x="287" y="99" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="312" y="99" font-family="Arial" font-size="10" text-anchor="middle">8</text>
+  <text x="337" y="99" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="362" y="99" font-family="Arial" font-size="10" text-anchor="middle">9</text>
+  
+  <circle cx="337" cy="95" r="15" fill="none" stroke="#4caf50" stroke-width="2"/>
+  <text x="320" y="130" font-family="Arial" font-size="9" text-anchor="middle" fill="#4caf50">Find Min (1)</text>
+  
+  <!-- Quick Sort -->
+  <text x="520" y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Quick Sort</text>
+  <text x="520" y="75" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">O(n log n) - Divide & conquer</text>
+  
+  <rect x="450" y="85" width="25" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="475" y="85" width="25" height="20" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="500" y="85" width="25" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <rect x="525" y="85" width="25" height="20" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <rect x="550" y="85" width="25" height="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  
+  <text x="462" y="99" font-family="Arial" font-size="10" text-anchor="middle">5</text>
+  <text x="487" y="99" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="512" y="99" font-family="Arial" font-size="10" text-anchor="middle">8</text>
+  <text x="537" y="99" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="562" y="99" font-family="Arial" font-size="10" text-anchor="middle">9</text>
+  
+  <text x="512" y="115" font-family="Arial" font-size="9" text-anchor="middle" fill="#4caf50">PIVOT</text>
+  <path d="M 475 130 L 500 130" stroke="#2196f3" stroke-width="2"/>
+  <path d="M 525 130 L 550 130" stroke="#ff9800" stroke-width="2"/>
+  <text x="487" y="145" font-family="Arial" font-size="8" text-anchor="middle" fill="#2196f3">< pivot</text>
+  <text x="537" y="145" font-family="Arial" font-size="8" text-anchor="middle" fill="#ff9800">> pivot</text>
+  
+  <!-- Merge Sort Process -->
+  <text x="400" y="185" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Merge Sort Process</text>
+  <text x="400" y="205" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">O(n log n) - Divide, Sort, Merge</text>
+  
+  <!-- Level 1: Original -->
+  <rect x="350" y="220" width="20" height="15" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="370" y="220" width="20" height="15" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="390" y="220" width="20" height="15" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <rect x="410" y="220" width="20" height="15" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="360" y="231" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <text x="380" y="231" font-family="Arial" font-size="9" text-anchor="middle">2</text>
+  <text x="400" y="231" font-family="Arial" font-size="9" text-anchor="middle">8</text>
+  <text x="420" y="231" font-family="Arial" font-size="9" text-anchor="middle">1</text>
+  
+  <!-- Level 2: Divided -->
+  <rect x="320" y="250" width="20" height="15" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="340" y="250" width="20" height="15" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="440" y="250" width="20" height="15" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <rect x="460" y="250" width="20" height="15" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="330" y="261" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <text x="350" y="261" font-family="Arial" font-size="9" text-anchor="middle">2</text>
+  <text x="450" y="261" font-family="Arial" font-size="9" text-anchor="middle">8</text>
+  <text x="470" y="261" font-family="Arial" font-size="9" text-anchor="middle">1</text>
+  
+  <!-- Level 3: Merged and sorted -->
+  <rect x="320" y="280" width="20" height="15" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="340" y="280" width="20" height="15" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="440" y="280" width="20" height="15" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <rect x="460" y="280" width="20" height="15" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="330" y="291" font-family="Arial" font-size="9" text-anchor="middle">2</text>
+  <text x="350" y="291" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <text x="450" y="291" font-family="Arial" font-size="9" text-anchor="middle">1</text>
+  <text x="470" y="291" font-family="Arial" font-size="9" text-anchor="middle">8</text>
+  
+  <!-- Final merged -->
+  <rect x="350" y="310" width="20" height="15" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <rect x="370" y="310" width="20" height="15" fill="#e1f5fe" stroke="#2196f3" stroke-width="1"/>
+  <rect x="390" y="310" width="20" height="15" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="410" y="310" width="20" height="15" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="360" y="321" font-family="Arial" font-size="9" text-anchor="middle">1</text>
+  <text x="380" y="321" font-family="Arial" font-size="9" text-anchor="middle">2</text>
+  <text x="400" y="321" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <text x="420" y="321" font-family="Arial" font-size="9" text-anchor="middle">8</text>
+  
+  <!-- Arrows showing the process -->
+  <path d="M 380 235 L 350 245" stroke="#666" stroke-width="1" marker-end="url(#arrowhead5)"/>
+  <path d="M 400 235 L 450 245" stroke="#666" stroke-width="1" marker-end="url(#arrowhead5)"/>
+  <path d="M 350 265 L 350 275" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <path d="M 450 265 L 450 275" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <path d="M 380 295 L 380 305" stroke="#2196f3" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  
+  <text x="280" y="260" font-family="Arial" font-size="10" fill="#666">Divide</text>
+  <text x="280" y="290" font-family="Arial" font-size="10" fill="#4caf50">Sort</text>
+  <text x="280" y="320" font-family="Arial" font-size="10" fill="#2196f3">Merge</text>
+  
+  <!-- Performance comparison -->
+  <text x="650" y="55" font-family="Arial" font-size="14" font-weight="bold">Performance</text>
+  <text x="600" y="80" font-family="Arial" font-size="11" fill="#f44336">Bubble: O(n²)</text>
+  <text x="600" y="95" font-family="Arial" font-size="11" fill="#2196f3">Selection: O(n²)</text>
+  <text x="600" y="110" font-family="Arial" font-size="11" fill="#4caf50">Quick: O(n log n)</text>
+  <text x="600" y="125" font-family="Arial" font-size="11" fill="#ff9800">Merge: O(n log n)</text>
+  
+  <defs>
+    <marker id="arrowhead5" markerWidth="8" markerHeight="6" 
+     refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
 
 ### Comparison-based Sorting
 
@@ -2694,6 +3410,113 @@ public class MoreGreedyAlgorithms {
 
 **Backtracking** is a systematic method for solving problems by exploring all potential solutions and abandoning ("backtracking") from paths that don't lead to a solution.
 
+<svg width="800" height="400" viewBox="0 0 800 400" style="background: white; border: 1px solid #ddd;">
+  <text x="400" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Backtracking Decision Tree</text>
+  <text x="400" y="45" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">N-Queens Problem (4x4 board)</text>
+  
+  <!-- Root -->
+  <circle cx="400" cy="80" r="18" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="400" y="87" font-family="Arial" font-size="11" text-anchor="middle">Start</text>
+  
+  <!-- Level 1: Queen 1 positions -->
+  <circle cx="250" cy="130" r="16" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="250" y="136" font-family="Arial" font-size="10" text-anchor="middle">Q1(0)</text>
+  
+  <circle cx="350" cy="130" r="16" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="350" y="136" font-family="Arial" font-size="10" text-anchor="middle">Q1(1)</text>
+  
+  <circle cx="450" cy="130" r="16" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="450" y="136" font-family="Arial" font-size="10" text-anchor="middle">Q1(2)</text>
+  
+  <circle cx="550" cy="130" r="16" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="550" y="136" font-family="Arial" font-size="10" text-anchor="middle">Q1(3)</text>
+  
+  <!-- Level 2: Queen 2 positions (showing some branches) -->
+  <circle cx="200" cy="180" r="14" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="200" y="185" font-family="Arial" font-size="9" text-anchor="middle">Q2(2)</text>
+  
+  <circle cx="280" cy="180" r="14" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="280" y="185" font-family="Arial" font-size="9" text-anchor="middle">Q2(3)</text>
+  
+  <circle cx="320" cy="180" r="14" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="320" y="185" font-family="Arial" font-size="9" text-anchor="middle">Q2(0)</text>
+  
+  <circle cx="380" cy="180" r="14" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="380" y="185" font-family="Arial" font-size="9" text-anchor="middle">Q2(3)</text>
+  
+  <!-- Level 3: Some valid/invalid paths -->
+  <circle cx="160" cy="230" r="12" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="160" y="235" font-family="Arial" font-size="8" text-anchor="middle">Valid</text>
+  
+  <circle cx="240" cy="230" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="240" y="235" font-family="Arial" font-size="8" text-anchor="middle">✗</text>
+  
+  <circle cx="300" cy="230" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="300" y="235" font-family="Arial" font-size="8" text-anchor="middle">✗</text>
+  
+  <circle cx="360" cy="230" r="12" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="360" y="235" font-family="Arial" font-size="8" text-anchor="middle">✗</text>
+  
+  <circle cx="420" cy="230" r="12" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="420" y="235" font-family="Arial" font-size="8" text-anchor="middle">Valid</text>
+  
+  <!-- Connections -->
+  <line x1="385" y1="95" x2="265" y2="115" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="95" x2="340" y2="115" stroke="#666" stroke-width="1"/>
+  <line x1="410" y1="95" x2="460" y2="115" stroke="#666" stroke-width="1"/>
+  <line x1="415" y1="95" x2="535" y2="115" stroke="#666" stroke-width="1"/>
+  
+  <line x1="240" y1="145" x2="210" y2="165" stroke="#4caf50" stroke-width="2"/>
+  <line x1="260" y1="145" x2="290" y2="165" stroke="#f44336" stroke-width="2"/>
+  <line x1="340" y1="145" x2="330" y2="165" stroke="#f44336" stroke-width="2"/>
+  <line x1="360" y1="145" x2="390" y2="165" stroke="#f57c00" stroke-width="2"/>
+  
+  <line x1="190" y1="195" x2="170" y2="215" stroke="#4caf50" stroke-width="2"/>
+  <line x1="270" y1="195" x2="250" y2="215" stroke="#f44336" stroke-width="2"/>
+  <line x1="310" y1="195" x2="310" y2="215" stroke="#f44336" stroke-width="2"/>
+  <line x1="370" y1="195" x2="370" y2="215" stroke="#f44336" stroke-width="2"/>
+  <line x1="390" y1="195" x2="410" y2="215" stroke="#4caf50" stroke-width="2"/>
+  
+  <!-- Backtrack arrows -->
+  <path d="M 240 245 Q 220 260 200 245" stroke="#f44336" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead7)"/>
+  <text x="220" y="270" font-family="Arial" font-size="9" text-anchor="middle" fill="#f44336">Backtrack</text>
+  
+  <path d="M 300 245 Q 280 260 260 245" stroke="#f44336" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead7)"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="290" width="700" height="80" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="315" font-family="Arial" font-size="14" font-weight="bold">Backtracking Process</text>
+  
+  <circle cx="90" cy="335" r="8" fill="#4caf50" opacity="0.7"/>
+  <text x="110" y="340" font-family="Arial" font-size="11" fill="#4caf50">Valid path - continue exploring</text>
+  
+  <circle cx="320" cy="335" r="8" fill="#f57c00" opacity="0.7"/>
+  <text x="340" y="340" font-family="Arial" font-size="11" fill="#f57c00">Partial path - keep going</text>
+  
+  <circle cx="540" cy="335" r="8" fill="#f44336" opacity="0.7"/>
+  <text x="560" y="340" font-family="Arial" font-size="11" fill="#f44336">Invalid - backtrack</text>
+  
+  <text x="70" y="360" font-family="Arial" font-size="11" fill="#666">1. Make choice → 2. Recurse → 3. Check validity → 4. Backtrack if invalid</text>
+  
+  <!-- Algorithm steps -->
+  <text x="600" y="100" font-family="Arial" font-size="12" font-weight="bold">Algorithm:</text>
+  <text x="600" y="120" font-family="Arial" font-size="10" fill="#666">1. Choose position</text>
+  <text x="600" y="135" font-family="Arial" font-size="10" fill="#666">2. Check constraints</text>
+  <text x="600" y="150" font-family="Arial" font-size="10" fill="#666">3. Recurse if valid</text>
+  <text x="600" y="165" font-family="Arial" font-size="10" fill="#666">4. Backtrack if stuck</text>
+  <text x="600" y="180" font-family="Arial" font-size="10" fill="#666">5. Try next option</text>
+  
+  <text x="600" y="210" font-family="Arial" font-size="11" font-weight="bold" fill="#4caf50">Time: O(N!)</text>
+  <text x="600" y="225" font-family="Arial" font-size="11" font-weight="bold" fill="#2196f3">Space: O(N)</text>
+  
+  <defs>
+    <marker id="arrowhead7" markerWidth="8" markerHeight="6" 
+     refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f44336"/>
+    </marker>
+  </defs>
+</svg>
+
 #### Core Backtracking Template
 ```java
 public boolean backtrack(parameters) {
@@ -3039,6 +3862,116 @@ public class BacktrackingOptimizations {
 ### Dynamic programming [memoization, tabulation, and most common operations with time complexities, real world examples]
 
 **Dynamic Programming (DP)** solves complex problems by breaking them into overlapping subproblems and storing results to avoid redundant calculations.
+
+<svg width="800" height="450" viewBox="0 0 800 450" style="background: white; border: 1px solid #ddd;">
+  <text x="400" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Dynamic Programming: Memoization vs Tabulation</text>
+  <text x="400" y="45" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Fibonacci Sequence Example</text>
+  
+  <!-- Memoization (Top-Down) -->
+  <text x="200" y="80" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Memoization (Top-Down)</text>
+  <text x="200" y="100" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Recursion + Caching</text>
+  
+  <!-- Tree structure showing recursive calls -->
+  <circle cx="200" cy="130" r="20" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="200" y="137" font-family="Arial" font-size="11" text-anchor="middle">fib(5)</text>
+  
+  <circle cx="150" cy="180" r="18" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="150" y="186" font-family="Arial" font-size="10" text-anchor="middle">fib(4)</text>
+  
+  <circle cx="250" cy="180" r="18" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="250" y="186" font-family="Arial" font-size="10" text-anchor="middle">fib(3)</text>
+  
+  <circle cx="120" cy="230" r="16" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="120" y="235" font-family="Arial" font-size="9" text-anchor="middle">fib(3)</text>
+  
+  <circle cx="180" cy="230" r="16" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="180" y="235" font-family="Arial" font-size="9" text-anchor="middle">fib(2)</text>
+  
+  <circle cx="220" cy="230" r="16" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="220" y="235" font-family="Arial" font-size="9" text-anchor="middle">fib(2)</text>
+  
+  <circle cx="280" cy="230" r="16" fill="#ffcdd2" stroke="#f44336" stroke-width="2"/>
+  <text x="280" y="235" font-family="Arial" font-size="9" text-anchor="middle">fib(1)</text>
+  
+  <!-- Connections -->
+  <line x1="185" y1="145" x2="165" y2="165" stroke="#666" stroke-width="1"/>
+  <line x1="215" y1="145" x2="235" y2="165" stroke="#666" stroke-width="1"/>
+  <line x1="140" y1="195" x2="130" y2="215" stroke="#666" stroke-width="1"/>
+  <line x1="160" y1="195" x2="170" y2="215" stroke="#666" stroke-width="1"/>
+  <line x1="240" y1="195" x2="230" y2="215" stroke="#666" stroke-width="1"/>
+  <line x1="260" y1="195" x2="270" y2="215" stroke="#666" stroke-width="1"/>
+  
+  <!-- Cached indicator -->
+  <rect x="200" y="250" width="80" height="15" fill="#4caf50" opacity="0.3" rx="3"/>
+  <text x="240" y="261" font-family="Arial" font-size="10" text-anchor="middle" fill="#4caf50">Cached Results</text>
+  
+  <text x="100" y="285" font-family="Arial" font-size="10" fill="#f57c00">fib(3) = 2</text>
+  <text x="180" y="285" font-family="Arial" font-size="10" fill="#f57c00">fib(2) = 1</text>
+  <text x="260" y="285" font-family="Arial" font-size="10" fill="#f44336">fib(1) = 1</text>
+  
+  <!-- Tabulation (Bottom-Up) -->
+  <text x="600" y="80" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Tabulation (Bottom-Up)</text>
+  <text x="600" y="100" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Iterative Table Filling</text>
+  
+  <!-- DP Table -->
+  <rect x="520" y="120" width="160" height="120" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Table headers -->
+  <text x="540" y="140" font-family="Arial" font-size="11" font-weight="bold">n</text>
+  <text x="580" y="140" font-family="Arial" font-size="11" font-weight="bold">fib(n)</text>
+  <text x="630" y="140" font-family="Arial" font-size="11" font-weight="bold">Process</text>
+  
+  <!-- Table rows -->
+  <rect x="525" y="150" width="30" height="20" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <rect x="560" y="150" width="30" height="20" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <text x="540" y="163" font-family="Arial" font-size="10" text-anchor="middle">0</text>
+  <text x="575" y="163" font-family="Arial" font-size="10" text-anchor="middle">0</text>
+  <text x="630" y="163" font-family="Arial" font-size="9" text-anchor="middle" fill="#666">Base</text>
+  
+  <rect x="525" y="170" width="30" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <rect x="560" y="170" width="30" height="20" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="540" y="183" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="575" y="183" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="630" y="183" font-family="Arial" font-size="9" text-anchor="middle" fill="#666">Base</text>
+  
+  <rect x="525" y="190" width="30" height="20" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <rect x="560" y="190" width="30" height="20" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="540" y="203" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="575" y="203" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+  <text x="630" y="203" font-family="Arial" font-size="9" text-anchor="middle" fill="#666">0+1=1</text>
+  
+  <rect x="525" y="210" width="30" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <rect x="560" y="210" width="30" height="20" fill="#ffcdd2" stroke="#f44336" stroke-width="1"/>
+  <text x="540" y="223" font-family="Arial" font-size="10" text-anchor="middle">3</text>
+  <text x="575" y="223" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+  <text x="630" y="223" font-family="Arial" font-size="9" text-anchor="middle" fill="#666">1+1=2</text>
+  
+  <!-- Comparison -->
+  <rect x="50" y="320" width="700" height="100" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="70" y="345" font-family="Arial" font-size="14" font-weight="bold">Comparison</text>
+  
+  <text x="70" y="370" font-family="Arial" font-size="12" font-weight="bold" fill="#1976d2">Memoization:</text>
+  <text x="160" y="370" font-family="Arial" font-size="11" fill="#666">• Recursive approach • Cache on demand • Natural for some problems</text>
+  <text x="70" y="385" font-family="Arial" font-size="11" fill="#666">Time: O(n), Space: O(n) + recursion stack</text>
+  
+  <text x="400" y="370" font-family="Arial" font-size="12" font-weight="bold" fill="#4caf50">Tabulation:</text>
+  <text x="480" y="370" font-family="Arial" font-size="11" fill="#666">• Iterative approach • Pre-compute all • Better space efficiency</text>
+  <text x="400" y="385" font-family="Arial" font-size="11" fill="#666">Time: O(n), Space: O(n) only</text>
+  
+  <!-- Arrows showing direction -->
+  <path d="M 200 115 Q 180 115 180 130" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowhead6)"/>
+  <text x="160" y="110" font-family="Arial" font-size="10" fill="#1976d2">Top-Down</text>
+  
+  <path d="M 600 245 Q 620 245 620 230" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead6)"/>
+  <text x="640" y="250" font-family="Arial" font-size="10" fill="#4caf50">Bottom-Up</text>
+  
+  <defs>
+    <marker id="arrowhead6" markerWidth="8" markerHeight="6" 
+     refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
 
 #### Core DP Principles
 1. **Optimal Substructure**: Optimal solution contains optimal solutions to subproblems
