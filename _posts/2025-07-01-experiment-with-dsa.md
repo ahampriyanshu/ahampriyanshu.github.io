@@ -1265,7 +1265,7 @@ public class QueueAlgorithms {
             }
         }
         
-        int[][] directions = {{0,1}, {1,0}, {0,-1}, {-1,0}};
+        int[][] directions = {% raw %}{{0,1}, {1,0}, {0,-1}, {-1,0}}{% endraw %};
         int minutes = 0;
         
         while (!queue.isEmpty() && fresh > 0) {
