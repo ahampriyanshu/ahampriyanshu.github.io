@@ -1,5 +1,5 @@
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
-skin: "/assets/css/skins/default.css"
+skin: "/assets/css/skins/dark.css"
 locale: en-US
 title: "Hi, I'm Priyanshu 👋"
 description: "These are my notes on programming, personal finance, and whatever else I'm figuring out."
@@ -75,7 +75,6 @@ defaults:
     values:
       layout: post
       share: true
-
 
 # Footer Links
 footer_links:
