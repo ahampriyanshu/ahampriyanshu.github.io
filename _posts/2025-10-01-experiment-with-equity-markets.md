@@ -5,11 +5,22 @@ excerpt: My experiments with equity markets, fundamental analysis, and technical
 tags: ['experiments', 'equity-markets', 'fundamental-analysis', 'technical-analysis', 'investing', 'trading']
 ---
 
-Picture this: you've just opened your first trading account, watched a few YouTube videos on "10X returns," and you're ready to beat the market. Your watchlist has thirty stocks—because if one doesn't work, surely twenty-nine others will, right? Here's the uncomfortable truth: most retail investors spend more time researching their next phone purchase than analyzing a ₹50,000 stock investment. We'll meticulously compare camera specs and battery life for a ₹80,000 phone, but buy shares based on a trending tweet or a tip from a friend's uncle who "knows the markets."
-
-The legends didn't build wealth this way. Peter Lynch managed billions at Fidelity with a simple philosophy: invest in what you know. He bought Dunkin' Donuts because his kids loved it, studied Taco Bell because he noticed long queues, and crushed the market—not with complex algorithms or insider tips, but by **actually understanding the businesses** he owned. No 47-indicator trading setup, no algorithmic black boxes, just good old-fashioned homework: reading annual reports, walking into stores, talking to customers, understanding competitive advantages.
-
 The democratization of investing is beautiful—anyone with ₹500 can now own a piece of India's best companies. But this accessibility is a double-edged sword. The same app that lets you buy blue-chips in seconds also makes it dangerously easy to YOLO your savings into penny stocks at 3 AM. The tools have evolved, but the fundamentals haven't: **know what you own, understand why you own it, and have the patience to let quality compound**.
+
+## For sure ways to lose money in stock  markets
+
+1. Buying stocks at the wrong time.
+
+2. Buy high and sell low.
+
+- Always mix investment with insurance and purchase protection plans like ULIPs, Term Insurance, etc.
+
+## Attribution
+
+Before we start, I want to make sure you I am not a SEBI certified analyst or so called 'expert' in the stock market from a finance background. I am a software engineer, trying to figure out the stock market, so I don't have to rely on the mercy of Mutual Fund Houses and other financial institutions. All that I have learned is from my own research(from various sources) and experience(good and bad). Here is a list of resources and tools that I found useful out of all the garbage and scamster.
+
+- Sources: 
+- Tools: 
 
 ## Table of Contents
 {:.no_toc}
@@ -53,19 +64,13 @@ Without pre-opening, big institutional traders (who monitor news 24/7) place ord
 #### How Pre-Opening saves retail investors
 
 **Phase 1: Order Collection (9:00-9:07 AM)**
-- Everyone places orders - institutions, retail traders, everyone
-- No trades execute yet, just orders collected
-- You have 7 minutes to process overnight news and place your order
+Everyone places orders - institutions, retail traders, everyone. No trades execute yet, just orders collected. You have 7 minutes to process overnight news and place your order.
 
 **Phase 2: Order Matching (9:08-9:11 AM)**
-- System runs an algorithm to find equilibrium price
-- Calculates: "At what price can maximum shares be traded?"
-- All buy and sell orders are matched at this SINGLE price
+System runs an algorithm to find equilibrium price. Calculates: "At what price can maximum shares be traded?" All buy and sell orders are matched at this SINGLE price.
 
 **Phase 3: Buffer Period (9:12-9:15 AM)**
-- Opening price is displayed but frozen
-- No new orders can be placed/modified
-- Everyone can see where market will open
+Opening price is displayed but frozen. No new orders can be placed/modified. Everyone can see where market will open.
 
 **Outcome:** Level playing field - your 9:02 AM order has same priority as institutional order. No one gets advantage, everyone gets same opening price.
 
@@ -106,18 +111,6 @@ Indian equity markets operate on a **T+1 settlement cycle**, where trades execut
 - **Primary Market:** Zomato IPO (2021) - Company [raised ₹9,375 Cr](https://www.chittorgarh.com/ipo/zomato-ipo/1126/) directly from investors
 - **Secondary Market:** You buying Zomato shares today on NSE - Money goes to the seller (and not Zomato)
 
-### Types of Accounts
-
-To invest in stocks, you need three interconnected accounts:
-
-**1. Trading Account** - Your execution gateway where buy and sell orders are placed through your broker.
-
-**2. Demat Account** - Digital vault storing your securities in dematerialized form, maintained by depositories (NSDL or CDSL).
-
-**3. Savings Account** - Fund source for purchases and destination for sale proceeds.
-
-> **Note**: Most brokers now offer 3-in-1 accounts integrating all three components for seamless transactions. Opening both the demat and trading account with the same broker ensures smooth and seamless transactions. You can buy/sell stocks and have them automatically credited or debited in your demat account without manual transfers.
-
 ### Types of Orders
 
 | Order Type | What It Is | Execution | Example | When to Use | Risk/Note |
@@ -129,7 +122,8 @@ To invest in stocks, you need three interconnected accounts:
 | **IOC (Immediate or Cancel)** | Execute now or cancel completely | Executes immediately whatever is available, cancels rest | Want to buy 1,000 shares, only 300 available → Gets 300, cancels 700 | Don't want partial fills sitting in order book | All-or-nothing execution at current moment |
 | **GTC (Good Till Cancelled)** | Order stays active until filled or manually cancelled | Remains in system for days/weeks | Place limit order on Monday → Stays active till Friday or until you cancel | Long-term price targets, patient investing | Remember to cancel manually or it stays indefinitely |
 | **Disclosed Quantity** | Large order showing only small portion to market | Shows small quantity, auto-refills as it executes | Want 10,000 shares but show only 500 at a time | Large orders without moving market price | Prevents tipping off other traders about your big position |
-### Price Movements and Corporate Actions
+
+### Price Movements
 
 #### Gap Opening
 
@@ -180,9 +174,9 @@ Beyond individual stocks, NSE and BSE have **market-wide circuit breakers** that
 
 **Global Financial Crisis (2008)**
 - **Impact:** 10%+ crashes on multiple days
-- **Reason:** Lehman Brothers collapse, global banking crisis
+- **Reason:** Lehman Brothers collapse, sub-prime mortgage crisis
 
-> **Note:** Circuit breakers protect the entire market from panic selling or euphoria. They give investors time to think rationally rather than selling/buying in fear. Sharp rallies often followed by profit-booking by big players at the expense of retail investors.
+> **Note:** Circuit breakers protect the entire market from panic selling or euphoria. They give investors time to think rationally rather than selling/buying in fear. Sharp rallies are often followed by profit-booking by big players at the expense of retail investors.
 
 ### Face Value vs Market Value
 
@@ -220,7 +214,7 @@ When the company divides its shares into a larger number of shares, which increa
 
 When a company issues additional shares to existing shareholders drawn from accumulated reserves or profits. For example, if you own 100 shares of a company and it declares a 1:1 bonus, you'll receive 100 additional shares—doubling your holding to 200 shares at no cost. This is typically done to reward loyal shareholders, improve liquidity, and signal strong financial health without affecting the company's overall market capitalization.
 
-> **Note:** Unlike dividends, bonus shares are tax-free when received(only taxed upon sale). Companies with strong reserves often prefer bonus issues over cash dividends to conserve capital for growth while still rewarding shareholders. Indian IT giants like Infosys, TCS, and Wipro have consistently issued bonus shares over decades, significantly multiplying early investors' holdings.
+> **Note:** Unlike dividends, bonus shares are tax-free when received(only taxed upon sale). Companies with strong reserves often prefer bonus issues over cash dividends. Indian IT giants like Infosys, TCS, and Wipro have consistently issued bonus shares over decades, significantly multiplying early investors' holdings.
 
 #### Effects on dividends
 
@@ -241,7 +235,12 @@ Now, coming back to the question, how much you would have earned if you had inve
 | 2015 | Bonus Issue | 1:1 | 25,600 |
 | 2018 | Bonus Issue | 1:1 | 51,200 |
 
-A modest ₹4,750 investment at Infosys IPO (50 shares @ ₹95 in 1993) would be worth **₹7.64 Crores** today—delivering a CAGR of **26.8%** over 32 years. Through 8 bonus issues and 1 stock split, your original 50 shares would have multiplied **1,024 times** to 51,200 shares. Beyond capital appreciation, these shares would generate **₹23 Lakhs annually in dividends alone** at 2025's dividend rate of ₹45 per share.
+It would have grown to **₹7.64 Crores** - a CAGR of **26%** over 32 years. Through 8 bonus issues and 1 stock split, your original 50 shares would have multiplied **1,024 times** to 51,200 shares. Beyond capital appreciation, these shares would generate **₹23 Lakhs annually in dividends alone** at 2025's dividend rate of ₹45 per share.
+
+We will cover this in more detail in the next section. But still want to give a reality 
+check - none of us would have the patience to hold on to the stock for 30 years.  During the dot-com bubble burst (2000-2002), Infosys crashed to ₹10 along with every other IT stock. Your ₹4,750 investment would've been worth barely ₹500. At that moment, watching 90% of your capital evaporate, most of us (myself included) would've panicked and exited—booking heavy losses. And then, in classic retail investor fashion, tried to "recover" our capital through intraday trading or F&O, likely losing even more. The 1,024x return looks beautiful in hindsight, but living through those drawdowns? That's the real test legends pass and most of us fail. 
+
+**Peter Lynch** managed billions for Fidelity with a simple philosophy: invest in what you know. He bought Dunkin' Donuts because his kids loved it, studied Taco Bell because he noticed long queues. **Rakesh Jhunjhunwala** (Big Bull of India) bought Titan at ₹3 in 2002-2003 when everyone thought watches were dead (mobile phones showed time). He saw Indians' love for jewelry and believed in Tanishq's potential. Held through multiple corrections. **Ramdeo Agrawal** (Motilal Oswal) identified PI Industries in early 2000s when it was a ₹20 stock. Studied the agrochemicals space, understood the export opportunity, and watched management execution year after year.
 
 ### Investor Categories
 
@@ -360,7 +359,7 @@ A modest ₹4,750 investment at Infosys IPO (50 shares @ ₹95 in 1993) would be
 
 **What it uses:**
 - Price charts (candlesticks, patterns, trends)
-- Technical indicators (EMA, MACD, RSI)
+- Technical indicators (SMA, EMA, MACD, RSI)
 - Volume analysis
 - Support and resistance levels
 
