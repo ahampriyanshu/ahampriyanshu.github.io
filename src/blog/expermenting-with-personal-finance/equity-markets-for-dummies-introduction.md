@@ -7,26 +7,24 @@ tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 pin: true
 ---
 
-The democratization of investing is beautiful—anyone with ₹500 can now own a piece of India's best companies. But this accessibility is a double-edged sword. The same app that lets you buy blue-chips in seconds also makes it dangerously easy to YOLO your savings into penny stocks at 3 AM. The tools have evolved, but the fundamentals haven't: **know what you own, understand why you own it, and have the patience to let quality compound**.
-
-## For sure ways to lose money in stock  markets
-
-1. Buying stocks at the wrong time.
-
-2. Buy high and sell low.
-
-- Always mix investment with insurance and purchase protection plans like ULIPs, Term Insurance, etc.
+The democratization of investing is beautiful—anyone with ₹500 can now own a piece of India's best companies. But this accessibility is a double-edged sword. The same app that lets you buy blue-chips in seconds also makes it dangerously easy to YOLO your savings into penny stocks at 3 AM. The tools have evolved, but the fundamentals haven't: *know what you own, understand why you own it, and have the patience to let quality compound*.
 
 ## Attribution
 
 Before we start, I want to make sure you I am not a SEBI certified analyst or so called 'expert' in the stock market from a finance background. I am a software engineer, trying to figure out the stock market, so I don't have to rely on the mercy of Mutual Fund Houses and other financial institutions. All that I have learned is from my own research(from various sources) and experience(good and bad). Here is a list of resources and tools that I found useful out of all the garbage and scamster.
 
-- Sources: 
-- Tools:
+### Sources
 
-## Basics
+- [LLA](https://www.youtube.com/labourlawadvisor)
+- [Varsity](https://zerodha.com/varsity/)
+- [SEBI](https://sebi.gov.in)
+- [Rachana Ranade](https://www.youtube.com/@CARachanaRanade)
 
-### Market Session Structure
+### Tools
+- [Moneycontrol](https://moneycontrol.com)
+- [TickerTape](https://www.tickertape.in/)
+
+## Market Session Structure
 
 **Daily Trading Schedule:**
 
@@ -56,7 +54,7 @@ Imagine if markets opened directly at 9:00 AM. Overnight, major news breaks:
 
 Without pre-opening, big institutional traders (who monitor news 24/7) place orders instantly at 9:00 AM, while regular retail investors (you and me) are still processing the news. This results in stock opening at extreme price (very high or very low), and by the time you react, the opportunity is gone and you end up buying/selling at unfair prices.
 
-#### How Pre-Opening saves retail investors
+### How Pre-Opening saves retail investors
 
 **Phase 1: Order Collection (9:00-9:07 AM)**
 - Everyone places orders - institutions, retail traders, everyone
@@ -77,7 +75,7 @@ Without pre-opening, big institutional traders (who monitor news 24/7) place ord
 
 > **Note:** Pre-opening is like a "democracy vote" for opening price instead of a "fastest finger first" game. It protects small investors from being at a disadvantage against institutional players with faster systems and 24/7 news monitoring.
 
-#### Trading Days & Holidays
+### Trading Days & Holidays
 
 **Markets are OPEN:** 
 - Monday to Friday (9:15 AM - 3:30 PM)
@@ -88,7 +86,7 @@ Without pre-opening, big institutional traders (who monitor news 24/7) place ord
 - Weekends (Saturday & Sunday)
 - National holidays and major festivals (Republic Day, Independence Day, Holi, Diwali, Christmas, etc.)
 
-### Settlement Cycle
+## Settlement Cycle
 
 Indian equity markets operate on a **T+1 settlement cycle**, where trades execute immediately but settlement occurs one working day later.
 
@@ -99,7 +97,7 @@ Indian equity markets operate on a **T+1 settlement cycle**, where trades execut
 
 > **Note:** India moved from T+2 to T+1 settlement(and T+0 for select stocks) in January 2023, making it one of the fastest settlement cycles globally. [Read more](https://www.sebi.gov.in/legal/circulars/dec-2024/enhancement-in-the-scope-of-optional-t-0-rolling-settlement-cycle-in-addition-to-the-existing-t-1-settlement-cycle-in-equity-cash-markets_89443.html).
 
-### Types of Markets
+## Types of Markets
 
 | Feature | Primary Market | Secondary Market |
 |---------|----------------|------------------|
@@ -112,7 +110,7 @@ Indian equity markets operate on a **T+1 settlement cycle**, where trades execut
 - **Primary Market:** Zomato IPO (2021) - Company [raised ₹9,375 Cr](https://www.chittorgarh.com/ipo/zomato-ipo/1126/) directly from investors
 - **Secondary Market:** You buying Zomato shares today on NSE - Money goes to the seller (and not Zomato)
 
-### Types of Accounts
+## Types of Accounts
 
 To invest in stocks, you need three interconnected accounts:
 
@@ -124,7 +122,7 @@ To invest in stocks, you need three interconnected accounts:
 
 > **Note**: Most brokers now offer 3-in-1 accounts integrating all three components for seamless transactions. Opening both the demat and trading account with the same broker ensures smooth and seamless transactions. You can buy/sell stocks and have them automatically credited or debited in your demat account without manual transfers.
 
-### Types of Orders
+## Types of Orders
 
 | Order Type | What It Is | Execution | Example | When to Use | Risk/Note |
 |------------|-----------|-----------|---------|-------------|-----------|
@@ -136,9 +134,9 @@ To invest in stocks, you need three interconnected accounts:
 | **GTC (Good Till Cancelled)** | Order stays active until filled or manually cancelled | Remains in system for days/weeks | Place limit order on Monday → Stays active till Friday or until you cancel | Long-term price targets, patient investing | Remember to cancel manually or it stays indefinitely |
 | **Disclosed Quantity** | Large order showing only small portion to market | Shows small quantity, auto-refills as it executes | Want 10,000 shares but show only 500 at a time | Large orders without moving market price | Prevents tipping off other traders about your big position |
 
-### Price Movements
+## Price Movements
 
-#### Gap Opening
+### Gap Opening
 
 Markets rarely open exactly where they closed. **After-market orders** accumulate overnight, creating supply-demand imbalances.
 
@@ -146,7 +144,7 @@ Markets rarely open exactly where they closed. **After-market orders** accumulat
 
 **Gap Down Opening** - Opening price falls below previous close, signaling negative overnight news.
 
-### Circuit Breakers
+## Circuit Breakers
 
 Price band limits preventing extreme single-day volatility, typically set at 5%, 10%, or 20% bands.
 
@@ -155,7 +153,7 @@ Price band limits preventing extreme single-day volatility, typically set at 5%,
 - **10% circuit** - Mid-cap stocks
 - **20% circuit** - Small-cap and volatile stocks
 
-#### Market-Wide Circuit Breakers (Index Level)
+### Market-Wide Circuit Breakers (Index Level)
 
 Beyond individual stocks, NSE and BSE have **market-wide circuit breakers** that halt ALL trading when indices fall/rise sharply:
 
@@ -171,7 +169,7 @@ Beyond individual stocks, NSE and BSE have **market-wide circuit breakers** that
 - If 10% circuit hit **before 1:00 PM** → 45-minute halt
 - If 10% circuit hit **after 2:30 PM** → No halt
 
-#### Instances when market circuit breakers were hit
+### Instances when market circuit breakers were hit
 
 **2009 Lok Sabha Election Results**
 - **Impact:** SENSEX locked at 14,272.62(+17.24%), NIFTY locked at 4,308.05(+17.33%). 
@@ -191,7 +189,7 @@ Beyond individual stocks, NSE and BSE have **market-wide circuit breakers** that
 
 > **Note:** Circuit breakers protect the entire market from panic selling or euphoria. They give investors time to think rationally rather than selling/buying in fear. Sharp rallies often followed by profit-booking by big players at the expense of retail investors.
 
-### Face Value vs Market Value
+## Face Value vs Market Value
 
 **Face Value** - Nominal value printed on share certificate, used for dividend calculations and corporate actions.
 
@@ -199,7 +197,7 @@ Beyond individual stocks, NSE and BSE have **market-wide circuit breakers** that
 
 **Example:** MRF face value = ₹10, market value = ₹1,55,000+
 
-### Corporate Actions
+## Corporate Actions
 
 <figure class="align-center">
   <img src="/images/equity/infosys.png" alt="loading">
@@ -217,19 +215,19 @@ It is the distribution of profits to shareholders based on face value (not marke
 - **Record Date**: Shareholders on this date receive benefits
 - **Ex-Date**: Trades after this date don't qualify for announced benefits
 
-#### Stock Split
+### Stock Split
 
 When the company divides its shares into a larger number of shares, which increases the number of outstanding shares and reduces the price per share. For example, if you have 100 shares of a company @ Rs 50 per share and it splits 1:2. You will now have 200 shares @ Rs 25 per share. This is usually done to make the stock more affordable and attractive to small/retail investors.
 
 > **Note:** Not all companies choose to split shares. MRF, for instance, hasn't split its stock since 1975—resulting in a current price of ₹1,55,000 per share. This deliberately high price acts as a barrier to speculative trading, attracting only experienced, long-term investors, who aren't affected by short-term market volatility. This strategy maintains price stability and cultivates an exclusivity around the stock.
 
-#### Bonus Share 
+### Bonus Share 
 
 When a company issues additional shares to existing shareholders drawn from accumulated reserves or profits. For example, if you own 100 shares of a company and it declares a 1:1 bonus, you'll receive 100 additional shares—doubling your holding to 200 shares at no cost. This is typically done to reward loyal shareholders, improve liquidity, and signal strong financial health without affecting the company's overall market capitalization.
 
 > **Note:** Unlike dividends, bonus shares are tax-free when received(only taxed upon sale). Companies with strong reserves often prefer bonus issues over cash dividends to conserve capital for growth while still rewarding shareholders. Indian IT giants like Infosys, TCS, and Wipro have consistently issued bonus shares over decades, significantly multiplying early investors' holdings.
 
-#### Effects on dividends
+### Effects on dividends
 
 Bonus shares and stock splits multiply the number of shares you own. While individual dividend per share may reduce proportionally, your total dividend income remains the same initially. However, when companies raise dividends in the future, you benefit from a much larger shareholding—turning long term investments into substantial passive income streams over decades. 
 
@@ -265,7 +263,7 @@ These "legends" didn't build wealth through luck or shortcuts—they built it th
 The common thread? They all did their homework, understood what they owned, and had the patience to sit through market tantrums. No WhatsApp tips, no telegram channels, no "hot stock of the week"—just boring old fundamental research and conviction.
 
 
-### Investor Categories
+## Investor Categories
 
 | Category | Full Form | Threshold/Definition | Examples |
 |----------|-----------|---------------------|----------|
@@ -274,7 +272,7 @@ The common thread? They all did their homework, understood what they owned, and 
 | **DII** | Domestic Institutional Investors | Indian institutions managing pooled money | SBI Mutual Fund, LIC, HDFC AMC, ICICI Prudential, UTI |
 | **FII/FPI** | Foreign Institutional/Portfolio Investors | International investors bringing foreign capital | Government of Singapore, Europacific Growth Fund |
 
-### Market Capitalization Segments
+## Market Capitalization Segments
 
 **Market Cap Formula:**
 
@@ -285,7 +283,7 @@ The common thread? They all did their homework, understood what they owned, and 
 - **Mid Caps**: Market cap between ₹500 - ₹10,000 crores
 - **Small Caps**: Market cap < ₹500 crores
 
-#### Market Indices
+### Market Indices
 
 **NIFTY** (NSE) - Top 50 companies across sectors (National Fifty)
 
@@ -312,7 +310,7 @@ The common thread? They all did their homework, understood what they owned, and 
 - Promoter shares aren't available for buying/selling
 - Higher free float = Better liquidity
 
-### Short Selling Mechanics
+## Short Selling Mechanics
 
 **Short selling** enables profit from falling prices by selling borrowed shares.
 
@@ -339,7 +337,7 @@ The common thread? They all did their homework, understood what they owned, and 
 
 > **Warning:** Short selling is risky - losses can be unlimited if stock rises sharply. Don't try it unless you're sure about what you're doing.
 
-### Tax Implications
+## Tax Implications
 
 | Type | Holding Period | Tax Rate |
 |------|----------------|----------|

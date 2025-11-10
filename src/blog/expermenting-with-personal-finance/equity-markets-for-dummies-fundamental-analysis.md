@@ -4,7 +4,6 @@ date: 2025-10-01
 description: A comprehensive exploration of equity markets, fundamental analysis, technical trading strategies, and investment principles for navigating the Indian stock market.
 categories: ["Experimenting With Personal Finance"]
 tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
-pin: true
 ---
 
 ## Analysis Framework
