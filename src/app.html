@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      (function () {
+        try {
+          const storedTheme = localStorage.getItem('theme');
+          const theme = storedTheme || 'dark';
+          document.documentElement.setAttribute('data-mode', theme);
+        } catch (error) {
+          document.documentElement.setAttribute('data-mode', 'dark');
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="%sveltekit.assets%/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+    <link rel="shortcut icon" href="%sveltekit.assets%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
+    <link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href="/norm-has-a-blog/rss.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Atom Feed"
+      href="/norm-has-a-blog/atom.xml"
+    />
+    <link rel="stylesheet" href="%sveltekit.assets%/assets/css/main.css" />
+    <link rel="stylesheet" href="%sveltekit.assets%/assets/css/skins/default.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
