@@ -1,9 +1,9 @@
 ---
-title: "Data Structure I | Study Plan | Leetcode"
+title: "Striver's 180 Sheets | Java & C++"
 date: 2020-02-02
-description: C++ solutions to LeetCode's Data Structure I study plan, covering arrays, linked lists, trees, and other fundamental data structures.
-categories: ["Experimenting With DSA"]
-tags: ['leetcode', 'data-structures', 'competitive-programming']
+description: C++ solutions to Striver's 180 Sheets, covering arrays, linked lists, trees, and other fundamental data structures.
+categories: ["Experimenting With CP"]
+tags: ['striver', 'data-structures', 'competitive-programming']
 ---
 
 ## Day 1 | Array

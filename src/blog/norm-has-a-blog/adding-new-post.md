@@ -3,9 +3,8 @@ title: Adding New Post
 description: Step-by-step guide to writing and publishing articles. Learn frontmatter, markdown features, best practices, and troubleshooting tips.
 date: '2025-11-02'
 tags:
-  - writing
-  - guide
-  - tutorial
+  - theme
+  - blogging
 categories:
   - "Norm Has A Blog"
 ---

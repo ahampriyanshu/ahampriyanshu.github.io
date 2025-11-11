@@ -3,13 +3,10 @@ title: Markdown Syntax Guide
 description: Master markdown formatting with examples of text styling, code blocks, tables, math equations, and more. Complete reference for content creators.
 date: '2025-11-01'
 tags:
-  - markdown
-  - writing
-  - guide
-  - syntax
+  - theme
+  - blogging
 categories:
   - "Norm Has A Blog"
-pin: true
 ---
 
 ## Text Formatting
@@ -35,6 +32,8 @@ Citations like <cite>&mdash; Mark Otto</cite>
 a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 
 H<sub>2</sub> + SO<sub>4</sub> &rarr; H<sub>2</sub>SO<sub>4</sub>
+
+## Headings
 
 ```md
 # Heading 1

@@ -3,10 +3,8 @@ title: Getting Started
 description: Learn how to install, configure, and deploy your SvelteKit blog in minutes. Complete setup guide with customization tips and deployment options.
 date: '2025-11-02'
 tags:
-  - guide
-  - setup
-  - getting-started
-  - tutorial
+  - theme
+  - blogging
 categories:
   - "Norm Has A Blog"
 pin: true
