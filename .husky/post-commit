@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+# Prevent infinite loop with flag file
+FLAG_FILE=".git/version-bump-in-progress"
+
+if [ -f "$FLAG_FILE" ]; then
+  rm "$FLAG_FILE"
+  exit 0
+fi
+
+# Get the commit message
+COMMIT_MSG=$(git log -1 --pretty=%B)
+
+# Check if commit starts with feat: or fix:
+if echo "$COMMIT_MSG" | grep -q "^feat:"; then
+  touch "$FLAG_FILE"
+  npm version minor --no-git-tag-version
+  git add package.json package-lock.json
+  git commit --amend --no-edit --no-verify
+elif echo "$COMMIT_MSG" | grep -q "^fix:"; then
+  touch "$FLAG_FILE"
+  npm version patch --no-git-tag-version
+  git add package.json package-lock.json
+  git commit --amend --no-edit --no-verify
+fi
