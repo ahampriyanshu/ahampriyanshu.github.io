@@ -1,5 +1,5 @@
 ---
-title: "Introduction | Equity Markets for Dummies"
+title: "Equity Markets for Dummies"
 date: 2025-10-01
 description: A comprehensive exploration of Indian equity markets
 categories: ["Experimenting With Personal Finance"]

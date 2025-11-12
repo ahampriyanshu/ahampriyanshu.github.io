@@ -1,5 +1,5 @@
 ---
-title: "Technical Analysis | Equity Markets for Dummies [WIP]"
+title: "Technical Analysis for Dummies [WIP]"
 date: 2025-10-01
 description: A comprehensive exploration of equity markets, fundamental and  technical analysis
 categories: ["Experimenting With Personal Finance"]

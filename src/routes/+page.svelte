@@ -58,7 +58,7 @@
           times, I plan to give it another shot down the road.
         </p>
         <p class="bio-text">
-          I spent the last three years living as a nomad, working remotely from <a
+          I spent the last three years working remotely from <a
             href="https://supertrip.ahampriyanshu.com"
             rel="noopener noreferrer"
             target="_blank">100+</a
