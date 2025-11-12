@@ -499,18 +499,6 @@ a {
     text-align: center;
   }
 
-  h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
   p {
     margin-bottom: 1rem;
   }
@@ -1005,6 +993,10 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+.content-wrapper:not(.has-sidebar) .main-content {
+  padding-bottom: var(--spacing-9);
 }
 
 .post-sections-wrapper {

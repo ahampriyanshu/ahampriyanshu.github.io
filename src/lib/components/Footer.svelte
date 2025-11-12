@@ -19,14 +19,28 @@
     <div class="footer-main">
       <div class="footer-left">
         <div class="profile-image-wrapper">
-          <div class="profile-image">
-            <img src="{base}/logo.png" alt={siteConfig.author} />
-          </div>
+          <a
+            href={siteConfig.portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="profile-link-image"
+          >
+            <div class="profile-image">
+              <img src="{base}/logo.png" alt={siteConfig.author} />
+            </div>
+          </a>
         </div>
 
         <div class="profile-info">
-          <h3 class="profile-name">{siteConfig.author}</h3>
-          <p class="profile-title">{siteConfig.designation}</p>
+          <a
+            href={siteConfig.portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="profile-link-text"
+          >
+            <h3 class="profile-name">{siteConfig.author}</h3>
+            <p class="profile-title">{siteConfig.designation}</p>
+          </a>
 
           <div class="social-icons">
             <a
@@ -287,6 +301,12 @@
     align-items: flex-start;
   }
 
+  .profile-link-image,
+  .profile-link-text {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .profile-image-wrapper {
     display: flex;
     flex-direction: column;
@@ -303,6 +323,11 @@
       border-radius: 12px;
       object-fit: cover;
       display: block;
+      transition: box-shadow 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      }
     }
   }
 

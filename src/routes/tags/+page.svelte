@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import type { PageData } from './$types';
   import IndexList from '$lib/components/IndexList.svelte';
+  import { fly } from 'svelte/transition';
 
   export let data: PageData;
 
@@ -46,7 +47,7 @@
   {/if}
 </svelte:head>
 
-<div class="tags-page">
+<div class="tags-page" in:fly={{ y: 30, duration: 500 }}>
   <h1 class="page-title">Tags</h1>
 
   <IndexList items={indexItems} />

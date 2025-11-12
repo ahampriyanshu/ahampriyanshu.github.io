@@ -2,6 +2,7 @@ export const siteConfig = {
   title: 'Priyanshu Tiwari',
   description:
     "I'm a backend heavy full-stack developer and history buff, currently working as a Senior Software Engineer at HackerRank.",
+  portfolio: 'https://portfolio.ahampriyanshu.com',
   author: 'Priyanshu Tiwari',
   designation: 'Senior Software Engineer',
   baseURL: 'https://ahampriyanshu.com',
@@ -11,7 +12,7 @@ export const siteConfig = {
   twitterHandle: 'ahampriyanshu',
   lang: 'en',
   timezone: 'Asia/Kolkata',
-  theme: 'dark',
+  theme: 'light',
   analytics: {
     ga_id: 'G-VSNH6EH1RX',
     gtag_id: 'GTM-M4FTVQ3'

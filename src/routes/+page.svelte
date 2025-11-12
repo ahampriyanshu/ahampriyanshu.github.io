@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { base } from '$app/paths';
   import type { PageData } from './$types';
   import BlogList from '$lib/components/BlogList.svelte';
+  import { fly } from 'svelte/transition';
 
   export let data: PageData;
 </script>
@@ -37,19 +37,15 @@
   {/if}
 </svelte:head>
 
-<div class="homepage">
+<div class="homepage" in:fly={{ y: 30, duration: 500 }}>
   <div class="hero-section">
-    <div class="profile-image-wrapper">
-      <img src="{base}/user.jpg" alt={data.siteConfig.author} class="profile-image" />
-    </div>
-
     <div class="hero-content">
       <h1 class="hero-title">Hi, I'm Priyanshu 👋</h1>
 
       <div class="bio-section">
         <p class="bio-text">
-          I'm a backend heavy full-stack developer and history buff, currently working as a Senior
-          Software Engineer at HackerRank. My team recently built <a
+          I'm a backend heavy full-stack developer currently working as a Senior Software Engineer
+          at HackerRank. My team recently built <a
             href="https://www.hackerrank.com/products/skillup"
             rel="noopener noreferrer"
             target="_blank">SkillUp</a
@@ -70,7 +66,7 @@
         </p>
         <p class="bio-text">
           This blog is where I share notes on programming, personal finance, and anything else I'm
-          exploring at the moment. If you want to collaborate on something cool, feel free to <a
+          exploring at the moment. If you want to collaborate with me, feel free to <a
             href="mailto:vayampriyanshu@gmail.com&subject=Hey"
             rel="noopener noreferrer"
             target="_blank">reach out</a
@@ -102,26 +98,11 @@
     text-align: center;
   }
 
-  .profile-image-wrapper {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 24px;
-    box-shadow: var(--card-shadow);
-    aspect-ratio: 1;
-  }
-
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
   .hero-content {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1024px;
   }
 
   .hero-title {
@@ -155,13 +136,6 @@
       gap: 3rem;
     }
 
-    .profile-image-wrapper {
-      margin-top: 90px;
-      width: 250px;
-      height: 250px;
-      aspect-ratio: 1;
-    }
-
     .hero-title {
       font-size: 3rem;
     }
@@ -172,16 +146,10 @@
       flex-direction: row;
       text-align: left;
       align-items: flex-start;
-    }
 
-    .profile-image-wrapper {
-      order: 2;
-      flex-shrink: 0;
-    }
-
-    .hero-content {
-      order: 1;
-      flex: 1;
+      .hero-content {
+        padding-right: 1rem;
+      }
     }
   }
 

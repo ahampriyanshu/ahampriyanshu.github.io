@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import type { PageData } from './$types';
   import BlogList from '$lib/components/BlogList.svelte';
+  import { fly } from 'svelte/transition';
 
   export let data: PageData;
 </script>
@@ -60,7 +61,7 @@
   {/if}
 </svelte:head>
 
-<div class="category-page">
+<div class="category-page" in:fly={{ y: 30, duration: 500 }}>
   <nav class="breadcrumb">
     <a href="{base}/categories">Categories</a>
     <span class="separator">/</span>

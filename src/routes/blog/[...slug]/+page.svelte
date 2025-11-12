@@ -5,6 +5,7 @@
   import CopyDropdown, { type DropdownAction } from '$lib/components/CopyDropdown.svelte';
   import { base } from '$app/paths';
   import { browser } from '$app/environment';
+  import { fade, fly } from 'svelte/transition';
 
   export let data: PageData;
 
@@ -187,7 +188,7 @@
   {/if}
 </svelte:head>
 
-<div class="post-header-section">
+<div class="post-header-section" in:fly={{ y: -20, duration: 400, delay: 50 }}>
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol class="breadcrumb-list">
       <li><a href="{base}/">Home</a></li>
@@ -231,34 +232,45 @@
   </div>
 </div>
 
-<article class="post-article">
-  <div class="content prose">
+<article class="post-article" in:fade={{ duration: 300 }}>
+  <div class="content prose" in:fly={{ y: 20, duration: 400, delay: 100 }}>
     {#if Content}
       <svelte:component this={Content} />
     {/if}
   </div>
 
-  <nav class="post-navigation" aria-label="Post navigation">
-    <a href="{base}/blog/{previousPost.slug}" class="nav-item nav-previous">
+  <nav class="post-navigation" aria-label="Post navigation" in:fade={{ duration: 300, delay: 200 }}>
+    <a
+      href="{base}/blog/{previousPost.slug}"
+      class="nav-item nav-previous"
+      in:fly={{ x: -20, duration: 300 }}
+    >
       <span class="nav-label">PREVIOUS</span>
       <span class="nav-title">{previousPost.title}</span>
     </a>
-    <a href="{base}/blog/{nextPost.slug}" class="nav-item nav-next">
+    <a
+      href="{base}/blog/{nextPost.slug}"
+      class="nav-item nav-next"
+      in:fly={{ x: 20, duration: 300 }}
+    >
       <span class="nav-label">NEXT</span>
       <span class="nav-title">{nextPost.title}</span>
     </a>
   </nav>
 
   {#if metadata.tags && metadata.tags.length > 0}
-    <div class="post-tail-wrapper">
+    <div class="post-tail-wrapper" in:fade={{ duration: 300, delay: 300 }}>
       <div class="post-tags-inline">
-        {#each metadata.tags as tag}
-          <a href="{base}/tags/{tag.toLowerCase()}">
+        {#each metadata.tags as tag, index (tag)}
+          <a
+            href="{base}/tags/{tag.toLowerCase()}"
+            in:fly={{ y: 10, duration: 300, delay: index * 50 }}
+          >
             #{tag}
           </a>
         {/each}
       </div>
-      <div class="post-license">
+      <div in:fly={{ x: 20, duration: 300 }} class="post-license">
         <span class="license-text">
           This post is licensed under
           <a
@@ -450,18 +462,88 @@
     line-height: 1.8;
   }
 
-  .post-article :global(.content h1) {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
+  // Global Prose Styles
+  :global(.content.prose) {
+    :global(h2),
+    :global(h3),
+    :global(h4),
+    :global(h5),
+    :global(h6) {
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
 
-  .post-article :global(.content h2) {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    :global(h2) {
+      margin-top: 2.5rem;
+      font-size: 2rem;
+    }
+
+    :global(h3) {
+      margin-top: 2rem;
+      font-size: 1.625rem;
+    }
+
+    :global(h4) {
+      margin-top: 1.75rem;
+      font-size: 1.25rem;
+    }
+
+    :global(h5) {
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      letter-spacing: 0.01em;
+    }
+
+    :global(h6) {
+      margin-top: 1.25rem;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 768px) {
+      :global(h2) {
+        font-size: 1.75rem;
+      }
+
+      :global(h3) {
+        font-size: 1.5rem;
+      }
+
+      :global(h4) {
+        font-size: 1.125rem;
+      }
+
+      :global(h5) {
+        font-size: 1rem;
+      }
+
+      :global(h6) {
+        font-size: 0.9375rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      :global(h2) {
+        font-size: 1.5rem;
+      }
+
+      :global(h3) {
+        font-size: 1.25rem;
+      }
+
+      :global(h4) {
+        font-size: 1.125rem;
+      }
+
+      :global(h5) {
+        font-size: 1rem;
+      }
+
+      :global(h6) {
+        font-size: 0.875rem;
+      }
+    }
   }
 
   .post-article .post-navigation {

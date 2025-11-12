@@ -215,25 +215,19 @@ export function formatDate(date: string): string {
   });
 }
 
-export async function getArchives(): Promise<Map<string, Map<string, PostMetadata[]>>> {
+export async function getArchives(): Promise<Map<string, PostMetadata[]>> {
   const posts = await getPosts();
-  const archives = new Map<string, Map<string, PostMetadata[]>>();
+  const archives = new Map<string, PostMetadata[]>();
 
   posts.forEach((post) => {
     const date = new Date(post.date);
     const year = date.getFullYear().toString();
-    const month = date.toLocaleDateString('en-US', { month: 'long' });
 
     if (!archives.has(year)) {
-      archives.set(year, new Map());
+      archives.set(year, []);
     }
 
-    const yearMap = archives.get(year)!;
-    if (!yearMap.has(month)) {
-      yearMap.set(month, []);
-    }
-
-    yearMap.get(month)!.push(post);
+    archives.get(year)!.push(post);
   });
 
   return archives;

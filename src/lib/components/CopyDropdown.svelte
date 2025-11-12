@@ -13,6 +13,7 @@
 <script lang="ts">
   import Icon from '$lib/components/Icon.svelte';
   import { onMount } from 'svelte';
+  import { fly } from 'svelte/transition';
 
   export let primaryAction: DropdownAction;
   export let dropdownItems: DropdownAction[] = [];
@@ -96,8 +97,9 @@
       tabindex="-1"
       on:click|stopPropagation
       on:keydown|stopPropagation
+      in:fly={{ y: -10, duration: 200 }}
     >
-      {#each dropdownItems as item (item.label)}
+      {#each dropdownItems as item, index (item.label)}
         {#if item.href}
           <a
             class="dropdown-item"
@@ -106,6 +108,7 @@
             rel={item.rel}
             aria-label={item.ariaLabel ?? item.label}
             on:click={() => handleAction(item, true)}
+            in:fly={{ y: -5, duration: 200, delay: index * 30 }}
           >
             {#if item.icon}
               <Icon name={item.icon} size={14} />
@@ -118,6 +121,7 @@
             class="dropdown-item"
             on:click={() => handleAction(item, true)}
             aria-label={item.ariaLabel ?? item.label}
+            in:fly={{ y: -5, duration: 200, delay: index * 30 }}
           >
             {#if item.icon}
               <Icon name={item.icon} size={14} />

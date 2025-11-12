@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import BlogList from '$lib/components/BlogList.svelte';
+  import { fly } from 'svelte/transition';
 
   export let data: PageData;
 </script>
@@ -36,7 +37,7 @@
   {/if}
 </svelte:head>
 
-<div class="blog-page">
+<div class="blog-page" in:fly={{ y: 30, duration: 500 }}>
   <h1 class="page-title">Articles</h1>
   <p class="tag-count">{data.posts.length} post{data.posts.length !== 1 ? 's' : ''}</p>
 
