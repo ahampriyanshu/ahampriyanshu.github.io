@@ -1,9 +1,4 @@
-// Layout Constants
-$sidebar-width: 260px;
-$sidebar-width-large: 300px;
-$topbar-height: 3rem;
-$footer-height: 5rem;
-$main-content-max-width: 1250px;
+@use './rickey' as *;
 
 *,
 *::before,
@@ -11,121 +6,7 @@ $main-content-max-width: 1250px;
   box-sizing: border-box;
 }
 
-:root {
-  // Spacing Scale (0.25rem = 4px base)
-  --spacing-1: 0.25rem; // 4px
-  --spacing-2: 0.5rem; // 8px
-  --spacing-3: 0.75rem; // 12px
-  --spacing-4: 1rem; // 16px
-  --spacing-5: 1.25rem; // 20px
-  --spacing-6: 1.5rem; // 24px
-  --spacing-7: 2rem; // 32px
-  --spacing-8: 2.5rem; // 40px
-  --spacing-9: 3rem; // 48px
-  --spacing-10: 4rem; // 64px
-
-  // Border Radius
-  --radius-sm: 0.375rem; // 6px
-  --radius-md: 0.5rem; // 8px
-  --radius-lg: 0.75rem; // 12px
-
-  // Shadows
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 2px 6px 0 rgb(0 0 0 / 0.05), 0 0 0 1px rgb(0 0 0 / 0.05);
-  --shadow-lg: 0 4px 12px 0 rgb(0 0 0 / 0.1);
-
-  // Background Colors
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #f6f8fa;
-  --color-background-tertiary: #f3f4f6;
-
-  // Surface Colors (for cards, panels)
-  --color-surface-primary: #ffffff;
-  --color-surface-secondary: #f6f8fa;
-  --color-surface-hover: #e5e7eb;
-
-  // Border Colors
-  --color-border-primary: #e5e7eb;
-  --color-border-secondary: #f3f3f3;
-  --color-border-emphasis: #9ca3af;
-
-  // Text Colors
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #6b7280;
-  --color-text-tertiary: #9ca3af;
-
-  // Accent Colors
-  --color-accent-primary: #0056b2;
-  --color-accent-secondary: #004a9e;
-  --color-accent-tertiary: #8ab4f8;
-
-  // Overlay Colors
-  --color-overlay-primary: rgb(0 0 0 / 0.85);
-  --color-overlay-secondary: rgb(255 255 255 / 0.7);
-
-  // Code Colors
-  --color-code-background: #1e1e1e;
-  --color-code-text: #d4d4d4;
-  --color-code-header: #2d2d2d;
-  --color-code-border: #404040;
-
-  // Component-specific (derived from base tokens)
-  --color-heading: var(--color-text-primary);
-  --color-muted: var(--color-text-secondary);
-  --color-link: var(--color-accent-primary);
-  --color-link-hover: var(--color-accent-secondary);
-}
-
 :root[data-mode='dark'] {
-  color-scheme: dark;
-
-  // Shadows (darker for dark mode)
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-md: 0 6px 18px 0 rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.1);
-  --shadow-lg: 0 8px 24px 0 rgb(0 0 0 / 0.8);
-
-  // Background Colors
-  --color-background-primary: #0e1217;
-  --color-background-secondary: #1a1d23;
-  --color-background-tertiary: #1e1e1e;
-
-  // Surface Colors
-  --color-surface-primary: #18191d;
-  --color-surface-secondary: #1e1e1e;
-  --color-surface-hover: #2d2e30;
-
-  // Border Colors
-  --color-border-primary: #2d2e30;
-  --color-border-secondary: #404040;
-  --color-border-emphasis: #6b7280;
-
-  // Text Colors
-  --color-text-primary: #e5e7eb;
-  --color-text-secondary: #9ca3af;
-  --color-text-tertiary: #6b7280;
-
-  // Accent Colors
-  --color-accent-primary: #8ab4f8;
-  --color-accent-secondary: #6e9be6;
-  --color-accent-tertiary: #5a86d4;
-
-  // Overlay Colors
-  --color-overlay-primary: rgb(0 0 0 / 0.85);
-  --color-overlay-secondary: rgb(27 27 30 / 0.64);
-
-  // Code Colors
-  --color-code-background: #27272a;
-  --color-code-text: #d4d4d4;
-  --color-code-header: #2d2d2d;
-  --color-code-border: #404040;
-
-  // Component-specific
-  --color-heading: var(--color-text-primary);
-  --color-muted: var(--color-text-secondary);
-  --color-link: var(--color-accent-primary);
-  --color-link-hover: var(--color-accent-secondary);
-
-  // Dark mode component overrides for post header actions
   .post-header-section .action-btn {
     background: var(--color-surface-hover);
     border: none;
@@ -209,7 +90,6 @@ a {
   transition: color 0.2s ease;
 }
 
-// Global Card Utility
 .card {
   background-color: var(--color-surface-primary);
   border-radius: var(--radius-lg);
@@ -262,7 +142,6 @@ a {
   }
 }
 
-// Global Button Utilities
 .btn {
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--radius-sm);
@@ -291,7 +170,6 @@ a {
   box-shadow: var(--shadow-md);
 }
 
-// Grid/Layout Utilities
 .container {
   width: 100%;
   max-width: $main-content-max-width;
@@ -392,24 +270,26 @@ a {
   line-height: 1;
 }
 
-// Global Code Block Styles
 :global(.code-block-wrapper) {
   position: relative;
   margin-bottom: var(--spacing-6);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--color-code-border) !important;
+  background-color: var(--color-code-background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  word-wrap: break-word;
 
   .code-filename {
-    background: var(--color-code-header);
-    padding: var(--spacing-2) var(--spacing-4);
+    background-color: var(--color-code-background);
+    padding: var(--spacing-3) var(--spacing-4);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-code-border);
     font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     font-size: 0.8125rem;
     color: var(--color-code-text);
+    opacity: 0.8;
 
     .filename-left {
       display: flex;
@@ -440,7 +320,8 @@ a {
     .copy-code-btn {
       background: transparent;
       border: none;
-      color: var(--color-text-tertiary);
+      color: var(--color-code-text);
+      opacity: 0.6;
       padding: var(--spacing-2);
       cursor: pointer;
       transition: all 0.2s ease;
@@ -453,8 +334,9 @@ a {
       height: 32px;
 
       &:hover {
-        background: var(--color-border-primary);
-        color: var(--color-text-secondary);
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-code-text);
       }
 
       &:active {
@@ -488,7 +370,6 @@ a {
   }
 }
 
-// Global Prose Styles
 .prose {
   max-width: 100%;
 
@@ -653,7 +534,10 @@ a {
   pre {
     padding: var(--spacing-4);
     border-radius: var(--radius-sm);
-    overflow-x: auto;
+    overflow-x: visible;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
     margin-bottom: var(--spacing-4);
     line-height: 1.5;
 
@@ -664,26 +548,32 @@ a {
       font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace;
       border: none;
       color: inherit;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
   }
 
   .code-block-wrapper {
     position: relative;
     margin-bottom: var(--spacing-6);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     overflow: hidden;
-    border: 1px solid var(--color-code-border);
+    background-color: var(--color-code-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    word-wrap: break-word;
 
     .code-filename {
-      background: var(--color-code-header);
-      padding: var(--spacing-2) var(--spacing-4);
+      background-color: var(--color-code-background);
+      padding: var(--spacing-3) var(--spacing-4);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--color-code-border);
       font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
       font-size: 0.8125rem;
       color: var(--color-code-text);
+      opacity: 0.8;
 
       .filename-left {
         display: flex;
@@ -714,7 +604,8 @@ a {
       .copy-code-btn {
         background: transparent;
         border: none;
-        color: var(--color-text-tertiary);
+        color: var(--color-code-text);
+        opacity: 0.6;
         padding: var(--spacing-2);
         cursor: pointer;
         transition: all 0.2s ease;
@@ -727,8 +618,9 @@ a {
         height: 32px;
 
         &:hover {
-          background: var(--color-border-primary);
-          color: var(--color-text-secondary);
+          opacity: 1;
+          background: rgba(255, 255, 255, 0.1);
+          color: var(--color-code-text);
         }
 
         &:active {
@@ -766,6 +658,17 @@ a {
       border-radius: 0 !important;
       box-shadow: none !important;
       border: none !important;
+      background-color: var(--color-code-background) !important;
+      overflow-x: visible !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      white-space: pre-wrap !important;
+    }
+
+    pre.shiki code {
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
     }
   }
 
@@ -777,10 +680,39 @@ a {
   pre.shiki {
     background-color: var(--color-code-background) !important;
     padding: var(--spacing-4);
+    padding-top: 0;
     border-radius: 0;
-    overflow-x: auto;
+    overflow-x: visible;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
     margin: 0;
     border: none;
+  }
+
+  pre.shiki code {
+    white-space: pre-wrap !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  pre.shiki-plain {
+    background-color: var(--color-code-background) !important;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    overflow-x: visible;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin-bottom: var(--spacing-6);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  pre.shiki-plain code {
+    white-space: pre-wrap !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   blockquote {
@@ -877,6 +809,18 @@ a {
         text-decoration-thickness: 2px;
         text-underline-offset: 3px;
       }
+
+      &.heading-anchor {
+        text-decoration: none !important;
+        background-image: none !important;
+        border-bottom: none !important;
+
+        &:hover {
+          text-decoration: none !important;
+          background-image: none !important;
+          border-bottom: none !important;
+        }
+      }
     }
 
     code {
@@ -963,9 +907,118 @@ a {
       text-align: left;
     }
   }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+
+  .heading-anchor {
+    margin-left: 0.5em;
+    opacity: 0;
+    text-decoration: none !important;
+    color: var(--color-link);
+    font-weight: normal;
+    transition: opacity 0.2s ease;
+    background-image: none !important;
+    border-bottom: none !important;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: none !important;
+      background-image: none !important;
+      border-bottom: none !important;
+    }
+  }
+
+  h2:hover .heading-anchor,
+  h3:hover .heading-anchor,
+  h4:hover .heading-anchor,
+  h5:hover .heading-anchor,
+  h6:hover .heading-anchor {
+    opacity: 0.6;
+    text-decoration: none !important;
+    background-image: none !important;
+    border-bottom: none !important;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 1.625rem;
+  }
+
+  h4 {
+    margin-top: 1.75rem;
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.01em;
+  }
+
+  h6 {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    h6 {
+      font-size: 0.9375rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    h6 {
+      font-size: 0.875rem;
+    }
+  }
 }
 
-// Global App Layout Styles
 .app-container {
   min-height: 100vh;
   display: flex;
@@ -1074,7 +1127,6 @@ a {
   }
 }
 
-// Bio section (used in multiple pages)
 .bio-section {
   a {
     color: var(--color-link);
@@ -1099,7 +1151,6 @@ a {
   }
 }
 
-// Blog page (generic, used across multiple pages)
 .blog-page {
   .page-title {
     font-size: 2rem;
@@ -1114,7 +1165,6 @@ a {
   }
 }
 
-// Post list (generic styling used in multiple contexts)
 .post-list {
   max-width: 100%;
 

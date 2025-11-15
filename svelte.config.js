@@ -10,36 +10,38 @@ import { siteConfig } from './src/lib/config.ts';
 import { rehypeEscapeMath } from './src/lib/utils/rehype-escape-math.js';
 import { rehypeEscapeSvelte } from './src/lib/utils/rehype-escape-svelte.js';
 import { rehypeWrapTable } from './src/lib/utils/rehype-wrap-table.js';
+import { rehypeFixImagePaths } from './src/lib/utils/rehype-fix-image-paths.js';
+import { rehypeFixLinks } from './src/lib/utils/rehype-fix-links.js';
 import { createCodeHighlighter } from './src/lib/utils/code-highlighter.js';
-import { visit } from 'unist-util-visit';
 
 const basePath = siteConfig.subPath ?? '';
-
-// Simple inline rehype plugin to fix image paths
-const rehypeFixImagePaths = () => (tree) => {
-  const base = process.env.NODE_ENV === 'production' ? basePath : '';
-  if (!base) return;
-
-  visit(tree, 'element', (node) => {
-    if (node.tagName === 'img' && node.properties?.src) {
-      const src = node.properties.src;
-      if (typeof src === 'string' && src.startsWith('/') && !src.startsWith('//')) {
-        node.properties.src = `${base}${src}`;
-      }
-    }
-  });
-};
 
 const mdsvexOptions = {
   extensions: ['.md'],
   remarkPlugins: [remarkGfm, remarkToc, remarkMath],
   rehypePlugins: [
     rehypeSlug,
-    rehypeAutolinkHeadings,
+    [
+      rehypeAutolinkHeadings,
+      {
+        behavior: 'append',
+        properties: {
+          className: ['heading-anchor'],
+          ariaHidden: 'true'
+        },
+        content: [
+          {
+            type: 'text',
+            value: '#'
+          }
+        ]
+      }
+    ],
     rehypeEscapeMath,
     rehypeWrapTable,
     rehypeEscapeSvelte,
-    rehypeFixImagePaths
+    rehypeFixImagePaths(basePath),
+    rehypeFixLinks(basePath)
   ],
   layout: {
     post: './src/lib/layouts/PostLayout.svelte',
@@ -53,7 +55,6 @@ const mdsvexOptions = {
 const config = {
   extensions: ['.svelte', '.md'],
   preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
-
   kit: {
     adapter: adapter({
       pages: 'build',
@@ -68,9 +69,13 @@ const config = {
     prerender: {
       handleMissingId: 'warn',
       handleHttpError: ({ path, referrer, message }) => {
-        // Ignore 404 errors for missing images during prerender
+        console.warn(`Warning: ${path} referenced from ${referrer}`);
         if (path.startsWith('/images/') || path.includes('/images/')) {
           console.warn(`Warning: Missing image ${path} referenced from ${referrer}`);
+          return;
+        }
+        if (path.startsWith('/')) {
+          console.warn(`Warning: Missing href ${path} referenced from ${referrer}`);
           return;
         }
         throw new Error(message);

@@ -32,6 +32,9 @@ function extractHeadingsFromMarkdown(markdown: string): Heading[] {
   while ((match = headingRegex.exec(content)) !== null) {
     const level = match[1].length;
     const text = match[2].trim();
+
+    if (!text) continue;
+
     const id = slugify(text);
 
     headings.push({ id, text, level });
@@ -41,7 +44,6 @@ function extractHeadingsFromMarkdown(markdown: string): Heading[] {
 }
 
 export const load: PageServerLoad = async ({ params }) => {
-  // With [...slug], params.slug is the full path as a string
   const slugPath = params.slug;
   const post = await getPost(slugPath);
 
@@ -57,14 +59,41 @@ export const load: PageServerLoad = async ({ params }) => {
   );
 
   const allPosts = await getPosts();
-  const currentIndex = allPosts.findIndex((p) => p.slug === slugPath);
+  const currentPost = allPosts.find((p) => p.slug === slugPath);
 
-  // Circular navigation: wrap around to the beginning/end
-  const previousIndex = currentIndex > 0 ? currentIndex - 1 : allPosts.length - 1;
-  const nextIndex = currentIndex < allPosts.length - 1 ? currentIndex + 1 : 0;
+  if (!currentPost) {
+    throw error(404, 'Post not found');
+  }
 
-  const previousPost = allPosts[previousIndex];
-  const nextPost = allPosts[nextIndex];
+  const currentCategories = currentPost.categories || [];
+  const postsWithSameCategories = allPosts.filter((p) => {
+    const postCategories = p.categories || [];
+    return postCategories.some((cat) => currentCategories.includes(cat));
+  });
+
+  const postsToSearch = postsWithSameCategories.length > 1 ? postsWithSameCategories : allPosts;
+
+  const currentIndex = postsToSearch.findIndex((p) => p.slug === slugPath);
+
+  if (currentIndex < 0) {
+    const fallbackPost = allPosts.find((p) => p.slug !== slugPath) || allPosts[0];
+    return {
+      metadata: {
+        ...post.metadata,
+        commitInfo
+      },
+      previousPost: { slug: fallbackPost.slug, title: fallbackPost.title },
+      nextPost: { slug: fallbackPost.slug, title: fallbackPost.title },
+      headings: [],
+      siteConfig
+    };
+  }
+
+  const previousIndex = currentIndex > 0 ? currentIndex - 1 : postsToSearch.length - 1;
+  const nextIndex = currentIndex < postsToSearch.length - 1 ? currentIndex + 1 : 0;
+
+  const previousPost = postsToSearch[previousIndex];
+  const nextPost = postsToSearch[nextIndex];
 
   let headings: Heading[] = [];
   try {

@@ -7,33 +7,33 @@ tags:
   - blogging
 categories:
   - "Norm Has A Blog"
+pin: true
+math: true
 ---
+
 
 ## Text Formatting
 
-**Important:** Make sure to backup your data before proceeding
 
-*Warning:* This action cannot be undone
+MICHAEL *whispering*: Once we set this in motion, we can't **undo** it.
 
-This price was <del>$100</del> now $80
+The tribute was <del>$100,000</del> now $150,000 after the Five Families summit.
 
-This is an <ins>important addition</ins> to the document
+This is an <ins>offer you can't refuse</ins> drafted for the Corleone heirs.
 
-This text is <mark>highlighted for attention</mark>
+This warning is <mark>highlighted for the Consigliere</mark>.
 
-This information is <s>no longer valid</s>
+That truce is <s>no longer honored</s> after Sollozzo's move.
 
-Abbreviations like <abbr title="HyperText Markup Language">HTML</abbr>
+Abbreviations like <abbr title="New York City">NYC</abbr> mark the territories on the map.
 
-Citations like <cite>&mdash; Mark Otto</cite>
+Citations like <cite>&mdash; Mario Puzo, The Godfather</cite> keep the story grounded.
 
-<kbd>Ctrl + C</kbd> keyboard input
+<kbd>Ctrl + C</kbd> copies the coded message from Tom Hagen's typewriter.
 
-a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> charts the guards' approach angles.
 
-H<sub>2</sub> + SO<sub>4</sub> &rarr; H<sub>2</sub>SO<sub>4</sub>
-
-## Headings
+H<sub>2</sub> + SO<sub>4</sub> &rarr; H<sub>2</sub>SO<sub>4</sub> labels the chemicals in the hidden lab.
 
 ```md
 # Heading 1
@@ -46,83 +46,98 @@ H<sub>2</sub> + SO<sub>4</sub> &rarr; H<sub>2</sub>SO<sub>4</sub>
 
 ## Links
 
-[This is an inline link](https://example.com)
+Click [here](https://ahampriyanshu.com/blog) to see the absolute guide guide.
 
-[This is a link with a title](https://example.com "Link Title")
+Click [here](/blog) to see the relative guide.
 
 ## Lists
 
 ### Unordered Lists
 
-- Item 1
-- Item 2
-  - Nested item 2.1
-  - Nested item 2.2
-- Item 3
+- Roscoe Street Station
+- Live from the Crime Scene
+  - A Calm Before the Storm
+  - The Docks
+- A Cold Day in Hell
+  - Ragnarok Nightclub
+  - Punchinello Manor
+- A Bit Closer to Heaven
 
 ### Ordered Lists
 
-1. First item
-2. Second item
-   1. Nested item 2A
-      1. Nested item 2A.a
-3. Third item
+1. Dark Age economy setup
+2. Feudal Age rush
+   1. Archers or scouts
+      1. Transition plan
+3. Castle Age boom
+4. Imperial Age dominance
 
 ### Task Lists
 
-- [x] Completed task
-- [ ] Incomplete task
-- [ ] Another task
+- [x] Clear the Pacific Coast course
+- [x] Finish the Sierra Nevada run
+- [ ] Unlock the City outskirts map
 
 ## Code
 
-This blog uses the [Shiki](https://shiki.matsu.io/) library for syntax highlighting.
-
 ### Inline Code
 
-This is an inline code: `console.log('Hello, World!');`
+This is an inline code: `const meaningOfLife = 42;`
 
 ### Code Block
 
 This is a code block with a filename:
 
-```javascript:greeting.js
-const greeting = (name) => {
-  return `Hello, ${name}!`;
-};
-
-console.log(greeting('World'));
-```
-
-Or without a filename:
-
-```css
-.button {
-  background-color: #0066cc;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+```ts:jumanji.ts
+function takeJumanjiTurn(player: Player; isTurn: boolean; cheated: boolean ) {
+  if (cheated) {
+    summonJungle(player);
+  } else if (isTurn) {
+    rollJumanjiDice(player);
+  } else {
+    skipTurn(player);
+  } 
+  player.moveForward();
+  if(player.isAtEnd()) {
+    console.log(`${player.name} has won the game!`);
+    resetBoard();
+  }
 }
 ```
 
-or just the code snippet:
+Or with a language:
+
+```css
+.vcop-trigger-hair {
+  background: #061729;
+  color: #f94144;
+  padding: 12px 24px;
+  border: 2px solid #f9c74f;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 12px rgba(249, 65, 68, 0.4);
+}
+```
+
+or just some imporant text
 
 ```
-These are the instructions to find the meaning of life.
+Pro tip: When signing up for a new service, use the website name as your middle name.
+Then when spam shows up, you know exactly who sold your data.
 ```
 
 
 ## Horizontal Rule
 
-Use three or more hyphens, asterisks, or underscores:
+Use ```---``` or ```***```  to create a horizontal rule.
 
 ---
 
-
 ## Blockquotes
 
-> This is a blockquote.
-
+> There are many things in our lives that we would throw away if we were not afraid that others might pick them up.
+>― Oscar Wilde
 
 ## Tables
 
@@ -143,16 +158,32 @@ Aligned tables:
 
 You can add images using standard Markdown syntax:
 
-![Hero Image](/images/hero.jpeg)
+![Ranganathaswamy Temple](/images/example.jpeg)
 
 ## With captions
 
 <figure>
-  <img src="https://github.com/ahampriyanshu/meta/blob/main/blog/norm.png?raw=true" alt="norm">
-  <figcaption>Rolling Stone review of norm as a SNL cast member</figcaption>
+  <img src="/images/caption.png" alt="norm">
+  <figcaption>Rolling Stone review of norm as a SNL cast member. Credits: Rolling Stone</figcaption>
 </figure>
 
 <fig>
+
+## Vernacular languages
+
+### Hindi
+
+होरी ने बैलों की रस्सी थामे धनिया से कहा, "धरती का कर्ज़ चुका दूं तो आत्मा को शांति मिले।" धनिया ने सूखी हंसी के साथ जवाब दिया, "कर्ज़ क्या कभी खत्म हुआ है होरी? बस उम्मीद ही है कि किसी दिन गोदान का सपना सच हो जाएगा।" दोनों की नज़रें आंगन में खेलते गोबर और सोहनी पर टिक गईं। होरी ने बच्चों की ओर इशारा करते हुए कहा, "इनके लिए ही तो इतनी दौड़-धूप है।" धनिया ने माथे की पसीने की बूंद पोंछते हुए उत्तर दिया "और इनके लिए ही हमें लड़ना भी पड़ेगा, चाहे जमींदार हो या गांव की पंचायत।"
+
+### Punjabi
+
+ਮਾਏ ਨੀ ਮਾਏ ਮੈਂ ਇਕ ਸ਼ਿਕਰਾ ਯਾਰ ਬਣਾਇਆ
+
+ਓਦੇ ਸਿਰ ਤੇ ਕਲਗੀ ਓਦੇ ਪੈਰੀਂ ਝਾਂਜਰ
+
+ਓ ਚੋਗ ਚੁਗ਼ਿੰਦਾ ਆਇਆ
+
+ਇਕ ਓਦੇ ਰੂਪ ਦੀ ਧੂਪ ਤਿਖੇਰੀ
 
 ## HTML
 

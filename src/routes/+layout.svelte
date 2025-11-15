@@ -6,7 +6,7 @@
   import Footer from '$lib/components/Footer.svelte';
   import TOC from '$lib/components/TOC.svelte';
   import RecentlyUpdated from '$lib/components/RecentlyUpdated.svelte';
-  import '$lib/styles/louie.scss';
+  import '$lib/styles/index.scss';
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
 

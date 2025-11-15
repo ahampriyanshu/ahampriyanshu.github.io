@@ -57,10 +57,11 @@ title: Your Post Title
 description: A brief description of your post
 date: '2025-11-02'
 tags:
-  - tag1
-  - tag2
+  - javascript
+  - tutorial
 categories:
-  - Some Category
+  - Technology/Web Development
+  - Tutorial
 ---
 ```
 
@@ -72,7 +73,7 @@ categories:
 | `description` | Brief summary (used for SEO and previews) | `"Learn the basics of SvelteKit"` |
 | `date` | Publication date in YYYY-MM-DD format | `'2025-11-02'` |
 | `tags` | Array of tags (at least one recommended) | `[javascript, tutorial]` |
-| `categories` | Array of categories (with optional subcategories) | `[Backend Development]` |
+| `categories` | Array of categories (with optional subcategories) | `[Technology/Web Development, Tutorial]` |
 
 ### Optional Fields
 
@@ -127,23 +128,6 @@ Here are the main benefits:
 2. **Better IDE Support** - Autocomplete and IntelliSense
 3. **Improved Refactoring** - Rename and refactor with confidence
 4. **Modern JavaScript** - Use latest ECMAScript features
-
-## Basic Types
-
-TypeScript provides several basic types:
-
-```typescript:types.ts
-// String
-let name: string = "John Doe";
-
-// Number
-let age: number = 30;
-
-// Boolean
-let isActive: boolean = true;
-
-// Array
-let tags: string[] = ["typescript", "javascript"];
 ```
 
 ## Preview Your Post
@@ -151,7 +135,7 @@ let tags: string[] = ["typescript", "javascript"];
 Start the development server if it's not already running:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Navigate to `http://localhost:5173` in your browser.

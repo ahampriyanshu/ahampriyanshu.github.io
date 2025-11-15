@@ -1,29 +1,39 @@
 ---
-title: "Fundamental Analysis for Dummies [WIP]"
+title: "Fundamental Analysis for Dummies"
 date: 2025-10-01
-description: A comprehensive exploration of equity markets, fundamental and  technical analysis
+description: Figuring out what to buy in Indian equity markets using numbers and common sense
 categories: ["Experimenting With Personal Finance"]
 tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 ---
 
+In the first part of this series, we figured out what the equity markets are and some important concepts. Now comes the harder question - Out of 5500+ listed companies, which ones should you even think about owning? Fundamental analysis provided a bunch of rules that will allow us to filter out few companies that clear the basic checks. 
+
 ## Analysis Framework
+
+At a very high level, your investing journey revolves around just two questions:
+
+- **What to buy/sell?** → Quality of the business  
+- **When to buy/sell?** → Timing and price
 
 ### Fundamental Analysis answers: **"WHAT to buy?"**
 
-**What it is:** Studying the business, its financials, management, and industry to determine if the company is worth owning.
+When you do fundamental analysis, you are not trying to finesse a line going up and down on a chart. You are investing into a real business with real products, employees, and customers(and hopefully a long term vision).
+
+**What it is:** Understanding the business, its financials, management, and industry to decide if the company is worth owning for years.
 
 **What it uses:**
 - Annual reports and financial statements
 - Balance sheet, P&L, cash flow analysis
 - Financial ratios (Current Ratio, Debt/Equity, ROCE, P/E, P/B, EPS, etc.)
-- Management quality assessment
-- Industry and economy trends
+- Management quality assessment (are the people running it honest and competent?)
+- Industry and economy trends (is the tide rising or falling for this sector?)
 
 **What it determines:**
 - **Intrinsic value** - The true worth of the business
 - Is the company profitable and growing?
 - Is management honest and capable?
 - Does the business have competitive advantages?
+- Is the story in presentations actually visible in the numbers?
 
 **When to use:**
 - **Screening stocks** - Finding quality companies worth investing in
@@ -31,80 +41,14 @@ tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 - **Long-term investing** - Building a portfolio for years
 - **Wealth creation** - Compounding returns over time
 
----
-
-### Technical Analysis answers: **"WHEN to buy?"**
-
-**What it is:** Studying price charts, patterns, and trading volume to identify the right time to enter or exit positions.
-
-**What it uses:**
-- Price charts (candlesticks, patterns, trends)
-- Technical indicators (EMA, MACD, RSI)
-- Volume analysis
-- Support and resistance levels
-
-**What it determines:**
-- **Market sentiment** - Are buyers or sellers in control right now?
-- Is the stock in uptrend, downtrend, or sideways?
-- Where are the key support/resistance levels?
-- What's the optimal entry and exit price?
-
-**When to use:**
-- **Timing your entry/exit** - Getting the best price for buying/selling
-- **Riding momentum** - Catching stocks in strong trends
-- **Risk management** - Setting precise stop loss levels
-- **Short-term trading** - Intraday or swing trading strategies
-
-**The Power of Technical Analysis:**
-
-**Advantage #1: Works on ANY Stock**
-- Don't need to understand the business deeply
-- Can trade sectors you're not expert in
-- Even works on stocks with no fundamentals (penny stocks, momentum plays)
-
-**Advantage #2: Faster Decisions**
-- Fundamental analysis takes hours/days (reading annual reports, calculating ratios)
-- Technical analysis takes minutes (check chart, indicators, volume)
-- Perfect for part-time investors with day jobs
-
-**Advantage #3: Clear Entry/Exit Rules**
-- Fundamentals say "TCS is a good company" but don't tell you when to buy
-- Technicals say "Buy TCS at ₹3,450 support, sell at ₹3,650 resistance" - Specific!
-
-**Advantage #4: Risk Management**
-- Fundamentals can't tell you where to place stop loss
-- Technicals give you exact levels based on support zones
-
-**Advantage #5: Works in Bear Markets Too**
-- Fundamental investors struggle when everything falls
-- Technical traders can short sell and profit from falling prices
-
-**The BEST Approach: Combine Both!**
-
-| Step | Use | Reason |
-|------|-----|--------|
-| **Step 1** | Fundamental Analysis | Find 10-15 quality stocks worth owning |
-| **Step 2** | Technical Analysis | From those 10-15, pick ones showing bullish chart patterns |
-| **Step 3** | Buy with technical entry | Get best price using support levels |
-| **Step 4** | Hold with fundamental confidence | Don't panic on small dips, business is strong |
-
-**Real Example:**
-
-**Asian Paints Analysis:**
-- ✅ **Fundamental Check:** ROCE 35%, debt-free, consistent profit growth → **Quality stock**
-- ⚠️ **Current Price:** ₹3,200
-- 📉 **Technical Check:** Stock in downtrend, 5 EMA below 13 EMA, breaking support
-- **Decision:** Good company, WRONG time. Wait for uptrend reversal.
-- **Action:** Add to watchlist, buy when chart turns bullish (maybe at ₹2,900 support)
-
-**The Mistake Most Investors Make:**
-- Buying fundamentally strong stocks at technically wrong levels
-- Result: Stuck in losses for months even though company is great
-- Solution: Use fundamentals to pick stocks, technicals to time entries
-
----
 
 ## Fundamental Analysis: Understanding Business Value
+
+If you strip away all the jargon, fundamental analysis answers one simple question:
+
+> If this company were a small business in your neighbourhood, would you be comfortable becoming a partner at today’s asking price?
+
+To answer that, we look at two big pieces:
 
 **1. Quantitative Analysis** (Number-driven)
    - **Economy Analysis** - Is the overall economy growing?
@@ -116,7 +60,13 @@ tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 
 ### Financial Statements Deep Dive
 
-Annual reports contain comprehensive business information through standardized financial statements:
+Think of a listed company as a person with three key documents:
+
+- A list of what they own and owe → **Balance Sheet**
+- Their salary slip → **Profit & Loss (P&L) Statement**
+- Their bank statement → **Cash Flow Statement**
+
+Annual reports pack all of this into a (usually boring) PDF. Once you know what to look for, it stops being boring and starts becoming a treasure hunt.
 
 #### 1. Balance Sheet Structure
 
@@ -150,6 +100,11 @@ Annual reports contain comprehensive business information through standardized f
 
 **Key Balance Sheet Terms:**
 
+If the company were a household:
+- Assets = your house, car, gadgets, bank balance  
+- Liabilities = your home loan, credit card dues, personal loan  
+- Equity = what’s actually "yours" after paying off everything
+
 **Shareholder's Funds (Equity)** - Owners' capital investment forming the foundation.
 
 **Reserves & Surplus** - Retained profits reinvested rather than distributed, including:
@@ -162,6 +117,8 @@ Annual reports contain comprehensive business information through standardized f
 > **Critical Warning:** If loan funds significantly exceed equity, extreme caution required. Historical disasters: Jet Airways, Suzlon, Reliance Communications.
 
 #### 2. Profit & Loss Statement
+
+The P&L is just the company’s **income-expense statement** for the year. "How much came in, how much went out, and what was left."
 
 **The P&L Waterfall** (Example with ₹100 Crores revenue):
 
@@ -183,7 +140,14 @@ Annual reports contain comprehensive business information through standardized f
 - **PBT** - Profit before paying taxes
 - **PAT** - The bottom line - actual profit available to shareholders
 
+When you look at a P&L over 5–10 years, you are basically asking:
+- Are sales steadily going up?
+- Is profit growing faster than sales?
+- Are costs under control, or is the company forever blaming "input cost pressure"?
+
 #### 3. Cash Flow Statement Components
+
+The cash flow statement is where you check **"Kitna paisa actually aaya, kitna gaya?"** Numbers on P&L can lie; cash is harder to fake for long.
 
 **Operating Activities** - Cash from core business operations
 - Negative = Core business burning cash (danger signal)
@@ -193,17 +157,21 @@ Annual reports contain comprehensive business information through standardized f
 - Negative = More investments than divestments (often positive signal)
 - Positive = Asset liquidation (context-dependent)
 
-**Financing Activities** - Debt, equity, and dividend transactions
+**Financing Activities** - Debt, equity, and dividend transactions (how money flows between company and lenders/shareholders)
 - Negative = Debt repayment or dividend distribution
 - Positive = Fresh borrowing or equity raising
 
 ### Important Financial Ratios
+
+This is the only slightly "math-looking" section. Don’t worry about memorising formulas. Focus on **what the ratio is trying to tell you about the business**. You can always look up the formula on Screener or Moneycontrol.
 
 #### 1. Current Ratio - Liquidity Assessment
 
 **Formula:** Current Ratio = Current Assets ÷ Current Liabilities
 
 **What it measures:** Can the company pay its short-term bills?
+
+Personal life analogy: imagine you suddenly lose your job. Do you have enough in bank balance + liquid investments to comfortably survive the next few months of EMIs, rent, and bills? Current ratio asks the same question for a company.
 
 **Example Calculation:**
 
@@ -234,6 +202,8 @@ Annual reports contain comprehensive business information through standardized f
 **Formula:** Debt to Equity = Long-term Debt ÷ (Share Capital + Reserves)
 
 **What it measures:** How much the company relies on borrowed money vs owner's money
+
+Think of this as the company’s EMI stress level. A little debt can accelerate growth (like a sensible home loan). Too much debt, and one bad year can take the whole business down.
 
 **Example Calculation:**
 
@@ -268,6 +238,12 @@ Annual reports contain comprehensive business information through standardized f
 **Capital Employed = Share Capital + Reserves + Long-term Debt**
 
 **What it measures:** How efficiently is the company using its capital to generate profits?
+
+Imagine two shop owners in the same market:  
+- Shop A invested ₹10 lakh and earns ₹4 lakh/year  
+- Shop B invested ₹30 lakh and earns ₹5 lakh/year  
+
+Shop A has lower absolute profit but much higher ROCE. As a business owner, you would rather be Shop A.
 
 **Example Calculation:**
 
@@ -332,6 +308,10 @@ Annual reports contain comprehensive business information through standardized f
 - Positive FCF = Can pay dividends, reduce debt, or expand
 - Growth companies may have negative FCF temporarily (expansion phase)
 
+Very simplified thumb rule:
+- Profits going up + cash flows also going up = Healthy  
+- Profits going up but cash flows constantly negative = Something smells off, dig deeper
+
 #### 5. Inventory Turnover Ratio
 
 **Formula:** Inventory Turnover = Cost of Goods Sold ÷ Average Inventory
@@ -364,6 +344,8 @@ Annual reports contain comprehensive business information through standardized f
 - Compare ONLY within same sector
 - Increasing trend over years = ✅ Good
 - Declining trend = ⚠️ Demand issues or poor management
+
+For you as an investor, very low inventory turnover can mean future write-offs and margin pressure, especially in businesses where fashion and technology change quickly.
 
 #### 6. Reserves & Surplus Growth
 

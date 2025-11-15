@@ -11,7 +11,6 @@
   let allPosts: PostMetadata[] = [];
   let searchResults: PostMetadata[] = [];
   let searchInputElement: HTMLInputElement;
-  // $: popularPosts = allPosts.slice(0, 6);
 
   const navItems = siteConfig.navItems;
 

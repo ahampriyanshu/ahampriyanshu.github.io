@@ -5,7 +5,11 @@
   import CopyDropdown, { type DropdownAction } from '$lib/components/CopyDropdown.svelte';
   import { base } from '$app/paths';
   import { browser } from '$app/environment';
+  import { pushState } from '$app/navigation';
   import { fade, fly } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { page } from '$app/stores';
+  import { get } from 'svelte/store';
 
   export let data: PageData;
 
@@ -14,12 +18,10 @@
     { default: ComponentType }
   >;
 
-  // Make these reactive so they update when data changes
   $: metadata = data.metadata;
   $: previousPost = data.previousPost;
   $: nextPost = data.nextPost;
   $: siteConfig = data.siteConfig;
-
   $: contentEntry = Object.entries(blogModules).find(([path]) =>
     path.endsWith(`/${metadata.slug}.md`)
   );
@@ -82,6 +84,94 @@
     { label: 'Copy URL', icon: 'link', onClick: copyUrl },
     { label: 'Raw Markdown', icon: 'code', onClick: viewAsMarkdown }
   ] satisfies DropdownAction[];
+
+  // Handle heading anchor links for shareable URLs
+  onMount(() => {
+    if (!browser) return;
+
+    // Scroll to hash on page load
+    const handleHashScroll = () => {
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        const element = document.getElementById(hash);
+        if (element) {
+          // Small delay to ensure content is rendered
+          setTimeout(() => {
+            // Use same scroll logic as TOC and heading anchors for consistent positioning
+            const yOffset = -80;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    };
+
+    // Initial scroll if hash exists
+    handleHashScroll();
+
+    // Handle clicks on heading anchor links
+    const handleAnchorClick = (e: Event) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('.heading-anchor') as HTMLAnchorElement;
+      if (anchor && anchor.href) {
+        e.preventDefault();
+        const hash = new URL(anchor.href).hash;
+        if (hash) {
+          const id = hash.substring(1);
+          // Update URL with full path to replace any existing hash
+          const newUrl = `${window.location.pathname}${hash}`;
+          pushState(newUrl, get(page).state);
+          const element = document.getElementById(id);
+          if (element) {
+            // Use same scroll logic as TOC for consistent positioning
+            const yOffset = -80;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      }
+    };
+
+    // Function to setup anchor handlers
+    const contentElement = document.querySelector('.post-article .content');
+    const setupAnchorHandlers = () => {
+      if (contentElement) {
+        const anchors = contentElement.querySelectorAll('.heading-anchor');
+        anchors.forEach((anchor) => {
+          anchor.addEventListener('click', handleAnchorClick);
+        });
+      }
+    };
+
+    // Setup handlers after a short delay to ensure content is rendered
+    setTimeout(() => {
+      setupAnchorHandlers();
+    }, 100);
+
+    // Also setup handlers when content changes (for dynamic content)
+    const observer = contentElement
+      ? new MutationObserver(() => {
+          setupAnchorHandlers();
+        })
+      : null;
+
+    if (contentElement && observer) {
+      observer.observe(contentElement, { childList: true, subtree: true });
+    }
+
+    // Cleanup
+    return () => {
+      if (contentElement) {
+        const anchors = contentElement.querySelectorAll('.heading-anchor');
+        anchors.forEach((anchor) => {
+          anchor.removeEventListener('click', handleAnchorClick);
+        });
+      }
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  });
 </script>
 
 <svelte:head>
@@ -116,7 +206,7 @@
   {:else}
     <meta
       property="og:image"
-      content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/hero.jpeg"
+      content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/logo.png"
     />
     <meta property="og:image:alt" content={metadata.title} />
   {/if}
@@ -146,7 +236,7 @@
   {:else}
     <meta
       name="twitter:image"
-      content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/hero.jpeg"
+      content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/logo.png"
     />
   {/if}
   {#if data.siteConfig.twitterHandle}
@@ -460,90 +550,6 @@
   .post-article :global(.content) {
     margin-bottom: 3rem;
     line-height: 1.8;
-  }
-
-  // Global Prose Styles
-  :global(.content.prose) {
-    :global(h2),
-    :global(h3),
-    :global(h4),
-    :global(h5),
-    :global(h6) {
-      line-height: 1.3;
-      margin-bottom: 0.75rem;
-      font-weight: 700;
-    }
-
-    :global(h2) {
-      margin-top: 2.5rem;
-      font-size: 2rem;
-    }
-
-    :global(h3) {
-      margin-top: 2rem;
-      font-size: 1.625rem;
-    }
-
-    :global(h4) {
-      margin-top: 1.75rem;
-      font-size: 1.25rem;
-    }
-
-    :global(h5) {
-      margin-top: 1.5rem;
-      font-size: 1.125rem;
-      letter-spacing: 0.01em;
-    }
-
-    :global(h6) {
-      margin-top: 1.25rem;
-      font-size: 1rem;
-      letter-spacing: 0.03em;
-    }
-
-    @media (max-width: 768px) {
-      :global(h2) {
-        font-size: 1.75rem;
-      }
-
-      :global(h3) {
-        font-size: 1.5rem;
-      }
-
-      :global(h4) {
-        font-size: 1.125rem;
-      }
-
-      :global(h5) {
-        font-size: 1rem;
-      }
-
-      :global(h6) {
-        font-size: 0.9375rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      :global(h2) {
-        font-size: 1.5rem;
-      }
-
-      :global(h3) {
-        font-size: 1.25rem;
-      }
-
-      :global(h4) {
-        font-size: 1.125rem;
-      }
-
-      :global(h5) {
-        font-size: 1rem;
-      }
-
-      :global(h6) {
-        font-size: 0.875rem;
-      }
-    }
   }
 
   .post-article .post-navigation {

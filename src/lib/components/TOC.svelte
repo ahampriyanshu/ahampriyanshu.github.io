@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { browser } from '$app/environment';
+  import { pushState } from '$app/navigation';
+  import { page } from '$app/stores';
+  import { get } from 'svelte/store';
 
   interface Heading {
     id: string;
@@ -187,6 +190,9 @@
     event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
+      const newUrl = `${window.location.pathname}#${id}`;
+      pushState(newUrl, get(page).state);
+
       const yOffset = -80;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });

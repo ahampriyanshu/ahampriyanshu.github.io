@@ -7,7 +7,7 @@ tags: ['system-design', 'networking', 'infrastructure', 'protocols']
 pin: true
 ---
 
-Thinking about shards, global load balancers, and fourteen layers of caching for your brand-new weekend side-project? Hold that thought! Odds are your app doesn't need Netflix-level scale just yet. Remember: back in the mid-2000s Facebook was already flirting with **100 million** users without aws, docker, kubernetes, micro-services, serverless redis, or cloud functions in sight—just a scrappy PHP monolith. The secret sauce wasn't "infinite scale" buttons; it was **engineering curiosity**. They squeezed every byte of RAM out of Memcached—introducing UDP transport, fixing memory fragmentation, even patching the allocator—because every micro-optimisation saved real dollars when budget was tighter than latency.
+Thinking about shards, global load balancers, and fourteen layers of caching for your brand-new weekend side-project? Hold that thought! Odds are your app doesn't need Netflix-level scale just yet. Remember: back in the mid-2000s Facebook was already flirting with **100 million** users without aws, docker, kubernetes, micro-services, serverless redis, or cloud functions in sight—just a beefy PHP monolith. The secret sauce wasn't infinite scale; it was actual engineering. They squeezed every byte of RAM out of Memcached, introduced efficient UDP transport, fixed memory fragmentation, even patched the allocator—because when budget was tighter than latency.
 
 Fast-forward to today—spinning up five managed databases on AWS takes less time than 5 mins, and it's tempting to hide complexity behind yet another serverless layer. But the moral of the story hasn't changed: build something people love first, then scale what actually hurts. Real users beat imaginary edge cases every single sprint.
 
@@ -19,7 +19,7 @@ With that reality check out of the way, let's dive into the fun stuff! This is t
 
 In distributed systems, the **client-server model** forms the foundation of most interactions. A **client** represents any machine or process that requests data or services from another system. Conversely, a **server** is a machine or process that provides data or services to clients, typically by listening for incoming network requests.
 
-> **Important Note:** A single machine can simultaneously function as both a client and a server. For example, a web server might serve requests from browsers while also acting as a client when requesting data from a database.
+> **Note:** A machine can simultaneously function as both a client and a server. For example, a web server might serve requests from browsers while also acting as a client when requesting data from a database.
 
 ### Internet Protocol (IP) Fundamentals
 

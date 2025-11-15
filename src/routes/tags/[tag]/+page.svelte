@@ -30,7 +30,7 @@
   />
   <meta
     property="og:image"
-    content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/hero.jpeg"
+    content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/logo.png"
   />
 
   <!-- Twitter Card meta tags -->
@@ -42,7 +42,7 @@
   />
   <meta
     name="twitter:image"
-    content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/hero.jpeg"
+    content="{data.siteConfig.baseURL}{data.siteConfig.subPath}/images/logo.png"
   />
   {#if data.siteConfig.twitterHandle}
     <meta name="twitter:site" content="@{data.siteConfig.twitterHandle}" />

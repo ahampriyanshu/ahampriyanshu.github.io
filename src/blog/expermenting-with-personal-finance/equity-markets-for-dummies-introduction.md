@@ -24,19 +24,19 @@ Before we dive in, let's cover some essential market jargon. If you already know
 
 - **Equity / Share / Stock**: The smallest piece of ownership in a company. When you buy one share of Reliance, you own a small fraction of the company, from its oil refineries to its data centers.
 
-- **Debt**: Opposite of equity. You basically act like a bank to a company or the government and lend them money for a fix interval of time. In return, they promise to pay you back with interest(coupon). This is a bit safer(as long as the borrower doesn't go bankrupt) then equity but comes with a lower return.
+- **Debt**: Opposite of equity. You basically act like a bank to a company or the government and lend them money for a fix interval of time. In return, they promise to pay you back with interest. This is a bit safer then equity(as long as the borrower doesn't go bankrupt) but comes with a lower return.
 
-- **Bond/Debenture**:  It's a contract where the borrower(a company or government) promises to pay you a fixed amount of interest(coupon) at regular intervals and then return your original amount(principal) on a specific future date(maturity).
+- **Bond/Debenture**:  It's a contract where the borrower(a company/government) promises to pay you a fixed amount of interest(coupon) at regular intervals and then return your original amount(principal) on a specific future date(maturity).
 
-- **G-Sec**: Government Security - A bond issued by the Government of India. It's considered the safest possible investment in the country because it's backed by the government itself, which can always(not always) [print more money](https://economics.stackexchange.com/questions/6476/government-bonds-and-printing-money) to pay you back. They are the benchmark for *risk-free* returns. It is also known as a Treasury Bond.
+- **G-Sec**: Government Security - A bond issued by the Government of India. It's considered the safest possible investment in the country because it's backed by the government itself, which can always(not always) [print more money](https://mytwocentsandcounting.substack.com/p/cant-we-just-print-money-instead) to pay you back. They are the benchmark for *risk-free* returns. It is also known as a Treasury Bond.
 
-- **T-Bill** Treasury Bill - A short-term G-Sec. While G-Secs (bonds) can be for 10, 20, or even 40 years, T-Bills are for 91 days, 182 days, or 364 days. The government uses them to manage its day-to-day cash flow needs.
+- **T-Bill** Treasury Bill - A short-term G-Sec. While G-Secs (bonds) can be for 10, 20, or even 40 years, T-Bills are for 91 days, 182 days, or 364 days.
 
-- **Mutual Fund**: The thing I mentioned we are trying to beat. It's a basket of stocks managed by a professional(Fund Manager). Instead of you picking 50 stocks, you give your money to the MF(most probably in fixed periodic intervals known as SIP), and the manager invests it for you (and ~500,000 other people) in exchange for a small fee(expense ratio). The value of a Mutual Fund is determined by the value of the stocks in the basket.
+- **Mutual Fund**: The thing I mentioned we are trying to beat. It's a basket of stocks managed by a professional(Fund Manager). Instead of you picking 50 stocks, you give your money to the Fund House(most probably in fixed periodic intervals known as SIP), and the manager invests it for you (and ~500,000 other people) in exchange for a small fee(expense ratio). The value of a Mutual Fund is determined by the value of the stocks in the basket and is known as Net Asset Value (NAV).
 
 - **ETF**: Exchange Traded Fund - It's a again a basket of stocks (like a NIFTY 50 ETF), but instead of being bought/sold at a single end-of-day price, it trades on the stock exchange all day long. ETFs are passively managed and hence have a lower expense ratio compared to Mutual Funds. The value of an ETF is determined by demand and supply. Hence, the value of an ETF can be [different from the commodity/stock](https://www.ndtvprofit.com/markets/silver-etf-frenzy-cools-as-physical-shortage-eases-funds-trading-at-discount) it is tracking.
 
-- **Derivatives**: Futures & Options / F&O - This is the high-stakes, advanced section of the market. You're not buying the stock itself; you're buying a contract that gets its value from an underlying asset (like a stock or index). You're essentially placing a bet on where that asset's price will be in the future.
+- **Derivatives**:  This is the high-stakes, advanced section of the market. You're not buying the stock itself; you're buying a contract that gets its value from an underlying asset.
 
 - **Equity Marktes/ Share Markets/ Stock Markets**: A market where shares of companies are traded. Just like stock markets, there are markets for debt and commodities as well.
 
@@ -193,6 +193,40 @@ Also, don't give up when consecutive IPO applications are rejected. That is how 
 4. Google the company and read the recent news articles about the company. Check for any recent scandals or controversies.
 5. Go on [Chittorgarh](https://www.chittorgarh.com/) and see the current GMP of the company. At minimum, it should be 10% above the upper band. Anything greater than 20% is a good sign.
 6. Check the subscription ratio. Once it is more than 3x, you can consider applying for the IPO.
+
+## Futures and Options
+
+Since we are talking about "quick ways" to make money in the market, let's talk about F&O. These are the contracts that allow you to trade in the market without owning the underlying asset. You're essentially placing a bet on where that asset's price will be in the future.
+
+### Futures
+
+- This is an obligation.
+- What it is: A simple, binding contract where you agree to buy (or sell) an asset at a specific price on a specific future date. You don't have a choice; you are obligated to follow through.
+- Analogy: It's like a non-refundable, pre-paid order. You agree today to buy a bag of rice from a farmer next month for ₹1,000.
+    - If the price of rice shoots up to ₹1,500 by next month, you win! You still get it for ₹1,000.
+    - If the price of rice crashes to ₹700, you lose. You are still obligated to buy it for ₹1,000.
+- Loss/Profit: Both your potential profit and your potential loss are (theoretically) unlimited.
+
+### Options
+
+- This is a right, not an obligation.
+- What it is: A contract that gives you the right (but not the duty) to buy or sell an asset at a specific price (Strike Price) on or before a specific date (Expiry).
+- Loss/Profit:
+    - For an Option Buyer, your loss is limited to the premium you paid, but your profit is (theoretically) unlimited.
+    - For an Option Seller, your loss is unlimited if selling a Call, or substantial if selling a Put, as the stock can go to zero.
+
+#### Call Option (CE)
+
+- Gives you the right to BUY.
+- You buy this when you are bullish.
+- It's like paying a non-refundable booking fee(Premium). You pay a farmer ₹50 today for the right to buy his bag of rice next month for ₹1,000 (the Strike Price).
+    - Scenario 1: The price of rice shoots up to ₹1,500. You use your right, buy the rice for ₹1,000. Your net profit is ₹450, because you gained ₹500 but paid a ₹50 fee.
+    - Scenario 2: The price of rice crashes to ₹700. You just let your right expire. You don't buy the rice for ₹1,000. Your loss is limited to the premium you paid.
+
+#### Put Option (PE)
+- Gives you the right to SELL.
+- You buy this when you are bearish
+- This is like buying insurance. You pay a small premium for the right to sell your stock at a guaranteed "safe" price, even if the market crashes.
 
 ## Investor Categories
 

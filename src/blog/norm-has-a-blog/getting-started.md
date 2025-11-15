@@ -7,10 +7,9 @@ tags:
   - blogging
 categories:
   - "Norm Has A Blog"
-pin: true
 ---
 
-**norm-has-a-blog** is a simple, static, and zero config blog built with SvelteKit. It's designed for developers who want to save and share the stuff they're discovering.(but can be used by anyone for anything)
+**norm-has-a-blog** is a simple, static, and zero config blog built with SvelteKit. It's designed for developers who want to save and share the stuff they're discovering(but can be used by anyone for anything).
 
 ## Features
 
@@ -34,9 +33,9 @@ This blog comes packed with powerful features out of the box:
 
 Before you begin, ensure you have the following installed on your system:
 
-- **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
-- **npm** or **yarn** or **pnpm** (or any other package manager)
-- **Git** 
+- **Node.js** (v22 or higher)
+- **yarn** (or any other package manager)
+- **git** 
 - A code editor.
 
 ## Installation
@@ -52,10 +51,10 @@ cd norm-has-a-blog
 
 ### 2. Install Dependencies
 
-Install all required npm packages:
+Install all required packages:
 
 ```bash
-npm install
+yarn
 ```
 
 This will install all dependencies including SvelteKit, MDSveX, Shiki, and other required packages.
@@ -65,7 +64,7 @@ This will install all dependencies including SvelteKit, MDSveX, Shiki, and other
 Launch the development server to see your blog in action:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Your blog should now be running at `http://localhost:5173`. The development server supports hot module replacement (HMR), so any changes you make will be reflected instantly.
@@ -224,7 +223,7 @@ For a detailed guide on writing posts, see the [Adding New Post](./adding-new-po
 When you're ready to deploy your blog, create a production build:
 
 ```bash
-npm run build
+yarn build
 ```
 
 This generates optimized static files in the `build/` directory. The build process:
@@ -239,7 +238,7 @@ This generates optimized static files in the `build/` directory. The build proce
 Test your production build locally:
 
 ```bash
-npm run preview
+yarn preview
 ```
 
 ## Deployment
@@ -258,7 +257,7 @@ Your blog is a static site and can be deployed anywhere. Here are some popular o
 
 1. **Connect Your Repository** on Netlify dashboard
 2. **Configure Build Settings**:
-   - Build command: `npm run build`
+   - Build command: `yarn build`
    - Publish directory: `build`
 
 3. Deploy!
@@ -267,7 +266,7 @@ Your blog is a static site and can be deployed anywhere. Here are some popular o
 
 1. **Connect Your Repository** on Cloudflare Pages
 2. **Configure Build Settings**:
-   - Build command: `npm run build`
+   - Build command: `yarn build`
    - Build output directory: `build`
 
 
@@ -316,7 +315,7 @@ The blog uses SCSS for styling. Main styles are located in:
 If port 5173 is already in use:
 
 ```bash
-npm run dev -- --port 3000
+yarn dev -- --port 3000
 ```
 
 ### Build Errors
@@ -325,14 +324,14 @@ npm run dev -- --port 3000
 
 ```bash
 rm -rf build .svelte-kit
-npm run build
+yarn build
 ```
 
 2. Reinstall dependencies:
 
 ```bash
 rm -rf node_modules package-lock.json
-npm install
+yarn
 ```
 
 ### Image Paths Not Working

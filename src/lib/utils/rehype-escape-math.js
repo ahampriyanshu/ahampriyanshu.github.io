@@ -8,11 +8,9 @@ import { visit } from 'unist-util-visit';
 export function rehypeEscapeMath() {
   return (/** @type {any} */ tree) => {
     visit(tree, 'element', (node) => {
-      // Process inline math - wrap with $ delimiters
       if (node.tagName === 'span' && node.properties?.className?.includes('math-inline')) {
         if (node.children && node.children[0] && node.children[0].value) {
           const mathContent = node.children[0].value;
-          // Wrap with dollar signs for MathJax, escape for template literal
           const escaped = mathContent
             .replace(/\\/g, '\\\\') // Escape backslashes
             .replace(/`/g, '\\`') // Escape backticks
@@ -25,11 +23,9 @@ export function rehypeEscapeMath() {
           ];
         }
       }
-      // Process display math - wrap with $$ delimiters
       if (node.tagName === 'div' && node.properties?.className?.includes('math-display')) {
         if (node.children && node.children[0] && node.children[0].value) {
           const mathContent = node.children[0].value;
-          // Wrap with double dollar signs for MathJax
           const escaped = mathContent
             .replace(/\\/g, '\\\\') // Escape backslashes
             .replace(/`/g, '\\`') // Escape backticks
