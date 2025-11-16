@@ -6,7 +6,7 @@ categories: ["Experimenting With Personal Finance"]
 tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 ---
 
-## Technical Analysis
+Welcome to the third and final part of the series. In this article, we will cover the stuff which is sterotypically shown in the movies and shows that is associated with the stock market.
 
 Technical Analysis answers: **"WHEN to buy?"**
 
@@ -24,7 +24,6 @@ We will go deep into this in the third post of the series, but for now think of 
 - Support and resistance levels
 
 **What it determines:**
-- **Market sentiment** - Are buyers or sellers in control right now?
 - Is the stock in uptrend, downtrend, or sideways?
 - Where are the key support/resistance levels?
 - What's the optimal entry and exit price?
@@ -97,11 +96,11 @@ Modern technical analysis relies on candlestick charts visualizing four key pric
 ```
         │ ← Upper Shadow (High rejection)
         │
-    ┌───────┐
-    │       │ ← Body (Open to Close)
-    │ BODY  │  
-    │       │
-    └───────┘
+    ┌──────┐
+    │      │ ← Body (Open to Close)
+    │ BODY │  
+    │      │
+    └──────┘
         │
         │ ← Lower Shadow (Low rejection)
 ```

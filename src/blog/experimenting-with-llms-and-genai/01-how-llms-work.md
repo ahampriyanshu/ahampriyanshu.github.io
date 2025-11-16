@@ -7,47 +7,58 @@ tags: ['llm', 'genai']
 pin: true
 ---
 
-Large Language Models are production systems processing billions of tokens daily. Understanding their internals isn't academic—it's essential for debugging, optimization, and building reliable applications. This article dissects how LLMs actually work, from tokenization to inference.
+I know it is a bit late to tinker on this topic but here we go. So, since the last hear and a half, I have been using Claude and Gemini in both my personal and professional projects. From the first glance I knew it an application of machine learning and it just vommitng a series of words based on some probablistic distribution. But it is actually feels like magic. That's why all the genai application are marked by a sparkle and use purple/magenta color. So, finally with this three part series, I am trying to understand(from a high level view) how does the llm works, unlearn all I know about prompt engineering, RAG, model evals and hopefully to come up with a optimal way to make GenAI deterministic in prod while being cost consious.
 
-## Tokenization: The Real Starting Point
 
-Text doesn't go into models directly. **Tokenization** converts text into integer sequences that transformers process.
+## The internals
 
-### BPE (Byte Pair Encoding)
+LLM stands for Large Language Model. So, we can assume it is a machine learning model that does something with language. And for that it needs to be trained on a large dataset of text.
+
+## Tansformers
+
+## Pre-training
+
+## Application
+
+## Tokenization
+
+As we discussed the transformers create a pattern during pre-training and then it uses to predict the next token in the sequence. But storing natural as it is will be too expensive. And it will be painfully slow to process to do any kind of inference on top of that. So, we do convert the text into a sequence of integers. This allows us to store the text in a much more efficient way and also to process it much faster.
+
+### Byte Pair Encoding
 
 Most LLMs use BPE or variants (WordPiece, SentencePiece). BPE learns subword units from training data.
 
 ```python
 import tiktoken
 
-# GPT models use tiktoken
-encoding = tiktoken.encoding_for_model("gpt-4")
+model_name = "gpt-4"
+encoding = tiktoken.encoding_for_model(model_name)
 
-text = "Tokenization is fascinating!"
+text = "Cause the light was on."
 tokens = encoding.encode(text)
 print(f"Text: {text}")
 print(f"Tokens: {tokens}")
 print(f"Token count: {len(tokens)}")
 
-# Decode back
-decoded = encoding.decode(tokens)
-print(f"Decoded: {decoded}")
-
-# See individual tokens
 for token in tokens:
     print(f"{token}: '{encoding.decode([token])}'")
+
+decoded = encoding.decode(tokens)
+print(f"Decoded: {decoded}")
 ```
 
 **Output:**
 ```
-Text: Tokenization is fascinating!
-Tokens: [3404, 2065, 374, 27387, 0]
-Token count: 5
-Token 3404: 'Token'
-Token 2065: 'ization'
-Token 374: ' is'
-Token 27387: ' fascinating'
-Token 0: '!'
+Text: Cause the light was on.
+Tokens: [62012, 279, 3177, 574, 389, 13]
+Token count: 6
+62012: 'Cause'
+279: ' the'
+3177: ' light'
+574: ' was'
+389: ' on'
+13: '.'
+Decoded: Cause the light was on.
 ```
 
 ### Why Subword Tokenization?
@@ -512,7 +523,6 @@ class GPTWithCache(nn.Module):
             
             return x, new_kv_cache
 
-# Generation with cache
 def generate_with_cache(model, prompt_tokens, max_new_tokens=50):
     tokens = prompt_tokens
     past_kv = None

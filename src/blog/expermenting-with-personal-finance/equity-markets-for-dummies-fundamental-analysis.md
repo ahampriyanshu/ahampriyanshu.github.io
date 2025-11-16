@@ -6,20 +6,16 @@ categories: ["Experimenting With Personal Finance"]
 tags: ['equity-markets', 'fundamental-analysis', 'technical-analysis']
 ---
 
-In the first part of this series, we figured out what the equity markets are and some important concepts. Now comes the harder question - Out of 5500+ listed companies, which ones should you even think about owning? Fundamental analysis provided a bunch of rules that will allow us to filter out few companies that clear the basic checks. 
+In the first part of this series, we figured out what the equity markets are and some important concepts. Now comes the harder question - Out of 5500+ listed companies, which ones should you even think about owning? Fundamental analysis provided a bunch of rules that will allow us to filter out few companies that clear the basic checks.  At a very high level, your investing journey revolves around just two questions:
 
-## Analysis Framework
+- What to buy/sell? → Quality of the business  
+- When to buy/sell? → Timing and price
 
-At a very high level, your investing journey revolves around just two questions:
-
-- **What to buy/sell?** → Quality of the business  
-- **When to buy/sell?** → Timing and price
-
-### Fundamental Analysis answers: **"WHAT to buy?"**
+## What to buy?
 
 When you do fundamental analysis, you are not trying to finesse a line going up and down on a chart. You are investing into a real business with real products, employees, and customers(and hopefully a long term vision).
 
-**What it is:** Understanding the business, its financials, management, and industry to decide if the company is worth owning for years.
+**What it is:** Understanding the business, its financials, management, and industry to decide if the company is worth owning for long term.
 
 **What it uses:**
 - Annual reports and financial statements
@@ -41,12 +37,11 @@ When you do fundamental analysis, you are not trying to finesse a line going up 
 - **Long-term investing** - Building a portfolio for years
 - **Wealth creation** - Compounding returns over time
 
-
-## Fundamental Analysis: Understanding Business Value
+## Understanding Business Value
 
 If you strip away all the jargon, fundamental analysis answers one simple question:
 
-> If this company were a small business in your neighbourhood, would you be comfortable becoming a partner at today’s asking price?
+Will the company sustain 10 year from now? Will it remain profitable and growing? 
 
 To answer that, we look at two big pieces:
 
@@ -58,8 +53,6 @@ To answer that, we look at two big pieces:
 **2. Qualitative Analysis** (Quality-driven)
    - **Management Analysis** - Is the leadership honest and capable?
 
-### Financial Statements Deep Dive
-
 Think of a listed company as a person with three key documents:
 
 - A list of what they own and owe → **Balance Sheet**
@@ -68,7 +61,7 @@ Think of a listed company as a person with three key documents:
 
 Annual reports pack all of this into a (usually boring) PDF. Once you know what to look for, it stops being boring and starts becoming a treasure hunt.
 
-#### 1. Balance Sheet Structure
+### 1. Balance Sheet Structure
 
 **The Balance Sheet Equation:** Assets = Liabilities + Equity
 
@@ -116,7 +109,7 @@ If the company were a household:
 
 > **Critical Warning:** If loan funds significantly exceed equity, extreme caution required. Historical disasters: Jet Airways, Suzlon, Reliance Communications.
 
-#### 2. Profit & Loss Statement
+### 2. Profit & Loss Statement
 
 The P&L is just the company’s **income-expense statement** for the year. "How much came in, how much went out, and what was left."
 
@@ -145,7 +138,7 @@ When you look at a P&L over 5–10 years, you are basically asking:
 - Is profit growing faster than sales?
 - Are costs under control, or is the company forever blaming "input cost pressure"?
 
-#### 3. Cash Flow Statement Components
+### 3. Cash Flow Statement Components
 
 The cash flow statement is where you check **"Kitna paisa actually aaya, kitna gaya?"** Numbers on P&L can lie; cash is harder to fake for long.
 
@@ -161,11 +154,11 @@ The cash flow statement is where you check **"Kitna paisa actually aaya, kitna g
 - Negative = Debt repayment or dividend distribution
 - Positive = Fresh borrowing or equity raising
 
-### Important Financial Ratios
+## Important Financial Ratios
 
 This is the only slightly "math-looking" section. Don’t worry about memorising formulas. Focus on **what the ratio is trying to tell you about the business**. You can always look up the formula on Screener or Moneycontrol.
 
-#### 1. Current Ratio - Liquidity Assessment
+### 1. Current Ratio
 
 **Formula:** Current Ratio = Current Assets ÷ Current Liabilities
 
@@ -197,7 +190,7 @@ Personal life analogy: imagine you suddenly lose your job. Do you have enough in
 
 > **Why 2:1 is ideal:** Provides safety buffer. Even if assets lose 50% value, company can still pay all bills.
 
-#### 2. Debt to Equity Ratio - Leverage Analysis
+### 2. Debt to Equity Ratio
 
 **Formula:** Debt to Equity = Long-term Debt ÷ (Share Capital + Reserves)
 
@@ -231,7 +224,7 @@ Think of this as the company’s EMI stress level. A little debt can accelerate 
 
 **Sector exceptions:** Banks and NBFCs naturally have high debt (it's their business model), so ignore this ratio for financial companies.
 
-#### 3. Return on Capital Employed (ROCE)
+### 3. ROCE Ratio
 
 **Formula:** ROCE = (EBIT ÷ Capital Employed) × 100
 
@@ -271,7 +264,7 @@ Shop A has lower absolute profit but much higher ROCE. As a business owner, you 
 - Always compare with industry average and competitors
 - Asian Paints has ROCE ~35%, cement companies ~15-18%
 
-#### 4. Free Cash Flow - Cash Generation Power
+### 4. Free Cash Flow - Cash Generation Power
 
 **Formula:** Free Cash Flow = Operating Cash Flow - Net Capital Expenditure
 
@@ -312,7 +305,7 @@ Very simplified thumb rule:
 - Profits going up + cash flows also going up = Healthy  
 - Profits going up but cash flows constantly negative = Something smells off, dig deeper
 
-#### 5. Inventory Turnover Ratio
+### 5. Inventory Turnover Ratio
 
 **Formula:** Inventory Turnover = Cost of Goods Sold ÷ Average Inventory
 
@@ -347,7 +340,7 @@ Very simplified thumb rule:
 
 For you as an investor, very low inventory turnover can mean future write-offs and margin pressure, especially in businesses where fashion and technology change quickly.
 
-#### 6. Reserves & Surplus Growth
+### 6. Reserves & Surplus Growth
 
 **What it measures:** Is the company consistently retaining and growing profits year-over-year?
 
@@ -381,7 +374,7 @@ For you as an investor, very low inventory turnover can mean future write-offs a
 
 **Red flag:** If reserves decline while profit is positive, where's the money going?
 
-#### 7. Price to Earnings (P/E) Ratio
+### 7. P/E Ratio
 
 **Formula:** P/E Ratio = Market Price per Share ÷ Earnings Per Share (EPS)
 
@@ -423,7 +416,7 @@ For you as an investor, very low inventory turnover can mean future write-offs a
 - Then check if price is reasonable (P/E)
 - Low P/E alone means NOTHING without context
 
-#### 8. Earnings Per Share (EPS)
+### 8. EPS Ratio
 
 **Formula:** EPS = Profit After Tax (PAT) ÷ Total Outstanding Shares
 
@@ -465,7 +458,7 @@ For you as an investor, very low inventory turnover can mean future write-offs a
 
 **Watch out for:** EPS can increase artificially through share buybacks (reducing denominator). Check if PAT is also growing!
 
-### Stock Valuation: EV/EBITDA Method
+## Stock Valuation: EV/EBITDA Method
 
 **Enterprise Value to EBITDA** is a popular valuation method used to calculate fair value of stocks.
 
@@ -512,11 +505,11 @@ For you as an investor, very low inventory turnover can mean future write-offs a
 - **Buy if below:** ₹525 (30% margin of safety)
 - **Current Price:** ₹600 → **BUY** (below ₹750, room for upside)
 
-### Sector-Specific Analysis
+## Sector-Specific Analysis
 
 Different industries require tailored analytical approaches:
 
-#### Banks & NBFCs
+### Banks & NBFCs
 
 **Standard ratios DON'T apply to banks** - Don't check Debt:Equity ratio or operating cash flows. Instead focus on:
 
@@ -606,9 +599,9 @@ Focus on inventory turnover - fast-moving goods should have high turnover ratios
 - Higher order book = Predictable future revenue
 - L&T typically maintains 2.5-3x order book
 
-### Industry & Economy Analysis
+## Industry & Economy Analysis
 
-#### Economic Indicators Impact
+### Economic Indicators Impact
 
 **GDP Growth** - Aggregate economic output affecting overall market sentiment.
 
@@ -665,7 +658,7 @@ Focus on inventory turnover - fast-moving goods should have high turnover ratios
 
 **Why it matters:** Sustained deficits lead to rupee depreciation → Higher inflation → RBI forced to raise rates → Negative for markets
 
-#### Cyclical Industries
+### Cyclical Industries
 
 Industries performing strongly during economic booms but struggling in recessions:
 - Automobiles
@@ -675,7 +668,7 @@ Industries performing strongly during economic booms but struggling in recession
 
 **Investment Strategy:** Buy during recession lows, sell during boom peaks.
 
-### Management Quality Assessment
+## Management Quality Assessment
 
 Quantitative metrics alone insufficient - qualitative management analysis critical:
 
@@ -754,30 +747,3 @@ Quantitative metrics alone insufficient - qualitative management analysis critic
 - Joint ventures
 
 > **Analysis Tip:** Always analyze consolidated statements for complete business picture, especially for holding companies with significant subsidiaries.
-
-## Short Selling Mechanics
-
-**Short selling** enables profit from falling prices by selling borrowed shares.
-
-**How Short Selling Works:**
-
-**The Process:**
-1. **Morning 9:30 AM** - You think HDFC Bank (currently ₹1,600) will fall today
-2. **You sell first** - Sell 1000 shares at ₹1,600 (you don't own them yet!)
-3. **Market falls** - Price drops to ₹1,550 by afternoon
-4. **You buy back** - Buy 1000 shares at ₹1,550
-5. **You profit** - Sell high (₹1,600), buy low (₹1,550) = ₹50 profit per share(₹50,000 total profit)
-
-**Critical Rules:**
-- **Must square off same day** - Buy back before 3:30 PM
-- **If you forget** - Shares go to auction market (3:30-4:00 PM)
-- **Auction consequences:**
-  - Any loss = You pay
-  - Any profit = Goes to [IEPF](https://iepfa.gov.in), not you!
-
-**When to short sell:**
-- You're bearish (expect market/stock to fall)
-- Only for intraday trading
-- Good for volatile/falling markets
-
-> **Warning:** Short selling is risky - losses can be unlimited if stock rises sharply. Don't try it unless you're sure about what you're doing.
