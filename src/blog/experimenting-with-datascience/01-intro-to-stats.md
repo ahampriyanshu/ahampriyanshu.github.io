@@ -1,8 +1,8 @@
 ---
-title: "ML Foundations"
+title: "Intro to Basics"
 date: 2022-06-01
 description: A comprehensive introduction to machine learning fundamentals - from understanding features and labels to implementing Naive Bayes and K-Nearest Neighbors with performance evaluation techniques.
-categories: ["Experimenting With ML And Data Science"]
+categories: ["Experimenting With Data Science"]
 tags: ['machine-learning', 'datascience']
 pin: true
 ---

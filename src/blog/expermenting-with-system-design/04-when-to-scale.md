@@ -1,5 +1,5 @@
 ---
-title: "What and How to Scale"
+title: "When to scale?"
 date: 2025-07-01
 description: Exploring the patterns and algorithms that enable systems to scale beyond single servers - from replication strategies to distributed consensus and massive data processing.
 categories: ["Experimenting With System Design"]

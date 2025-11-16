@@ -1,8 +1,8 @@
 ---
-title: "Supervised Learning"
+title: "Intro to Supervised Learning"
 date: 2022-06-01
 description: Exploring powerful supervised learning algorithms - decision trees and ensemble methods, linear and logistic regression, and support vector machines for optimal classification boundaries.
-categories: ["Experimenting With ML And Data Science"]
+categories: ["Experimenting With Data Science"]
 tags: ['machine-learning', 'datascience']
 ---
 

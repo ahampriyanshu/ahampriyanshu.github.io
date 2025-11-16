@@ -1,6 +1,6 @@
 ---
 title: Markdown Syntax Guide
-description: Master markdown formatting with examples of text styling, code blocks, tables, math equations, and more. Complete reference for content creators.
+description: Markdown formatting with examples of text styling, code blocks, tables, math equations, and more. Complete reference for content creators.
 date: '2025-11-01'
 tags:
   - theme
@@ -31,9 +31,9 @@ Citations like <cite>&mdash; Mario Puzo, The Godfather</cite> keep the story gro
 
 <kbd>Ctrl + C</kbd> copies the coded message from Tom Hagen's typewriter.
 
-a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> charts the guards' approach angles.
+a<sup>2</sup> + b<sup>2</sup> + 2ab mein yeh extra 2ab kahan se aayaa?
 
-H<sub>2</sub> + SO<sub>4</sub> &rarr; H<sub>2</sub>SO<sub>4</sub> labels the chemicals in the hidden lab.
+C<sub>10</sub>H<sub>15</sub>N + Cl<sub>2</sub> &rarr; C<sub>10</sub>H<sub>14</sub>N + HCl.
 
 ```md
 # Heading 1
@@ -91,12 +91,13 @@ This is a code block with a filename:
 ```ts:jumanji.ts
 function takeJumanjiTurn(player: Player; isTurn: boolean; cheated: boolean ) {
   if (cheated) {
-    summonJungle(player);
-  } else if (isTurn) {
-    rollJumanjiDice(player);
-  } else {
-    skipTurn(player);
+    reuturn summonHunter(player);
+  }
+  if (!isTurn) {
+    return skipTurn();
   } 
+
+  rollJumanjiDice(player);
   player.moveForward();
   if(player.isAtEnd()) {
     console.log(`${player.name} has won the game!`);
@@ -105,7 +106,7 @@ function takeJumanjiTurn(player: Player; isTurn: boolean; cheated: boolean ) {
 }
 ```
 
-Or with a language:
+With a language:
 
 ```css
 .vcop-trigger-hair {
@@ -120,11 +121,11 @@ Or with a language:
 }
 ```
 
-or just some imporant text
+or just some imporant text:
 
 ```
 Pro tip: When signing up for a new service, use the website name as your middle name.
-Then when spam shows up, you know exactly who sold your data.
+When spam mail shows up, you know exactly who sold your data.
 ```
 
 
@@ -136,8 +137,7 @@ Use ```---``` or ```***```  to create a horizontal rule.
 
 ## Blockquotes
 
-> There are many things in our lives that we would throw away if we were not afraid that others might pick them up.
->― Oscar Wilde
+> There are so many things in our lives that we would throw away if we were not afraid that others might pick them up.
 
 ## Tables
 
@@ -156,18 +156,16 @@ Aligned tables:
 
 ## Images
 
-You can add images using standard Markdown syntax:
+Add images using `![alt text](/path/to/img.jpg)` or `img` tag.
 
 ![Ranganathaswamy Temple](/images/example.jpeg)
 
-## With captions
+### With captions
 
 <figure>
   <img src="/images/caption.png" alt="norm">
-  <figcaption>Rolling Stone review of norm as a SNL cast member. Credits: Rolling Stone</figcaption>
+  <figcaption>Courtesy: Rolling Stone</figcaption>
 </figure>
-
-<fig>
 
 ## Vernacular languages
 
@@ -177,13 +175,7 @@ You can add images using standard Markdown syntax:
 
 ### Punjabi
 
-ਮਾਏ ਨੀ ਮਾਏ ਮੈਂ ਇਕ ਸ਼ਿਕਰਾ ਯਾਰ ਬਣਾਇਆ
-
-ਓਦੇ ਸਿਰ ਤੇ ਕਲਗੀ ਓਦੇ ਪੈਰੀਂ ਝਾਂਜਰ
-
-ਓ ਚੋਗ ਚੁਗ਼ਿੰਦਾ ਆਇਆ
-
-ਇਕ ਓਦੇ ਰੂਪ ਦੀ ਧੂਪ ਤਿਖੇਰੀ
+ਮਾਏ ਨੀ ਮਾਏ ਮੈਂ ਇਕ ਸ਼ਿਕਰਾ ਯਾਰ ਬਣਾਇਆ <br> ਓਦੇ ਸਿਰ ਤੇ ਕਲਗੀ ਓਦੇ ਪੈਰੀਂ ਝਾਂਜਰ <br> ਓ ਚੋਗ ਚੁਗ਼ਿੰਦਾ ਆਇਆ <br> ਇਕ ਓਦੇ ਰੂਪ ਦੀ ਧੂਪ ਤਿਖੇਰੀ
 
 ## HTML
 

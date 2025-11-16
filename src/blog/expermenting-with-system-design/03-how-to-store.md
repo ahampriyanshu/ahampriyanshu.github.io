@@ -1,5 +1,5 @@
 ---
-title: "What and How to Store"
+title: "How to store?"
 date: 2025-07-01
 description: A comprehensive exploration of storage systems from RAM to disk, relational to NoSQL databases, and specialized stores for every data need.
 categories: ["Experimenting With System Design"]

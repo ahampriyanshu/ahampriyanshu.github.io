@@ -1,5 +1,5 @@
 ---
-title: "What and How to Build"
+title: "What to build?"
 date: 2025-07-01
 description: Understanding the networking fundamentals that form the foundation of distributed systems - from protocols to packets, and clients to servers.
 categories: ["Experimenting With System Design"]

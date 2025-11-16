@@ -1,8 +1,8 @@
 ---
-title: "Unsupervised Learning"
+title: "Intro to Unsupervised Learning"
 date: 2022-06-01
 description: Exploring unsupervised learning techniques - from K-means clustering to find natural groupings, to PCA and SVD for dimensionality reduction and feature extraction.
-categories: ["Experimenting With ML And Data Science"]
+categories: ["Experimenting With Data Science"]
 tags: ['machine-learning', 'datascience']
 ---
 

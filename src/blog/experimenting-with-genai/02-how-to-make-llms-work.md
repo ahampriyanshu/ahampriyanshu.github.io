@@ -1320,5 +1320,19 @@ But cost control is only part of production readiness. LLMs are non-deterministi
 - Version control for prompts and models
 - Deployment patterns for reliability
 
-The determinism playbook awaits in Part 4.
+
+You've now completed the full journey: understanding how LLMs work internally, making them work reliably in practice, tracking and optimizing costs, and deploying deterministic systems in production.
+
+**Key Takeaways:**
+
+1. **Determinism is a spectrum** - Use temperature=0, constrained generation, and validation
+2. **Test properties, not outputs** - Semantic similarity beats exact matching
+3. **Version everything** - Prompts, models, configs
+4. **Deploy cautiously** - Blue-green, canary, shadow patterns
+5. **Monitor relentlessly** - Costs, errors, latency, quality
+6. **Plan for failure** - Circuit breakers, fallbacks, incident response
+
+LLMs will continue evolving rapidly. The techniques here provide a foundation for building production systems that work reliably despite the underlying technology's inherent unpredictability.
+
+Now go build reliable AI systems that your users can trust.
 

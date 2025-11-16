@@ -9,7 +9,6 @@ pin: true
 
 I know it is a bit late to tinker on this topic but here we go. So, since the last hear and a half, I have been using Claude and Gemini in both my personal and professional projects. From the first glance I knew it an application of machine learning and it just vommitng a series of words based on some probablistic distribution. But it is actually feels like magic. That's why all the genai application are marked by a sparkle and use purple/magenta color. So, finally with this three part series, I am trying to understand(from a high level view) how does the llm works, unlearn all I know about prompt engineering, RAG, model evals and hopefully to come up with a optimal way to make GenAI deterministic in prod while being cost consious.
 
-
 ## The internals
 
 LLM stands for Large Language Model. So, we can assume it is a machine learning model that does something with language. And for that it needs to be trained on a large dataset of text.

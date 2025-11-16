@@ -93,17 +93,8 @@ Modern technical analysis relies on candlestick charts visualizing four key pric
 
 **Candlestick Anatomy:**
 
-```
-        │ ← Upper Shadow (High rejection)
-        │
-    ┌──────┐
-    │      │ ← Body (Open to Close)
-    │ BODY │  
-    │      │
-    └──────┘
-        │
-        │ ← Lower Shadow (Low rejection)
-```
+
+![Candlestick Chart](/images/equity/candlestick.png)
 
 **Four Key Prices:**
 1. **Open** - Price at market open (9:15 AM)
