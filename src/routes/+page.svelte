@@ -59,7 +59,7 @@
         </p>
         <p class="bio-text">
           I spent the last three years working remotely from <a
-            href="https://supertrip.ahampriyanshu.com"
+            href="https://supertrips.ahampriyanshu.com"
             rel="noopener noreferrer"
             target="_blank">100+</a
           > cities across India. It's something I'd love to do internationally over the next decade.

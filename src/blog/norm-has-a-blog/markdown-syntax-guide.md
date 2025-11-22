@@ -7,7 +7,6 @@ tags:
   - blogging
 categories:
   - "Norm Has A Blog"
-pin: true
 math: true
 ---
 

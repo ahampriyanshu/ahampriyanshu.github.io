@@ -19,8 +19,8 @@ When your application outgrows one machine, you enter the fascinating world of d
 **Master-Slave Replication:**
 ```
 Master Database (writes) → Slave Database 1 (reads)
-                       → Slave Database 2 (reads)  
-                       → Slave Database 3 (reads)
+                         → Slave Database 2 (reads)  
+                         → Slave Database 3 (reads)
 ```
 
 **Master-Master Replication:**

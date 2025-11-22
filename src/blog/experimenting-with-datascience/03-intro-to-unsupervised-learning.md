@@ -308,7 +308,6 @@ We've explored the fascinating world of unsupervised learning—using K-means to
 
 But we're about to enter the most exciting territory: **deep learning**. How do neural networks actually work? What makes CNNs so good at image recognition? How do RNNs handle sequential data? And what's the deal with GANs generating realistic images?
 
-In the next article, **"Deep Learning: Neural Networks and Beyond"**, we'll build neural networks from scratch, explore convolutional architectures for computer vision, discover recurrent networks for sequences, and peek into the generative world of GANs. This is where machine learning becomes truly powerful and creative!
+In the next article, **"Intro to Deep Learning"**, we'll build neural networks from scratch, explore convolutional architectures for computer vision, discover recurrent networks for sequences, and peek into the generative world of GANs. This is where machine learning becomes truly powerful and creative!
 
 The deep learning revolution awaits in Part 4!
-

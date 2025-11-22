@@ -48,7 +48,7 @@ export const siteConfig = {
       { name: 'System Design', url: 'https://github.com/ahampriyanshu' }
     ],
     personal: [
-      { name: 'SuperTrips', url: 'https://supertrip.ahampriyanshu.com' },
+      { name: 'SuperTrips', url: 'https://supertrips.ahampriyanshu.com' },
       { name: '9AM Playlist', url: 'https://open.spotify.com/playlist/3igzxaCc80f1IYbE4qord3' },
       {
         name: '9PM Playlist',

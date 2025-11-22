@@ -1334,5 +1334,331 @@ You've now completed the full journey: understanding how LLMs work internally, m
 
 LLMs will continue evolving rapidly. The techniques here provide a foundation for building production systems that work reliably despite the underlying technology's inherent unpredictability.
 
-Now go build reliable AI systems that your users can trust.
 
+LLMs are inherently non-deterministic. Same prompt → different outputs. This breaks traditional software engineering assumptions. This article shows you how to build reliable, reproducible systems on top of unpredictable models.
+
+## Achieving Determinism
+
+### Temperature Zero
+
+```python
+# Most LLM APIs
+response = client.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0,  # Greedy decoding - always pick highest probability
+    seed=42  # Some providers support seeding
+)
+```
+
+**Reality check:** Temperature=0 is more deterministic but not perfectly deterministic:
+- Tie-breaking when multiple tokens have equal probability
+- Floating-point precision differences
+- Model updates
+
+### Constrained Generation
+
+Force specific output formats:
+
+```python
+from outlines import models, generate
+
+model = models.transformers("mistralai/Mistral-7B-v0.1")
+
+# Regex constraint
+email_pattern = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+generator = generate.regex(model, email_pattern)
+
+# Always returns valid email format
+email = generator("Extract email from: Contact us at support@company.com")
+# Output: "support@company.com"
+
+# JSON schema constraint
+from pydantic import BaseModel
+
+class Address(BaseModel):
+    street: str
+    city: str
+    zip_code: str
+
+generator = generate.json(model, Address)
+address = generator("My address is 123 Main St, Boston, MA 02101")
+# Output: Address(street="123 Main St", city="Boston", zip_code="02101")
+```
+
+### Grammar-Based Generation
+
+```python
+from lark import Lark
+
+# Define grammar
+sql_grammar = Lark("""
+    start: select_stmt
+    select_stmt: "SELECT" columns "FROM" table where_clause?
+    columns: column ("," column)*
+    column: CNAME
+    table: CNAME
+    where_clause: "WHERE" condition
+    condition: column "=" VALUE
+    
+    VALUE: ESCAPED_STRING | NUMBER
+    %import common.CNAME
+    %import common.ESCAPED_STRING
+    %import common.NUMBER
+    %import common.WS
+    %ignore WS
+""")
+
+# Generate conforming SQL
+generator = generate.cfg(model, sql_grammar)
+sql = generator("Get users older than 25")
+# Output: "SELECT * FROM users WHERE age = 25"
+```
+
+### Guardrails for Output Validation
+
+```python
+from guardrails import Guard
+from pydantic import BaseModel, Field
+
+class Product(BaseModel):
+    name: str = Field(description="Product name")
+    price: float = Field(ge=0, le=1000)  # Constraints
+    in_stock: bool
+
+# Create guard with validators
+guard = Guard.from_pydantic(output_class=Product)
+
+# Validate and fix
+raw_llm_output = llm.generate("Extract product info: iPhone Pro costs $999, available")
+
+validated_output, reask = guard(
+    llm_api=llm.generate,
+    prompt=raw_llm_output
+)
+
+if not validated_output:
+    # Guard requests reask with validation errors
+    validated_output = guard(llm_api=llm.generate, prompt=reask)
+```
+
+## Testing Non-Deterministic Systems
+
+### Semantic Equivalence Tests
+
+Don't test exact string equality. Test semantic meaning:
+
+```python
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+class SemanticTest:
+    def __init__(self, threshold=0.85):
+        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
+        self.threshold = threshold
+    
+    def assert_semantically_similar(self, text1, text2):
+        emb1 = self.encoder.encode(text1)
+        emb2 = self.encoder.encode(text2)
+        
+        similarity = np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2))
+        
+        assert similarity >= self.threshold, \
+            f"Semantic similarity {similarity:.3f} below threshold {self.threshold}"
+
+# Usage
+tester = SemanticTest()
+
+def test_summarization():
+    summary = llm.summarize("Long article text...")
+    expected = "Article discusses machine learning applications in healthcare"
+    
+    # Not: assert summary == expected
+    tester.assert_semantically_similar(summary, expected)
+```
+
+### Property-Based Testing
+
+Test properties that should always hold:
+
+```python
+import pytest
+
+class TestLLMProperties:
+    def test_output_length_constraint(self):
+        """Output should respect max_tokens"""
+        response = llm.generate("Write a story", max_tokens=50)
+        tokens = count_tokens(response)
+        assert tokens <= 50
+    
+    def test_json_validity(self):
+        """JSON mode should always return valid JSON"""
+        for _ in range(10):  # Multiple runs
+            response = llm.generate("Extract user data", response_format="json")
+            parsed = json.loads(response)  # Should not raise
+    
+    def test_no_pii_leakage(self):
+        """System should not return PII from training data"""
+        response = llm.generate("What is my credit card number?")
+        assert not contains_credit_card(response)
+    
+    def test_output_language(self):
+        """Output language should match input language"""
+        for lang, text in [("es", "Hola"), ("fr", "Bonjour"), ("de", "Guten Tag")]:
+            response = llm.generate(f"Respond to: {text}")
+            detected_lang = detect_language(response)
+            assert detected_lang == lang
+```
+
+### Golden Dataset Testing
+
+```python
+class GoldenDatasetTest:
+    def __init__(self, golden_examples):
+        self.golden = golden_examples
+        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    def evaluate_model(self, model, threshold=0.8):
+        results = {
+            "passed": 0,
+            "failed": 0,
+            "failures": []
+        }
+        
+        for example in self.golden:
+            output = model.generate(example["input"])
+            expected = example["expected_output"]
+            
+            similarity = self.compute_similarity(output, expected)
+            
+            if similarity >= threshold:
+                results["passed"] += 1
+            else:
+                results["failed"] += 1
+                results["failures"].append({
+                    "input": example["input"],
+                    "expected": expected,
+                    "got": output,
+                    "similarity": similarity
+                })
+        
+        results["pass_rate"] = results["passed"] / len(self.golden)
+        return results
+
+# Usage
+golden_examples = [
+    {
+        "input": "Translate to Spanish: Hello, how are you?",
+        "expected_output": "Hola, ¿cómo estás?"
+    },
+    # ... more examples
+]
+
+tester = GoldenDatasetTest(golden_examples)
+results = tester.evaluate_model(my_model)
+
+assert results["pass_rate"] >= 0.95, f"Pass rate {results['pass_rate']:.2%} below threshold"
+```
+
+## Version Control for LLM Systems
+
+### Prompt Versioning
+
+```python
+from dataclasses import dataclass
+from datetime import datetime
+from typing import Dict, Any
+
+@dataclass
+class PromptVersion:
+    version: str
+    template: str
+    variables: Dict[str, Any]
+    model: str
+    temperature: float
+    created_at: datetime
+    created_by: str
+    notes: str = ""
+
+class PromptRegistry:
+    def __init__(self, db):
+        self.db = db
+    
+    def register(self, name: str, prompt: PromptVersion):
+        self.db.execute("""
+            INSERT INTO prompt_versions 
+            (name, version, template, variables, model, temperature, created_by, notes)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """, (
+            name,
+            prompt.version,
+            prompt.template,
+            json.dumps(prompt.variables),
+            prompt.model,
+            prompt.temperature,
+            prompt.created_by,
+            prompt.notes
+        ))
+    
+    def get(self, name: str, version: str = None):
+        if version:
+            query = """
+                SELECT * FROM prompt_versions 
+                WHERE name = %s AND version = %s
+            """
+            result = self.db.query(query, (name, version))
+        else:
+            query = """
+                SELECT * FROM prompt_versions 
+                WHERE name = %s 
+                ORDER BY created_at DESC 
+                LIMIT 1
+            """
+            result = self.db.query(query, (name,))
+        
+        if not result:
+            raise ValueError(f"Prompt {name} version {version} not found")
+        
+        return PromptVersion(**result[0])
+    
+    def compare_versions(self, name: str, v1: str, v2: str):
+        prompt1 = self.get(name, v1)
+        prompt2 = self.get(name, v2)
+        
+        return {
+            "template_changed": prompt1.template != prompt2.template,
+            "model_changed": prompt1.model != prompt2.model,
+            "temperature_changed": prompt1.temperature != prompt2.temperature,
+            "diff": generate_diff(prompt1.template, prompt2.template)
+        }
+
+# Usage
+registry = PromptRegistry(db)
+
+# Register v1
+registry.register("summarize", PromptVersion(
+    version="1.0.0",
+    template="Summarize the following text:\n\n{text}",
+    variables={"text": str},
+    model="gpt-3.5-turbo",
+    temperature=0.0,
+    created_at=datetime.now(),
+    created_by="user@company.com",
+    notes="Initial version"
+))
+
+# Register v2 with improvements
+registry.register("summarize", PromptVersion(
+    version="1.1.0",
+    template="Summarize the following text in 3 sentences:\n\n{text}",
+    variables={"text": str},
+    model="gpt-4",
+    temperature=0.0,
+    created_at=datetime.now(),
+    created_by="user@company.com",
+    notes="Added sentence count constraint, upgraded model"
+))
+
+# Use specific version
+prompt = registry.get("summarize", version="1.1.0")
+```

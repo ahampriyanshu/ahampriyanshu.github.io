@@ -98,59 +98,44 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-## Installing node
+## Node
 
 ### Manjaro Linux
-
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
-npm i -g yarn nodemon
+npm i yarn -g
 ```
 
 ### macOS
-
 ```bash
 brew install nvm
 nvm install node
 npm i yarn -g
 ```
 
+### Windows
+```sh
+choco install nodejs-lts
+npm i yarn -g
+```
+
 #### To use legacy versions of node
 
 - For a session:
-
 ```bash
 nvm install v1X.XX.X
 nvm use v1X.XX.X
 ```
 
 - Changing the default node version:
-
 ```bash
 nvm default alias v1X.XX.X
 ```
 
-### Windows
-
-After installing Chocolatey:
-
-```sh
-choco install nodejs-lts
-node -v
-npm -v
-```
-
-You can then install common global tools:
-
-```sh
-npm install -g yarn nodemon
-```
-
-## Installing postgres
+## PostgreSQL
 
 ### Manjaro Linux
-
 ```bash
 sudo pacman -S postgresql
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
@@ -159,7 +144,6 @@ sudo systemctl start postgresql
 ```
 
 ### macOS
-
 ```bash
 brew install postgres
 brew services enable postgresql
@@ -167,23 +151,13 @@ brew services start postgresql
 ```
 
 ### Windows
-
-After installing Chocolatey:
-
 ```sh
 choco install postgresql
 ```
 
-Alternatively, download and run the latest [installer](https://www.postgresql.org/download/windows/), then verify:
-
-```sh
-psql --version
-```
-
-## Installing MongoDB
+## MongoDB
 
 ### Manjaro Linux
-
 ```bash
 sudo pacman -S mongodb
 sudo systemctl enable mongodb
@@ -191,22 +165,20 @@ sudo systemctl start mongodb
 ```
 
 ### macOS
-
 ```bash
 brew install mongodb
 brew services enable mongodb
 brew services start mongodb
 ```
 
-
 ### Windows
-
 ```sh
 choco install mongodb-cli.install
 ```
 
-## Installing Docker
+## Docker
 
+### Manjaro Linux
 ```bash
 sudo pacman -S docker
 sudo systemctl enable docker
@@ -215,63 +187,29 @@ sudo usermod -aG docker $USER
 docker login
 ```
 
-## Installing MySQL
-
-### Manjaro Linux
-
+### macOS
 ```bash
-sudo pacman -S mysql
-sudo systemctl enable mysql
-sudo systemctl start mysql
+brew install docker
+brew services enable docker
+brew services start docker
+docker login
 ```
 
-### MacOS
-
-```bash
-brew install mysql
-brew services enable mysql
-brew services start mysql
+### Windows
+```sh
+choco install docker-desktop
+docker login
 ```
 
-## Installing Git
-
-```bash
-ssh-keygen -t ed25519 -C "ahampriyanshu@gmail.com"
-
-eval "$(ssh-agent -s)"
-
-vim ~/.ssh/config
-```
-
-Paste the following:
-
-```text
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
-```
-
-### Utilities
-
-```bash
-brew install --cask visual-studio-code
-
-npm i -g nodemon
-
-pip3 install youtube-dl orange3
-```
-
-#### Installing VSCode
+## VSCode and Extensions
 
 - Download and run the latest [installer](https://code.visualstudio.com/docs/?dv=win).
 - Install [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go), [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell), [Better Code](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments), [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme), [ThunderClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client).
 
-#### Installing Chrome
+## Chrome and Extensions
 
 - Execute `choco install chrome` or download and run the latest [installer](https://www.google.com/chrome/).
 - Add [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd), [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi), [JSON Viewer Pro](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc), [ChroPath](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo), [ColorPick](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg), [Honey](https://chrome.google.com/webstore/detail/honey-automatic-coupons-r/bmnlcjabgnpnenekpadlanbbkooimhnj).
-
 
 ## Git
 
@@ -283,6 +221,15 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
 cat ~/.ssh/id_ed25519.pub
+```
+
+Paste the following:
+
+```text
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
 ```
 
 Create a [new ssh key](https://github.com/settings/ssh/new)
@@ -332,6 +279,24 @@ source ~/.zshrc
 ```bash
 sudo pacman -S vlc qbittorrent
 yay -S google-chrome visual-studio-code-bin telegram-desktop slack-desktop
+npm i -g nodemon
+pip3 install youtube-dl orange3
+```
+
+### macOS
+
+```bash
+brew install --cask visual-studio-code
+
+npm i -g nodemon
+
+pip3 install youtube-dl orange3
+```
+
+### Windows
+
+```sh
+choco install vlc qbittorrent google-chrome visual-studio-code-bin telegram-desktop slack-desktop
 npm i -g nodemon
 pip3 install youtube-dl orange3
 ```
