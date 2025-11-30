@@ -6,7 +6,7 @@ categories: ["Experimenting With System Design"]
 tags: ['system-design', 'scaling', 'distributed-systems', 'replication', 'sharding']
 ---
 
-Welcome to Part 4 of our system design series! So far, we've built the foundation: networking fundamentals, connectivity patterns, and storage systems. Now comes the real challenge: **scaling beyond a single server**.
+The S-word. Scaling. Everyone wants to do it, few need to. Welcome to the fourth and final part of our system design series! So far, we've built the foundation: networking fundamentals, connectivity patterns, and storage systems. Now comes the exciting part: **scaling those connections** to handle real-world traffic.
 
 When your application outgrows one machine, you enter the fascinating world of distributed systems. How do you replicate data across multiple servers? How do you partition massive datasets? How do multiple machines agree on who's in charge? And how do you process terabytes of data efficiently? These are the questions we'll answer in this article.
 
@@ -196,15 +196,78 @@ def process_order(order_id, user_id):
         raise
 ```
 
----
+
+### Container Technology
+
+**Docker** revolutionizes application deployment by packaging applications and dependencies into lightweight, portable containers that share the host operating system kernel.
+
+**Dockerfile** scripts define container build processes:
+
+```dockerfile
+FROM node:14-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+**Docker Compose** orchestrates multi-container applications:
+
+```yaml
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: myapp
+      POSTGRES_PASSWORD: secret
+```
+
+### Kubernetes Orchestration
+
+**Kubernetes** provides enterprise-grade container orchestration, managing containerized applications across clusters of machines.
+
+**Kubernetes Clusters** consist of control plane nodes (managing cluster state) and worker nodes (running application containers).
+
+**Pods** represent the smallest deployable units, containing one or more containers that share networking and storage.
+
+**Kubelet** agents run on each worker node, ensuring containers remain healthy and communicating with the control plane.
+
+**Nodes** provide the compute resources for running containerized workloads, whether physical machines or virtual instances.
+
+```yaml
+# Pod Definition Example
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-server
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.20
+    ports:
+    - containerPort: 80
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi" 
+        cpu: "500m"
+```
 
 ## What's Next?
 
 You've now mastered the art of scaling—from replicating databases across regions to sharding massive datasets, from electing leaders in distributed clusters to processing terabytes of data with MapReduce. These patterns enable systems to grow from serving hundreds of users to serving millions.
 
-But there's one critical piece remaining: **how do you actually deploy and operate these complex distributed systems?** How do containers make deployment consistent? What role does Kubernetes play in managing clusters? How do you coordinate concurrent processes safely? And what operating system concepts do you need to understand?
+## Putting It All Together
 
-In our final article, **"What and How to Deploy"**, we'll explore the operational side of system design. You'll learn about containerization with Docker, orchestration with Kubernetes, operating system fundamentals like processes and threads, and the architectural patterns that tie everything together. This is where theory meets practice.
-
-See you in the final part of this series!
-
+We've reached the end of our four-part journey through system design! From networking protocols to deployment strategies, we've covered the essential building blocks of modern distributed systems. But remember, the best system is the one that works for *your* users, not the one that uses the most buzzwords. Go build something amazing.

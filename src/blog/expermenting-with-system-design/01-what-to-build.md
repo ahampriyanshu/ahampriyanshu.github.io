@@ -7,175 +7,152 @@ tags: ['system-design', 'networking', 'infrastructure', 'protocols']
 pin: true
 ---
 
-Thinking about shards, global load balancers, and fourteen layers of caching for your brand-new weekend side-project? Hold that thought! Odds are your app doesn't need Netflix-level scale just yet. Remember: back in the mid-2000s Facebook was already flirting with **100 million** users without aws, docker, kubernetes, micro-services, serverless redis, or cloud functions in sight—just a beefy PHP monolith. The secret sauce wasn't infinite scale; it was actual engineering. They squeezed every byte of RAM out of Memcached, introduced efficient UDP transport, fixed memory fragmentation, even patched the allocator—because when budget was tighter than latency.
+System design is pretty <s>intimidating</s> fascinating. Welcome to the first part of a four-part series exploring system design from the ground up. In this article, I will try my best to share everything I've learned about designing systems since I started my graduation in 2019.
+
+## Disclaimer
+
+From 2019 to 2020, I primarily worked as a freelancer, juggling multiple minor projects or subparts of major ones. From 2020 to 2021, I worked as an <s>underpaid</s> contractual employee in a service-based startup where we built, deployed, and maintained typical web applications. Since 2023, I have been working on creating a new B2B product from scratch.
+
+Everything I write here comes from my personal experience over these 4-5 years (which, let's be honest, is not a lot). So, here is the disclaimer: if you are reading this to become a principal engineer at Google, this is not the right series for you. You should probably look for better sources on the internet. But if you are someone who is new to programming, a junior developer about to design a critical system for your own startup, or even a senior who just wants to refresh their memory, then I hope you will like this series. By the end, you should have a good enough understanding to write better prompts so the number of review cycles between you and your agentic IDE is as low as possible.
+
+## What not to build
+
+Thinking about shards, global load balancers, and multiple layers of caching for your brand-new weekend side-project? Odds are your app doesn't need Netflix-level scale just yet. Back in the late 2000s Facebook was already flirting with **100 million** users without aws, docker, kubernetes, micro-services, serverless functions, with just a beefy PHP monolith. The secret sauce wasn't infinite scale, it was raw, low-level engineering. They squeezed every byte of RAM out of Memcached, introduced efficient UDP transport, fixed memory fragmentation, even patched the allocator—because when budget was tighter than latency.
 
 Fast-forward to today—spinning up five managed databases on AWS takes less time than 5 mins, and it's tempting to hide complexity behind yet another serverless layer. But the moral of the story hasn't changed: build something people love first, then scale what actually hurts. Real users beat imaginary edge cases every single sprint.
 
-With that reality check out of the way, let's dive into the fun stuff! This is the first part of a five-part series exploring system design from the ground up. In this article, we'll explore the networking fundamentals that underpin every distributed system—the protocols, addressing schemes, and communication patterns that make the internet work.
+## Operating System Concepts
 
-## Networking Fundamentals
+### Process and Memory Management
 
-### Client-Server Architecture
+**Operating Systems** provide the essential interface between computer hardware and users, managing resources and enabling application execution.
 
-In distributed systems, the **client-server model** forms the foundation of most interactions. A **client** represents any machine or process that requests data or services from another system. Conversely, a **server** is a machine or process that provides data or services to clients, typically by listening for incoming network requests.
+**Processes** represent currently running programs, with each process requiring memory, CPU time, and other system resources. In large systems, assume any process can terminate unexpectedly.
 
-> **Note:** A machine can simultaneously function as both a client and a server. For example, a web server might serve requests from browsers while also acting as a client when requesting data from a database.
+**Threads** enable concurrent execution within processes, sharing memory space while maintaining separate execution contexts.
 
-### Internet Protocol (IP) Fundamentals
+```python
+# Process vs Thread Example
+import multiprocessing
+import threading
+import time
 
-**Internet Protocol (IP)** serves as the fundamental communication protocol that defines how machines communicate across networks worldwide. All higher-level protocols like TCP, UDP, and HTTP are built upon this foundation.
+# CPU-intensive work benefits from processes
+def cpu_task():
+    return sum(i*i for i in range(1000000))
 
-#### IP Addressing System
+# I/O-intensive work benefits from threads  
+def io_task():
+    time.sleep(1)  # Simulated I/O wait
+    return "completed"
 
-Every device connected to the public internet receives an **IP address** - a unique identifier for routing data packets. IPv4 addresses consist of four numbers separated by dots (a.b.c.d), where each number ranges from 0 to 255.
+# Using processes for CPU work
+with multiprocessing.Pool() as pool:
+    results = pool.map(cpu_task, range(4))
 
-**Special IP Address Ranges:**
-- `127.0.0.1` - Refers to your local machine (localhost)
-- `192.168.x.y` - Private network addresses (your home/office network)
+# Using threads for I/O work
+threads = []
+for i in range(4):
+    thread = threading.Thread(target=io_task)
+    threads.append(thread)
+    thread.start()
 
-```bash
-# Check your IP configuration
-ipconfig  # Windows
-ifconfig  # Linux/Mac
+for thread in threads:
+    thread.join()
 ```
 
-#### IPv4 vs IPv6
+### System Calls and Kernel
 
-**IPv4** uses 32-bit addresses and was the first non-experimental version of the Internet Protocol. However, **IPv6** represents the latest evolution, providing a much larger address space to accommodate the growing number of internet-connected devices.
+**System calls** enable programs to request services from the operating system kernel, providing the primary interface between applications and the OS.
 
-**Dual Stack Implementation** allows devices to run both IPv4 and IPv6 simultaneously, providing flexibility during the transition period.
+**Fork** system calls create new processes from existing ones, with the new process becoming a child of the calling parent process.
 
-### Network Protocol Stack
+**Exec** system calls replace the current process image with a new executable, enabling program execution within existing processes.
 
-#### OSI Model (7 Layers)
+The **Kernel** forms the operating system's core, managing hardware resources and providing essential services like process management, memory management, and device control.
 
-The **Open Systems Interconnection Model** provides a conceptual framework for understanding network communication through seven distinct layers:
+**Kernel Mode** provides unrestricted hardware access for system components, while **User Mode** restricts application access to protected system resources.
 
-1. **Physical Layer (Layer 1)**: Handles the physical transmission of raw bitstreams over physical media like cables and wireless signals
-2. **Data Link Layer (Layer 2)**: Manages error-free data transfer between adjacent network nodes, including frame creation and error detection
-3. **Network Layer (Layer 3)**: Handles packet routing across multiple networks and manages network congestion
-4. **Transport Layer (Layer 4)**: Ensures reliable data transmission between devices with flow control and error recovery
-5. **Session Layer (Layer 5)**: Manages connections between applications on different devices
-6. **Presentation Layer (Layer 6)**: Handles data translation, formatting, and encryption
-7. **Application Layer (Layer 7)**: Provides the interface for applications to access network services
+### Memory Management
 
-#### TCP/IP Model (4 Layers)
+**Virtual Memory** allows systems to use more memory than physically available by temporarily storing data on disk, enabling larger applications and better resource utilization.
 
-The **TCP/IP model** offers a more practical approach to understanding internet communications:
+The **Memory Management Unit (MMU)** handles memory translation between virtual and physical addresses, typically integrated into modern processors.
 
-1. **Link Layer**: Combines OSI layers 1-2, handling physical and logical connections
-2. **Internet Layer**: Corresponds to OSI layer 3, managing packet routing and addressing
-3. **Transport Layer**: Matches OSI layer 4, providing reliable data transmission
-4. **Application Layer**: Encompasses OSI layers 5-7, handling all application-level functions
+**Random Access Memory (RAM)** provides fast temporary storage for active processes, with data lost when processes terminate.
 
-### Transport Layer Protocols
+### Concurrency and Synchronization
 
-#### Transmission Control Protocol (TCP)
+**Concurrency** enables multiple instruction sequences to execute simultaneously, improving system throughput and responsiveness.
 
-**TCP** provides reliable, ordered data delivery between machines through connection-oriented communication. It implements several crucial features:
+**Multiprocessing** coordinates work across multiple processors, while **Parallel Processing** divides tasks among multiple CPUs to reduce execution time.
 
-- **Flow Control**: Prevents the sender from overwhelming the receiver
-- **Congestion Control**: Manages network traffic to prevent network collapse
-- **Error Detection**: Uses checksums to ensure data integrity
-- **Segmentation**: Breaks large data into manageable segments
+**Race Conditions** occur when multiple processes access shared resources simultaneously without proper coordination, leading to unpredictable results.
 
-**TCP Three-Way Handshake Process:**
-```
-1. Client → Server: SYN (synchronize)
-2. Server → Client: SYN-ACK (synchronize-acknowledge)
-3. Client → Server: ACK (acknowledge)
-[Connection Established]
-```
+**Deadlocks** happen when processes block each other indefinitely, each waiting for resources held by others.
 
-#### User Datagram Protocol (UDP)
+**Locks** coordinate access to shared resources, preventing race conditions by ensuring exclusive access during critical operations.
 
-While TCP prioritizes reliability, **UDP** offers faster, connectionless communication suitable for applications where speed matters more than guaranteed delivery.
+```python
+# Race Condition Example and Solution
+import threading
 
-### Application Layer Protocols
+# Problematic: Race condition
+counter = 0
+def unsafe_increment():
+    global counter
+    for _ in range(100000):
+        counter += 1  # Not atomic!
 
-#### HyperText Transfer Protocol (HTTP)
-
-**HTTP** powers the World Wide Web, enabling communication between web browsers and servers. A typical HTTP request includes:
-
-```http
-GET /api/users HTTP/1.1
-Host: example.com
-Content-Type: application/json
-Authorization: Bearer token123
+# Solution: Use locks
+lock = threading.Lock()
+def safe_increment():
+    global counter
+    for _ in range(100000):
+        with lock:
+            counter += 1  # Now atomic
 ```
 
-**HTTP Response Structure:**
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-Content-Length: 1234
+### Process Scheduling
 
-{"users": [...]}
-```
+**Scheduling** allocates CPU time among competing processes, ensuring fair resource distribution and system responsiveness.
 
-#### HTTPS and Security
+**Preemptive Scheduling** can interrupt running processes to switch to higher-priority tasks, while **Non-Preemptive Scheduling** allows processes to run to completion.
 
-**HTTPS** extends HTTP with **Transport Layer Security (TLS)**, providing encrypted communication that protects against man-in-the-middle attacks. It requires servers to have trusted SSL certificates from recognized certificate authorities.
+**Context Switching** enables the CPU to switch between processes by saving and restoring process states.
 
-#### Other Essential Protocols
+## Virtualization and Containerization
 
-**Simple Mail Transfer Protocol (SMTP)** standardizes email transmission across networks, enabling reliable email delivery regardless of underlying hardware differences.
+### Virtualization Fundamentals
 
-**File Transfer Protocol (FTP)** facilitates file transfers between computers over TCP/IP connections, with one computer acting as the local host and another as the remote host.
+**Virtual Machines** use software to emulate physical computers, enabling multiple operating systems to run on a single host machine.
 
-**Address Resolution Protocol (ARP)** maps dynamic IP addresses to permanent physical MAC addresses within local area networks, translating between 32-bit IP addresses and 48-bit MAC addresses.
+**Hypervisors** (Virtual Machine Monitors) create and manage virtual machines, allocating host resources among guest systems.
 
-**Internet Control Message Protocol (ICMP)** helps network devices diagnose communication issues and determine whether data reaches its intended destination in a timely manner.
+**Host machines** provide the underlying hardware and hypervisor, while **Guest machines** run as virtualized instances with their own operating systems.
 
-### Network Components and Concepts
+**Bare Metal** virtualization runs directly on hardware without an underlying operating system, offering better performance than hosted solutions.
 
-#### MAC Addresses and Data Link Layer
+### Architectural Patterns
 
-**Media Access Control (MAC) addresses** serve as unique identifiers for network interface cards. These 48-bit hexadecimal numbers (formatted as XX:XX:XX:XX:XX:XX) enable communication at the Data Link Layer of the OSI model.
+**Monolithic Architecture** builds applications as single deployable units, simpler to develop and test but potentially harder to scale specific components.
 
-**Logical Link Control (LLC)** manages communication between network devices as a sublayer of the Data Link Layer, providing error control, flow control, and multiplexing capabilities.
+**Microservices Architecture** decomposes applications into small, independent services communicating through well-defined APIs, enabling independent scaling and development.
 
-#### Network Infrastructure
+**Inheritance** in object-oriented programming enables code reuse through class hierarchies, while **Sandboxing** provides isolated execution environments for security.
 
-**Ethernet** remains the traditional technology for connecting devices in local and wide area networks, providing a standardized protocol for device communication.
+### Core Principles to Remember
 
-**Network switches** forward data packets directly between devices rather than broadcasting to entire networks like hubs, supporting both hardware-based physical networks and software-based virtual implementations.
+1. **Start Simple**: Begin with monolithic designs and evolve to distributed architectures as needed. Facebook served 100 million users with a PHP monolith—your weekend project doesn't need microservices yet.
 
-#### Data Transmission Concepts
+2. **Plan for Failure**: Assume components will fail and design systems accordingly. Networks partition, disks fail, processes crash—build redundancy and graceful degradation into your architecture.
 
-**Encapsulation** occurs when data travels down the TCP/IP protocol stack, with each layer adding header information to the actual data payload.
+3. **Measure Performance**: Use metrics and monitoring to identify bottlenecks. Don't optimize prematurely, but instrument everything so you know where to optimize when the time comes.
 
-**Decapsulation** reverses this process, removing the encapsulated layers to extract the original data at the destination.
+4. **Cache Strategically**: Implement caching at multiple levels for optimal performance—from browser caches to CDNs to application-level caches to database query caches.
 
-**IP packets** represent the smallest data transmission units, consisting of an IP header (containing source/destination addresses and routing information) and a payload (the actual data being transmitted).
+5. **Security First**: Build security into system design from the beginning. Use HTTPS everywhere, implement proper authentication and authorization, encrypt sensitive data, and apply rate limiting.
 
-**Ethernet frames** carry data over Ethernet networks, with sizes ranging from 64 bytes to 1,518 bytes depending on the payload size.
+6. **Monitor Everything**: Maintain visibility into system behavior and performance through comprehensive logging, metrics collection, and alerting.
 
-### Network Performance and Diagnostics
-
-#### Key Metrics
-
-**Maximum Transmission Unit (MTU)** defines the largest packet size that can be transmitted over a network. Ethernet typically uses 1500-byte packets as the maximum allowed size.
-
-**Round Trip Time (RTT)** measures network latency by calculating the time between sending a request and receiving a response, including propagation delays across all network hops.
-
-**Ping** utility measures communication latency between networks, helping determine network health and performance characteristics.
-
-#### Network Addressing and Resolution
-
-**Private IP addresses** serve internal networks and aren't directly accessible from the internet, typically assigned by routers using Network Address Translation (NAT).
-
-**Public IP addresses** are assigned by Internet Service Providers and enable direct internet communication for publicly accessible devices.
-
-**DNS Lookup (nslookup)** queries DNS servers to retrieve records associated with domain names, including IP address information.
-
----
-
-## What's Next?
-
-Now that we've laid the groundwork with networking fundamentals—understanding how machines communicate, what protocols govern their interactions, and how data travels across the internet—we're ready to explore the next critical piece: **connectivity at scale**.
-
-In the next article, **"What and How to Connect"**, we'll dive into the infrastructure patterns that power modern web applications. You'll learn how load balancers distribute traffic across multiple servers, how caching strategies dramatically improve performance, what role proxies play in your architecture, and how Content Delivery Networks bring your content closer to users worldwide.
-
-These patterns transform simple client-server communication into robust, high-performance systems that can serve millions of users. See you in Part 2!
-
+When your application grows beyond a single server, you need strategies to distribute load, cache frequently accessed data, and serve content efficiently to users around the globe. This is where load balancers, proxies, caching layers, and CDNs come into play. Let's explore how these components transform simple client-server communication into robust, high-performance systems.

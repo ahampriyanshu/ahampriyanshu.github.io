@@ -7,7 +7,7 @@ tags: ['machine-learning', 'datascience']
 pin: true
 ---
 
-Machine learning has transformed from an academic curiosity into the driving force behind modern technology. Over the past several weeks, I've been diving deep into this fascinating field, exploring everything from basic classification algorithms to sophisticated neural networks. This five-part series chronicles my learning journey and serves as a comprehensive reference for machine learning fundamentals.
+Machine learning has transformed from an academic curiosity into the driving force behind modern technology. Over the past several weeks, I've been diving deep into this fascinating field, exploring everything from basic classification algorithms to sophisticated neural networks. This four-part series chronicles my learning journey and serves as a comprehensive reference for machine learning fundamentals.
 
 In this first part, we'll build the foundation—understanding what machine learning really is, exploring the mathematical concepts that underpin it, and implementing our first classical algorithms. Let's start from the ground up!
 

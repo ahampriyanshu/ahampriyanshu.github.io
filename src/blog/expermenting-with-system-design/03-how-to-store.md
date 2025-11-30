@@ -6,7 +6,7 @@ categories: ["Experimenting With System Design"]
 tags: ['system-design', 'databases', 'storage', 'sql', 'nosql']
 ---
 
-Welcome to Part 3 of our system design series! We've covered networking fundamentals and connectivity patterns—now it's time to tackle one of the most critical decisions in system architecture: **where and how to store your data**.
+Data is the new oil, they say. But unlike oil, you can't just store it in barrels. Welcome to Part 3 of our system design series! We've covered networking fundamentals and connectivity patterns—now it's time to tackle one of the most critical decisions in system architecture: **where and how to store your data**.
 
 Every application needs to persist data, but the options are vast and often overwhelming. Should you use SQL or NoSQL? What about blob storage for images? When does a time-series database make sense? In this article, we'll explore the storage landscape, from the performance characteristics of different storage mediums to the strengths and trade-offs of various database systems.
 
@@ -198,7 +198,6 @@ def set_status_complete(order_id):
     set_order_status(order_id, "COMPLETE")  # Safe to repeat
 ```
 
----
 
 ## What's Next?
 
@@ -206,7 +205,7 @@ You've now explored the storage layer—from understanding the performance chara
 
 But here's the challenge: what happens when your data grows beyond what a single database server can handle? How do you ensure your data remains available even when servers fail? How do you process massive datasets efficiently across distributed clusters?
 
-In the next article, **"What and How to Scale"**, we'll tackle these questions head-on. You'll learn about replication strategies for redundancy, sharding techniques for handling massive datasets, distributed consensus algorithms like Paxos and Raft, and MapReduce for processing data at scale. These patterns transform single-server databases into robust, globally distributed data systems.
+In the next and final article, **"When to Scale"**, we'll tackle these questions head-on. You'll learn about replication strategies for redundancy, sharding techniques for handling massive datasets, distributed consensus algorithms like Paxos and Raft, and MapReduce for processing data at scale. These patterns transform single-server databases into robust, globally distributed data systems.
 
 The scaling strategies await in Part 4!
 
