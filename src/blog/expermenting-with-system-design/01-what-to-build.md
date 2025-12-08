@@ -7,13 +7,13 @@ tags: ['system-design', 'networking', 'infrastructure', 'protocols']
 pin: true
 ---
 
-System design is pretty <s>intimidating</s> fascinating. Welcome to the first part of a four-part series exploring system design from the ground up. In this article, I will try my best to share everything I've learned about designing systems since I started my graduation in 2019.
+Welcome to the first part of a four-part series exploring system design from the ground up. In this article, I will try my best to share everything I've learned about designing systems since I started my graduation in 2019.
 
 ## Disclaimer
 
 From 2019 to 2020, I primarily worked as a freelancer, juggling multiple minor projects or subparts of major ones. From 2020 to 2021, I worked as an <s>underpaid</s> contractual employee in a service-based startup where we built, deployed, and maintained typical web applications. Since 2023, I have been working on creating a new B2B product from scratch.
 
-Everything I write here comes from my personal experience over these 4-5 years (which, let's be honest, is not a lot). So, here is the disclaimer: if you are reading this to become a principal engineer at Google, this is not the right series for you. You should probably look for better sources on the internet. But if you are someone who is new to programming, a junior developer about to design a critical system for your own startup, or even a senior who just wants to refresh their memory, then I hope you will like this series. By the end, you should have a good enough understanding to write better prompts so the number of review cycles between you and your agentic IDE is as low as possible.
+Everything I write here comes from my personal experience over these 4-5 years (which, let's be honest, is not a lot). So, here is the disclaimer: if you are reading this to as a principal engineer at Google, this is not the right series for you. You should probably look for better sources on the internet. But if you are someone who is new to programming, a junior developer about to design a critical system for your own startup, or even a senior developer who just wants to refresh their memory, then I hope you will like this series. By the end, you should have a good enough understanding to write better prompts so the number of review cycles between you and your agentic IDE is as low as possible.
 
 ## What not to build
 
