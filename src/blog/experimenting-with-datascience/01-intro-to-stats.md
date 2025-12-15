@@ -4,7 +4,7 @@ date: 2022-06-01
 description: A comprehensive introduction to machine learning fundamentals - from understanding features and labels to implementing Naive Bayes and K-Nearest Neighbors with performance evaluation techniques.
 categories: ["Experimenting With Data Science"]
 tags: ['machine-learning', 'datascience']
-pin: true
+
 ---
 
 Machine learning has transformed from an academic curiosity into the driving force behind modern technology. Over the past several weeks, I've been diving deep into this fascinating field, exploring everything from basic classification algorithms to sophisticated neural networks. This four-part series chronicles my learning journey and serves as a comprehensive reference for machine learning fundamentals.

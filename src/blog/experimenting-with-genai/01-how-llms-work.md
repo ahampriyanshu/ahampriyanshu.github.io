@@ -4,7 +4,6 @@ date: 2025-02-01
 description: Deep technical dive into how Large Language Models actually work - tokenization, transformer architecture, attention mechanisms, training, and inference at scale.
 categories: ["Experimenting With LLMs And GenAI"]
 tags: ['llm', 'genai']
-pin: true
 ---
 
 I know it is a bit late to tinker on this topic but here we go. So, since the last hear and a half, I have been using Claude and Gemini in both my personal and professional projects. From the first glance I knew it an application of machine learning and it just vommitng a series of words based on some probablistic distribution. But it is actually feels like magic. That's why all the genai application are marked by a sparkle and use purple/magenta color. So, finally with this three part series, I am trying to understand(from a high level view) how does the llm works, unlearn all I know about prompt engineering, RAG, model evals and hopefully to come up with a optimal way to make GenAI deterministic in prod while being cost consious.
