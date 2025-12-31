@@ -1,14 +1,15 @@
 <script lang="ts">
   import type { LayoutData } from './$types';
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  import { fly } from 'svelte/transition';
   import { siteConfig } from '$lib/config';
   import Topbar from '$lib/components/Topbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import TOC from '$lib/components/TOC.svelte';
   import RecentlyUpdated from '$lib/components/RecentlyUpdated.svelte';
   import '$lib/styles/index.scss';
-  import { onMount } from 'svelte';
-  import { fly } from 'svelte/transition';
+  import posthog from 'posthog-js';
 
   export let data: LayoutData;
   let theme = 'light';
@@ -18,6 +19,11 @@
     const savedTheme = localStorage.getItem('theme') || 'light';
     theme = savedTheme;
     document.documentElement.setAttribute('data-mode', theme);
+    posthog.init('phc_6MEVCBynqZYzc8RgyHr1p3AVpYPans0JfApPtnOcw8x', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2025-11-30',
+      person_profiles: 'always'
+    });
   });
 
   function toggleTheme() {
