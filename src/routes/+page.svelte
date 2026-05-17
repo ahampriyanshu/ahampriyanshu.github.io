@@ -58,11 +58,8 @@
           times, I plan to give it another shot down the road.
         </p>
         <p class="bio-text">
-          I spent the last three years working remotely from <a
-            href="https://supertrips.ahampriyanshu.com"
-            rel="noopener noreferrer"
-            target="_blank">100+</a
-          > cities across India. It's something I'd love to do internationally over the next decade.
+          I spent the last three years working remotely from 100+ cities across India. 
+          It's something I'd love to do internationally over the next decade.
         </p>
         <p class="bio-text">
           This blog is where I share notes on programming, personal finance, and anything else I'm
