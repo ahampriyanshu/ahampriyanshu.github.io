@@ -54,12 +54,8 @@
         </p>
         <p class="bio-text">
           Beyond programming, I'm fascinated by history; a field I've attempted to pursue
-          academically, both before and after my engineering degree. Though I dropped out both
-          times, I plan to give it another shot down the road.
-        </p>
-        <p class="bio-text">
-          I spent the last three years working remotely from 100+ cities across India. 
-          It's something I'd love to do internationally over the next decade.
+          academically. Spent the last three years working remotely from 100+ cities across 
+          India, something I'd love to do internationally over the next decade.
         </p>
         <p class="bio-text">
           This blog is where I share notes on programming, personal finance, and anything else I'm

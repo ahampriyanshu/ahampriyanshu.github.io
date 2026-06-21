@@ -33,9 +33,9 @@ export const siteConfig = {
   ],
   footerLinks: {
     projects: [
-      { name: 'o1on', url: 'https://github.com/ahampriyanshu/o1on' },
+      { name: 'Kosh', url: 'https://kosh.ahampriyanshu.com' },
       { name: 'Zmail', url: 'https://portfolio.ahampriyanshu.com' },
-      { name: 'Algo 101', url: 'https://github.com/ahampriyanshu/algo-ds-101' },
+      { name: 'SuperTrips', url: 'https://supertrips.ahampriyanshu.com' },
       {
         name: 'Lok Sabha EDA',
         url: 'https://www.kaggle.com/datasets/ahampriyanshu/lok-sabha'
@@ -48,7 +48,7 @@ export const siteConfig = {
       { name: 'System Design', url: 'https://github.com/ahampriyanshu' }
     ],
     personal: [
-      { name: 'SuperTrips', url: 'https://supertrips.ahampriyanshu.com' },
+      { name: 'Resume', url: 'https://supertrips.ahampriyanshu.com' },
       { name: '9AM Playlist', url: 'https://open.spotify.com/playlist/3igzxaCc80f1IYbE4qord3' },
       {
         name: '9PM Playlist',
